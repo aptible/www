@@ -1,0 +1,40 @@
+.header {
+  margin: 75px 0;
+}
+
+.logo {
+  grid-column: 1;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.mainNavItem {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--body-color);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.products {
+  grid-column: 3;
+}
+
+.useCases {
+  grid-column: 4;
+}
+
+.customers {
+  grid-column: 5;
+}
+
+.resources {
+  grid-column: 6;
+}
+
+.logIn {
+  grid-column: 7;
+}

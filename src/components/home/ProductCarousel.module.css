@@ -1,0 +1,16 @@
+.carouselContainer {
+  position: absolute;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.product {
+  flex-shrink: 0;
+  width: 955px;
+  padding: 75px;
+  margin-right: 5px;
+  background-color: var(--aptible-green-dark);
+  scroll-snap-points-x: repeat(970px);
+  scroll-snap-type: mandatory;
+}

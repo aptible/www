@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'NeueMontreal';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('../fonts/NeueMontreal-Regular.ttf') format('ttf'),
+    url('../fonts/NeueMontreal-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('../fonts/NeueMontreal-Medium.ttf') format('ttf'),
+    url('../fonts/NeueMontreal-Medium.woff') format('woff');
+}
+
+
+body {
+  background-color: #0a1b28;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #f6b336;
+}

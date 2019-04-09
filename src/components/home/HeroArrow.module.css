@@ -1,0 +1,17 @@
+.arrow {
+  position: absolute;
+  top: 80px;
+  right: 108px;
+}
+
+.arrowStroke {
+  stroke-dasharray: 740;
+  stroke-dashoffset: 740;
+  animation: dash 3.5s cubic-bezier(0, 1.2, 0.3, 0.9) forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

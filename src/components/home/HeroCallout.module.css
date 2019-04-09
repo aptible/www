@@ -1,0 +1,23 @@
+.pill {
+  display: inline-block;
+  padding: 7px 12px;
+  margin-right: 10px;
+  background-color: var(--aptible-green-dark);
+  color: var(--aptible-green);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 15px;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  margin: 0 5px;
+}
+
+.arrow {
+  font-size: 16px;
+  font-weight: 500;
+}
