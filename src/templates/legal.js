@@ -2,14 +2,13 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import { Grid, Row } from '../components/grid/Grid';
-import ContentfulRichText from '../components/contentful/ContentfulRichText';
 
 export default ({ data }) => (
   <AptibleLayout>
     <Grid>
       <Row>
-        <h1>{data.post.title}</h1>
-        <ContentfulRichText json={data.post.body.json} />
+        <h1>{data.page.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: data.page.html}}></div>
       </Row>
     </Grid>
   </AptibleLayout>
@@ -17,11 +16,10 @@ export default ({ data }) => (
 
 export const query = graphql`
   query($slug: String!) {
-    post: contentfulBlogPost(slug: { eq: $slug }) {
-      id
-      title
-      body {
-        json
+    page: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
       }
     }
   }

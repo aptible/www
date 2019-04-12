@@ -41,6 +41,19 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
 
+        allMarkdownWithSlug: allMarkdownRemark(
+          filter: { frontmatter: { slug: { ne: null } } }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                slug
+                template
+              }
+            }
+          }
+        }
+
         allHipaaRegulations: allMarkdownRemark(
           filter: { fields: { tag: { eq: "hipaa-regulation" } } }
         ) {
@@ -76,6 +89,20 @@ exports.createPages = ({ graphql, actions }) => {
             slug: node.slug
           },
         });
+      });
+
+      result.data.allMarkdownWithSlug.edges.forEach(({ node }) => {
+        if (node.frontmatter.slug && node.frontmatter.template) {
+          createPage({
+            path: node.frontmatter.slug,
+            component: path.resolve(`./src/templates/${node.frontmatter.template}.js`),
+            context: {
+              slug: node.frontmatter.slug
+            },
+          });
+        } else {
+          console.error('Markdown files must have `slug` and `template` in their frontmatter.')
+        }
       });
 
       // Generate compliance site regulation pages
