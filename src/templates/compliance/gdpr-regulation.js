@@ -16,13 +16,13 @@ function getRegulation(data, slug) {
 }
 
 export default ({ data, pageContext }) => {
-  const part = getRegulation(data.hipaa, pageContext.slug);
+  const part = getRegulation(data.gdpr, pageContext.slug);
 
   return (
     <AptibleLayout>
       <Grid>
         <Row>
-          <h1>HIPAA {part.id} {part.title}</h1>
+          <h1>GDPR {part.id} {part.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: data.regulation.html }} />
         </Row>
       </Grid>
@@ -36,7 +36,7 @@ export const query = graphql`
       html
     }
 
-    hipaa: dataYaml(name: { eq: "HIPAA" }) {
+    gdpr: dataYaml(name: { eq: "GDPR" }) {
       extra_content_title_append
       search_key
       slugs {
