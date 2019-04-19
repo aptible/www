@@ -1,0 +1,45 @@
+.mainNavItem {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--body-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.open {
+  color: white;
+}
+
+.mainNavItem.open:hover {
+  color: white;
+}
+
+.mainNavItem:hover {
+  color: var(--aptible-yellow);
+}
+
+.mainNavItem:hover .arrow.down {
+  border-top-color: var(--aptible-yellow);
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  margin: 0 0 2px 3px;
+  display: inline-block;
+}
+
+.arrow.down {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid var(--body-color);
+}
+
+.arrow.up {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid white;
+}

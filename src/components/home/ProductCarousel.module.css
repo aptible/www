@@ -10,7 +10,5 @@
   width: 955px;
   padding: 75px;
   margin-right: 5px;
-  background-color: var(--aptible-green-dark);
-  scroll-snap-points-x: repeat(970px);
-  scroll-snap-type: mandatory;
+  background-color: var(--aptible-black-light);
 }
