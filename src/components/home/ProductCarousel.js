@@ -1,18 +1,23 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styles from './ProductCarousel.module.css';
 import { Grid, Row } from '../grid/Grid';
 
 export default () => (
   <Grid>
     <Row>
-      <div style={{ position: 'relative', height: '300px', marginBottom: '75px' }}>
+      <div className={styles.productSelector}>
         <div className={styles.carouselContainer}>
-          <div className={styles.product}>
-            <h3>Aptible Comply&trade;</h3>
-          </div>
-          <div className={styles.product}>
-            <h3>Aptible Deploy&trade;</h3>
-          </div>
+          <Link to="/comply/" className={`${styles.product} ${styles.comply}`}>
+            <h5>Aptible Comply&trade;</h5>
+            <h2>
+              Design, operate, and audit your security management program.
+            </h2>
+          </Link>
+          <Link to="/deploy/" className={`${styles.product} ${styles.deploy}`}>
+            <h5>Aptible Deploy&trade;</h5>
+            <h2>Deploy audit-ready apps<br/> and databases.</h2>
+          </Link>
         </div>
       </div>
     </Row>

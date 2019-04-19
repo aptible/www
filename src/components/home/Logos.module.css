@@ -1,6 +1,7 @@
 .logos {
   display: grid;
   grid-template-columns: auto 1fr 1fr 1fr auto;
+  margin-bottom: 175px;
 }
 
 .logo {

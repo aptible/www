@@ -1,3 +1,9 @@
+.productSelector {
+  position: relative;
+  height: 300px;
+  margin-bottom: 250px;
+}
+
 .carouselContainer {
   position: absolute;
   display: flex;
@@ -7,8 +13,32 @@
 
 .product {
   flex-shrink: 0;
-  width: 955px;
-  padding: 75px;
-  margin-right: 5px;
+  width: 796px;
+  padding: 130px 80px;
+  margin-right: 8px;
   background-color: var(--aptible-black-light);
+  text-decoration: none;
+  background-size: 800px;
+  background-position: 420px -190px;
+  background-repeat: no-repeat;
+}
+
+.product h2 {
+  max-width: 600px;
+}
+
+.product h5 {
+  margin-bottom: 20px;
+}
+
+.product:hover {
+  border-bottom: 4px solid var(--aptible-yellow);
+}
+
+.comply {
+  background-image: url('../../images/illustrations/comply.png');
+}
+
+.deploy {
+  background-image: url('../../images/illustrations/deploy.png');
 }
