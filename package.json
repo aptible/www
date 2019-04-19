@@ -16,15 +16,12 @@
     "@contentful/rich-text-react-renderer": "^13.2.0",
     "gatsby": "^2.1.30",
     "gatsby-plugin-postcss": "^2.0.6",
-    "gatsby-plugin-typography": "^2.2.9",
     "gatsby-source-contentful": "^2.0.41",
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-yaml": "^2.1.10",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-typography": "^0.16.19",
-    "typography": "^0.16.19"
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.6.0",
