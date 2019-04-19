@@ -1,0 +1,16 @@
+.logos {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr auto;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo:first-child {
+  margin-right: 60px;
+}
+
+.logo:last-child {
+  margin-left: 35px;
+}
