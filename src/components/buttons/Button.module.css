@@ -7,4 +7,9 @@
   font-weight: 500;
   color: var(--aptible-black);
   text-decoration: none;
+  border-radius: 28px;
+}
+
+.button:hover {
+  background-color: #fec649;
 }
