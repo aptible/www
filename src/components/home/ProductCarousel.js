@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styles from './ProductCarousel.module.css';
 import { Grid, Row } from '../grid/Grid';
+import Arrow from '../shared/Arrow';
 
 export default () => (
   <Grid>
@@ -9,6 +10,7 @@ export default () => (
       <div className={styles.productSelector}>
         <div className={styles.carouselContainer}>
           <Link to="/comply/" className={`${styles.product} ${styles.comply}`}>
+            <div className={styles.productArrow}><Arrow /></div>
             <h5>Aptible Comply&trade;</h5>
             <h2>
               Design, operate, and audit your security management program.

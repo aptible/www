@@ -12,7 +12,7 @@
 }
 
 .product {
-  flex-shrink: 0;
+  position: relative;
   width: 796px;
   padding: 130px 80px;
   margin-right: 8px;
@@ -32,7 +32,19 @@
 }
 
 .product:hover {
+  background-color: #1D2C3B;
   border-bottom: 4px solid var(--aptible-yellow);
+}
+
+.productArrow {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.product:hover .productArrow {
+  display: block;
 }
 
 .comply {

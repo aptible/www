@@ -1,0 +1,11 @@
+.circle {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  border-radius: 100px;
+  background-color: var(--aptible-yellow);
+}
+
+.arrowContainer {
+  margin: 16px 0 0 18px;
+}
