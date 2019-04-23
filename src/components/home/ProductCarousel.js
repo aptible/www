@@ -22,8 +22,8 @@ export default ({ products }) => (
     <Row>
       <div className={styles.productSelector}>
         <div className={styles.carouselContainer}>
-          {products.split(',').map((product) =>
-            <Link to={ALL_PRODUCTS[product].url} className={`${styles.product} ${styles[product]}`}>
+          {products.split(',').map((product, idx) =>
+            <Link key={idx} to={ALL_PRODUCTS[product].url} className={`${styles.product} ${styles[product]}`}>
               <div className={styles.productArrow}><Arrow /></div>
               <h5 dangerouslySetInnerHTML={{ __html: ALL_PRODUCTS[product].name }}></h5>
               <h2 dangerouslySetInnerHTML={{ __html: ALL_PRODUCTS[product].description }}></h2>

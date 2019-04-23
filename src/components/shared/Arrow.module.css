@@ -6,6 +6,19 @@
   background-color: var(--aptible-yellow);
 }
 
+.circle svg path {
+  fill: #0A1B2B;
+}
+
+.outline {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: var(--aptible-black);
+}
+
+.outline svg path {
+  fill: var(--aptible-yellow);
+}
+
 .arrowContainer {
   margin: 16px 0 0 18px;
 }

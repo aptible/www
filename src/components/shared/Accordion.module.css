@@ -1,0 +1,62 @@
+.sidebar {
+  grid-column: 1 / span 2;
+}
+
+.container {
+  grid-column: 4 / span 4;
+}
+
+.link {
+  display: inline-block;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.arrowContainer {
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+.item {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.item h4 {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.circle {
+  display: none;
+  position: absolute;
+  left: -24px;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+  background-color: var(--aptible-green);
+}
+
+.open .content {
+  display: block;
+}
+
+.open h4 {
+  color: white;
+}
+
+.open .circle {
+  display: block;
+}
+
+.content {
+  display: none;
+}
+
+.item:hover h4 {
+  color: white;
+}
