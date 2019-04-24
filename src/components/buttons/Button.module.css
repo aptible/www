@@ -13,3 +13,12 @@
 .button:hover {
   background-color: #fec649;
 }
+
+.black {
+  background-color: var(--aptible-black);
+  color: white;
+}
+
+.black:hover {
+  background-color: var(--aptible-black-light);
+}

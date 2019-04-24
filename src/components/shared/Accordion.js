@@ -42,11 +42,10 @@ class Accordion extends React.Component {
             {this.props.items.map((item, idx) =>
               <div
                 key={idx}
-                onClick={() => this.toggleItem(idx)}
                 className={`${styles.item} ${this.state.openIdx === idx ? styles.open : ''}`}
               >
                 <div className={styles.circle}></div>
-                <h4>{item.title}</h4>
+                <h4 onClick={() => this.toggleItem(idx)}>{item.title}</h4>
                 <div className={styles.content}>
                   {item.content}
                 </div>

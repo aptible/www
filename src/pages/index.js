@@ -4,6 +4,7 @@ import Hero from '../components/home/Hero';
 import ProductCarousel from '../components/home/ProductCarousel';
 import Logos from '../components/home/Logos';
 import UseCases from '../components/home/UseCases';
+import ZeroTo from '../components/footer/ZeroTo';
 import { findBlockById } from '../lib/blocks';
 import { graphql } from 'gatsby';
 
@@ -15,6 +16,7 @@ export default ({ data }) => (
     <Logos />
     <UseCases />
     <ProductCarousel products="deploy,comply" />
+    <ZeroTo />
   </AptibleLayout>
 );
 
