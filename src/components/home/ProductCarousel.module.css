@@ -1,14 +1,19 @@
 .productSelector {
   position: relative;
-  height: 300px;
-  margin-bottom: 300px;
+  height: 425px;
+  overflow-x: scroll;
+}
+
+.productSelector::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 .carouselContainer {
   position: absolute;
   display: flex;
-  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  padding: 0 280px;
 }
 
 .product {
@@ -21,6 +26,7 @@
   background-size: 800px;
   background-position: 420px -190px;
   background-repeat: no-repeat;
+  border-bottom: 4px solid var(--aptible-black-light);
 }
 
 .product h2 {
@@ -33,7 +39,7 @@
 
 .product:hover {
   background-color: #1D2C3B;
-  border-bottom: 4px solid var(--aptible-yellow);
+  border-bottom-color: var(--aptible-yellow);
 }
 
 .productArrow {
@@ -53,4 +59,21 @@
 
 .deploy {
   background-image: url('../../images/illustrations/deploy.png');
+}
+
+.circles {
+  margin-top: -15px;
+  margin-bottom: 150px;
+  vertical-align: top;
+}
+
+.circle {
+  display: inline-block;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+  background-color: var(--aptible-green);
+  margin-right: 4px;
+  cursor: pointer;
 }

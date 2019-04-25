@@ -12,10 +12,10 @@ import { graphql } from 'gatsby';
 export default ({ data }) => (
   <AptibleLayout>
     <Hero heroBlock={findBlockById(data.blocks.edges, 'home-hero')} />
-    <ProductCarousel products="comply,deploy" />
+    <ProductCarousel />
     <Logos />
     <UseCases />
-    <ProductCarousel products="deploy,comply" />
+    <ProductCarousel startPosition="right" />
     <ZeroTo />
   </AptibleLayout>
 );
