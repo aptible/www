@@ -17,6 +17,7 @@ class ZeroTo extends React.Component {
     this.startScrollY = 0;
     this.targetScrollY = 0;
     this.totalScrollDistance = 0;
+    this.lastScrollPercent = 0;
   }
 
   componentDidMount() {
@@ -64,7 +65,12 @@ class ZeroTo extends React.Component {
     }
 
     const percentInt = parseInt(percentScrolled * 100);
-    this.tickerRef.current.children[0].style.transform = `translateY(-${percentInt}%)`;
+    if (percentInt !== this.lastScrollPercent) {
+      this.lastScrollPercent = percentInt;
+      window.requestAnimationFrame(() => {
+        this.tickerRef.current.children[0].style.transform = `translateY(-${percentInt}%)`;
+      })
+    }
   }, 100);
 
   render() {
