@@ -11,9 +11,9 @@
 }
 
 .column {
-  border-right: 1px solid rgba(10, 27, 40, 0.05);
+  border-right: 1px solid var(--aptible-black-five);
 }
 
 .column:first-child {
-  border-left: 1px solid rgba(10, 27, 40, 0.05);
+  border-left: 1px solid var(--aptible-black-five);
 }

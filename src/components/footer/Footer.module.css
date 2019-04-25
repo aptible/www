@@ -2,4 +2,106 @@
   background-color: white;
   position: relative;
   z-index: 1;
+  color: var(--aptible-black);
+  padding: 150px 0;
+}
+
+.footer h6 {
+  color: var(--aptible-black);
+  margin-bottom: 25px;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--aptible-black);
+}
+
+.footer a h3 {
+  color: var(--aptible-black-half);
+  line-height: 48px;
+  margin-bottom: 15px;
+}
+
+.footer a:hover h3 {
+  color: var(--aptible-black);
+}
+
+.products {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.useCases {
+  grid-row: 1;
+  grid-column: 3 / span 2;
+}
+
+.resources {
+  grid-row: 1;
+  grid-column: 5 / span 2;
+}
+
+.company {
+  grid-row: 1;
+  grid-column: 7;
+}
+
+.useCases a,
+.resources a,
+.company a {
+  display: block;
+  color: var(--aptible-black-half);
+  font-size: 16px;
+  line-height: 48px;
+}
+
+.newsletter {
+  grid-row: 2;
+  grid-column: 3 / span 3;
+  margin: 75px 0;
+}
+
+.newsletter h5 {
+  color: var(--aptible-black);
+}
+
+.newsletter p {
+  color: var(--aptible-black-seventy);
+}
+
+.newsletterForm {
+  grid-row: 2;
+  grid-column: 6 / span 2;
+  margin-top: 115px;
+}
+
+.social {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.links {
+  grid-row: 3;
+  grid-column: 3 / span 4;
+}
+
+.links a {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.links a h6 {
+  color: var(--aptible-black-half);
+  letter-spacing: 0.03em;
+}
+
+.copyright {
+  grid-row: 3;
+  grid-column: 7;
+  text-align: right;
+  font-weight: 500;
+  color: var(--aptible-black-half);
 }

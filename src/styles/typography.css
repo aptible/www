@@ -70,6 +70,12 @@ h6 {
   line-height: 22px;
 }
 
+h6.small {
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
 p {
   font-size: 16px;
   letter-spacing: 0.03em;

@@ -1,0 +1,22 @@
+input {
+  font-family: 'NeueMontreal', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border: none;
+  mix-blend-mode: darken;
+  box-shadow: inset 0px -1px 0px rgba(10, 27, 43, 0.3);
+  padding: 20px 0;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 400;
+}
+
+input:focus {
+  outline-width: 0;
+  box-shadow: inset 0px -1px 0px rgba(10, 27, 43, 0.75);
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent
+}

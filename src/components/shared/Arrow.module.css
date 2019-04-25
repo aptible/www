@@ -22,3 +22,7 @@
 .arrowContainer {
   margin: 16px 0 0 18px;
 }
+
+.noCircle {
+  background-color: transparent;
+}
