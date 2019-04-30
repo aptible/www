@@ -17,7 +17,7 @@ class CustomerCarousel extends React.Component {
         <div className={styles.content}>
           <h5>Our Customers</h5>
           <h1 className={styles.quoteStart}>&ldquo;We needed to go from</h1>
-          <h1>zero to <img src={arrowImage} /></h1>
+          <h1>zero to <img src={arrowImage} alt="arrow" /></h1>
           <h1>HIPAA-compliant quickly,</h1>
           <h1>and Aptible was the only</h1>
           <h1>way we could do it.&rdquo;</h1>

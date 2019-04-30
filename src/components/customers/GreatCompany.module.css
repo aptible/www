@@ -1,0 +1,7 @@
+.container {
+  padding-top: 200px;
+}
+
+.content {
+  grid-column: 2 / span 4;
+}
