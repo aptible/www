@@ -1,0 +1,73 @@
+.intro {
+  grid-row: 1;
+  grid-column: 2 / span 5;
+}
+
+.intro h1 {
+  margin: 30px 0 130px 0;
+}
+
+.callout {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+}
+
+.steps {
+  grid-row: 2;
+  grid-column: 3 / span 5;
+  margin-bottom: 130px;
+}
+
+.aws {
+  height: 40px;
+}
+
+.steps ol {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  counter-reset: deploy-steps;
+  padding: 0;
+}
+
+.steps li {
+  counter-increment: deploy-steps;
+  font-size: 16px;
+  line-height: 48px;
+  color: var(--white-thirty);
+}
+
+.steps li:before {
+  display: inline-block;
+  content: counter(deploy-steps) ". ";
+  color: var(--white-thirty);
+  width: 35px;
+  text-align: left;
+}
+
+.steps li.aptible {
+  color: white;
+}
+
+.steps li.aptible:before {
+  color: white;
+}
+
+.stepsArrow {
+  position: relative;
+  grid-row: 2;
+  grid-column: 3 / span 5;
+}
+
+.stepsArrow svg {
+  position: absolute;
+  top: 185px;
+  left: 250px;
+  z-index: 0;
+}
+
+.useAptible {
+  grid-row: 3;
+  grid-column: 2 / span 5;
+  margin-bottom: 200px;
+}

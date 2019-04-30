@@ -4,6 +4,7 @@ module.exports = {
     '--grid-columns': 7,
     '--grid-lines-color': '#192a36',
     '--body-color': '#b5bbbf',
+    '--white-thirty': 'rgba(255, 255, 255, 0.3)',
     '--aptible-black': '#0a1b28',
     '--aptible-black-light': '#132433',
     '--aptible-black-seventy': 'rgba(10, 27, 40, 0.7)',

@@ -1,7 +1,6 @@
 .button {
   display: inline-block;
-  padding: 14px 0;
-  width: 100%;
+  padding: 14px 30px;
   text-align: center;
   background-color: var(--aptible-yellow);
   font-weight: 500;
