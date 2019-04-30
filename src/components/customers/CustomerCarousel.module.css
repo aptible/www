@@ -1,0 +1,60 @@
+.mainImage {
+  position: relative;
+  grid-row: 1;
+  grid-column: 4 / span 3;
+  z-index: 1;
+}
+
+.tmpImage {
+  grid-row: 1;
+  width: 100%;
+  height: 615px;
+}
+
+.ruby {
+  background-color: #AE6470;
+}
+
+.blueMist {
+  background-color: #91AAC2;
+}
+
+.gulfBlue {
+  background-color: #212D46;
+}
+
+.suedeGray {
+  background-color: #CBBBC4;
+}
+
+.thumbnails {
+  grid-row: 1;
+  grid-column: 7;
+  text-align: center;
+}
+
+.content {
+  position: relative;
+  grid-row: 1;
+  grid-column: 1 / span 5;
+  z-index: 2;
+}
+
+h1.quoteStart {
+  margin-left: -24px;
+}
+
+h1 img {
+  display: inline-block;
+  margin-bottom: -10px;
+}
+
+.content h5 {
+  margin-bottom: 30px;
+}
+
+.content p {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  max-width: 415px;
+}
