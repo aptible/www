@@ -8,9 +8,12 @@ module.exports = {
     '--aptible-black-light': '#132433',
     '--aptible-black-seventy': 'rgba(10, 27, 40, 0.7)',
     '--aptible-black-half': 'rgba(10, 27, 40, 0.5)',
+    '--aptible-black-twenty': 'rgba(10, 27, 40, 0.2)',
     '--aptible-black-five': 'rgba(10, 27, 40, 0.05)',
     '--aptible-yellow': '#fdb515',
     '--aptible-green': '#33c69f',
+    '--aptible-green-ten': 'rgba(51, 198, 159, 0.1)',
     '--aptible-green-dark': '#263941',
+    '--aptible-card-hover': '#1b2c3b',
   },
 };

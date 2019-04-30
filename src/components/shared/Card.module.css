@@ -1,0 +1,103 @@
+.container {
+  line-height: 0;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  padding: 80px;
+  background-color: var(--aptible-black-light);
+  border-bottom: 4px solid var(--aptible-black-light);
+}
+
+.card h5 {
+  margin-bottom: 40px;
+}
+
+.container:hover .card {
+  background-color: var(--aptible-card-hover);
+  border-bottom-color: var(--aptible-yellow);
+}
+
+.arrow {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.withImage {
+  top: -26px;
+}
+
+.container:hover .arrow {
+  display: block;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.videoLength {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  padding: 10px 12px;
+  background-color: var(--aptible-black-twenty);
+  z-index: 1;
+  border-radius: 31px;
+  color: white;
+}
+
+.videoPlayIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+  margin-right: 8px;
+}
+
+.videoLength p {
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.image {
+  max-width: 100%;
+}
+
+.logo {
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.author {
+  font-weight: 500;
+  color: white;
+  margin-top: 30px;
+}
+
+.tags {
+  margin-top: 50px;
+}
+
+.tag {
+  background-color: var(--aptible-green-ten);
+  color: var(--aptible-green);
+  padding: 8px 14px;
+  border-radius: 24px;
+  margin-right: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.readMore {
+  float: right;
+  display: none;
+  padding-top: 5px;
+}
+
+.container:hover .readMore {
+  display: block;
+}

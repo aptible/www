@@ -38,7 +38,7 @@
 }
 
 .product:hover {
-  background-color: #1D2C3B;
+  background-color: var(--aptible-card-hover);
   border-bottom-color: var(--aptible-yellow);
 }
 

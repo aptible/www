@@ -1,0 +1,16 @@
+.container {
+  margin-top: 60px;
+}
+
+.left {
+  grid-row: 1;
+  grid-column: 1 / span 4;
+  padding-top: 160px;
+  padding-right: 85px;
+}
+
+.right {
+  grid-row: 1;
+  grid-column: 4 / span 4;
+  padding-left: 85px;
+}
