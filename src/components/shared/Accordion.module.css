@@ -6,20 +6,6 @@
   grid-column: 4 / span 4;
 }
 
-.link {
-  display: inline-block;
-  color: white;
-  font-weight: 500;
-  text-decoration: none;
-  margin-top: 30px;
-}
-
-.arrowContainer {
-  display: inline-block;
-  margin-left: 15px;
-  vertical-align: middle;
-}
-
 .item {
   position: relative;
   padding-bottom: 60px;

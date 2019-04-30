@@ -4,6 +4,7 @@
   height: 56px;
   border-radius: 100px;
   background-color: var(--aptible-yellow);
+  border: 1px solid var(--aptible-yellow);
 }
 
 .circle svg path {

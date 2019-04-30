@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid, Row } from '../grid/Grid';
-import { Link } from 'gatsby';
-import Arrow from '../shared/Arrow';
+import ArrowButton from '../buttons/ArrowButton';
 import styles from './Accordion.module.css';
 
 class Accordion extends React.Component {
@@ -29,12 +28,7 @@ class Accordion extends React.Component {
             <p className="L">{this.props.description}</p>
 
             {this.props.linkText && this.props.linkTo &&
-              <Link to={this.props.linkTo} className={styles.link}>
-                {this.props.linkText}
-                <div className={styles.arrowContainer}>
-                  <Arrow theme="outline" />
-                </div>
-              </Link>
+              <ArrowButton to={this.props.linkTo} text={this.props.linkText} />
             }
           </div>
 

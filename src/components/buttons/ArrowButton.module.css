@@ -1,0 +1,13 @@
+.arrowContainer {
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+.link {
+  display: inline-block;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: 30px;
+}
