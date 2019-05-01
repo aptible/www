@@ -1,0 +1,49 @@
+.container {
+  position: sticky;
+  top: 0;
+  border-top: 1px solid var(--grid-lines-color);
+  border-bottom: 1px solid var(--grid-lines-color);
+  z-index: 10;
+  background-color: var(--aptible-black);
+  padding: 6px 0;
+}
+
+.navItems {
+  grid-row: 1;
+  grid-column: 1 / span 5;
+  margin-top: 12px;
+}
+
+.navItems a {
+  display: inline-block;
+  margin-right: 45px;
+  text-decoration: none;
+}
+
+.navItems a h6 {
+  color: var(--body-color);
+}
+
+.navItems a:hover h6,
+.navItems a.active h6 {
+  color: white;
+}
+
+.circle {
+  display: none;
+  width: 4px;
+  height: 4px;
+  background-color: var(--aptible-green);
+  border-radius: 20px;
+  margin: 6px auto 0 auto;
+}
+
+.navItems a.active .circle {
+  display: block;
+}
+
+.cta {
+  grid-row: 1;
+  grid-column: 6 / span 2;
+  text-align: right;
+}
