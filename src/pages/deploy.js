@@ -6,6 +6,7 @@ import SecurityControls from '../components/deploy/SecurityControls';
 import HowItWorks from '../components/deploy/HowItWorks';
 import UseCases from '../components/deploy/UseCases';
 import WhoUses from '../components/deploy/WhoUses';
+import Documentation from '../components/deploy/Documentation';
 import ZeroTo from '../components/footer/ZeroTo';
 
 
@@ -17,6 +18,7 @@ export default ({ data }) => (
     <HowItWorks />
     <UseCases />
     <WhoUses />
+    <Documentation />
     <ZeroTo />
   </AptibleLayout>
 );
