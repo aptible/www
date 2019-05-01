@@ -3,7 +3,7 @@ import styles from './Card.module.css';
 import Arrow from '../shared/Arrow';
 import videoPlayIcon from '../../images/video-play.svg';
 
-export default ({ logo, headline, text, author, tags, image, videoLength }) => (
+export default ({ logo, headline, bigHeadline, text, author, tags, image, videoLength, readMore }) => (
   <div className={styles.container}>
     {image &&
       <div className={styles.imageContainer}>
@@ -30,6 +30,10 @@ export default ({ logo, headline, text, author, tags, image, videoLength }) => (
         <h5>{headline}</h5>
       }
 
+      {bigHeadline &&
+        <h3>{bigHeadline}</h3>
+      }
+
       {text &&
         <p>{text}</p>
       }
@@ -38,9 +42,11 @@ export default ({ logo, headline, text, author, tags, image, videoLength }) => (
         <p className={styles.author}>{author}</p>
       }
 
-      <div className={styles.readMore}>
-        <p>Read More</p>
-      </div>
+      {readMore &&
+        <div className={styles.readMore}>
+          <p>Read More</p>
+        </div>
+      }
 
       {tags &&
         <div className={styles.tags}>

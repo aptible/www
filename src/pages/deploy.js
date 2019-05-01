@@ -4,6 +4,7 @@ import Hero from '../components/deploy/Hero';
 import Features from '../components/deploy/Features';
 import SecurityControls from '../components/deploy/SecurityControls';
 import HowItWorks from '../components/deploy/HowItWorks';
+import UseCases from '../components/deploy/UseCases';
 import ZeroTo from '../components/footer/ZeroTo';
 
 
@@ -13,6 +14,7 @@ export default ({ data }) => (
     <Features />
     <SecurityControls />
     <HowItWorks />
+    <UseCases />
     <ZeroTo />
   </AptibleLayout>
 );

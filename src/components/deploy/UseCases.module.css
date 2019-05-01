@@ -1,0 +1,19 @@
+.container {
+  padding: 200px 0;
+}
+
+.left {
+  grid-row: 1;
+  grid-column: 1 / span 4;
+  padding-right: 85px;
+}
+
+.right {
+  grid-row: 1;
+  grid-column: 4 / span 4;
+  padding-left: 85px;
+}
+
+.seeAll {
+  margin-bottom: 100px;
+}

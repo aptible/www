@@ -1,3 +1,9 @@
+.container {
+  background:
+    no-repeat -300px 550px/1000px url('../../images/illustrations/deploy.png'),
+    no-repeat 1000px 1000px/1000px url('../../images/illustrations/deploy.png'); 
+}
+
 .intro {
   grid-row: 1;
   grid-column: 2 / span 3;

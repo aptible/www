@@ -1,6 +1,7 @@
 .container {
   line-height: 0;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .card {
@@ -8,6 +9,10 @@
   padding: 80px;
   background-color: var(--aptible-black-light);
   border-bottom: 4px solid var(--aptible-black-light);
+}
+
+.card h3  {
+  margin-bottom: 30px;
 }
 
 .card h5 {
