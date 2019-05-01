@@ -1,0 +1,50 @@
+.container {
+  padding: 150px 0;
+}
+
+.intro {
+  grid-row: 1;
+  grid-column: 2 / span 4;
+  margin-bottom: 60px;
+}
+
+.persona {
+  margin-right: 30px;
+}
+
+.persona h6 {
+  font-size: 18px;
+}
+
+.personaOne {
+  grid-row: 2;
+  grid-column: 2 / span 2;
+  margin-right: 30px;
+}
+
+.personaTwo {
+  grid-row: 2;
+  grid-column: 4 / span 2;
+  margin-right: 30px;
+}
+
+.personaThree {
+  grid-row: 2;
+  grid-column: 6 / span 2;
+  margin-right: 30px;
+}
+
+.customersLeft {
+  margin-top: 100px;
+  grid-row: 3;
+  grid-column: 1 / span 4;
+  padding-top: 160px;
+  padding-right: 85px;
+}
+
+.customersRight {
+  margin-top: 100px;
+  grid-row: 3;
+  grid-column: 4 / span 4;
+  padding-left: 85px;
+}
