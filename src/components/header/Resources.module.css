@@ -1,0 +1,56 @@
+.container {
+  padding: 60px 0 15px 0;
+}
+
+.container a {
+  display: block;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.container a:after {
+  content: url('../../images/arrow-resources-nav.svg');
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+}
+
+.container a.subLink {
+  font-weight: 400;
+  color: var(--body-color);
+}
+
+.container a.subLink:after {
+  content: '';
+}
+
+.container a:hover.subLink {
+  color: white;
+}
+
+.container h6 {
+  margin-top: 45px;
+  color: var(--body-color);
+}
+
+.documentation {
+  grid-row: 1;
+  grid-column: 4 / span 2;
+}
+
+.blog {
+  grid-row: 1;
+  grid-column: 6 / span 2;
+}
+
+.guides {
+  grid-row: 2;
+  grid-column: 4 / span 2;
+}
+
+.support {
+  grid-row: 2;
+  grid-column: 6 / span 2;
+}
