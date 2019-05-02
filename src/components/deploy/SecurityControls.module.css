@@ -1,6 +1,8 @@
 .intro {
   grid-row: 1;
   grid-column: 2 / span 5;
+  position: relative;
+  z-index: 2;
 }
 
 .intro h1 {

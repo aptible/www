@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './Hero.module.css';
 import Button from '../buttons/Button';
+import Console from './Console';
 
 export default () => (
   <div className={styles.container}>
@@ -17,6 +18,10 @@ export default () => (
         </p>
 
         <Button to="/">Start with Deploy</Button>
+      </div>
+
+      <div className={styles.consoleContainer}>
+        <Console />
       </div>
     </Grid>
   </div>
