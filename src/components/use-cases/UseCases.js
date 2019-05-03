@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './UseCases.module.css';
 import { Grid } from '../grid/Grid';
 import Button from '../buttons/Button';
+import Quote from './Quote';
 
 const PARAGRAPH = <div>
   <p className="XL">
@@ -36,7 +37,10 @@ export default () => (
   <div className={styles.container}>
     <Grid rows="2">
       <div className={styles.case}>
-        <h1>Vendor Security Assessments<br /> and External Audits</h1>
+        <h1>
+          Vendor Security Assessments
+          <br /> and External Audits
+        </h1>
         {PARAGRAPH}
         <hr />
       </div>
@@ -53,6 +57,8 @@ export default () => (
         <Button to="/deploy/">Learn More</Button>
       </div>
     </Grid>
+
+    <Quote />
 
     <Grid rows="2">
       <div className={styles.case}>
@@ -74,6 +80,8 @@ export default () => (
       </div>
     </Grid>
 
+    <Quote />
+
     <Grid rows="2">
       <div className={styles.case}>
         <h1>Audit-Readiness for Regulatory Compliance (HIPAA, GDPR)</h1>
@@ -93,6 +101,8 @@ export default () => (
         <Button to="/deploy/">Learn More</Button>
       </div>
     </Grid>
+
+    <Quote />
 
     <Grid rows="2">
       <div className={styles.case}>
@@ -114,6 +124,8 @@ export default () => (
       </div>
     </Grid>
 
+    <Quote />
+
     <Grid rows="2">
       <div className={styles.case}>
         <h1>Internal Audits</h1>
@@ -133,5 +145,7 @@ export default () => (
         <Button to="/deploy/">Learn More</Button>
       </div>
     </Grid>
+
+    <Quote />
   </div>
 );
