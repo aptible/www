@@ -11,7 +11,7 @@
 }
 
 .container a:after {
-  content: url('../../images/arrow-resources-nav.svg');
+  content: url('../../images/arrows/header-resources.svg');
   width: 10px;
   height: 10px;
   margin-left: 10px;

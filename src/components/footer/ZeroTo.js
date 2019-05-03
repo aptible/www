@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './ZeroTo.module.css';
 import { Grid } from '../grid/Grid';
 import Button from '../buttons/Button';
-import arrowImage from '../../images/arrow-black.svg';
+import arrowImage from '../../images/arrows/zero-to.svg';
 import GridLinesForSection from '../grid/GridLinesForSection';
 import { throttle } from '../../lib/util';
 

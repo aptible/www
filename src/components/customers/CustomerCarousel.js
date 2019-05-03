@@ -3,7 +3,7 @@ import { Grid } from '../grid/Grid';
 import styles from './CustomerCarousel.module.css';
 import ArrowButton from '../buttons/ArrowButton';
 import CustomerCarouselThumbnail from './CustomerCarouselThumbnail';
-import arrowImage from '../../images/arrow-green.svg';
+import arrowImage from '../../images/arrows/green.svg';
 
 class CustomerCarousel extends React.Component {
   constructor(props) {
