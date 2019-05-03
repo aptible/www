@@ -7,7 +7,7 @@ import Button from '../buttons/Button';
 export default ({ items, ctaText, ctaLink }) => (
   <div className={styles.container}>
     <Grid>
-      <div className={styles.navItems}>
+      <div className={`${styles.navItems} ${ctaText ? '' : styles.noCta}`}>
         {items.map((item, idx) => {
           return (
             <Link key={idx} to="/" className={idx === 0 ? styles.active : ''}>
