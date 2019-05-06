@@ -95,6 +95,6 @@ p.L-bold {
 
 p.XL {
   font-size: 24px;
-  line-height: 1.2;
-  letter-spacing: 2%;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
 }

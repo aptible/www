@@ -3,7 +3,6 @@
 }
 
 .quote {
-  
   grid-row: 1;
   grid-column: 2 / span 3;
   z-index: 3;

@@ -81,6 +81,7 @@
 .social {
   grid-row: 3;
   grid-column: 1;
+  margin-top: 3px;
 }
 
 .links {
@@ -104,4 +105,8 @@
   text-align: right;
   font-weight: 500;
   color: var(--aptible-black-half);
+}
+
+.copyright p {
+  margin-top: 4px;
 }
