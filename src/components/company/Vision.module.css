@@ -1,0 +1,28 @@
+.container {
+  margin: 200px 0;
+}
+
+.intro {
+  grid-column: 2 / span 4;
+  margin-bottom: 50px;
+}
+
+.bullet {
+  padding: 0 130px 80px 0;
+}
+
+.bulletLeft {
+  grid-column: 2 / span 3;
+}
+
+.bulletRight {
+  grid-column: 5 / span 3;
+}
+
+.bulletTop {
+  grid-row: 1;
+}
+
+.bulletBottom {
+  grid-row: 2;
+}

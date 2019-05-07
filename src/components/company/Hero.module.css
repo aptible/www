@@ -1,0 +1,35 @@
+.container {
+  margin: 100px 0;
+}
+
+.headline {
+  grid-row: 1;
+  grid-column: 1 / span 7;
+  text-align: center;
+  z-index: 3;
+  margin-top: -80px;
+}
+
+.bgImage {
+  grid-row: 1;
+  grid-column: 1 / span 7;
+  z-index: 1;
+}
+
+.bgImage img {
+  max-width: 100%;
+}
+
+.zoomChat {
+  grid-row: 1;
+  grid-column: 1 / span 7;
+  margin: 180px 80px;
+  z-index: 2;
+}
+
+.coreCompetency {
+  grid-row: 2;
+  grid-column: 2 / span 5;
+  text-align: center;
+  margin-top: 100px;
+}

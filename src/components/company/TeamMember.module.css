@@ -1,0 +1,80 @@
+.teamMember {
+  position: relative;
+  padding: 25px 0;
+  border-top: 1px solid var(--white-seventy);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.teamMember:hover {
+  cursor: pointer;
+  border-top-color: var(--aptible-yellow);
+}
+
+.teamMember h5 {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  margin: 0;
+}
+
+.teamMember:hover h5 {
+  color: var(--aptible-yellow);
+}
+
+.teamMember.open:hover h5 {
+  color: white;
+}
+
+.teamMember.open {
+  border-top-color: var(--aptible-yellow);
+}
+
+.photo {
+  display: none;
+  position: absolute;
+  left: -320px;
+  width: 255px;
+  height: 255px;
+  background-color: #aaa;
+}
+
+.teamMember:hover .photo,
+.teamMember.open .photo {
+  display: block;
+}
+
+.title {
+  grid-row: 1;
+  grid-column: 3 / span 3;
+  margin-top: 6px;
+}
+
+.title h6 {
+  color: var(--body-color);
+}
+
+.action {
+  grid-row: 1;
+  grid-column: 5;
+  text-align: right;
+}
+
+.teamMember .action svg {
+  fill: white;
+  fill-opacity: 0.5;
+}
+
+.teamMember:hover .action svg {
+  fill: var(--aptible-yellow);
+  fill-opacity: 1;
+}
+
+.bio {
+  display: none;
+  grid-column: 3 / span 3;
+  padding: 30px 0;
+}
+
+.teamMember.open .bio {
+  display: block;
+}

@@ -1,0 +1,11 @@
+.container {
+  padding-bottom: 200px;
+}
+
+.sidebar {
+  grid-column: 1 / span 2;
+}
+
+.list {
+  grid-column: 3 / span 5;
+}
