@@ -8,15 +8,20 @@ export default () => (
     <Grid>
       <Row>
         <h5>Join the Team</h5>
-        <h1>Help us build the future of<br /> privacy and security on the web.</h1>
+        <h2>
+          We’re solving a fundamental problem for the future of the economy.
+          We’re going to need some help.
+        </h2>
         <p className="L">
-          Try to incorporate the notion of the "tribe", concepts around
-          empowerment and wayfinding, and an energy around the impending
-          growth without explicity saying these. Focus content on what's in it
-          for the potential employee, and how they'll benefit from being part of
-          this team.
+          You’ll be joining a team dedicated to making a difference, and that
+          dedication has become the cornerstone of our culture. We believe that
+          culture isn’t free food and foosball tables, it’s a group of people
+          working toward a common goal; dedicated to helping each other grow,
+          find new ways to solve complex problems, and have a little fun along
+          the way. As part of our team, you’ll have a huge impact, not just on
+          the product or the people, but on the future of the field.
         </p>
-        <ArrowButton to="/" text="See Job Openings" />
+        <ArrowButton to="/" text="View Openings" />
       </Row>
     </Grid>
   </div>
