@@ -180,7 +180,7 @@ export default () => (
         <ul>
           <li>Companies selling to customers in Healthcare</li>
           <li>Companies dealing with senstive data</li>
-          <li>Startups building apps that collect cusotmer data</li>
+          <li>Startups building apps that collect customer data</li>
         </ul>
         <Button to="/deploy/">Learn More</Button>
       </div>
@@ -239,7 +239,7 @@ export default () => (
         <ul>
           <li>Companies without a security team</li>
           <li>Companies dealing with senstive data</li>
-          <li>Startups building apps that collect cusotmer data</li>
+          <li>Startups building apps that collect customer data</li>
         </ul>
         <Button to="/deploy/">Learn More</Button>
       </div>
