@@ -11,7 +11,7 @@ export default ({ heroBlock }) => (
         <h1 className="hero">Use Cases</h1>
         <p className="XL">
           Aptible provides Access, Empowerment, Scalability, and Confidence. We
-          know what startups are facing in their businesses right now and are 
+          know what startups are facing in their businesses right now and are
           solving their problems.
         </p>
       </div>
