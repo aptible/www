@@ -13,7 +13,7 @@ export default () => (
           Launch apps and databases that<br /> are audit-ready
         </h1>
         <p className="XL">
-          Aptible Deploy automatically implements the security controls you need
+          Deploy automatically implements the security controls you need
           to achieve regulatory compliance and pass customer audits.
         </p>
 

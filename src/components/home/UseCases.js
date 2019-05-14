@@ -32,7 +32,7 @@ export default () => (
   <div className={styles.useCases}>
     <Accordion
       title="Use Cases"
-      description="Meet your audit requirements, and build your team's security competence."
+      description="Meet your audit requirements and build a true culture of security."
       linkText="See All Use Cases"
       linkTo="/use-cases/"
       items={items} />

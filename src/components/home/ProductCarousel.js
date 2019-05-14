@@ -8,13 +8,13 @@ const ALL_PRODUCTS = [
   {
     id: 'comply',
     url: '/comply/',
-    name: 'Aptible Comply&trade;',
-    description: 'Design, operate, and audit your security management program.'
+    name: 'Aptible Comply',
+    description: 'Pass your next security audit, guaranteed.'
   },
   {
     id: 'deploy',
     url: '/deploy/',
-    name: 'Aptible Deploy&trade;',
+    name: 'Aptible Deploy',
     description: 'Deploy audit-ready apps<br/> and databases.'
   }
 ];
