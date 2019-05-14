@@ -15,13 +15,13 @@ export default () => (
 
         <Card
           bigHeadline="Audit Readiness for Security Standards"
-          text="Aptible Comply and Deploy offer the most comprehensive solution to achieving information security standards."
+          text="Aptible Deploy offers the most comprehensive solution to achieving information security standards when depoying an application."
           to="/"
           />
 
         <Card
           bigHeadline="Security Competence"
-          text="You can't risk being 'bad' at security... Aptible Comply and Deploy empower your existing workforce to take ownership over your security management program."
+          text="You can't risk being &ldquo;bad&rdquo; at security&hellip; Aptible Deploy empowers you with best-in class security controls so you can pass regulatory and customer audits and be confident in your compliance."
           to="/"
         />
       </div>
@@ -29,19 +29,19 @@ export default () => (
       <div className={styles.right}>
         <Card
           bigHeadline="Vendor Security Assessments and External Audits"
-          text="Aptible Comply and Deploy offer the most comprehensive solution to achieving information security standards."
+          text="Aptible Deploy gives you the tools you need and the confidence to speak fluently about your security program to customers and external auditors."
           to="/"
         />
 
         <Card
           bigHeadline="Audit Readiness for Regulatory Compliance"
-          text="You can't risk being 'bad' at security... Aptible Comply and Deploy empower your existing workforce to take ownership over your security management program."
+          text="Aptible Deploy gives you the tools you need to ensure that your application achieves and maintiains compliance."
           to="/"
         />
 
         <Card
           bigHeadline="Internal Audits"
-          text="You can't risk being 'bad' at security... Aptible Comply and Deploy empower your existing workforce to take ownership over your security management program."
+          text="Aptible Deploy gives you the tools and services you need to be able to test and maintain your security position."
           to="/"
         />
       </div>

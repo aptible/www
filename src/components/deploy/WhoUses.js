@@ -11,25 +11,25 @@ export default () => (
       <div className={styles.intro}>
         <h1>Who Uses Deploy?</h1>
         <p className="XL">
-          Small companies, operating in the cloud, forced to response to long
-          vendor security assessments; and/or dealing with regulations like
-          HIPAA/GDPR to go to market.
+          Small companies who need to focus on development goals, achieve
+          regulatory compliance, get audit ready without the benefit of a
+          security and compliance expert.
         </p>
       </div>
 
       <div className={`${styles.persona} ${styles.personaOne}`}>
         <h6>Persona Number One</h6>
-        <p className="L">Small companies operating in the cloud who care about security in some way.</p>
+        <p className="L">Teams that would rather not try to DIY on AWS.</p>
       </div>
 
       <div className={`${styles.persona} ${styles.personaTwo}`}>
         <h6>Persona Number Two</h6>
-        <p className="L">Small companies operating in the cloud who care about security in some way.</p>
+        <p className="L">Small dev teams with no secirity expert.</p>
       </div>
 
       <div className={`${styles.persona} ${styles.personaThree}`}>
         <h6>Persona Number Three</h6>
-        <p className="L">Small companies operating in the cloud who care about security in some way.</p>
+        <p className="L">Teams that need to focus on development and still get compliant.</p>
       </div>
 
       <div className={styles.customersLeft}>
