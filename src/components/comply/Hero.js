@@ -14,8 +14,8 @@ export default () => (
           security hire
         </h1>
         <p className="XL">
-          Design, operating, and audit your information security management
-          program with a process that's fast, relevant, and cost-effective.
+          Comply helps you build a Security Management system so you can achieve
+          and maintain the compliance and security that give you a competitive edge.
         </p>
 
         <Button to="/">Start with Comply</Button>

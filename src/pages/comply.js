@@ -2,7 +2,7 @@ import React from 'react';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import Hero from '../components/comply/Hero';
 import Nav from '../components/shared/Nav';
-import UseCases from '../components/deploy/UseCases';
+import UseCases from '../components/comply/UseCases';
 import Features from '../components/comply/Features';
 import HowItWorks from '../components/comply/HowItWorks';
 import WhoUses from '../components/comply/WhoUses';

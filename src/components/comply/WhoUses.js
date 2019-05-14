@@ -11,33 +11,33 @@ export default () => (
       <div className={styles.intro}>
         <h1>Who Uses Comply?</h1>
         <p className="XL">
-          Small companies, operating in the cloud, forced to response to long
-          vendor security assessments; and/or dealing with regulations like
-          HIPAA/GDPR to go to market.
+          Small companies, operating in the cloud, who need to prove their
+          security and compliance, whose deals are held up by Vendor Security
+          Assessments; and/or who must comply with regulations like HIPAA/GDPR
+          to go to market.
         </p>
       </div>
 
       <div className={`${styles.persona} ${styles.personaOne}`}>
-        <h6>Persona Number One</h6>
+        <h6>Cloud-native Companies</h6>
         <p className="L">
-          Small companies operating in the cloud who care about security in some
-          way.
+          Small companies operating in the cloud.
         </p>
       </div>
 
       <div className={`${styles.persona} ${styles.personaTwo}`}>
-        <h6>Persona Number Two</h6>
+        <h6>That collect customer data</h6>
         <p className="L">
-          Small companies operating in the cloud who care about security in some
-          way.
+          New regulations like GDPR make it a company's responsibility to
+          protect nearly any personal data it collects.
         </p>
       </div>
 
       <div className={`${styles.persona} ${styles.personaThree}`}>
-        <h6>Persona Number Three</h6>
+        <h6>And want to go Beyond Compliance</h6>
         <p className="L">
-          Small companies operating in the cloud who care about security in some
-          way.
+          Showing customers you’re investing in security increases conversion
+          rate and decreases your sales cycle, especially with the enterprise.
         </p>
       </div>
 
