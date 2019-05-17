@@ -1,23 +1,27 @@
 .button {
   display: inline-block;
-  padding: 14px 30px;
+  padding: 13px 29px;
   text-align: center;
   background-color: var(--aptible-yellow);
+  border: 1px solid var(--aptible-yellow);
   font-weight: 500;
   color: var(--aptible-black);
   text-decoration: none;
   border-radius: 28px;
+  cursor: pointer;
 }
 
 .button:hover {
-  background-color: #fec649;
+  background-color: transparent;
+  color: white;
 }
 
 .black {
   background-color: var(--aptible-black);
+  border-color: var(--aptible-black);
   color: white;
 }
 
 .black:hover {
-  background-color: var(--aptible-black-light);
+  color: var(--aptible-black);
 }
