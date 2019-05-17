@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ZeroTo.module.css';
 import { Grid } from '../grid/Grid';
-import Button from '../buttons/Button';
+import SignupButton from '../signup/SignupButton';
 import arrowImage from '../../images/arrows/zero-to.svg';
 import GridLinesForSection from '../grid/GridLinesForSection';
 import { throttle } from '../../lib/util';
@@ -93,9 +93,7 @@ class ZeroTo extends React.Component {
             <h4>Start your security management journey now.</h4>
           </div>
           <div className={styles.button}>
-            <Button to="/" theme="black">
-              Get Started
-            </Button>
+            <SignupButton text="Get Started" theme="black" />
           </div>
         </Grid>
 

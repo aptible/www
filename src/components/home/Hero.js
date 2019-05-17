@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Hero.module.css';
 import { Grid } from '../grid/Grid';
-import Button from '../buttons/Button';
+import SignupButton from '../signup/SignupButton';
 import ContentfulBlock from '../contentful/ContentfulBlock';
 import HeroArrow from './HeroArrow';
 import HeroCallout from './HeroCallout';
@@ -15,7 +15,7 @@ export default ({ heroBlock }) => (
     </div>
 
     <div className={styles.cta}>
-      <Button to="/">Get Started</Button>
+      <SignupButton text="Get Started" />
     </div>
 
     <div className={styles.callout}>
