@@ -30,5 +30,12 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'modal',
+        id: 'modal-portal',
+      },
+    },
   ],
 };

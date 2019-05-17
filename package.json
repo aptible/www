@@ -15,6 +15,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.2.0",
     "gatsby": "^2.1.30",
+    "gatsby-plugin-portal": "^1.0.7",
     "gatsby-plugin-postcss": "^2.0.6",
     "gatsby-source-contentful": "^2.0.41",
     "gatsby-source-filesystem": "^2.0.28",
