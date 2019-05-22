@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import Hero from '../components/company/Hero';
 import Nav from '../components/shared/Nav';
