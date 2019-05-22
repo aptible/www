@@ -29,7 +29,8 @@ class InnerSignup extends React.Component {
   }
 
   setEmail = (email, marketingConsent) => {
-    this.setState({ email, marketingConsent })
+    this.setState({ email, marketingConsent });
+    this.sendToMarketo(email);
 
     if (this.state.product) {
       this.openChiliPiper();
@@ -47,6 +48,22 @@ class InnerSignup extends React.Component {
     console.log('chili piper response', scheduledCall);
     const sampleCall = {};
     this.setState({ scheduledCall: sampleCall, currentView: Confirmation });
+  }
+
+  sendToMarketo = (email) => {
+    window.MktoForms2.loadForm('//app-ab35.marketo.com', '620-GAP-535', 1031);
+    window.MktoForms2.whenReady((marketoForm) => {
+      marketoForm.addHiddenFields({
+        Email: email
+      });
+
+      marketoForm.onSuccess((marketoResponse) => {
+        console.log('marketo response', marketoResponse);
+        return false;
+      });
+
+      marketoForm.submit();
+    });
   }
 
   openChiliPiper = () => {
