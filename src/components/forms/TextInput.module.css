@@ -1,0 +1,49 @@
+.container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.label {
+  visibility: hidden;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.required {
+  display: inline-block;
+  margin-left: 3px;
+  color: var(--aptible-red);
+}
+
+.focused {
+  visibility: visible;
+}
+
+.input[type=text] {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid var(--white-thirty);
+  background-color: transparent;
+  mix-blend-mode: normal;
+  box-shadow: none;
+  padding: 0 0 15px 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  z-index: 2;
+}
+
+.input:focus {
+  outline-width: 0;
+  box-shadow: none;
+}
+
+.placeholder {
+  position: absolute;
+  top: 26px;
+  color: var(--white-fifty);
+  font-size: 18px;
+  letter-spacing: .5px;
+  z-index: 1;
+}
