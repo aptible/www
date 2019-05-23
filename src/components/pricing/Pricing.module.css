@@ -91,3 +91,38 @@ p.startsAt {
 .seeDetailsArrow {
   margin-left: 8px;
 }
+
+.complyFormContainer {
+  /*  */
+}
+
+.complyFormContainer h2 {
+  margin: 45px 0;
+}
+
+.complyForm {
+  width: 400px;
+}
+
+.complyCta {
+  margin-top: 45px;
+}
+
+.complySidebar {
+  float: right;
+  width: 375px;
+  padding-top: 25px;
+}
+
+.complySidebar ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.complySidebar li {
+  background: url('../../images/signup/checkmark.svg') no-repeat left 15%;
+  font-size: 16px;
+  margin: 0;
+  padding: 0 0 20px 45px;
+}

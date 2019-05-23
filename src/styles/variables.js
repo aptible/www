@@ -5,6 +5,7 @@ module.exports = {
     '--grid-lines-color': '#192a36',
     '--body-color': '#b5bbbf',
     '--white-seventy': 'rgba(255, 255, 255, 0.7)',
+    '--white-fifty': 'rgba(255, 255, 255, 0.5)',
     '--white-thirty': 'rgba(255, 255, 255, 0.3)',
     '--aptible-black': '#0a1b28',
     '--aptible-black-light': '#132433',
@@ -17,5 +18,6 @@ module.exports = {
     '--aptible-green-ten': 'rgba(51, 198, 159, 0.1)',
     '--aptible-green-dark': '#263941',
     '--aptible-card-hover': '#1b2c3b',
+    '--aptible-red': '#d67666',
   },
 };
