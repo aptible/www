@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid } from '../grid/Grid';
+import CheckmarkUnorderedList from '../shared/CheckmarkUnorderedList';
 import styles from './ProductSelection.module.css';
 
 const bigArrow = (
@@ -29,12 +30,12 @@ export default ({ setProduct }) => (
         </div>
 
         <div className={styles.bullets}>
-          <ul>
+          <CheckmarkUnorderedList>
             <li>Streamline Vendor Security Assessments</li>
             <li>Operate safely in a regulated industry</li>
             <li>Operationalize data protection</li>
             <li>Pass information security audits</li>
-          </ul>
+          </CheckmarkUnorderedList>
         </div>
       </div>
 
@@ -54,11 +55,11 @@ export default ({ setProduct }) => (
         </div>
 
         <div className={styles.bullets}>
-          <ul>
+          <CheckmarkUnorderedList>
             <li>Deploy audit-ready infrastructure</li>
             <li>Automate rigourous technical controls</li>
             <li>Accelerate developer operations</li>
-          </ul>
+          </CheckmarkUnorderedList>
         </div>
       </div>
     </Grid>

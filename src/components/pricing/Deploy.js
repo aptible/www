@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Pricing.module.css';
 import PricingArrow from './PricingArrow';
+import CheckmarkUnorderedList from '../shared/CheckmarkUnorderedList';
+import PricingBlock from './PricingBlock';
 import detailsIcons from '../../images/pricing/details.svg';
 import detailsArrow from '../../images/arrows/header-resources.svg';
 
@@ -38,15 +40,8 @@ class Deploy extends React.Component {
               <PricingArrow hover={this.state.hover} />
             </div>
 
-            <div className={styles.details}>
-              <p className={`L ${styles.startsAt}`}>Development stack start at</p>
-              <h1>$0</h1>
-              <p>Per Month</p>
-
-              <p className={`L ${styles.startsAt}`}>Production stack start at</p>
-              <h1>$999</h1>
-              <p>Per Month</p>
-            </div>
+            <PricingBlock title="Development stack start at" amount="$0" timePeriod="Per Month" />
+            <PricingBlock title="Production stack start at" amount="$999" timePeriod="Per Month" />
 
             <div className={styles.seeDetails}>
               <img src={detailsIcons} className={styles.seeDetailsIcon} alt="Pricing details" />
