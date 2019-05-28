@@ -94,3 +94,56 @@
   width: 375px;
   padding-top: 25px;
 }
+
+.deployLearnMore {
+  margin: 100px 0;
+}
+
+.deployLearnMore a {
+  text-decoration: none;
+}
+
+.deployLearnMore h3 {
+  max-width: 600px;
+}
+
+.deployLearnMore p {
+  color: var(--body-color);
+  margin-top: 30px;
+}
+
+.learnMoreArrow {
+  float: right;
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--white-thirty);
+  border-radius: 100px;
+}
+
+.deployLearnMore:hover .learnMoreArrow {
+  border-color: var(--aptible-yellow);
+  background-color: var(--aptible-yellow);
+}
+
+.learnMoreArrow svg {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.deployLearnMore:hover .learnMoreArrow svg path {
+  fill: var(--aptible-black);
+}
+
+.deployAccountContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.deployAccountType {
+  /*  */
+}
+
+.deployAccountType h6 {
+  color: var(--body-color);
+  margin: 60px 0 15px 0;
+}

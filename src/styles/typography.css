@@ -102,3 +102,9 @@ p.XL {
 strong {
   color: white;
 }
+
+a,
+a:visited {
+  text-decoration: underline;
+  text-decoration-color: var(--aptible-green);
+}
