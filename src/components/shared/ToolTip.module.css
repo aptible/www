@@ -1,0 +1,28 @@
+.container {
+  position: relative;
+  display: inline-block;
+  margin-left: 8px;
+  cursor: help;
+}
+
+.container img {
+  margin-bottom: -2px;
+}
+
+.text {
+  display: none;
+  position: absolute;
+  left: -100px;
+  width: 200px;
+  font-size: 12px;
+  background-color: #000;
+  border-radius: 4px;
+  padding: 15px;
+  z-index: 100;
+  text-align: center;
+  color: white;
+}
+
+.container:hover .text {
+  display: block;
+}
