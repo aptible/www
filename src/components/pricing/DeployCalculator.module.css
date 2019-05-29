@@ -1,0 +1,108 @@
+.container {
+  margin-top: 60px;
+}
+
+.container h6 {
+  color: var(--body-color);
+}
+
+.calculator {
+  background-color: var(--aptible-black);
+  margin-top: 20px;
+  max-width: 720px;
+  box-shadow: inset 0px -1px 0px rgba(38, 57, 65, 0.5)
+}
+
+.resource {
+  padding: 30px;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(38, 57, 65, 0.5);;
+}
+
+.lineItemContainer {
+  display: grid;
+  grid-template-columns: auto 210px;
+}
+
+.lineItemDescriptionContainer {
+  position: relative;
+}
+
+.lineItemLines {
+  position: relative;
+  top: 20px;
+  border-bottom: 1px dotted var(--white-thirty);
+}
+
+.lineItemDescription {
+  position: relative;
+  display: inline-block;
+  background-color: var(--aptible-black);
+  padding-right: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.managedHids {
+  color: var(--white-fifty);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.managedHids:hover {
+  color: white;
+}
+
+.managedHidsCheckbox {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid var(--white-fifty);
+  margin: 0 7px -5px 0;
+  cursor: pointer;
+}
+
+.managedHidsCheckbox img {
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.managedHids:hover .managedHidsCheckbox {
+  border-color: white;
+}
+
+.lineItemAmount {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 6px 0 0 6px;
+}
+
+.lineItemAmount span {
+  color: white;
+}
+
+.pricingContainer {
+  display: grid;
+  grid-template-columns: 370px auto;
+}
+
+.resourceSlider {
+  /*  */
+}
+
+.amount {
+  margin: 30px 0 0 85px;
+}
+
+.amount h5 {
+  color: var(--body-color);
+}
+
+.amount h5 span {
+  color: white;
+}

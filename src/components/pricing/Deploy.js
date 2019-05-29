@@ -4,6 +4,7 @@ import styles from './Pricing.module.css';
 import PricingArrow from './PricingArrow';
 import CheckmarkUnorderedList from '../shared/CheckmarkUnorderedList';
 import PricingBlock from './PricingBlock';
+import DeployCalculator from './DeployCalculator';
 import detailsIcons from '../../images/pricing/details.svg';
 import detailsArrow from '../../images/arrows/header-resources.svg';
 
@@ -17,11 +18,7 @@ class Deploy extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hover: false,
-      withHids: false,
-      encryptedDisk: 1,
-      endpoints: 4,
-      vpnConnections: 0
+      hover: false
     };
   }
 
@@ -100,6 +97,8 @@ class Deploy extends React.Component {
               </CheckmarkUnorderedList>
             </div>
           </div>
+
+          <DeployCalculator />
         </div>
       }
 
