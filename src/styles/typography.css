@@ -105,6 +105,11 @@ strong {
 
 a,
 a:visited {
+  color: white;
   text-decoration: underline;
   text-decoration-color: var(--aptible-green);
+}
+
+a:hover {
+  text-decoration: none;
 }

@@ -1,17 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import AptibleLayout from '../components/layouts/AptibleLayout';
-import { Grid, Row } from '../components/grid/Grid';
+import ContentLayout from '../components/layouts/ContentLayout';
 
 export default ({ data }) => (
-  <AptibleLayout>
-    <Grid>
-      <Row>
-        <h1>{data.page.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: data.page.html}}></div>
-      </Row>
-    </Grid>
-  </AptibleLayout>
+  <ContentLayout title={data.page.frontmatter.title}>
+    <div dangerouslySetInnerHTML={{ __html: data.page.html}}></div>
+  </ContentLayout>
 );
 
 export const query = graphql`

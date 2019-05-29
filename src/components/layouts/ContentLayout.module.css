@@ -1,0 +1,26 @@
+.title {
+  grid-row: 1;
+  grid-column: 1 / span 7;
+  padding: 80px 0 160px 0;
+}
+
+.content {
+  grid-row: 2;
+  grid-column: 1 / span 4;
+  padding-bottom: 200px;
+}
+
+.content h2:not(:first-child),
+.content h3:not(:first-child),
+.content h4:not(:first-child) {
+  margin-top: 100px;
+}
+
+.content li {
+  font-size: 16px;
+}
+
+.sidebar {
+  grid-row: 2;
+  grid-column: 6 / span 2;
+}
