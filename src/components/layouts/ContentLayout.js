@@ -3,14 +3,18 @@ import AptibleLayout from '../layouts/AptibleLayout';
 import { Grid } from '../grid/Grid';
 import styles from './ContentLayout.module.css';
 
-export default ({ title, children }) => (
+export default ({ title, SidebarComponent, children }) => (
   <AptibleLayout>
     <Grid>
       <div className={styles.title}>
         <h1>{title}</h1>
       </div>
 
-      <div className={styles.sidebar}></div>
+      {SidebarComponent &&
+        <div className={styles.sidebar}>
+          <SidebarComponent />
+        </div>
+      }
 
       <div className={styles.content}>
         {children}
