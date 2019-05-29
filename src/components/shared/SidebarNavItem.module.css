@@ -1,0 +1,37 @@
+.item {
+  position: relative;
+  font-size: 12px;
+  font-weight: 400;
+  list-style: none;
+}
+
+.item a {
+  display: block;
+  padding: 8px 40px;
+  margin: 0;
+  line-height: 16px;
+  text-decoration: none;
+  color: var(--white-fifty);
+}
+
+.item a:hover {
+  color: white;
+}
+
+.active:before {
+  content: "\2022"; 
+  position: absolute;
+  top: 1px;
+  left: 15px;
+  color: var(--aptible-green);
+  font-size: 18px;
+}
+
+.active a {
+  color: var(--aptible-green);
+  background: linear-gradient(177.09deg, rgba(255, 255, 255, 0.08) 7.84%, rgba(255, 255, 255, 0.064) 83.16%), #0A1B2B;
+}
+
+.active a:hover {
+  color: var(--aptible-green);
+}

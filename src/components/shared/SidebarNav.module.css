@@ -1,0 +1,42 @@
+.container {
+  position: sticky;
+  top: 15px;
+  background: linear-gradient(155.29deg, rgba(255, 255, 255, 0.04) 7.84%, rgba(255, 255, 255, 0.032) 83.16%), #0A1B2B;
+  border-radius: 28px;
+  padding-bottom: 25px;
+}
+
+.closed {
+  float: right;
+  padding-bottom: 0;
+}
+
+.closed .titleBar {
+  margin-right: 50px;
+}
+
+.closed .icon {
+  right: -20px;
+}
+
+.titleBar {
+  position: relative;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 25px 40px;
+}
+
+.icon {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
