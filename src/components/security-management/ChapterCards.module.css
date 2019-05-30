@@ -1,0 +1,57 @@
+.container {
+  grid-column: 1 / span 7;
+  padding-bottom: 200px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+}
+
+.grid a,
+.grid a:visited,
+.grid a:hover {
+  text-decoration: none;
+}
+
+.card {
+  background-color: var(--aptible-black-light);
+  border-bottom: 4px solid var(--aptible-black-light);
+}
+
+.card:hover {
+  background-color: var(--aptible-card-hover);
+  border-bottom-color: var(--aptible-yellow);
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.cardContent {
+  position: relative;
+  padding: 65px 20px 65px 50px;
+}
+
+.cardContent h4 span {
+  display: inline-block;
+  color: var(--aptible-yellow);
+  width: 60px;
+}
+
+.cardContent p {
+  color: var(--body-color);
+  margin-left: 60px;
+}
+
+.arrow {
+  display: none;
+  position: absolute;
+  top: -37px;
+  right: 45px;
+}
+
+.card:hover .arrow {
+  display: block;
+}

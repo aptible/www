@@ -10,6 +10,15 @@ for (let protocol of COMPLIANCE_SITES) {
 }
 
 
+const SM_GUIDE_CHAPTERS = [
+  { id: 1, path: 'security-management', title: 'Introduction'},
+  { id: 2, path: 'security-management/getting-started', title: 'Getting Started'},
+  { id: 3, path: 'security-management/design', title: 'Designing Your Security Management System'},
+  { id: 4, path: 'security-management/training-culture', title: 'Security Training and Culture'},
+  { id: 5, path: 'security-management/examples', title: 'Examples'},
+];
+
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
@@ -117,6 +126,16 @@ exports.createPages = ({ graphql, actions }) => {
               url: node.fields.url
             },
           });
+        });
+      }
+
+      for (let chapter of SM_GUIDE_CHAPTERS) {
+        createPage({
+          path: chapter.path,
+          component: path.resolve(`./src/templates/security-management.js`),
+          context: {
+            chapter: chapter
+          },
         });
       }
 
