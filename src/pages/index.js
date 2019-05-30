@@ -25,7 +25,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    blocks: allContentfulBlock(filter: { page: { eq: "home" } }) {
+    blocks: allContentfulContentBlock(filter: { page: { eq: "home" } }) {
       ...blockProperties
     }
   }
