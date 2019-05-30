@@ -1,0 +1,28 @@
+.container {
+  /*  */
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 40px;
+  text-align: center;
+  background: linear-gradient(153.08deg, rgba(255, 255, 255, 0.04) 7.84%, rgba(255, 255, 255, 0.032) 83.16%), #0A1B2B;
+  cursor: pointer;
+}
+
+.icon svg {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.icon:hover {
+  background-color: var(--aptible-yellow);
+}
+
+.icon:hover svg path {
+  fill: var(--aptible-black);
+  fill-opacity: 1;
+}
