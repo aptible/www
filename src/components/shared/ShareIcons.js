@@ -32,7 +32,7 @@ class ShareIcons extends React.Component {
   }
 
   shareUrl = () => {
-    if (!window || !window.location) {
+    if (typeof(window) === 'undefined') {
       return '';
     }
 
