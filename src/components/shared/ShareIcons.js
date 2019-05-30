@@ -32,6 +32,10 @@ class ShareIcons extends React.Component {
   }
 
   shareUrl = () => {
+    if (!window || !window.location) {
+      return '';
+    }
+
     return encodeURIComponent(window.location.toString());
   }
 
