@@ -18,7 +18,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
     // Compliance site urls + tag
     for (let protocol of COMPLIANCE_SITES) {
-      if (fileNode.relativePath.startsWith(`${protocolData[protocol].slugs.site}/`)) {
+      if (fileNode.relativePath && fileNode.relativePath.startsWith(`${protocolData[protocol].slugs.site}/`)) {
         createNodeField({ node, name: 'slug', value: fileNode.name });
         createNodeField({ node, name: 'url', value: `/${protocolData[protocol].slugs.site}/${protocolData[protocol].slugs.regulations}/${fileNode.name}/` });
         createNodeField({ node, name: 'tag', value: `${protocol}-regulation` });
@@ -33,7 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allBlogPosts: allContentfulBlogPost {
+        allBlogPosts: allContentfulBlogPost(filter: { type: { eq: "blog" } }) {
           edges {
             node {
               slug

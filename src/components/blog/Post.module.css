@@ -1,0 +1,53 @@
+.container {
+  padding: 30px 0 200px 0;
+}
+
+.authorPhoto {
+  grid-column: 1;
+}
+
+.authorPhoto img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  margin-top: 170px;
+}
+
+.content {
+  grid-column: 2 / span 6;
+}
+
+.meta {
+  font-size: 12px;
+  margin: 80px 0 45px 0;
+  color: var(--white-fifty);
+}
+
+.author {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.postedAt {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.share {
+  padding: 40px 0;
+}
+
+.body {
+  max-width: 640px;
+}
+
+.body h2:not(:first-child),
+.body h3:not(:first-child),
+.body h4:not(:first-child),
+.body h5:not(:first-child) {
+  margin: 60px 0 30px 0;
+}
+
+.body p {
+  line-height: 1.6;
+}

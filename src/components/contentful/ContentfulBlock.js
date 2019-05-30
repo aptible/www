@@ -9,7 +9,7 @@ export default ({ block }) => {
 
 
 export const queryBlocksForPage = graphql`
-  fragment blockProperties on ContentfulBlockConnection {
+  fragment blockProperties on ContentfulContentBlockConnection {
     edges {
       node {
         contentfulid

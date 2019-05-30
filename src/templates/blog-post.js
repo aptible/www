@@ -1,25 +1,28 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import AptibleLayout from '../components/layouts/AptibleLayout';
-import { Grid, Row } from '../components/grid/Grid';
-import ContentfulRichText from '../components/contentful/ContentfulRichText';
+import Post from '../components/blog/Post';
 
 export default ({ data }) => (
   <AptibleLayout>
-    <Grid>
-      <Row>
-        <h1>{data.post.title}</h1>
-        <ContentfulRichText json={data.post.body.json} />
-      </Row>
-    </Grid>
+    <Post post={data.post} />
   </AptibleLayout>
 );
 
 export const query = graphql`
   query($slug: String!) {
     post: contentfulBlogPost(slug: { eq: $slug }) {
-      id
       title
+      postedAt
+      author {
+        name
+        slug
+        professionalPhoto {
+          file {
+            url
+          }
+        }
+      }
       body {
         json
       }
