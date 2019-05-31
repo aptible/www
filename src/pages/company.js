@@ -21,19 +21,34 @@ export default ({ data }) => (
     <Nav items={stickyNavItems} />
     <Vision />
     <Values />
-    <Team members={data.team.edges} />
+    <Team members={data.employees.edges} />
     <Join />
   </AptibleLayout>
 );
 
 export const query = graphql`
   query {
-    team: allTeamYaml {
+    employees: allContentfulEmployee(
+      sort: { fields: [name] }
+    ) {
       edges {
         node {
           name
-          title
-          bio
+          jobTitle
+          slug
+          bio {
+            bio
+          }
+          professionalPhoto {
+            file {
+              url
+            }
+          }
+          funPhoto {
+            file {
+              url
+            }
+          }
         }
       }
     }

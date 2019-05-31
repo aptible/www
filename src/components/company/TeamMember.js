@@ -21,14 +21,19 @@ export default ({ member, clickFn, open }) => (
   <div className={`${styles.teamMember} ${open ? styles.open : ''}`} onClick={clickFn}>
     <h5>{member.name}</h5>
     <div className={styles.title}>
-      <h6 className="small">{member.title}</h6>
+      <h6 className="small">{member.jobTitle}</h6>
     </div>
     <div className={styles.action}>
       <Action open={open} />
     </div>
-    <div className={styles.photo}></div>
+    <div className={styles.photo}>
+      <div className={styles.funPhoto}>
+        <img src={member.funPhoto.file.url} alt={member.name} />
+      </div>
+      <img src={member.professionalPhoto.file.url} alt={member.name} />
+    </div>
     <div className={styles.bio}>
-      <p className="L">{member.bio}</p>
+      <p className="L">{member.bio.bio}</p>
     </div>
   </div>
 );
