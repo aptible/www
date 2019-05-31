@@ -4,7 +4,7 @@ import ZoomChat from './ZoomChat';
 import styles from './Hero.module.css';
 import companyImage from '../../images/temp-company.jpg';
 
-export default () => (
+export default ({ webcamPhotos }) => (
   <div className={styles.container}>
     <Grid rows="2">
       <div className={styles.headline}>
@@ -19,7 +19,7 @@ export default () => (
       </div>
 
       <div className={styles.zoomChat}>
-        <ZoomChat />
+        <ZoomChat webcamPhotos={webcamPhotos} />
       </div>
 
       <div className={styles.coreCompetency}>

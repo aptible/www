@@ -17,7 +17,7 @@ const stickyNavItems = [
 
 export default ({ data }) => (
   <AptibleLayout>
-    <Hero />
+    <Hero webcamPhotos={data.webcamPhotos.edges} />
     <Nav items={stickyNavItems} />
     <Vision />
     <Values />
@@ -45,6 +45,29 @@ export const query = graphql`
             }
           }
           funPhoto {
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+
+    webcamPhotos: allContentfulEmployee(
+      filter: {
+        webcamPhoto: {
+          file: {
+            url:{
+              ne: null
+            }
+          }
+        }
+      }
+    ) {
+      edges {
+        node {
+          slug
+          webcamPhoto {
             file {
               url
             }
