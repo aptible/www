@@ -1,0 +1,71 @@
+.quoteSelector {
+  position: relative;
+  height: 425px;
+  overflow-x: scroll;
+  margin-top: 100px;
+}
+
+.quoteSelector::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.carouselContainer {
+  position: absolute;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 280px;
+}
+
+.quote {
+  position: relative;
+  width: 960px;
+  margin-right: 8px;
+}
+
+.quote h4 {
+  margin-left: 160px;
+  margin-right: 80px;
+  line-height: 1.3;
+  text-shadow: 0 0 5px #000;
+}
+
+.quote h4 span {
+  display: inline-block;
+  margin-left: -12px;
+}
+
+.quote h6 {
+  margin-left: 160px;
+  margin-top: 30px;
+  color: var(--body-color);
+}
+
+.authorPhoto {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+}
+
+.authorPhoto img {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+}
+
+.circles {
+  margin-top: -15px;
+  margin-bottom: 150px;
+  vertical-align: top;
+}
+
+.circle {
+  display: inline-block;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+  background-color: var(--aptible-green);
+  margin-right: 4px;
+  cursor: pointer;
+}

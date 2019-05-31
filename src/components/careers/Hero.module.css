@@ -1,0 +1,12 @@
+.container {
+  grid-column: 1 / span 7;
+  padding-bottom: 30px;
+}
+
+.container h5 {
+  margin-bottom: 15px;
+}
+
+.container h1 {
+  margin-bottom: 45px;
+}

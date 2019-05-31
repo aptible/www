@@ -37,5 +37,12 @@ module.exports = {
         id: 'modal-portal',
       },
     },
+    {
+      resolve: 'gatsby-source-lever',
+      options: {
+        site: 'aptible',
+        verboseOutput: true,
+      },
+    },
   ],
 };

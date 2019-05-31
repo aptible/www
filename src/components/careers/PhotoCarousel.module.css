@@ -1,0 +1,27 @@
+.imageSelector {
+  position: relative;
+  height: 570px;
+  overflow-x: scroll;
+  margin: 100px 0;
+}
+
+.imageSelector::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.carouselContainer {
+  position: absolute;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 280px;
+}
+
+.image {
+  position: relative;
+  height: 550px;
+}
+
+.image img {
+  height: 100%;
+}

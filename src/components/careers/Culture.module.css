@@ -1,0 +1,21 @@
+.container {
+  
+}
+
+.intro {
+  grid-row: 1;
+  grid-column: 2 / span 5;
+  margin-right: 80px;
+}
+
+.cultureGrid {
+  grid-row: 2;
+  grid-column: 2 / span 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 150px;
+}
+
+.culture {
+  margin: 0 80px 60px 0;
+}

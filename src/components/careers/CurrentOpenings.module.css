@@ -1,0 +1,71 @@
+.container {
+  padding: 100px 0 200px 0;
+}
+
+.headline {
+  grid-row: 1;
+  grid-column: 2 / span 6;
+  margin-bottom: 60px;
+}
+
+.jobsList {
+  grid-row: 2;
+  grid-column: 1 / span 7;
+}
+
+.job {
+  border-top: 1px solid var(--white-seventy);
+}
+
+.job a {
+  display: block;
+  padding: 25px 0;
+  text-decoration: none;
+}
+
+.job:hover {
+  border-top-color: var(--aptible-yellow);
+}
+
+.job a:hover .jobTitle h5 {
+  color: var(--aptible-yellow);
+}
+
+.job a:hover .arrow svg path {
+  fill: var(--aptible-yellow);
+  fill-opacity: 1;
+}
+
+.team {
+  grid-column: 1 / span 2;
+  margin-top: 5px;
+}
+
+.team h6 {
+  color: var(--white-fifty);
+}
+
+.jobTitle {
+  grid-column: 3 / span 3;
+}
+
+.location {
+  grid-column: 6;
+}
+
+.commitment {
+  grid-column: 7;
+  position: relative;
+}
+
+.location h6,
+.commitment h6 {
+  color: var(--white-seventy);
+  margin-top: 5px;
+}
+
+.arrow {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
