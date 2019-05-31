@@ -2,6 +2,8 @@ const path = require('path');
 const yaml = require('js-yaml');
 const fs = require('fs');
 
+const BLOG_CATEGORIES = require('./src/data/blog-categories.json');
+const BLOG_POSTS_PER_PAGE = 5;
 
 const COMPLIANCE_SITES = ['hipaa', 'gdpr'];
 let protocolData = {};
@@ -46,6 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
           edges {
             node {
               slug
+              category
             }
           }
         }
@@ -90,6 +93,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
+      // Create pages for each blog post
       result.data.allBlogPosts.edges.forEach(({ node }) => {
         createPage({
           path: `blog/${node.slug}`,
@@ -99,6 +103,47 @@ exports.createPages = ({ graphql, actions }) => {
           },
         });
       });
+
+      // Create blog index pages
+      const blogPosts = result.data.allBlogPosts.edges;
+      const numPages = Math.ceil(blogPosts.length / BLOG_POSTS_PER_PAGE);
+      Array.from({ length: numPages }).forEach((_, i) => {
+        createPage({
+          path: i === 0 ? `/blog` : `/blog/page/${i + 1}`,
+          component: path.resolve(`./src/templates/blog-list.js`),
+          context: {
+            limit: BLOG_POSTS_PER_PAGE,
+            skip: i * BLOG_POSTS_PER_PAGE,
+            numPages,
+            currentPage: i + 1,
+          },
+        });
+      });
+
+      // Create blog category index pages
+      for (let category of BLOG_CATEGORIES) {
+        const categoryPosts = blogPosts.filter((post) => {
+          return post.node.category.indexOf(category.title) !== -1;
+        });
+
+        const numCategoryPages = Math.ceil(categoryPosts.length / BLOG_POSTS_PER_PAGE);
+        const categoryBase = `/blog/category/${category.slug}`;
+
+        Array.from({ length: numCategoryPages }).forEach((_, i) => {
+          createPage({
+            path: i === 0 ? categoryBase : `${categoryBase}/page/${i + 1}`,
+            component: path.resolve(`./src/templates/blog-list-category.js`),
+            context: {
+              limit: BLOG_POSTS_PER_PAGE,
+              skip: i * BLOG_POSTS_PER_PAGE,
+              numPages: numCategoryPages,
+              currentPage: i + 1,
+              categoryTitle: category.title,
+              categorySlug: category.slug,
+            },
+          });
+        });
+      }
 
       result.data.allMarkdownWithSlug.edges.forEach(({ node }) => {
         if (node.frontmatter.slug && node.frontmatter.template) {

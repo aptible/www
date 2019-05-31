@@ -14,6 +14,7 @@ export const query = graphql`
     post: contentfulBlogPost(slug: { eq: $slug }) {
       title
       postedAt
+      category
       author {
         name
         slug

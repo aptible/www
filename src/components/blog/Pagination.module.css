@@ -1,0 +1,31 @@
+.container {
+  grid-row: 1;
+  grid-column: 1 / span 7;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.pageLink {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  text-align: center;
+  background-color: var(--aptible-black-light);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 3.3;
+  margin: 0 10px;
+  border: 1px solid var(--aptible-black-light);
+}
+
+a.current {
+  background-color: var(--aptible-yellow);
+  border-color: var(--aptible-yellow);
+  color: var(--aptible-black);
+}
+
+a.pageLink:hover {
+  border-color: var(--aptible-yellow);
+}

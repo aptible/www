@@ -1,0 +1,109 @@
+.container {
+  padding-bottom: 100px;
+}
+
+.header {
+  grid-row: 1;
+  grid-column: 2 / span 6;
+  padding: 60px 0 100px 0;
+}
+
+.header h5 {
+  margin-bottom: 30px;
+}
+
+.categories {
+  grid-row: 2;
+  grid-column: 1 / span 2;
+}
+
+.categories a {
+  display: block;
+  max-width: 160px;
+  text-decoration: none;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.categories a h6 {
+  color: var(--white-fifty);
+}
+
+.categories a:hover h6 {
+  color: white;
+}
+
+a.activeCategory:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: -15px;
+  width: 5px;
+  height: 5px;
+  border-radius: 7.5px;
+  background-color: var(--aptible-green);
+}
+
+a.activeCategory h6 {
+  color: white;
+}
+
+.posts {
+  grid-row: 2;
+  grid-column: 3 / span 5;
+}
+
+.postSummary {
+  position: relative;
+  display: inline-block;
+  padding: 80px 115px;
+  margin-bottom: 60px;
+  text-decoration: none;
+  background-color: var(--aptible-black-light);
+  border-bottom: 4px solid var(--aptible-black-light);
+}
+
+.postSummary:hover {
+  background-color: var(--aptible-card-hover);
+  border-bottom-color: var(--aptible-yellow);
+}
+
+.postSummary p {
+  color: var(--body-color);
+}
+
+.authorPhoto {
+  position: absolute;
+  top: 80px;
+  left: -40px;
+}
+
+.authorPhoto img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+}
+
+.metaContainer {
+  margin: 15px 0 45px 0;
+}
+
+.tags {
+  margin-top: 30px;
+  float: right;
+}
+
+.tag {
+  background-color: var(--aptible-green-ten);
+  color: var(--aptible-green);
+  padding: 8px 14px;
+  border-radius: 24px;
+  margin-right: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.readMore {
+  margin-top: 50px;
+}

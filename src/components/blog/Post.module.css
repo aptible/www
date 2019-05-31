@@ -17,20 +17,8 @@
   grid-column: 2 / span 6;
 }
 
-.meta {
-  font-size: 12px;
+.metaContainer {
   margin: 80px 0 45px 0;
-  color: var(--white-fifty);
-}
-
-.author {
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.postedAt {
-  display: inline-block;
-  margin-left: 5px;
 }
 
 .share {
