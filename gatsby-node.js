@@ -53,6 +53,14 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
 
+        allChangelogPosts: allContentfulBlogPost(filter: { type: { eq: "changelog" } }) {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
+
         allMarkdownWithSlug: allMarkdownRemark(
           filter: { frontmatter: { slug: { ne: null } } }
         ) {
@@ -144,6 +152,17 @@ exports.createPages = ({ graphql, actions }) => {
           });
         });
       }
+
+      // Create pages for each changelog post
+      result.data.allChangelogPosts.edges.forEach(({ node }) => {
+        createPage({
+          path: `changelog/${node.slug}`,
+          component: path.resolve(`./src/templates/changelog-post.js`),
+          context: {
+            slug: node.slug
+          },
+        });
+      });
 
       result.data.allMarkdownWithSlug.edges.forEach(({ node }) => {
         if (node.frontmatter.slug && node.frontmatter.template) {

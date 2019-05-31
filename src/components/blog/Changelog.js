@@ -14,12 +14,12 @@ export default ({ post }) => (
       </div>
 
       <div className={styles.content}>
-        <h5><Link to="/blog/">Blog</Link></h5>
+        <h5><Link to="/changelog/">Changelog</Link></h5>
 
         <div className={styles.metaContainer}>
           <Meta post={post} />
         </div>
-        
+
         <h1>{post.title}</h1>
 
         <div className={styles.share}>
