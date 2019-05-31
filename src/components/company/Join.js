@@ -21,7 +21,7 @@ export default () => (
           the way. As part of our team, you’ll have a huge impact, not just on
           the product or the people, but on the future of the field.
         </p>
-        <ArrowButton to="/" text="View Openings" />
+        <ArrowButton to="/careers/" text="View Openings" />
       </Row>
     </Grid>
   </div>

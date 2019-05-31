@@ -21,11 +21,11 @@ export default ({ heroBlock }) => (
       </div>
 
       <div className={styles.nav}>
-        <Link to="/">VSAs & External Audits</Link>
-        <Link to="/">Security Standard Audit-Readiness</Link>
-        <Link to="/">Regulatory Compliance Audit-Readiness</Link>
-        <Link to="/">Security Awareness</Link>
-        <Link to="/">Internal Audits</Link>
+        <Link to="/use-cases/#vendor-security-assessments">VSAs & External Audits</Link>
+        <Link to="/use-cases/#security-standards">Security Standard Audit-Readiness</Link>
+        <Link to="/use-cases/#regulatory-compliance">Regulatory Compliance Audit-Readiness</Link>
+        <Link to="/use-cases/#security-awareness">Security Awareness</Link>
+        <Link to="/use-cases/#internal-audits">Internal Audits</Link>
       </div>
     </Grid>
   </div>

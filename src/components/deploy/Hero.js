@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './Hero.module.css';
-import Button from '../buttons/Button';
+import SignupButton from '../signup/SignupButton';
 import Console from './Console';
 
 export default () => (
@@ -17,7 +17,7 @@ export default () => (
           to achieve regulatory compliance and pass customer audits.
         </p>
 
-        <Button to="/">Start with Deploy</Button>
+        <SignupButton text="Start with Deploy" />
       </div>
 
       <div className={styles.consoleContainer}>

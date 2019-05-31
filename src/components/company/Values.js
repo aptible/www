@@ -86,7 +86,7 @@ export default () => (
       title="Our Values"
       description="We operate according to these values. Sound like something you care about?"
       linkText="See Job Openings"
-      linkTo="/use-cases/"
+      linkTo="/careers/"
       items={items} />
   </div>
 );

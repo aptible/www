@@ -26,7 +26,7 @@ class CustomerCarousel extends React.Component {
             value that Aptible provided. It would probably be two to three lines
             of text.
           </p>
-          <ArrowButton to="/" text="Our Customers" />
+          <ArrowButton to="/customers/" text="Our Customers" />
         </div>
 
         <div className={styles.mainImage}>

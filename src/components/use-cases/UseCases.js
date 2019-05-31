@@ -7,7 +7,7 @@ import Quote from './Quote';
 export default () => (
   <div className={styles.container}>
     <Grid rows="3">
-      <div className={styles.case}>
+      <div className={styles.case} id="vendor-security-assessments">
         <h1>
           Vendor Security Assessments
           <br /> and External Audits
@@ -69,7 +69,7 @@ export default () => (
     <Quote />
 
     <Grid rows="2">
-      <div className={styles.case}>
+      <div className={styles.case} id="security-standards">
         <h1>Audit-Readiness for Security Standards</h1>
         <p className="XL">
           You need more time and expertise than you have to ensure audit-readiness.
@@ -129,7 +129,7 @@ export default () => (
     <Quote />
 
     <Grid rows="2">
-      <div className={styles.case}>
+      <div className={styles.case} id="regulatory-compliance">
         <h1>Audit-Readiness for Regulatory Compliance (HIPAA, GDPR)</h1>
         <p className="XL">
           You have to be able to show proof that you're in compliance with
@@ -189,7 +189,7 @@ export default () => (
     <Quote />
 
     <Grid rows="2">
-      <div className={styles.case}>
+      <div className={styles.case} id="security-awareness">
         <h1>Security Awareness</h1>
         <p className="XL">
           You can't risk being &ldquo;bad&rdquo; at security. It hurts customer
@@ -248,7 +248,7 @@ export default () => (
     <Quote />
 
     <Grid rows="2">
-      <div className={styles.case}>
+      <div className={styles.case} id="internal-audits">
         <h1>Internal Audits</h1>
         <p className="XL">
           It can be hard to know exactly what to do to improve. Internal audits

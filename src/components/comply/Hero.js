@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './Hero.module.css';
-import Button from '../buttons/Button';
+import SignupButton from '../signup/SignupButton';
 import complyScreenshot from '../../images/illustrations/comply-screenshot.png';
 
 export default () => (
@@ -18,7 +18,7 @@ export default () => (
           and maintain the compliance and security that give you a competitive edge.
         </p>
 
-        <Button to="/">Start with Comply</Button>
+        <SignupButton text="Start with Comply" />
       </div>
 
       <div className={styles.screenshot}>

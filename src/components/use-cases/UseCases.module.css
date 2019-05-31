@@ -5,7 +5,7 @@
 .case {
   grid-row: 1;
   grid-column: 2 / span 6;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .case h1 {

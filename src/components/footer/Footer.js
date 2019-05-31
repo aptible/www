@@ -24,31 +24,30 @@ export default () => (
 
       <div className={styles.useCases}>
         <h6 className="small">Use Cases</h6>
-        <Link to="/">VSAs and External Audits</Link>
-        <Link to="/">Security Standards</Link>
-        <Link to="/">Regulatory Compliance</Link>
-        <Link to="/">Security Competence</Link>
-        <Link to="/">Internal Audits</Link>
+        <Link to="/use-cases/#vendor-security-assessments">VSAs and External Audits</Link>
+        <Link to="/use-cases/#security-standards">Security Standards</Link>
+        <Link to="/use-cases/#regulatory-compliance">Regulatory Compliance</Link>
+        <Link to="/use-cases/#security-awareness">Security Awareness</Link>
+        <Link to="/use-cases/#internal-audits">Internal Audits</Link>
       </div>
 
       <div className={styles.resources}>
         <h6 className="small">Resources</h6>
-        <Link to="/">Customers</Link>
-        <Link to="/">Security Management Library</Link>
-        <Link to="/">Compliance Guides</Link>
-        <Link to="/">Slack Community</Link>
-        <Link to="/">Support Tickets</Link>
-        <Link to="/">Status</Link>
-        <Link to="/">Changelog</Link>
+        <Link to="/customers/">Customers</Link>
+        <Link to="/security-management/">Security Management Guide</Link>
+        <Link to="/hipaa/">Compliance Guides</Link>
+        <Link to="/blog/">Blog</Link>
+        <a href="https://aptible.zendesk.com/" target="_blank" rel="noopener noreferrer">Support Tickets</a>
+        <a href="https://status.aptible.com/" target="_blank" rel="noopener noreferrer">Status</a>
+        <Link to="/changelog/">Changelog</Link>
       </div>
 
       <div className={styles.company}>
         <h6 className="small">Company</h6>
-        <Link to="/">About</Link>
-        <Link to="/">Jobs</Link>
-        <Link to="/">Legal</Link>
-        <Link to="/">FAQ</Link>
-        <Link to="/">Media Kit</Link>
+        <Link to="/company/">About</Link>
+        <Link to="/careers/">Careers</Link>
+        <Link to="/legal/terms-of-service/">Legal</Link>
+        <Link to="/faq/">FAQ</Link>
       </div>
 
 
@@ -69,10 +68,8 @@ export default () => (
       </div>
 
       <div className={styles.links}>
-        <Link to="/"><h6 className="small">Log In</h6></Link>
-        <Link to="/"><h6 className="small">Get Started</h6></Link>
-        <Link to="/"><h6 className="small">Book A Demo</h6></Link>
-        <Link to="/"><h6 className="small">Contact</h6></Link>
+        <Link to="/"><h6 className="small">Aptible Home</h6></Link>
+        <a href="https://dashboard.aptible.com/login"><h6 className="small">Log In</h6></a>
       </div>
 
       <div className={styles.copyright}>

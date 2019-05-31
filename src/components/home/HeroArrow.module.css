@@ -2,6 +2,7 @@
   position: absolute;
   top: 80px;
   right: 108px;
+  z-index: 1;
 }
 
 .arrowStroke {

@@ -49,7 +49,7 @@ export default () => (
 
     <div className={styles.useAptible}>
       <h1>Or you can use Aptible and skip all of these steps.</h1>
-      <ArrowButton to="/" text="See All Features" />
+      <ArrowButton to="/deploy/features/" text="See All Features" />
     </div>
   </Grid>
 );

@@ -2,9 +2,9 @@ import React from 'react';
 import { Grid } from '../grid/Grid';
 import { Link } from 'gatsby';
 import styles from './Nav.module.css';
-import Button from '../buttons/Button';
+import SignupButton from '../signup/SignupButton';
 
-export default ({ items, ctaText, ctaLink }) => (
+export default ({ items, ctaText }) => (
   <div className={styles.container}>
     <Grid>
       <div className={`${styles.navItems} ${ctaText ? '' : styles.noCta}`}>
@@ -20,7 +20,7 @@ export default ({ items, ctaText, ctaLink }) => (
 
       {ctaText && (
         <div className={styles.cta}>
-          <Button to={ctaLink}>{ctaText}</Button>
+          <SignupButton text={ctaText} />
         </div>
       )}
     </Grid>
