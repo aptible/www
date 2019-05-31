@@ -1,7 +1,12 @@
 .container {
   line-height: 0;
-  cursor: pointer;
   margin-bottom: 10px;
+}
+
+.linkedContainer {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .card {
@@ -19,7 +24,7 @@
   margin-bottom: 40px;
 }
 
-.container:hover .card {
+.linkedContainer:hover .card {
   background-color: var(--aptible-card-hover);
   border-bottom-color: var(--aptible-yellow);
 }
@@ -35,7 +40,7 @@
   top: -26px;
 }
 
-.container:hover .arrow {
+.linkedContainer:hover .arrow {
   display: block;
 }
 
@@ -103,6 +108,6 @@
   padding-top: 5px;
 }
 
-.container:hover .readMore {
+.linkedContainer:hover .readMore {
   display: block;
 }
