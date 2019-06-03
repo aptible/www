@@ -1,0 +1,42 @@
+.container {
+  background-color: var(--aptible-black);
+  border-bottom: 1px solid var(--grid-lines-color);
+}
+
+.content {
+  grid-row: 1;
+  grid-column: 1 / span 7;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.content p {
+  color: var(--body-color);
+}
+
+.content:hover p {
+  text-decoration: underline;
+  text-decoration-color: var(--aptible-green);
+}
+
+.content span {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  margin-right: 15px;
+}
+
+.close {
+  position: relative;
+  grid-row: 1;
+  grid-column: 7;
+  text-align: right;
+}
+
+.close svg {
+  position: absolute;
+  cursor: pointer;
+  top: 24px;
+  right: 0;
+}
