@@ -1,0 +1,123 @@
+.filters {
+  padding-bottom: 60px;
+  grid-row: 1;
+  grid-column: 1 / span 7;
+  text-align: center;
+}
+
+.filter {
+  display: inline-block;
+  margin: 0 30px;
+  cursor: pointer;
+  font-size: 12px;
+  color: white;
+  user-select: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  padding: 3px;
+  border-radius: 15px;
+  border: 1px solid var(--white-thirty);
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+.switchCircle {
+  position: absolute;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.switchActive .switchCircle {
+  left: auto;
+  right: 3px;
+}
+
+.securitySwitchActive {
+  background-color: #e786f0;
+  border-color: #e786f0;
+}
+
+.auditReadySwitchActive {
+  background-color: #3474ce;
+  border-color: #3474ce;
+}
+
+.flexibleSwitchActive {
+  background-color: #33c69f;
+  border-color: #33c69f;
+}
+
+.reliabilitySwitchActive {
+  background-color: #fdb515;
+  border-color: #fdb515;
+}
+
+.convenienceSwitchActive {
+  background-color: #d67666;
+  border-color: #d67666;
+}
+
+.leftColumn {
+  grid-row: 2;
+  grid-column: 1 / span 3;
+  margin-right: 112px;
+}
+
+.middleColumn {
+  grid-row: 2;
+  grid-column: 3 / span 3;
+  margin: 0 56px;
+}
+
+.rightColumn {
+  grid-row: 2;
+  grid-column: 5 / span 3;
+  margin-left: 112px;
+}
+
+.card {
+  padding: 40px;
+  background-color: var(--aptible-black-light);
+  margin-bottom: 9px;
+}
+
+.pills {
+  margin-bottom: 15px;
+}
+
+.pill {
+  display: inline-block;
+  width: 18px;
+  height: 8px;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+
+.securityPill {
+  background-color: #e786f0;
+}
+
+.auditReadyPill {
+  background-color: #3474ce;
+}
+
+.flexiblePill {
+  background-color: #33c69f;
+}
+
+.reliabilityPill {
+  background-color: #fdb515;
+}
+
+.conveniencePill {
+  background-color: #d67666;
+}

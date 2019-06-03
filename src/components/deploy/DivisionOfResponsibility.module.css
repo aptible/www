@@ -1,0 +1,36 @@
+.container {
+  margin: 100px 0;
+}
+
+.hero {
+  grid-row: 1;
+  grid-column: 2 / span 5;
+  margin-bottom: 60px;
+}
+
+.providedBy {
+  grid-column: 1 / span 7;
+  border-top: 1px solid var(--white-fifty);
+  padding: 30px 0 0 0;
+}
+
+.provider {
+  float: left;
+}
+
+.provider h4 {
+  color: var(--aptible-yellow);
+}
+
+.featureGrid {
+  margin-left: 320px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.feature {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
