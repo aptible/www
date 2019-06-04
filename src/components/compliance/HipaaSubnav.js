@@ -17,6 +17,7 @@ class HipaaSubnav extends React.Component {
         const subpart = node.parentNode.parentNode;
         const section = subpart.parentNode;
 
+        node.classList.add(styles.articleActive);
         subpart.classList.add(styles.subpartOpen);
         section.classList.add(styles.sectionOpen);
       }
@@ -61,6 +62,7 @@ class HipaaSubnav extends React.Component {
                       key={articleIdx}>
                       <span className={styles.articleId}>{article.id}</span>
                       <span className={styles.articleTitle}>{article.title}</span>
+                      <div className={styles.circle} />
                     </Link>
                   ))}
                 </div>

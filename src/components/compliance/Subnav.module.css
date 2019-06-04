@@ -57,6 +57,7 @@
 }
 
 .articleLink {
+  position: relative;
   display: grid;
   grid-template-columns: 70px 1fr;
   font-size: 12px;
@@ -67,6 +68,29 @@
 .articleLink:hover {
   background: linear-gradient(175.36deg, rgba(255, 255, 255, 0.08) 7.84%, rgba(255, 255, 255, 0.064) 83.16%), #0A1B2B;;
   cursor: pointer;
+}
+
+.circle {
+  position: absolute;
+  top: 16px;
+  left: 38px;
+  display: none;
+  width: 4px;
+  height: 4px;
+  background-color: var(--aptible-green);
+  border-radius: 20px;
+}
+
+.articleActive {
+  
+}
+
+.articleActive span {
+  color: var(--aptible-green);
+}
+
+.articleActive .circle {
+  display: block;
 }
 
 .articleId {

@@ -1,0 +1,24 @@
+.compliance__search-container {
+  /*  */
+}
+
+.st-ui-container {
+  padding: 15px 0 60px 0;
+}
+
+.compliance__search-container a.st-ui-result {
+  border-bottom: 1px solid var(--white-thirty);
+}
+
+.compliance__search-container .st-ui-result .st-ui-type-heading {
+  text-decoration: underline;
+  text-decoration-color: var(--aptible-green);
+}
+
+.st-ui-result .st-ui-type-detail {
+  color: var(--body-color);
+}
+
+.st-ui-type-detail .st-ui-type-detail-bold {
+  color: var(--body-color);
+}
