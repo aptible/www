@@ -6,11 +6,11 @@ import UseCases from '../components/use-cases/UseCases';
 import ZeroTo from '../components/footer/ZeroTo';
 
 const stickyNavItems = [
-  { title: 'VSAs & External Audits', ref: null },
-  { title: 'Security Standards', ref: null },
-  { title: 'Regulatory Compliance', ref: null },
-  { title: 'Security Awareness', ref: null },
-  { title: 'Internal Audits', ref: null },
+  { title: 'VSAs & External Audits', ref: '#vendor-security-assessments' },
+  { title: 'Security Standards', ref: '#security-standards' },
+  { title: 'Regulatory Compliance', ref: '#regulatory-compliance' },
+  { title: 'Security Awareness', ref: '#security-awareness' },
+  { title: 'Internal Audits', ref: '#internal-audits' },
 ];
 
 export default ({ data }) => (
