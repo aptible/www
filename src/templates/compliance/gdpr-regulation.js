@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import AptibleLayout from '../../components/layouts/AptibleLayout';
-import { Grid, Row } from '../../components/grid/Grid';
+import ComplianceLayout from '../../components/layouts/ComplianceLayout';
+import GdprSubnav from '../../components/compliance/GdprSubnav';
 
 function getRegulation(data, slug) {
   for (let section of data.regulation) {
@@ -17,16 +17,15 @@ function getRegulation(data, slug) {
 
 export default ({ data, pageContext }) => {
   const part = getRegulation(data.gdpr, pageContext.slug);
+  const title = `${part.id} ${part.title}`;
 
   return (
-    <AptibleLayout>
-      <Grid>
-        <Row>
-          <h1>GDPR {part.id} {part.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: data.regulation.html }} />
-        </Row>
-      </Grid>
-    </AptibleLayout>
+    <ComplianceLayout
+      regulation={data.gdpr}
+      title={title}
+      SidebarComponent={GdprSubnav}>
+      <div dangerouslySetInnerHTML={{ __html: data.regulation.html }}></div>
+    </ComplianceLayout>
   );
 };
 

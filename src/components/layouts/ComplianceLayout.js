@@ -27,33 +27,36 @@ class ComplianceLayout extends React.Component {
 
     return (
       <AptibleLayout>
-        <Grid>
-          <div className={styles.title}>
-            <h5>{this.props.regulation.hero.subtitle}</h5>
-            <h1>{this.props.title}</h1>
-          </div>
-
-          {this.props.SidebarComponent &&
-            <div className={styles.sidebar}>
-              <SidebarComponent regulation={this.props.regulation} />
+        <div className={styles.container}>
+          <Grid>
+            <div className={styles.title}>
+              <h5>{this.props.regulation.hero.subtitle}</h5>
+              <h1>{this.props.title}</h1>
             </div>
-          }
 
-          <div className={styles.searchContainer}>
-            <input
-              type="text"
-              className={`compliance__search-bar ${styles.searchInput}`}
-              placeholder="Search" />
+            {this.props.SidebarComponent &&
+              <div className={styles.sidebar}>
+                <SidebarComponent regulation={this.props.regulation} />
+              </div>
+            }
 
-            <div className={styles.searchIcon}>{searchIcon}</div>
-          </div>
+            <div className={styles.searchContainer}>
+              <input
+                type="text"
+                className={`compliance__search-bar ${styles.searchInput}`}
+                placeholder="Search" />
 
-          <div className={styles.content} data-swiftype-index="true">
-            <div className="compliance__search-container"></div>
+              <div className={styles.searchIcon}>{searchIcon}</div>
+            </div>
 
-            {this.props.children}
-          </div>
-        </Grid>
+            <div className={styles.content} data-swiftype-index="true">
+              <div className="compliance__search-container"></div>
+
+              {this.props.children}
+            </div>
+          </Grid>
+        </div>
+        
       </AptibleLayout>
     )
   }
