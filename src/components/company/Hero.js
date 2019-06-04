@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from '../grid/Grid';
 import ZoomChat from './ZoomChat';
 import styles from './Hero.module.css';
-import companyImage from '../../images/temp-company.jpg';
+import companyImage from '../../images/company/road.jpg';
 
 export default ({ webcamPhotos }) => (
   <div className={styles.container}>
