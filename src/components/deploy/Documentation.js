@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import styles from './Documentation.module.css';
 
 export default () => (
-  <div className={styles.container}>
+  <div className={styles.container} id="support">
     <Grid>
       <div className={styles.headline}>
         <h1>Documentation and Support</h1>

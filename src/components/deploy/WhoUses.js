@@ -6,7 +6,7 @@ import customerPhoto from '../../images/customers/photos/tmp.jpg';
 import healthifyLogo from '../../images/customers/logos/healthify.svg';
 
 export default () => (
-  <div className={styles.container}>
+  <div className={styles.container} id="who-uses-deploy">
     <Grid rows="3">
       <div className={styles.intro}>
         <h1>Who Uses Deploy?</h1>

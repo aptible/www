@@ -5,17 +5,17 @@ import Nav from '../components/shared/Nav';
 import Features from '../components/deploy/Features';
 import SecurityControls from '../components/deploy/SecurityControls';
 import HowItWorks from '../components/deploy/HowItWorks';
-import UseCases from '../components/deploy/UseCases';
+import UseCases from '../components/home/UseCases';
 import WhoUses from '../components/deploy/WhoUses';
 import Documentation from '../components/deploy/Documentation';
 import ZeroTo from '../components/footer/ZeroTo';
 
 const stickyNavItems = [
-  { title: 'Features', ref: null },
-  { title: 'How It Works', ref: null },
-  { title: 'Use Cases', ref: null },
-  { title: 'Who Uses Deploy', ref: null },
-  { title: 'Documentation & Support', ref: null },
+  { title: 'Features', ref: '#features' },
+  { title: 'How It Works', ref: '#how-it-works' },
+  { title: 'Use Cases', ref: '#use-cases' },
+  { title: 'Who Uses Deploy', ref: '#who-uses-deploy' },
+  { title: 'Documentation & Support', ref: '#support' },
 ];
 
 export default () => (
@@ -25,7 +25,9 @@ export default () => (
     <Features />
     <SecurityControls />
     <HowItWorks />
-    <UseCases />
+    <div id="use-cases">
+      <UseCases />
+    </div>
     <WhoUses />
     <Documentation />
     <ZeroTo />

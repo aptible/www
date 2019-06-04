@@ -1,7 +1,8 @@
 .container {
   background:
     no-repeat -300px 550px/1000px url('../../images/illustrations/deploy.png'),
-    no-repeat 1000px 1000px/1000px url('../../images/illustrations/deploy.png'); 
+    no-repeat 1000px 1000px/1000px url('../../images/illustrations/deploy.png');
+  padding: 100px 0 50px 0;
 }
 
 .intro {
