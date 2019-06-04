@@ -47,7 +47,7 @@
 
 .circle {
   position: absolute;
-  bottom: 3px;
+  bottom: 0;
   left: 43%;
   display: none;
   width: 4px;

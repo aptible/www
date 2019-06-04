@@ -3,7 +3,7 @@ import { Grid, Row } from '../grid/Grid';
 import styles from './Features.module.css';
 
 export default () => (
-  <div className={styles.container}>
+  <div className={styles.container} id="features">
     <div className={styles.intro}>
       <Grid>
         <div className={styles.content}>

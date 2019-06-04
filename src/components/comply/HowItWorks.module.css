@@ -2,7 +2,7 @@
   background:
     no-repeat -300px 550px/1000px url('../../images/illustrations/comply.png'),
     no-repeat 1000px 100px/1000px url('../../images/illustrations/comply.png'); 
-  padding-bottom: 200px;
+  padding: 100px 0 50px 0;
 }
 
 .intro {

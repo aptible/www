@@ -3,7 +3,7 @@ import { Grid } from '../grid/Grid';
 import styles from './HowItWorks.module.css';
 
 export default () => (
-  <div className={styles.container}>
+  <div className={styles.container} id="how-it-works">
     <Grid rows="6">
       <div className={styles.intro}>
         <h1>How it works</h1>

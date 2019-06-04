@@ -53,6 +53,10 @@ class Nav extends React.Component {
 
       for (let id of reverseRefs) {
         const ref = window.document.getElementById(id.replace('#', ''));
+        if (!ref) {
+          return
+        }
+
         const refY = ref.getBoundingClientRect().top + window.scrollY;
 
         if (scrollPosition >= refY) {
