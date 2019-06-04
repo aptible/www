@@ -1,6 +1,14 @@
-.container {
+.scrollBeacon {
   position: sticky;
+  height: 1px;
+  opacity: 0;
+}
+
+.container {
+  visibility: hidden;
+  position: fixed;
   top: 0;
+  width: 100%;
   border-top: 1px solid var(--grid-lines-color);
   border-bottom: 1px solid var(--grid-lines-color);
   z-index: 10;
@@ -11,7 +19,7 @@
 .navItems {
   grid-row: 1;
   grid-column: 1 / span 5;
-  margin-top: 12px;
+  padding: 10px 0;
 }
 
 .navItems.noCta {
@@ -19,31 +27,36 @@
   text-align: center;
 }
 
-.navItems a {
+.navItem {
+  position: relative;
   display: inline-block;
+  padding: 6px 0;
   margin-right: 45px;
   text-decoration: none;
 }
 
-.navItems a h6 {
+.navItem h6 {
   color: var(--body-color);
 }
 
-.navItems a:hover h6,
-.navItems a.active h6 {
+.navItem:hover h6,
+.navItem.active h6 {
   color: white;
+  cursor: pointer;
 }
 
 .circle {
+  position: absolute;
+  bottom: 3px;
+  left: 43%;
   display: none;
   width: 4px;
   height: 4px;
   background-color: var(--aptible-green);
   border-radius: 20px;
-  margin: 6px auto 0 auto;
 }
 
-.navItems a.active .circle {
+.navItem.active .circle {
   display: block;
 }
 

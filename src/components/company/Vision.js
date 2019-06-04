@@ -3,7 +3,7 @@ import { Grid } from '../grid/Grid';
 import styles from './Vision.module.css';
 
 export default () => (
-  <div className={styles.container}>
+  <div className={styles.container} id="vision">
     <Grid>
       <div className={styles.intro}>
         <h1>Our Vision</h1>

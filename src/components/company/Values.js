@@ -81,7 +81,7 @@ const items = [
 ];
 
 export default () => (
-  <div className={styles.useCases}>
+  <div className={styles.useCases} id="values">
     <Accordion
       title="Our Values"
       description="We operate according to these values. Sound like something you care about?"

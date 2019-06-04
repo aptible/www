@@ -4,7 +4,7 @@ import styles from './Join.module.css';
 import ArrowButton from '../buttons/ArrowButton';
 
 export default () => (
-  <div className={styles.container}>
+  <div className={styles.container} id="careers">
     <Grid>
       <Row>
         <h5>Join the Team</h5>

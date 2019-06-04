@@ -9,10 +9,10 @@ import Team from '../components/company/Team';
 import Join from '../components/company/Join';
 
 const stickyNavItems = [
-  { title: 'Vision', ref: null },
-  { title: 'Values', ref: null },
-  { title: 'Team', ref: null },
-  { title: 'Careers', ref: null },
+  { title: 'Vision', ref: '#vision' },
+  { title: 'Values', ref: '#values' },
+  { title: 'Team', ref: '#team' },
+  { title: 'Careers', ref: '#careers' },
 ];
 
 export default ({ data }) => (

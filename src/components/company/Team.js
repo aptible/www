@@ -21,7 +21,7 @@ class Team extends React.Component {
 
   render() {
     return (
-      <div className={styles.container}>
+      <div className={styles.container} id="team">
         <Grid>
           <div className={styles.sidebar}>
             <h5>Our Team</h5>
