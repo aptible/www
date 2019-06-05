@@ -4,7 +4,7 @@ import SidebarNavItem from '../shared/SidebarNavItem';
 
 export default () => (
   <SidebarNav title="Legal">
-    <SidebarNavItem to="/legal/terms-of-service/" text="Terms of Service" active="true" />
+    <SidebarNavItem to="/legal/terms-of-service/" text="Terms of Service" />
     <SidebarNavItem to="/legal/service-level-agreement/" text="Service Level Agreement" />
     <SidebarNavItem to="/legal/hipaa-breach-indemnification-agreement/" text="HIPAA Breach Idemnification Agreement" />
 

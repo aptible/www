@@ -55,3 +55,14 @@
 .card:hover .arrow {
   display: block;
 }
+
+@media (--mobile) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+  }
+
+  .cardContent {
+    padding: 25px;
+  }
+}

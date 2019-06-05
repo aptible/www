@@ -61,3 +61,42 @@ input[type=text].searchInput {
 .searchInput::-webkit-input-placeholder {
   color: var(--white-fifty);
 }
+
+@media (--mobile) {
+  .container {
+    padding-bottom: 30px;
+  }
+
+  .title {
+    padding: 30px 0;
+  }
+
+  .searchContainer {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+    margin-bottom: 30px;
+  }
+
+  input[type=text].searchInput {
+    font-size: 14px;
+    width: 84%;
+    padding-left: 16%;
+  }
+
+  .searchIcon {
+    top: 18px;
+    left: 15px;
+  }
+
+  .content {
+    grid-row: 3;
+    grid-column: 1 / span 7;
+    padding-bottom: 30px;
+  }
+
+  .sidebar {
+    grid-row: 4;
+    grid-column: 1 / span 7;
+    margin-left: 0;
+  }
+}

@@ -16,3 +16,13 @@
 .container img {
   max-width: 100%;
 }
+
+@media (--mobile) {
+  .container {
+    padding-top: 30px;
+  }
+
+  .container h3 {
+    margin-bottom: 15px;
+  }
+}
