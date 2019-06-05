@@ -17,3 +17,9 @@
 .column:first-child {
   border-left: 1px solid var(--grid-lines-color);
 }
+
+@media (--mobile) {
+  .container {
+    display: none;
+  }
+}

@@ -77,3 +77,31 @@
   margin-right: 4px;
   cursor: pointer;
 }
+
+@media (--mobile) {
+  .productSelector {
+    height: 310px;
+  }
+
+  .product {
+    width: 200px;
+    padding: 40px;
+    background-size: 400px;
+    background-position: -20px -120px;
+    background-repeat: no-repeat;
+  }
+
+  .product h5 {
+    margin: 80px 0 5px 0;
+  }
+
+  .product .productArrow {
+    display: block;
+    top: 20px;
+    right: 20px;
+  }
+
+  .circles {
+    margin-bottom: 60px;
+  }
+}

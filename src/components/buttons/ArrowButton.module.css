@@ -11,3 +11,9 @@
   text-decoration: none;
   margin-top: 30px;
 }
+
+@media (--mobile) {
+  .link {
+    margin-top: 15px;
+  }
+}

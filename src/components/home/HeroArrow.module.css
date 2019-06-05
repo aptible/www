@@ -17,3 +17,14 @@
     stroke-dashoffset: 0;
   }
 }
+
+@media (--mobile) {
+  .arrow {
+    top: -44px;
+    left: 165px;
+  }
+
+  .arrow svg {
+    width: 160px;
+  }
+}

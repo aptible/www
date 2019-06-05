@@ -27,3 +27,27 @@
 .logo img {
   width: 100%;
 }
+
+.mobileNav {
+  display: none;
+  grid-row: 1;
+  grid-column: 6 / span 2;
+}
+
+@media (--mobile) {
+  .headerContainer.open {
+    height: 56px;
+  }
+
+  .header {
+    padding: 30px 0 0 0;
+  }
+
+  .logo {
+    grid-column: 1 / span 2;
+  }
+
+  .mobileNav {
+    display: block;
+  }
+}

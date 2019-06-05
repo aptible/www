@@ -27,3 +27,32 @@
   grid-column: 4 / span 2;
   padding-top: 10px;
 }
+
+@media (--mobile) {
+  .contentArea {
+    padding-top: 40px;
+    grid-column: 1 / span 6;
+  }
+
+  .contentArea h1 {
+    font-size: 48px;
+    line-height: 52px;
+    max-width: 300px;
+  }
+
+  .contentArea p {
+    max-width: 300px;
+    font-size: 14px;
+  }
+
+  .cta {
+    grid-column: 1 / span 7;
+    margin: 30px 0;
+  }
+
+  .callout {
+    grid-row: 3;
+    grid-column: 1 / span 7;
+    margin-bottom: 90px;
+  }
+}

@@ -44,3 +44,10 @@ a.mainNavItem {
   border-right: 4px solid transparent;
   border-bottom: 4px solid white;
 }
+
+@media (--mobile) {
+  .mainNavItem,
+  a.mainNavItem {
+    display: none;
+  }
+}

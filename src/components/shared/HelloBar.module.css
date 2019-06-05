@@ -40,3 +40,19 @@
   top: 24px;
   right: 0;
 }
+
+@media (--mobile) {
+  .content {
+    padding: 10px 0;
+  }
+
+  .content span {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    margin-right: 40px;
+  }
+}

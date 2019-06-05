@@ -20,4 +20,7 @@ module.exports = {
     '--aptible-card-hover': '#1b2c3b',
     '--aptible-red': '#d67666',
   },
+  customMedia: {
+    '--mobile': '(max-width: 1119px)',
+  },
 };

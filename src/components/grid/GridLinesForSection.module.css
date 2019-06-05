@@ -17,3 +17,9 @@
 .column:first-child {
   border-left: 1px solid var(--aptible-black-five);
 }
+
+@media (--mobile) {
+  .container {
+    display: none;
+  }
+}

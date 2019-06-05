@@ -110,3 +110,73 @@
 .copyright p {
   margin-top: 4px;
 }
+
+@media (--mobile) {
+  .footer {
+    padding: 45px 0 30px 0;
+  }
+
+  .products {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+    margin-bottom: 60px;
+  }
+
+  .useCases {
+    grid-row: 2;
+    grid-column: 5 / span 3;
+  }
+
+  .resources {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+  }
+
+  .company {
+    grid-row: 1;
+    grid-column: 5 / span 3;
+  }
+
+  .useCases a,
+  .resources a,
+  .company a {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+
+  .newsletter {
+    grid-row: 3;
+    grid-column: 1 / span 7;
+    margin: 45px 0 0 0;
+  }
+
+  .newsletterForm {
+    grid-row: 4;
+    grid-column: 1 / span 7;
+    margin: 5px 0 60px 0;
+  }
+
+  .social {
+    grid-row: 5;
+    grid-column: 1 / span 7;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .links {
+    grid-row: 6;
+    grid-column: 1 / span 7;
+    text-align: center;
+  }
+
+  .links a {
+    margin: 0 10px;
+  }
+
+  .copyright {
+    grid-row: 7;
+    grid-column: 1 / span 7;
+    text-align: center;
+  }
+}

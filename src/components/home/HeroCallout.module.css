@@ -35,3 +35,17 @@
   font-size: 16px;
   font-weight: 500;
 }
+
+@media (--mobile) {
+  .callout {
+    text-align: center;
+  }
+
+  .pill {
+    font-size: 10px;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+}

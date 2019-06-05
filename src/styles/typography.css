@@ -113,3 +113,48 @@ a:visited {
 a:hover {
   text-decoration: none;
 }
+
+@media (--mobile) {
+  body {
+    font-size: 14px;
+  }
+
+  h1.hero {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  h5 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 144%;
+  }
+
+  p.L {
+    font-size: 14px;
+  }
+}

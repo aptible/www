@@ -4,12 +4,15 @@ import styles from './Header.module.css';
 import { Grid } from '../grid/Grid';
 import logoImage from '../../images/aptible.svg';
 import MainNavItem from './MainNavItem';
+import MobileMenuItem from './MobileMenuItem';
 import Products from './Products';
 import Resources from './Resources';
+import Mobile from './Mobile';
 
 const dropDowns = {
   products: Products,
-  resources: Resources
+  resources: Resources,
+  mobile: Mobile
 };
 
 class Header extends React.Component {
@@ -74,6 +77,10 @@ class Header extends React.Component {
               to="https://dashboard.aptible.com/login"
               gridColumn="7"
             />
+
+            <div className={styles.mobileNav}>
+              <MobileMenuItem onClickFn={this.toggleNavSection} />
+            </div>
           </Grid>
 
           {DropDownContent && <DropDownContent />}

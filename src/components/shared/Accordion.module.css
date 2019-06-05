@@ -47,3 +47,20 @@
 .item:hover h4 {
   color: white;
 }
+
+@media (--mobile) {
+  .sidebar {
+    grid-row: 1;
+    grid-column: 1 / span 7;
+  }
+
+  .container {
+    grid-row: 2;
+    grid-column: 2 / span 6;
+    /* margin-left: 25px; */
+  }
+
+  .item {
+    margin-bottom: 40px;
+  }
+}
