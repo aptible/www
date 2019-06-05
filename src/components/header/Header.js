@@ -34,6 +34,10 @@ class Header extends React.Component {
     }
   }
 
+  closeNav = () => {
+    this.setState({ navOpen: false, openSectionName: null });
+  }
+
   render() {
     let DropDownContent;
     if (this.state.navOpen && dropDowns[this.state.openSectionName]) {
@@ -42,6 +46,7 @@ class Header extends React.Component {
 
     return (
       <div className={`${styles.headerContainer} ${this.state.navOpen ? styles.open : ''}`}>
+        <div className={styles.navOverlay} onClick={this.closeNav}></div>
         <header className={`${styles.header} `}>
           <Grid>
             <Link to="/" className={styles.logo}>
@@ -79,7 +84,7 @@ class Header extends React.Component {
             />
 
             <div className={styles.mobileNav}>
-              <MobileMenuItem onClickFn={this.toggleNavSection} />
+              <MobileMenuItem navOpen={this.state.navOpen} onClickFn={this.toggleNavSection} />
             </div>
           </Grid>
 

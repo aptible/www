@@ -56,11 +56,16 @@
 
   .container {
     grid-row: 2;
-    grid-column: 2 / span 6;
-    /* margin-left: 25px; */
+    grid-column: 1 / span 7;
+    margin-left: 0px;
   }
 
   .item {
     margin-bottom: 40px;
+  }
+
+  .circle {
+    top: 8px;
+    left: -18px;
   }
 }

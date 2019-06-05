@@ -114,6 +114,14 @@ a:hover {
   text-decoration: none;
 }
 
+.desktopOnly {
+  /*  */
+}
+
+.mobileOnly {
+  display: none;
+}
+
 @media (--mobile) {
   body {
     font-size: 14px;
@@ -156,5 +164,13 @@ a:hover {
 
   p.L {
     font-size: 14px;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: inline-block;
   }
 }

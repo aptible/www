@@ -1,6 +1,8 @@
 .container {
+  position: relative;
   background-color: var(--aptible-black);
   border-bottom: 1px solid var(--grid-lines-color);
+  z-index: 100;
 }
 
 .content {

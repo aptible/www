@@ -4,26 +4,23 @@ import styles from './MobileMenuItem.module.css';
 class MobileMenu extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      navOpen: false
-    };
+    this.state = {};
   }
 
   toggleMenu = () => {
-    this.setState({ navOpen: !this.state.navOpen });
     this.props.onClickFn('mobile')
   }
 
   menuItemText = () => {
-    return this.state.navOpen ? 'Close' : 'Menu';
+    return this.props.navOpen ? 'Close' : 'Menu';
   }
 
   render() {
     return (
       <div className={styles.container}>
-        <div className={`${styles.menuItem} ${this.state.navOpen ? styles.menuItemOpen : ''}`} onClick={this.toggleMenu}>
+        <div className={`${styles.menuItem} ${this.props.navOpen ? styles.menuItemOpen : ''}`} onClick={this.toggleMenu}>
           {this.menuItemText()}
-          <span className={`${styles.arrow} ${this.state.navOpen ? styles.up : styles.down}`}></span>
+          <span className={`${styles.arrow} ${this.props.navOpen ? styles.up : styles.down}`}></span>
         </div>
       </div>
     );

@@ -24,7 +24,10 @@ export default () => (
 
       <div className={styles.useCases}>
         <h6 className="small">Use Cases</h6>
-        <Link to="/use-cases/#vendor-security-assessments">VSAs and External Audits</Link>
+        <Link to="/use-cases/#vendor-security-assessments">
+          <span className="desktopOnly">VSAs and External Audits</span>
+          <span className="mobileOnly">VSAs and Audits</span>
+        </Link>
         <Link to="/use-cases/#security-standards">Security Standards</Link>
         <Link to="/use-cases/#regulatory-compliance">Regulatory Compliance</Link>
         <Link to="/use-cases/#security-awareness">Security Awareness</Link>
@@ -34,7 +37,10 @@ export default () => (
       <div className={styles.resources}>
         <h6 className="small">Resources</h6>
         <Link to="/customers/">Customers</Link>
-        <Link to="/security-management/">Security Management Guide</Link>
+        <Link to="/security-management/">
+          <span className="desktopOnly">Security Management Guide</span>
+          <span className="mobileOnly">Security Guide</span>
+        </Link>
         <Link to="/hipaa/">Compliance Guides</Link>
         <Link to="/blog/">Blog</Link>
         <a href="https://aptible.zendesk.com/" target="_blank" rel="noopener noreferrer">Support Tickets</a>
