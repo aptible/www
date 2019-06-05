@@ -56,7 +56,6 @@ class ComplianceLayout extends React.Component {
             </div>
           </Grid>
         </div>
-        
       </AptibleLayout>
     )
   }

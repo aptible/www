@@ -32,11 +32,11 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
 
-        <script dangerouslySetInnerHTML={{ __html: customJs }}></script>
       </body>
 
       <script src="//app-ab35.marketo.com/js/forms2/js/forms2.min.js"></script>
       <script src="https://js.chilipiper.com/marketing.js" type="text/javascript"></script>
+      <script dangerouslySetInnerHTML={{ __html: customJs }}></script>
     </html>
   )
 }
