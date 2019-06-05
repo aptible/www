@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './SidebarNav.module.css';
+import itemStyles from './SidebarNavItem.module.css';
 
 const hamburgerIcon = (
   <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,6 +23,15 @@ class SidebarNav extends React.Component {
     this.state = {
       open: true
     };
+  }
+
+  componentDidMount = () => {
+    const path = window.location.pathname;
+    for (let node of document.querySelectorAll(`a[href='${path}']`)) {
+      if (node.parentNode.classList.contains(itemStyles.item)) {
+        node.parentNode.classList.add(itemStyles.active);
+      }
+    }
   }
 
   toggleOpen = () => {
