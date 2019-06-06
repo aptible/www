@@ -166,6 +166,10 @@ a:hover {
     font-size: 14px;
   }
 
+  p.XL {
+    font-size: 18px;
+  }
+
   .desktopOnly {
     display: none;
   }

@@ -111,3 +111,9 @@
 .linkedContainer:hover .readMore {
   display: block;
 }
+
+@media (--mobile) {
+  .card {
+    padding: 30px;
+  }
+}

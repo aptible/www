@@ -29,3 +29,33 @@
   width: 100%;
   margin-top: -15px;
 }
+
+@media (--mobile) {
+  .container {
+    background: none;
+  }
+
+  .content {
+    grid-row: 1;
+    grid-column: 1 / span 7;
+    padding-bottom: 30px;
+  }
+
+  .content h5 {
+    margin-bottom: 15px;
+  }
+
+  .content p {
+    padding: 0 0 20px 0;
+  }
+
+  .screenshot {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+    padding: 15px 0;
+  }
+
+  .screenshot img {
+    margin-top: 0;
+  }
+}
