@@ -5,10 +5,31 @@ import Nav from '../components/shared/Nav';
 import UseCases from '../components/use-cases/UseCases';
 import ZeroTo from '../components/footer/ZeroTo';
 
+const vsa = (
+  <span>
+    <span className="desktopOnly">VSAs & External Audits</span>
+    <span className="mobileOnly">VSAs</span>
+  </span>
+);
+
+const standards = (
+  <span>
+    <span className="desktopOnly">Security Standards</span>
+    <span className="mobileOnly">Standards</span>
+  </span>
+);
+
+const compliance = (
+  <span>
+    <span className="desktopOnly">Regulatory Compliance</span>
+    <span className="mobileOnly">Compliance</span>
+  </span>
+);
+
 const stickyNavItems = [
-  { title: 'VSAs & External Audits', ref: '#vendor-security-assessments' },
-  { title: 'Security Standards', ref: '#security-standards' },
-  { title: 'Regulatory Compliance', ref: '#regulatory-compliance' },
+  { title: vsa, ref: '#vendor-security-assessments' },
+  { title: standards, ref: '#security-standards' },
+  { title: compliance, ref: '#regulatory-compliance' },
   { title: 'Security Awareness', ref: '#security-awareness' },
   { title: 'Internal Audits', ref: '#internal-audits' },
 ];

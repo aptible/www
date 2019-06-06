@@ -66,3 +66,31 @@
   grid-row: 3;
   grid-column: 5 / span 3;
 }
+
+@media (--mobile) {
+  .case {
+    grid-column: 1 / span 7;
+    padding-top: 120px;
+  }
+
+  .caseSolutionTopLeft {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+  }
+
+  .caseSolutionTopRight {
+    grid-row: 4;
+    grid-column: 1 / span 7;
+  }
+
+  .caseSolutionBottomLeft {
+    grid-row: 3;
+    grid-column: 1 / span 7;
+    margin-bottom: 60px;
+  }
+
+  .caseSolutionBottomRight {
+    grid-row: 5;
+    grid-column: 1 / span 7;
+  }
+}

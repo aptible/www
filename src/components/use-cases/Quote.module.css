@@ -37,3 +37,31 @@
   height: 610px;
   background-color: #CBBBC4;
 }
+
+@media (--mobile) {
+  .container {
+    margin: 100px 0 30px 0;
+  }
+
+  .quote {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+  }
+
+  .quote h2 .quoteStart {
+    left: -10px;
+  }
+
+  .logo {
+    margin-top: 30px;
+  }
+
+  .image {
+    grid-row: 1;
+    grid-column: 1 / span 7;
+  }
+
+  .placeholderImage {
+    height: 400px;
+  }
+}
