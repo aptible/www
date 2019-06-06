@@ -106,3 +106,9 @@
 .amount h5 span {
   color: white;
 }
+
+@media (--mobile) {
+  .container {
+    display: none;
+  }
+}

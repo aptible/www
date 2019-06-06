@@ -11,3 +11,9 @@
 .amount {
   margin: 0;
 }
+
+@media (--mobile) {
+  .container {
+    margin: 15px 0 45px 0;
+  }
+}

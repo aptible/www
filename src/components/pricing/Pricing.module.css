@@ -11,7 +11,6 @@
   background-size: 700px auto;
   background-repeat: no-repeat;
   margin-bottom: 100px;
-  padding-top: 200px;
   padding: 215px 85px 85px 85px;
   cursor: pointer;
   z-index: 1;
@@ -147,4 +146,67 @@
 .deployAccountType h6 {
   color: var(--body-color);
   margin: 60px 0 15px 0;
+}
+
+@media (--mobile) {
+  .hero {
+    text-align: left;
+    padding-bottom: 30px;
+  }
+
+  .product {
+    margin-bottom: 30px;
+    padding-top: 200px;
+    padding: 215px 30px 30px 30px;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .comply {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+    margin-right: 0;
+    background-image: url('../../images/illustrations/comply.png');
+    background-position: -50px -180px;
+  }
+
+  .deploy {
+    grid-row: 3;
+    grid-column: 1 / span 7;
+    margin-left: 0;
+    background-image: url('../../images/illustrations/deploy.png');
+    background-position: -50px -250px;
+  }
+
+  .expanded {
+    margin-top: 0;
+  }
+
+  .comply.expanded {
+    margin-right: 0;
+  }
+
+  .deploy.expanded {
+    margin-left: 0;
+  }
+
+  .complyForm {
+    width: 100%;
+  }
+
+  .complySidebar {
+    float: none;
+    width: 100%;
+  }
+
+  .deployLearnMore {
+    display: none;
+  }
+
+  .deployAccountContainer {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 }
