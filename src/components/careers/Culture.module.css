@@ -19,3 +19,20 @@
 .culture {
   margin: 0 80px 60px 0;
 }
+
+@media (--mobile) {
+  .intro {
+    grid-column: 1 / span 7;
+    margin-right: 0;
+  }
+
+  .cultureGrid {
+    grid-column: 1 / span 7;
+    grid-template-columns: 1fr;
+    margin-top: 100px;
+  }
+
+  .culture {
+    margin: 0 0 15px 0;
+  }
+}

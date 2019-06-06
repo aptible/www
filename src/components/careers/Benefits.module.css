@@ -28,3 +28,18 @@
 .benefitIcon {
   position: absolute;
 }
+
+@media (--mobile) {
+  .headline {
+    grid-column: 1 / span 7;
+  }
+
+  .benefitGrid {
+    grid-column: 1 / span 7;
+    grid-template-columns: 1fr;
+  }
+
+  .benefit {
+    margin: 15px 0;
+  }
+}

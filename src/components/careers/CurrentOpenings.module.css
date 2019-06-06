@@ -69,3 +69,33 @@
   right: 15px;
   top: 5px;
 }
+
+@media (--mobile) {
+  .headline {
+    grid-column: 1 / span 7;
+  }
+
+  .job:hover {
+    border-top-color: inherit;
+  }
+
+  .job a:hover .jobTitle h5 {
+    color: white
+  }
+
+  .team {
+    display: none;
+  }
+
+  .jobTitle {
+    grid-column: 1 / span 4;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .commitment {
+    display: none;
+  }
+}

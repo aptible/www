@@ -25,3 +25,14 @@
 .image img {
   height: 100%;
 }
+
+@media (--mobile) {
+  .imageSelector {
+    height: 320px;
+    margin: 60px 0;
+  }
+
+  .image {
+    height: 300px;
+  }
+}
