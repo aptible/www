@@ -22,3 +22,23 @@
 .step p {
   max-width: 320px;
 }
+
+@media (--mobile) {
+  .container {
+    padding: 30px 0;
+  }
+
+  .hero {
+    grid-column: 1 / span 7;
+    margin-bottom: 30px;
+  }
+
+  .stepsGrid {
+    grid-column: 1 / span 7;
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    margin-bottom: 15px;
+  }
+}

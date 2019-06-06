@@ -17,3 +17,14 @@
 .content h5 {
   margin-bottom: 15px;
 }
+
+@media (--mobile) {
+  .container {
+    background: none;
+  }
+
+  .content {
+    text-align: left;
+    padding: 30px 0;
+  }
+}
