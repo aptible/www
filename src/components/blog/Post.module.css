@@ -48,3 +48,13 @@
 .body p {
   line-height: 1.6;
 }
+
+@media (--mobile) {
+  .authorPhoto {
+    display: none;
+  }
+
+  .content {
+    grid-column: 1 / span 7;
+  }
+}

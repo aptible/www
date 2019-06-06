@@ -107,3 +107,44 @@ a.activeCategory h6 {
 .readMore {
   margin-top: 50px;
 }
+
+@media (--mobile) {
+  .header {
+    grid-column: 1 / span 7;
+  }
+
+  .categories {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .categories a {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 10px;
+  }
+
+  a.activeCategory:before {
+    top: 11px;
+    left: -4px;
+  }
+
+  .posts {
+    grid-row: 3;
+    grid-column: 1 / span 7;
+  }
+
+  .postSummary {
+    padding: 30px;
+  }
+
+  .authorPhoto {
+    display: none;
+  }
+
+  .tags {
+    float: none;
+  }
+}
