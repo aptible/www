@@ -9,7 +9,9 @@ import ZeroTo from '../components/footer/ZeroTo';
 
 export default ({ data }) => (
   <AptibleLayout>
-    <CustomerCarousel />
+    <div style={{ paddingTop: '30px' }}>
+      <CustomerCarousel />
+    </div>
     <GreatCompany />
     <CustomerCards />
     <CustomerEmpowerment />
