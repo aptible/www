@@ -46,3 +46,9 @@
   height: 100px;
   background-size: cover;
 }
+
+@media (--mobile) {
+  .photo {
+    height: 30px;
+  }
+}

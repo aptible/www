@@ -36,6 +36,7 @@
   width: 255px;
   height: 255px;
   z-index: 5;
+  grid-row: none;
 }
 
 .photo img {
@@ -99,4 +100,46 @@
 
 .teamMember.open .bio {
   display: block;
+}
+
+@media (--mobile) {
+  .title {
+    text-align: right;
+    margin-top: 0;
+  }
+ 
+  .action {
+    display: none;
+  }
+
+  .photo {
+    position: relative;
+    top: 0;
+    left: 0;
+    grid-row: 2;
+    grid-column: 1 / span 7;
+    margin: 30px 0;
+  }
+
+  .teamMember:hover {
+    border-top-color: inherit;
+  }
+
+  .teamMember:hover h5 {
+    color: white;
+  }
+
+  .teamMember:hover .photo {
+    display: none;
+  }
+
+  .teamMember.open .photo {
+    display: block;
+  }
+
+  .bio {
+    grid-row: 3;
+    grid-column: 1 / span 7;
+    padding: 0;
+  }
 }

@@ -9,3 +9,16 @@
 .list {
   grid-column: 3 / span 5;
 }
+
+@media (--mobile) {
+  .sidebar {
+    grid-row: 1;
+    grid-column: 1 / span 7;
+    padding-bottom: 30px;
+  }
+
+  .list {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+  }
+}

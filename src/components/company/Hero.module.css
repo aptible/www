@@ -33,3 +33,18 @@
   text-align: center;
   margin-top: 100px;
 }
+
+@media (--mobile) {
+  .container {
+    margin-bottom: 0;
+  }
+
+  .zoomChat {
+    margin: 100px 10px 10px 10px;
+  }
+
+  .coreCompetency {
+    grid-column: 1 / span 7;
+    margin-top: 30px;
+  }
+}
