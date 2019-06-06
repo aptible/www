@@ -65,3 +65,21 @@
   grid-column: 6 / span 2;
   text-align: right;
 }
+
+@media (--mobile) {
+  .navItems {
+    display: none;
+  }
+
+  .navItems.noCta {
+    display: block;
+  }
+
+  .navItems.noCta .navItem {
+    margin: 0 15px;
+  }
+
+  .cta {
+    grid-column: 1 / span 7;
+  }
+}
