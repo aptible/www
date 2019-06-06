@@ -54,3 +54,40 @@
   grid-column: 2 / span 5;
   margin-bottom: 200px;
 }
+
+@media (--mobile) {
+  .container {
+    padding: 30px 0;
+  }
+
+  .intro {
+    margin-bottom: 15px;
+  }
+
+  .step {
+    padding: 30px;
+    grid-template-columns: 1fr;
+  }
+
+  .step .number {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .step p {
+    padding: 15px 0 0 0;
+  }
+
+  .intro,
+  .one,
+  .two,
+  .three,
+  .four,
+  .five {
+    grid-column: 1 / span 7;
+  }
+
+  .five {
+    margin-bottom: 0;
+  }
+}

@@ -10,7 +10,7 @@ export default () => (
       <div className={styles.content}>
         <h5>Aptible Deploy</h5>
         <h1 className="hero">
-          Launch apps and databases that<br /> are audit-ready
+          Launch apps and databases that<br className="desktopOnly" /> are audit-ready
         </h1>
         <p className="XL">
           Deploy automatically implements the security controls you need
