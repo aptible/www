@@ -12,7 +12,7 @@ export default () => (
     </div>
 
     <div className={styles.callout}>
-      <h5>It takes 19 steps to<br />deploy on AWS...</h5>
+      <h5>It takes 19 steps to<br />deploy on AWS&hellip;</h5>
     </div>
 
     <div className={styles.steps}>

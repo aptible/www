@@ -227,10 +227,10 @@ export default () => (
         <h5>Aptible Deploy</h5>
         <h6 className="small">Features</h6>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Deploy Service Status Page</li>
+          <li>Web Service Health Checks</li>
+          <li>API Audit Logs</li>
+          <li>Maintenance Pages</li>
         </ul>
       </div>
 
