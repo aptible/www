@@ -45,6 +45,9 @@ class InnerSignup extends React.Component {
   }
 
   setCall = (scheduledCall) => {
+    const popupWindow = document.querySelector('.chilipiper-popup');
+    popupWindow.parentNode.removeChild(popupWindow);
+
     const sampleCall = {};
     this.setState({ scheduledCall: sampleCall, currentView: Confirmation });
   }

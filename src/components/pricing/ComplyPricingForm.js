@@ -29,11 +29,10 @@ class ComplyPricingForm extends React.Component {
         LastName: this.state.lastName,
         Email: this.state.email,
         Phone: this.state.phone,
-        Company: this.state.company,
-        LeadSource: 'Comply Pricing'
+        Company: this.state.company
       });
 
-      marketoForm.onSuccess((response) => {
+      marketoForm.onSuccess(() => {
         this.setState({ finished: true });
         return false;
       });

@@ -24,8 +24,8 @@ export default ({ setProduct }) => (
         <div className={styles.title}>
           <h5>Aptible Comply</h5>
           <p className="L">
-            Design, operate, and audit your information security management
-            program.
+            Turn security and compliance into repeatable processes that
+            accelerate your growth.
           </p>
         </div>
 

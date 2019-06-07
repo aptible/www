@@ -14,7 +14,10 @@ const backgroundImages = {
 function ComplyHover() {
   return (
     <div className={styles.hoverDescription}>
-      <h5>Design, operate, and audit your security management program.</h5>
+      <h5>
+        Turn security and compliance into repeatable processes that
+        accelerate your growth.
+      </h5>
     </div>
   )
 }
