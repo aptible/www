@@ -4,7 +4,7 @@
 
 .quote {
   grid-row: 1;
-  grid-column: 2 / span 3;
+  grid-column: 2 / span 4;
   z-index: 3;
 }
 
@@ -19,6 +19,7 @@
 
 .logo {
   margin: 80px 0 15px 0;
+  height: 30px;
 }
 
 .author {
@@ -28,8 +29,13 @@
 
 .image {
   grid-row: 1;
-  grid-column: 4 / span 3;
+  grid-column: 5 / span 3;
   z-index: 2;
+}
+
+.image img {
+  width: 100%;
+  margin-top: 80px;
 }
 
 .placeholderImage {

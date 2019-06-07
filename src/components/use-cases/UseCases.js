@@ -4,6 +4,54 @@ import { Grid } from '../grid/Grid';
 import Button from '../buttons/Button';
 import Quote from './Quote';
 
+import snapsLogo from '../../images/customers/logos/snaps.png';
+import pathAILogo from '../../images/customers/logos/pathai.png';
+import ableHealthLogo from '../../images/customers/logos/able-health.png';
+import fortmaticLogo from '../../images/customers/logos/fortmatic.svg';
+import atriumLogo from '../../images/customers/logos/atrium.png';
+
+import fortmaticImage from '../../images/customers/photos/fortmatic-arthur-jen.jpg';
+import atriumImage from '../../images/customers/photos/atrium-justin-kan.jpg';
+
+const snapsQuote = (
+  <span>
+    Our software is used by Fortune 100 companies, which means completing
+    time-consuming vendor security assessments. Comply has helped us prepare for
+    ISO 27001 certification, which is helping our team take a 'preemptive strike'
+    against VSAs and shorten the enterprise sales cycle.
+  </span>
+);
+
+const pathAIQuote = (
+  <span>
+    Comply takes all of the guesswork away and standardizes so much of the
+    process. I could be confident we were doing things right.
+  </span>
+);
+
+const ableHealthQuote = (
+  <span>
+    Our team couldn't relate to what we had pieced together. We needed something
+    that was tailored to us. Aptible gave us that.
+  </span>
+);
+
+const fortmaticQuote = (
+  <span>
+    We want our end users to know we take security integrity very seriously, with
+    Aptible, we were able to secure our SOC 2 audit very quickly and we have a
+    fleshed out plan for Security Management.
+  </span>
+);
+
+const atriumQuote = (
+  <span>
+    We needed a system that made it easy to track our compliance efforts and
+    establish an information Security Management Program&hellip; with Aptible we've
+    done that without having to hire a full time compliance team.
+  </span>
+);
+
 export default () => (
   <div className={styles.container}>
     <Grid rows="3">
@@ -66,7 +114,7 @@ export default () => (
       </div>
     </Grid>
 
-    <Quote />
+    <Quote logo={snapsLogo} quote={snapsQuote} author="Joe Rettenmyer, VP of Engineering" />
 
     <Grid rows="2">
       <div className={styles.case} id="security-standards">
@@ -126,7 +174,7 @@ export default () => (
       </div>
     </Grid>
 
-    <Quote />
+    <Quote logo={pathAILogo} quote={pathAIQuote} author="Joe Adu, Director of IT" />
 
     <Grid rows="2">
       <div className={styles.case} id="regulatory-compliance">
@@ -186,7 +234,7 @@ export default () => (
       </div>
     </Grid>
 
-    <Quote />
+    <Quote logo={ableHealthLogo} quote={ableHealthQuote} author="Steve Daniels, Co-founder and President" />
 
     <Grid rows="2">
       <div className={styles.case} id="security-awareness">
@@ -245,7 +293,7 @@ export default () => (
       </div>
     </Grid>
 
-    <Quote />
+    <Quote logo={fortmaticLogo} quote={fortmaticQuote} image={fortmaticImage} author="Arthur Jen, Co-Founder" />
 
     <Grid rows="2">
       <div className={styles.case} id="internal-audits">
@@ -303,6 +351,6 @@ export default () => (
       </div>
     </Grid>
 
-    <Quote />
+    <Quote logo={atriumLogo} quote={atriumQuote} image={atriumImage} author="Justin Kan, CEO & Co-founder" />
   </div>
 );

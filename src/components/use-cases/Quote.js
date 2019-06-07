@@ -1,23 +1,23 @@
 import React from 'react';
 import styles from './Quote.module.css';
 import { Grid } from '../grid/Grid';
-import healthifyLogo from '../../images/customers/logos/healthify.svg';
 
-export default () => (
+export default ({ logo, quote, author, image }) => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.quote}>
-        <img src={healthifyLogo} alt="healthify" className={styles.logo} />
+        <img src={logo} alt="healthify" className={styles.logo} />
         <h2>
           <span className={styles.quoteStart}>&ldquo;</span>
-          When we told them we used Aptible, he told us that he told us that he
-          was very familiar with Aptible and didn't need the SOC 2 Report anymore.&rdquo;
+          {quote}&rdquo;
         </h2>
-        <div className={styles.author}>Firstname Lastname, CTO</div>
+        <div className={styles.author}>{author}</div>
       </div>
-      <div className={styles.image}>
-        <div className={styles.placeholderImage} />
-      </div>
+      {image &&
+        <div className={styles.image}>
+          <img src={image} alt="quote image" />
+        </div>
+      }
     </Grid>
   </div>
 );
