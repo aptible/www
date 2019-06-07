@@ -30,8 +30,8 @@ class Comply extends React.Component {
         <div className={styles.title}>
           <h4>Aptible Comply</h4>
           <p className="L">
-            Design, operate, and audit your information security management
-            program.
+            Turn security and compliance into repeatable processes that
+            accelerate your growth.
           </p>
         </div>
 
