@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './Pricing.module.css';
 import PricingArrow from './PricingArrow';
-import TextInput from '../forms/TextInput';
-import Button from '../buttons/Button';
+import ComplyPricingForm from './ComplyPricingForm';
 import CheckmarkUnorderedList from '../shared/CheckmarkUnorderedList';
 import PricingBlock from './PricingBlock';
 import detailsIcons from '../../images/pricing/details.svg';
@@ -67,15 +66,7 @@ class Comply extends React.Component {
               </CheckmarkUnorderedList>
             </div>
             <div className={styles.complyForm}>
-              <TextInput labelText="First Name" required="true" />
-              <TextInput labelText="Last Name" required="true" />
-              <TextInput labelText="Work Email" required="true" />
-              <TextInput labelText="Phone Number" />
-              <TextInput labelText="Company Name" />
-
-              <div className={styles.complyCta}>
-                <Button to="/">Request Pricing Info</Button>
-              </div>
+              <ComplyPricingForm />
             </div>
           </div>
         }
