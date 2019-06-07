@@ -22,7 +22,7 @@
   {
     "headline": "Enhanced Support",
     "filters": ["convenience"],
-    "body": "All Aptible accounts include Businesslevel support. Support upgrade options include private Slack channels with the Aptible team and 15-minute critical response times."
+    "body": "All Aptible accounts include Business level support. Support upgrade options include private Slack channels with the Aptible team and 15-minute critical response times."
   },
   {
     "headline": "Aptible API Audit Logs",
@@ -107,7 +107,7 @@
   {
     "headline": "SSH Session Audit Logs",
     "filters": ["auditReady"],
-    "body": "Capture output from ephemeral `aptible ssh` sessions and route to log drains for auditing, analysis, and compliance."
+    "body": "Capture output from ephemeral <code>aptible ssh</code> sessions and route to log drains for auditing, analysis, and compliance."
   },
   {
     "headline": "Direct Deploy from Docker Image",

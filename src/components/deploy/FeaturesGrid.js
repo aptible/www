@@ -13,7 +13,7 @@ function FeatureCard({ filters, headline, body }) {
         ))}
       </div>
       <h5>{headline}</h5>
-      <p>{body}</p>
+      <p dangerouslySetInnerHTML={{ __html: body }}></p>
     </div>
   )
 }

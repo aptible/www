@@ -9,11 +9,13 @@ export default () => (
       <div className={styles.hero}>
         <h1>Division of Responsibility</h1>
         <p className="L">
-          Aptible Deploy is an ISO 27001 certified, AWS-based container
-          orchestration platform for deploying highly available, secure apps and
-          databases into isolated cloud environments. Sofware teams use Deploy
-          to automate DevOps and security engineering best practices and
-          requirements for HIPAA, ISO 27001, SOC 2, and other security frameworks.
+          Aptible Deploy is an ISO 27001 and SOC 2 certified, AWS-based
+          deployment platform for deploying audit-ready apps and databases.
+          Using Aptible Deploy, companies can launch highly available, secure
+          apps and databases into isolated cloud environments using a
+          developer-friendly workflow. Apps hosted on Aptible Deploy conform to
+          the requirements of HIPAA, ISO 27001, SOC 2, GDPR, and other security
+          frameworks.
         </p>
       </div>
 

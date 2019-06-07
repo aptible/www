@@ -8,9 +8,15 @@ export default () => (
       <div className={styles.hero}>
         <h1>Only four steps left for you&hellip;</h1>
         <p className="XL">
-          This intro lets them know that Aptible, Aptible Deploy, and AWS gets
-          them 99% of the way there and all they have to do is the last few steps.
+          &ldquo;[Aptible] just works. Nice UI to setup components and
+          environments which eliminates the complexity of setting up and managing
+          AWS directly. Allows me to worry about the code instead of the
+          underlying deployment infrastructure.&rdquo;
         </p>
+        <h6 className="small">
+          - Andrew F., Platform Manager at DIAL Insights. 
+          Posted On <a href="https://www.g2.com/products/aptible/reviews/aptible-review-2120360" target="_blank" rel="noopener noreferrer">G2Crowd.com</a>
+        </h6>
       </div>
 
       <div className={styles.stepsGrid}>
