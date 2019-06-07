@@ -11,6 +11,8 @@ for (let protocol of COMPLIANCE_SITES) {
   protocolData[protocol] = yaml.safeLoad(fs.readFileSync(`./src/data/${protocol}.yml`, 'utf8'));
 }
 
+const CASE_STUDIES = require('./src/data/case-studies.json');
+
 
 const SM_GUIDE_CHAPTERS = [
   { id: 1, path: 'security-management', title: 'Introduction'},
@@ -199,6 +201,16 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve(`./src/templates/security-management.js`),
           context: {
             chapter: chapter
+          },
+        });
+      }
+
+      for (let caseStudy of CASE_STUDIES) {
+        createPage({
+          path: `customers/${caseStudy.customer}`,
+          component: path.resolve(`./src/templates/case-study.js`),
+          context: {
+            caseStudy: caseStudy
           },
         });
       }
