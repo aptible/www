@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.logo img {
+  height: 30px;
+}
+
 .logo:first-child {
   margin-right: 60px;
 }
@@ -30,7 +34,9 @@
   }
 
   .logo img {
+    height: auto;
     width: 80%;
+    vertical-align: middle;
   }
 
   .logo:first-child {

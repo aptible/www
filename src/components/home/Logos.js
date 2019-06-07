@@ -1,30 +1,30 @@
 import React from 'react';
 import styles from './Logos.module.css';
 import { Grid, Row } from '../grid/Grid';
-import healthifyLogo from '../../images/customers/logos/healthify.svg';
-import vergesenseLogo from '../../images/customers/logos/vergesense.svg';
-import mdsaveLogo from '../../images/customers/logos/mdsave.png';
-import cityBlockLogo from '../../images/customers/logos/cityblock.png';
-import simpleCitizenLogo from '../../images/customers/logos/simplecitizen.svg';
+import atriumLogo from '../../images/customers/logos/atrium.png';
+import cityBlockLogo from '../../images/customers/logos/cityblock.svg';
+import fortmaticLogo from '../../images/customers/logos/fortmatic.svg';
+import quadpayLogo from '../../images/customers/logos/quadpay.svg';
+import pathaiLogo from '../../images/customers/logos/pathai.png';
 
 export default () => (
   <Grid>
     <Row>
       <div className={styles.logos}>
         <div className={styles.logo}>
-          <img src={healthifyLogo} alt="Healthify logo" />
+          <img src={atriumLogo} alt="Atrium logo" />
         </div>
         <div className={styles.logo}>
-          <img src={vergesenseLogo} alt="Vergesense logo" />
+          <img src={cityBlockLogo} alt="Cityblock logo" />
         </div>
         <div className={styles.logo}>
-          <img src={mdsaveLogo} alt="MDSave logo" width="100" style={{ marginTop: '-10px' }} />
+          <img src={fortmaticLogo} alt="Fortmatic logo" />
         </div>
         <div className={styles.logo}>
-          <img src={cityBlockLogo} alt="CityBlock logo" width="155" />
+          <img src={quadpayLogo} alt="Quadpay logo" />
         </div>
         <div className={styles.logo}>
-          <img src={simpleCitizenLogo} alt="SimpleCitizen logo" />
+          <img src={pathaiLogo} alt="PathAI logo" />
         </div>
       </div>
     </Row>
