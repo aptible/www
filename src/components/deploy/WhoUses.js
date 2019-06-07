@@ -20,7 +20,7 @@ export default () => (
       </div>
 
       <div className={`${styles.persona} ${styles.personaTwo}`}>
-        <h6>Small dev teams with no secirity expert.</h6>
+        <h6>Small dev teams with no security expert.</h6>
       </div>
 
       <div className={`${styles.persona} ${styles.personaThree}`}>
