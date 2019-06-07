@@ -18,18 +18,15 @@ export default () => (
       </div>
 
       <div className={`${styles.persona} ${styles.personaOne}`}>
-        <h6>Persona Number One</h6>
-        <p className="L">Teams that would rather not try to DIY on AWS.</p>
+        <h6>Teams that would rather not try to DIY on AWS.</h6>
       </div>
 
       <div className={`${styles.persona} ${styles.personaTwo}`}>
-        <h6>Persona Number Two</h6>
-        <p className="L">Small dev teams with no secirity expert.</p>
+        <h6>Small dev teams with no secirity expert.</h6>
       </div>
 
       <div className={`${styles.persona} ${styles.personaThree}`}>
-        <h6>Persona Number Three</h6>
-        <p className="L">Teams that need to focus on development and still get compliant.</p>
+        <h6>Teams that need to focus on development and still get compliant.</h6>
       </div>
 
       <div className={styles.customersLeft}>
