@@ -56,8 +56,18 @@ class InnerSignup extends React.Component {
     this.setState({ scheduledCall: sampleCall, currentView: Confirmation });
   }
 
+  marketoFormId = () => {
+    if (this.state.product === 'comply') {
+      return 1067;
+    } else if (this.state.product === 'deploy') {
+      return 1072;
+    } else {
+      return 1075;
+    }
+  }
+
   sendToMarketo = (email, marketingConsent, callback) => {
-    window.MktoForms2.loadForm('//app-ab35.marketo.com', '620-GAP-535', 1075);
+    window.MktoForms2.loadForm('//app-ab35.marketo.com', '620-GAP-535', this.marketoFormId());
     window.MktoForms2.whenReady((marketoForm) => {
       marketoForm.addHiddenFields({
         Email: email,
