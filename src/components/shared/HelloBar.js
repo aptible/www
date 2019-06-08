@@ -14,16 +14,20 @@ class HelloBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: this.shouldShow()
+      show: false
     };
   }
 
-  shouldShow = () => {
+  componentDidMount = () => {
+    if (typeof(window) === 'undefined') {
+      return
+    }
+
     if (cookies.get(this.cookieName())) {
       return false;
     }
 
-    return true;
+    this.setState({ show: true });
   }
 
   cookieName = () => {

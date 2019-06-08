@@ -1,6 +1,6 @@
 function all() {
   let cookies = {};
-  const cookieStrings = document.cookie.split(';');
+  const cookieStrings = window.document.cookie.split(';');
 
   for (let cookie of cookieStrings) {
     const pieces = cookie.split('=');
@@ -27,5 +27,5 @@ export function write(name, value, expiresAt) {
   let cookieString = `${name}=${value}; expires=${expiresAt.toUTCString()};`;
   cookieString += `domain=.${domain}; path=/`;
 
-  document.cookie = cookieString;
+  window.document.cookie = cookieString;
 }
