@@ -30,13 +30,17 @@ class InnerSignup extends React.Component {
 
   setEmail = (email, marketingConsent) => {
     this.setState({ email, marketingConsent });
-    this.sendToMarketo(email);
-
-    if (this.state.product) {
-      this.openChiliPiper();
-    } else {
-      this.setState({ currentView: ProductSelection });
-    }
+    this.sendToMarketo(email, marketingConsent, () => {
+      if (this.state.product) {
+        if (this.state.product === 'deploy') {
+          this.redirectToDeploy(email);
+        } else {
+          this.openChiliPiper();
+        }
+      } else {
+        this.setState({ currentView: ProductSelection });
+      }
+    });
   }
 
   setProduct = (productName) => {
@@ -52,7 +56,7 @@ class InnerSignup extends React.Component {
     this.setState({ scheduledCall: sampleCall, currentView: Confirmation });
   }
 
-  sendToMarketo = (email) => {
+  sendToMarketo = (email, marketingConsent, callback) => {
     window.MktoForms2.loadForm('//app-ab35.marketo.com', '620-GAP-535', 1067);
     window.MktoForms2.whenReady((marketoForm) => {
       marketoForm.addHiddenFields({
@@ -61,6 +65,7 @@ class InnerSignup extends React.Component {
       });
 
       marketoForm.onSuccess(() => {
+        callback();
         return false;
       });
 
@@ -69,6 +74,10 @@ class InnerSignup extends React.Component {
   }
 
   openChiliPiper = () => {
+    if (!window.ChiliPiper) {
+      return;
+    }
+
     window.ChiliPiper.submit('aptible', 'gridiron-signup', {
       handleSubmit: false,
       debug: true,
@@ -78,6 +87,14 @@ class InnerSignup extends React.Component {
         Email: this.state.email
       }
     });
+  }
+
+  redirectToDeploy = (email) => {
+    if (typeof(window) === 'undefined') {
+      return;
+    }
+
+    window.location = `https://dashboard.aptible.com/signup?email=${email}`;
   }
 
   render() {

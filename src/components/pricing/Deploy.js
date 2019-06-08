@@ -102,7 +102,7 @@ class Deploy extends React.Component {
           <DeployCalculator />
 
           <div className="mobileOnly" style={{ display: 'block', marginTop: '30px' }}>
-            <SignupButton text="Start with Deploy" />
+            <SignupButton text="Start with Deploy" product="deploy" />
           </div>
         </div>
       }

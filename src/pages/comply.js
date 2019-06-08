@@ -20,7 +20,7 @@ const stickyNavItems = [
 export default ({ data }) => (
   <AptibleLayout>
     <Hero />
-    <Nav items={stickyNavItems} ctaText="Start With Comply" />
+    <Nav items={stickyNavItems} ctaText="Start With Comply" product="comply" />
     <Features />
     <div id="use-cases">
       <UseCases />

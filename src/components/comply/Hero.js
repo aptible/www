@@ -18,7 +18,7 @@ export default () => (
           and maintain the compliance and security that give you a competitive edge.
         </p>
 
-        <SignupButton text="Start with Comply" />
+        <SignupButton text="Start with Comply" product="comply" />
       </div>
 
       <div className={styles.screenshot}>

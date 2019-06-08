@@ -101,7 +101,7 @@ class Nav extends React.Component {
 
             {this.props.ctaText && (
               <div className={styles.cta}>
-                <SignupButton text={this.props.ctaText} />
+                <SignupButton text={this.props.ctaText} product={this.props.product} />
               </div>
             )}
           </Grid>

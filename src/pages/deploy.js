@@ -21,7 +21,7 @@ const stickyNavItems = [
 export default () => (
   <AptibleLayout>
     <Hero />
-    <Nav items={stickyNavItems} ctaText="Start With Deploy" ctaLink="/" />
+    <Nav items={stickyNavItems} ctaText="Start With Deploy" product="deploy" />
     <Features />
     <SecurityControls />
     <HowItWorks />

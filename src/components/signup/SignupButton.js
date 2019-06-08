@@ -28,7 +28,7 @@ class SignupButton extends React.Component {
         </Button>
 
         {this.state.open &&
-          <Signup closeFn={this.closeSignup} />
+          <Signup closeFn={this.closeSignup} product={this.props.product} />
         }
       </React.Fragment>
     );

@@ -17,7 +17,7 @@ export default () => (
           to achieve regulatory compliance and pass customer audits.
         </p>
 
-        <SignupButton text="Start with Deploy" />
+        <SignupButton text="Start with Deploy" product="deploy" />
       </div>
 
       <div className={styles.consoleContainer}>
