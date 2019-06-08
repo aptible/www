@@ -17,6 +17,10 @@ class Email extends React.Component {
     this.setState({ email: e.target.value });
   }
 
+  consentChange = () => {
+    this.setState({ marketingConsent: !this.state.marketingConsent });
+  }
+
   buttonClick = () => {
     this.props.setEmail(this.state.email, this.state.marketingConsent);
   }
@@ -42,7 +46,7 @@ class Email extends React.Component {
           </div>
 
           <div className={styles.marketingConsent}>
-            <input type="checkbox" name="marketingConsent" id="marketingConsent" value="1" />
+            <input type="checkbox" name="marketingConsent" id="marketingConsent" value="1" onChange={this.consentChange} />
             <label htmlFor="marketingConsent">
               I consent to receiving Aptible marketing emails. View our
               <a href="/legal/privacy/" target="_blank">Privacy Policy</a>
