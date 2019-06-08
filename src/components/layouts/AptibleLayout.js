@@ -6,7 +6,11 @@ import HelloBar from '../shared/HelloBar';
 
 export default ({ children }) => (
   <div>
-    <HelloBar to="/blog/" callout="Big News!" text="We've launched our new brand and are excited to announce our series A! Read more." />
+    <HelloBar
+      id="2019-relaunch"
+      to="/blog/"
+      callout="Big News!"
+      text="We've launched our new brand and are excited to announce our series A! Read more." />
     <Header />
     {children}
     <Footer />

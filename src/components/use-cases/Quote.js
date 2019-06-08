@@ -6,7 +6,7 @@ export default ({ logo, quote, author, image }) => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.quote}>
-        <img src={logo} alt="healthify" className={styles.logo} />
+        <img src={logo} alt="Logo" className={styles.logo} />
         <h2>
           <span className={styles.quoteStart}>&ldquo;</span>
           {quote}&rdquo;
@@ -15,7 +15,7 @@ export default ({ logo, quote, author, image }) => (
       </div>
       {image &&
         <div className={styles.image}>
-          <img src={image} alt="quote image" />
+          <img src={image} alt="Quote" />
         </div>
       }
     </Grid>
