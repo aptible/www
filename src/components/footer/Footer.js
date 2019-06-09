@@ -53,7 +53,6 @@ export default () => (
         <Link to="/company/">About</Link>
         <Link to="/careers/">Careers</Link>
         <Link to="/legal/terms-of-service/">Legal</Link>
-        <Link to="/faq/">FAQ</Link>
       </div>
 
 
