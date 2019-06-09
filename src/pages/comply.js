@@ -25,7 +25,7 @@ export default ({ data }) => (
       <meta name="description" content="Speed up sales cycle by passing vendor security assessments and meeting regulatory requirements for SOC 2, ISO 27001, HIPAA, GDPR, and more." />
     </Helmet>
     <Hero />
-    <Nav items={stickyNavItems} ctaText="Start With Comply" product="comply" />
+    <Nav items={stickyNavItems} ctaText="Schedule a Demo" product="comply" />
     <Features />
     <div id="use-cases">
       <UseCases />
