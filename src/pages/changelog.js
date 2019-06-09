@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import { graphql } from 'gatsby';
 import ChangelogIndex from '../components/blog/ChangelogIndex';
@@ -7,6 +8,10 @@ import ZeroTo from '../components/footer/ZeroTo';
 
 export default ({ data, pageContext }) => (
   <AptibleLayout>
+    <Helmet>
+      <title>Aptible | Changelog</title>
+      <meta name="description" content="Product updates for Aptible Comply and Deploy." />
+    </Helmet>
     <ChangelogIndex posts={data.posts.edges} categorySlug={pageContext.categorySlug} />
     <Pagination
       numPages={pageContext.numPages}

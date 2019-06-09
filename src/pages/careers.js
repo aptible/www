@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import Hero from '../components/careers/Hero';
@@ -11,6 +12,10 @@ import CurrentOpenings from '../components/careers/CurrentOpenings';
 
 export default ({ data }) => (
   <AptibleLayout>
+    <Helmet>
+      <title>Aptible | Careers</title>
+      <meta name="description" content="Aptible is a remote team seeking to build trust on the internet. Learn more about open opportunities at Aptible." />
+    </Helmet>
     <Hero />
     <PhotoCarousel />
     <MapBackground>

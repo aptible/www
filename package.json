@@ -18,6 +18,7 @@
     "gatsby": "^2.1.30",
     "gatsby-plugin-portal": "^1.0.7",
     "gatsby-plugin-postcss": "^2.0.6",
+    "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-source-contentful": "^2.0.41",
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-source-lever": "^2.0.8",
@@ -25,7 +26,8 @@
     "gatsby-transformer-yaml": "^2.1.10",
     "react": "^16.8.4",
     "react-compound-slider": "^2.0.0",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.6.0",

@@ -1,4 +1,5 @@
-import React from "react"
+import React from 'react';
+import { Helmet } from 'react-helmet';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import Hero from '../components/home/Hero';
 import ProductCarousel from '../components/home/ProductCarousel';
@@ -12,6 +13,10 @@ import { graphql } from 'gatsby';
 
 export default ({ data }) => (
   <AptibleLayout>
+    <Helmet>
+      <title>Aptible | Security Management Platform</title>
+      <meta name="description" content="Aptible is the leading security management platform for small companies. Grow by meeting security requirements for SOC 2, ISO 27001, HIPAA, GDPR, and more." />
+    </Helmet>
     <Hero heroBlock={findBlockById(data.blocks.edges, 'home-hero')} />
     <ProductCarousel />
     <Logos />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import { findBlockById } from '../lib/blocks';
 import ContentLayout from '../components/layouts/ContentLayout';
@@ -10,6 +11,10 @@ export default ({ data, pageContext }) => {
 
   return (
     <ContentLayout title={caseStudy.title} SidebarComponent={CaseStudiesNav}>
+      <Helmet>
+        <title>Aptible | {caseStudy.title} Case Study</title>
+        <meta name="description" content="Aptible is the leading security management platform for small companies. Here are posts and videos detailing how customers are using Aptible to propel their businesses forward." />
+      </Helmet>
       <ContentfulBlock block={findBlockById(data.blocks.edges, `case-study-${caseStudy.customer}`)} />
     </ContentLayout>
   );

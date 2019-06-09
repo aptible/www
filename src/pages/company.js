@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import Hero from '../components/company/Hero';
@@ -17,6 +18,10 @@ const stickyNavItems = [
 
 export default ({ data }) => (
   <AptibleLayout>
+    <Helmet>
+      <title>Aptible | About Aptible</title>
+      <meta name="description" content="Aptible is a remote team seeking to build trust on the internet. Learn more about Aptible and the team behind it." />
+    </Helmet>
     <Hero webcamPhotos={data.webcamPhotos.edges} />
     <Nav items={stickyNavItems} />
     <Vision />

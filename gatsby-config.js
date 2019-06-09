@@ -44,5 +44,6 @@ module.exports = {
         verboseOutput: true,
       },
     },
+    `gatsby-plugin-react-helmet`
   ],
 };

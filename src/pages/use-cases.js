@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import Hero from '../components/use-cases/Hero';
 import Nav from '../components/shared/Nav';
@@ -36,6 +37,10 @@ const stickyNavItems = [
 
 export default ({ data }) => (
   <AptibleLayout>
+    <Helmet>
+      <title>Aptible | Use Cases</title>
+      <meta name="description" content="Aptible is the leading security management platform for small companies. We help companies shorten sales cycles through security. We offer pricing plans that work for any business that needs to improve their security." />
+    </Helmet>
     <Hero />
     <Nav items={stickyNavItems} />
     <UseCases />

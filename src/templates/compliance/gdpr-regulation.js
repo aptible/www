@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import ComplianceLayout from '../../components/layouts/ComplianceLayout';
 import GdprSubnav from '../../components/compliance/GdprSubnav';
@@ -24,6 +25,10 @@ export default ({ data, pageContext }) => {
       regulation={data.gdpr}
       title={title}
       SidebarComponent={GdprSubnav}>
+      <Helmet>
+        <title>Article {part.id}: {part.title} | GDPR Requirements hosted by Aptible</title>
+        <meta name="description" content={`Explore ${part.title} (Article ${part.id}) of the GDPR Requirements. The full GDPR Requirements text, annotated by Aptible, easily searchable.`} />
+      </Helmet>
       <div dangerouslySetInnerHTML={{ __html: data.regulation.html }}></div>
     </ComplianceLayout>
   );

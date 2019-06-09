@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import Hero from '../components/comply/Hero';
 import Nav from '../components/shared/Nav';
@@ -19,6 +20,10 @@ const stickyNavItems = [
 
 export default ({ data }) => (
   <AptibleLayout>
+    <Helmet>
+      <title>Aptible Comply | Security Management Platform</title>
+      <meta name="description" content="Speed up sales cycle by passing vendor security assessments and meeting regulatory requirements for SOC 2, ISO 27001, HIPAA, GDPR, and more." />
+    </Helmet>
     <Hero />
     <Nav items={stickyNavItems} ctaText="Start With Comply" product="comply" />
     <Features />

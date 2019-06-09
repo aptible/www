@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import ComplianceLayout from '../../components/layouts/ComplianceLayout';
 import HipaaSubnav from '../../components/compliance/HipaaSubnav';
@@ -24,6 +25,10 @@ export default ({ data, pageContext }) => {
       regulation={data.hipaa}
       title={title}
       SidebarComponent={HipaaSubnav}>
+      <Helmet>
+        <title>{title} | HIPAA Regulations hosted by Aptible</title>
+        <meta name="description" content={`Explore ${title} of the HIPAA Regulations. The full HIPAA Regulation text as provided in the HIPAA Administrative Simplification, annotated by Aptible, easily searchable.`} />
+      </Helmet>
       <div dangerouslySetInnerHTML={{ __html: data.regulation.html }}></div>
     </ComplianceLayout>
   );
