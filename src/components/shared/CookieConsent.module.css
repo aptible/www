@@ -1,0 +1,36 @@
+.container {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 400px;
+  padding: 30px 40px;
+  background-color: var(--aptible-black-light);
+  z-index: 100;
+}
+
+.ctas {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: 30% 70%;
+}
+
+.privacy {
+  padding-left: 30px;
+}
+
+@media (--mobile) {
+  .container {
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    padding: 2% 5% 5% 5%;
+  }
+
+  .ctas {
+    grid-template-columns: 40% 60%;
+  }
+
+  .privacy {
+    padding-left: 15px;
+  }
+}
