@@ -5,6 +5,9 @@ import Hero from '../components/comply/Hero';
 import Nav from '../components/shared/Nav';
 import UseCases from '../components/home/UseCases';
 import Features from '../components/comply/Features';
+import ContinuouslyImprove from '../components/comply/ContinuouslyImprove';
+import BeyondCompliance from '../components/comply/BeyondCompliance';
+import ManagedOps from '../components/comply/ManagedOps';
 import HowItWorks from '../components/comply/HowItWorks';
 import WhoUses from '../components/comply/WhoUses';
 import MoreFeatures from '../components/comply/MoreFeatures';
@@ -27,6 +30,9 @@ export default ({ data }) => (
     <Hero />
     <Nav items={stickyNavItems} ctaText="Schedule a Demo" product="comply" />
     <Features />
+    <ContinuouslyImprove />
+    <BeyondCompliance />
+    <ManagedOps />
     <div id="use-cases">
       <UseCases />
     </div>

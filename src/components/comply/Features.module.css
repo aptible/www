@@ -1,5 +1,5 @@
 .container {
-  padding: 100px 0 50px 0;
+  padding: 100px 0 2px 0;
 }
 
 .intro {
@@ -7,7 +7,9 @@
 }
 
 .content {
+  position: relative;
   grid-column: 2 / span 4;
+  margin-bottom: 30px;
 }
 
 .intro h1 {
@@ -18,7 +20,94 @@
   max-width: 550px;
 }
 
-.placeholder {
-  height: 600px;
+.bullets {
+  grid-row: 1;
+  grid-column: 2 / span 3;
+  margin-right: 80px;
+}
+
+.bullet {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.bulletIcon {
+  position: absolute;
+  left: -160px;
+  width: 160px;
+  text-align: center;
+  top: 0;
+}
+
+.guaranteeContainer {
+  grid-row: 1;
+  grid-column: 5 / span 3;
+}
+
+.guarantee {
   background: linear-gradient(168.29deg, rgba(255, 255, 255, 0.04) 7.84%, rgba(255, 255, 255, 0.032) 83.16%), #0A1B2B;
+  padding: 80px 40px 40px 40px;
+}
+
+.guarantee h2 {
+  text-align: center;
+}
+
+.guaranteeList {
+  margin: 30px auto 0 auto;
+  width: 80%;
+}
+
+.thumbsUp {
+  position: absolute;
+  top: 167px;
+  right: -143px;
+  z-index: 2;
+}
+
+.toSeamless {
+  position: absolute;
+  top: -206px;
+  right: -85px;
+  z-index: 2;
+}
+
+.beyondLeft {
+  position: absolute;
+  top: -190px;
+  left: -84px;
+}
+
+.beyondRight {
+  position: absolute;
+  top: 55px;
+  left: 326px;
+}
+
+.screenshots {
+  grid-row: 1;
+  grid-column: 5 / span 3;
+  margin-top: -180px;
+  margin-bottom: -180px;
+}
+
+.chat {
+  width: 320px;
+  float: right;
+  margin-bottom: 60px;
+}
+
+.screenshot {
+  position: relative;
+  z-index: 1;
+  width: 320px;
+  margin-left: 80px;
+}
+
+.dpa {
+  position: relative;
+  top: -130px;
+  z-index: 2;
+  width: 320px;
+  float: right;
 }
