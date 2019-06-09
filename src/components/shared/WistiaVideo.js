@@ -7,8 +7,12 @@ class WistiaVideo extends React.Component {
   }
 
   componentWillMount() {
-    const script1 = document.createElement('script');
-    const script2 = document.createElement('script');
+    if (typeof (window) === 'undefined') {
+      return
+    }
+
+    const script1 = window.document.createElement('script');
+    const script2 = window.document.createElement('script');
 
     script1.src = `https://fast.wistia.com/embed/medias/${this.props.videoId}.jsonp`;
     script1.async = true;
@@ -16,8 +20,8 @@ class WistiaVideo extends React.Component {
     script2.src = 'https://fast.wistia.com/assets/external/E-v1.js';
     script2.async = true;
 
-    document.body.appendChild(script1);
-    document.body.appendChild(script2);
+    window.document.body.appendChild(script1);
+    window.document.body.appendChild(script2);
   }
 
   render() {
