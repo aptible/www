@@ -4,6 +4,6 @@ import CustomerCarousel from '../customers/CustomerCarousel';
 
 export default () => (
   <div className={styles.customers}>
-    <CustomerCarousel />
+    <CustomerCarousel linkToCustomers="true" />
   </div>
 );

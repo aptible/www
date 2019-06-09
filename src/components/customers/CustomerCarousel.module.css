@@ -5,10 +5,24 @@
   z-index: 1;
 }
 
-.tmpImage {
-  grid-row: 1;
+.photo {
+  position: relative;
   width: 100%;
   height: 615px;
+}
+
+.photo > img {
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.logo img {
+  height: 25px;
 }
 
 .ruby {
@@ -40,13 +54,64 @@
   z-index: 2;
 }
 
-h1.quoteStart {
+.content h1 {
+  opacity: 0;
+}
+
+.animationStopped h1 {
+  opacity: 1;
+  animation-play-state: paused !important;
+}
+
+.content h1.quoteStart {
   margin-left: -24px;
 }
 
-h1 img {
+.content h1 img {
   display: inline-block;
   margin-bottom: -10px;
+}
+
+@keyframes headlineFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.animateIn h1 {
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation: headlineFadeIn 9s;
+}
+
+.animateIn h1:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.animateIn h1:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.animateIn h1:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+.animateIn h1:nth-child(5) {
+  animation-delay: 1s;
 }
 
 .content h5 {
@@ -66,7 +131,7 @@ h1 img {
     margin-right: 10px;
   }
 
-  .tmpImage {
+  .photo {
     height: 340px;
   }
 
@@ -75,18 +140,22 @@ h1 img {
     grid-column: 7;
   }
 
+  .logo img {
+    height: 20px;
+  }
+
   .content {
     grid-row: 2;
     grid-column: 1 / span 7;
     padding-top: 30px;
   }
 
-  h1.quoteStart {
+  .content h1.quoteStart {
     display: inline-block;
     margin-left: -7px;
   }
 
-  h1 img {
+  .content h1 img {
     width: 100px;
     margin-bottom: -4px;
     margin-left: 4px;
