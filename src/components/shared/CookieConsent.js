@@ -30,6 +30,10 @@ class InnerCookieConsent extends React.Component {
       return;
     }
 
+    if (process.env.NODE_ENV === 'development') {
+      return;
+    }
+
     this.setState({ show: true });
   }
 
