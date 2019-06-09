@@ -26,7 +26,7 @@ You may use Enclave resources included in your base fee across any Enclave stack
 Base fees are always paid in advance.
 
 #### Usage Fees
-At the end of each billing period, if you used more resources (container RAM, training seats, etc.) than were included in your account plan, simply pay for what you used. Spot prices are located at https://www.aptible.com/pricing.
+At the end of each billing period, if you used more resources (container RAM, training seats, etc.) than were included in your account plan, simply pay for what you used. Spot prices are located at https://www.aptible.com/pricing-plans/.
 
 #### Invoice Frequency
 We invoice once per month, unless we determine your invoice is at risk of non-payment, in which case we may invoice more frequently or require that you pay in advance.

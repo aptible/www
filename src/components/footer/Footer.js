@@ -17,7 +17,7 @@ export default () => (
         <Link to="/deploy/">
           <h3>Deploy</h3>
         </Link>
-        <Link to="/pricing/">
+        <Link to="/pricing-plans/">
           <h3>Pricing</h3>
         </Link>
       </div>

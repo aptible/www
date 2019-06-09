@@ -74,7 +74,7 @@ class Products extends React.Component {
               <h3>Deploy</h3>
             </Link>
 
-            <Link to="/pricing/">
+            <Link to="/pricing-plans/">
               <h3>Pricing</h3>
             </Link>
           </div>
