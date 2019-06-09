@@ -81,8 +81,8 @@ export default () => (
           <div className={styles.benefitIcon}>{anywhereIcon}</div>
           <h6>Work from Anywhere</h6>
           <p>
-            Enjoy the flexibility of working from home, your favorite cafe or
-            the local co-working space of your choice.
+            Enjoy the flexibility of working from home, a local co-working space,
+            or your favorite coffee shop.
           </p>
         </div>
 
@@ -117,8 +117,8 @@ export default () => (
           <div className={styles.benefitIcon}>{techIcon}</div>
           <h6>Hardware & Software</h6>
           <p>
-            We help you create your ideal home-office setup and provide any
-            software you'll need. 
+            We help you create your ideal office setup and provide any software
+            you'll need. 
           </p>
         </div>
 
@@ -126,8 +126,8 @@ export default () => (
           <div className={styles.benefitIcon}>{travelIcon}</div>
           <h6>Company Travel</h6>
           <p>
-            We come together in-person one to three times per year, in locations
-            around the globe.
+            We come together in-person at least two to three times per year, in
+            locations around the globe.
           </p>
         </div>
       </div>

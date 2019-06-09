@@ -8,11 +8,18 @@ export default () => (
       <div className={styles.intro}>
         <h1>Our Vision</h1>
         <p className="XL">
-          We challenge ourselves to create a tribe of startups that have access
-          to great information security; are empowered to focus on their
-          business, not on compliance; are able to scale their businesses faster
-          and more efficiently and are confident that they are creating quality
-          products. 
+          We see a future where it's easy to bring a great idea into the world
+          using the internet, while respecting data security and privacy. The
+          next generation of businesses will design security and privacy into
+          their operating processes. If every business is going to be a
+          software business, every business will need to be a security business.
+        </p>
+        <p className="XL">
+          We're working to make information security a core competency of every
+          startup. We envision a world in which startups have access to great
+          information security, are empowered to focus on their business instead
+          of on compliance, can scale faster and more efficiently, and are
+          confident that they're creating quality products.
         </p>
       </div>
     </Grid>
@@ -33,7 +40,7 @@ export default () => (
         <p className="L">
           Startups spend a great deal of time and money trying to achieve and
           maintain compliance when they should be focusing on other parts of
-          their busienss. They need a solution that equips them with the tools
+          their business. They need a solution that equips them with the tools
           and knowledge so they can achieve and own their compliance without
           burning resources.
         </p>

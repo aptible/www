@@ -6,6 +6,7 @@ import Hero from '../components/company/Hero';
 import Nav from '../components/shared/Nav';
 import Vision from '../components/company/Vision';
 import Values from '../components/company/Values';
+import HowWePrioritize from '../components/company/HowWePrioritize';
 import Team from '../components/company/Team';
 import Join from '../components/company/Join';
 
@@ -26,6 +27,7 @@ export default ({ data }) => (
     <Nav items={stickyNavItems} />
     <Vision />
     <Values />
+    <HowWePrioritize />
     <Team members={data.employees.edges} />
     <Join />
   </AptibleLayout>

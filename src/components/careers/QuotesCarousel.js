@@ -21,12 +21,12 @@ const ALL_QUOTES = [
   {
     author: 'Elyssa May Cendana, Sales Team',
     authorSlug: 'elyssa-cendana',
-    quote: "Aptible is always looking for ways to improve, both externally and internally. I appreciate that we encourage both our customers and employees to share feedback — and that we actually take that feedback into account."
+    quote: "Aptible is always looking for ways to improve, both externally and internally. I appreciate that we encourage our customers and employees to share feedback — and that we actually take that feedback into account."
   },
   {
     author: 'David Wen, Engineering Team',
     authorSlug: 'david-wen',
-    quote: "I'm proud that our products enable other organizations to tackle problems they otherwise might not have the resources to tackle. This makes me feel like we have an outsized, positive effect on others."
+    quote: "I'm proud that our products enable other organizations to solve problems they otherwise might not have the resources to tackle. This makes me feel like we have an outsized, positive effect on others."
   },
   {
     author: 'Mia Lopez, Growth Team',
@@ -36,7 +36,7 @@ const ALL_QUOTES = [
   {
     author: 'Sarah Veirs, Customer Success Team',
     authorSlug: 'sarah-veirs',
-    quote: "I admire the commitment to the mission in my colleagues. Everyone is very much a team player and are dedicated to going above and beyond not just for our customers, but for each other. We love winning together and you can feel it."
+    quote: "I admire the commitment to the mission in my colleagues. Everyone is very much a team player and is dedicated to going above and beyond not just for our customers, but for each other. We love winning together and you can feel it."
   },
   {
     author: 'Zachary Starr-Glasser, People Operations Team',

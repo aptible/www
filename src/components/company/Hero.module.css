@@ -27,11 +27,14 @@
   z-index: 2;
 }
 
-.coreCompetency {
+.whoWeAre {
   grid-row: 2;
   grid-column: 2 / span 5;
-  text-align: center;
-  margin-top: 100px;
+  padding-top: 150px;
+}
+
+.whoWeAre h1 {
+  margin-bottom: 45px;
 }
 
 @media (--mobile) {
@@ -43,8 +46,7 @@
     margin: 100px 10px 10px 10px;
   }
 
-  .coreCompetency {
+  .whoWeAre {
     grid-column: 1 / span 7;
-    margin-top: 30px;
   }
 }

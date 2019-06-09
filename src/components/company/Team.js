@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './Team.module.css';
 import TeamMember from './TeamMember';
+import ArrowButton from '../buttons/ArrowButton';
 
 class Team extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class Team extends React.Component {
         <Grid>
           <div className={styles.sidebar}>
             <h5>Our Team</h5>
+            <ArrowButton to="/careers/" text="See Careers at Aptible" />
           </div>
           <div className={styles.list}>
 

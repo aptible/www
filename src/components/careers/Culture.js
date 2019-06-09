@@ -10,12 +10,9 @@ export default () => (
       <div className={styles.intro}>
         <p className="XL">
           We're a team of mission-driven experts and learners who are committed
-          to making security a strength for every small business. We envision a
-          world in which startups have access to great information security,
-          are <i>empowered</i> to focus on their businesses, and
-          are <i>confident</i> that they're building quality products. We've
-          already helped hundreds of innovative companies succeed at becoming
-          trustworthy custodians of sensitive data. And we're just getting started.
+          to making security a strength for every startup. We've already helped
+          hundreds of innovative companies succeed at becoming trustworthy
+          custodians of sensitive data. And we're just getting started.
         </p>
 
         <ArrowButton to="/company/" text="Learn More About Aptible" />

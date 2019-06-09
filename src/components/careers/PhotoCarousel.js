@@ -5,7 +5,7 @@ import team1 from '../../images/careers/team1.jpg';
 import team2 from '../../images/careers/team2.jpg';
 import team3 from '../../images/careers/team3.jpg';
 
-const IMAGES = [team2, team1, team3];
+const IMAGES = [team1, team2, team3];
 
 class PhotoCarousel extends React.Component {
   constructor(props) {

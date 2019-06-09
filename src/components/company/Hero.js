@@ -3,6 +3,7 @@ import { Grid } from '../grid/Grid';
 import ZoomChat from './ZoomChat';
 import styles from './Hero.module.css';
 import companyImage from '../../images/company/road.jpg';
+import WistiaVideo from '../shared/WistiaVideo';
 
 export default ({ webcamPhotos }) => (
   <div className={styles.container}>
@@ -22,11 +23,9 @@ export default ({ webcamPhotos }) => (
         <ZoomChat webcamPhotos={webcamPhotos} />
       </div>
 
-      <div className={styles.coreCompetency}>
-        <h3>
-          We do that by making information security a competency of every
-          technology startup.
-        </h3>
+      <div className={styles.whoWeAre}>
+        <h1>Who We Are</h1>
+        <WistiaVideo videoId="vjzole82z0" />
       </div>
     </Grid>
   </div>
