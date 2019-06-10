@@ -13,6 +13,8 @@ for (let protocol of COMPLIANCE_SITES) {
 
 const CASE_STUDIES = require('./src/data/case-studies.json');
 
+const PAID_LANDING_PAGES = require('./src/data/paid-landing-pages.json');
+
 
 const SM_GUIDE_CHAPTERS = [
   { id: 1, path: 'security-management', title: 'Introduction'},
@@ -211,6 +213,17 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve(`./src/templates/case-study.js`),
           context: {
             caseStudy: caseStudy
+          },
+        });
+      }
+
+      for (let landingPageSlug in PAID_LANDING_PAGES) {
+        createPage({
+          path: `get/${landingPageSlug}`,
+          component: path.resolve(`./src/templates/paid-landing-page.js`),
+          context: {
+            headline: PAID_LANDING_PAGES[landingPageSlug].headline,
+            paragraph: PAID_LANDING_PAGES[landingPageSlug].paragraph
           },
         });
       }

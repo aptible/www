@@ -5,19 +5,30 @@ import SignupButton from '../signup/SignupButton';
 import atriumPhoto from '../../images/customers/photos/atrium-justin-kan.jpg';
 import atriumLogo from '../../images/customers/logos/atrium.png';
 
-export default () => (
+export default ({ headlineOverride, paragraphOverride }) => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.content}>
         <h5>Aptible Comply</h5>
-        <h1>
-          Build your business.
-          <span>Not your compliance docs.</span>
-        </h1>
-        <p className="XL">
-          Comply organizes and automates security and privacy management into
-          clear, simple processes that give you and your customers confidence.
-        </p>
+        {!headlineOverride &&
+          <h1>
+            Build your business.
+            <span>Not your compliance docs.</span>
+          </h1>
+        }
+        {headlineOverride &&
+          <h1>{headlineOverride}</h1>
+        }
+
+        {!paragraphOverride &&
+          <p className="XL">
+            Comply organizes and automates security and privacy management into
+            clear, simple processes that give you and your customers confidence.
+          </p>
+        }
+        {paragraphOverride &&
+          <p className="XL">{paragraphOverride}</p>
+        }
 
         <SignupButton text="Schedule a Demo" product="comply" />
       </div>
