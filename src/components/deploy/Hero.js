@@ -3,6 +3,7 @@ import { Grid } from '../grid/Grid';
 import styles from './Hero.module.css';
 import SignupButton from '../signup/SignupButton';
 import Console from './Console';
+import quadpayIllustration from '../../images/deploy/quadpay.png';
 
 export default () => (
   <div className={styles.container}>
@@ -18,6 +19,10 @@ export default () => (
         </p>
 
         <SignupButton text="Start with Deploy" product="deploy" />
+      </div>
+
+      <div className={styles.illustration}>
+        <img src={quadpayIllustration} alt="quadpay" />
       </div>
 
       <div className={styles.consoleContainer}>
