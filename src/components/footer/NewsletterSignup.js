@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './NewsletterSignup.module.css';
 import Arrow from '../shared/Arrow';
+import { submitMarketoForm, NEWSLETTER_FORM } from '../../lib/marketo';
 
 class NewsletterSignup extends React.Component {
   constructor(props) {
@@ -23,19 +24,13 @@ class NewsletterSignup extends React.Component {
   }
 
   submit = () => {
-    window.MktoForms2.loadForm('//app-ab35.marketo.com', '620-GAP-535', 1073);
-    window.MktoForms2.whenReady((marketoForm) => {
-      marketoForm.addHiddenFields({
-        Email: this.state.email,
-        LeadSource: 'Website Signup'
-      });
+    const payload = {
+      Email: this.state.email,
+      LeadSource: 'Website Signup'
+    };
 
-      marketoForm.onSuccess(() => {
-        this.setState({ finished: true });
-        return false;
-      });
-
-      marketoForm.submit();
+    submitMarketoForm(NEWSLETTER_FORM, payload, () => {
+      this.setState({ finished: true });
     });
   }
 

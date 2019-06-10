@@ -7,6 +7,7 @@ import elyssaPhoto from '../../images/company/team/elyssa.jpg';
 import mikePhoto from '../../images/company/team/mike.jpg';
 import tasiaPhoto from '../../images/company/team/tasia.jpg';
 import Button from '../buttons/Button';
+import { submitMarketoForm, COMPLY_AFTER_SCHEDULED_FORM } from '../../lib/marketo';
 
 class Confirmation extends React.Component {
   constructor(props) {
@@ -28,25 +29,19 @@ class Confirmation extends React.Component {
   }
 
   submit = () => {
-    window.MktoForms2.loadForm('//app-ab35.marketo.com', '620-GAP-535', 1052);
-    window.MktoForms2.whenReady((marketoForm) => {
-      marketoForm.addHiddenFields({
-        FirstName: this.state.firstName,
-        LastName: this.state.lastName,
-        Email: this.props.signupState.email,
-        Phone: this.state.phone,
-        Company: this.state.company,
-        Main_Goal_with_Gridiron__c: this.state.mainGoal,
-        Compliance_Frameworks_of_Interest__c: this.state.protocols,
-        Origin_of_Gridiron_Interest__c: this.state.complyInterest
-      });
+    const payload = {
+      FirstName: this.state.firstName,
+      LastName: this.state.lastName,
+      Email: this.props.signupState.email,
+      Phone: this.state.phone,
+      Company: this.state.company,
+      Main_Goal_with_Gridiron__c: this.state.mainGoal,
+      Compliance_Frameworks_of_Interest__c: this.state.protocols,
+      Origin_of_Gridiron_Interest__c: this.state.complyInterest
+    };
 
-      marketoForm.onSuccess(() => {
-        this.setState({ finished: true });
-        return false;
-      });
-
-      marketoForm.submit();
+    submitMarketoForm(COMPLY_AFTER_SCHEDULED_FORM, payload, () => {
+      this.setState({ finished: true });
     });
   }
 

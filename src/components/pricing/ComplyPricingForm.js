@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './ComplyPricingForm.module.css';
 import TextInput from '../forms/TextInput';
 import Button from '../buttons/Button';
+import { submitMarketoForm, COMPLY_PRICING_FORM } from '../../lib/marketo';
 import done from '../../images/signup/done.svg';
 
 class ComplyPricingForm extends React.Component {
@@ -22,23 +23,17 @@ class ComplyPricingForm extends React.Component {
   }
 
   submit = () => {
-    window.MktoForms2.loadForm('//app-ab35.marketo.com', '620-GAP-535', 1043);
-    window.MktoForms2.whenReady((marketoForm) => {
-      marketoForm.addHiddenFields({
-        FirstName: this.state.firstName,
-        LastName: this.state.lastName,
-        Email: this.state.email,
-        Phone: this.state.phone,
-        Company: this.state.company,
-        LeadSource: 'Website Signup'
-      });
+    const payload = {
+      FirstName: this.state.firstName,
+      LastName: this.state.lastName,
+      Email: this.state.email,
+      Phone: this.state.phone,
+      Company: this.state.company,
+      LeadSource: 'Website Signup'
+    };
 
-      marketoForm.onSuccess(() => {
-        this.setState({ finished: true });
-        return false;
-      });
-
-      marketoForm.submit();
+    submitMarketoForm(COMPLY_PRICING_FORM, payload, () => {
+      this.setState({ finished: true });
     });
   }
 

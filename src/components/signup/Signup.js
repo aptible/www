@@ -7,6 +7,7 @@ import logoImage from '../../images/aptible.svg';
 import Email from './Email';
 import ProductSelection from './ProductSelection';
 import Confirmation from './Confirmation';
+import { submitMarketoForm, COMPLY_SIGNUP_FORM, DEPLOY_SIGNUP_FORM, GENERIC_SIGNUP_FORM } from '../../lib/marketo';
 
 function Signup(props) {
   return (
@@ -58,30 +59,22 @@ class InnerSignup extends React.Component {
 
   marketoFormId = () => {
     if (this.state.product === 'comply') {
-      return 1067;
+      return COMPLY_SIGNUP_FORM;
     } else if (this.state.product === 'deploy') {
-      return 1072;
+      return DEPLOY_SIGNUP_FORM;
     } else {
-      return 1075;
+      return GENERIC_SIGNUP_FORM;
     }
   }
 
   sendToMarketo = (email, marketingConsent, callback) => {
-    window.MktoForms2.loadForm('//app-ab35.marketo.com', '620-GAP-535', this.marketoFormId());
-    window.MktoForms2.whenReady((marketoForm) => {
-      marketoForm.addHiddenFields({
-        Email: email,
-        Contact_Consent__c: marketingConsent,
-        LeadSource: 'Website Signup'
-      });
+    const payload = {
+      Email: email,
+      Contact_Consent__c: marketingConsent,
+      LeadSource: 'Website Signup'
+    };
 
-      marketoForm.onSuccess(() => {
-        callback();
-        return false;
-      });
-
-      marketoForm.submit();
-    });
+    submitMarketoForm(this.marketoFormId(), payload, callback);
   }
 
   openChiliPiper = () => {
