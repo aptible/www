@@ -78,7 +78,14 @@
 }
 
 .featureBullet {
-  margin-bottom: 30px;
+  position: relative;
+  margin: 0 0 30px 45px;
+}
+
+.featureIcon {
+  position: absolute;
+  top: 0;
+  left: -45px;
 }
 
 .images {
@@ -137,6 +144,17 @@
     margin-left: 0;
     margin-top: 15px;
     padding: 30px;
+  }
+
+  .featureBullet {
+    position: relative;
+    margin: 0 0 30px 0;
+  }
+
+  .featureIcon {
+    position: relative;
+    left: 0;
+    margin-bottom: 5px;
   }
 
   .images {
