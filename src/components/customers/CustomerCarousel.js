@@ -7,6 +7,7 @@ import arrowImage from '../../images/arrows/green.svg';
 
 import fortmaticPhoto from '../../images/customers/carousel/fortmatic.jpg';
 import atriumPhoto from '../../images/customers/carousel/atrium.jpg';
+import quadpayPhoto from '../../images/customers/carousel/quadpay.jpg';
 
 import atriumLogo from '../../images/customers/logos/atrium.png';
 import fortmaticLogo from '../../images/customers/logos/fortmatic.svg';
@@ -54,7 +55,7 @@ const customers = [
       </React.Fragment>
     ),
     description: 'Quadpay uses Aptible to build out best practice policies and procedures and to streamline answering VSAs.',
-    photo: atriumPhoto,
+    photo: quadpayPhoto,
     logo: quadpayLogo
   }
 ];
