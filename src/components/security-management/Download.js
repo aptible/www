@@ -35,7 +35,7 @@ class InnerDownload extends React.Component {
   submit = () => {
     const payload = {
       Email: this.state.email,
-      LeadSource: 'Website Signup'
+      LeadSource: 'Content Signup'
     };
 
     submitMarketoForm(SECURITY_MANAGEMENT_GUIDE_FORM, payload, () => {

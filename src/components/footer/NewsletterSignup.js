@@ -26,7 +26,7 @@ class NewsletterSignup extends React.Component {
   submit = () => {
     const payload = {
       Email: this.state.email,
-      LeadSource: 'Website Signup'
+      LeadSource: 'Content Signup'
     };
 
     submitMarketoForm(NEWSLETTER_FORM, payload, () => {

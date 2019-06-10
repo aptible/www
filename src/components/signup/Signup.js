@@ -22,7 +22,7 @@ class InnerSignup extends React.Component {
     super(props);
     this.state = {
       email: null,
-      marketingConsent: null,
+      marketingConsent: 'no',
       product: this.props.product ? this.props.product : null,
       scheduledCall: null,
       currentView: Email

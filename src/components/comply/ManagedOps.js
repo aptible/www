@@ -66,6 +66,7 @@ export default () => (
         <div className={styles.bullet}>
           <div className={styles.bulletIcon}>{supportIcon}</div>
           <h5>Operational Support</h5>
+          <span className={styles.pill}>Included</span>
           <p>
             We walk you through the process of assigning responsibilities, setting
             timelines, and determining activities that meet your compliance goals.
@@ -77,6 +78,7 @@ export default () => (
         <div className={styles.bullet}>
           <div className={styles.bulletIcon}>{opsIcon}</div>
           <h5>Hassle-free Operations</h5>
+          <span className={styles.pill}>Available Add-On</span>
           <p>
             Security and Compliance operations are completely taken care of by
             us. We put them in place and carry them out so that you have
@@ -89,6 +91,7 @@ export default () => (
         <div className={styles.bullet}>
           <div className={styles.bulletIcon}>{handsIcon}</div>
           <h5>Hands-off Audits</h5>
+          <span className={styles.pill}>Available Add-On</span>
           <p>
             We walk you through the process of assigning responsibilities,
             setting timelines, and determining activities that meet your

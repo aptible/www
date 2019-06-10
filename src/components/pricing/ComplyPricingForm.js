@@ -29,7 +29,7 @@ class ComplyPricingForm extends React.Component {
       Email: this.state.email,
       Phone: this.state.phone,
       Company: this.state.company,
-      LeadSource: 'Website Signup'
+      LeadSource: 'Comply Pricing'
     };
 
     submitMarketoForm(COMPLY_PRICING_FORM, payload, () => {
