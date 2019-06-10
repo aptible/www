@@ -1,5 +1,5 @@
 .container {
-  padding: 100px 0 50px 0;
+  padding: 100px 0 150px 0;
 }
 
 .sidebar {
@@ -11,6 +11,10 @@
 }
 
 @media (--mobile) {
+  .container {
+    padding-bottom: 30px;
+  }
+
   .sidebar {
     grid-row: 1;
     grid-column: 1 / span 7;

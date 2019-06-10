@@ -63,3 +63,29 @@
 .submit div {
   width: 592px;
 }
+
+@media (--mobile) {
+  .meetingDetails {
+    grid-column: 1 / span 7;
+    padding: 0 20px 40px 20px;
+    margin: 30px 0;
+  }
+
+  .photoContainer {
+    margin-top: -20px;
+  }
+
+  .photo {
+    width: 60px;
+    height: 60px;
+    margin: 0 4px;
+  }
+
+  .submit {
+    grid-column: 1 / span 7;
+  }
+
+  .submit div {
+    width: auto;
+  }
+}
