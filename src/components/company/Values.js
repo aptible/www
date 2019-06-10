@@ -54,7 +54,7 @@ const items = [
       the best way to learn, and make time to share information openly. We set
       explicit goals around training, and devote resources to developing and
       improving our internal training. We praise those who share knowledge in
-      public, by asking and answering questions in team chat, writing
+      public by asking and answering questions in team chat, writing
       documentation, and writing for our customers.
     </p>
   },
@@ -72,7 +72,7 @@ const items = [
     content: <p className="L">
       We ask “why?” a lot in order to understand root causes. Asking why helps
       us cultivate focus and make high-quality decisions quickly. We don't
-      attributes mistakes to human error. We view them as a starting point for
+      attribute mistakes to human error. We view them as a starting point for
       an inquiry, not the end.
     </p>
   },

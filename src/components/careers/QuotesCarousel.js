@@ -16,7 +16,7 @@ const ALL_QUOTES = [
   {
     author: 'Christian Pearson, Data Protection Advisory Team',
     authorSlug: 'christian-pearson',
-    quote: "I admire my colleagues commitment to each other. Everyone makes a sincere effort to help and support their coworkers."
+    quote: "I admire my colleagues' commitment to each other. Everyone makes a sincere effort to help and support their co-workers."
   },
   {
     author: 'Elyssa May Cendana, Sales Team',
