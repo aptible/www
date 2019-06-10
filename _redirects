@@ -1,5 +1,4 @@
-/documentation https://documentation-staging.s3.amazonaws.com/documentation/index.html 200!
-/documentation/* https://documentation-staging.s3.amazonaws.com/documentation/:splat 200!
+/documentation /documentation/index.html
 /about/ /company/
 /assets/aptible-reference-architecture.pdf /deploy/features/
 /benfits/ /enclave/

@@ -1,2 +1,1 @@
-/documentation https://documentation-production.s3.amazonaws.com/documentation/index.html 200!
 /documentation/* https://documentation-production.s3.amazonaws.com/documentation/:splat 200!
