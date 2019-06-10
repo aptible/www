@@ -17,7 +17,7 @@ export default ({ post }) => (
         <h5><Link to="/changelog/">Changelog</Link></h5>
 
         <div className={styles.metaContainer}>
-          <Meta post={post} />
+          <Meta post={post} disableAuthorLink="true" />
         </div>
 
         <h1>{post.title}</h1>
