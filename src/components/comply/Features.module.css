@@ -12,6 +12,10 @@
   margin-bottom: 30px;
 }
 
+.continuousHeadline {
+  font-size: 52px;
+}
+
 .intro h1 {
   margin: 30px 0;
 }
@@ -110,4 +114,65 @@
   z-index: 2;
   width: 320px;
   float: right;
+}
+
+@media (--mobile) {
+  .content {
+    grid-column: 1 / span 7;
+    margin-bottom: 0;
+  }
+
+  .intro {
+    margin-bottom: 30px;
+  }
+
+  .bullets {
+    grid-row: 1;
+    grid-column: 1 / span 7;
+    margin-right: 0;
+  }
+
+  .bulletIcon {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .guaranteeContainer {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+  }
+
+  .guarantee {
+    padding: 40px 20px 20px 20px;
+  }
+
+  .thumbsUp,
+  .toSeamless,
+  .beyondLeft,
+  .beyondRight {
+    display: none;
+  }
+
+  .screenshots {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+    margin-top: 0;
+  }
+
+  .chat {
+    float: none;
+    margin-bottom: 60px;
+  }
+
+  .screenshot {
+    margin-left: 0;
+  }
+
+  .continuousHeadline {
+    font-size: 30px;
+  }
 }

@@ -47,7 +47,7 @@ export default () => (
       <Grid>
         <div className={styles.content}>
           <h5>&hellip;to seamless, scalable security operations</h5>
-          <h1 style={{ fontSize: '52px' }}>
+          <h1 className={styles.continuousHeadline}>
             Continuously improve your company's security
           </h1>
           <p className="L">
@@ -66,28 +66,27 @@ export default () => (
     <Grid>
       <div className={styles.bullets}>
         <div className={styles.bullet}>
+          <div className={styles.bulletIcon}>{automationIcon}</div>
           <h5>Automation</h5>
           <p>
             Spend less time managing systems, spreadsheets, and follow-up. We
             provide comprehensive software that maps, automates, and reminds, so
             that your team and your Security Management are more efficient.
           </p>
-
-          <div className={styles.bulletIcon}>{automationIcon}</div>
         </div>
 
         <div className={styles.bullet}>
+          <div className={styles.bulletIcon}>{collabIcon}</div>
           <h5>Collaboration and Delegation</h5>
           <p>
             Turn compliance requirements into discrete tasks with owners and
             deadlines. Requirements are mapped to events with easy to understand
             timelines and triggers.
           </p>
-
-          <div className={styles.bulletIcon}>{collabIcon}</div>
         </div>
 
         <div className={styles.bullet}>
+          <div className={styles.bulletIcon}>{systemIcon}</div>
           <h5>System of Record</h5>
           <p>
             Aptible Comply is the single source of truth for what is supposed to
@@ -95,8 +94,6 @@ export default () => (
             can easily export documentaton to prove your security position and
             build trust with customers and regulators.
           </p>
-
-          <div className={styles.bulletIcon}>{systemIcon}</div>
         </div>
       </div>
 

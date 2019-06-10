@@ -59,12 +59,21 @@
 @media (--mobile) {
   .container {
     background: none;
+    padding-bottom: 0px;
   }
 
   .content {
     grid-row: 1;
     grid-column: 1 / span 7;
     padding-bottom: 30px;
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+
+  .content h1 span {
+    font-size: 24px;
   }
 
   .content h5 {
@@ -79,5 +88,6 @@
     grid-row: 2;
     grid-column: 1 / span 7;
     padding: 15px 0;
+    margin-top: 0;
   }
 }

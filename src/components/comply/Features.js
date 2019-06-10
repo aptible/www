@@ -43,8 +43,8 @@ export default () => (
         <div className={styles.content}>
           <h5>Comply takes you from zero to audit-ready&hellip;</h5>
           <h1>
-            Build your Security<br className="desktopOnly" />
-            Management<br className="desktopOnly" />
+            Build your Security <br className="desktopOnly" />
+            Management <br className="desktopOnly" />
             Program
           </h1>
           <p className="L">
@@ -63,35 +63,32 @@ export default () => (
     <Grid>
       <div className={styles.bullets}>
         <div className={styles.bullet}>
+          <div className={styles.bulletIcon}>{clearPathIcon}</div>
           <h5>A Clear Path to Compliance</h5>
           <p>
             Aptible Comply makes it easy to understand exactly what you need to
             do, step-by-step, to become and stay compliant.
           </p>
-
-          <div className={styles.bulletIcon}>{clearPathIcon}</div>
         </div>
 
         <div className={styles.bullet}>
+          <div className={styles.bulletIcon}>{headStartIcon}</div>
           <h5>A Head Start</h5>
           <p>
             Comply comes with a huge library of content to bootstrap your
             security program quickly. Implement best practices for DevOps,
             IaaS and SaaS management, HR, IT, and get audit-ready quickly.
           </p>
-
-          <div className={styles.bulletIcon}>{headStartIcon}</div>
         </div>
 
         <div className={styles.bullet}>
+          <div className={styles.bulletIcon}>{securityIcon}</div>
           <h5>Security and Compliance Expertise</h5>
           <p>
             Augment your team with Aptible's Data Protection Advisory experts.
             We're here via live chat and video to answer all of your security
             and compliance questions.
           </p>
-
-          <div className={styles.bulletIcon}>{securityIcon}</div>
         </div>
       </div>
 
