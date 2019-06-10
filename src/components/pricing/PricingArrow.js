@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './PricingArrow.module.css';
 
-export default ({ hover }) => (
+export default ({ hover, text }) => (
   <div className={`${styles.circle} ${hover ? styles.hover : ''}`}>
     <div className={styles.arrowContainer}>
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -9,7 +9,7 @@ export default ({ hover }) => (
       </svg>
 
       <div className={styles.getStarted}>
-        Get Started
+        {text}
       </div>
     </div>
   </div>

@@ -53,7 +53,7 @@
 
 .button {
   float: right;
-  width: 160px;
+  width: 140px;
   margin-top: 60px;
   text-align: right;
 }
@@ -207,5 +207,11 @@
   .deployAccountContainer {
     grid-template-columns: 1fr;
     width: 100%;
+  }
+
+  .seeDetails {
+    position: relative;
+    bottom: 0;
+    left: 0;
   }
 }

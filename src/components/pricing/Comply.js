@@ -38,10 +38,10 @@ class Comply extends React.Component {
         {!this.props.expanded && 
           <React.Fragment>
             <div className={styles.button}>
-              <PricingArrow hover={this.state.hover} />
+              <PricingArrow text="Request Pricing" hover={this.state.hover} />
             </div>
 
-            <PricingBlock title="Packages start at" amount="$13.5k" timePeriod="Per Year" />
+            <PricingBlock title="Pricing" smallAmount="Contact us" />
 
             <div className={styles.seeDetails}>
               <img src={detailsIcons} className={styles.seeDetailsIcon} alt="Pricing details" />

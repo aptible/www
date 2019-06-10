@@ -46,11 +46,11 @@ class Deploy extends React.Component {
         {!this.props.expanded &&
           <React.Fragment>
             <div className={styles.button}>
-              <PricingArrow hover={this.state.hover} />
+              <PricingArrow text={<React.Fragment>Get<br />Started</React.Fragment>} hover={this.state.hover} />
             </div>
 
-            <PricingBlock title="Development stack start at" amount="$0" timePeriod="Per Month" />
-            <PricingBlock title="Production stack start at" amount="$999" timePeriod="Per Month" />
+            <PricingBlock title="Development stacks start at" amount="$0" timePeriod="Per Month" />
+            <PricingBlock title="Production stacks start at" amount="$999" timePeriod="Per Month" />
 
             <div className={styles.seeDetails}>
               <img src={detailsIcons} className={styles.seeDetailsIcon} alt="Pricing details" />
