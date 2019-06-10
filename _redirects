@@ -1,7 +1,5 @@
-/documentation/enclave.html /documentation/deploy.html
-/documentation/enclave/* /documentation/deploy/:splat
-/documentation/compliance-os.html /documentation/comply.html
-/documentation/compliance-os/* /documentation/comply/:splat
+/documentation https://documentation-staging.s3.amazonaws.com/documentation/index.html 200!
+/documentation/* https://documentation-staging.s3.amazonaws.com/documentation/:splat 200!
 /about/ /company/
 /assets/aptible-reference-architecture.pdf /deploy/features/
 /benfits/ /enclave/
