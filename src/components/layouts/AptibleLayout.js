@@ -10,9 +10,9 @@ export default ({ children }) => (
   <div>
     <HelloBar
       id="2019-relaunch"
-      to="/blog/"
+      to="/blog/introducing-new-brand-identity/"
       callout="Big News!"
-      text="We've launched our new brand and are excited to announce our series A! Read more." />
+      text="Things look a little different around here. Announcing the new Aptible brand identity. Get all the details." />
     <Header />
     <CookieConsent />
     {children}

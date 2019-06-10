@@ -9,14 +9,14 @@ const ALL_QUOTES = [
     quote: "I'm proud that we have a product that provides a clear value to our customers, and our customers are excited about it! And that we're continuing to grow that product in a rapid, but thoughtful way."
   },
   {
-    author: 'Christopher Gomes, Product Management Team',
-    authorSlug: 'chris-gomes',
-    quote: "I admire my colleagues' thoughtfulness, energy, and grit. Folks here are thoughtful in their approach to things, from 'How will what I say land on the other person?' to 'How will this architectural decision limit the flexibility of our product a year from now?'. And yet, we're still biased toward action: My teammates have an amazing energy around getting stuff done. Lastly, I admire my colleagues' grit: When we set our mind to something, nothing gets in our way."
-  },
-  {
     author: 'Christian Pearson, Data Protection Advisory Team',
     authorSlug: 'christian-pearson',
     quote: "I admire my colleagues' commitment to each other. Everyone makes a sincere effort to help and support their co-workers."
+  },
+  {
+    author: 'Christopher Gomes, Product Management Team',
+    authorSlug: 'chris-gomes',
+    quote: "I admire my colleagues' thoughtfulness, energy, and grit. Folks here are thoughtful in their approach to things, from 'How will what I say land on the other person?' to 'How will this architectural decision limit the flexibility of our product a year from now?'. And yet, we're still biased toward action: My teammates have an amazing energy around getting stuff done. Lastly, I admire my colleagues' grit: When we set our mind to something, nothing gets in our way."
   },
   {
     author: 'Elyssa May Cendana, Sales Team',
