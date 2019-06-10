@@ -64,7 +64,8 @@ class CustomerCarousel extends React.Component {
     super(props);
     this.state = {
       openIdx: 0,
-      timerRunning: true
+      timerRunning: true,
+      animateIn: true
     };
 
     this.animationInterval = null;
@@ -74,22 +75,16 @@ class CustomerCarousel extends React.Component {
 
   componentDidMount = () => {
     const stopAnimation = () => {
-      this.contentRef.current.classList.remove(styles.animateIn);
-    };
-    
-    const animate = () => {
-      this.contentRef.current.classList.add(styles.animateIn);
-      this.stopAnimationTimeout = setTimeout(stopAnimation, 9700);
+      this.stopAnimationTimeout = setTimeout(() => {
+        this.setState({ animateIn: false });
+      }, 9000)
     };
 
-    this.stopAnimationTimeout = setTimeout(stopAnimation, 9700)
+    stopAnimation();
 
     this.animationInterval = setInterval(() => {
-      if (this.state.openIdx === (customers.length - 1)) {
-        this.setState({ openIdx: 0 }, animate);
-      } else {
-        this.setState({ openIdx: this.state.openIdx + 1 }, animate);
-      }
+      const nextIdx = this.state.openIdx === (customers.length - 1) ? 0 : this.state.openIdx + 1;
+      this.setState({ openIdx: nextIdx, animateIn: true }, stopAnimation);
     }, 10000);
   }
 
@@ -110,7 +105,7 @@ class CustomerCarousel extends React.Component {
   render() {
     return (
       <Grid>
-        <div className={`${styles.content} ${styles.animateIn} ${this.state.timerRunning ? '' : styles.animationStopped}`} ref={this.contentRef}>
+        <div className={`${styles.content} ${this.state.animateIn ? styles.animateIn : ''} ${this.state.timerRunning ? '' : styles.animationStopped}`} ref={this.contentRef}>
           <h5>Our Customers</h5>
 
           {customers[this.state.openIdx].headline}
