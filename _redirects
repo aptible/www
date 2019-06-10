@@ -1,5 +1,3 @@
-/documentation https://documentation-staging.s3.amazonaws.com/documentation/index.html 200!
-/documentation/* https://documentation-staging.s3.amazonaws.com/documentation/:splat 200!
 /documentation/enclave.html /documentation/deploy.html
 /documentation/enclave/* /documentation/deploy/:splat
 /documentation/compliance-os.html /documentation/comply.html
