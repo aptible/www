@@ -4,6 +4,7 @@ import Footer from '../footer/Footer';
 import GridLinesBackground from '../grid/GridLinesBackground';
 import HelloBar from '../shared/HelloBar';
 import CookieConsent from '../shared/CookieConsent';
+import Analytics from '../shared/Analytics';
 
 export default ({ children }) => (
   <div>
@@ -17,5 +18,6 @@ export default ({ children }) => (
     {children}
     <Footer />
     <GridLinesBackground />
+    <Analytics />
   </div>
 );

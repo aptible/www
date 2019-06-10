@@ -1,4 +1,4 @@
-export const utmVars = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+export const utmVars = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'gclid'];
 
 export const events = {
   EMAIL_COLLECTED: 'Email Collected',
