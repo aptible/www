@@ -32,8 +32,39 @@
   margin-top: -60px;
 }
 
+.imageContainer {
+  position: relative;
+  min-height: 270px;
+}
+
+.videoLength {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  padding: 10px 12px;
+  background-color: var(--aptible-black-twenty);
+  z-index: 1;
+  border-radius: 31px;
+  color: white;
+}
+
+.videoLength p {
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.videoPlayIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+  margin-right: 8px;
+}
+
 .cardImage {
   width: 100%;
+  cursor: pointer;
 }
 
 .cardContent {
@@ -89,5 +120,9 @@
     grid-column: 1 / span 7;
     padding: 15px 0;
     margin-top: 0;
+  }
+
+  .imageContainer {
+    min-height: 170px;
   }
 }
