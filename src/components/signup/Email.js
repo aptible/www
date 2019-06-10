@@ -7,8 +7,8 @@ class Email extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: null,
-      validEmail: null,
+      email: '',
+      invalidEmail: false,
       marketingConsent: 'no'
     };
   }
@@ -22,7 +22,11 @@ class Email extends React.Component {
   }
 
   buttonClick = () => {
-    this.props.setEmail(this.state.email, this.state.marketingConsent);
+    if (this.state.email.length > 0 && this.state.email.indexOf('@') !== -1) {
+      this.props.setEmail(this.state.email, this.state.marketingConsent);
+    } else {
+      this.setState({ invalidEmail: true });
+    }
   }
 
   render() {
@@ -38,7 +42,12 @@ class Email extends React.Component {
           </div>
 
           <div className={styles.input}>
-            <input type="email" placeholder="you@yourwork.com" spellCheck="false" onChange={this.emailChange} />
+            <input
+              type="email"
+              placeholder="you@yourwork.com"
+              spellCheck="false"
+              onChange={this.emailChange}
+              className={this.state.invalidEmail ? styles.invalidEmail : ''}/>
           </div>
 
           <div className={styles.button}>

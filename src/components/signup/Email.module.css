@@ -21,7 +21,7 @@
 
 .input input {
   width: 100%;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--white-fifty);
   background-color: transparent;
   mix-blend-mode: normal;
   box-shadow: none;
@@ -42,6 +42,10 @@
 
 .input input:focus::-webkit-input-placeholder {
   color: transparent
+}
+
+input.invalidEmail {
+  border-bottom-color: var(--aptible-red);
 }
 
 .button {

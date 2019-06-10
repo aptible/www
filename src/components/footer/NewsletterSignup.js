@@ -24,6 +24,10 @@ class NewsletterSignup extends React.Component {
   }
 
   submit = () => {
+    if (this.state.email.length < 1 || this.state.email.indexOf('@') === -1) {
+      return;
+    }
+
     const payload = {
       Email: this.state.email,
       LeadSource: 'Content Signup'
