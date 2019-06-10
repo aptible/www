@@ -4,6 +4,7 @@ export const COMPLY_PRICING_FORM = 1043;
 export const DEPLOY_SIGNUP_FORM = 1072;
 export const GENERIC_SIGNUP_FORM = 1075;
 export const NEWSLETTER_FORM = 1073;
+export const SECURITY_MANAGEMENT_GUIDE_FORM = 1074;
 
 export function submitMarketoForm(formId, payload, callback) {
   if (typeof(window) === 'undefined' || !window.MktoForms2) {
