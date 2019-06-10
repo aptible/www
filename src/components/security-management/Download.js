@@ -39,7 +39,7 @@ class InnerDownload extends React.Component {
     };
 
     submitMarketoForm(SECURITY_MANAGEMENT_GUIDE_FORM, payload, () => {
-      window.location = '/security-management-guide.pdf';
+      window.location = '/assets/security-management-guide.pdf';
     });
   }
 

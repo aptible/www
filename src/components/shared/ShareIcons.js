@@ -28,7 +28,23 @@ const linkIcon = (
 class ShareIcons extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      facebookUrl: '',
+      twitterUrl: '',
+      linkedInUrl: ''
+    };
+  }
+
+  componentDidMount = () => {
+    if (typeof (window) === 'undefined') {
+      return '';
+    }
+
+    this.setState({
+      facebookUrl: this.facebookLink(),
+      twitterUrl: this.twitterLink(),
+      linkedInUrl: this.linkedinLink()
+    });
   }
 
   shareUrl = () => {
@@ -67,19 +83,19 @@ class ShareIcons extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.icon}>
-          <a href={this.facebookLink()} target="_blank" rel="noopener noreferrer">
+          <a href={this.state.facebookUrl} target="_blank" rel="noopener noreferrer">
             {facebookIcon}
           </a>
         </div>
 
         <div className={styles.icon}>
-          <a href={this.twitterLink()} target="_blank" rel="noopener noreferrer">
+          <a href={this.state.twitterUrl} target="_blank" rel="noopener noreferrer">
             {twitterIcon}
           </a>
         </div>
 
         <div className={styles.icon}>
-          <a href={this.linkedinLink()} target="_blank" rel="noopener noreferrer">
+          <a href={this.state.linkedInUrl} target="_blank" rel="noopener noreferrer">
             {linkedinIcon}
           </a>
         </div>
