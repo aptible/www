@@ -48,6 +48,17 @@ input.invalidEmail {
   border-bottom-color: var(--aptible-red);
 }
 
+label {
+  display: block;
+  margin-bottom: 5px;
+  border-bottom: none;
+}
+
+label input {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 .button {
   grid-row: 2;
   grid-column: 7;

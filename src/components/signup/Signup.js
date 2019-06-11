@@ -22,7 +22,7 @@ class InnerSignup extends React.Component {
     super(props);
     this.state = {
       email: null,
-      marketingConsent: 'no',
+      marketingConsent: null,
       product: this.props.product ? this.props.product : null,
       scheduledCall: null,
       currentView: Email
@@ -46,7 +46,11 @@ class InnerSignup extends React.Component {
 
   setProduct = (productName) => {
     this.setState({ product: productName });
-    this.openChiliPiper();
+    if (productName === 'deploy') {
+      this.redirectToDeploy(this.state.email);
+    } else {
+      this.openChiliPiper();
+    }
   }
 
   setCall = (scheduledCall) => {

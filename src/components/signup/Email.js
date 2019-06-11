@@ -9,7 +9,7 @@ class Email extends React.Component {
     this.state = {
       email: '',
       invalidEmail: false,
-      marketingConsent: 'no'
+      marketingConsent: null
     };
   }
 
@@ -18,7 +18,7 @@ class Email extends React.Component {
   }
 
   consentChange = (e) => {
-    this.setState({ marketingConsent: e.target.checked ? 'yes' : 'no' });
+    this.setState({ marketingConsent: e.target.value });
   }
 
   buttonClick = () => {
@@ -55,10 +55,15 @@ class Email extends React.Component {
           </div>
 
           <div className={styles.marketingConsent}>
-            <input type="checkbox" name="marketingConsent" id="marketingConsent" value="yes" onChange={this.consentChange} />
-            <label htmlFor="marketingConsent">
+            <label>
+              <input type="radio" name="marketing_consent" value="yes" checked={this.state.marketingConsent === 'yes'} onChange={this.consentChange} />
               I consent to receiving Aptible marketing emails. View our
               <a href="/legal/privacy/" target="_blank">Privacy Policy</a>
+            </label>
+
+            <label>
+              <input type="radio" name="marketing_consent" value="no" checked={this.state.marketingConsent === 'no'} onChange={this.consentChange} />
+              No, I don't want to receive marketing emails.
             </label>
           </div>
         </Grid>
