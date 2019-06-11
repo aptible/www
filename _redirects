@@ -741,3 +741,5 @@
 /enclave/hipaa-compliant-hosting/ /deploy/
 /enclave/managed-host-intrusion-detection-system/ /deploy/
 /gridiron/ /comply/
+/aws-vs-aptible/ /deploy/
+/resources/enclave-security-division-of-responsibilities/ /deploy/features/
