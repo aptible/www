@@ -6,8 +6,8 @@ export default () => (
   <div className={styles.container}>
     <div className={styles.documentation}>
       <Link to="/documentation/">Documentation</Link>
-      <Link to="/documentation/compliance-os.html" className={styles.subLink}>Comply</Link>
-      <Link to="/documentation/enclave.html" className={styles.subLink}>Deploy</Link>
+      <Link to="/documentation/comply.html" className={styles.subLink}>Comply</Link>
+      <Link to="/documentation/deploy.html" className={styles.subLink}>Deploy</Link>
       <Link to="/support/toolbelt/" className={styles.subLink}>CLI</Link>
     </div>
     <div className={styles.blog}>
