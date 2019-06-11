@@ -26,8 +26,7 @@ const customers = [
     ),
     description: 'Fortmatic uses Aptible Comply to build their Security Management Program and secured their SOC 2 audit in a fraction of the time.',
     photo: fortmaticPhoto,
-    logo: fortmaticLogo,
-    caseStudy: '/customers/fortmatic/'
+    logo: fortmaticLogo
   },
   {
     image: null,
