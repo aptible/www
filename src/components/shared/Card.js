@@ -8,6 +8,7 @@ import customerCards from '../../data/customer-cards.json';
 
 import atriumPhoto from '../../images/customers/photos/atrium-justin-kan.jpg';
 import formaticPhoto from '../../images/customers/photos/fortmatic-arthur-jen.jpg';
+import quadpayPhoto from '../../images/customers/photos/quadpay-ian-yamey.jpg';
 
 import ableHealthLogo from '../../images/customers/logos/able-health.png';
 import atriumLogo from '../../images/customers/logos/atrium.png';
@@ -21,7 +22,8 @@ import virtaLogo from '../../images/customers/logos/virta.svg';
 
 const photos = {
   atrium: atriumPhoto,
-  fortmatic: formaticPhoto
+  fortmatic: formaticPhoto,
+  quadpay: quadpayPhoto
 };
 
 const logos = {

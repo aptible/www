@@ -57,5 +57,14 @@
     "link": "/customers/atrium/",
     "videoId": "8p6ej6qqrg",
     "videoLength": "1:47"
+  },
+  "quadpay": {
+    "headline": "&ldquo;What I really wanted at Quadpay, where security is of tantamount importance, was to have something that was comprehensive, followed best practices, and could actually be implemented across an organization at scale.&rdquo;",
+    "author": "Ian Yamey, CTO",
+    "tags": [
+      "technology"
+    ],
+    "videoId": "kf1hbw3as5",
+    "videoLength": "2:07"
   }
 }

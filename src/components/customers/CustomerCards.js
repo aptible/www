@@ -23,6 +23,7 @@ class CustomerCards extends React.Component {
 
           <div className={styles.right}>
             <Card customer="fortmatic" />
+            <Card customer="quadpay" />
             <Card customer="mdsave" />
             <Card customer="virta" />
             <Card customer="healthify" />

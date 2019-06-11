@@ -42,11 +42,12 @@ export default () => (
       <div className={styles.customersLeft}>
         <Card customer="fortmatic" />
         <Card customer="ableHealth" />
+        <Card customer="snaps" />
       </div>
 
       <div className={styles.customersRight}>
         <Card customer="atrium" />
-        <Card customer="snaps" />
+        <Card customer="quadpay" />
         <Card customer="pathAI" />
       </div>
     </Grid>
