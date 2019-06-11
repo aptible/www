@@ -5,7 +5,7 @@ import styles from './ResourcesLinks.module.css';
 export default () => (
   <div className={styles.container}>
     <div className={styles.documentation}>
-      <Link to="/documentation/">Documentation</Link>
+      <Link to="/documentation/index.html">Documentation</Link>
       <Link to="/documentation/comply.html" className={styles.subLink}>Comply</Link>
       <Link to="/documentation/deploy.html" className={styles.subLink}>Deploy</Link>
       <Link to="/support/toolbelt/" className={styles.subLink}>CLI</Link>

@@ -21,7 +21,7 @@ export default () => (
         <p style={{ marginBottom: '30px' }}><Link to="/">Back to Home</Link></p>
 
         <p>
-          <a href="/documentation/">Documentation</a> &nbsp; 
+          <a href="/documentation/index.html">Documentation</a> &nbsp; 
           <a href="https://dashboard.aptible.com">Aptible Dashboard</a> &nbsp; 
           <a href="http://status.aptible.com/">Aptible Status</a> &nbsp; 
           <a href="https://twitter.com/aptiblestatus">@aptiblestatus</a> &nbsp; 
