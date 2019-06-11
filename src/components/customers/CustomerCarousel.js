@@ -20,7 +20,7 @@ const customers = [
       <React.Fragment>
         <h1 className={styles.quoteStart}>&ldquo;We want our end users</h1>
         <h1>to know we take security very seriously.</h1>
-        <h1>with Aptible <img src={arrowImage} alt="Aptible arrow" /></h1>
+        <h1>With Aptible <img src={arrowImage} alt="Aptible arrow" /></h1>
         <h1>we were able to secure our SOC 2 audit very quickly.&rdquo;</h1>
       </React.Fragment>
     ),
