@@ -1,12 +1,41 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const GTMjs = `
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T7S7ZTB');
+const customJs = `
+(function(h,o,t,j,a,r){
+  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+  h._hjSettings={hjid:1357323,hjsv:6};
+  a=o.getElementsByTagName('head')[0];
+  r=o.createElement('script');r.async=1;
+  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+  a.appendChild(r);
+})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('620-GAP-535');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+
+(function(w,d,t,u,n,s,e){w['SwiftypeObject'] = n; w[n]=w[n]||function(){
+(w[n].q = w[n].q || []).push(arguments);};s=d.createElement(t);
+e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 `;
 
 const segmentJs = `
@@ -27,16 +56,13 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <script dangerouslySetInnerHTML={{ __html: GTMjs }}></script>
+        <script dangerouslySetInnerHTML={{ __html: customJs }}></script>
         <script dangerouslySetInnerHTML={{ __html: segmentJs }}></script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.
-        </noscript>
-        <noscript>
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7S7ZTB" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe>
         </noscript>
         <div
           key={`body`}
@@ -45,6 +71,8 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
+      <script src="https://js.chilipiper.com/marketing.js" type="text/javascript"></script>
+      <script src="//app-ab35.marketo.com/js/forms2/js/forms2.min.js"></script>
     </html>
   )
 }
