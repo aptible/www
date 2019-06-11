@@ -244,7 +244,7 @@ export default () => (
           trust and puts sensitive data at risk.
         </p>
         <p className="XL">
-          Aptible comply and deploy empower your existing workforce to take
+          Aptible Comply and Deploy empower your existing workforce to take
           ownership over your security management program.
         </p>
         <hr />
