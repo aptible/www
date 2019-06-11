@@ -73,9 +73,13 @@
   width: 8px;
   height: 8px;
   border-radius: 20px;
-  background-color: var(--aptible-green);
+  background-color: var(--aptible-green-thirty);
   margin-right: 4px;
   cursor: pointer;
+}
+
+.active {
+  background-color: var(--aptible-green);
 }
 
 @media (--mobile) {

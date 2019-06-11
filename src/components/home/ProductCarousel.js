@@ -22,9 +22,13 @@ const ALL_PRODUCTS = [
 class ProductCarousel extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      activeProduct: this.props.startPosition === 'right' ? 'deploy' : 'comply'
+    };
+
     this.carouselRef = React.createRef();
     this.gridRef = React.createRef();
+    this.scrollWatcher = null;
   }
 
   componentDidMount() {
@@ -38,6 +42,26 @@ class ProductCarousel extends React.Component {
 
     if (this.props.startPosition && this.props.startPosition === 'right') {
       this.carouselRef.current.scrollLeft = container.offsetWidth;
+    }
+
+    this.scrollWatcher = setInterval(() => {
+      if (this.carouselRef.current.scrollLeft > carouselPadding) {
+        this.setState({ activeProduct: 'deploy' });
+      } else {
+        this.setState({ activeProduct: 'comply' });
+      }
+    }, 500);
+  }
+
+  componentWillUnmount = () => {
+    clearInterval(this.scrollWatcher);
+  }
+
+  scrollTo = (product) => {
+    if (product === 'comply') {
+      this.carouselRef.current.scrollLeft = 0;
+    } else {
+      this.carouselRef.current.scrollLeft = 999;
     }
   }
 
@@ -58,8 +82,14 @@ class ProductCarousel extends React.Component {
         <Grid>
           <Row>
             <div className={styles.circles} ref={this.gridRef}>
-              <span className={styles.circle}></span>
-              <span className={styles.circle}></span>
+              <span
+                onClick={() => this.scrollTo('comply')}
+                className={`${styles.circle} ${this.state.activeProduct === 'comply' ? styles.active : ''}`}>
+              </span>
+              <span
+                onClick={() => this.scrollTo('deploy')}
+                className={`${styles.circle} ${this.state.activeProduct === 'deploy' ? styles.active : ''}`}>
+              </span>
             </div>
           </Row>
         </Grid>
