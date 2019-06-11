@@ -36,7 +36,9 @@ class InnerSignup extends React.Component {
         if (this.state.product === 'deploy') {
           this.redirectToDeploy(email);
         } else {
-          this.openChiliPiper();
+          if (this.state.scheduledCall === null) {
+            this.openChiliPiper();
+          }
         }
       } else {
         this.setState({ currentView: ProductSelection });

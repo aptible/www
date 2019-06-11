@@ -5,10 +5,10 @@ import styles from './ResourcesLinks.module.css';
 export default () => (
   <div className={styles.container}>
     <div className={styles.documentation}>
-      <Link to="/documentation/index.html">Documentation</Link>
-      <Link to="/documentation/comply.html" className={styles.subLink}>Comply</Link>
-      <Link to="/documentation/deploy.html" className={styles.subLink}>Deploy</Link>
-      <Link to="/documentation/deploy/cli.html" className={styles.subLink}>CLI</Link>
+      <a href="/documentation/index.html">Documentation</a>
+      <a href="/documentation/comply.html" className={styles.subLink}>Comply</a>
+      <a href="/documentation/deploy.html" className={styles.subLink}>Deploy</a>
+      <a href="/documentation/deploy/cli.html" className={styles.subLink}>CLI</a>
     </div>
     <div className={styles.blog}>
       <Link to="/blog/">Blog</Link>

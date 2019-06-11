@@ -3,8 +3,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import styles from './RichText.module.css';
 
 const renderAssetBlock = (node) => {
-  const { title, description, file } = node.data.target.fields;
-  return <img class={styles.image} src={file['en-US'].url} />
+  const { file } = node.data.target.fields;
+  return <img class={styles.image} src={file['en-US'].url} alt="contentful" />
 }
 
 const options = {
