@@ -8,7 +8,7 @@ export default () => (
       <Link to="/documentation/index.html">Documentation</Link>
       <Link to="/documentation/comply.html" className={styles.subLink}>Comply</Link>
       <Link to="/documentation/deploy.html" className={styles.subLink}>Deploy</Link>
-      <Link to="/support/toolbelt/" className={styles.subLink}>CLI</Link>
+      <Link to="/documentation/deploy/cli.html" className={styles.subLink}>CLI</Link>
     </div>
     <div className={styles.blog}>
       <Link to="/blog/">Blog</Link>
