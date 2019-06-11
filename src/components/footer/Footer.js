@@ -60,10 +60,6 @@ export default () => (
       <div className={styles.resources}>
         <h6 className="small">Resources</h6>
         <Link to="/customers/">Customers</Link>
-        <Link to="/security-management/">
-          <span className="desktopOnly">Security Management Guide</span>
-          <span className="mobileOnly">Security Guide</span>
-        </Link>
         <Link to="/hipaa/">Compliance Guides</Link>
         <Link to="/blog/">Blog</Link>
         <a href="https://aptible.zendesk.com/" target="_blank" rel="noopener noreferrer">Support Tickets</a>
