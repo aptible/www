@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build-production": "yarn run build && cp _production-redirects ./public/_redirects && cat _redirects >> ./public/_redirects",
-    "build-staging": "yarn run build && cp _staging-redirects ./public/_redirects && cat _redirects >> ./public/_redirects",
+    "build-production": "yarn run build && cp _redirects ./public/_redirects && cat _production-redirects >> ./public/_redirects",
+    "build-staging": "yarn run build && cp _redirects ./public/_redirects && cat _staging-redirects >> ./public/_redirects",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
