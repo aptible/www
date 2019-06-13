@@ -79,6 +79,8 @@ a.linkedContainer {
   top: 0;
   bottom: 0;
   width: 100%;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .videoContainer {
