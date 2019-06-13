@@ -147,6 +147,19 @@
   margin: 60px 0 15px 0;
 }
 
+.closeIcon {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.expanded .closeIcon {
+  display: block;
+}
+
 @media (--mobile) {
   .hero {
     text-align: left;

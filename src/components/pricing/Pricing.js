@@ -12,8 +12,31 @@ class Pricing extends React.Component {
     };
   }
 
+  componentDidMount = () => {
+    if (typeof(window) === 'undefined') {
+      return;
+    }
+
+    if (window.location.hash) {
+      const products = {
+        '#comply': 'comply',
+        '#deploy': 'deploy'
+      };
+
+      if (window.location.hash in products) {
+        this.setState({ expanded: products[window.location.hash] });
+      }
+    }
+  }
+
   expandProduct = (productName) => {
+    window.history.pushState({}, '', `#${productName}`);
     this.setState({ expanded: productName });
+  }
+
+  closeExpandedProduct = () => {
+    window.history.pushState({}, '', `/pricing-plans/`);
+    this.setState({ expanded: null });
   }
 
   render() {
@@ -27,10 +50,12 @@ class Pricing extends React.Component {
 
           <Comply
             clickFn={this.expandProduct}
+            closeFn={this.closeExpandedProduct}
             expanded={this.state.expanded === 'comply'} />
 
           <Deploy
             clickFn={this.expandProduct}
+            closeFn={this.closeExpandedProduct}
             expanded={this.state.expanded === 'deploy'} />
         </Grid>
       </div>
