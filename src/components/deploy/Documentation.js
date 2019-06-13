@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid } from '../grid/Grid';
-import { Link } from 'gatsby';
 import styles from './Documentation.module.css';
 
 export default () => (

@@ -117,8 +117,9 @@
   color: var(--aptible-black-half);
 }
 
-.copyright p {
+.copyright > div {
   margin-top: 4px;
+  font-size: 16px;
 }
 
 .address {

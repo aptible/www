@@ -113,7 +113,7 @@ export default () => (
       </div>
 
       <div className={styles.copyright}>
-        <p>
+        <div>
           &copy; {(new Date().getFullYear())} Aptible Inc.<br />
 
           <div className={styles.address}>
@@ -122,7 +122,7 @@ export default () => (
             94104-5401<br />
             United States
           </div>
-        </p>
+        </div>
       </div>
     </Grid>
 
