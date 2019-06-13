@@ -29,32 +29,44 @@ class ProductCarousel extends React.Component {
     this.carouselRef = React.createRef();
     this.gridRef = React.createRef();
     this.scrollWatcher = null;
+    this.carouselPadding = 0;
   }
 
   componentDidMount() {
-    const container = this.carouselRef.current.children[0];
-
-    const gridWidth = this.gridRef.current.offsetWidth;
-    const windowWidth = window.outerWidth;
-    const carouselPadding = (windowWidth - gridWidth) / 2;
-
-    container.style.padding = `0 ${carouselPadding}px`;
-
-    if (this.props.startPosition && this.props.startPosition === 'right') {
-      this.carouselRef.current.scrollLeft = container.offsetWidth;
-    }
+    this.padCarouselToScreenSize();
 
     this.scrollWatcher = setInterval(() => {
-      if (this.carouselRef.current.scrollLeft > carouselPadding) {
+      if (this.carouselRef.current.scrollLeft > this.carouselPadding) {
         this.setState({ activeProduct: 'deploy' });
       } else {
         this.setState({ activeProduct: 'comply' });
       }
     }, 500);
+
+    if (typeof (window) !== 'undefined') {
+      window.addEventListener('resize', this.padCarouselToScreenSize);
+    }
   }
 
   componentWillUnmount = () => {
     clearInterval(this.scrollWatcher);
+  }
+
+  padCarouselToScreenSize = () => {
+    
+    const container = this.carouselRef.current.children[0];
+
+    const gridWidth = this.gridRef.current.offsetWidth;
+    const windowWidth = window.outerWidth;
+    this.carouselPadding = (windowWidth - gridWidth) / 2;
+
+    container.style.padding = `0 ${this.carouselPadding}px`;
+
+    if (this.props.startPosition && this.props.startPosition === 'right') {
+      this.carouselRef.current.scrollLeft = container.offsetWidth;
+    } else {
+      this.carouselRef.current.scrollLeft = 0;
+    }
   }
 
   scrollTo = (product) => {
