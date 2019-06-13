@@ -81,7 +81,7 @@
 .social {
   grid-row: 3;
   grid-column: 1;
-  margin-top: 3px;
+  margin-top: -2px;
 }
 
 .social a {
@@ -105,6 +105,10 @@
   letter-spacing: 0.03em;
 }
 
+.links a:hover h6 {
+  color: var(--aptible-black);
+}
+
 .copyright {
   grid-row: 3;
   grid-column: 7;
@@ -115,6 +119,11 @@
 
 .copyright p {
   margin-top: 4px;
+}
+
+.address {
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 @media (--mobile) {

@@ -108,10 +108,21 @@ export default () => (
       <div className={styles.links}>
         <Link to="/"><h6 className="small">Aptible Home</h6></Link>
         <a href="https://dashboard.aptible.com/login"><h6 className="small">Log In</h6></a>
+        <a href="mailto:hello@aptible.com"><h6 className="small">hello@aptible.com</h6></a>
+        <a href="tel:18662965003"><h6 className="small">+1 (866) 296-5003</h6></a>
       </div>
 
       <div className={styles.copyright}>
-        <p>&copy; {(new Date().getFullYear())} Aptible Inc.</p>
+        <p>
+          &copy; {(new Date().getFullYear())} Aptible Inc.<br />
+
+          <div className={styles.address}>
+            548 Market St #75826<br />
+            San Francisco, CA<br />
+            94104-5401<br />
+            United States
+          </div>
+        </p>
       </div>
     </Grid>
 
