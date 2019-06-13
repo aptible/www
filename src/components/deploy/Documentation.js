@@ -12,25 +12,24 @@ export default () => (
 
       <div className={styles.left}>
         <h6 className="small">Usage and Best Practices</h6>
-        <Link to="/">Reference</Link>
-        <Link to="/">CLI</Link>
-        <Link to="/">Tutorials</Link>
-        <Link to="/">Troubleshooting</Link>
+        <a href="/documentation/deploy/reference.html">Reference</a>
+        <a href="/documentation/deploy/cli.html">CLI</a>
+        <a href="/documentation/deploy/tutorials.html">Tutorials</a>
+        <a href="/documentation/deploy/troubleshooting.html">Troubleshooting</a>
       </div>
 
       <div className={styles.middle}>
         <h6 className="small">Administration</h6>
-        <Link to="/">Organizations</Link>
-        <Link to="/">Billing</Link>
-        <Link to="/">Users</Link>
-        <Link to="/">Roles</Link>
+        <a href="/documentation/admin/organizations.html">Organizations</a>
+        <a href="/documentation/admin/billing.html">Billing</a>
+        <a href="/documentation/admin/users.html">Users</a>
+        <a href="/documentation/admin/roles.html">Roles</a>
       </div>
       <div className={styles.right}>
         <h6 className="small">Support</h6>
-        <Link to="/">Contact Support</Link>
-        <Link to="/">Best Practices</Link>
-        <Link to="/">Active Tickets</Link>
-        <Link to="/">FAQs</Link>
+        <a href="/documentation/support.html#contacting-support">Contact Support</a>
+        <a href="/documentation/support.html#best-practices">Best Practices</a>
+        <a href="/documentation/support.html#active-tickets">Active Tickets</a>
       </div>
     </Grid>
   </div>
