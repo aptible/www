@@ -11,6 +11,9 @@ export default ({ post }) => (
     <Grid>
       <div className={styles.authorPhoto}>
         <img src={post.author.professionalPhoto.file.url} alt={post.author.name} />
+        {post.secondAuthor &&
+          <img src={post.secondAuthor.professionalPhoto.file.url} alt={post.secondAuthor.name} />
+        }
       </div>
 
       <div className={styles.content}>

@@ -16,6 +16,9 @@ function PostSummary({ post }) {
     <Link className={styles.postSummary} to={`/blog/${post.slug}/`}>
       <div className={styles.authorPhoto}>
         <img src={post.author.professionalPhoto.file.url} alt={post.author.name} />
+        {post.secondAuthor &&
+          <img src={post.secondAuthor.professionalPhoto.file.url} alt={post.secondAuthor.name} />
+        }
       </div>
 
       <h3>{post.title}</h3>

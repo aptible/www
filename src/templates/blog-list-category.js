@@ -56,6 +56,15 @@ export const query = graphql`
               }
             }
           }
+          secondAuthor {
+            name
+            slug
+            professionalPhoto {
+              file {
+                url
+              }
+            }
+          }
           body {
             json
           }

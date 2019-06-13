@@ -16,10 +16,15 @@
 }
 
 .authorPhoto img {
+  display: block;
   width: 80px;
   height: 80px;
   border-radius: 100px;
   margin-top: 170px;
+}
+
+.authorPhoto img:nth-child(2) {
+  margin-top: 15px;
 }
 
 .content {

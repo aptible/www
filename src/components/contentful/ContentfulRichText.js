@@ -4,7 +4,7 @@ import styles from './RichText.module.css';
 
 const renderAssetBlock = (node) => {
   const { file } = node.data.target.fields;
-  return <img class={styles.image} src={file['en-US'].url} alt="contentful" />
+  return <img className={styles.image} src={file['en-US'].url} alt="contentful" />
 }
 
 const options = {

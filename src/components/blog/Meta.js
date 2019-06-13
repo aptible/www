@@ -16,7 +16,12 @@ export default ({ post, disableAuthorLink }) => (
       }
 
       {disableAuthorLink &&
-        <span>{post.author.name}</span>
+        <span>
+          {post.author.name}
+          {post.secondAuthor &&
+            <React.Fragment> &amp; {post.secondAuthor.name}</React.Fragment>
+          }
+        </span>
       }
     </div>
 
