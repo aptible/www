@@ -98,7 +98,7 @@ export default () => (
 
           <div className={styles.guaranteeList}>
             <CheckmarkUnorderedList>
-              <li>Shorter sales sycles</li>
+              <li>Shorter sales cycles</li>
               <li>Higher win rate for enterprise deals</li>
               <li>Quicker vendor security assessments</li>
               <li>Easy to maintain security and compliance documentation</li>

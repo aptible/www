@@ -205,7 +205,7 @@ export default () => (
       <div className={`${styles.caseSolution} ${styles.caseSolutionBottomLeft}`}>
         <h6 className="small">Who It's For</h6>
         <ul>
-          <li>Companies selling into a regluated industry</li>
+          <li>Companies selling into a regulated industry</li>
           <li>Companies selling to customers doing business in the EU</li>
           <li>Companies looking to protect customer data</li>
         </ul>
@@ -227,7 +227,7 @@ export default () => (
         <h6 className="small">Who It's For</h6>
         <ul>
           <li>Companies selling to customers in Healthcare</li>
-          <li>Companies dealing with senstive data</li>
+          <li>Companies dealing with sensitive data</li>
           <li>Startups building apps that collect customer data</li>
         </ul>
         <Button to="/deploy/">Learn More</Button>
@@ -264,7 +264,7 @@ export default () => (
       <div className={`${styles.caseSolution} ${styles.caseSolutionBottomLeft}`}>
         <h6 className="small">Who It's For</h6>
         <ul>
-          <li>Companies searching for thier first security hire</li>
+          <li>Companies searching for their first security hire</li>
           <li>Startups trying to enhance their security</li>
           <li>Companies looking to train their workforce on security and compliance</li>
         </ul>
@@ -286,7 +286,7 @@ export default () => (
         <h6 className="small">Who It's For</h6>
         <ul>
           <li>Companies without a security team</li>
-          <li>Companies dealing with senstive data</li>
+          <li>Companies dealing with sensitive data</li>
           <li>Startups building apps that collect customer data</li>
         </ul>
         <Button to="/deploy/">Learn More</Button>

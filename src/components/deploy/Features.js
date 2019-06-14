@@ -171,7 +171,7 @@ class Features extends React.Component {
                   <div className={styles.featureIcon}>{icons.logging}</div>
                   <h6>Audit Logging</h6>
                   <p>
-                    Logs are generated and backed up for every depoly, config
+                    Logs are generated and backed up for every deploy, config
                     change, database tunnel, and console operation, and session.
                   </p>
                 </div>
