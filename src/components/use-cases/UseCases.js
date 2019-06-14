@@ -61,7 +61,7 @@ export default () => (
           <br /> and External Audits
         </h1>
         <p className="XL">
-          Early stage companies are now seeing deals delayed becasue they have
+          Early stage companies are now seeing deals delayed because they have
           to answer long VSAs and prove their security position to prospective
           customers  rather than focusing resources on growing their business.
         </p>

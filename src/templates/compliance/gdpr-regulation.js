@@ -18,12 +18,12 @@ function getRegulation(data, slug) {
 
 export default ({ data, pageContext }) => {
   const part = getRegulation(data.gdpr, pageContext.slug);
-  const title = `${part.id} ${part.title}`;
+  const title = `${part.id}: ${part.title}`;
 
   return (
     <ComplianceLayout
       regulation={data.gdpr}
-      title={title}
+      title={`Article ${title}`}
       SidebarComponent={GdprSubnav}>
       <Helmet>
         <title>Article {part.id}: {part.title} | GDPR Requirements hosted by Aptible</title>
