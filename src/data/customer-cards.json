@@ -1,7 +1,7 @@
 {
   "vergesense": {
     "headline": "Aptible helped us immediately cut our sales cycle in half and win 5 more enterprise deals in our first quarter as a customer.",
-    "author": "Dean Ryan - CEO",
+    "author": "Dean Ryan, CEO",
     "tags": ["technology"]
   },
   "virta": {
@@ -12,12 +12,12 @@
   },
   "mdsave": {
     "headline": "&ldquo;Aptible enabled us to develop our application more efficiently and to breeze through hospital security audits, saving us effort and speeding up our sales process.&rdquo;",
-    "author": "Ryan Aipperspach - CTO",
+    "author": "Ryan Aipperspach, CTO",
     "tags": ["health"]
   },
   "healthify": {
     "headline": "&ldquo;When evaluating a vendor, our priorities were trust, transparency, and reliability. Aptible hits them all, allowing us to focus on what we do without worrying about all the layers of legal and technical ops hurdles.&rdquo;",
-    "author": "Alex Villa - COO",
+    "author": "Alex Villa, COO",
     "tags": ["health"]
   },
   "fortmatic": {
