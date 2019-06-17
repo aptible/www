@@ -24,10 +24,16 @@ const renderWistiaBlockquote = (node, children) => {
   return <blockquote>{children}</blockquote>;
 }
 
+const renderHyperlink = (node, children) => {
+  const url = node.data.uri.replace('https://app.contentful.com', '');
+  return <a href={url}>{children}</a>
+}
+
 const options = {
   renderNode: {
     'embedded-asset-block': renderAssetBlock,
-    'blockquote': renderWistiaBlockquote
+    'blockquote': renderWistiaBlockquote,
+    'hyperlink': renderHyperlink
   }
 }
 
