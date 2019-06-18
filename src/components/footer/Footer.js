@@ -71,6 +71,7 @@ export default () => (
         <h6 className="small">Company</h6>
         <Link to="/company/">About</Link>
         <Link to="/careers/">Careers</Link>
+        <Link to="/press/">Press</Link>
         <Link to="/legal/terms-of-service/">Legal</Link>
       </div>
 
