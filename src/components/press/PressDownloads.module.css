@@ -20,6 +20,24 @@
   margin-left: 112px;
 }
 
+
+@media (--mobile) {
+  .first, .middle, .last {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+    margin: 0 0 8px;
+  }
+
+  .middle {
+    grid-row: 3;
+  }
+
+  .last {
+    grid-row: 4;
+  }
+}
+
+
 .sectionHeading {
   grid-row: 1;
   margin: 0 0 30px;
