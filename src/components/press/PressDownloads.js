@@ -8,8 +8,8 @@ import logoDarkPng from '../../images/logos/aptible-logo-dark.png';
 import markSvg from '../../images/logos/mark.svg';
 import markPng from '../../images/logos/mark.png';
 
-const Download = ({ href, children, file}) => (
-  <a class={styles.downloadLink} href={href} download={`${file}.svg`}>{children}</a>
+const Download = ({ href, children, fileName}) => (
+  <a class={styles.downloadLink} href={href} download={`${fileName}.svg`}>{children}</a>
 );
 
 const PressDownload = ({ fileName, title, className, downloads }) => (
