@@ -36,6 +36,7 @@ export default ({ data }) => (
 export const query = graphql`
   query {
     employees: allContentfulEmployee(
+      filter: { name: { ne: null } }
       sort: { fields: [name] }
     ) {
       edges {

@@ -4,6 +4,9 @@ require('dotenv').config({
 
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://www.aptible.com`,
+  },
   plugins: [
     `gatsby-plugin-postcss`,
     {
@@ -74,6 +77,7 @@ module.exports = {
           windows: false
         }
       }
-    }
+    },
+    `gatsby-plugin-sitemap`
   ],
 };
