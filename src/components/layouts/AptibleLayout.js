@@ -9,10 +9,10 @@ import Analytics from '../shared/Analytics';
 export default ({ children }) => (
   <div>
     <HelloBar
-      id="2019-relaunch"
-      to="/blog/introducing-new-brand-identity/"
+      id="2019-series-a"
+      to="/blog/announcing-aptible-12-million-series-a-funding/"
       callout="Big News!"
-      text="Things look a little different around here. Announcing the new Aptible brand identity. Get all the details." />
+      text="Announcing Aptible’s $12 million Series A funding. Read more." />
     <Header />
     <CookieConsent />
     {children}

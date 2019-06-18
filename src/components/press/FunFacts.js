@@ -9,7 +9,7 @@ const FunFact = ({ style, className, label, children }) => (
   </div>
 );
 
-export default ({ }) => (
+export default () => (
   <div className={styles.container}>
     <Grid rows="2">
       <h5 className={styles.sectionHeading}>Fun Facts</h5>
