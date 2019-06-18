@@ -9,7 +9,6 @@ import HeroCallout from './HeroCallout';
 export default ({ heroBlock }) => (
   <Grid rows="2">
     <HeroArrow />
-
     <div className={styles.contentArea}>
       <ContentfulBlock block={heroBlock} />
     </div>

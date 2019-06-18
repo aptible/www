@@ -1,0 +1,53 @@
+.container {
+  padding: 0 0 160px;
+}
+
+.first {
+  grid-row: 2;
+  margin-right: 112px;
+  grid-column: 1 / span 3;
+}
+
+.middle {
+  grid-row: 2;
+  grid-column: 3 / span 3;
+  margin: 0 56px;
+}
+
+.last {
+  grid-row: 2;
+  grid-column: 5 / span 3;
+  margin-left: 112px;
+}
+
+.sectionHeading {
+  grid-row: 1;
+  margin: 0 0 30px;
+}
+
+.pressDownload {
+  padding: 40px;
+  text-align: center;
+  background-color: var(--aptible-black-light);
+}
+
+.pressDownload:last-of-type {
+  margin: 0;
+}
+
+.pressDownload img {
+  padding: 30px 0;
+  height: 145px;
+  max-width: 160px;
+}
+
+.downloadOptions {
+  text-align: center;
+}
+
+.downloadLink {
+  color: var(--white-seventy);
+  font-size: 14px;
+  display: inline-block;
+  margin: 0 16px;
+}

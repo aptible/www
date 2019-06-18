@@ -28,6 +28,7 @@ export default ({ data }) => (
 );
 
 
+
 export const query = graphql`
   query {
     blocks: allContentfulContentBlock(filter: { page: { eq: "home" } }) {
