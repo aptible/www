@@ -96,7 +96,7 @@ export default () => (
             We walk you through the process of assigning responsibilities,
             setting timelines, and determining activities that meet your
             compliance goals. We keep track of your operations for you so you
-            don't have to worry about mantaining compliance. 
+            don't have to worry about maintaining compliance. 
           </p>
         </div>
       </div>
