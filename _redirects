@@ -1,3 +1,4 @@
+/press-kit/badges/* /assets/badges/:splat 200!
 /documentation /documentation/index.html 302
 /documentation/gridiron/training.html /documentation/gridiron/engines/training.html 302
 /documentation/gridiron/training/invite.html /documentation/gridiron/engines/training/invite.html 302
