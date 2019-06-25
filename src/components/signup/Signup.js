@@ -57,7 +57,7 @@ class InnerSignup extends React.Component {
   }
 
   isQualified = () => {
-    return this.state.email.match(/(test|gmail)/) === null
+    return this.state.email.match(/(test|gmail|yahoo|hotmail)/) === null
   }
 
   qualifyComplySignup = () => {
