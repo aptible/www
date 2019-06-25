@@ -66,6 +66,14 @@
   display: block;
 }
 
+.teamMember:hover .photo {
+  z-index: 2;
+}
+
+.teamMember.open .photo {
+  z-index: 1;
+}
+
 .title {
   grid-row: 1;
   grid-column: 3 / span 3;
