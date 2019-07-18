@@ -9,7 +9,7 @@ slug: /legal/privacy/
 template: legal
 ---
 
-Version 3.1 – February 27, 2019
+Version 3.2 – July, 2019
 
 At Aptible, our core mission is to help teams protect data on the internet. As a result, our goal is to set a high standard for protecting the privacy of your information. We want to be clear about how we collect, use, protect, and share your information, including your personal information, and the rights and choices you have about the ways in which you can help us protect your privacy.
 
@@ -23,7 +23,7 @@ This Privacy Statement explains:
 
   * The steps we take to protect your information.
 
-**Scope:** This Privacy Statement applies to the information that we obtain through your use of Aptible products and services, including our website ([https://www.aptible.com][0]), our Enclave and Gridiron platforms, social media, communications, and web-based tools (collectively, our "Services"). For a current list of the Services and vendors covered by this Privacy Statement, see our [Subvendor Directory][9].
+**Scope:** This Privacy Statement applies to the information that we obtain through your use of Aptible products and services, including our website ([https://www.aptible.com][0]), our Aptible Deploy and Gridiron platforms, social media, communications, and web-based tools (collectively, our "Services"). For a current list of the Services and vendors covered by this Privacy Statement, see our [Subvendor Directory][9].
 
 This Privacy Statement does not apply to personal information arising from Aptible’s employment-related activities. Except to the extent that a third party provides services on our behalf (such as a SaaS vendor), this Privacy Statement also does not apply to the practices of third parties to which we may link or otherwise refer you, such as consultants, pen testing firms, audit firms, and other vendors.
 
@@ -85,7 +85,7 @@ For purposes of this Privacy Statement, "Personal Information" means information
 
 ## Information that We Receive About You From Our Customers
 
-Our customers and their designated users use our Services, in particular Enclave, to develop, establish, implement, and maintain secure application and database deployment environments for processing sensitive data, including personal information and sensitive personal information. While using our Services, our customers may create, input, submit, post, upload, transmit, or store personal information that they have collected from individuals. During the course of our business relationship, we may need to access a customer’s account and the information it contains to provide support for our Services. 
+Our customers and their designated users use our Services, in particular Aptible Deploy, to develop, establish, implement, and maintain secure application and database deployment environments for processing sensitive data, including personal information and sensitive personal information. While using our Services, our customers may create, input, submit, post, upload, transmit, or store personal information that they have collected from individuals. During the course of our business relationship, we may need to access a customer’s account and the information it contains to provide support for our Services. 
 
  
 
@@ -237,7 +237,7 @@ Unfortunately, no data transmission over the Internet or data storage system can
 
 To that end, we manage our data protection program consistent with ISO 27001, SOC 2, HITRUST, and applicable legal and regulatory requirements such as HIPAA and GDPR.
 
-  * Aptible’s ISO 27001 certification for Enclave and Gridiron is available [here](/compliance/iso-27001-certification/).
+  * Aptible’s ISO 27001 certification for Aptible Deploy and Gridiron is available [here](/compliance/iso-27001-certification/).
 
   * You can view Aptible’s HITRUST CSF standalone certification letter [here](/compliance/hitrust-csf-certification/).
 
@@ -267,7 +267,7 @@ California Civil Code Section 1798.83 permits Aptible customers who are Californ
 
 # Information for International Users
 
-The core Enclave and Gridiron APIs are hosted in the United States. You may choose to run Enclave stacks in non-U.S. regions, such as the European Union or other regions of the world with laws governing data collection and use that may differ from U.S. law. Please note that when you use the core Enclave and Gridiron APIs, you are transferring your information outside of those regions to the United States for storage and processing. By providing your information, you consent to any transfer and processing in accordance with this Policy.
+The core Aptible Deploy and Gridiron APIs are hosted in the United States. You may choose to run Aptible Deploy stacks in non-U.S. regions, such as the European Union or other regions of the world with laws governing data collection and use that may differ from U.S. law. Please note that when you use the core Aptible Deploy and Gridiron APIs, you are transferring your information outside of those regions to the United States for storage and processing. By providing your information, you consent to any transfer and processing in accordance with this Policy.
 
 # Information for EU-Based Individuals: EU-U.S. Privacy Shield Compliance
 

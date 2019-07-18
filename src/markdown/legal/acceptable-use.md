@@ -11,7 +11,7 @@ template: legal
 <!-- Reference Links -->
 [Aptible Terms of Service]:/legal/terms-of-service
 
-Version 2.3 - August 2017
+Version 2.4 - July 2019
 
 Aptible needs to be able to make sure our customers use their Aptible superpowers for good, not evil. 
 
@@ -70,7 +70,7 @@ Prohibited activities include:
 7. Malware: Uploading or otherwise any disseminating viruses, adware, spyware, worms, or other malicious code.
 
 ### Usage and Quotas
-You agree not to exceed the following limits for Enclave:
+You agree not to exceed the following limits for Aptible Deploy:
 
 - 1 TB bandwidth/month for Development Accounts
 - 3 TB bandwidth/month for all other accounts

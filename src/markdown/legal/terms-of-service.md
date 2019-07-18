@@ -20,7 +20,7 @@ template: legal
 [Support Policy]:/legal/support
 [Trademark Policy]:/legal/trademark
 
-Version 2.13 - May 2018
+Version 2.14 - July 2019
 
 Welcome, and thank you for your interest in Aptible! 
 
@@ -49,7 +49,7 @@ The general idea of this Agreement is that we grant you a license to use the Ser
 In this Agreement:
 
 - **"Aptible,"** **"we,"** and **"us"** means Aptible Inc. 
-- The **"Services"** means the Aptible services, including Enclave, Gridiron, and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, and other services we provide.
+- The **"Services"** means the Aptible services, including Aptible Deploy, Gridiron, and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, and other services we provide.
 - Section 22 contains more defined terms.
 
 #### Summary 
@@ -63,7 +63,7 @@ You acknowledge and agree that, as provided in greater detail in this Agreement:
 
 This Agreement takes effect when you click an "I Accept" button or checkbox presented with these terms, sign a contract that incorporates these terms by reference, or, if earlier, when you use any of the Services (the **"Effective Date"**).
 
-We provide certain Enclave Services pursuant to a [Service Level Agreement] and a [HIPAA Breach Indemnification Agreement].
+We provide certain Aptible Deploy Services pursuant to a [Service Level Agreement] and a [HIPAA Breach Indemnification Agreement].
 
 In addition, please see our policy on [Responsible Disclosure] of security vulnerabilities.
 
@@ -103,8 +103,8 @@ You may terminate your account and this Agreement at any time in accordance with
 
 **B. Your users' privacy.** You are responsible for protecting the privacy and legal rights of your End Users. Your obligations include but are not limited to:
 
-1. Properly configuring the Aptible Services, including your Enclave Containerized Services, to protect your users' information;
-2. Configuring and enforcing user access policies and permissions for the Aptible Services, including your Enclave Containerized Services; and
+1. Properly configuring the Aptible Services, including your Aptible Deploy Containerized Services, to protect your users' information;
+2. Configuring and enforcing user access policies and permissions for the Aptible Services, including your Aptible Deploy Containerized Services; and
 3. Providing legally adequate privacy notices for your users, and informing them that their information may be available to Aptible and/or our affiliates under certain circumstances, pursuant to our [Privacy Policy].
 
 We provide support and training to help you with these responsibilities. Please see our [support resources](/support), our [Support Policy], and our [training offerings](/gridiron).
@@ -125,9 +125,9 @@ Fees are based on our measurements of your use of the Services. Our determinatio
 If any deduction or withholding is required by law, you will notify us and will pay us any additional amounts necessary to ensure that the net amount that we receive, after any deduction and withholding, equals the amount we would have received if no deduction or withholding had been required. Additionally, you will provide us with documentation showing that the withheld and deducted amounts have been paid to the relevant taxing authority.
 
 ###5. Suspension, Removal, and Remedial Action
-Under some circumstances, you are obligated to suspend or remove an Application or other Enclave Containerized Service from the Services and take remedial measures, such as if your Application is compromised and is being used to violate our [Acceptable Use Policy]. 
+Under some circumstances, you are obligated to suspend or remove an Application or other Aptible Deploy Containerized Service from the Services and take remedial measures, such as if your Application is compromised and is being used to violate our [Acceptable Use Policy]. 
 
-In addition to your obligations, we reserve the right to suspend your account, suspend your access or your End Users' access to the Services, and/or suspend or remove an Application  or Enclave Containerized Service (take **"Remedial Action"**). Our right to take Remedial Action is in addition to our right to terminate this Agreement pursuant to Section 11.
+In addition to your obligations, we reserve the right to suspend your account, suspend your access or your End Users' access to the Services, and/or suspend or remove an Application  or Aptible Deploy Containerized Service (take **"Remedial Action"**). Our right to take Remedial Action is in addition to our right to terminate this Agreement pursuant to Section 11.
 
 **A. Your obligations.** If you become aware that any Application or End User's use of an Application or data violates the [Acceptable Use Policy], you will immediately suspend that Application, remove the applicable data, or suspend access to that End User, whichever may be applicable to remedy the violation. If you fail to remedy the violation on your own, we will make a specific request that you do so. If you do not remedy the violation within the time period specified in our request (in no case later than 24 hours), we may take Remedial Action.
 
@@ -256,7 +256,7 @@ The foregoing limitations of liability do not apply to breaches of confidentiali
 We will provide technical support to you pursuant to our [Support Policy]. Custom Service Level Agreements or support agreements may be available.
 
 ### 17. Security
-As with any cloud service, you have ongoing security responsibilities to protect Your Content and your Enclave Containerized Services. You hereby agree to the terms of our [Security Policy]. 
+As with any cloud service, you have ongoing security responsibilities to protect Your Content and your Aptible Deploy Containerized Services. You hereby agree to the terms of our [Security Policy]. 
 
 ### 18. Governing Law  
 This Agreement is governed by the laws of the State of California without regard to conflict of law principles. If a lawsuit or court proceeding is permitted under this Agreement, then, unless another location is expressly specified in this Agreement, you and Aptible agree to submit to the personal and exclusive jurisdiction of the state courts and federal courts located within San Francisco, California for the purpose of litigating any dispute.
@@ -317,7 +317,7 @@ This Agreement supersedes all other agreements between the parties relating to i
 
 **"Acceptable Use Policy"** means the policy currently available at https://www.aptible.com/legal/acceptable-use, as it may be updated by us from time to time.
 
-**"Application"** means an app you are running as an Enclave Containerized Service.
+**"Application"** means an app you are running as an Aptible Deploy Containerized Service.
 
 **"Aptible Marks"** or **"Marks"** mean any trademarks, service marks, service or trade names, logos, and other designations of Aptible and its affiliates that we may make available to you in connection with this Agreement.
 
@@ -327,9 +327,9 @@ This Agreement supersedes all other agreements between the parties relating to i
 
 **"Content"** means software, data, text, audio, video, images or other content.
 
-**"Dedicated Environment"** means an Enclave environment running on a dedicated stack, where the network and hosts are not shared with any other Aptible customer. 
+**"Dedicated Environment"** means an Aptible Deploy environment running on a dedicated stack, where the network and hosts are not shared with any other Aptible customer. 
 
-**"Enclave Containerized Service(s)"** means your Enclave app and database containers.
+**"Aptible Deploy Containerized Service(s)"** means your Aptible Deploy app and database containers.
 
 **"End User"** means any individual or entity that directly or indirectly through another user:
 
@@ -351,7 +351,7 @@ Regulations, § 160.103.
 
 **"Security Policy"** means the policy currently available at https://www.aptible.com/legal/security, as it may be updated by us from time to time.
 
-**"Shared Environment"** means an Enclave environment running on networks and hosts that are shared between Aptible customers.
+**"Shared Environment"** means an Aptible Deploy environment running on networks and hosts that are shared between Aptible customers.
 
 **"Support Policy"** means the policy currently available at https://www.aptible.com/legal/support, as it may be updated by us from time to time.
 
