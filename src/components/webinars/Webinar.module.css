@@ -1,0 +1,46 @@
+.container {
+  padding-bottom: 200px;
+}
+
+.headlines {
+  grid-row: 1;
+  grid-column: 1 / span 7;
+}
+
+.headlines h2 {
+  margin: 15px 0 80px 0;
+}
+
+.body {
+  grid-row: 2;
+  grid-column: 1 / span 4;
+}
+
+.form {
+  grid-row: 2;
+  grid-column: 5 / span 3;
+}
+
+@media (--mobile) {
+  .container {
+    padding: 60px 0;
+  }
+
+  .headlines {
+    margin-bottom: 30px;
+  }
+
+  .headlines h2 {
+    margin-bottom: 0;
+  }
+
+  .body {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+  }
+
+  .form {
+    grid-row: 3;
+    grid-column: 1 / span 7;
+  }
+}

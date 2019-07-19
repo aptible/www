@@ -74,6 +74,14 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
 
+        allWebinars: allContentfulWebinar {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
+
         allMarkdownWithSlug: allMarkdownRemark(
           filter: { frontmatter: { slug: { ne: null } } }
         ) {
@@ -182,6 +190,17 @@ exports.createPages = ({ graphql, actions }) => {
         createPage({
           path: `${node.subfolder}/${node.slug}`,
           component: path.resolve(`./src/templates/resource.js`),
+          context: {
+            slug: node.slug
+          },
+        });
+      });
+
+      // Webinar pages
+      result.data.allWebinars.edges.forEach(({ node }) => {
+        createPage({
+          path: `webinars/${node.slug}`,
+          component: path.resolve(`./src/templates/webinar.js`),
           context: {
             slug: node.slug
           },
