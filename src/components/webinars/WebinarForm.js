@@ -11,6 +11,7 @@ class WebinarForm extends React.Component {
       firstName: '',
       lastName: '',
       email: '',
+      marketingConsent: null,
       finished: false
     };
   }
@@ -28,7 +29,8 @@ class WebinarForm extends React.Component {
       FirstName: this.state.firstName,
       LastName: this.state.lastName,
       Email: this.state.email,
-      LeadSource: 'Content Signup'
+      LeadSource: 'Webinar',
+      Contact_Consent__c: this.state.marketingConsent
     };
 
     submitMarketoForm(this.props.formId, payload, () => {
@@ -44,6 +46,21 @@ class WebinarForm extends React.Component {
             <TextInput labelText="First Name" required="true" value={this.state.firstName} changeFn={(value) => this.fieldChanged('firstName', value)} />
             <TextInput labelText="Last Name" required="true" value={this.state.lastName} changeFn={(value) => this.fieldChanged('lastName', value)} />
             <TextInput labelText="Work Email" required="true" value={this.state.email} changeFn={(value) => this.fieldChanged('email', value)} />
+
+            <div className={styles.marketingConsent}>
+              <label>
+              <input type="radio" name="marketing_consent" value="yes" checked={this.state.marketingConsent === 'yes'} onChange={(e) => this.fieldChanged('marketingConsent', e.target.value)} />
+                <span>
+                  I consent to receiving Aptible marketing emails. <br className="desktopOnly" />View our
+                  <a href="/legal/privacy/" target="_blank">Privacy Policy</a>
+                </span>
+              </label>
+
+              <label>
+              <input type="radio" name="marketing_consent" value="no" checked={this.state.marketingConsent === 'no'} onChange={(e) => this.fieldChanged('marketingConsent', e.target.value)} />
+                <span>No, I don't want to receive marketing emails.</span>
+              </label>
+            </div>
 
             <div className={styles.cta}>
               <Button onClickFn={this.submit}>Register For Webinar</Button>

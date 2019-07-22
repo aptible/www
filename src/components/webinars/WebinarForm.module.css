@@ -4,6 +4,38 @@
   padding: 40px;
 }
 
+.marketingConsent {
+  position: relative;
+  padding-top: 5px;
+}
+
+.marketingConsent label {
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.marketingConsent span {
+  display: block;
+  margin-left: 30px;
+  line-height: 1.5;
+}
+
+.marketingConsent input {
+  position: absolute;
+}
+
+.marketingConsent a {
+  display: inline-block;
+  margin-left: 3px;
+  color: white;
+  text-decoration-color: var(--aptible-green);
+}
+
+.marketingConsent a:hover {
+  text-decoration: none;
+}
+
 .cta {
   margin-top: 45px;
 }
