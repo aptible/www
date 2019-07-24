@@ -11,9 +11,33 @@
   margin: 15px 0 80px 0;
 }
 
+.headlines h5 {
+  margin-bottom: 15px;
+}
+
 .body {
   grid-row: 2;
   grid-column: 1 / span 4;
+}
+
+.presenter {
+  margin: 45px 0;
+}
+
+.presenter img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-right: 30px;
+}
+
+.presenter h5 {
+  padding-top: 20px;
+}
+
+.presenter p {
+  margin-top: 0;
 }
 
 .form {
