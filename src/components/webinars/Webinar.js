@@ -3,6 +3,7 @@ import { Grid } from '../grid/Grid';
 import styles from './Webinar.module.css';
 import ContentfulRichText from '../contentful/ContentfulRichText';
 import WebinarForm from './WebinarForm';
+import WistiaVideo from '../shared/WistiaVideo';
 
 export default ({ webinar }) => (
   <div className={styles.container}>
@@ -30,11 +31,27 @@ export default ({ webinar }) => (
             <p>{webinar.presenter2.jobTitle}</p>
           </div>
         }
+
+        {webinar.wistiaVideoId &&
+          <React.Fragment>
+            <h3 style={{ padding: '30px 0' }}>Video</h3>
+            <WistiaVideo videoId={webinar.wistiaVideoId} />
+          </React.Fragment>
+        }
+
+        {webinar.transcript &&
+          <React.Fragment>
+            <h3 style={{ padding: '60px 0 30px 0' }}>Transcript</h3>
+            <ContentfulRichText json={webinar.transcript.json} />
+          </React.Fragment>
+        }
       </div>
 
-      <div className={styles.form}>
-        <WebinarForm formId={webinar.marketoFormId} />
-      </div>
+      {!webinar.wistiaVideoId &&
+        <div className={styles.form}>
+          <WebinarForm formId={webinar.marketoFormId} />
+        </div>
+      }
     </Grid>
   </div>
 );

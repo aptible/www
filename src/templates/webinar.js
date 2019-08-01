@@ -42,6 +42,10 @@ export const query = graphql`
           }
         }
       }
+      wistiaVideoId
+      transcript {
+        json
+      }
     }
   }
 `;
