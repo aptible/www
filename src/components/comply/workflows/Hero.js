@@ -12,7 +12,7 @@ export default () => (
         <h1>Workflows</h1>
 
         <p className="XL">
-          Aptible Comply Workflows automates the management of your company’s
+          Aptible Comply Workflows automate the management of your company’s
           security, keeping track of everything you have to do to maintain
           compliance (and stay secure).
         </p>

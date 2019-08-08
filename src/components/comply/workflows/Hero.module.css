@@ -1,13 +1,12 @@
 .container {
   background:
-    no-repeat -420px 80px/1000px url('../../../images/illustrations/comply.png'),
+    no-repeat -550px 90px/1000px url('../../../images/illustrations/comply.png'),
     no-repeat 1200px -100px/1000px url('../../../images/illustrations/comply.png'); 
 }
 
 .content {
   grid-row: 1;
-  grid-column: 1 / span 7;
-  text-align: center;
+  grid-column: 1 / span 4;
   padding: 60px 0 150px 0;
 }
 
@@ -20,18 +19,23 @@
 }
 
 .content p {
-  margin: 0 80px 60px 80px;
+  margin: 0 80px 60px 0;
 }
 
 .screenshot {
-  grid-row: 2;
-  grid-column: 1 / span 7;
+  grid-row: 1;
+  grid-column: 5 / span 3;
   text-align: center;
-  margin-bottom: 90px;
+  margin-top: 90px;
 }
 
 .screenshot img {
-  max-width: 450px;
+  max-width: 350px;
+}
+
+.screenshot p {
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 @media (--mobile) {
@@ -40,6 +44,8 @@
   }
 
   .content {
+    grid-row: 1;
+    grid-column: 1/ span 7;
     text-align: left;
     padding: 30px 0;
   }
@@ -50,6 +56,12 @@
 
   .content p {
     margin: 0 0 30px 0;
+  }
+
+  .screenshot {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+    margin: 30px 0 90px 0;
   }
 
   .screenshot img {
