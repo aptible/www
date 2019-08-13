@@ -1,7 +1,5 @@
 .container {
-  background:
-    no-repeat -550px 90px/1000px url('../../../images/illustrations/comply.png'),
-    no-repeat 1200px -100px/1000px url('../../../images/illustrations/comply.png'); 
+  background: no-repeat 1200px -100px/1000px url('../../../images/illustrations/comply.png'); 
 }
 
 .content {
