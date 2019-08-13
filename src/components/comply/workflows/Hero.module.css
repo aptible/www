@@ -1,0 +1,69 @@
+.container {
+  background: no-repeat 1200px -100px/1000px url('../../../images/illustrations/comply.png'); 
+}
+
+.content {
+  grid-row: 1;
+  grid-column: 1 / span 4;
+  padding: 60px 0 200px 0;
+}
+
+.content h1 {
+  margin-bottom: 60px;
+}
+
+.content h5 {
+  margin-bottom: 15px;
+}
+
+.content p {
+  margin: 0 80px 60px 0;
+}
+
+.screenshot {
+  grid-row: 1;
+  grid-column: 4 / span 4;
+  text-align: right;
+  margin-top: 90px;
+  margin-left: 125px;
+}
+
+.screenshot img {
+  width: 100%;
+}
+
+.screenshot p {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+@media (--mobile) {
+  .container {
+    background: none;
+  }
+
+  .content {
+    grid-row: 1;
+    grid-column: 1/ span 7;
+    text-align: left;
+    padding: 30px 0;
+  }
+
+  .content h1 {
+    margin-bottom: 15px;
+  }
+
+  .content p {
+    margin: 0 0 30px 0;
+  }
+
+  .screenshot {
+    grid-row: 2;
+    grid-column: 1 / span 7;
+    margin: 30px 0 90px 0;
+  }
+
+  .screenshot img {
+    max-width: 100%;
+  }
+}
