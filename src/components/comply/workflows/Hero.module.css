@@ -7,7 +7,7 @@
 .content {
   grid-row: 1;
   grid-column: 1 / span 4;
-  padding: 60px 0 150px 0;
+  padding: 60px 0 200px 0;
 }
 
 .content h1 {
@@ -24,13 +24,14 @@
 
 .screenshot {
   grid-row: 1;
-  grid-column: 5 / span 3;
-  text-align: center;
+  grid-column: 4 / span 4;
+  text-align: right;
   margin-top: 90px;
+  margin-left: 125px;
 }
 
 .screenshot img {
-  max-width: 350px;
+  width: 100%;
 }
 
 .screenshot p {

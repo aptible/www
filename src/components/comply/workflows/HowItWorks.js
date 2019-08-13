@@ -1,10 +1,6 @@
 import React from 'react';
 import { Grid } from '../../grid/Grid';
 import styles from './HowItWorks.module.css';
-import image1 from '../../../images/comply/workflows/how-it-works-1.png';
-import image2 from '../../../images/comply/workflows/how-it-works-2.png';
-import image3 from '../../../images/comply/workflows/how-it-works-3.png';
-import image4 from '../../../images/comply/workflows/how-it-works-4.png';
 
 export default () => (
   <div className={styles.container} id="how-it-works">
@@ -18,11 +14,11 @@ export default () => (
           <h3 className={styles.number}>01</h3>
           <div>
             <p>
-              In the Design stage, specify how a given workflow should be conducted.
-              This is the “instruction manual” that should be followed every time
-              this workflow is conducted.
+              We give you the “instruction manual” for what needs to be done to
+              satisfy the requirements of your targeted frameworks. Each Workflow
+              is mapped cleanly to your policies out of the box, and you can
+              make customizations as needed.
             </p>
-            <img src={image1} alt="How it works #1" />
           </div>
         </div>
       </div>
@@ -32,15 +28,9 @@ export default () => (
           <h3 className={styles.number}>02</h3>
           <div>
             <p>
-              When you’re in the Operate stage, and it comes time offboard a vendor,
-              just trigger the event in Operate panel. Indicate the specific vendor
-              to be offboarded here.
+              As events are triggered, the “instruction manual” for that event
+              kicks off the activities necessary to satisfy the appropriate policies.
             </p>
-            <p style={{ marginTop: '20px' }}>
-              (Note: Any <i>recurring</i> activities, like monthly Access Control
-              Reviews, will be triggered automatically for you.)
-            </p>
-            <img src={image2} alt="How it works #2" />
           </div>
         </div>
       </div>
@@ -50,12 +40,11 @@ export default () => (
           <h3 className={styles.number}>03</h3>
           <div>
             <p>
-              The team responsible for this workflow will receive an email, notifying
-              them that there is an activity to be conducted. By logging into the app,
-              they can see the specific worklow, with all the instructions that
-              you pre-approved.
+              The team responsible for completing the activities will receive
+              an email notifying them that there is work to be completed. By
+              logging into the app, they can see what needs to be done along
+              with specific instructions.
             </p>
-            <img src={image3} alt="How it works #3" />
           </div>
         </div>
       </div>
@@ -65,10 +54,9 @@ export default () => (
           <h3 className={styles.number}>04</h3>
           <div>
             <p>
-              The assignee conducts the workflow and marks the activity as “Complete”
-              in the application, creating an audit-ready log of what’s been done.
+              The required activity is tracked and the assigned team member can
+              mark it as complete, creating an audit-ready log of what’s been done.
             </p>
-            <img src={image4} alt="How it works #4" />
           </div>
         </div>
       </div>

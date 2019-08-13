@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import AptibleLayout from '../../components/layouts/AptibleLayout';
 import Hero from '../../components/comply/workflows/Hero';
 import Features from '../../components/comply/workflows/Features';
-import UseCases from '../../components/home/UseCases';
 import HowItWorks from '../../components/comply/workflows/HowItWorks';
 import WhoUses from '../../components/comply/WhoUses';
 import ZeroTo from '../../components/footer/ZeroTo';
@@ -16,7 +15,6 @@ export default () => (
     </Helmet>
     <Hero />
     <Features />
-    <UseCases />
     <HowItWorks />
     <WhoUses />
     <ZeroTo />
