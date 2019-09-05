@@ -2,7 +2,7 @@
 title: Terms of Service
 tracked_title: Terms of Service
 description: "Aptible Terms of Service"
-posted: 2018-03-13
+posted: 2019-09-06
 section: Legal
 sub_section: Agreements
 order: 0
@@ -20,7 +20,7 @@ template: legal
 [Support Policy]:/legal/support
 [Trademark Policy]:/legal/trademark
 
-Version 2.14 - July 2019
+Version 2.14 - September 2019
 
 Welcome, and thank you for your interest in Aptible! 
 

@@ -9,7 +9,7 @@ slug: /legal/privacy/
 template: legal
 ---
 
-Version 3.3 – September 5, 2019
+Version 3.2 – August 28, 2019
 
 At Aptible, our core mission is to help teams protect data on the internet. As a result, our goal is to set a high standard for protecting the privacy of your information. We want to be clear about how we collect, use, protect, and share your information, including your personal information, and the rights and choices you have about the ways in which you can help us protect your privacy.
 
@@ -236,7 +236,6 @@ To exercise any of these options, or for additional information about our privac
 Unfortunately, no data transmission over the Internet or data storage system can be guaranteed to be 100% secure. That said, we certainly try very hard, employing a variety of organizational, technical and administrative measures to provide a level of security appropriate to the risk associated with the personal information you trust us with. 
 
 To that end, we manage our data protection program consistent with ISO 27001, SOC 2, HITRUST, and applicable legal and regulatory requirements such as HIPAA and GDPR.
-
 
   * Aptible’s ISO 27001 certification for Aptible Deploy and Aptible Comply is available [here](/compliance/iso-27001-certification/).
 

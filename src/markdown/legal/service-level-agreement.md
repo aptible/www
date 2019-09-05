@@ -2,7 +2,7 @@
 title: Service Level Agreement
 tracked_title: Service Level Agreement
 description: "Aptible Deploy's service level agreement."
-posted: 2017-08-14
+posted: 2019-09-06
 section: Legal
 sub_section: Agreements
 order: 1
@@ -12,7 +12,7 @@ template: legal
 <!-- Reference Links -->
 [Terms of Service]:/legal/terms-of-service
 
-Version 1.6 - July 2019
+Version 1.6 - September 2019
 
 This Aptible Service Level Agreement (**"SLA"**) between Aptible, Inc. (**"Aptible"**, **"us"** or **"we"**) and users of the Aptible Services (**"you"**) governs the use of the Aptible Deploy Containerized Services under the provisions of the [Aptible Terms of Service](/legal/terms-of-service/) (the **"Terms"**).
 

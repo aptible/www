@@ -2,7 +2,7 @@
 title: Billing Policy
 tracked_title: Billing
 description: "Aptible's billing policy."
-posted: 2017-08-14
+posted: 2019-09-06
 section: Legal
 sub_section: Policies
 slug: /legal/billing/
@@ -11,7 +11,7 @@ template: legal
 <!-- Reference Links -->
 [Terms of Service]:/legal/terms-of-service
 
-Version 3.2 - July 2019
+Version 3.2 - September 2019
 
 This policy outlines how Aptible determines fees and charges, and performs billing. 
 

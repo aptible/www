@@ -2,7 +2,7 @@
 title: Acceptable Use Policy
 tracked_title: Acceptable Use
 description: "Aptible's acceptable use policy."
-posted: 2017-08-14
+posted: 2019-09-06
 section: Legal
 sub_section: Policies
 slug: /legal/acceptable-use/
@@ -11,7 +11,7 @@ template: legal
 <!-- Reference Links -->
 [Aptible Terms of Service]:/legal/terms-of-service
 
-Version 2.4 - July 2019
+Version 2.4 - September 2019
 
 Aptible needs to be able to make sure our customers use their Aptible superpowers for good, not evil. 
 

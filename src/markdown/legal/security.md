@@ -2,7 +2,7 @@
 title: Security Policy
 tracked_title: Security
 description: "Aptible's public security policy"
-posted: 2018-10-29
+posted: 2019-09-06
 section: Legal
 sub_section: Policies
 slug: /legal/security/
@@ -14,7 +14,7 @@ template: legal
 [contact us]:http://contact.aptible.com
 [Managed Host-based Intrusion Detection (HIDS)]:/enclave/managed-host-intrusion-detection-system
 
-Version 3.13 - July 2019
+Version 3.13 - September 2019
 
 This policy outlines: 1) Aptible's security practices and resources, and 2) your security obligations. 
 
