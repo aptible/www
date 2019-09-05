@@ -7,6 +7,7 @@ import logoImage from '../../images/aptible.svg';
 import Email from './Email';
 import ProductSelection from './ProductSelection';
 import Confirmation from './Confirmation';
+import Unqualified from './Unqualified';
 import { submitMarketoForm, COMPLY_SIGNUP_FORM, DEPLOY_SIGNUP_FORM, GENERIC_SIGNUP_FORM } from '../../lib/marketo';
 
 function Signup(props) {
@@ -37,7 +38,7 @@ class InnerSignup extends React.Component {
           this.redirectToDeploy(email);
         } else {
           if (this.state.scheduledCall === null) {
-            this.openChiliPiper();
+            this.qualifyComplySignup();
           }
         }
       } else {
@@ -51,7 +52,19 @@ class InnerSignup extends React.Component {
     if (productName === 'deploy') {
       this.redirectToDeploy(this.state.email);
     } else {
+      this.qualifyComplySignup();
+    }
+  }
+
+  isQualified = () => {
+    return this.state.email.match(/(test|gmail|yahoo|hotmail)/) === null
+  }
+
+  qualifyComplySignup = () => {
+    if (this.isQualified()) {
       this.openChiliPiper();
+    } else {
+      this.setState({ currentView: Unqualified });
     }
   }
 

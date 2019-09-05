@@ -65,6 +65,23 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
 
+        allResources: allContentfulResource {
+          edges {
+            node {
+              slug
+              subfolder
+            }
+          }
+        }
+
+        allWebinars: allContentfulWebinar {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
+
         allMarkdownWithSlug: allMarkdownRemark(
           filter: { frontmatter: { slug: { ne: null } } }
         ) {
@@ -168,6 +185,29 @@ exports.createPages = ({ graphql, actions }) => {
         });
       });
 
+      // Old resource pages
+      result.data.allResources.edges.forEach(({ node }) => {
+        createPage({
+          path: `${node.subfolder}/${node.slug}`,
+          component: path.resolve(`./src/templates/resource.js`),
+          context: {
+            slug: node.slug
+          },
+        });
+      });
+
+      // Webinar pages
+      result.data.allWebinars.edges.forEach(({ node }) => {
+        createPage({
+          path: `webinars/${node.slug}`,
+          component: path.resolve(`./src/templates/webinar.js`),
+          context: {
+            slug: node.slug
+          },
+        });
+      });
+
+      // Markdown pages
       result.data.allMarkdownWithSlug.edges.forEach(({ node }) => {
         if (node.frontmatter.slug && node.frontmatter.template) {
           createPage({

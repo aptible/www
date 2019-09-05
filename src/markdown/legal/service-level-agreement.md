@@ -18,7 +18,7 @@ This Aptible Service Level Agreement (**"SLA"**) between Aptible, Inc. (**"Aptib
 
 Unless otherwise provided herein, this SLA is subject to the provisions of the Terms.
 
-This SLA applies separately to each of your Aptible Deploy Dedicated Environments, as defined in the Terms. This SLA does not apply to Shared Environments or Gridiron.
+This SLA applies separately to each of your Aptible Deploy Dedicated Environments, as defined in the Terms. This SLA does not apply to Shared Environments or Aptible Comply.
 
 ### 1. Aptible Deploy Service Commitment: 99.95% Uptime
 Aptible will use commercially reasonable efforts to make your Aptible Deploy Containerized Services running in Dedicated Environments available with a Monthly Uptime Percentage of at least 99.95% during any monthly billing cycle (the **"Service Commitment"**). Subject to the SLA Exclusions, if we do not meet the Service Commitment, you will be eligible to receive a Service Credit.

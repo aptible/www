@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styles from './DeployCalculator.module.css';
 import PricingSlider from './PricingSlider';
 import ToolTip from '../shared/ToolTip';
@@ -178,7 +179,7 @@ class DeployCalculator extends React.Component {
                       <img src={checkmarkIcon} alt="checkmark" />
                     }
                   </div>
-                  With Managed HIDS
+                  With <Link to="/deploy/hids/">Managed HIDS</Link>
                   <ToolTip text={toolTips.hids} />
                 </div>
               </div>
@@ -236,7 +237,7 @@ class DeployCalculator extends React.Component {
                 </div>
               </div>
               <div className={styles.lineItemAmount}>
-                <span>$0.05</span>/Hour/Month
+                <span>$0.05</span>/Hour
               </div>
             </div>
             <div className={styles.pricingContainer}>

@@ -21,7 +21,7 @@ export default () => (
       </div>
 
       <div className={styles.login}>
-        <Button to="https://dashboard.aptible.com/login">Log In</Button>
+        <Button href="https://dashboard.aptible.com/login">Log In</Button>
       </div>
     </Grid>
   </div>

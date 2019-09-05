@@ -19,14 +19,14 @@ This Aptible HIPAA Breach Indemnification Agreement (**"BIA"**) between Aptible,
 Unless otherwise provided herein, this BIA is subject to the provisions of the Terms.
 
 ### 1. Applicability  
-This BIA applies only to specific accounts, Services, and data, for which you have a valid, signed HIPAA Business Associate Agreement (**"BAA"**) in place with Aptible. This BIA may cover use of both the Aptible Deploy and Gridiron products.
+This BIA applies only to specific accounts, Services, and data, for which you have a valid, signed HIPAA Business Associate Agreement (**"BAA"**) in place with Aptible. This BIA may cover use of both the Aptible Deploy and Aptible Comply products.
 
 This BIA does not apply to any account, Service, or data that is: 
 
 - Not subject to a valid BAA, or 
 - Where you have failed to apply the security controls and configurations required by the BAA
 
-For example, this BIA does not apply to Aptible Deploy Shared Environments, or to Gridiron accounts for which you do not have a BAA with Aptible.
+For example, this BIA does not apply to Aptible Deploy Shared Environments, or to Aptible Comply accounts for which you do not have a BAA with Aptible.
 
 ### 2. Definitions
 Capitalized words and phrases have the meaning specified in the Terms, which uses the definitions found in HIPAA where applicable.

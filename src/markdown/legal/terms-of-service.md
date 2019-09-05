@@ -49,7 +49,7 @@ The general idea of this Agreement is that we grant you a license to use the Ser
 In this Agreement:
 
 - **"Aptible,"** **"we,"** and **"us"** means Aptible Inc. 
-- The **"Services"** means the Aptible services, including Aptible Deploy, Gridiron, and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, and other services we provide.
+- The **"Services"** means the Aptible services, including Aptible Deploy, Aptible Comply, and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, and other services we provide.
 - Section 22 contains more defined terms.
 
 #### Summary 
@@ -58,7 +58,7 @@ You acknowledge and agree that, as provided in greater detail in this Agreement:
 - The Services are licensed, not sold to you, and that you may use the Services only as set forth in this Agreement;  
 - The Services are provided "as is" without warranties of any kind, and Aptible's liability to you is limited;  
 - You are solely responsible for protecting the privacy and legal rights of your End Users, except as provided for in a Business Associate Agreement or Data Use Agreement between you and Aptible;  
-- You are solely responsible for exporting Your Content and Gridiron materials from the Services prior to closing your Aptible account; and  
+- You are solely responsible for exporting Your Content and Aptible Comply materials from the Services prior to closing your Aptible account; and  
 - Disputes arising hereunder will be resolved by binding arbitration, and **BY ACCEPTING THIS AGREEMENT, YOU AND APTIBLE ARE EACH WAIVING THE RIGHT TO A TRIAL BY JURY OR TO PARTICIPATE IN A CLASS ACTION.** YOU AGREE TO GIVE UP YOUR RIGHT TO GO TO COURT to assert or defend your rights under this contract (except for matters that may be taken to small claims court). Your rights will be determined by a NEUTRAL ARBITRATOR and NOT a judge or jury and your claims cannot be brought as a class action. Please review the Arbitration Agreement in Section 19 below for the details regarding your agreement to arbitrate any disputes with Aptible.
 
 This Agreement takes effect when you click an "I Accept" button or checkbox presented with these terms, sign a contract that incorporates these terms by reference, or, if earlier, when you use any of the Services (the **"Effective Date"**).
@@ -107,7 +107,7 @@ You may terminate your account and this Agreement at any time in accordance with
 2. Configuring and enforcing user access policies and permissions for the Aptible Services, including your Aptible Deploy Containerized Services; and
 3. Providing legally adequate privacy notices for your users, and informing them that their information may be available to Aptible and/or our affiliates under certain circumstances, pursuant to our [Privacy Policy].
 
-We provide support and training to help you with these responsibilities. Please see our [support resources](/support), our [Support Policy], and our [training offerings](/gridiron).
+We provide support and training to help you with these responsibilities. Please see our [support resources](/support), our [Support Policy], and our [training offerings](/comply).
 
 ### 4. Fees and Charges
 **A. Payments and pricing.** You incur fees and charges based on your use of the Services. We bill as indicated in the Aptible [Billing Policy] or your purcahse order, as applicable. We may invoice you more frequently if we determine that your account is at risk of non-payment. Any outstanding balance becomes immediately due and payable upon termination of this Agreement for any reason.
@@ -196,7 +196,7 @@ This procedure is exclusively for notifying Aptible that your copyrighted materi
 3. All licenses granted to you in this Agreement are conditional on your continued compliance with this Agreement, and will immediately and automatically terminate if you do not comply with any term or condition of this Agreement.  
 4. During and after the Term, you will not assert, nor will you authorize, assist, or encourage any third party to assert, against us or any of our affiliates, customers, vendors, business partners, or licensors, any patent infringement or other intellectual property infringement claim regarding any Services you have used.
 
-**B. License to re-use your Gridiron documentation.** Notwithstanding the above, to the extent we have intellectual property rights in your Gridiron documentation, such as Gridiron policies, controls, templates, training, audit logs, other compliance deliverables, and other Gridiron work products, we grant you a perpetual license to use, make, adapt, and distribute copies to affiliates, directors, officers, employees, or contractors, or as needed to comply with any request of a governmental or regulatory body or a partner. This license is limited to use for your own internal business purposes. You may not resell such materials, or use them (or let them be used) to develop competing products or services. Any distribution you make to third parties must include these restrictions. You are responsible for exporting such materials from Gridiron before you cease to be a customer.
+**B. License to re-use your Aptible Comply documentation.** Notwithstanding the above, to the extent we have intellectual property rights in your Aptible Comply documentation, such as Aptible Comply policies, controls, templates, training, audit logs, other compliance deliverables, and other Aptible Comply work products, we grant you a perpetual license to use, make, adapt, and distribute copies to affiliates, directors, officers, employees, or contractors, or as needed to comply with any request of a governmental or regulatory body or a partner. This license is limited to use for your own internal business purposes. You may not resell such materials, or use them (or let them be used) to develop competing products or services. Any distribution you make to third parties must include these restrictions. You are responsible for exporting such materials from Aptible Comply before you cease to be a customer.
 
 **C. Our trademarks.** Aptible hereby grants you a limited, non-exclusive, royalty-free, non-transferable license, with no right to sub-license, to display the Aptible trademarks for the sole purpose of promoting or advertising that you use the Aptible Services. This licenses shall be exercised only in accordance with the current version of our [Trademark Policy]. You agree that all goodwill generated through your use of the Aptible trademarks shall inure to the benefit of Aptible.
 

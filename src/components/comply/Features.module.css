@@ -116,6 +116,12 @@
   float: right;
 }
 
+.workflows {
+  grid-row: 2;
+  grid-column: 2 / span 5;
+  margin: 100px 0 30px 0;
+}
+
 @media (--mobile) {
   .content {
     grid-column: 1 / span 7;
@@ -174,5 +180,9 @@
 
   .continuousHeadline {
     font-size: 30px;
+  }
+
+  .workflows {
+    grid-column: 1 / span 7;
   }
 }
