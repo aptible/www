@@ -49,7 +49,7 @@ The general idea of this Agreement is that we grant you a license to use the Ser
 In this Agreement:
 
 - **"Aptible,"** **"we,"** and **"us"** means Aptible Inc. 
-- The **"Services"** means the Aptible services, including Aptible Deploy, Aptible Comply, and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, and other services we provide.
+- The **"Services"** means the Aptible services, including Aptible Deploy (formerly known as Enclave), Aptible Comply (formerly known as Gridiron), and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, and other services we provide.
 - Section 22 contains more defined terms.
 
 #### Summary 
