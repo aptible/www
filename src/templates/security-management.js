@@ -10,11 +10,9 @@ import ChapterCards from '../components/security-management/ChapterCards';
 import ZeroTo from '../components/footer/ZeroTo';
 
 const pageTitles = {
-  1: 'Security Management Guide',
-  2: 'Getting Started With Security Management',
-  3: 'Designing Your Security Management System',
-  4: 'Security Training and Culture',
-  5: 'Examples of Security Management'
+  1: 'Introduction',
+  2: 'What Is Security Management',
+  3: 'Security Management Fundamentals'
 };
 
 export default ({ data, pageContext }) => {

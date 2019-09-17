@@ -18,10 +18,8 @@ const PAID_LANDING_PAGES = require('./src/data/paid-landing-pages.json');
 
 const SM_GUIDE_CHAPTERS = [
   { id: 1, path: 'security-management', title: 'Introduction'},
-  { id: 2, path: 'security-management/getting-started', title: 'Getting Started'},
-  { id: 3, path: 'security-management/design', title: 'Designing Your Security Management System'},
-  { id: 4, path: 'security-management/training-culture', title: 'Security Training and Culture'},
-  { id: 5, path: 'security-management/examples', title: 'Examples'},
+  { id: 2, path: 'security-management/what-it-is', title: 'What Is Security Management?'},
+  { id: 3, path: 'security-management/fundamentals', title: 'Security Management Fundamentals'},
 ];
 
 

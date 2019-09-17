@@ -25,10 +25,8 @@ class Subnav extends React.Component {
     return (
       <SidebarNav title="Chapters">
         <SidebarNavItem to="/security-management/" text="01: Introduction" />
-        <SidebarNavItem to="/security-management/getting-started/" text="02: Getting Started" />
-        <SidebarNavItem to="/security-management/design/" text="03: Designing The System" />
-        <SidebarNavItem to="/security-management/training-culture/" text="04: Security Training &amp; Culture" />
-        <SidebarNavItem to="/security-management/examples/" text="05: Examples" />
+        <SidebarNavItem to="/security-management/what-it-is/" text="02: What is Security Management" />
+        <SidebarNavItem to="/security-management/fundamentals/" text="03: Fundamentals" />
         <div className={styles.cta}>
           <Button onClickFn={this.openModal}>Download the PDF</Button>
         </div>

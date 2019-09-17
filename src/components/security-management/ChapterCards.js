@@ -13,46 +13,24 @@ export default ({ chapter, contentBlock }) => (
     <div className={styles.container}>
       <div className={styles.grid}>
 
-        <Link to="/security-management/getting-started/">
+        <Link to="/security-management/what-it-is/">
           <div className={styles.card}>
             <img src={chapterTwoIllustration} alt="Chapter 2" />
             <div className={styles.cardContent}>
               <div className={styles.arrow}><Arrow /></div>
-              <h4><span>02</span>Getting Started</h4>
-              <p>Defining scope, assessing risk, creating governance.</p>
+              <h4><span>02</span>What is Security Management?</h4>
+              <p>Security by design.</p>
             </div>
           </div>
         </Link>
 
-        <Link to="/security-management/design/">
+        <Link to="/security-management/fundamentals/">
           <div className={styles.card}>
             <img src={chapterThreeIllustration} alt="Chapter 3" />
             <div className={styles.cardContent}>
               <div className={styles.arrow}><Arrow /></div>
-              <h4><span>03</span>Designing The System</h4>
-              <p>The four major areas of risk.</p>
-            </div>
-          </div>
-        </Link>
-
-        <Link to="/security-management/training-culture/">
-          <div className={styles.card}>
-            <img src={chapterFourIllustration} alt="Chapter 4" />
-            <div className={styles.cardContent}>
-              <div className={styles.arrow}><Arrow /></div>
-              <h4><span>04</span>Security Training &amp; Culture</h4>
-              <p>The future of software and security.</p>
-            </div>
-          </div>
-        </Link>
-
-        <Link to="/security-management/examples/">
-          <div className={styles.card}>
-            <img src={chapterFiveIllustration} alt="Chapter 5" />
-            <div className={styles.cardContent}>
-              <div className={styles.arrow}><Arrow /></div>
-              <h4><span>05</span>Examples</h4>
-              <p>Success stories from across the globe.</p>
+              <h4><span>03</span>Fundamentals</h4>
+              <p>Defining scope, building governance, thinking about risk.</p>
             </div>
           </div>
         </Link>
