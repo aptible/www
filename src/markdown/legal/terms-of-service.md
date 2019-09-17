@@ -49,7 +49,7 @@ The general idea of this Agreement is that we grant you a license to use the Ser
 In this Agreement:
 
 - **"Aptible,"** **"we,"** and **"us"** means Aptible Inc. 
-- The **"Services"** means the Aptible services, including Aptible Deploy (formerly known as Enclave), Aptible Comply (formerly known as Gridiron), and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, and other services we provide.
+- The **"Services"** means the Aptible services, including Aptible Deploy, Aptible Comply, and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, and other services we provide.
 - Section 22 contains more defined terms.
 
 #### Summary 
@@ -316,6 +316,10 @@ This Agreement supersedes all other agreements between the parties relating to i
 ### 22. Definitions
 
 **"Acceptable Use Policy"** means the policy currently available at https://www.aptible.com/legal/acceptable-use, as it may be updated by us from time to time.
+
+**"Aptible Deploy"** means the Aptible Deploy container orchestration platform, formerly known as Enclave.
+
+**"Aptible Comply"** means the Aptible Comply compliance platform, formerly known as Gridiron.
 
 **"Application"** means an app you are running as an Aptible Deploy Containerized Service.
 
