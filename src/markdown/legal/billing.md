@@ -2,7 +2,7 @@
 title: Billing Policy
 tracked_title: Billing
 description: "Aptible's billing policy."
-posted: 2017-08-14
+posted: 2019-09-06
 section: Legal
 sub_section: Policies
 slug: /legal/billing/
@@ -11,7 +11,7 @@ template: legal
 <!-- Reference Links -->
 [Terms of Service]:/legal/terms-of-service
 
-Version 3.1 - August 2017
+Version 3.2 - September 2019
 
 This policy outlines how Aptible determines fees and charges, and performs billing. 
 
@@ -19,9 +19,9 @@ This policy outlines how Aptible determines fees and charges, and performs billi
 Aptible prices and invoice amounts are denominated in United States dollars.
 
 #### Base Fee
-Your Aptible account has a base fee for each product you use. Some accounts, such as Enclave Development Accounts, have a base fee of $0. If you want to lock in bulk pricing, just ask us for a higher base fee and more included resources.
+Your Aptible account has a base fee for each product you use. Some accounts, such as Aptible Deploy Development Accounts, have a base fee of $0. If you want to lock in bulk pricing, just ask us for a higher base fee and more included resources.
 
-You may use Enclave resources included in your base fee across any Enclave stack or environment. 
+You may use Aptible Deploy resources included in your base fee across any Aptible Deploy stack or environment. 
 
 Base fees are always paid in advance.
 
