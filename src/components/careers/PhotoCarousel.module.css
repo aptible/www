@@ -1,6 +1,6 @@
 .imageSelector {
   position: relative;
-  height: 570px;
+  height: 575px;
   overflow-x: scroll;
   margin: 100px 0;
 }
@@ -26,13 +26,22 @@
   height: 100%;
 }
 
+.video {
+  position: relative;
+  width: 977px;
+}
+
 @media (--mobile) {
   .imageSelector {
-    height: 320px;
+    height: 195px;
     margin: 60px 0;
   }
 
   .image {
-    height: 300px;
+    height: 169px;
+  }
+
+  .video {
+    width: 300px;
   }
 }

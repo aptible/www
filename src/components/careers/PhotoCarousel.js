@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './PhotoCarousel.module.css';
 import { Grid, Row } from '../grid/Grid';
+import WistiaVideo from '../shared/WistiaVideo';
 import team1 from '../../images/careers/team1.jpg';
 import team2 from '../../images/careers/team2.jpg';
 import team3 from '../../images/careers/team3.jpg';
@@ -30,6 +31,9 @@ class PhotoCarousel extends React.Component {
       <div>
         <div className={styles.imageSelector} ref={this.carouselRef}>
           <div className={styles.carouselContainer}>
+            <div className={styles.video}>
+              <WistiaVideo videoId="24g31c7wor" />
+            </div>
             {IMAGES.map((image, idx) =>
               <div key={idx} className={styles.image}>
                 <img src={image} key={idx} alt="Aptible team" />
