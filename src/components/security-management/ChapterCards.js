@@ -5,8 +5,6 @@ import styles from './ChapterCards.module.css';
 import Arrow from '../shared/Arrow';
 import chapterTwoIllustration from '../../images/security-management/sm2.jpg';
 import chapterThreeIllustration from '../../images/security-management/sm3.jpg';
-import chapterFourIllustration from '../../images/security-management/sm4.jpg';
-import chapterFiveIllustration from '../../images/security-management/sm5.jpg';
 
 export default ({ chapter, contentBlock }) => (
   <Grid>
