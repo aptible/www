@@ -76,10 +76,17 @@ h6.small {
   text-transform: uppercase;
 }
 
-p {
+p,
+table {
   font-size: 16px;
   letter-spacing: 0.03em;
   line-height: 1.5;
+}
+
+.S {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  line-height: 1.333;
 }
 
 p.L {
@@ -99,7 +106,8 @@ p.XL {
   letter-spacing: 0.03em;
 }
 
-strong {
+strong,
+.white-text {
   color: white;
 }
 
@@ -157,7 +165,8 @@ a:hover {
     line-height: 18px;
   }
 
-  p {
+  p,
+  table {
     font-size: 14px;
     line-height: 144%;
   }

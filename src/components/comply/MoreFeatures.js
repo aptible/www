@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Grid } from '../grid/Grid';
 import styles from './MoreFeatures.module.css';
 
@@ -38,8 +39,8 @@ export default () => (
       <div className={`${styles.feature} ${styles.workshops}`}>
         <h6>Workshops</h6>
         <p className="L">
-          Live one-on-one sessions to teach you about complex security tasks
-          and topics.
+          In-depth webinars to teach you about complex security tasks and
+          topics.
         </p>
       </div>
 
@@ -64,6 +65,14 @@ export default () => (
         <p className="L">
           Assign users to roles, groups, and policies and procedures in a couple
           of clicks.
+        </p>
+      </div>
+
+      <div className={`${styles.feature} ${styles.support}`}>
+        <h6>Included Support</h6>
+        <p className="L">
+          Our team is here to help you succeed. See more details on what’s
+          included <Link to="/comply/support">here</Link>.
         </p>
       </div>
     </Grid>
