@@ -3,7 +3,7 @@ import AptibleLayout from '../layouts/AptibleLayout';
 import { Grid } from '../grid/Grid';
 import styles from './ContentLayout.module.css';
 
-export default ({ title, SidebarComponent, children }) => (
+export default ({ title, SidebarComponent, children, fullWidth }) => (
   <AptibleLayout>
     <Grid>
       <div className={styles.title}>
@@ -16,7 +16,7 @@ export default ({ title, SidebarComponent, children }) => (
         </div>
       }
 
-      <div className={styles.content}>
+      <div className={fullWidth ? styles.contentFullWidth : styles.content}>
         {children}
       </div>
     </Grid>

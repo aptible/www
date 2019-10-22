@@ -1,0 +1,13 @@
+.block {
+  grid-column: 1 / span 4;
+}
+
+.blockFull {
+  grid-column: 1 / -1;
+}
+
+@media (--mobile) {
+  .block {
+    grid-column: 1 / -1;
+  }
+}
