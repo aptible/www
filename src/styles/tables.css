@@ -1,6 +1,6 @@
 table {
-  background-color: #132433;
-  border: 1px solid #192a36;
+  background-color: var(--aptible-black-light);
+  border: 1px solid var(--grid-lines-color);
   border-collapse: collapse;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -9,7 +9,7 @@ table {
 
 th,
 td {
-  border: 1px solid #192a36;
+  border: 1px solid var(--grid-lines-color);
   padding: 18px;
   text-align: left;
 }
@@ -20,7 +20,7 @@ th {
 }
 
 td {
-  color: rgba(255, 255, 255, .7);
+  color: var(--white-seventy);
 }
 
 .table-footnote {
@@ -52,8 +52,8 @@ td {
   }
   
   .table-responsive tr {
-    background-color: #132433;
-    border: 1px solid #192a36;
+    background-color: var(--aptible-black-light);
+    border: 1px solid var(--grid-lines-color);
     display: block;
     margin-bottom: 12px;
   }
