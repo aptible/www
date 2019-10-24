@@ -43,7 +43,7 @@ class InnerDownload extends React.Component {
     };
 
     submitMarketoForm(SECURITY_MANAGEMENT_GUIDE_FORM, payload, () => {
-      window.location = '/assets/security-management-guide.pdf';
+      window.location = 'https://pages.aptible.com/rs/620-GAP-535/images/2019.10.17%20Security%20Management%20Guide.pdf';
     });
   }
 
