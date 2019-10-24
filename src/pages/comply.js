@@ -7,7 +7,6 @@ import UseCases from '../components/home/UseCases';
 import Features from '../components/comply/Features';
 import ContinuouslyImprove from '../components/comply/ContinuouslyImprove';
 import BeyondCompliance from '../components/comply/BeyondCompliance';
-import ManagedOps from '../components/comply/ManagedOps';
 import HowItWorks from '../components/comply/HowItWorks';
 import WhoUses from '../components/comply/WhoUses';
 import MoreFeatures from '../components/comply/MoreFeatures';
@@ -32,7 +31,6 @@ export default ({ data }) => (
     <Features />
     <ContinuouslyImprove />
     <BeyondCompliance />
-    <ManagedOps />
     <div id="use-cases">
       <UseCases />
     </div>
