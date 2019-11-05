@@ -9,7 +9,7 @@ slug: /legal/subvendor-directory/
 template: legal
 ---
 
-Last updated: February 27, 2019
+Last updated: November 4, 2019
 
 Aptible shares information with service providers and other third parties who perform services on our behalf.
 
@@ -33,12 +33,12 @@ This page provides a list of vendors with whom we share personal information as 
 | [Postmark](https://postmarkapp.com) | Email | United States |
 | [Revue](https://www.getrevue.co) | Email | The Netherlands |
 | [Formkeep](https://formkeep.com) | Form submission | United States |
-| [Instapage](https://instapage.com) | Landing Pages | United States |
 | [New Relic](https://newrelic.com) | Logging and Monitoring | United States |
 | [SolarWinds (Papertrail)](https://www.solarwinds.com/papertrail) | Logging and Monitoring | United States |
-| [Autopilot](https://www.drift.com) | Marketing automation | Australia |
+| [Autopilot](https://www.autopilothq.com) | Marketing automation | Australia |
+| [Marketo](https://www.marketo.com) | Marketing automation | United States |
+| [Hotjar](https://www.hotjar.com) | Analytics | Malta |
 | [Drift](https://www.drift.com) | Onsite chat | United States |
-| [Intercom](https://www.intercom.com) | Onsite chat | United States |
 | [Stripe](https://stripe.com) | Payment processing | United States |
 | [Zendesk](https://www.zendesk.com) | Support | United States |
 | [Zoom](https://zoom.us) | Webinar and meeting hosting | United States |
