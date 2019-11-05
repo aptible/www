@@ -73,7 +73,7 @@ export default () => (
           <div className={styles.bulletIcon}>{reportIcon}</div>
           <h5>HIDS Compliance Report</h5>
           <p>
-            You can optionally subscribe to the Enclave HIDS Compliance Report
+            You can optionally subscribe to the Deploy HIDS Compliance Report
             to provide your customers and auditors evidence that you are using
             HIDS to monitor, analyze, and remediate security events.
           </p>
