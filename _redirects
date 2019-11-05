@@ -626,7 +626,9 @@
 /support/topics/troubleshooting/what-is-a-csr/ /documentation/enclave/troubleshooting/csr-how-to.html
 /technology/ /enclave/
 /training/ /
-/assets/aptible-enclave-division-of-responsibilities.pdf /assets/aptible-enclave-security-division-of-responsibilities.pdf
+/assets/aptible-enclave-division-of-responsibilities.pdf /assets/deploy-division-of-responsibilities.pdf
+/assets/aptible-enclave-security-division-of-responsibilities.pdf /assets/deploy-division-of-responsibilities.pdf
+/assets/aptible-enclave-reference-architecture.pdf /assets/deploy-reference-architecture.pdf
 /resources/enclave-reference-architecture-and-division-of-responsibilities/ /deploy/features/
 /resources/enclave-reference-architecture-division-of-responsibilities/ /deploy/features/
 /assets/aptible-reference-architecture.pdf /deploy/features/
