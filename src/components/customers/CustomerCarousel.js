@@ -33,7 +33,7 @@ const customers = [
     headline: (
       <React.Fragment>
         <h1 className={styles.quoteStart}>&ldquo;We needed a system that</h1>
-        <h1>made it easy to track our compliance efforts&hellip;</h1>
+        <h1>made it easy to operate a Security Management program&hellip;</h1>
         <h1>with Aptible we've done that</h1>
         <h1>without having to hire a compliance team.&rdquo;</h1>
       </React.Fragment>

@@ -72,9 +72,10 @@ class Hero extends React.Component {
               <img src={atriumLogo} alt="atrium logo" className={styles.logo} />
 
               <p>
-                &ldquo;We needed a system that made it easy to track our compliance
-                efforts and establish information Security Management&hellip;
-                with Aptible we've done that without having to hire a full-time
+                &ldquo;We needed a system that made it easy to operate a 
+                Security Management program, that tracked our efforts and 
+                helped us share our position with customers&hellip; with
+                Aptible we've done that without having to hire a full-time
                 compliance team.&rdquo;
               </p>
 

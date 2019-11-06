@@ -4,26 +4,24 @@ import CheckmarkUnorderedList from '../shared/CheckmarkUnorderedList';
 import styles from './Features.module.css';
 import thumbsUpArrow from '../../images/comply/thumbs-up.svg';
 
-const clearPathIcon = (
+const automationIcon = (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M23 25L45 3" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M5 4L17 16" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M5 16L17 4" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M32 31L44 43" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M32 43L44 31" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M11 45C15.4183 45 19 41.4183 19 37C19 32.5817 15.4183 29 11 29C6.58172 29 3 32.5817 3 37C3 41.4183 6.58172 45 11 45Z" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M31 3H45V17" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M30 20H37C41.971 20 46 15.971 46 11C46 6.029 41.971 2 37 2H27" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M26 38H11C6.029 38 2 33.971 2 29C2 24.029 6.029 20 11 20H18" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M20 32L26 38L20 44" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M18 2H21" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M24 26C27.3137 26 30 23.3137 30 20C30 16.6863 27.3137 14 24 14C20.6863 14 18 16.6863 18 20C18 23.3137 20.6863 26 24 26Z" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
   </svg>
 );
 
-const headStartIcon = (
+const collabIcon = (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M2 24H44" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M2 10H18" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M2 38H32" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M38 18L44 24L38 30" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M12 4L18 10L12 16" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M26 32L32 38L26 44" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M32 37L34 39L38 35" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M35 46C39.9706 46 44 41.9706 44 37C44 32.0294 39.9706 28 35 28C30.0294 28 26 32.0294 26 37C26 41.9706 30.0294 46 35 46Z" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M45 16H3" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M21 42H6C5.20435 42 4.44129 41.6839 3.87868 41.1213C3.31607 40.5587 3 39.7956 3 39V9C3 8.20435 3.31607 7.44129 3.87868 6.87868C4.44129 6.31607 5.20435 6 6 6H42C42.7956 6 43.5587 6.31607 44.1213 6.87868C44.6839 7.44129 45 8.20435 45 9V25.012" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M13 2V10" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M35 2V10" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
   </svg>
 );
 
@@ -43,7 +41,7 @@ export default () => (
         <div className={styles.content}>
           <h5>Comply takes you from zero to audit-ready&hellip;</h5>
           <h1>
-            Build your Security <br className="desktopOnly" />
+            Automate your Security <br className="desktopOnly" />
             Management <br className="desktopOnly" />
             Program
           </h1>
@@ -63,25 +61,6 @@ export default () => (
     <Grid>
       <div className={styles.bullets}>
         <div className={styles.bullet}>
-          <div className={styles.bulletIcon}>{clearPathIcon}</div>
-          <h5>A Clear Path to Compliance</h5>
-          <p>
-            Aptible Comply makes it easy to understand exactly what you need to
-            do, step-by-step, to become and stay compliant.
-          </p>
-        </div>
-
-        <div className={styles.bullet}>
-          <div className={styles.bulletIcon}>{headStartIcon}</div>
-          <h5>A Head Start</h5>
-          <p>
-            Comply comes with a huge library of content to bootstrap your
-            security program quickly. Implement best practices for DevOps,
-            IaaS and SaaS management, HR, IT, and get audit-ready quickly.
-          </p>
-        </div>
-
-        <div className={styles.bullet}>
           <div className={styles.bulletIcon}>{securityIcon}</div>
           <h5>Security and Compliance Expertise</h5>
           <p>
@@ -90,11 +69,31 @@ export default () => (
             and compliance questions.
           </p>
         </div>
+
+        <div className={styles.bullet}>
+          <div className={styles.bulletIcon}>{automationIcon}</div>
+          <h5>Automation</h5>
+          <p>
+            Spend less time managing systems, spreadsheets, and follow-up. We
+            provide comprehensive software that maps, automates, and reminds, so
+            that your team and your Security Management are more efficient.
+          </p>
+        </div>
+
+        <div className={styles.bullet}>
+          <div className={styles.bulletIcon}>{collabIcon}</div>
+          <h5>Collaboration and Delegation</h5>
+          <p>
+            Turn compliance requirements into discrete tasks with owners and
+            deadlines. Requirements are mapped to events with easy to understand
+            timelines and triggers.
+          </p>
+        </div>
       </div>
 
       <div className={styles.guaranteeContainer}>
         <div className={styles.guarantee}>
-          <h2>You'll pass your first audit, guaranteed.</h2>
+          <h2>Improve your security and save time.</h2>
 
           <div className={styles.guaranteeList}>
             <CheckmarkUnorderedList>

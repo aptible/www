@@ -66,22 +66,31 @@ export default () => (
     <Grid>
       <div className={styles.bullets}>
         <div className={styles.bullet}>
-          <div className={styles.bulletIcon}>{automationIcon}</div>
-          <h5>Automation</h5>
+          <div className={styles.bulletIcon}>{systemIcon}</div>
+          <h5>Vendors work for you</h5>
           <p>
-            Spend less time managing systems, spreadsheets, and follow-up. We
-            provide comprehensive software that maps, automates, and reminds, so
-            that your team and your Security Management are more efficient.
+            Comply enables you to automatically track your Vendor's security
+            posture and understand your 3rd party risk exposure.
           </p>
         </div>
 
         <div className={styles.bullet}>
           <div className={styles.bulletIcon}>{collabIcon}</div>
-          <h5>Collaboration and Delegation</h5>
+          <h5>Streamline Asset Management</h5>
           <p>
-            Turn compliance requirements into discrete tasks with owners and
-            deadlines. Requirements are mapped to events with easy to understand
-            timelines and triggers.
+            Comply integrates with your assets and automates the process of
+            reporting on their alignment with your policies. You get a real-time
+            assessment of your risk exposure.
+          </p>
+        </div>
+
+        <div className={styles.bullet}>
+          <div className={styles.bulletIcon}>{automationIcon}</div>
+          <h5>Automate Access Control Reviews</h5>
+          <p>
+            Comply automatically checks your users' access levels against the
+            access levels set forth in your policies, notifying you of instances
+            that are out of compliance and correcting any anomalies.
           </p>
         </div>
 

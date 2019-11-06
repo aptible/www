@@ -46,9 +46,10 @@ const fortmaticQuote = (
 
 const atriumQuote = (
   <span>
-    We needed a system that made it easy to track our compliance efforts and
-    establish an information Security Management Program&hellip; with Aptible we've
-    done that without having to hire a full time compliance team.
+    We needed a system that made it easy to operate a Security Management program,
+    that tracked our efforts and helped us share our position with
+    customers&hellip; with Aptible we've done that without having to hire a full-time
+    compliance team.
   </span>
 );
 
