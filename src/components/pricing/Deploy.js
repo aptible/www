@@ -92,24 +92,25 @@ class Deploy extends React.Component {
 
           <div className={styles.deployAccountContainer}>
             <div className={styles.deployAccountType}>
-              <PricingBlock title="Development Account" amount="$0" timePeriod="Per Month" />
+              <PricingBlock title="Development Account" amount="$0" timePeriod="Per Month Base Fee" />
               <h6 className="small">Base Platform</h6>
               <CheckmarkUnorderedList>
                 <li>Shared stack</li>
                 <li>No commitment</li>
+                <li>Only pay for the resources you use</li>
                 <li>First $500 worth of resources are complimentary</li>
               </CheckmarkUnorderedList>
             </div>
 
             <div className={styles.deployAccountType}>
-              <PricingBlock title="Production Account" amount="$999" timePeriod="Per Month" />
+              <PricingBlock title="Production Account" amount="$999" timePeriod="Per Month Base Fee" />
               <h6 className="small">Base Platform</h6>
               <CheckmarkUnorderedList>
                 <li><strong>$1299/mo</strong> with no annual commitment</li>
                 <li><strong>6 GB</strong> App/DB Container RAM</li>
                 <li><strong>1 TB</strong> encrypted Database Disk, including automatic backups</li>
                 <li><strong>4</strong> TLS endpoints</li>
-                <li>Pay-as-you-use for additional Resources (beyond the complimentary $500)</li>
+                <li>Pay for additional resources as you use them</li>
               </CheckmarkUnorderedList>
             </div>
           </div>
