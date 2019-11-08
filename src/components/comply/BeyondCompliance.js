@@ -14,9 +14,9 @@ export default () => (
             Beyond Compliance
           </h1>
           <p className="L">
-            Compliance is what you need to do, it's the requirements. What you
-            really want is to move Beyond Compliance, so that you're protecting
-            data and being secure.
+            Compliance is what you need to do: it's the requirement. Aptible
+            Comply helps you move Beyond Compliance, to protect data and stay
+            secure.
           </p>
 
           <div className={styles.beyondLeft}>

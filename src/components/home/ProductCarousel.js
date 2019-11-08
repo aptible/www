@@ -9,7 +9,7 @@ const ALL_PRODUCTS = [
     id: 'comply',
     url: '/comply/',
     name: 'Aptible Comply',
-    description: 'Simplify the audit process and improve your security.'
+    description: 'Simplify the audit process and strengthen your security.'
   },
   {
     id: 'deploy',

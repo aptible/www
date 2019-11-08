@@ -77,7 +77,7 @@ class ZeroTo extends React.Component {
     return (
       <div className={styles.zero}>
         <Grid rows="2">
-          <div className={styles.zeroTo}><h1>Zero to</h1></div>
+          <div className={styles.zeroTo}><h1>Beyond</h1></div>
           <div className={styles.arrow}><img src={arrowImage} alt="Arrow" /></div>
           <div className={styles.protocols} ref={this.tickerRef}>
             <div className={styles.protocolTicker}>

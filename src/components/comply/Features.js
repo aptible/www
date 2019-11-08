@@ -39,16 +39,14 @@ export default () => (
     <div className={styles.intro}>
       <Grid>
         <div className={styles.content}>
-          <h5>Comply takes you from zero to audit-ready&hellip;</h5>
           <h1>
-            Automate your Security <br className="desktopOnly" />
-            Management <br className="desktopOnly" />
-            Program
+            Automate <br className="desktopOnly" />
+            Security
+            and Compliance
           </h1>
           <p className="L">
-            Achieve your security and compliance goals quicker with clear,
-            relevant security management controls, collaboration and delegation
-            to lower friction, and incredibly fast, easy results.
+            Achieve your security and compliance goals with expert advice,
+            automation, and collaborative tooling.
           </p>
 
           <div className={styles.thumbsUp}>
@@ -76,7 +74,7 @@ export default () => (
           <p>
             Spend less time managing systems, spreadsheets, and follow-up. We
             provide comprehensive software that maps, automates, and reminds, so
-            that your team and your Security Management are more efficient.
+            that your team and your Security Management is more efficient.
           </p>
         </div>
 
@@ -93,14 +91,14 @@ export default () => (
 
       <div className={styles.guaranteeContainer}>
         <div className={styles.guarantee}>
-          <h2>Improve your security and save time.</h2>
+          <h2>Why it matters</h2>
 
           <div className={styles.guaranteeList}>
             <CheckmarkUnorderedList>
               <li>Shorter sales cycles</li>
               <li>Higher win rate for enterprise deals</li>
-              <li>Quicker vendor security assessments</li>
-              <li>Easy to maintain security and compliance documentation</li>
+              <li>Breeze through Vendor Security Assessments</li>
+              <li>Spend less time on evidence collection for audits</li>
             </CheckmarkUnorderedList>
           </div>
         </div>

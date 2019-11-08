@@ -9,11 +9,12 @@
 .content {
   position: relative;
   grid-column: 2 / span 4;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .continuousHeadline {
   font-size: 52px;
+  padding-top: 30px;
 }
 
 .intro h1 {
@@ -64,7 +65,7 @@
 
 .thumbsUp {
   position: absolute;
-  top: 167px;
+  top: 130px;
   right: -143px;
   z-index: 2;
 }
@@ -180,6 +181,7 @@
 
   .continuousHeadline {
     font-size: 30px;
+    padding-top: 0;
   }
 
   .workflows {

@@ -46,14 +46,12 @@ export default () => (
     <div className={styles.intro}>
       <Grid>
         <div className={styles.content}>
-          <h5>&hellip;to seamless, scalable security operations</h5>
           <h1 className={styles.continuousHeadline}>
             Continuously improve your company's security
           </h1>
           <p className="L">
-            Software that helps you improve your security by making the operation
-            of your Security Management Program repeatable, without sacrificing
-            focus on growth.
+            Streamline your Security and Compliance without sacrificing
+            security itself.
           </p>
 
           <div className={styles.toSeamless}>
@@ -66,10 +64,10 @@ export default () => (
     <Grid>
       <div className={styles.bullets}>
         <div className={styles.bullet}>
-          <div className={styles.bulletIcon}>{systemIcon}</div>
+          <div className={styles.bulletIcon}>{automationIcon}</div>
           <h5>Vendors work for you</h5>
           <p>
-            Comply enables you to automatically track your Vendor's security
+            Comply enables you to automatically track your vendors' security
             posture and understand your 3rd party risk exposure.
           </p>
         </div>
@@ -78,19 +76,9 @@ export default () => (
           <div className={styles.bulletIcon}>{collabIcon}</div>
           <h5>Streamline Asset Management</h5>
           <p>
-            Comply integrates with your assets and automates the process of
-            reporting on their alignment with your policies. You get a real-time
-            assessment of your risk exposure.
-          </p>
-        </div>
-
-        <div className={styles.bullet}>
-          <div className={styles.bulletIcon}>{automationIcon}</div>
-          <h5>Automate Access Control Reviews</h5>
-          <p>
-            Comply automatically checks your users' access levels against the
-            access levels set forth in your policies, notifying you of instances
-            that are out of compliance and correcting any anomalies.
+            Conduct asset reviews, access control reviews, and more using
+            Workflows that automatically notify asset owners and track
+            evidence.
           </p>
         </div>
 
