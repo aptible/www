@@ -6,15 +6,15 @@ const items = [
   {
     title: 'Vendor Security Assessments and External Audits',
     content: <p className="L">
-      Aptible Comply gives you the tools you need to speak fluently about your
-      security program to customers and external auditors.
+      Aptible Comply and Deploy give you the tools you need to showcase your
+      security program and build trust with customers and external auditors.
     </p>
   },
   {
     title: 'Audit Readiness for Security Standards',
     content: <p className="L">
-      Aptible Comply and Deploy offer the most comprehensive solution to
-      achieving information security standards.
+      Aptible Comply and Deploy offer the most comprehensive solution to ensuring
+      that you're prepared for your annual audit.
     </p>
   },
   {
