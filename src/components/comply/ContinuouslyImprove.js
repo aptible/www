@@ -2,9 +2,9 @@ import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './Features.module.css';
 import toSeamlessArrow from '../../images/comply/to-seamless.svg';
-import chatIllustration from '../../images/comply/chat.png';
-import screenshotIllustration from '../../images/comply/screenshot.png';
-import dpaIllustration from '../../images/comply/dpa.png';
+import vmIllustration from '../../images/comply/vendor-management.png';
+import assetIllustration from '../../images/comply/assets.svg';
+import aclIllustration from '../../images/comply/acl.svg';
 
 const automationIcon = (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,17 +13,6 @@ const automationIcon = (
     <path d="M20 32L26 38L20 44" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
     <path d="M18 2H21" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
     <path d="M24 26C27.3137 26 30 23.3137 30 20C30 16.6863 27.3137 14 24 14C20.6863 14 18 16.6863 18 20C18 23.3137 20.6863 26 24 26Z" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-  </svg>
-);
-
-const collabIcon = (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M32 37L34 39L38 35" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M35 46C39.9706 46 44 41.9706 44 37C44 32.0294 39.9706 28 35 28C30.0294 28 26 32.0294 26 37C26 41.9706 30.0294 46 35 46Z" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M45 16H3" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M21 42H6C5.20435 42 4.44129 41.6839 3.87868 41.1213C3.31607 40.5587 3 39.7956 3 39V9C3 8.20435 3.31607 7.44129 3.87868 6.87868C4.44129 6.31607 5.20435 6 6 6H42C42.7956 6 43.5587 6.31607 44.1213 6.87868C44.6839 7.44129 45 8.20435 45 9V25.012" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M13 2V10" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
-    <path d="M35 2V10" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
   </svg>
 );
 
@@ -38,6 +27,29 @@ const systemIcon = (
     <path d="M32 10H40" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
     <path d="M2 16H46" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
     <path d="M46 4H2V44H46V4Z" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+  </svg>
+);
+
+const assetIcon = (
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 24H44" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M2 10H18" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M2 38H32" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M38 18L44 24L38 30" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M12 4L18 10L12 16" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+    <path d="M26 32L32 38L26 44" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" />
+  </svg>
+);
+
+const aclIcon = (
+  <svg width="50" height="60" viewBox="0 0 50 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M49 1H1V58.6H49V1Z" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square" />
+    <path d="M24.04 16.3601H39.4" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecapp="square" />
+    <path d="M9.64001 16.36L11.56 18.28L17.32 12.52" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square" />
+    <path d="M24.04 29.8H39.4" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square" />
+    <path d="M9.64001 29.8L11.56 31.72L17.32 25.96" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square" />
+    <path d="M24.04 43.24H39.4" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square" />
+    <path d="M12.52 46.1201C14.1106 46.1201 15.4 44.8307 15.4 43.2401C15.4 41.6495 14.1106 40.3601 12.52 40.3601C10.9294 40.3601 9.64001 41.6495 9.64001 43.2401C9.64001 44.8307 10.9294 46.1201 12.52 46.1201Z" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square" />
   </svg>
 );
 
@@ -61,9 +73,13 @@ export default () => (
       </Grid>
     </div>
 
-    <Grid>
-      <div className={styles.bullets}>
-        <div className={styles.bullet}>
+    <div className={styles.bulletsWithImages}>
+      <Grid>
+        <div className={styles.vendorsIllustration}>
+          <img src={vmIllustration} alt="Vendor management" />
+        </div>
+
+        <div className={`${styles.vendorsBullet} ${styles.bullet}`}>
           <div className={styles.bulletIcon}>{automationIcon}</div>
           <h5>Vendors work for you</h5>
           <p>
@@ -72,8 +88,12 @@ export default () => (
           </p>
         </div>
 
-        <div className={styles.bullet}>
-          <div className={styles.bulletIcon}>{collabIcon}</div>
+        <div className={styles.assetIllustration}>
+          <img src={assetIllustration} alt="Asset management" />
+        </div>
+
+        <div className={`${styles.assetBullet} ${styles.bullet}`}>
+          <div className={styles.bulletIcon}>{assetIcon}</div>
           <h5>Streamline Asset Management</h5>
           <p>
             Conduct asset reviews, access control reviews, and more using
@@ -82,7 +102,22 @@ export default () => (
           </p>
         </div>
 
-        <div className={styles.bullet}>
+        <div className={styles.aclIllustration}>
+          <img src={aclIllustration} alt="Access control reviews" />
+        </div>
+
+        <div className={`${styles.aclBullet} ${styles.bullet}`}>
+          <div className={styles.bulletIcon}>{aclIcon}</div>
+          <h5>Automate Access Control Reviews</h5>
+          <p>
+            Aptible Comply automatically checks your users' access levels
+            against access levels set forth in your policies, notifying you
+            of instances that are out of compliance and correcting any
+            anomalies.
+          </p>
+        </div>
+
+        <div className={`${styles.recordBullet} ${styles.bullet}`}>
           <div className={styles.bulletIcon}>{systemIcon}</div>
           <h5>System of Record</h5>
           <p>
@@ -92,13 +127,7 @@ export default () => (
             build trust with customers and regulators.
           </p>
         </div>
-      </div>
-
-      <div className={styles.screenshots}>
-        <img src={chatIllustration} className={styles.chat} alt="chat" />
-        <img src={screenshotIllustration} className={styles.screenshot} alt="chat" />
-        <img src={dpaIllustration} className={styles.dpa} alt="chat" />
-      </div>
-    </Grid>
+      </Grid>
+    </div>
   </div>
 );
