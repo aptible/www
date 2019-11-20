@@ -44,7 +44,7 @@ const assetIcon = (
 const aclIcon = (
   <svg width="50" height="60" viewBox="0 0 50 60" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M49 1H1V58.6H49V1Z" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square" />
-    <path d="M24.04 16.3601H39.4" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecapp="square" />
+    <path d="M24.04 16.3601H39.4" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square" />
     <path d="M9.64001 16.36L11.56 18.28L17.32 12.52" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square" />
     <path d="M24.04 29.8H39.4" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square" />
     <path d="M9.64001 29.8L11.56 31.72L17.32 25.96" stroke="#FDB515" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="square" />

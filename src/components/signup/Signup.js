@@ -30,9 +30,9 @@ class InnerSignup extends React.Component {
     };
   }
 
-  setEmail = (email, marketingConsent) => {
+  setEmail = (email, marketingConsent, personaAnaswer) => {
     this.setState({ email, marketingConsent });
-    this.sendToMarketo(email, marketingConsent, () => {
+    this.sendToMarketo(email, marketingConsent, personaAnaswer, () => {
       if (this.state.product) {
         if (this.state.product === 'deploy') {
           this.redirectToDeploy(email);
@@ -86,12 +86,16 @@ class InnerSignup extends React.Component {
     }
   }
 
-  sendToMarketo = (email, marketingConsent, callback) => {
+  sendToMarketo = (email, marketingConsent, personaAnaswer, callback) => {
     const payload = {
       Email: email,
       Contact_Consent__c: marketingConsent,
       LeadSource: 'Website Signup'
     };
+
+    if (personaAnaswer) {
+      payload['Persona_identification__c'] = personaAnaswer;
+    }
 
     submitMarketoForm(this.marketoFormId(), payload, callback);
   }

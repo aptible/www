@@ -2,6 +2,14 @@ import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './Email.module.css';
 import Button from '../buttons/Button';
+import Checkbox from '../shared/Checkbox';
+
+const PersonaOption = ({ answer, clickFn, currentAnswer }) => (
+  <div className={styles.personaOption} onClick={() => clickFn(answer)}>
+    <Checkbox checked={answer === currentAnswer} />
+    <span>{answer}</span>
+  </div>
+);
 
 class Email extends React.Component {
   constructor(props) {
@@ -9,6 +17,7 @@ class Email extends React.Component {
     this.state = {
       email: '',
       invalidEmail: false,
+      personaAnswer: '',
       marketingConsent: null
     };
   }
@@ -21,9 +30,22 @@ class Email extends React.Component {
     this.setState({ marketingConsent: e.target.value });
   }
 
+  personaChange = (persona) => {
+    if (persona === this.state.personaAnswer) {
+      this.setState({ personaAnswer: '' });
+    } else {
+      this.setState({ personaAnswer: persona });
+    }
+  }
+
   buttonClick = () => {
     if (this.state.email.length > 0 && this.state.email.indexOf('@') !== -1) {
-      this.props.setEmail(this.state.email, this.state.marketingConsent);
+      if (this.props.signupState.product === 'comply' && this.state.personaAnswer === '') {
+        alert('Please tell us what\'s most important to you right now');
+        return;
+      }
+
+      this.props.setEmail(this.state.email, this.state.marketingConsent, this.state.personaAnswer);
     } else {
       this.setState({ invalidEmail: true });
     }
@@ -40,6 +62,34 @@ class Email extends React.Component {
           <div className={styles.register}>
             <p>Register with your work email</p>
           </div>
+
+          {this.props.signupState.product === 'comply' &&
+            <div className={styles.persona}>
+              <h6>What’s most important to you right now?</h6>
+
+              <div className={styles.personaOptions}>
+                <PersonaOption
+                  answer="Putting basic policies in place"
+                  clickFn={this.personaChange}
+                  currentAnswer={this.state.personaAnswer} />
+
+                <PersonaOption
+                  answer="Preparing for our first audit"
+                  clickFn={this.personaChange}
+                  currentAnswer={this.state.personaAnswer} />
+
+                <PersonaOption
+                  answer="Streamlining our existing security/compliance processes"
+                  clickFn={this.personaChange}
+                  currentAnswer={this.state.personaAnswer} />
+
+                <PersonaOption
+                  answer="Other"
+                  clickFn={this.personaChange}
+                  currentAnswer={this.state.personaAnswer} />
+              </div>
+            </div>
+          }
 
           <div className={styles.input}>
             <input
