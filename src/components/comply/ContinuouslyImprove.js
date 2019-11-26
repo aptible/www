@@ -81,7 +81,7 @@ export default () => (
 
         <div className={`${styles.vendorsBullet} ${styles.bullet}`}>
           <div className={styles.bulletIcon}>{automationIcon}</div>
-          <h5>Vendors work for you</h5>
+          <h5>Vendors Work For You</h5>
           <p>
             Comply enables you to automatically track your vendors' security
             posture and understand your 3rd party risk exposure.
