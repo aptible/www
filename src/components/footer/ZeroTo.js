@@ -3,7 +3,6 @@ import styles from './ZeroTo.module.css';
 import { Grid } from '../grid/Grid';
 import SignupButton from '../signup/SignupButton';
 import arrowImage from '../../images/arrows/zero-to.svg';
-import GridLinesForSection from '../grid/GridLinesForSection';
 import { throttle } from '../../lib/util';
 
 const TARGET_VIEWPORT_PERCENTAGE = 0.5;
@@ -96,8 +95,6 @@ class ZeroTo extends React.Component {
             <SignupButton text="Get Started" theme="black" />
           </div>
         </Grid>
-
-        <GridLinesForSection />
       </div>
     );
   }

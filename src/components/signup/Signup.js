@@ -2,7 +2,6 @@ import React from 'react';
 import Portal from '../shared/Portal';
 import styles from './Signup.module.css';
 import { Grid } from '../grid/Grid';
-import GridLinesForSection from '../grid/GridLinesBackground';
 import logoImage from '../../images/aptible.svg';
 import Email from './Email';
 import ProductSelection from './ProductSelection';
@@ -145,8 +144,6 @@ class InnerSignup extends React.Component {
               setProduct={this.setProduct} />
           </div>
         </Grid>
-
-        <GridLinesForSection />
       </div>
     );
   }

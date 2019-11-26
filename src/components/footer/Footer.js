@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import styles from './Footer.module.css';
 import { Grid } from '../grid/Grid';
 import NewsletterSignup from './NewsletterSignup';
-import GridLinesForSection from '../grid/GridLinesForSection';
 
 const twitterIcon = (
   <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,7 +125,5 @@ export default () => (
         </div>
       </div>
     </Grid>
-
-    <GridLinesForSection />
   </div>
 );
