@@ -7,7 +7,6 @@ import Logos from '../components/home/Logos';
 import Customers from '../components/home/Customers';
 import UseCases from '../components/home/UseCases';
 import ZeroTo from '../components/footer/ZeroTo';
-import VendorManagementPopUp from '../components/trust-center/VendorManagementPopUp';
 import { findBlockById } from '../lib/blocks';
 import { graphql } from 'gatsby';
 
@@ -25,7 +24,6 @@ export default ({ data }) => (
     <UseCases />
     <ProductCarousel startPosition="right" />
     <ZeroTo />
-    <VendorManagementPopUp />
   </AptibleLayout>
 );
 
