@@ -27,7 +27,7 @@ class WistiaVideo extends React.Component {
   render() {
     return (
       <div>
-        <div className={`wistia_embed wistia_async_${this.props.videoId} videoFoam=true ${this.props.autoPlay ? 'autoPlay=true' : ''}`} />
+        <div className={`wistia_embed wistia_async_${this.props.videoId} videoFoam=true ${this.props.autoPlay ? 'autoPlay=true' : ''} ${this.props.silentAutoPlay ? 'silentAutoPlay=true' : ''}`} />
       </div>
     );
   }

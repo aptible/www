@@ -5,11 +5,12 @@ import SignupButton from '../signup/SignupButton';
 import ContentfulBlock from '../contentful/ContentfulBlock';
 import HeroArrow from './HeroArrow';
 import HeroCallout from './HeroCallout';
+import WistiaVideo from '../shared/WistiaVideo';
 
 export default ({ heroBlock }) => (
-  <Grid rows="2">
-    <HeroArrow />
+  <Grid>
     <div className={styles.contentArea}>
+      <HeroArrow />
       <ContentfulBlock block={heroBlock} />
     </div>
 
@@ -19,6 +20,21 @@ export default ({ heroBlock }) => (
 
     <div className={styles.callout}>
       <HeroCallout />
+    </div>
+
+    <div className={styles.videoContainer}>
+      <WistiaVideo videoId="8p6ej6qqrg" autoPlay="true" silentAutoPlay="true" />
+      <div className={styles.videoCard}>
+        <p>
+          &ldquo;Aptible made it easier to communicate our investments
+          in / progress towards security with our customers, helping us build
+          trust.&rdquo;
+        </p>
+
+        <div className={styles.cardAuthor}>
+          Justin Kan, CEO
+        </div>
+      </div>
     </div>
   </Grid>
 );
