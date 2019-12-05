@@ -1,15 +1,15 @@
 .arrow {
   position: absolute;
-  top: 80px;
-  right: 108px;
+  top: 103px;
+  right: 15px;
   z-index: 1;
 }
 
 .arrowStroke {
-  stroke-dasharray: 740;
-  stroke-dashoffset: 740;
-  animation: dash 5s cubic-bezier(0, 1.2, 0.3, 0.9) forwards;
-  animation-delay: 0.4s;
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  animation: dash 3s cubic-bezier(0, 1.2, 0.3, 0.9) forwards;
+  animation-delay: 0.6s;
 }
 
 @keyframes dash {
@@ -20,11 +20,11 @@
 
 @media (--mobile) {
   .arrow {
-    top: -44px;
-    left: 165px;
+    top: 22px;
+    left: 170px;
   }
 
   .arrow svg {
-    width: 160px;
+    width: 80px;
   }
 }
