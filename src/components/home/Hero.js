@@ -27,8 +27,7 @@ export default ({ heroBlock }) => (
       <div className={styles.videoCard}>
         <p>
           &ldquo;Aptible made it easier to communicate our investments
-          in / progress towards security with our customers, helping us build
-          trust.&rdquo;
+          in security with our customers, helping us build trust.&rdquo;
         </p>
 
         <div className={styles.cardAuthor}>
