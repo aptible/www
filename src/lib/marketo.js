@@ -28,6 +28,17 @@ export function submitMarketoForm(formId, payload, callback) {
     }
   }
 
+  // Add current, ref, and session ref URLs to all forms
+  payload['Conversion_URL__c'] = window.location.href;
+
+  if (document.referrer && document.referrer.length > 0) {
+    payload['Signup_Referral_URL__c'] = document.referrer;
+  }
+
+  if (cookies.get('_aptible_session_ref')) {
+    payload['Session_Referral_URL__c'] = cookies.get('_aptible_session_ref');
+  }
+
   // If email is set, send it to Segment as well
   if ('Email' in payload) {
     analytics.identify(payload.Email);
