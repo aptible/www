@@ -5,7 +5,7 @@ import Subnav from './Subnav';
 import ShareIcons from '../shared/ShareIcons';
 import ContentfulBlock from '../contentful/ContentfulBlock';
 
-export default ({ chapter, contentBlock }) => (
+export default ({ chapter, contentBlock, edges }) => (
   <div className={`${styles.container} ${chapter.id === 1 ? styles.firstPageSidebar : ''}`}>
     <Grid>
       <div className={styles.meta}>
@@ -13,7 +13,7 @@ export default ({ chapter, contentBlock }) => (
         <h6 className="small">{chapter.title}</h6>
       </div>
       <div className={styles.sidebar}>
-        <Subnav />
+        <Subnav edges={edges} />
       </div>
 
       <div className={styles.content}>

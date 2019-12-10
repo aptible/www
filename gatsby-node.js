@@ -16,13 +16,6 @@ const CASE_STUDIES = require('./src/data/case-studies.json');
 const PAID_LANDING_PAGES = require('./src/data/paid-landing-pages.json');
 
 
-const SM_GUIDE_CHAPTERS = [
-  { id: 1, path: 'security-management', title: 'Introduction'},
-  { id: 2, path: 'security-management/what-it-is', title: 'What Is Security Management?'},
-  { id: 3, path: 'security-management/fundamentals', title: 'Security Management Fundamentals'},
-];
-
-
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
@@ -73,6 +66,14 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         allWebinars: allContentfulWebinar {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
+
+        allSecurityManagement: allContentfulContentBlock(filter: { page: { eq: "security-management" }}) {
           edges {
             node {
               slug
@@ -235,15 +236,15 @@ exports.createPages = ({ graphql, actions }) => {
         });
       }
 
-      for (let chapter of SM_GUIDE_CHAPTERS) {
+      result.data.allSecurityManagement.edges.forEach(({ node }) => {
         createPage({
-          path: chapter.path,
+          path: node.slug,
           component: path.resolve(`./src/templates/security-management.js`),
           context: {
-            chapter: chapter
+            slug: node.slug
           },
         });
-      }
+      });
 
       for (let caseStudy of CASE_STUDIES) {
         createPage({
