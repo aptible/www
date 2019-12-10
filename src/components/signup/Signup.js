@@ -85,11 +85,21 @@ class InnerSignup extends React.Component {
     }
   }
 
+  marketoLeadSource = () => {
+    if (this.state.product === 'comply') {
+      return 'Comply Signup';
+    } else if (this.state.product === 'deploy') {
+      return 'Deploy Signup';
+    } else {
+      return 'Website Signup';
+    }
+  }
+
   sendToMarketo = (email, marketingConsent, personaAnaswer, callback) => {
     const payload = {
       Email: email,
       Contact_Consent__c: marketingConsent,
-      LeadSource: 'Website Signup'
+      LeadSource: this.marketoLeadSource()
     };
 
     if (personaAnaswer) {
