@@ -38,7 +38,7 @@ class Subnav extends React.Component {
         ))}
 
         <div className={styles.cta}>
-          <SignupButton text="Schedule a Demo" product="comply" />
+          <SignupButton text="Learn More" product="comply" />
         </div>
       </SidebarNav>
     );
