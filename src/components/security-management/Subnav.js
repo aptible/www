@@ -1,16 +1,21 @@
 import React from 'react';
 import SidebarNav from '../shared/SidebarNav';
 import SidebarNavItem from '../shared/SidebarNavItem';
-import Button from '../buttons/Button';
-import Download from '../security-management/Download';
+import SignupButton from '../signup/SignupButton';
 import styles from './Subnav.module.css';
 
 class Subnav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      navItems: this.formatNavItems()
     };
+  }
+
+  formatNavItems = () => {
+    const sortFn = (a, b) => (a.node.contentfulid > b.node.contentfulid) ? 1 : ((b.node.contentfulid > a.node.contentfulid) ? -1 : 0);
+    return this.props.edges.sort(sortFn);
   }
 
   openModal = () => {
@@ -21,19 +26,20 @@ class Subnav extends React.Component {
     this.setState({ showModal: false });
   }
 
+  chapterNum = (edge) => {
+    return edge.node.contentfulid.replace('security-management-chapter-', '')
+  }
+
   render() {
     return (
       <SidebarNav title="Chapters">
-        <SidebarNavItem to="/security-management/" text="01: Introduction" />
-        <SidebarNavItem to="/security-management/what-it-is/" text="02: What is Security Management" />
-        <SidebarNavItem to="/security-management/fundamentals/" text="03: Fundamentals" />
-        <div className={styles.cta}>
-          <Button onClickFn={this.openModal}>Download the PDF</Button>
-        </div>
+        {this.state.navItems.map((e) => (
+          <SidebarNavItem key={e.node.contentfulid} to={e.node.slug} text={`0${this.chapterNum(e)}: ${e.node.pageTitle}`} />
+        ))}
 
-        {this.state.showModal &&
-          <Download closeFn={this.closeModal} />
-        }
+        <div className={styles.cta}>
+          <SignupButton text="Learn More" product="comply" />
+        </div>
       </SidebarNav>
     );
   }

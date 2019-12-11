@@ -13,6 +13,8 @@ export const queryBlocksForPage = graphql`
     edges {
       node {
         contentfulid
+        slug
+        pageTitle
         content {
           json
         }
