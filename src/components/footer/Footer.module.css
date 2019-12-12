@@ -36,12 +36,19 @@
 
 .useCases {
   grid-row: 1;
-  grid-column: 3 / span 2;
+  grid-column: 2 / span 2;
+  margin-left: 80px;
 }
 
 .resources {
   grid-row: 1;
+  grid-column: 4 / span 2;
+}
+
+.support {
+  grid-row: 1;
   grid-column: 5 / span 2;
+  margin-left: 80px;
 }
 
 .company {
@@ -51,7 +58,8 @@
 
 .useCases a,
 .resources a,
-.company a {
+.company a,
+.support a {
   display: block;
   color: var(--aptible-black-half);
   font-size: 16px;
@@ -151,11 +159,18 @@
   .useCases {
     grid-row: 2;
     grid-column: 5 / span 3;
+    margin-left: 0;
   }
 
   .resources {
+    grid-row: 3;
+    grid-column: 1 / span 3;
+  }
+
+  .support {
     grid-row: 2;
     grid-column: 1 / span 3;
+    margin-left: 0;
   }
 
   .company {
@@ -165,33 +180,34 @@
 
   .useCases a,
   .resources a,
-  .company a {
+  .company a,
+  .support a {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 8px;
   }
 
   .newsletter {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1 / span 7;
     margin: 45px 0 0 0;
   }
 
   .newsletterForm {
-    grid-row: 4;
+    grid-row: 5;
     grid-column: 1 / span 7;
     margin: 5px 0 60px 0;
   }
 
   .social {
-    grid-row: 5;
+    grid-row: 6;
     grid-column: 1 / span 7;
     text-align: center;
     margin-bottom: 15px;
   }
 
   .links {
-    grid-row: 6;
+    grid-row: 7;
     grid-column: 1 / span 7;
     text-align: center;
   }
@@ -201,7 +217,7 @@
   }
 
   .copyright {
-    grid-row: 7;
+    grid-row: 8;
     grid-column: 1 / span 7;
     text-align: center;
   }

@@ -61,9 +61,15 @@ export default () => (
         <Link to="/customers/">Customers</Link>
         <Link to="/hipaa/">Compliance Guides</Link>
         <Link to="/blog/">Blog</Link>
-        <a href="https://aptible.zendesk.com/" target="_blank" rel="noopener noreferrer">Support Tickets</a>
-        <a href="https://status.aptible.com/" target="_blank" rel="noopener noreferrer">Status</a>
-        <Link to="/changelog/">Changelog</Link>
+      </div>
+
+      <div className={styles.support}>
+        <h6 className="small">Support</h6>
+        <a href="/documentation/faq.html">FAQs</a>
+        <a href="https://aptible.zendesk.com/" target="_blank" rel="noopener noreferrer">Contact Support</a>
+        <a href="https://status.aptible.com/" target="_blank" rel="noopener noreferrer">Aptible Status</a>
+        <Link to="/changelog/">Deploy Changelog</Link>
+        <a href="/documentation/index.html">Usage Docs</a>
       </div>
 
       <div className={styles.company}>
