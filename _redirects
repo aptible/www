@@ -747,3 +747,7 @@
 /gridiron/ /comply/
 /aws-vs-aptible/ /deploy/
 /resources/enclave-security-division-of-responsibilities/ /deploy/features/
+/documentation/guides/asset-management.html /security-management/asset-management
+/documentation/guides/human-resources-security.html /security-management/human-resources
+/documentation/guides/identity-access-management.html /security-management/identity-access-management
+/documentation/guides/vendor-management.html /security-management/vendor-management
