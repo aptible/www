@@ -119,6 +119,23 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+
+        allOwnersManualPages: allContentfulOwnersManualPage {
+          edges {
+            node {
+              title
+              section
+              slug
+              contentfulparent {
+                title
+                slug
+              }
+              body {
+                json
+              }
+            }
+          }
+        }
       }
     `).then(result => {
       // Create pages for each blog post
@@ -266,6 +283,22 @@ exports.createPages = ({ graphql, actions }) => {
           },
         });
       }
+
+      result.data.allOwnersManualPages.edges.forEach(({ node }) => {
+        let pagePath = 'owners-manual';
+        if (node.slug) {
+          pagePath += `/${node.slug}`;
+        }
+
+        createPage({
+          path: pagePath,
+          component: path.resolve(`./src/templates/owners-manual.js`),
+          context: {
+            activePath: node.slug,
+            allPages: result.data.allOwnersManualPages.edges
+          },
+        });
+      });
 
       resolve();
     });
