@@ -7,11 +7,13 @@ import MainNavItem from './MainNavItem';
 import MobileMenuItem from './MobileMenuItem';
 import Products from './Products';
 import Resources from './Resources';
+import Company from './Company';
 import Mobile from './Mobile';
 
 const dropDowns = {
   products: Products,
   resources: Resources,
+  company: Company,
   mobile: Mobile
 };
 
@@ -78,10 +80,17 @@ class Header extends React.Component {
               openSectionName={this.state.openSectionName}
             />
             <MainNavItem
+              title="Company"
+              gridColumn="7"
+              onClickFn={this.toggleNavSection}
+              sectionName="company"
+              openSectionName={this.state.openSectionName}
+            />
+            {/* <MainNavItem
               title="Log In"
               to="https://dashboard.aptible.com/login"
               gridColumn="7"
-            />
+            /> */}
 
             <div className={styles.mobileNav}>
               <MobileMenuItem navOpen={this.state.navOpen} onClickFn={this.toggleNavSection} />
