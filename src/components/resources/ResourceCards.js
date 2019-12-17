@@ -7,18 +7,50 @@ import resources from '../../data/resources.json';
 class ResourceCards extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      activeFilter: "All",
+    };
+  }
+
+  filterResources = (event) => {
+    this.setState({
+      activeFilter: event.target.textContent,
+    });
   }
 
   render() {
-    const halfwayThrough = Math.ceil(resources.length / 2)
-    const leftResources = resources.slice(0, halfwayThrough);
-    const rightResources = resources.slice(halfwayThrough, resources.length);
+    const { activeFilter } = this.state;
+
+    const filteredResources = activeFilter === "All" ?
+      resources :
+      resources.filter(resource => resource.type === activeFilter.replace(/s$/, ""));
+    
+    const halfwayThrough = Math.ceil(filteredResources.length / 2)
+    const leftResources = filteredResources.slice(0, halfwayThrough);
+    const rightResources = filteredResources.slice(halfwayThrough, filteredResources.length);
 
     return (
       <div className={styles.container}>
         <Grid>
           <div className={styles.left}>
+            <div className={styles.navigationContainer}>
+              <Grid>
+                <div className={styles.navigation}>
+                  <h6 className="small">Resources</h6>
+
+                  {["All", "Guides", "Webinar"].map(filter => (
+                    <button
+                      key={filter}
+                      onClick={this.filterResources}
+                      className={activeFilter === filter ? styles.active : ""}
+                    >
+                      {filter}
+                    </button>
+                  ))}
+                </div>
+              </Grid>
+            </div>
+
             {leftResources.map(resource => (
               <ResourceCard key={resource.url} resource={resource} />
             ))}

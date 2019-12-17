@@ -6,10 +6,10 @@ export default () => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.content}>
-        <h2>Resources</h2>
+        <h1>Security Management Resources</h1>
         <p className="XL">
-          We help hundreds of the most innovative companies to protect
-          sensitive data when the stakes matters most.
+          Access security management resources to learn best practices for
+          growing, improving and communicating your security management program.
         </p>
       </div>
     </Grid>

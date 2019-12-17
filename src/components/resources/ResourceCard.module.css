@@ -1,9 +1,6 @@
 .container {
   line-height: 0;
   margin-bottom: 10px;
-}
-
-a.linkedContainer {
   display: block;
   cursor: pointer;
   text-decoration: none;
@@ -21,20 +18,9 @@ a.linkedContainer {
   margin-bottom: 40px;
 }
 
-.linkedContainer:hover .card {
+.container:hover .card {
   background-color: var(--aptible-card-hover);
   border-bottom-color: var(--aptible-yellow);
-}
-
-.arrow {
-  display: none;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-}
-
-.linkedContainer:hover .arrow {
-  display: block;
 }
 
 .tags {
@@ -53,12 +39,7 @@ a.linkedContainer {
 
 .readMore {
   float: right;
-  display: none;
   padding-top: 5px;
-}
-
-.linkedContainer:hover .readMore {
-  display: block;
 }
 
 @media (--mobile) {
