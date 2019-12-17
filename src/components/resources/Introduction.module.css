@@ -1,0 +1,17 @@
+.container {
+  padding-top: 30px;
+}
+
+.content {
+  grid-column: 2 / span 4;
+}
+
+@media (--mobile) {
+  .container {
+    padding-top: 100px;
+  }
+
+  .content {
+    grid-column: 1 / span 7;
+  }
+}
