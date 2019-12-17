@@ -9,7 +9,7 @@ export default () => {
     <AptibleLayout>
       <Helmet>
         <title>Aptible | Resources</title>
-        <meta name="description" content="Aptible is the leading security management platform for small companies. Here are posts and videos detailing how customers are using Aptible to propel their businesses forward." />
+        <meta name="description" content="Access security management resources to learn best practices for growing, improving and communicating your security management program." />
       </Helmet>
 
       <Introduction />
