@@ -9,7 +9,7 @@ export default ({ currentPage, allPages }) => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.hero}>
-        <h1>{currentPage.title}</h1>
+        <h1>{currentPage.displayTitle || currentPage.title}</h1>
       </div>
 
       <div className={styles.meta}>

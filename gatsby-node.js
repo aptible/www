@@ -120,10 +120,13 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
 
-        allOwnersManualPages: allContentfulOwnersManualPage {
+        allOwnersManualPages: allContentfulOwnersManualPage(
+          sort: { fields: [createdAt], order: ASC }
+        ) {
           edges {
             node {
               title
+              displayTitle
               section
               slug
               contentfulparent {

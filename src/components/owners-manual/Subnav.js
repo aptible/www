@@ -32,7 +32,7 @@ const PageNavItem = ({ page, allPages, depth }) => {
 
   return (
     <>
-      <SidebarNavItem to={pagePath(page)} text={`${depthPadding}${page.title}`} />
+      <SidebarNavItem to={pagePath(page)} text={`${depthPadding}${page.displayTitle || page.title}`} />
 
       {children.map((child) => (
         <PageNavItem key={child.node} page={child.node} allPages={allPages} depth={depth + 1} />

@@ -9,12 +9,13 @@ const getCurrentPage = (activePath, allPages) => {
 }
 
 export default ({ pageContext }) => {
+  console.log(pageContext);
   const currentPage = getCurrentPage(pageContext.activePath, pageContext.allPages);
 
   return (
     <AptibleLayout>
       <Helmet>
-        <title>{currentPage.title} | Aptible Owners Manual</title>
+        <title>{currentPage.displayTitle || currentPage.title} | Aptible Owners Manual</title>
         <meta name="description" content="Meta description here." />
       </Helmet>
       <Page currentPage={currentPage} allPages={pageContext.allPages} />
