@@ -126,7 +126,7 @@ const MaintenanceRow = () => {
   const title = "Maintenance Operations";
   const rows = [
     "Pricing",
-    "Available Hours",
+    "Normal Hours",
     "Weekday Extended Hours",
     "Weekend Extended Hours"
   ];
