@@ -54,11 +54,6 @@
   font-size: inherit;
 }
 
-.headingBlock sup {
-  color: var(--aptible-yellow);
-  padding-left: 4px;
-}
-
 .headingBlock div {
   border-bottom: 1px transparent solid;
 }
@@ -66,12 +61,6 @@
 .dataBlock {
   padding-left: 24px;
   padding-right: 24px;
-}
-
-.dataBlock h4 {
-  text-transform: uppercase;
-  font-size: 10px;
-  color: var(--white-fifty);
 }
 
 .dataBlock div {
@@ -174,6 +163,100 @@
   grid-row: 7;
 }
 
+/* Footnotes */
+
+.footnotes {
+  grid-row: 8;
+  grid-column: 2 / -1;
+  margin-top: 34px;
+  display: flex;
+  color: var(--white-seventy);
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.footnotes .footnoteMarker {
+  padding-left: 0;
+  padding-right: 8px;
+}
+
+/* Response Times */
+
+.responseTimes {
+  margin-top: 48px;
+  grid-row: 9;
+  grid-column: 2 / -1;
+}
+
+.responseTimes h5 {
+  margin-bottom: 45px;
+}
+
+.responseTimesTable {
+  font-size: 14px;
+  line-height: 45px;
+  color: white;
+}
+
+.responseTime {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px rgba(255, 255, 255, .1) dotted;
+}
+
+.responseTimePeriod {
+  color: var(--white-seventy);
+}
+
+/* Get Started */
+
+.getStarted {
+  margin-top: 88px;
+  grid-row: 10;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.getStarted a {
+  margin-top: 0;
+}
+
+/* Details */
+
+.details {
+  grid-row: 11;
+  grid-column: 2 / -1;
+  margin-bottom: 160px;
+  margin-top: 105px;
+  display: flex;
+  color: var(--white-seventy);
+}
+
+.details ul {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 1em;
+}
+
+.details ul + h5 {
+  margin-top: 48px;
+}
+
+.details li {
+  margin-top: .5em;
+}
+
+.detailsLeft {
+  margin-right: 100px;
+  width: 50%;
+}
+
+.detailsRight {
+  width: 50%;
+}
+
 /* Utilities */
 
 .na {
@@ -182,4 +265,17 @@
 
 .hiddenLabel {
   display: none;
+}
+
+.footnoteMarker {
+  color: var(--aptible-yellow);
+  font-weight: 500;
+  padding-left: 4px;
+  font-size: 10px;
+}
+
+.smallHeading {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--white-fifty);
 }

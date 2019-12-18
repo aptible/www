@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Grid } from '../grid/Grid';
+import ArrowButton from '../buttons/ArrowButton';
 import styles from './SupportPriceTable.module.css';
 
 const tiers = [
@@ -40,16 +40,16 @@ const TierHeading = () => tiers.map(tier => (
 
 const HeadingBlock = ({ title, items, footnote, className}) => (
   <div className={classNames(styles.block, styles.headingBlock, className)}>
-    <h4>{title}{footnote && <sup>{footnote}</sup>}</h4>
+    <h4>{title}{footnote && <sup className={styles.footnoteMarker}>{footnote}</sup>}</h4>
     {items.map(item => (
       <div key={item} aria-hidden="true">{item}</div>
     ))}
   </div>
 );
 
-const DataBlock = ({ title, tier, rows, items, className }) => (
+const DataBlock = ({ title, tier, rows, items, footnote, footnoteRow, className }) => (
   <div className={classNames(styles.block, styles.tierBlock, styles.dataBlock, className)}>
-    <h4><span className={styles.hiddenLabel}>{tier} </span>{title}</h4>
+    <h4 className={styles.smallHeading}><span className={styles.hiddenLabel}>{tier} </span>{title}</h4>
     {items.map((item, index) => (
       <div
         className={classNames(item === 'N/A' && styles.na)}
@@ -57,6 +57,9 @@ const DataBlock = ({ title, tier, rows, items, className }) => (
       >
         <span className={styles.hiddenLabel}>{rows[index]} – </span>
         {item}
+        {footnote && footnoteRow === index + 1 && (
+          <sup className={styles.footnoteMarker}>{footnote}</sup>
+        )}
       </div>
     ))}
   </div>
@@ -112,6 +115,8 @@ const SupportRow = () => {
           "24/7 (for Urgent tickets)",
           "Email, Zendesk, Slack"
         ]}
+        footnote={1}
+        footnoteRow={3}
       />
     </>
   );
@@ -233,6 +238,97 @@ const BeyondRow = () => {
   );
 };
 
+const Footnotes = () => {
+  const footnotes = [
+    {
+      marker: 1,
+      note: "Support via Slack is only offered at the Low and Normal severity levels, 9am-6pm M-F. For High and Urgent severity issues, a ticket must be opened through Zendesk. After the initial ticket is opened, Aptible may communicate to resolve the issue through Slack if that is mutually agreeable."
+    }
+  ];
+
+  return footnotes.map(footnote => (
+    <div className={styles.footnotes} key={footnote.marker}>
+      <sup className={styles.footnoteMarker}>{footnote.marker}</sup>
+      <div>{footnote.note}</div>
+    </div>
+  ));
+};
+
+const ResponseTimes = () => (
+  <div className={styles.responseTimes}>
+    <h5>Target Response Times by Ticket Severity</h5>
+    <div className={styles.responseTimesTable}>
+      <div className={styles.responseTime}>
+        <span>Low</span>
+        <span className={styles.responseTimePeriod}>2 business days</span>
+      </div>
+
+      <div className={styles.responseTime}>
+        <span>Normal</span>
+        <span className={styles.responseTimePeriod}>1 business day</span>
+      </div>
+
+      <div className={styles.responseTime}>
+        <span>High</span>
+        <span className={styles.responseTimePeriod}>6 hours</span>
+      </div>
+
+      <div className={styles.responseTime}>
+        <span>Urgent</span>
+        <span className={styles.responseTimePeriod}>1 hour</span>
+      </div>
+    </div>
+  </div>
+);
+
+const GetStarted = () => (
+  <div className={styles.getStarted}>
+    <h3>Ready to get started with Premium Support?</h3>
+    <ArrowButton href="https://aptible.zendesk.com/" text="Contact us to get started" />
+  </div>
+);
+
+const Details = () => (
+  <div className={styles.details}>
+    <div className={styles.detailsLeft}>
+      <h5>In-scope Support</h5>
+      <p>In-Scope support operations are included in all support plans.</p>
+      <p className={styles.smallHeading}>Included in-scope support operations</p>
+      <ul>
+        <li>Answering questions about Aptible services and features</li> 
+        <li>Advice regarding best practices for app deployment and architecture</li>
+        <li>Troubleshooting Aptible services and products</li>
+        <li>Limited support of third-party applications, services and frameworks</li>
+        <li>VPC, TGW, VPN initial setup, configuration verification and update</li>
+        <li>Major database version upgrades</li>
+        <li>Environment migrations (shared-tenancy to dedicated-tenancy)</li>
+      </ul>
+
+      <h5>Maintenance Operations<sup className={styles.footnoteMarker}>2</sup></h5>
+      <p>Maintenance operations are operations that require more downtime than a traditional “restart” operation and are not self-service.</p>
+      <p className={styles.smallHeading}>Example maintenance operations</p>
+      <ul>
+        <li>Major Database Version Upgrades</li>
+        <li>VPN Tunnel Replacements</li>
+        <li>Environment Migrations</li>
+      </ul>
+    </div>
+
+    <div className={styles.detailsRight}>
+      <h5>Beyond Support<sup className={styles.footnoteMarker}>3</sup></h5>
+      <p>Beyond Support operations are included in Premium and Enterprise support plans only.</p>
+      <p className={styles.smallHeading}>Included Beyond Support Operations</p>
+      <ul>
+        <li>Developing your application code</li>
+        <li>Debugging custom software</li>
+        <li>Performing manual system administration tasks</li>
+        <li>Architectural review</li>
+        <li>Live debugging of VPN connectivity issues with customers or partners</li>
+      </ul>
+    </div>
+  </div>
+);
+
 export default () => (
   <Container>
     <TierHeading />
@@ -242,5 +338,9 @@ export default () => (
     <MaintenanceRow />
     <Divider className={styles.beyondDivider} />
     <BeyondRow />
+    <Footnotes />
+    <ResponseTimes />
+    <GetStarted />
+    <Details />
   </Container>
 );
