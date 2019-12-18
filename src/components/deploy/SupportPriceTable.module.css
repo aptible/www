@@ -1,0 +1,169 @@
+.container {
+  display: grid;
+  grid-template-columns: 238px 290px 6px 290px 6px 290px;
+  position: relative;
+  width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px rgba(255, 255, 255, .1) solid;
+  height: 0;
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0;
+}
+
+.supportDivider {
+  grid-row: 2;
+}
+
+.maintenanceDivider {
+  grid-row: 4;
+}
+
+.beyondDivider {
+  grid-row: 6;
+}
+
+.block {
+  font-size: 14px;
+  line-height: 45px;
+  padding-bottom: 60px;
+  padding-top: 12px;
+}
+
+.priceBlock {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: white;
+}
+
+.headingBlock {
+  color: var(--white-seventy);
+}
+
+.headingBlock h4 {
+  font-size: inherit;
+}
+
+.headingBlock sup {
+  color: var(--aptible-yellow);
+  padding-left: 4px;
+}
+
+.headingBlock div {
+  border-bottom: 1px transparent solid;
+}
+
+.supportHeadingBlock {
+  grid-column: 1 / 2;
+  grid-row: 3;
+}
+
+.maintenanceHeadingBlock {
+  grid-column: 1 / 2;
+  grid-row: 5;
+}
+
+.beyondHeadingBlock {
+  grid-column: 1 / 2;
+  grid-row: 7;
+}
+
+.priceHeading {
+  grid-row: 1;
+  padding: 48px 0 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.priceHeading .tier {
+  font-weight: 500;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.priceHeading .price {
+  font-weight: 500;
+  margin: 0;
+}
+
+.priceHeadingStandard {
+  grid-column: 2 / 3;
+}
+
+.priceHeadingPremium {
+  grid-column: 4 / 5;
+}
+
+.priceHeadingEnterprise {
+  grid-column: 6 / 7;
+}
+
+.dataBlock {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.dataBlock h4 {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--white-fifty);
+}
+
+.na {
+  color: var(--white-fifty);
+}
+
+.dataBlock div {
+  border-bottom: 1px rgba(255, 255, 255, .1) dashed;
+}
+
+.standardSupportBlock {
+  grid-column: 2 / 3;
+  grid-row: 3;
+}
+
+.standardMaintenanceBlock {
+  grid-column: 2 / 3;
+  grid-row: 5;
+}
+
+.standardBeyondBlock {
+  grid-column: 2 / 3;
+  grid-row: 7;
+}
+
+.premiumSupportBlock {
+  grid-column: 4 / 5;
+  grid-row: 3;
+}
+
+.premiumMaintenanceBlock {
+  grid-column: 4 / 5;
+  grid-row: 5;
+}
+
+.premiumBeyondBlock {
+  grid-column: 4 / 5;
+  grid-row: 7;
+}
+
+.enterpriseSupportBlock {
+  grid-column: 6 / 7;
+  grid-row: 3;
+}
+
+.enterpriseMaintenanceBlock {
+  grid-column: 6 / 7;
+  grid-row: 5;
+}
+
+.enterpriseBeyondBlock {
+  grid-column: 6 / 7;
+  grid-row: 7;
+}
