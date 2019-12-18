@@ -57,7 +57,7 @@ The CCPA applies to all for-profit businesses that (a) collect personal informat
 1. annually buy, receive (for business purposes), sell, or share (for business purposes) the personal information of 50,000 or more California residents, households, or devices per year; or
 1. derive 50% or more of its annual revenues from selling consumers’ personal information.
 
-The bar is low: while many startups may not hit the $25 million or 50%-of-revenues thresholds, it’s very possible to receive the personal information of 50,000 consumers (i.e., California residents) in a year. This is even easier to hit as to devices, multiple of which can be tied to a single individual.
+The bar is low: while many startups may not hit the $25 million or 50%-of-revenues thresholds, it’s very possible to receive the personal information of 50,000 consumers (i.e., California residents) in a year. And this threshold is even easier to meet because individuals tend to have multiple devices.
 
 <span id="what-data-do-we-need-to-protect-under-the-ccpa"></span>
 ### What data do we need to protect under the CCPA?
