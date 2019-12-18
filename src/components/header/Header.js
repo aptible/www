@@ -26,7 +26,8 @@ class Header extends React.Component {
     super(props);
     this.state = {
       navOpen: false,
-      openSectionName: null
+      openSectionName: null,
+      isDeployPage: false
     };
   }
 
@@ -42,6 +43,18 @@ class Header extends React.Component {
 
   closeNav = () => {
     this.setState({ navOpen: false, openSectionName: null });
+  }
+
+  componentDidMount = () => {
+    if (typeof(window) === 'undefined') {
+      return;
+    }
+
+    if (window.location.pathname) {
+      this.setState({
+        isDeployPage: window.location.pathname.includes('deploy')
+      });
+    }
   }
 
   render() {
@@ -104,7 +117,7 @@ class Header extends React.Component {
                 </div>
 
                 <div className={styles.ctaSignUp}>
-                  {window.location.pathname.includes('deploy') ? (
+                  {this.state.isDeployPage ? (
                     <SignupButton size="small" text="Start with Deploy" product="deploy" />
                   ) : (
                     <SignupButton size="small" text="Schedule a Demo" product="comply" />
