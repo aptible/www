@@ -3,7 +3,7 @@ import { Grid } from '../grid/Grid';
 import styles from './SupportHero.module.css';
 
 export default () => (
-  <div className={styles.container}>
+  <div>
     <Grid>
       <div className={styles.content}>
         <h5>Aptible Deploy</h5>

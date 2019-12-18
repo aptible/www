@@ -1,0 +1,17 @@
+.container {
+  background-image: url('../../images/illustrations/deploy.png');
+  background-position: 1150px -140px;
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  position: absolute;
+  width: 100vw;
+  height: 540px;
+  top: 0;
+  left: 0;
+}
+
+@media (--mobile) {
+  .container {
+    display: none;
+  }
+}

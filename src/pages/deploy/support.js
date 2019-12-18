@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import AptibleLayout from '../../components/layouts/AptibleLayout';
+import SupportBackground from '../../components/deploy/SupportBackground';
 import SupportHero from '../../components/deploy/SupportHero';
 import SupportPriceTable from '../../components/deploy/SupportPriceTable';
 
@@ -12,5 +13,6 @@ export default () => (
     </Helmet>
     <SupportHero />
     <SupportPriceTable />
+    <SupportBackground />
   </AptibleLayout>
 );
