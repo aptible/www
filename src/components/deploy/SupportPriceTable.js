@@ -308,9 +308,9 @@ const Details = () => (
       <p>Maintenance operations are operations that require more downtime than a traditional “restart” operation and are not self-service.</p>
       <p className={styles.smallHeading}>Example maintenance operations</p>
       <ul>
-        <li>Major Database Version Upgrades</li>
-        <li>VPN Tunnel Replacements</li>
-        <li>Environment Migrations</li>
+        <li>Major database version upgrades</li>
+        <li>VPN tunnel replacements</li>
+        <li>Environment migrations</li>
       </ul>
     </div>
 
