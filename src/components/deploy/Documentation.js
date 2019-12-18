@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Grid } from '../grid/Grid';
 import styles from './Documentation.module.css';
 
@@ -26,6 +27,7 @@ export default () => (
       </div>
       <div className={styles.right}>
         <h6 className="small">Support</h6>
+        <Link to="/deploy/support">Support Plans</Link>
         <a href="/documentation/support.html#contacting-support">Contact Support</a>
         <a href="/documentation/support.html#best-practices">Best Practices</a>
         <a href="/documentation/support.html#active-tickets">Active Tickets</a>
