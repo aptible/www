@@ -25,7 +25,7 @@ class ResourceCards extends React.Component {
       resources :
       resources.filter(resource => resource.type === activeFilter.replace(/s$/, ""));
     
-    const halfwayThrough = Math.ceil(filteredResources.length / 2)
+    const halfwayThrough = Math.floor(filteredResources.length / 2)
     const leftResources = filteredResources.slice(0, halfwayThrough);
     const rightResources = filteredResources.slice(halfwayThrough, filteredResources.length);
 

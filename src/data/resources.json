@@ -23,7 +23,7 @@
   {
     "title": "GDPR Compliance Guide",
     "url": "/gdpr/articles/1-subject-matter-objectives/",
-    "copy": ["In this guide you’ll build a solid understanding of GDPR, compliance with GDPR requirements, and how all of this will affect your engineering organization."],
+    "copy": ["In this guide, you’ll build a solid understanding of GDPR, compliance with GDPR requirements, and how all of this will affect your engineering organization."],
     "type": "Guide"
   },
   {
@@ -31,7 +31,7 @@
     "url": "/security-management/human-resources/",
     "copy": [
       "Human resources security is the process of hiring, training, ensuring the accountability of, and off-boarding employees and contractors who may store, process, or transmit data on your behalf.",
-      "This guide  provides a high-level explanation of why human resources management is important; the essentials of an effective human resources security program; and information on how to leverage Aptible’s tools and out-of-the-box policies to manage your workforce."
+      "This guide provides a high-level explanation of why human resources management is important; the essentials of an effective human resources security program; and information on how to leverage Aptible’s tools and out-of-the-box policies to manage your workforce."
     ],
     "type": "Guide"
   },
@@ -44,18 +44,22 @@
     ],
     "type": "Guide"
   },
-  
   {
     "title": "HIPAA Compliance: Guide for startups",
     "url": "/hipaa/",
-    "copy": ["In this guide you’ll build a solid understanding of HIPAA, compliance with HIPAA requirements, and how all of this will affect your engineering organization."],
+    "copy": ["In this guide, you’ll build a solid understanding of HIPAA, compliance with HIPAA requirements, and how all of this will affect your engineering organization."],
     "type": "Guide"
   },
-  
   {
     "title": "Webinar Recap: Learn about Aptible Comply Workflows",
     "url": "/webinars/workflows/",
     "copy": ["In this recorded Webinar, Aptible Product Lead Chris Gomes and Product Marketing Manager Rob deJuana-Matthews discussed the release of Aptible Comply Workflows. Workflows helps Aptible Comply customers to keep track of everything they need to do on an ongoing basis to maintain compliance."],
     "type": "Webinar"
+  },
+  {
+    "title": "CCPA Compliance: Guide for startups",
+    "url": "/ccpa/",
+    "copy": ["What do startups and small businesses need to know about CCPA compliance? This guide explains the background of the CCPA, whom the CCPA applies to, and how to become CCPA-compliant."],
+    "type": "Guide"
   }
 ]
