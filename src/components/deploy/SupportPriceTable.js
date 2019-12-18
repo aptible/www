@@ -52,10 +52,10 @@ const DataBlock = ({ title, tier, rows, items, footnote, footnoteRow, className 
     <h4 className={styles.smallHeading}><span className={styles.hiddenLabel}>{tier} </span>{title}</h4>
     {items.map((item, index) => (
       <div
-        className={classNames(item === 'N/A' && styles.na)}
+        className={classNames(styles.dataBlockRow, item === 'N/A' && styles.na)}
         key={item}
       >
-        <span className={styles.hiddenLabel}>{rows[index]} – </span>
+        <div className={styles.dataBlockMobileLabel}>{rows[index]}</div>
         {item}
         {footnote && footnoteRow === index + 1 && (
           <sup className={styles.footnoteMarker}>{footnote}</sup>
