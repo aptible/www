@@ -3,17 +3,21 @@ import { Link } from 'gatsby';
 import styles from './Header.module.css';
 import { Grid } from '../grid/Grid';
 import logoImage from '../../images/aptible.svg';
+import Button from '../buttons/Button';
+import SignupButton from '../signup/SignupButton';
 import MainNavItem from './MainNavItem';
 import MobileMenuItem from './MobileMenuItem';
 import Products from './Products';
 import Resources from './Resources';
 import Company from './Company';
+import UseCases from './UseCases';
 import Mobile from './Mobile';
 
 const dropDowns = {
   products: Products,
   resources: Resources,
   company: Company,
+  useCases: UseCases,
   mobile: Mobile
 };
 
@@ -64,8 +68,10 @@ class Header extends React.Component {
             />
             <MainNavItem
               title="Use Cases"
-              to="/use-cases/"
               gridColumn="4"
+              onClickFn={this.toggleNavSection}
+              sectionName="useCases"
+              openSectionName={this.state.openSectionName}
             />
             <MainNavItem
               title="Customers"
@@ -86,14 +92,25 @@ class Header extends React.Component {
               sectionName="company"
               openSectionName={this.state.openSectionName}
             />
-            {/* <MainNavItem
-              title="Log In"
-              to="https://dashboard.aptible.com/login"
-              gridColumn="7"
-            /> */}
 
             <div className={styles.mobileNav}>
               <MobileMenuItem navOpen={this.state.navOpen} onClickFn={this.toggleNavSection} />
+            </div>
+
+            <div className={styles.cta}>
+              <Grid>
+                <div className={styles.ctaLogIn}>
+                  <Button size="small" href="https://dashboard.aptible.com/login">Log In</Button>
+                </div>
+
+                <div className={styles.ctaSignUp}>
+                  {window.location.pathname.includes('deploy') ? (
+                    <SignupButton size="small" text="Start with Deploy" product="deploy" />
+                  ) : (
+                    <SignupButton size="small" text="Schedule a Demo" product="comply" />
+                  )}
+                </div>
+              </Grid>
             </div>
           </Grid>
 

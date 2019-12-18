@@ -14,6 +14,8 @@ export default () => (
         <Link to="/pricing-plans/"><h1 className="hero">Pricing</h1></Link>
         <Link to="/use-cases/"><h1 className="hero">Use Cases</h1></Link>
         <Link to="/customers/"><h1 className="hero">Customers</h1></Link>
+        {/* <Link to="/resources/"><h1 className="hero">Resources</h1></Link> */}
+        {/* <Link to="/company/"><h1 className="hero">Company</h1></Link> */}
       </div>
 
       <div className={styles.resources}>

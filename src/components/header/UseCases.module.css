@@ -6,10 +6,8 @@
   position: relative;
   z-index: 2;
   grid-row: 1;
-  grid-column: 3 / 7;
+  grid-column: 4 / -1;
   padding: 40px 0;
-  text-align: right;
-  margin-right: 76px;
 }
 
 .links a {

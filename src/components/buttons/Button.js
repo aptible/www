@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styles from './Button.module.css';
 
-export default ({ to, onClickFn, theme, children, href }) => {
-  const buttonStyle = `${styles.button} ${theme ? styles[theme] : ''}`;
+export default ({ to, onClickFn, theme, size, children, href }) => {
+  const buttonStyle = `${styles.button} ${theme ? styles[theme] : ''} ${size ? styles[size] : ''}`;
   if (href) {
     return <a href={href} className={buttonStyle}>{children}</a>
   }
@@ -13,6 +13,6 @@ export default ({ to, onClickFn, theme, children, href }) => {
   }
   
   if (onClickFn) {
-    return <div onClick={onClickFn} className={buttonStyle}>{children}</div>
+    return <div onClick={onClickFn} className={buttonStyle} role="button" tabIndex={0}>{children}</div>
   }
 };

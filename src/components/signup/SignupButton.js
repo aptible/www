@@ -23,7 +23,8 @@ class SignupButton extends React.Component {
       <React.Fragment>
         <Button
           onClickFn={this.openSignup}
-          theme={this.props.theme}>
+          theme={this.props.theme}
+          size={this.props.size}>
           {this.props.text}
         </Button>
 

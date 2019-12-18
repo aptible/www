@@ -12,9 +12,21 @@ a.button {
   cursor: pointer;
 }
 
-.button:hover {
+.button.small,
+a.button.small {
+  font-size: 14px;
+  padding: 3px 16px 4px;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
   background-color: transparent;
   color: white;
+}
+
+.button:focus {
+  outline: none;
 }
 
 .black {
@@ -23,7 +35,9 @@ a.button {
   color: white;
 }
 
-.black:hover {
+.black:hover,
+.black:active,
+.black:focus {
   color: var(--aptible-black);
 }
 
