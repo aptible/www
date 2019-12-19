@@ -12,6 +12,7 @@ import Resources from './Resources';
 import Company from './Company';
 import UseCases from './UseCases';
 import Mobile from './Mobile';
+import HeaderContext from './HeaderContext';
 
 const dropDowns = {
   products: Products,
@@ -64,70 +65,72 @@ class Header extends React.Component {
     }
 
     return (
-      <div className={`${styles.headerContainer} ${this.state.navOpen ? styles.open : ''}`}>
-        <div className={styles.navOverlay} onClick={this.closeNav}></div>
-        <header className={`${styles.header} `}>
-          <Grid>
-            <Link to="/" className={styles.logo}>
-              <img src={logoImage} alt="Aptible logo" />
-            </Link>
+      <HeaderContext.Provider value={this.state}>
+        <div className={`${styles.headerContainer} ${this.state.navOpen ? styles.open : ''}`}>
+          <div className={styles.navOverlay} onClick={this.closeNav}></div>
+          <header className={`${styles.header} `}>
+            <Grid>
+              <Link to="/" className={styles.logo}>
+                <img src={logoImage} alt="Aptible logo" />
+              </Link>
 
-            <MainNavItem
-              title="Products"
-              gridColumn="3"
-              onClickFn={this.toggleNavSection}
-              sectionName="products"
-              openSectionName={this.state.openSectionName}
-            />
-            <MainNavItem
-              title="Use Cases"
-              to="/use-cases/"
-              gridColumn="4"
-            />
-            <MainNavItem
-              title="Customers"
-              to="/customers/"
-              gridColumn="5"
-            />
-            <MainNavItem
-              title="Resources"
-              gridColumn="6"
-              onClickFn={this.toggleNavSection}
-              sectionName="resources"
-              openSectionName={this.state.openSectionName}
-            />
-            <MainNavItem
-              title="Company"
-              gridColumn="7"
-              onClickFn={this.toggleNavSection}
-              sectionName="company"
-              openSectionName={this.state.openSectionName}
-            />
+              <MainNavItem
+                title="Products"
+                gridColumn="3"
+                onClickFn={this.toggleNavSection}
+                sectionName="products"
+                openSectionName={this.state.openSectionName}
+              />
+              <MainNavItem
+                title="Use Cases"
+                to="/use-cases/"
+                gridColumn="4"
+              />
+              <MainNavItem
+                title="Customers"
+                to="/customers/"
+                gridColumn="5"
+              />
+              <MainNavItem
+                title="Resources"
+                gridColumn="6"
+                onClickFn={this.toggleNavSection}
+                sectionName="resources"
+                openSectionName={this.state.openSectionName}
+              />
+              <MainNavItem
+                title="Company"
+                gridColumn="7"
+                onClickFn={this.toggleNavSection}
+                sectionName="company"
+                openSectionName={this.state.openSectionName}
+              />
 
-            <div className={styles.mobileNav}>
-              <MobileMenuItem navOpen={this.state.navOpen} onClickFn={this.toggleNavSection} />
-            </div>
+              <div className={styles.mobileNav}>
+                <MobileMenuItem navOpen={this.state.navOpen} onClickFn={this.toggleNavSection} />
+              </div>
 
-            <div className={styles.cta}>
-              <Grid>
-                <div className={styles.ctaLogIn}>
-                  <Button size="small" href="https://dashboard.aptible.com/login">Log In</Button>
-                </div>
+              <div className={styles.cta}>
+                <Grid>
+                  <div className={styles.ctaLogIn}>
+                    <Button size="small" href="https://dashboard.aptible.com/login">Log In</Button>
+                  </div>
 
-                <div className={styles.ctaSignUp}>
-                  {this.state.isDeployPage ? (
-                    <SignupButton size="small" text="Start with Deploy" product="deploy" />
-                  ) : (
-                    <SignupButton size="small" text="Schedule a Demo" product="comply" />
-                  )}
-                </div>
-              </Grid>
-            </div>
-          </Grid>
+                  <div className={styles.ctaSignUp}>
+                    {this.state.isDeployPage ? (
+                      <SignupButton size="small" text="Start with Deploy" product="deploy" />
+                    ) : (
+                      <SignupButton size="small" text="Schedule a Demo" product="comply" />
+                    )}
+                  </div>
+                </Grid>
+              </div>
+            </Grid>
 
-          {DropDownContent && <DropDownContent />}
-        </header>
-      </div>
+            {DropDownContent && <DropDownContent />}
+          </header>
+        </div>
+      </HeaderContext.Provider>
     );
   }
 }

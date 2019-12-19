@@ -1,12 +1,7 @@
-.container {
-  /*  */
-}
-
 .mainItems {
   grid-row: 1;
-  grid-column: 1 / span 7;
+  grid-column: 1 / -1;
   padding: 30px 0;
-  border-bottom: 1px solid var(--white-fifty);
 }
 
 .mainItems a {
@@ -15,14 +10,14 @@
   padding: 8px 0;
 }
 
-.resources {
+.login {
   grid-row: 2;
-  grid-column: 1 / span 7;
-  padding: 30px 0;
+  grid-column: 1 / -1;
+  padding-top: 15px;
 }
 
-.login {
+.cta {
   grid-row: 3;
-  grid-column: 1 / span 7;
-  padding:15px 0 60px 0;
+  grid-column: 1 / -1;
+  padding: 30px 0 60px 0;
 }
