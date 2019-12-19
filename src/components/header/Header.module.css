@@ -47,6 +47,24 @@
   grid-column: 6 / span 2;
 }
 
+.cta {
+  position: absolute;
+  right: 0;
+  top: -56px;
+  display: flex;
+}
+
+.ctaLogIn {
+  margin-right: 32px;
+  grid-column: 7;
+  justify-self: flex-end;
+}
+
+.ctaSignUp {
+  margin-right: 90px;
+  grid-column: -1;
+}
+
 @media (--mobile) {
   .headerContainer.open {
     height: 56px;
@@ -62,5 +80,9 @@
 
   .mobileNav {
     display: block;
+  }
+
+  .cta {
+    display: none;
   }
 }
