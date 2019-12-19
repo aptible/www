@@ -17,6 +17,7 @@ module.exports = {
     '--aptible-green': '#33c69f',
     '--aptible-green-ten': 'rgba(51, 198, 159, 0.1)',
     '--aptible-green-thirty': 'rgba(51, 198, 159, 0.3)',
+    '--aptible-green-seventy': 'rgba(51, 198, 159, 0.7)',
     '--aptible-green-dark': '#263941',
     '--aptible-card-hover': '#1b2c3b',
     '--aptible-red': '#d67666',

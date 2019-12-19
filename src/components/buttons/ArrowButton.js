@@ -16,9 +16,11 @@ class ArrowButton extends React.Component {
   }
 
   render() {
+    const Component = this.props.to ? Link : "a";
     return (
-      <Link
+      <Component
         to={this.props.to}
+        href={this.props.href}
         className={styles.link}
         onMouseEnter={() => this.setHover(true)}
         onMouseLeave={() => this.setHover(false)}
@@ -27,7 +29,7 @@ class ArrowButton extends React.Component {
         <div className={styles.arrowContainer}>
           <Arrow theme={this.state.hover ? '' : 'outline'} />
         </div>
-      </Link>
+      </Component>
     )
   }
 }

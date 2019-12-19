@@ -1,0 +1,22 @@
+.content {
+  grid-column: 1 / span 7;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 60px;
+}
+
+.content h1 {
+  margin-bottom: 60px;
+}
+
+.content h5 {
+  margin-bottom: 15px;
+}
+
+@media (--mobile) {
+  .content {
+    text-align: left;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}
