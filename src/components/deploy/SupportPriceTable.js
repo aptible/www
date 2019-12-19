@@ -125,6 +125,7 @@ const SupportRow = () => {
 const MaintenanceRow = () => {
   const title = "Maintenance Operations";
   const rows = [
+    "Pricing",
     "Normal Hours",
     "Weekday Extended Hours",
     "Weekend Extended Hours",
@@ -146,6 +147,7 @@ const MaintenanceRow = () => {
         title={title}
         rows={rows}
         items={[
+          "Included",
           "9am-9pm ET, M-F",
           "6am-9am or 9pm-12am ET, M-F",
           "6am-12am ET, Su Sa",
@@ -159,6 +161,7 @@ const MaintenanceRow = () => {
         title={title}
         rows={rows}
         items={[
+          "Included",
           "9am-9pm ET, M-F",
           "6am-9am or 9pm-12am ET, M-F",
           "6am-12am ET, Su Sa",
@@ -172,6 +175,7 @@ const MaintenanceRow = () => {
         title={title}
         rows={rows}
         items={[
+          "Included",
           "9am-9pm ET, M-F",
           "6am-9am or 9pm-12am ET, M-F",
           "6am-12am ET, Su Sa",
