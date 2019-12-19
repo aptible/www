@@ -69,7 +69,7 @@ export default () => (
         <a href="https://aptible.zendesk.com/" target="_blank" rel="noopener noreferrer">Contact Support</a>
         <a href="https://status.aptible.com/" target="_blank" rel="noopener noreferrer">Aptible Status</a>
         <Link to="/changelog/">Deploy Changelog</Link>
-        <a href="/documentation/index.html">Usage Docs</a>
+        <a href="/documentation/index.html">Documentation</a>
       </div>
 
       <div className={styles.company}>

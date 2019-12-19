@@ -18,10 +18,8 @@ const customers = [
     image: null,
     headline: (
       <React.Fragment>
-        <h1 className={styles.quoteStart}>&ldquo;We want our end users</h1>
-        <h1>to know we take security very seriously.</h1>
-        <h1>With Aptible <img src={arrowImage} alt="Aptible arrow" /></h1>
-        <h1>we were able to secure our SOC 2 audit very quickly.&rdquo;</h1>
+        <h2><span className={styles.quoteStart}>&ldquo;</span>We want our end users to know we take security very seriously.</h2>
+        <h2>With Aptible we were able to secure our SOC 2 audit very quickly.&rdquo;</h2>
       </React.Fragment>
     ),
     description: 'Fortmatic uses Aptible Comply to build their Security Management Program and secured their SOC 2 audit in a fraction of the time.',
@@ -32,10 +30,7 @@ const customers = [
     image: null,
     headline: (
       <React.Fragment>
-        <h1 className={styles.quoteStart}>&ldquo;We needed a system that</h1>
-        <h1>made it easy to operate a Security Management program&hellip;</h1>
-        <h1>with Aptible we've done that</h1>
-        <h1>without having to hire a compliance team.&rdquo;</h1>
+        <h2><span className={styles.quoteStart}>&ldquo;</span>We needed a system that made it easy to operate a Security Management program&hellip; with Aptible we've done that without having to hire a compliance team.&rdquo;</h2>
       </React.Fragment>
     ),
     description: 'Atrium uses Aptible for managing their information security and compliance efforts, specifically around ISO 27001 and SOC 2.',
@@ -47,10 +42,8 @@ const customers = [
     image: null,
     headline: (
       <React.Fragment>
-        <h1 className={styles.quoteStart}>&ldquo;Aptible Comply is amazing.</h1>
-        <h1>It's very easy <img src={arrowImage} alt="Aptible arrow" /></h1>
-        <h1>to use, and the pre-built</h1>
-        <h1>content is a huge win.&rdquo;</h1>
+        <h2><span className={styles.quoteStart}>&ldquo;</span>Aptible Comply is amazing.</h2>
+        <h2>It's very easy to use, and the pre-built content is a huge win.&rdquo;</h2>
       </React.Fragment>
     ),
     description: 'Quadpay uses Aptible to build out best practice policies and procedures and to streamline answering VSAs.',
@@ -120,7 +113,7 @@ class CustomerCarousel extends React.Component {
           {(!this.props.linkToCustomers && customers[this.state.openIdx].caseStudy) &&
             <ArrowButton to={customers[this.state.openIdx].caseStudy} text="Read The Case Study" />
           }
-          
+
         </div>
 
         <div className={styles.mainImage}>
