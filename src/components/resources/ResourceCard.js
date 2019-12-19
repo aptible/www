@@ -7,9 +7,7 @@ export default ({ resource }) => (
     <div className={styles.card}>
       <h5>{resource.title}</h5>
 
-      {resource.copy.map(copy => (
-        <p key={copy}>{copy}</p>
-      ))}
+      <p>{resource.description}</p>
 
       <div className={styles.readMore}>
         <p>Read More</p>
