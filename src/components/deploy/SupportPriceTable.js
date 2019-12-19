@@ -125,8 +125,8 @@ const SupportRow = () => {
 const MaintenanceRow = () => {
   const title = "Maintenance Operations";
   const rows = [
-    "Pricing",
     "Normal Hours",
+    "Normal Hours Pricing",
     "Weekday Extended Hours",
     "Weekend Extended Hours",
     "Extended Hours Pricing",
@@ -147,8 +147,8 @@ const MaintenanceRow = () => {
         title={title}
         rows={rows}
         items={[
-          "Included",
           "9am-9pm ET, M-F",
+          "Included",
           "6am-9am or 9pm-12am ET, M-F",
           "6am-12am ET, Su Sa",
           "$299/hour",
@@ -161,8 +161,8 @@ const MaintenanceRow = () => {
         title={title}
         rows={rows}
         items={[
-          "Included",
           "9am-9pm ET, M-F",
+          "Included",
           "6am-9am or 9pm-12am ET, M-F",
           "6am-12am ET, Su Sa",
           "$299/hour",
@@ -175,8 +175,8 @@ const MaintenanceRow = () => {
         title={title}
         rows={rows}
         items={[
-          "Included",
           "9am-9pm ET, M-F",
+          "Included",
           "6am-9am or 9pm-12am ET, M-F",
           "6am-12am ET, Su Sa",
           "$299/hour",
