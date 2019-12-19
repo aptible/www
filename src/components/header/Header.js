@@ -81,10 +81,8 @@ class Header extends React.Component {
             />
             <MainNavItem
               title="Use Cases"
+              to="/use-cases/"
               gridColumn="4"
-              onClickFn={this.toggleNavSection}
-              sectionName="useCases"
-              openSectionName={this.state.openSectionName}
             />
             <MainNavItem
               title="Customers"

@@ -23,9 +23,10 @@ export default () => (
           <div>Careers</div>
         </Link>
 
-        <Link to="/owners-manual/">
+        {/* @TODO add when ready */}
+        {/* <Link to="/owners-manual/">
           <div>Aptible Manual</div>
-        </Link>
+        </Link> */}
       </div>
     </Grid>
   </div>
