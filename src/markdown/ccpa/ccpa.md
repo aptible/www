@@ -1,6 +1,6 @@
 ---
-title: "CCPA Compliance: What is it and how does it work? | Aptible CCPA Compliance Guide for startups"
-displayTitle: "CCPA Compliance: Guide for startups"
+title: "CCPA Compliance: What is it and how does it work? | Aptible CCPA Compliance Guide for Startups"
+displayTitle: "CCPA Compliance: Guide for Startups"
 description: "What do startups and small businesses need to know about CCPA compliance? This article explains the background of the CCPA, whom the CCPA applies to, and how to become CCPA-compliant."
 slug: /ccpa/
 template: compliance/ccpa

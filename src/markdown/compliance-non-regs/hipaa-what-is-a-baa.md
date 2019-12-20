@@ -1,5 +1,5 @@
 ---
-title: "What is a HIPAA BAA? | Aptible HIPAA Compliance Guide for startups"
+title: "What is a HIPAA BAA? | Aptible HIPAA Compliance Guide for Startups"
 displayTitle: "What is a HIPAA BAA?"
 description: "At Aptible, we get a lot of questions about HIPAA business associate agreements, or \"BAAs.\" This post will explain some of the essential concepts that cloud-hosted software development organizations should know about BAAs."
 slug: /hipaa/what-is-a-baa/

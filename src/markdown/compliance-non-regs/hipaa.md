@@ -1,6 +1,6 @@
 ---
-title: "HIPAA Compliance: What is it and how does it work? | Aptible HIPAA Compliance Guide for startups"
-displayTitle: "HIPAA Compliance: Guide for startups"
+title: "HIPAA Compliance: What is it and how does it work? | Aptible HIPAA Compliance Guide for Startups"
+displayTitle: "HIPAA Compliance: Guide for Startups"
 description: "What do startups and small businesses need to know about HIPAA compliance? This article explains the requirements, defines PHI, and describes how all of it will impact your company."
 slug: /hipaa/
 template: compliance/hipaa
