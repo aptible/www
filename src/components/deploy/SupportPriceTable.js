@@ -21,6 +21,7 @@ const Divider = ({ className }) => (
 
 const TierHeading = () => tiers.map(tier => (
   <div
+    key={tier.name}
     className={classNames([
       styles.tierBlock,
       styles.tierHeading,
@@ -38,11 +39,16 @@ const TierHeading = () => tiers.map(tier => (
   </div>
 ));
 
-const HeadingBlock = ({ title, items, footnote, className}) => (
+const HeadingBlock = ({ title, items, footnote, footnoteRow, className}) => (
   <div className={classNames(styles.block, styles.headingBlock, className)}>
-    <h4>{title}{footnote && <sup className={styles.footnoteMarker}>{footnote}</sup>}</h4>
-    {items.map(item => (
-      <div key={item} aria-hidden="true">{item}</div>
+    <h4>{title}{footnote && !footnoteRow && <sup className={styles.footnoteMarker}>{footnote}</sup>}</h4>
+    {items.map((item, index) => (
+      <div key={item} aria-hidden="true">
+        {item}
+        {footnote && footnoteRow === index + 1 && (
+          <sup className={styles.footnoteMarker}>{footnote}</sup>
+        )}
+      </div>
     ))}
   </div>
 );
@@ -53,7 +59,7 @@ const DataBlock = ({ title, tier, rows, items, footnote, footnoteRow, className 
     {items.map((item, index) => (
       <div
         className={classNames(styles.dataBlockRow, item === 'N/A' && styles.na)}
-        key={item}
+        key={`${rows[index]}:${item}`}
       >
         <div className={styles.dataBlockMobileLabel}>{rows[index]}</div>
         {item}
@@ -70,7 +76,8 @@ const SupportRow = () => {
   const rows = [
     "Supported Ticket Severities",
     "Available Hours for Support",
-    "Available Channels"
+    "Available Channels",
+    "Maintenance Operation Hours",
   ];
       
   return (
@@ -79,6 +86,8 @@ const SupportRow = () => {
         className={styles.supportHeadingBlock}
         title={title}
         items={rows}
+        footnote={2}
+        footnoteRow={4}
       />
 
       <DataBlock
@@ -89,7 +98,8 @@ const SupportRow = () => {
         items={[
           "Low, Normal",
           "9am-6pm ET, M-F",
-          "Email, Zendesk"
+          "Email, Zendesk",
+          "9am-9pm ET, M-F",
         ]}
       />
 
@@ -101,7 +111,8 @@ const SupportRow = () => {
         items={[
           "Low, Normal, High",
           "9am-6pm ET, M-F",
-          "Email, Zendesk"
+          "Email, Zendesk",
+          "9am-9pm ET, M-F",
         ]}
       />
       
@@ -113,74 +124,11 @@ const SupportRow = () => {
         items={[
           "Low, Normal, High, Urgent",
           "24/7 (for Urgent tickets)",
-          "Email, Zendesk, Slack"
+          "Email, Zendesk, Slack",
+          "9am-9pm ET, M-F",
         ]}
         footnote={1}
         footnoteRow={3}
-      />
-    </>
-  );
-};
-
-const MaintenanceRow = () => {
-  const title = "Maintenance Operations";
-  const rows = [
-    "Normal Hours",
-    "Normal Hours Pricing",
-    "Weekday Extended Hours",
-    "Weekend Extended Hours",
-    "Extended Hours Pricing",
-  ];
-
-  return (
-    <>
-      <HeadingBlock
-        className={styles.maintenanceHeadingBlock}
-        title={title}
-        footnote={2}
-        items={rows}
-      />
-
-      <DataBlock
-        tier="Standard"
-        className={styles.standardMaintenanceBlock}
-        title={title}
-        rows={rows}
-        items={[
-          "9am-9pm ET, M-F",
-          "Included",
-          "6am-9am or 9pm-12am ET, M-F",
-          "6am-12am ET, Su Sa",
-          "$299/hour",
-        ]}
-      />
-
-      <DataBlock
-        tier="Premium"
-        className={styles.premiumMaintenanceBlock}
-        title={title}
-        rows={rows}
-        items={[
-          "9am-9pm ET, M-F",
-          "Included",
-          "6am-9am or 9pm-12am ET, M-F",
-          "6am-12am ET, Su Sa",
-          "$299/hour",
-        ]}
-      />
-
-      <DataBlock
-        tier="Enterprise"
-        className={styles.enterpriseMaintenanceBlock}
-        title={title}
-        rows={rows}
-        items={[
-          "9am-9pm ET, M-F",
-          "Included",
-          "6am-9am or 9pm-12am ET, M-F",
-          "6am-12am ET, Su Sa",
-          "$299/hour",
-        ]}
       />
     </>
   );
@@ -304,7 +252,6 @@ const Details = () => (
         <li>Troubleshooting Aptible services and products</li>
         <li>Limited support of third-party applications, services and frameworks</li>
         <li>VPC, TGW, VPN initial setup, configuration verification and update</li>
-        <li>Major database version upgrades</li>
         <li>Environment migrations (shared-tenancy to dedicated-tenancy)</li>
       </ul>
 
@@ -338,8 +285,6 @@ export default () => (
     <TierHeading />
     <Divider className={styles.supportDivider} />
     <SupportRow />
-    <Divider className={styles.maintenanceDivider} />
-    <MaintenanceRow />
     <Divider className={styles.beyondDivider} />
     <BeyondRow />
     <Footnotes />
