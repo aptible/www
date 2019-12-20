@@ -247,15 +247,14 @@ const Details = () => (
   <div className={styles.details}>
     <div className={styles.detailsLeft}>
       <h5>In-scope Support</h5>
-      <p>In-Scope support operations are included in all support plans.</p>
-      <p className={styles.smallHeading}>Included in-scope support operations</p>
+      <p>In-Scope support requests are included in all support plans.</p>
+      <p className={styles.smallHeading}>Included in-scope support requests</p>
       <ul>
         <li>Answering questions about Aptible services and features</li> 
         <li>Advice regarding best practices for app deployment and architecture</li>
         <li>Troubleshooting Aptible services and products</li>
         <li>Limited support of third-party applications, services and frameworks</li>
         <li>VPC, TGW, VPN initial setup, configuration verification and update</li>
-        <li>Environment migrations (shared-tenancy to dedicated-tenancy)</li>
       </ul>
 
       <h5>Maintenance Operations<sup className={styles.footnoteMarker}>2</sup></h5>
@@ -264,13 +263,13 @@ const Details = () => (
       <ul>
         <li>Major database version upgrades</li>
         <li>VPN tunnel replacements</li>
-        <li>Environment migrations</li>
+        <li>Environment migrations (shared-tenancy to dedicated-tenancy)</li>
       </ul>
     </div>
 
     <div className={styles.detailsRight}>
       <h5>Beyond Support<sup className={styles.footnoteMarker}>3</sup></h5>
-      <p>Beyond Support operations are included in Premium and Enterprise support plans only.</p>
+      <p>Beyond Support requests are included in Premium and Enterprise support plans only.</p>
       <p className={styles.smallHeading}>Included Beyond Support Operations</p>
       <ul>
         <li>Developing your application code</li>
