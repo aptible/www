@@ -38,6 +38,11 @@
   padding-top: 4px;
 }
 
+.content hr {
+  border: 0;
+  border-top: 1px solid var(--grid-lines-color);
+}
+
 .sidebar {
   grid-row: 3;
   grid-column: 6 / span 2;
