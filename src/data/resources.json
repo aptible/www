@@ -52,5 +52,17 @@
     "url": "/ccpa/",
     "description": "What do startups and small businesses need to know about CCPA compliance? This guide explains the background of the CCPA, whom the CCPA applies to, and how to become CCPA-compliant.",
     "type": "Guide"
+  },
+  {
+    "title": "Deploy Reference Architecture",
+    "url": "/documentation/deploy/reference.html",
+    "description": "This reference guide provides you with all of the information you need to get started and be successful with Aptible Deploy.",
+    "type": "Guide"
+  },
+  {
+    "title": "Division of Responsibility",
+    "url": "/deploy/features/#division-of-responsibility",
+    "description": "Aptible Deploy is an ISO 27001 and SOC 2 certified, AWS-based deployment platform for deploying audit-ready apps and databases.",
+    "type": "Guide"
   }
 ]

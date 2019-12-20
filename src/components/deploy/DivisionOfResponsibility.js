@@ -4,7 +4,7 @@ import styles from './DivisionOfResponsibility.module.css';
 import deployFeatures from '../../data/deploy-features.json';
 
 export default () => (
-  <div className={styles.container}>
+  <div className={styles.container} id="division-of-responsibility">
     <Grid>
       <div className={styles.hero}>
         <h1>Division of Responsibility</h1>
