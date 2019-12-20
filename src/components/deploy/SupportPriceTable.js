@@ -236,7 +236,10 @@ const ResponseTimes = () => (
 const GetStarted = () => (
   <div className={styles.getStarted}>
     <h3>Ready to get started with Premium Support?</h3>
-    <ArrowButton href="https://aptible.zendesk.com/" text="Contact us to get started" />
+    <ArrowButton
+      href="https://aptible.zendesk.com/hc/en-us/requests/new"
+      text="Contact us to get started"
+    />
   </div>
 );
 
