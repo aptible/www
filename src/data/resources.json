@@ -62,7 +62,7 @@
   {
     "title": "Division of Responsibility",
     "url": "/deploy/features/#division-of-responsibility",
-    "description": "Aptible Deploy is an ISO 27001 and SOC 2 certified, AWS-based deployment platform for deploying audit-ready apps and databases.",
+    "description": "This guide is a breakdown of the functionalities (and their responsible parties) provided as part of the Deploy service.",
     "type": "Guide"
   }
 ]
