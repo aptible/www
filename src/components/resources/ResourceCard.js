@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styles from './ResourceCard.module.css';
 
-export default ({ resource }) => (
-  <Link to={resource.url} className={styles.container}>
+export default ({ resource }) => {  
+  const LinkContent = () => (
     <div className={styles.card}>
       <h5>{resource.title}</h5>
 
@@ -17,5 +17,17 @@ export default ({ resource }) => (
         <span className={styles.tag}>{resource.type}</span>
       </div>
     </div>
-  </Link>
-);
+  );
+  
+  const isDocumentationUrl = resource.url.includes("documentation");
+  
+  return isDocumentationUrl ? (
+    <a href={resource.url} className={styles.container}>
+      <LinkContent />
+    </a>
+  ) : (
+    <Link to={resource.url} className={styles.container}>
+      <LinkContent />
+    </Link>
+  );
+};
