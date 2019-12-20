@@ -121,6 +121,11 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         allOwnersManualPages: allContentfulOwnersManualPage(
+          filter: {
+            hidePage: {
+              eq: false
+            }
+          }
           sort: { fields: [createdAt], order: ASC }
         ) {
           edges {
@@ -129,6 +134,7 @@ exports.createPages = ({ graphql, actions }) => {
               displayTitle
               section
               slug
+              hidePage
               contentfulparent {
                 title
                 slug
