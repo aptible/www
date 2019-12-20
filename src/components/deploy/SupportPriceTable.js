@@ -21,6 +21,7 @@ const Divider = ({ className }) => (
 
 const TierHeading = () => tiers.map(tier => (
   <div
+    key={tier.name}
     className={classNames([
       styles.tierBlock,
       styles.tierHeading,
@@ -38,11 +39,16 @@ const TierHeading = () => tiers.map(tier => (
   </div>
 ));
 
-const HeadingBlock = ({ title, items, footnote, className}) => (
+const HeadingBlock = ({ title, items, footnote, footnoteRow, className}) => (
   <div className={classNames(styles.block, styles.headingBlock, className)}>
-    <h4>{title}{footnote && <sup className={styles.footnoteMarker}>{footnote}</sup>}</h4>
-    {items.map(item => (
-      <div key={item} aria-hidden="true">{item}</div>
+    <h4>{title}{footnote && !footnoteRow && <sup className={styles.footnoteMarker}>{footnote}</sup>}</h4>
+    {items.map((item, index) => (
+      <div key={item} aria-hidden="true">
+        {item}
+        {footnote && footnoteRow === index + 1 && (
+          <sup className={styles.footnoteMarker}>{footnote}</sup>
+        )}
+      </div>
     ))}
   </div>
 );
@@ -53,7 +59,7 @@ const DataBlock = ({ title, tier, rows, items, footnote, footnoteRow, className 
     {items.map((item, index) => (
       <div
         className={classNames(styles.dataBlockRow, item === 'N/A' && styles.na)}
-        key={item}
+        key={`${rows[index]}:${item}`}
       >
         <div className={styles.dataBlockMobileLabel}>{rows[index]}</div>
         {item}
@@ -70,7 +76,8 @@ const SupportRow = () => {
   const rows = [
     "Supported Ticket Severities",
     "Available Hours for Support",
-    "Available Channels"
+    "Available Channels",
+    "Maintenance Operation Hours",
   ];
       
   return (
@@ -79,6 +86,8 @@ const SupportRow = () => {
         className={styles.supportHeadingBlock}
         title={title}
         items={rows}
+        footnote={2}
+        footnoteRow={4}
       />
 
       <DataBlock
@@ -89,7 +98,8 @@ const SupportRow = () => {
         items={[
           "Low, Normal",
           "9am-6pm ET, M-F",
-          "Email, Zendesk"
+          "Email, Zendesk",
+          "9am-9pm ET, M-F",
         ]}
       />
 
@@ -101,7 +111,8 @@ const SupportRow = () => {
         items={[
           "Low, Normal, High",
           "9am-6pm ET, M-F",
-          "Email, Zendesk"
+          "Email, Zendesk",
+          "9am-9pm ET, M-F",
         ]}
       />
       
@@ -113,74 +124,11 @@ const SupportRow = () => {
         items={[
           "Low, Normal, High, Urgent",
           "24/7 (for Urgent tickets)",
-          "Email, Zendesk, Slack"
+          "Email, Zendesk, Slack",
+          "9am-9pm ET, M-F",
         ]}
         footnote={1}
         footnoteRow={3}
-      />
-    </>
-  );
-};
-
-const MaintenanceRow = () => {
-  const title = "Maintenance Operations";
-  const rows = [
-    "Normal Hours",
-    "Normal Hours Pricing",
-    "Weekday Extended Hours",
-    "Weekend Extended Hours",
-    "Extended Hours Pricing",
-  ];
-
-  return (
-    <>
-      <HeadingBlock
-        className={styles.maintenanceHeadingBlock}
-        title={title}
-        footnote={2}
-        items={rows}
-      />
-
-      <DataBlock
-        tier="Standard"
-        className={styles.standardMaintenanceBlock}
-        title={title}
-        rows={rows}
-        items={[
-          "9am-9pm ET, M-F",
-          "Included",
-          "6am-9am or 9pm-12am ET, M-F",
-          "6am-12am ET, Su Sa",
-          "$299/hour",
-        ]}
-      />
-
-      <DataBlock
-        tier="Premium"
-        className={styles.premiumMaintenanceBlock}
-        title={title}
-        rows={rows}
-        items={[
-          "9am-9pm ET, M-F",
-          "Included",
-          "6am-9am or 9pm-12am ET, M-F",
-          "6am-12am ET, Su Sa",
-          "$299/hour",
-        ]}
-      />
-
-      <DataBlock
-        tier="Enterprise"
-        className={styles.enterpriseMaintenanceBlock}
-        title={title}
-        rows={rows}
-        items={[
-          "9am-9pm ET, M-F",
-          "Included",
-          "6am-9am or 9pm-12am ET, M-F",
-          "6am-12am ET, Su Sa",
-          "$299/hour",
-        ]}
       />
     </>
   );
@@ -288,7 +236,10 @@ const ResponseTimes = () => (
 const GetStarted = () => (
   <div className={styles.getStarted}>
     <h3>Ready to get started with Premium Support?</h3>
-    <ArrowButton href="https://aptible.zendesk.com/" text="Contact us to get started" />
+    <ArrowButton
+      href="https://aptible.zendesk.com/hc/en-us/requests/new"
+      text="Contact us to get started"
+    />
   </div>
 );
 
@@ -296,16 +247,14 @@ const Details = () => (
   <div className={styles.details}>
     <div className={styles.detailsLeft}>
       <h5>In-scope Support</h5>
-      <p>In-Scope support operations are included in all support plans.</p>
-      <p className={styles.smallHeading}>Included in-scope support operations</p>
+      <p>In-Scope support requests are included in all support plans.</p>
+      <p className={styles.smallHeading}>Included in-scope support requests</p>
       <ul>
         <li>Answering questions about Aptible services and features</li> 
         <li>Advice regarding best practices for app deployment and architecture</li>
         <li>Troubleshooting Aptible services and products</li>
         <li>Limited support of third-party applications, services and frameworks</li>
         <li>VPC, TGW, VPN initial setup, configuration verification and update</li>
-        <li>Major database version upgrades</li>
-        <li>Environment migrations (shared-tenancy to dedicated-tenancy)</li>
       </ul>
 
       <h5>Maintenance Operations<sup className={styles.footnoteMarker}>2</sup></h5>
@@ -314,20 +263,21 @@ const Details = () => (
       <ul>
         <li>Major database version upgrades</li>
         <li>VPN tunnel replacements</li>
-        <li>Environment migrations</li>
+        <li>Environment migrations (shared-tenancy to dedicated-tenancy)</li>
       </ul>
     </div>
 
     <div className={styles.detailsRight}>
       <h5>Beyond Support<sup className={styles.footnoteMarker}>3</sup></h5>
-      <p>Beyond Support operations are included in Premium and Enterprise support plans only.</p>
-      <p className={styles.smallHeading}>Included Beyond Support Operations</p>
+      <p>Beyond Support requests are included in Premium and Enterprise support plans only.</p>
+      <p className={styles.smallHeading}>Included Beyond Support requests</p>
       <ul>
         <li>Developing your application code</li>
         <li>Debugging custom software</li>
         <li>Performing manual system administration tasks</li>
         <li>Architectural review</li>
         <li>Live debugging of VPN connectivity issues with customers or partners</li>
+        <li>Database upgrades outside of maintenance operation hours</li>
       </ul>
     </div>
   </div>
@@ -338,8 +288,6 @@ export default () => (
     <TierHeading />
     <Divider className={styles.supportDivider} />
     <SupportRow />
-    <Divider className={styles.maintenanceDivider} />
-    <MaintenanceRow />
     <Divider className={styles.beyondDivider} />
     <BeyondRow />
     <Footnotes />
