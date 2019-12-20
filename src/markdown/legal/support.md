@@ -18,7 +18,7 @@ This policy outlines Aptible's support practices and resources. It also identifi
 Obligations under this policy (both ours and yours) are are incorporated by reference into the [Aptible Terms of Service].
 
 ### Technical Support
-We offer several options for technical support. All accounts get basic support, and we offer paid upgrade options. See [www.aptible.com/support-plans](/support-plans/) for plans and pricing.
+We offer several options for technical support. All accounts get basic support, and we offer paid upgrade options. See [www.aptible.com/deploy/support/](/deploy/support/) for plans and pricing.
 
 Aptible support includes:
 
