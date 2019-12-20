@@ -270,7 +270,7 @@ const Details = () => (
     <div className={styles.detailsRight}>
       <h5>Beyond Support<sup className={styles.footnoteMarker}>3</sup></h5>
       <p>Beyond Support requests are included in Premium and Enterprise support plans only.</p>
-      <p className={styles.smallHeading}>Included Beyond Support Operations</p>
+      <p className={styles.smallHeading}>Included Beyond Support requests</p>
       <ul>
         <li>Developing your application code</li>
         <li>Debugging custom software</li>
