@@ -3,7 +3,6 @@ import { Grid } from '../grid/Grid';
 import styles from './CustomerCarousel.module.css';
 import ArrowButton from '../buttons/ArrowButton';
 import CustomerCarouselThumbnail from './CustomerCarouselThumbnail';
-import arrowImage from '../../images/arrows/green.svg';
 
 import fortmaticPhoto from '../../images/customers/carousel/fortmatic.jpg';
 import atriumPhoto from '../../images/customers/carousel/atrium.jpg';
