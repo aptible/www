@@ -264,6 +264,7 @@ const Details = () => (
         <li>Major database version upgrades</li>
         <li>VPN tunnel replacements</li>
         <li>Environment migrations (shared-tenancy to dedicated-tenancy)</li>
+        <li>Database upgrades outside of maintenance operation hours</li>
       </ul>
     </div>
 

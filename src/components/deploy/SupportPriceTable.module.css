@@ -449,10 +449,19 @@
 .detailsLeft {
   margin-right: 100px;
   width: 50%;
+  padding-right: 52px;
 }
 
 .detailsRight {
   width: 50%;
+  padding-right: 52px;
+}
+
+@media (--mobile) {
+  .detailsLeft,
+  .detailsRight {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 739px) {
