@@ -13,9 +13,13 @@ export default ({ resource }) => {
         <p>Read More</p>
       </div>
 
-      <div className={styles.tags}>
-        <span className={styles.tag}>{resource.type}</span>
-      </div>
+      {resource.tags &&
+        <div className={styles.tags}>
+          {resource.tags.map((tag, idx) => {
+            return <span key={idx} className={styles.tag}>{tag}</span>
+          })}
+        </div>
+      }
     </div>
   );
   

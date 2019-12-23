@@ -4,11 +4,18 @@ import styles from './ResourceCards.module.css';
 import ResourceCard from './ResourceCard';
 import resources from '../../data/resources.json';
 
+const FILTERS = {
+  ALL: "All",
+  GUIDES: "Guides",
+  WEBINAR: "Webinar",
+  DEPLOY: "Deploy"
+};
+
 class ResourceCards extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeFilter: "All",
+      activeFilter: FILTERS.ALL,
     };
   }
 
@@ -21,9 +28,14 @@ class ResourceCards extends React.Component {
   render() {
     const { activeFilter } = this.state;
 
-    const filteredResources = activeFilter === "All" ?
-      resources :
-      resources.filter(resource => resource.type === activeFilter.replace(/s$/, ""));
+    let filteredResources = resources;
+    filteredResources = filteredResources.filter(item => {
+      if (activeFilter === FILTERS.ALL) {
+        return resources;
+      }
+
+      return item.tags.includes(activeFilter.replace(/s$/, "")); 
+    });
     
     const halfwayThrough = Math.floor(filteredResources.length / 2)
     const leftResources = filteredResources.slice(0, halfwayThrough);
@@ -38,7 +50,7 @@ class ResourceCards extends React.Component {
                 <div className={styles.navigation}>
                   <h6 className="small">Resources</h6>
 
-                  {["All", "Guides", "Webinar"].map(filter => (
+                  {Object.values(FILTERS).map(filter => (
                     <button
                       key={filter}
                       onClick={this.filterResources}

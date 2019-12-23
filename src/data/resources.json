@@ -3,66 +3,66 @@
     "title": "Components of an Effective Asset Management Program",
     "url": "/security-management/asset-management/",
     "description": "Asset management is the collection of processes that relates to how you track and protect the data you care about. In this guide, you’ll learn the basics of effective asset management.",
-    "type": "Guide"
+    "tags": ["Guide"]
   },
   {
     "title": "Components of an Effective Identity and Access Management Program",
     "url": "/security-management/identity-access-management/",
     "description": "You’ll learn why IAM is important, the critical decisions your company will need to make in this context, and how to balance system access with information confidentiality.",
-    "type": "Guide"
+    "tags": ["Guide"]
   },
   {
     "title": "Introduction to Security Management",
     "url": "/security-management/",
     "description": "If you’ve been tasked with “figuring out security” or looking into a compliance audit like SOC 2 or ISO 27001, you can use this guide as a roadmap to designing and building a security program.",
-    "type": "Guide"
+    "tags": ["Guide"]
   },
   {
     "title": "GDPR Compliance Guide",
     "url": "/gdpr/articles/1-subject-matter-objectives/",
     "description": "In this guide, you’ll build a solid understanding of GDPR, compliance with GDPR requirements, and how all of this will affect your engineering organization.",
-    "type": "Guide"
+    "tags": ["Guide"]
   },
   {
     "title": "Components of an Effective Human Resources Security Program",
     "url": "/security-management/human-resources/",
     "description": "This guide is a high-level explanation of why human resources management is important, the essentials of an effective human resources security program and information on how to leverage Aptible’s tools and out-of-the-box policies to manage your workforce.",
-    "type": "Guide"
+    "tags": ["Guide"]
   },
   {
     "title": "Components of an Effective Vendor Management Program",
     "url": "/security-management/vendor-management/",
     "description": "In this guide, we cover why vendor management is important, the essentials of an effective vendor management program, and information on how to use Aptible’s various vendor management tools and features to manage vendors securely.",
-    "type": "Guide"
+    "tags": ["Guide"]
   },
   {
     "title": "HIPAA Compliance: Guide for Startups",
     "url": "/hipaa/",
     "description": "In this guide, you’ll build a solid understanding of HIPAA, compliance with HIPAA requirements, and how all of this will affect your engineering organization.",
-    "type": "Guide"
+    "tags": ["Guide"]
   },
   {
     "title": "Webinar Recap: Learn about Aptible Comply Workflows",
     "url": "/webinars/workflows/",
     "description": "In this recorded Webinar, Aptible Product Lead Chris Gomes and Product Marketing Manager Rob deJuana-Matthews discussed the release of Aptible Comply Workflows. Workflows helps Aptible Comply customers to keep track of everything they need to do on an ongoing basis to maintain compliance.",
-    "type": "Webinar"
+    "tags": ["Webinar"]
   },
   {
     "title": "CCPA Compliance: Guide for Startups",
     "url": "/ccpa/",
     "description": "What do startups and small businesses need to know about CCPA compliance? This guide explains the background of the CCPA, whom the CCPA applies to, and how to become CCPA-compliant.",
-    "type": "Guide"
+    "tags": ["Guide"]
   },
   {
     "title": "Deploy Reference Architecture",
     "url": "/documentation/deploy/reference.html",
     "description": "This reference guide provides you with all of the information you need to get started and be successful with Aptible Deploy.",
-    "type": "Guide"
+    "tags": ["Guide", "Deploy"]
   },
   {
-    "title": "Division of Responsibility",
+    "title": "Deploy Division of Responsibilities",
     "url": "/deploy/features/#division-of-responsibility",
     "description": "This guide is a breakdown of the functionalities (and their responsible parties) provided as part of the Deploy service.",
-    "type": "Guide"
+    "tags": ["Guide", "Deploy"]
   }
 ]
