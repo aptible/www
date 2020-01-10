@@ -5,8 +5,15 @@ import Signup from './Signup';
 class SignupButton extends React.Component {
   constructor(props) {
     super(props);
+
+    let defaultOpen = false;
+    if (typeof window !== 'undefined') {
+      if (window.location.pathname === "/" && window.location.hash === "#schedule") {
+        defaultOpen = true;
+      }
+    }
     this.state = {
-      open: false
+      open: defaultOpen
     };
   }
 
@@ -28,10 +35,11 @@ class SignupButton extends React.Component {
           {this.props.text}
         </Button>
 
-        {this.state.open &&
+        {
+          this.state.open &&
           <Signup closeFn={this.closeSignup} product={this.props.product} />
         }
-      </React.Fragment>
+      </React.Fragment >
     );
   }
 }
