@@ -6,7 +6,7 @@ class SignupButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: false,
     };
   }
 
@@ -28,10 +28,11 @@ class SignupButton extends React.Component {
           {this.props.text}
         </Button>
 
-        {this.state.open &&
+        {
+          this.state.open &&
           <Signup closeFn={this.closeSignup} product={this.props.product} />
         }
-      </React.Fragment>
+      </React.Fragment >
     );
   }
 }
