@@ -45,7 +45,7 @@ class Hero extends React.Component {
               <p className="XL">{this.props.paragraphOverride}</p>
             }
 
-            <SignupButton text="Schedule a Demo" product="comply" />
+            <SignupButton text="Schedule a Call" product="comply" />
           </div>
 
           <div className={styles.cardContainer}>
@@ -59,7 +59,7 @@ class Hero extends React.Component {
                   <p className="L-bold">1:47</p>
                 </div>
               </div>
-              
+
             }
 
             {this.state.playVideo &&
@@ -67,13 +67,13 @@ class Hero extends React.Component {
                 <WistiaVideo videoId="8p6ej6qqrg" autoPlay="true" />
               </div>
             }
-            
+
             <div className={styles.cardContent}>
               <img src={atriumLogo} alt="atrium logo" className={styles.logo} />
 
               <p>
-                &ldquo;We needed a system that made it easy to operate a 
-                Security Management program, that tracked our efforts and 
+                &ldquo;We needed a system that made it easy to operate a
+                Security Management program, that tracked our efforts and
                 helped us share our position with customers&hellip; with
                 Aptible we've done that without having to hire a full-time
                 compliance team.&rdquo;
@@ -91,4 +91,4 @@ class Hero extends React.Component {
 }
 
 export default Hero;
-// export default ({ headlineOverride, paragraphOverride }) => 
+// export default ({ headlineOverride, paragraphOverride }) =>

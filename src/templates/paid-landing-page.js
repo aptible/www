@@ -27,7 +27,7 @@ export default ({ pageContext }) => (
       <meta name="description" content={pageContext.paragraph} />
     </Helmet>
     <Hero headlineOverride={pageContext.headline} paragraphOverride={pageContext.paragraph} />
-    <Nav items={stickyNavItems} ctaText="Schedule a Demo" product="comply" />
+    <Nav items={stickyNavItems} ctaText="Schedule a Call" product="comply" />
     <Features />
     <ContinuouslyImprove />
     <BeyondCompliance />

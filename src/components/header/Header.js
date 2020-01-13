@@ -47,7 +47,7 @@ class Header extends React.Component {
   }
 
   componentDidMount = () => {
-    if (typeof(window) === 'undefined') {
+    if (typeof (window) === 'undefined') {
       return;
     }
 
@@ -120,8 +120,8 @@ class Header extends React.Component {
                     {this.state.isDeployPage ? (
                       <SignupButton size="small" text="Start with Deploy" product="deploy" />
                     ) : (
-                      <SignupButton size="small" text="Schedule a Demo" product="comply" />
-                    )}
+                        <SignupButton size="small" text="Schedule a Call" product="comply" />
+                      )}
                   </div>
                 </Grid>
               </div>
