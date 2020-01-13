@@ -64,7 +64,7 @@
 }
 
 @media (--mobile) {
-  .headerContainer.open {
+  .headerContainer {
     height: 56px;
   }
 

@@ -5,15 +5,8 @@ import Signup from './Signup';
 class SignupButton extends React.Component {
   constructor(props) {
     super(props);
-
-    let defaultOpen = false;
-    if (typeof window !== 'undefined') {
-      if (window.location.pathname === "/" && window.location.hash === "#schedule") {
-        defaultOpen = true;
-      }
-    }
     this.state = {
-      open: defaultOpen
+      open: false,
     };
   }
 
