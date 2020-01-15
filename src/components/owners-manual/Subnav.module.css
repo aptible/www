@@ -1,0 +1,13 @@
+.cta a {
+  display: block;
+  margin: 20px 40px 0 40px;
+}
+
+.section {
+  padding: 15px 40px 0 40px;
+}
+
+.depthPadding {
+  display: inline-block;
+  width: 10px;
+}
