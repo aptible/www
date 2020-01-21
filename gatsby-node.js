@@ -293,21 +293,21 @@ exports.createPages = ({ graphql, actions }) => {
         });
       }
 
-      result.data.allOwnersManualPages.edges.forEach(({ node }) => {
-        let pagePath = 'owners-manual';
-        if (node.slug) {
-          pagePath += `/${node.slug}`;
-        }
+      // result.data.allOwnersManualPages.edges.forEach(({ node }) => {
+      //   let pagePath = 'owners-manual';
+      //   if (node.slug) {
+      //     pagePath += `/${node.slug}`;
+      //   }
 
-        createPage({
-          path: pagePath,
-          component: path.resolve(`./src/templates/owners-manual.js`),
-          context: {
-            activePath: node.slug,
-            allPages: result.data.allOwnersManualPages.edges
-          },
-        });
-      });
+      //   createPage({
+      //     path: pagePath,
+      //     component: path.resolve(`./src/templates/owners-manual.js`),
+      //     context: {
+      //       activePath: node.slug,
+      //       allPages: result.data.allOwnersManualPages.edges
+      //     },
+      //   });
+      // });
 
       resolve();
     });
