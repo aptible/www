@@ -30,7 +30,11 @@ const items = [
       <>
         <p className="L">
           “Feedback comes from a place of positive intent.” —{' '}
-          <a href="https://medium.com/@michaelterrell/what-is-feedback-anyways-2a803c7f2d59">
+          <a
+            href="https://medium.com/@michaelterrell/what-is-feedback-anyways-2a803c7f2d59"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Michael Terrell
           </a>
         </p>
@@ -43,7 +47,7 @@ const items = [
         <p className="L">
           We work to create an environment where it feels completely safe to ask
           for help and take a risk — where we feel valued for our contributions
-          and accepted for who we are. We don't attribute mistakes or unexpected
+          and accepted for who we are. We don’t attribute mistakes or unexpected
           outcomes to human error: We view them as a starting point for an
           inquiry, not the end. We can resolve difficult issues while supporting
           each other.
@@ -55,9 +59,7 @@ const items = [
     title: 'Ask Why',
     content: (
       <>
-        <p className="L">
-          “Is the juice worth the squeeze?” — Source Unknown
-        </p>
+        <p className="L">“Is the juice worth the squeeze?” — Source Unknown</p>
         <p className="L">
           We seek to understand before we act. We question our assumptions and
           surface differences of opinion, in order to discover gaps in our plans
