@@ -27,7 +27,7 @@ export default ({ jobs }) => (
                   <h5>{job.node.text}</h5>
                 </div>
                 <div className={styles.location}>
-                  <h6 className="small">Remote</h6>
+                  <h6 className="small">{job.node.categories.location}</h6>
                 </div>
                 <div className={styles.commitment}>
                   <h6 className="small">Full-Time</h6>
