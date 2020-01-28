@@ -9,7 +9,7 @@ slug: /legal/privacy/
 template: legal
 ---
 
-Version 3.2 – August 28, 2019
+Version 3.3 – January 27, 2020
 
 At Aptible, our core mission is to help teams protect data on the internet. As a result, our goal is to set a high standard for protecting the privacy of your information. We want to be clear about how we collect, use, protect, and share your information, including your personal information, and the rights and choices you have about the ways in which you can help us protect your privacy.
 
@@ -281,7 +281,7 @@ For personal data transferred from the EU to the U.S. or other third country not
 
 In compliance with the EU-U.S. and Swiss-U.S. Privacy Shield Principles, we strive to resolve all complaints about privacy and the collection or use of customer information. If you have questions about our participation in the Privacy Shield programs or have a complaint, please send an e-mail to [legal@aptible.com][1]. 
 
-Under the Privacy Shield programs, any unresolved privacy complaints can be referred to an independent dispute resolution mechanism. We use the International Centre for Dispute Resolution®/American Arbitration Association®. If you feel that we have not satisfactorily addressed your complaint, you can visit the ICRD/AAA website at [https://apps.adr.org/webfile/][6]
+Under the Privacy Shield programs, any unresolved privacy complaints can be referred to an independent dispute resolution mechanism. We use the International Centre for Dispute Resolution®/American Arbitration Association®. If you feel that we have not satisfactorily addressed your complaint, you can visit the ICRD/AAA website at [http://go.adr.org/privacyshield.html][6]
 
 for more information on how to file a complaint. In some cases, you may be able to invoke binding arbitration.
 
@@ -325,7 +325,7 @@ The fastest, most convenient way to contact VeraSafe is via this form: [https://
   [3]: https://www.aptible.com/legal/security/
   [4]: mailto:security@aptible.com
   [5]: https://www.privacyshield.gov/
-  [6]: https://apps.adr.org/webfile/
+  [6]: http://go.adr.org/privacyshield.html
   [7]: https://github.com/aptible/www.aptible.com
   [8]: https://www.verasafe.com/privacy-services/contact-article-27-representative    
   [9]: /legal/subvendor-directory/
