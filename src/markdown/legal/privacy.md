@@ -287,7 +287,7 @@ for more information on how to file a complaint. In some cases, you may be able 
 
 # Changes to this Privacy Statement
 
-We may change this Privacy Statement from time to time. If we make any changes, we will notify you by revising the version and date at the top of this Privacy Statement and, in some cases, where appropriate we may provide you with additional notice (such as adding a statement to the log-in screen or sending you an email notification). You can also follow the GitHub repository for this site here: [https://github.com/aptible/www.aptible.com][7]
+We may change this Privacy Statement from time to time. If we make any changes, we will notify you by revising the version and date at the top of this Privacy Statement and, in some cases, where appropriate we may provide you with additional notice (such as adding a statement to the log-in screen or sending you an email notification). You can also follow the GitHub repository for this site here: [https://github.com/aptible/www][7]
 
 Your continued use of our Services after the revised Statement has become effective indicates that you have read, understood, and agreed to the current version of this Statement.
 
@@ -326,6 +326,6 @@ The fastest, most convenient way to contact VeraSafe is via this form: [https://
   [4]: mailto:security@aptible.com
   [5]: https://www.privacyshield.gov/
   [6]: http://go.adr.org/privacyshield.html
-  [7]: https://github.com/aptible/www.aptible.com
+  [7]: https://github.com/aptible/www
   [8]: https://www.verasafe.com/privacy-services/contact-article-27-representative    
   [9]: /legal/subvendor-directory/
