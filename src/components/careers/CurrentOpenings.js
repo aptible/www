@@ -30,8 +30,6 @@ export default ({ jobs }) => (
                   <h6 className="small">{job.node.categories.location}</h6>
                 </div>
                 <div className={styles.commitment}>
-                  <h6 className="small">Full-Time</h6>
-
                   <div className={styles.arrow}>{arrowIcon}</div>
                 </div>
               </Grid>
