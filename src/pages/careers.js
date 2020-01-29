@@ -61,6 +61,7 @@ export const query = graphql`
           hostedUrl
           categories {
             team
+            location
           }
         }
       }
