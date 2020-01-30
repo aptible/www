@@ -152,7 +152,7 @@ Aptible automatically backs up several different types of data:
 
 - Customer metadata is stored in the Aptible APIs, backed by the Amazon Relational Database Service. This metadata includes customer account data (passwords, permissions, SSH keys), and Aptible Deploy configuration data, such as environmental variables. Backups are taken nightly and retained for one week.
 
-- Aptible Deploy customer database disks are automatically backed up nightly and retained daily for 90 days, and monthly for 6 years. No customer action is required. Two backup copies are kept: One in the region where the database runs, to facilitate fast disaster recovery; the other in a separate geographic region to protect against loss of the original region. Customers may also take on-demand backups. Please see the [Aptible Deploy database backup](https://www.aptible.com/documentation/deploy/reference/databases/backups.html) documentation for more information.
+- Aptible Deploy customer database disks are automatically backed up every 24 hours and retained daily for 90 days, and monthly for 6 years. No customer action is required. Two backup copies are kept: One in the region where the database runs, to facilitate fast disaster recovery; the other in a separate geographic region to protect against loss of the original region. Customers may also take on-demand backups. Please see the [Aptible Deploy database backup](https://www.aptible.com/documentation/deploy/reference/databases/backups.html) documentation for more information.
 
 ##### **4.B - Fault Tolerance**
 AWS data centers are clustered into regions, and sub-clustered into availability zones, each of which is designed as an independent failure zone, meaning they are:
