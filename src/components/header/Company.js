@@ -24,7 +24,7 @@ export default () => (
         </Link>
 
         <Link to="/owners-manual/">
-          <div>Aptible Manual</div>
+          <div>Aptible Owner’s Manual</div>
         </Link>
       </div>
     </Grid>
