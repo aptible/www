@@ -135,6 +135,10 @@ exports.createPages = ({ graphql, actions }) => {
               section
               slug
               hidePage
+              contentfulparent {
+                title
+                slug
+              }
               body {
                 json
               }
@@ -143,12 +147,6 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
-      // @TODO Fix
-      // contentfulparent {
-      //   title
-      //   slug
-      // }
-
       // Create pages for each blog post
       result.data.allBlogPosts.edges.forEach(({ node }) => {
         createPage({

@@ -14,8 +14,8 @@ export default ({ pageContext }) => {
   return (
     <AptibleLayout>
       <Helmet>
-        <title>{currentPage.displayTitle || currentPage.title} | Aptible Owners Manual</title>
-        <meta name="description" content="" />
+        <title>{currentPage.displayTitle || currentPage.title} | Aptible Owner’s Manual</title>
+        <meta name="description" content="Our goal with the Aptible Owner’s Manual is to help you, as a current or prospective member of the Aptible Team, get a clear sense of what this team is — what we mean by “us.”" />
       </Helmet>
       <Page currentPage={currentPage} allPages={pageContext.allPages} />
     </AptibleLayout>
