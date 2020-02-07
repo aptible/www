@@ -54,7 +54,7 @@ export default ({ allPages }) => {
   const rootWithoutSection = allPages.filter(e => e.node.contentfulparent === null && e.node.section === null);
 
   return (
-    <SidebarNav title="Owners Manual">
+    <SidebarNav title="Owner’s Manual">
       {rootWithoutSection.map((e) => (
         <SidebarNavItem key={e.node.slug} to={pagePath(e.node)} text={e.node.title} />
       ))}
