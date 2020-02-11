@@ -45,22 +45,18 @@ class ResourceCards extends React.Component {
       <div className={styles.container}>
         <Grid>
           <div className={styles.left}>
-            <div className={styles.navigationContainer}>
-              <Grid>
-                <div className={styles.navigation}>
-                  <h6 className="small">Resources</h6>
+            <div className={styles.navigation}>
+              <h6 className="small">Resources</h6>
 
-                  {Object.values(FILTERS).map(filter => (
-                    <button
-                      key={filter}
-                      onClick={this.filterResources}
-                      className={activeFilter === filter ? styles.active : ""}
-                    >
-                      {filter}
-                    </button>
-                  ))}
-                </div>
-              </Grid>
+              {Object.values(FILTERS).map(filter => (
+                <button
+                  key={filter}
+                  onClick={this.filterResources}
+                  className={activeFilter === filter ? styles.active : ""}
+                >
+                  {filter}
+                </button>
+              ))}
             </div>
 
             {leftResources.map(resource => (

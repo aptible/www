@@ -3,14 +3,10 @@
   margin-top: 60px;
 }
 
-.navigationContainer {
+.navigation {
   padding-bottom: 45px;
   padding-top: 20px;
-}
-
-.navigation {
-  grid-row: 1;
-  grid-column: 2 / span 1;
+  padding-left: 160px;
 }
 
 .navigation h6 {
@@ -87,7 +83,7 @@
   }
 
   .navigation {
-    grid-column: 1 / -1;
+    padding-left: 0;
   }
 
   .navigation h6 {
