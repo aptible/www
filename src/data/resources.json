@@ -55,7 +55,7 @@
   },
   {
     "title": "Deploy Reference Architecture",
-    "url": "/documentation/deploy/reference.html",
+    "url": "/assets/deploy-reference-architecture.pdf",
     "description": "This reference guide provides you with all of the information you need to get started and be successful with Aptible Deploy.",
     "tags": ["Guide", "Deploy"]
   },
