@@ -189,12 +189,11 @@ class DeployCalculator extends React.Component {
             </div>
 
             <div className={styles.pricingContainer}>
-              <div className={styles.resourceSlider}>
-                <PricingSlider
-                  calculator={this.containersCalculator()}
-                  defaultValue="4"
-                  updatePriceFn={this.updateContainersIndex} />
-              </div>
+              <PricingSlider
+                calculator={this.containersCalculator()}
+                defaultValue="4"
+                updatePriceFn={this.updateContainersIndex}
+              />
               <div className={styles.amount}>
                 <h5><span>${this.containersAmount()}</span>/mo</h5>
               </div>
@@ -215,12 +214,11 @@ class DeployCalculator extends React.Component {
               </div>
             </div>
             <div className={styles.pricingContainer}>
-              <div className={styles.resourceSlider}>
-                <PricingSlider
-                  calculator={calculators.encryptedDisk}
-                  defaultValue="6"
-                  updatePriceFn={this.updateDiskIndex} />
-              </div>
+              <PricingSlider
+                calculator={calculators.encryptedDisk}
+                defaultValue="6"
+                updatePriceFn={this.updateDiskIndex}
+              />
               <div className={styles.amount}>
                 <h5><span>${this.diskAmount()}</span>/mo</h5>
               </div>
@@ -241,12 +239,11 @@ class DeployCalculator extends React.Component {
               </div>
             </div>
             <div className={styles.pricingContainer}>
-              <div className={styles.resourceSlider}>
-                <PricingSlider
-                  calculator={calculators.endpoints}
-                  defaultValue="4"
-                  updatePriceFn={this.updateEndpointsIndex} />
-              </div>
+              <PricingSlider
+                calculator={calculators.endpoints}
+                defaultValue="4"
+                updatePriceFn={this.updateEndpointsIndex}
+              />
               <div className={styles.amount}>
                 <h5><span>${this.endpointsAmount()}</span>/mo</h5>
               </div>
@@ -266,12 +263,11 @@ class DeployCalculator extends React.Component {
               </div>
             </div>
             <div className={styles.pricingContainer}>
-              <div className={styles.resourceSlider}>
-                <PricingSlider
-                  calculator={calculators.vpnConnections}
-                  defaultValue="0"
-                  updatePriceFn={this.updateVpnConnectionsIndex} />
-              </div>
+              <PricingSlider
+                calculator={calculators.vpnConnections}
+                defaultValue="0"
+                updatePriceFn={this.updateVpnConnectionsIndex}
+              />
               <div className={styles.amount}>
                 <h5><span>${this.vpnConnectionsAmount()}</span>/mo</h5>
               </div>
