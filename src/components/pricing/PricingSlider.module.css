@@ -96,4 +96,9 @@
   .tick {
     margin-top: 48px;
   }
+
+  .includedText span {
+    top: -10px;
+    background-color: var(--aptible-black-light);
+  }
 }
