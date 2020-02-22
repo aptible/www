@@ -9,7 +9,7 @@ slug: /legal/subvendor-directory/
 template: legal
 ---
 
-Last updated: November 4, 2019
+Last updated: February 21, 2020
 
 Aptible shares information with service providers and other third parties who perform services on our behalf.
 
@@ -33,8 +33,9 @@ This page provides a list of vendors with whom we share personal information as 
 | [Postmark](https://postmarkapp.com) | Email | United States |
 | [Revue](https://www.getrevue.co) | Email | The Netherlands |
 | [Formkeep](https://formkeep.com) | Form submission | United States |
-| [New Relic](https://newrelic.com) | Logging and Monitoring | United States |
-| [SolarWinds (Papertrail)](https://www.solarwinds.com/papertrail) | Logging and Monitoring | United States |
+| [New Relic](https://newrelic.com) | Logging and monitoring | United States |
+| [SolarWinds (Papertrail)](https://www.solarwinds.com/papertrail) | Logging and monitoring | United States |
+| [Sentry](https://sentry.io) | Logging and monitoring | United States |
 | [Autopilot](https://www.autopilothq.com) | Marketing automation | Australia |
 | [Marketo](https://www.marketo.com) | Marketing automation | United States |
 | [Hotjar](https://www.hotjar.com) | Analytics | Malta |
