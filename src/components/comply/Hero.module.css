@@ -1,9 +1,12 @@
 .container {
-  padding: 30px 0 200px 0;
+  padding-bottom: 120px;
+  padding-top: 30px;
   background-image: url('../../images/illustrations/comply.png');
   background-size: 900px auto;
   background-repeat: no-repeat;
-  background-position: 70% 300px;
+  background-position: 100% 250px;
+
+  /* background: no-repeat 1200px -100px/1000px url('../../../images/illustrations/comply.png');  */
 }
 
 .content {
@@ -11,9 +14,8 @@
   grid-column: 1 / span 4;
 }
 
-.content h1 span {
-  display: block;
-  font-size: 50px;
+.content h1 {
+  margin-bottom: 60px;
 }
 
 .content h5 {
@@ -21,108 +23,67 @@
 }
 
 .content p {
-  padding: 20px 0;
-  max-width: 600px;
+  margin: 20px 0;
+  max-width: 500px;
 }
 
-.cardContainer {
-  grid-row: 1;
-  grid-column: 5 / span 3;
-  line-height: 0;
-  margin-top: -60px;
-}
-
-.imageContainer {
-  position: relative;
-  min-height: 270px;
-}
-
-.videoLength {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  padding: 10px 12px;
-  background-color: var(--aptible-black-twenty);
-  z-index: 1;
-  border-radius: 31px;
+.content p b {
   color: white;
-}
-
-.videoLength p {
-  display: inline-block;
-  margin: 0;
-  line-height: 1;
-  letter-spacing: -0.03em;
-}
-
-.videoPlayIcon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: -4px;
-  margin-right: 8px;
-}
-
-.cardImage {
-  width: 100%;
-  cursor: pointer;
-}
-
-.cardContent {
-  background-color: var(--aptible-black-light);
-  padding: 40px;
-}
-
-.cardContent .logo {
-  height: 20px;
-  margin-bottom: 10px;
-}
-
-.cardContent p::first-letter {
-  margin-left: -5px;
-}
-
-.cardAuthor {
-  color: white;
-  margin-top: 30px;
   font-weight: 500;
+}
+
+.arrow {
+  color: var(--aptible-green);
+}
+
+.cta {
+  margin-top: 50px;
+}
+
+.screenshot {
+  grid-row: 1;
+  grid-column: 4 / span 4;
+  text-align: right;
+  margin-top: 90px;
+  margin-left: 125px;
+}
+
+.screenshot img {
+  width: 100%;
+}
+
+.screenshot p {
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 @media (--mobile) {
   .container {
     background: none;
-    padding-bottom: 0px;
+    padding-bottom: 50px;
   }
 
   .content {
     grid-row: 1;
     grid-column: 1 / span 7;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   .content h1 {
-    font-size: 30px;
-  }
-
-  .content h1 span {
-    font-size: 24px;
+    margin-bottom: 30px;
   }
 
   .content h5 {
     margin-bottom: 15px;
   }
 
-  .content p {
-    padding: 0 0 20px 0;
-  }
-
-  .cardContainer {
+  .screenshot {
     grid-row: 2;
-    grid-column: 1 / span 7;
-    padding: 15px 0;
-    margin-top: 0;
+    grid-column: 1 / -1;
+    margin: 30px 0;
   }
 
-  .imageContainer {
-    min-height: 170px;
+  .screenshot img {
+    max-width: 100%;
   }
 }
