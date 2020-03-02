@@ -17,7 +17,7 @@ export default () => (
 
         <p className="L">
           Continuously update your inventory of People, Devices, Assets,
-          Vendors, and Data.
+          Vendors, and Data
         </p>
 
         <div className={classNames(styles.cta, styles.desktop)}>

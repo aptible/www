@@ -8,9 +8,9 @@ export default () => (
     <Grid>
       <div className={styles.content}>
         <div className="h3">
-          “We needed a system that made it easy to operate a Security Management
-          program, that tracked our efforts and helped us share our position
-          with customers&hellip;with Aptible we’ve done that.”
+          &ldquo;We needed a system that made it easy to operate a Security
+          Management program, that tracked our efforts and helped us share our
+          position with customers&hellip;with Aptible we’ve done that.&rdquo;
         </div>
         <div className={styles.byline}>
           <img src={atriumLogo} alt="" />

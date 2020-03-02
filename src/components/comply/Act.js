@@ -26,7 +26,7 @@ class Act extends React.Component {
             <h2 className="h1">Act</h2>
             <p className="XL">
               Gain visibility into your compliance status and control across
-              your security program.
+              your security program
             </p>
 
             <div className={styles.nav}>

@@ -80,8 +80,8 @@ class ZeroTo extends React.Component {
           <div className={styles.arrow}><img src={arrowImage} alt="Arrow" /></div>
           <div className={styles.protocols} ref={this.tickerRef}>
             <div className={styles.protocolTicker}>
-              <h1>GRC</h1>
               <h1>Spreadsheets</h1>
+              <h1>GRC</h1>
               <h1>Audits</h1>
               <h1>Compliance</h1>
             </div>

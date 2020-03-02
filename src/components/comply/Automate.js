@@ -27,7 +27,7 @@ class Automate extends React.Component {
             <h2 className="h1">Automate</h2>
             <p className="XL">
               Automate evidence collection and prevent mistakes by monitoring
-              SaaS services for security configurations and changes.
+              SaaS services for security configurations and changes
             </p>
 
             <div className={styles.nav}>

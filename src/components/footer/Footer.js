@@ -82,9 +82,9 @@ export default () => (
 
 
       <div className={styles.newsletter}>
-        <h5>Security Management Monthly</h5>
+        <h5>Defense in Brief</h5>
         <p>
-          We'll send you the best from Krebs on Security, Bleeping Computer,
+          We’ll send you the best from Krebs on Security, Bleeping Computer,
           and more in a brief monthly digest.
         </p>
       </div>

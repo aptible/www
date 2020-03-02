@@ -25,13 +25,14 @@ const data = [
     copy: (
       <>
         <p className="M">
-          The list of manual compliance checks is never ending. Access control
-          reviews, 2FA enrollment status, MDM configuration, branch protection…
+          The list of manual compliance checks is never-ending: Access control
+          reviews, 2FA enrollment status, MDM configuration, branch
+          protection&hellip;
         </p>
         <p className="M">
           These compliance checks happen ad hoc, across spreadsheets, calendar
-          invites, and project management tools. You miss more than you catch,
-          despite spending hours trying to keep up.
+          invites, and project management tools. You know you still make
+          mistakes, despite spending hours trying to keep up.
         </p>
       </>
     ),
@@ -67,7 +68,7 @@ export default () => (
         <p className="XL">
           The proliferation of data collected and systems used by every B2B SaaS
           company introduces challenges in organizing, managing, and scaling
-          security workflows.
+          security and compliance workflows.
         </p>
       </div>
     </Grid>

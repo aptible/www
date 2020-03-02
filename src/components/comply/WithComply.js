@@ -58,9 +58,9 @@ export default () => (
         </h2>
 
         <p className="XL">
-          Aptible Comply integrates with your entire stack to monitor compliance
-          status changes, giving you a complete compliance platform to plan and
-          manage compliance work.
+          Aptible Comply integrates with your entire stack to monitor for
+          security configurations and changes, giving you visibility into your
+          compliance status and control across your security program.
         </p>
       </div>
 
