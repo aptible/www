@@ -7,19 +7,51 @@ class ArrowButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hover: false
+      hover: false,
     };
   }
 
-  setHover = (hover) => {
+  setHover = hover => {
     this.setState({ hover: hover });
-  }
+  };
 
   render() {
-    const Component = this.props.to ? Link : "a";
+    if (this.props.to) {
+      return (
+        <Link
+          to={this.props.to}
+          className={styles.link}
+          onMouseEnter={() => this.setHover(true)}
+          onMouseLeave={() => this.setHover(false)}
+        >
+          {this.props.text}
+          <div className={styles.arrowContainer}>
+            <Arrow theme={this.state.hover ? '' : 'outline'} />
+          </div>
+        </Link>
+      );
+    }
+
+    if (this.props.onClickFn) {
+      return (
+        <div
+          className={styles.link}
+          onMouseEnter={() => this.setHover(true)}
+          onMouseLeave={() => this.setHover(false)}
+          onClick={this.props.onClickFn}
+          role="button"
+          tabIndex={0}
+        >
+          {this.props.text}
+          <div className={styles.arrowContainer}>
+            <Arrow theme={this.state.hover ? '' : 'outline'} />
+          </div>
+        </div>
+      );
+    }
+
     return (
-      <Component
-        to={this.props.to}
+      <a
         href={this.props.href}
         className={styles.link}
         onMouseEnter={() => this.setHover(true)}
@@ -29,8 +61,8 @@ class ArrowButton extends React.Component {
         <div className={styles.arrowContainer}>
           <Arrow theme={this.state.hover ? '' : 'outline'} />
         </div>
-      </Component>
-    )
+      </a>
+    );
   }
 }
 

@@ -3,8 +3,7 @@ import acrIllustration from '../../images/comply/automate-acr-illustration.png';
 import mdmIllustration from '../../images/comply/automate-mdm-illustration.png';
 import ssdIllustration from '../../images/comply/automate-ssd-illustration.png';
 import { Grid } from '../grid/Grid';
-// import SignupButton from '../signup/SignupButton';
-import ArrowButton from '../buttons/ArrowButton';
+import SignupArrowButton from '../signup/SignupArrowButton';
 import styles from './Automate.module.css';
 
 class Automate extends React.Component {
@@ -95,10 +94,9 @@ class Automate extends React.Component {
           </div>
 
           <div className={styles.cta}>
-            {/* <SignupButton text="Get a demo" product="comply" /> */}
-            <ArrowButton
-              to="/signup-comply/"
+            <SignupArrowButton
               text="Get a demo and learn more"
+              product="comply"
             />
           </div>
         </Grid>

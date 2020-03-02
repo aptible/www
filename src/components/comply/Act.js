@@ -2,8 +2,7 @@ import React from 'react';
 import metricsIllustration from '../../images/comply/act-metrics-illustration.png';
 import onboardingIllustration from '../../images/comply/act-onboarding-illustration.png';
 import { Grid } from '../grid/Grid';
-// import SignupButton from '../signup/SignupButton';
-import ArrowButton from '../buttons/ArrowButton';
+import SignupArrowButton from '../signup/SignupArrowButton';
 import styles from './Act.module.css';
 
 class Act extends React.Component {
@@ -33,9 +32,7 @@ class Act extends React.Component {
               <button
                 onClick={() => this.openSection('metrics')}
                 className={
-                  this.state.openSection === 'metrics'
-                    ? styles.active
-                    : ''
+                  this.state.openSection === 'metrics' ? styles.active : ''
                 }
               >
                 Objectives & Metrics
@@ -44,9 +41,7 @@ class Act extends React.Component {
               <button
                 onClick={() => this.openSection('onboarding')}
                 className={
-                  this.state.openSection === 'onboarding'
-                    ? styles.active
-                    : ''
+                  this.state.openSection === 'onboarding' ? styles.active : ''
                 }
               >
                 Employee Onboarding
@@ -74,10 +69,9 @@ class Act extends React.Component {
           </div>
 
           <div className={styles.cta}>
-            {/* <SignupButton text="Get a demo" product="comply" /> */}
-            <ArrowButton
-              to="/signup-comply/"
+            <SignupArrowButton
               text="Get a demo and learn more"
+              product="comply"
             />
           </div>
         </Grid>
