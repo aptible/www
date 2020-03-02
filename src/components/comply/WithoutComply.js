@@ -56,7 +56,7 @@ const data = [
 ];
 
 export default () => (
-  <div className={styles.container} id="without-comply">>
+  <div className={styles.container} id="without-comply">
     <Grid>
       <div className={styles.intro}>
         <h5>Without Comply</h5>
