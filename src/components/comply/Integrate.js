@@ -12,7 +12,7 @@ export default () => (
         <h2 className="h1">Integrate</h2>
         <p className="XL">
           Integrate with all of your SaaS services to build a single picture of
-          you rcompliance program, data, and assets.
+          your compliance program, data, and assets.
         </p>
 
         <p className="L">
