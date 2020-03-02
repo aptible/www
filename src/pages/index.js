@@ -9,12 +9,14 @@ import ZeroTo from '../components/footer/ZeroTo';
 import { findBlockById } from '../lib/blocks';
 import { graphql } from 'gatsby';
 
-
 export default ({ data }) => (
   <AptibleLayout>
     <Helmet>
       <title>Aptible | Security Management Platform</title>
-      <meta name="description" content="Aptible is the leading security management platform for small companies. Grow by meeting security requirements for SOC 2, ISO 27001, HIPAA, GDPR, and more." />
+      <meta
+        name="description"
+        content="Aptible is the leading trust management platform for B2B SaaS teams that offers compliance monitoring and workflow automation, audit ready hosting, and fast and easy audit prep."
+      />
     </Helmet>
     <Hero heroBlock={findBlockById(data.blocks.edges, 'home-hero')} />
     <ProductCarousel />
@@ -24,8 +26,6 @@ export default ({ data }) => (
     <ZeroTo />
   </AptibleLayout>
 );
-
-
 
 export const query = graphql`
   query {
