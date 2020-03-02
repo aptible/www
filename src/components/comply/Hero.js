@@ -8,7 +8,7 @@ export default () => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.content}>
-        <h5>Aptible&reg; Comply</h5>
+        <h5>Aptible Comply</h5>
         <h1 className="hero">Compliance monitoring &amp; automation</h1>
 
         <p className="XL">
