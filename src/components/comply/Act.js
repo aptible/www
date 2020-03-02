@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import metricsIllustration from '../../images/comply/act-metrics-illustration.png';
-import onboardingIllustration from '../../images/comply/act-onboarding-illustration.png';
+import metricsIllustration from '../../images/comply/act-metrics-illustration.svg';
+import onboardingIllustration from '../../images/comply/act-onboarding-illustration.svg';
 import { Grid } from '../grid/Grid';
 import SignupArrowButton from '../signup/SignupArrowButton';
 import styles from './Act.module.css';

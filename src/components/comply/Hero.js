@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './Hero.module.css';
 import SignupButton from '../signup/SignupButton';
-import illustration from '../../images/comply/comply-illustration.png';
+import illustration from '../../images/comply/comply-illustration.svg';
 
 export default () => (
   <div className={styles.container}>
