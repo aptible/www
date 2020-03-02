@@ -26,8 +26,9 @@ export default ({ heroBlock }) => (
       <WistiaVideo videoId="8p6ej6qqrg" autoPlay="true" silentAutoPlay="true" />
       <div className={styles.videoCard}>
         <p>
-          &ldquo;Aptible made it easier to communicate our investments
-          in security with our customers, helping us build trust.&rdquo;
+          &ldquo;We needed a system that made it easy to operate a Security
+          Management program, that tracked our efforts and helped us share our
+          position with customers&hellip;with Aptible we’ve done that.&rdquo;
         </p>
 
         <div className={styles.cardAuthor}>

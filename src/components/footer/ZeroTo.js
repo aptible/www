@@ -80,16 +80,15 @@ class ZeroTo extends React.Component {
           <div className={styles.arrow}><img src={arrowImage} alt="Arrow" /></div>
           <div className={styles.protocols} ref={this.tickerRef}>
             <div className={styles.protocolTicker}>
-              <h1>SOC 2</h1>
-              <h1>ISO 27001</h1>
-              <h1>HIPAA</h1>
-              <h1>GDPR</h1>
-              <h1>Audit-Ready</h1>
+              <h1>GRC</h1>
+              <h1>Spreadsheets</h1>
+              <h1>Audits</h1>
+              <h1>Compliance</h1>
             </div>
           </div>
 
           <div className={styles.start}>
-            <h4>Start your security management journey now.</h4>
+            <h4>Start eliminating the manual work of security and compliance now.</h4>
           </div>
           <div className={styles.button}>
             <SignupButton text="Get Started" theme="black" />
