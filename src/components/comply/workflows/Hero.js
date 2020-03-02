@@ -17,7 +17,7 @@ export default () => (
           truth for security within your organization, keeping track of
           everything you have to do to maintain compliance (and stay secure).
         </p>
-        <SignupButton text="Schedule a Call" product="comply" />
+        <SignupButton text="Get a demo" product="comply" />
       </div>
 
       <div className={styles.screenshot}>

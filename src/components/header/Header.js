@@ -120,7 +120,7 @@ class Header extends React.Component {
                     {this.state.isDeployPage ? (
                       <SignupButton size="small" text="Start with Deploy" product="deploy" />
                     ) : (
-                        <SignupButton size="small" text="Schedule a Call" product="comply" />
+                        <SignupButton size="small" text="Get a demo" product="comply" />
                       )}
                   </div>
                 </Grid>
