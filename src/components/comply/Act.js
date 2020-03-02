@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import metricsIllustration from '../../images/comply/act-metrics-illustration.png';
 import onboardingIllustration from '../../images/comply/act-onboarding-illustration.png';
 import { Grid } from '../grid/Grid';
@@ -48,6 +49,13 @@ class Act extends React.Component {
                 <span className={styles.circle} />
               </button>
             </div>
+
+            <div className={classNames(styles.cta, styles.desktop)}>
+              <SignupArrowButton
+                text="Get a demo and learn more"
+                product="comply"
+              />
+            </div>
           </div>
 
           <div className={styles.illustration}>
@@ -68,7 +76,7 @@ class Act extends React.Component {
             )}
           </div>
 
-          <div className={styles.cta}>
+          <div className={classNames(styles.cta, styles.mobile)}>
             <SignupArrowButton
               text="Get a demo and learn more"
               product="comply"

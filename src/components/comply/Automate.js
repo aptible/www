@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import acrIllustration from '../../images/comply/automate-acr-illustration.png';
 import mdmIllustration from '../../images/comply/automate-mdm-illustration.png';
 import ssdIllustration from '../../images/comply/automate-ssd-illustration.png';
@@ -58,6 +59,13 @@ class Automate extends React.Component {
                 <span className={styles.circle} />
               </button>
             </div>
+
+            <div className={classNames(styles.cta, styles.desktop)}>
+              <SignupArrowButton
+                text="Get a demo and learn more"
+                product="comply"
+              />
+            </div>
           </div>
 
           <div className={styles.illustration}>
@@ -93,7 +101,7 @@ class Automate extends React.Component {
             )}
           </div>
 
-          <div className={styles.cta}>
+          <div className={classNames(styles.cta, styles.mobile)}>
             <SignupArrowButton
               text="Get a demo and learn more"
               product="comply"

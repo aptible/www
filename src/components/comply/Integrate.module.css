@@ -27,15 +27,25 @@
   padding-top: 100px;
 }
 
-.illustration > img {
+.illustration img {
   max-width: 100%;
 }
 
+.illustration p {
+  margin-bottom: 0;
+  padding: 0 20px;
+}
+
 .cta {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  /* margin-top: 26px; */
-  margin-top: -80px;
+  margin-top: 30px;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
 }
 
 @media (--mobile) {
@@ -66,8 +76,21 @@
     padding-top: 0;
   }
 
+  .illustration p {
+    padding: 0;
+  }
+
   .cta {
+    grid-column: 1 / -1;
     grid-row: 3;
     margin-top: 0;
+  }
+
+  .desktop {
+    display: none;
+  }
+  
+  .mobile {
+    display: block;
   }
 }

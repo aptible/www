@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import illustration from '../../images/comply/integrate-illustration.png';
 import { Grid } from '../grid/Grid';
 import SignupArrowButton from '../signup/SignupArrowButton';
@@ -18,13 +19,17 @@ export default () => (
           Continuously update your inventory of People, Devices, Assets,
           Vendors, and Data.
         </p>
+
+        <div className={classNames(styles.cta, styles.desktop)}>
+          <SignupArrowButton text="Get a demo and learn more" product="comply" />
+        </div>
       </div>
 
       <div className={styles.illustration}>
         <img src={illustration} alt="" />
       </div>
 
-      <div className={styles.cta}>
+      <div className={classNames(styles.cta, styles.mobile)}>
         <SignupArrowButton text="Get a demo and learn more" product="comply" />
       </div>
     </Grid>
