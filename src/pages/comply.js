@@ -7,19 +7,11 @@ import Nav from '../components/shared/Nav';
 import WithoutComply from '../components/comply/WithoutComply';
 import WithComply from '../components/comply/WithComply';
 import Features from '../components/comply/Features';
-import Challenge from '../components/comply/Challenge';
 import Integrate from '../components/comply/Integrate';
 import Automate from '../components/comply/Automate';
 import Act from '../components/comply/Act';
 import WhoUses from '../components/comply/WhoUses';
 import ZeroTo from '../components/footer/ZeroTo';
-
-// Old
-// import UseCases from '../components/home/UseCases';
-// import ContinuouslyImprove from '../components/comply/ContinuouslyImprove';
-// import BeyondCompliance from '../components/comply/BeyondCompliance';
-// import HowItWorks from '../components/comply/HowItWorks';
-// import MoreFeatures from '../components/comply/MoreFeatures';
 
 const stickyNavItems = [
   { title: 'Without Comply', ref: '#without-comply' },
