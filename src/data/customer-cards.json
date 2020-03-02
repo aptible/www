@@ -34,7 +34,7 @@
     "tags": ["technology"]
   },
   "ableHealth": {
-    "headline": "&ldquo;Our team couldn’t relate to what we had pieced together. We needed something that was tailored to us. Aptible gave us that.&rdquo;",
+    "headline": "&ldquo;Our team couldn’t relate to what we had pieced together (with different systems, sources, and spreadsheets.) We needed something that was tailored to us.&rdquo;",
     "author": "Steve Daniels, Co-founder and President",
     "text": "Able Health chose Aptible to ensure HIPAA compliance and meet the highest standards for security and privacy for their customers.",
     "tags": ["health"],
@@ -48,7 +48,7 @@
     "link": "/customers/pathai/"
   },
   "atrium": {
-    "headline": "&ldquo;We needed a system that made it easy to operate a Security Management program, that tracked our efforts and helped us share our position with customers&hellip; with Aptible we've done that without having to hire a full-time compliance team.&rdquo;",
+    "headline": "&ldquo;We needed a system that made it easy to operate a Security Management program, that tracked our efforts and helped us share our position with customers&hellip;with Aptible we’ve done that.&rdquo;",
     "author": "Justin Kan, CEO & Co-founder",
     "tags": [
       "technology"
@@ -65,5 +65,10 @@
     ],
     "videoId": "kf1hbw3as5",
     "videoLength": "2:07"
+  },
+  "riffyn": {
+    "headline": "&ldquo;Had we not purchased Aptible Comply, we would have been left with a slew of spreadsheets, online tools, and templates but without a truly scalable solution.&rdquo;",
+    "author": "Claude Calegari, VP of Operations and Finance",
+    "tags": ["technology"]
   }
 }

@@ -9,46 +9,25 @@ export default () => (
       <div className={styles.intro}>
         <h1>Who Uses Comply?</h1>
         <p className="XL">
-          Small companies, operating in the cloud, who need to prove their
-          security and compliance, whose deals are held up by Vendor Security
-          Assessments; and/or who must comply with regulations like HIPAA/GDPR
-          to go to market.
+          B2B SaaS companies that have recognized the importance of investing in
+          security and compliance, especially to build trust with their own
+          customers.
         </p>
-      </div>
-
-      <div className={`${styles.persona} ${styles.personaOne}`}>
-        <h6>Cloud-native Companies</h6>
-        <p className="L">
-          Small companies operating in the cloud.
-        </p>
-      </div>
-
-      <div className={`${styles.persona} ${styles.personaTwo}`}>
-        <h6>That collect customer data</h6>
-        <p className="L">
-          New regulations like GDPR make it a company's responsibility to
-          protect nearly any personal data it collects.
-        </p>
-      </div>
-
-      <div className={`${styles.persona} ${styles.personaThree}`}>
-        <h6>And want to go Beyond Compliance</h6>
-        <p className="L">
-          Showing customers you’re investing in security increases conversion
-          rate and decreases your sales cycle, especially with the enterprise.
+        <p className="XL">
+          After attempting to run a compliance program using the current "state
+          of the art" (spreadsheets and disconnected point solutions), customers
+          turn to Aptible Comply to get a unified view of compliance, to
+          automate much of the manual work, and control compliance activity.
         </p>
       </div>
 
       <div className={styles.customersLeft}>
-        <Card customer="fortmatic" />
         <Card customer="ableHealth" />
-        <Card customer="snaps" />
+        <Card customer="riffyn" />
       </div>
 
       <div className={styles.customersRight}>
         <Card customer="atrium" />
-        <Card customer="quadpay" />
-        <Card customer="pathAI" />
       </div>
     </Grid>
   </div>

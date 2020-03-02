@@ -29,7 +29,7 @@ const customers = [
     image: null,
     headline: (
       <React.Fragment>
-        <h2><span className={styles.quoteStart}>&ldquo;</span>We needed a system that made it easy to operate a Security Management program&hellip; with Aptible we've done that without having to hire a compliance team.&rdquo;</h2>
+        <h2><span className={styles.quoteStart}>&ldquo;</span>We needed a system that made it easy to operate a Security Management program, that tracked our efforts and helped us share our position with customers&hellip;with Aptible we’ve done that.&rdquo;</h2>
       </React.Fragment>
     ),
     description: 'Atrium uses Aptible for managing their information security and compliance efforts, specifically around ISO 27001 and SOC 2.',
