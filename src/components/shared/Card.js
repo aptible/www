@@ -16,6 +16,7 @@ import fortmaticLogo from '../../images/customers/logos/fortmatic.svg';
 import healthifyLogo from '../../images/customers/logos/healthify.svg';
 import mdsaveLogo from '../../images/customers/logos/mdsave.svg';
 import pathaiLogo from '../../images/customers/logos/pathai.png';
+import riffynLogo from '../../images/customers/logos/riffyn.png';
 import snapsLogo from '../../images/customers/logos/snaps.png';
 import vergesenseLogo from '../../images/customers/logos/vergesense.svg';
 import virtaLogo from '../../images/customers/logos/virta.svg';
@@ -33,6 +34,7 @@ const logos = {
   healthify: healthifyLogo,
   mdsave: mdsaveLogo,
   pathAI: pathaiLogo,
+  riffyn: riffynLogo,
   snaps: snapsLogo,
   vergesense: vergesenseLogo,
   virta: virtaLogo
