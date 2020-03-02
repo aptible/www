@@ -34,9 +34,7 @@ class Automate extends React.Component {
               <button
                 onClick={() => this.openSection('acr')}
                 className={
-                  this.state.openSection === 'acr'
-                    ? styles.active
-                    : ''
+                  this.state.openSection === 'acr' ? styles.active : ''
                 }
               >
                 Access Control Reviews
@@ -45,9 +43,7 @@ class Automate extends React.Component {
               <button
                 onClick={() => this.openSection('ssd')}
                 className={
-                  this.state.openSection === 'ssd'
-                    ? styles.active
-                    : ''
+                  this.state.openSection === 'ssd' ? styles.active : ''
                 }
               >
                 Secure System Development
@@ -56,9 +52,7 @@ class Automate extends React.Component {
               <button
                 onClick={() => this.openSection('mdm')}
                 className={
-                  this.state.openSection === 'mdm'
-                    ? styles.active
-                    : ''
+                  this.state.openSection === 'mdm' ? styles.active : ''
                 }
               >
                 Mobile Device Management
@@ -71,6 +65,10 @@ class Automate extends React.Component {
             {this.state.openSection === 'acr' && (
               <>
                 <img src={acrIllustration} alt="" />
+                <p className="L">
+                  Monitor security configuration like access controls and 2FA
+                  enrollment status across your SaaS apps
+                </p>
               </>
             )}
 
@@ -80,7 +78,7 @@ class Automate extends React.Component {
                 <p className="L">
                   Automate SDLC evidence gathering with GitHub repo security
                   checks like private/public status, branch protection status,
-                  and force push history.
+                  and force push history
                 </p>
               </>
             )}
@@ -88,6 +86,10 @@ class Automate extends React.Component {
             {this.state.openSection === 'mdm' && (
               <>
                 <img src={mdmIllustration} alt="" />
+                <p className="L">
+                  Automate manual workflows like Okta access control reviews and
+                  JAMF device enrollment checks
+                </p>
               </>
             )}
           </div>
