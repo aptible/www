@@ -1,5 +1,5 @@
 import React from 'react';
-import atriumLogo from '../../images/customers/logos/atrium.png';
+import pathaiLogo from '../../images/customers/logos/pathai.png';
 import { Grid } from '../grid/Grid';
 import styles from './Quote.module.css';
 
@@ -8,13 +8,14 @@ export default () => (
     <Grid>
       <div className={styles.content}>
         <div className="h3">
-          &ldquo;We needed a system that made it easy to operate a Security
-          Management program, that tracked our efforts and helped us share our
-          position with customers&hellip;with Aptible we’ve done that.&rdquo;
+          &ldquo;In past roles, I had to manually do what Comply does. It
+          standardizes so much of the process of operating a security management
+          program. My team stays on the same page and saves a lot of
+          work.&rdquo;
         </div>
         <div className={styles.byline}>
-          <img src={atriumLogo} alt="" />
-          Justin Kan, Co-founder & CEO
+          <img src={pathaiLogo} alt="" />
+          Joe Adu, Director of IT
         </div>
       </div>
     </Grid>
