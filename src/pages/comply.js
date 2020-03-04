@@ -6,7 +6,6 @@ import Quote from '../components/comply/Quote';
 import Nav from '../components/shared/Nav';
 import WithoutComply from '../components/comply/WithoutComply';
 import WithComply from '../components/comply/WithComply';
-import Features from '../components/comply/Features';
 import Integrate from '../components/comply/Integrate';
 import Automate from '../components/comply/Automate';
 import Act from '../components/comply/Act';
