@@ -15,7 +15,7 @@ export default () => (
         </div>
         <div className={styles.byline}>
           <img src={pathaiLogo} alt="" />
-          Joe Adu, Director of IT
+          Joe Adu, Director of Technology
         </div>
       </div>
     </Grid>

@@ -164,7 +164,7 @@ export default () => (
       </div>
     </Grid>
 
-    <Quote logo={pathAILogo} quote={pathAIQuote} author="Joe Adu, Director of IT" />
+    <Quote logo={pathAILogo} quote={pathAIQuote} author="Joe Adu, Director of Technology" />
 
     <Grid rows="2">
       <div className={styles.case} id="regulatory-compliance">
