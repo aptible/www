@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Logos.module.css';
 import { Grid, Row } from '../grid/Grid';
-import atriumLogo from '../../images/customers/logos/atrium.png';
+import riffynLogo from '../../images/customers/logos/riffyn.png';
 import cityBlockLogo from '../../images/customers/logos/cityblock.svg';
 import fortmaticLogo from '../../images/customers/logos/fortmatic.svg';
 import quadpayLogo from '../../images/customers/logos/quadpay.svg';
@@ -12,7 +12,7 @@ export default () => (
     <Row>
       <div className={styles.logos}>
         <div className={styles.logo}>
-          <img src={atriumLogo} alt="Atrium logo" />
+          <img src={riffynLogo} alt="Riffyn logo" />
         </div>
         <div className={styles.logo}>
           <img src={cityBlockLogo} alt="Cityblock logo" />

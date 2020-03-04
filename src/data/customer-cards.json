@@ -42,20 +42,10 @@
   },
   "pathAI": {
     "headline": "&ldquo;When I first learned about Aptible, I had never been so excited about security work.&rdquo;",
-    "author": "Joe Adu, Director of IT",
+    "author": "Joe Adu, Director of Technology",
     "text": "PathAI used Aptible to design a Security Management program and get ISO 27001 certified months ahead of schedule.",
     "tags": ["technology"],
     "link": "/customers/pathai/"
-  },
-  "atrium": {
-    "headline": "&ldquo;We needed a system that made it easy to operate a Security Management program, that tracked our efforts and helped us share our position with customers&hellip;with Aptible we’ve done that.&rdquo;",
-    "author": "Justin Kan, CEO & Co-founder",
-    "tags": [
-      "technology"
-    ],
-    "link": "/customers/atrium/",
-    "videoId": "8p6ej6qqrg",
-    "videoLength": "1:47"
   },
   "quadpay": {
     "headline": "&ldquo;What I really wanted at QuadPay, where security is of tantamount importance, was to have something that was comprehensive, followed best practices, and could actually be implemented across an organization at scale.&rdquo;",
