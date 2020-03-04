@@ -15,8 +15,8 @@ function ComplyHover() {
   return (
     <div className={styles.hoverDescription}>
       <h5>
-        Turn security and compliance into repeatable processes that
-        accelerate your growth.
+        Compliance monitoring and automation for<br />SOC 2, ISO 27001, HIPAA, GDPR
+        and more.
       </h5>
     </div>
   )
