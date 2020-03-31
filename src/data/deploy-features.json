@@ -62,7 +62,7 @@
   {
     "headline": "Endpoint IP Filtering",
     "filters": ["security"],
-    "body": "Restrict access to Deploy apps and databases to a set of whitelisted IP addresses or networks, and block other incoming incoming traffic."
+    "body": "Restrict access to Deploy apps and databases to a set of whitelisted IP addresses or networks, and block other incoming traffic."
   },
   {
     "headline": "Container Log Drains",
@@ -202,7 +202,7 @@
   {
     "headline": "Zero-Downtime Deployments",
     "filters": ["flexible", "convenience"],
-    "body": "Deploy automatically performs zerodowntime rolling deployments when you release your app."
+    "body": "Deploy automatically performs zero downtime rolling deployments when you release your app."
   },
   {
     "headline": "Maintenance Pages",
