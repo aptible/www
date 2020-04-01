@@ -1,19 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styles from './Pricing.module.css';
 import PricingArrow from './PricingArrow';
 import CheckmarkUnorderedList from '../shared/CheckmarkUnorderedList';
+import checkmarkUnorderedListStyles from '../shared/CheckmarkUnorderedList.module.css';
 import PricingBlock from './PricingBlock';
 import DeployCalculator from './DeployCalculator';
 import SignupButton from '../signup/SignupButton';
 import detailsIcons from '../../images/pricing/details.svg';
 import detailsArrow from '../../images/arrows/header-resources.svg';
-
-const bigArrow = (
-  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M40 20.0011L20.4649 -8.53907e-07L14.6043 -1.11008e-06L32.1859 18.001L6.84255e-06 18.001L6.66769e-06 22.0012L32.1859 22.0012L14.6043 40L20.4649 40L40 20.0011Z" fill="#FDB515" />
-  </svg>
-);
 
 const closeIcon = (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,14 +46,14 @@ class Deploy extends React.Component {
 
         <div className={styles.title}>
           <h4>Aptible Deploy</h4>
-          <p className="L">
-            Deploy audit-ready apps and databases using a developer workflow
-            you'll love.
-          </p>
         </div>
 
         {!this.props.expanded &&
           <React.Fragment>
+            <p className="L">
+              Deploy audit-ready apps and databases using a developer workflow
+              you'll love.
+            </p>
             <div className={styles.button}>
               <PricingArrow text={<React.Fragment>Get<br />Started</React.Fragment>} hover={this.state.hover} />
             </div>
@@ -77,17 +71,15 @@ class Deploy extends React.Component {
 
       {this.props.expanded &&
         <div>
+          <p className="L">
+            Deploy audit-ready apps and databases using a developer workflow
+            you'll love. Production Accounts
+            support <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">Dedicated Stacks</a> and
+            sensitive data such as HIPAA PHI.
+          </p>
+
           <div className={styles.deployLearnMore}>
-            <Link to="/deploy/">
-              <div className={styles.learnMoreArrow}>
-                {bigArrow}
-              </div>
-              <h3>
-                Deploy your first app now. Pricing scales as you provision more
-                resources.
-              </h3>
-              <p className="L">Learn More About Deploy</p>
-            </Link>
+            <SignupButton text="Start with Deploy" product="deploy" />
           </div>
 
           <div className={styles.deployAccountContainer}>
@@ -99,6 +91,7 @@ class Deploy extends React.Component {
                 <li>No commitment</li>
                 <li>Only pay for the resources you use</li>
                 <li>First $500 worth of resources are complimentary</li>
+                <li className={checkmarkUnorderedListStyles.x}>Not ready for HIPAA PHI</li>
               </CheckmarkUnorderedList>
             </div>
 
@@ -111,6 +104,7 @@ class Deploy extends React.Component {
                 <li><strong>1 TB</strong> encrypted Database Disk, including automatic backups</li>
                 <li><strong>4</strong> TLS endpoints</li>
                 <li>Pay for additional resources as you use them</li>
+                <li>Ready for HIPAA PHI</li>
               </CheckmarkUnorderedList>
             </div>
           </div>

@@ -94,7 +94,7 @@
 }
 
 .deployLearnMore {
-  margin: 100px 0;
+  margin: 30px 0;
 }
 
 .deployLearnMore a {
@@ -211,10 +211,6 @@
   .complySidebar {
     float: none;
     width: 100%;
-  }
-
-  .deployLearnMore {
-    display: none;
   }
 
   .deployAccountContainer {
