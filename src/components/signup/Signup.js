@@ -8,6 +8,7 @@ import ProductSelection from './ProductSelection';
 import Confirmation from './Confirmation';
 import Unqualified from './Unqualified';
 import { submitMarketoForm, COMPLY_SIGNUP_FORM, DEPLOY_SIGNUP_FORM, GENERIC_SIGNUP_FORM } from '../../lib/marketo';
+import { analytics } from '../../lib/aptible';
 
 function Signup(props) {
   return (
@@ -29,9 +30,20 @@ class InnerSignup extends React.Component {
     };
   }
 
+  componentDidMount = () => {
+    this.funnelEvent('open');
+  }
+
+  funnelEvent = (name) => {
+    const funnelType = this.props.product ? this.props.product : 'generic';
+    analytics.event(`signup:${funnelType}${name}`);
+  }
+
   setEmail = (email, marketingConsent, personaAnaswer) => {
     this.setState({ email, marketingConsent });
     this.sendToMarketo(email, marketingConsent, personaAnaswer, () => {
+      this.funnelEvent('email_collected');
+
       if (this.state.product) {
         if (this.state.product === 'deploy') {
           this.redirectToDeploy(email);
@@ -48,6 +60,7 @@ class InnerSignup extends React.Component {
 
   setProduct = (productName) => {
     this.setState({ product: productName });
+    this.funnelEvent('product_selected');
     if (productName === 'deploy') {
       this.redirectToDeploy(this.state.email);
     } else {
@@ -61,8 +74,10 @@ class InnerSignup extends React.Component {
 
   qualifyComplySignup = () => {
     if (this.isQualified()) {
+      this.funnelEvent('chili_piper_opened');
       this.openChiliPiper();
     } else {
+      this.funnelEvent('unqualified');
       this.setState({ currentView: Unqualified });
     }
   }
@@ -70,6 +85,8 @@ class InnerSignup extends React.Component {
   setCall = (scheduledCall) => {
     const popupWindow = document.querySelector('.chilipiper-popup');
     popupWindow.parentNode.removeChild(popupWindow);
+
+    this.funnelEvent('chili_piper_scheduled');
 
     const sampleCall = {};
     this.setState({ scheduledCall: sampleCall, currentView: Confirmation });
