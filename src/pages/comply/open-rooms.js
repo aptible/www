@@ -11,8 +11,8 @@ import ZeroTo from '../../components/footer/ZeroTo';
 export default () => (
   <AptibleLayout>
     <Helmet>
-      <title>Aptible Comply | Automate Security and Compliance</title>
-      <meta name="description" content="Aptible Comply Workflows automate the management of your company’s security, keeping track of everything you have to do to maintain compliance (and stay secure)." />
+      <title>Aptible Comply | Sell faster and smarter with compliance datarooms</title>
+      <meta name="description" content="Aptible Comply’s Open Rooms is a dataroom solution for B2B Saas teams who need to close deals quicker by delivering confidential security documentation to customers more efficiently." />
     </Helmet>
     <Hero />
     <WithoutComply />
