@@ -1,11 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import AptibleLayout from '../../components/layouts/AptibleLayout';
-import Hero from '../../components/comply/open-rooms/Hero';
-import WithoutComply from '../../components/comply/open-rooms/WithoutComply';
-import UseAptible from '../../components/comply/open-rooms/UseAptible';
-import SellFaster from '../../components/comply/open-rooms/SellFaster';
-import SellSmarter from '../../components/comply/open-rooms/SellSmarter';
+import Hero from '../../components/comply/rooms/Hero';
+import WithoutComply from '../../components/comply/rooms/WithoutComply';
+import UseAptible from '../../components/comply/rooms/UseAptible';
+import SellFaster from '../../components/comply/rooms/SellFaster';
+import SellSmarter from '../../components/comply/rooms/SellSmarter';
 import ZeroTo from '../../components/footer/ZeroTo';
 
 export default () => (

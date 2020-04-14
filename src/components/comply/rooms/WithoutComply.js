@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid } from '../../grid/Grid';
 import styles from './WithoutComply.module.css';
-import screenshot from '../../../images/comply/open-rooms/with-comply.svg';
-import vector from '../../../images/comply/open-rooms/with-comply-vector.svg';
+import screenshot from '../../../images/comply/rooms/with-comply.svg';
+import vector from '../../../images/comply/rooms/with-comply-vector.svg';
 
 export default () => (
   <div className={styles.container}>

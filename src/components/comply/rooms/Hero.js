@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from '../../grid/Grid';
 import styles from './Hero.module.css';
 import SignupButton from '../../signup/SignupButton';
-import screenshot from '../../../images/comply/open-rooms/screenshot.svg';
+import screenshot from '../../../images/comply/rooms/screenshot.svg';
 
 export default () => (
   <div className={styles.container}>
