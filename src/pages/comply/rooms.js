@@ -12,7 +12,7 @@ export default () => (
   <AptibleLayout>
     <Helmet>
       <title>Aptible Comply | Sell faster and smarter with compliance datarooms</title>
-      <meta name="description" content="Aptible Comply’s Open Rooms is a dataroom solution for B2B SaaS teams who need to close deals quicker by delivering confidential security documentation to customers more efficiently." />
+      <meta name="description" content="Aptible Comply Rooms is a dataroom solution for B2B SaaS teams who need to close deals quicker by delivering confidential security documentation to customers more efficiently." />
     </Helmet>
     <Hero />
     <WithoutComply />
