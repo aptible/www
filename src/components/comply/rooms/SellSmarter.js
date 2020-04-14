@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '../../grid/Grid';
 import styles from './SellSmarter.module.css';
-import screenshot from '../../../images/comply/open-rooms/sell-smarter.svg';
+import screenshot from '../../../images/comply/rooms/sell-smarter.svg';
 
 export default () => (
   <div className={styles.container}>
