@@ -7,7 +7,7 @@ export default () => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.content}>
-        <h1>Use Compliance to Sell Smarter</h1>
+        <h1>Use compliance to sell smarter</h1>
         <p className="XL">
           Aptible Comply gives you analytics that track which documents your
           customers and prospects are viewing and downloading so you can

@@ -7,7 +7,7 @@ export default () => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.content}>
-        <h1>Use Compliance to Sell Faster</h1>
+        <h1>Use compliance to sell faster</h1>
         <p className="XL">
           Aptible Comply gives customers a self-service portal where they can
           sign an NDA and view or download the documents normally requested in

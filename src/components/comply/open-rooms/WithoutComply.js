@@ -18,14 +18,14 @@ export default () => (
           <div className={styles.text}>
             <p>
               Companies that pursue compliance programs like SOC 2 and ISO 27001
-              need to distribute that documentation to their sales prospects in a
-              secure, confidential way.
+              need to distribute that documentation to their sales prospects in
+              a secure, confidential way.
             </p>
             <p>
               Distribution processes like getting an NDA in place, watermarking
-              reports, and creating an audit record of distribution are fragmented
-              across sales, security, legal, and CS, and systems like Docusign,
-              email, Jira, and SFDC. 
+              reports, and creating an audit record of distribution are
+              fragmented across sales, security, legal, and customer success,
+              and systems like Docusign, email, Jira, and Salesforce.
             </p>
             <p>
               Each manual step needed to fulfill a request slows down the sales

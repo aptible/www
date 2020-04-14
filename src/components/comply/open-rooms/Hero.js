@@ -12,7 +12,7 @@ export default () => (
         <h1 className="hero">Sell faster and smarter with compliance datarooms</h1>
 
         <p className="XL">
-          Aptible Comply’s Open Rooms is a dataroom solution for B2B Saas teams
+          Aptible Comply’s Open Rooms is a dataroom solution for B2B SaaS teams
           who need to close deals quicker by delivering confidential security
           documentation to customers more efficiently.
         </p>
