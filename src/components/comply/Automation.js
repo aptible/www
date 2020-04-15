@@ -44,7 +44,7 @@ export default () => (
         </p>
 
         <div className={styles.cta}>
-          <Button to="/comply/automation">Learn More</Button>
+          <Button to="/comply/automation">Learn more about Automation</Button>
         </div>
       </div>
     </Grid>
