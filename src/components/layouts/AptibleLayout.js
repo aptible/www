@@ -8,10 +8,10 @@ import Analytics from '../shared/Analytics';
 export default ({ children }) => (
   <div>
     <HelloBar
-      id="blog-what-is-security-management"
-      to="/blog/what-is-security-management/"
+      id="blog-aptible-response-to-covid-19"
+      to="/blog/aptible-response-to-covid-19/"
       callout="New Blog Post"
-      text="Intro to Security Management: Learn about about Security Management, its importance, and how it can benefit your business."
+      text="Learn more about how we are supporting customers during COVID-19"
     />
     <Header />
     <CookieConsent />
