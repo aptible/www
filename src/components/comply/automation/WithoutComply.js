@@ -1,6 +1,6 @@
 import React from 'react';
-import withoutComplyIllustration from '../../images/comply/without-comply-illustration.svg';
-import { Grid } from '../grid/Grid';
+import withoutComplyIllustration from '../../../images/comply/without-comply-illustration.svg';
+import { Grid } from '../../grid/Grid';
 import styles from './WithoutComply.module.css';
 
 const data = [

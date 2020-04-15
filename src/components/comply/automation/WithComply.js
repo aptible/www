@@ -1,7 +1,7 @@
 import React from 'react';
-import withComplyIllustration from '../../images/comply/with-comply-illustration.svg';
-import withComplyIllustrationMobile from '../../images/comply/with-comply-illustration-mobile.svg';
-import { Grid } from '../grid/Grid';
+import withComplyIllustration from '../../../images/comply/with-comply-illustration.svg';
+import withComplyIllustrationMobile from '../../../images/comply/with-comply-illustration-mobile.svg';
+import { Grid } from '../../grid/Grid';
 import { GDPR, HIPAA, ISO, SOC } from './Badge';
 import styles from './WithComply.module.css';
 

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import AptibleLayout from '../components/layouts/AptibleLayout';
-import Hero from '../components/comply/Hero';
+import Hero from '../components/comply/automation/Hero';
 import Nav from '../components/shared/Nav';
 import UseCases from '../components/home/UseCases';
 import Features from '../components/comply/Features';
 import ContinuouslyImprove from '../components/comply/ContinuouslyImprove';
 import BeyondCompliance from '../components/comply/BeyondCompliance';
 import HowItWorks from '../components/comply/HowItWorks';
-import WhoUses from '../components/comply/WhoUses';
+import WhoUses from '../components/comply/automation/WhoUses';
 import MoreFeatures from '../components/comply/MoreFeatures';
 import ZeroTo from '../components/footer/ZeroTo';
 
