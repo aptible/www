@@ -9,10 +9,10 @@ import ZeroTo from '../components/footer/ZeroTo';
 export default () => (
   <AptibleLayout>
     <Helmet>
-      <title>Aptible Comply | Compliance monitoring &amp; workflow automation</title>
+      <title>Aptible Comply | Shorten sales cycles &amp; automate compliance work</title>
       <meta
         name="description"
-        content="Aptible Comply takes you Beyond GRC through integrations with your SaaS systems, continuous monitoring for security configuration changes, and automatic workflow delegation, tracking, and analytics."
+        content="Aptible Comply helps you win bigger deals faster by giving customers instant access to the security and information they need to buy and gives your customer trust team superpowers through automated compliance operations and evidence collection."
       />
     </Helmet>
     <Hero />
