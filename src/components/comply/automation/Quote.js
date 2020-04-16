@@ -1,6 +1,6 @@
 import React from 'react';
-import pathaiLogo from '../../images/customers/logos/pathai.png';
-import { Grid } from '../grid/Grid';
+import pathaiLogo from '../../../images/customers/logos/pathai.png';
+import { Grid } from '../../grid/Grid';
 import styles from './Quote.module.css';
 
 export default () => (

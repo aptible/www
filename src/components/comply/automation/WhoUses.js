@@ -1,7 +1,7 @@
 import React from 'react';
-import { Grid } from '../grid/Grid';
+import { Grid } from '../../grid/Grid';
 import styles from './WhoUses.module.css';
-import Card from '../shared/Card';
+import Card from '../../shared/Card';
 
 export default () => (
   <div className={styles.container} id="who-uses-comply">

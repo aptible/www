@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import illustration from '../../images/comply/integrate-illustration.svg';
-import { Grid } from '../grid/Grid';
-import SignupArrowButton from '../signup/SignupArrowButton';
+import illustration from '../../../images/comply/integrate-illustration.svg';
+import { Grid } from '../../grid/Grid';
+import SignupArrowButton from '../../signup/SignupArrowButton';
 import styles from './Integrate.module.css';
 
 export default () => (

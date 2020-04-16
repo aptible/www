@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
-import acrIllustration from '../../images/comply/automate-acr-illustration.svg';
-import mdmIllustration from '../../images/comply/automate-mdm-illustration.svg';
-import ssdIllustration from '../../images/comply/automate-ssd-illustration.svg';
-import { Grid } from '../grid/Grid';
-import SignupArrowButton from '../signup/SignupArrowButton';
+import acrIllustration from '../../../images/comply/automate-acr-illustration.svg';
+import mdmIllustration from '../../../images/comply/automate-mdm-illustration.svg';
+import ssdIllustration from '../../../images/comply/automate-ssd-illustration.svg';
+import { Grid } from '../../grid/Grid';
+import SignupArrowButton from '../../signup/SignupArrowButton';
 import styles from './Automate.module.css';
 
 class Automate extends React.Component {
