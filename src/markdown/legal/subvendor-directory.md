@@ -27,7 +27,6 @@ This page provides a list of vendors with whom we share personal information as 
 | [Slack](https://slack.com) | Community discussion | United States |
 | [Adobe Sign](https://acrobat.adobe.com/us/en/sign.html) | Contract management | United States |
 | [Salesforce](https://www.salesforce.com) | Customer relationship management | United States |
-| [Clearbit](https://clearbit.com) | Data enrichment | United States |
 | [Apollo, formerly ZenProspect](https://www.apollo.io/) | Data enrichment | United States |
 | [Customer.io](https://customer.io) | Email | United States |
 | [Postmark](https://postmarkapp.com) | Email | United States |
@@ -36,7 +35,6 @@ This page provides a list of vendors with whom we share personal information as 
 | [New Relic](https://newrelic.com) | Logging and monitoring | United States |
 | [SolarWinds (Papertrail)](https://www.solarwinds.com/papertrail) | Logging and monitoring | United States |
 | [Sentry](https://sentry.io) | Logging and monitoring | United States |
-| [Autopilot](https://www.autopilothq.com) | Marketing automation | Australia |
 | [Marketo](https://www.marketo.com) | Marketing automation | United States |
 | [Hotjar](https://www.hotjar.com) | Analytics | Malta |
 | [Drift](https://www.drift.com) | Onsite chat | United States |
@@ -44,3 +42,4 @@ This page provides a list of vendors with whom we share personal information as 
 | [Zendesk](https://www.zendesk.com) | Support | United States |
 | [Zoom](https://zoom.us) | Webinar and meeting hosting | United States |
 | [Zapier](https://zapier.com/apps/integrations) | Workflow automation | United States |
+| [NextRoll](https://www.nextroll.com) | Advertising | United States |

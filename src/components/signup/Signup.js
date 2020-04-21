@@ -36,13 +36,16 @@ class InnerSignup extends React.Component {
 
   funnelEvent = (name) => {
     const funnelType = this.props.product ? this.props.product : 'generic';
-    analytics.event(`signup:${funnelType}${name}`);
+    analytics.event(`signup:${funnelType}:${name}`);
   }
 
   setEmail = (email, marketingConsent, personaAnaswer) => {
     this.setState({ email, marketingConsent });
     this.sendToMarketo(email, marketingConsent, personaAnaswer, () => {
       this.funnelEvent('email_collected');
+
+      // Linkedin pixel
+      (new Image()).src = 'https://px.ads.linkedin.com/collect/?pid=42067&conversionId=2213244&fmt=gif';
 
       if (this.state.product) {
         if (this.state.product === 'deploy') {
