@@ -31,7 +31,6 @@ This page provides a list of vendors with whom we share personal information as 
 | [Customer.io](https://customer.io) | Email | United States |
 | [Postmark](https://postmarkapp.com) | Email | United States |
 | [Revue](https://www.getrevue.co) | Email | The Netherlands |
-| [Formkeep](https://formkeep.com) | Form submission | United States |
 | [New Relic](https://newrelic.com) | Logging and monitoring | United States |
 | [SolarWinds (Papertrail)](https://www.solarwinds.com/papertrail) | Logging and monitoring | United States |
 | [Sentry](https://sentry.io) | Logging and monitoring | United States |
