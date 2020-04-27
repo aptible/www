@@ -27,7 +27,6 @@ This page provides a list of vendors with whom we share personal information as 
 | [Slack](https://slack.com) | Community discussion | United States |
 | [Adobe Sign](https://acrobat.adobe.com/us/en/sign.html) | Contract management | United States |
 | [Salesforce](https://www.salesforce.com) | Customer relationship management | United States |
-| [Apollo, formerly ZenProspect](https://www.apollo.io/) | Data enrichment | United States |
 | [Customer.io](https://customer.io) | Email | United States |
 | [Postmark](https://postmarkapp.com) | Email | United States |
 | [Revue](https://www.getrevue.co) | Email | The Netherlands |
