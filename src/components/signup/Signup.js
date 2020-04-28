@@ -47,6 +47,19 @@ class InnerSignup extends React.Component {
       // Linkedin pixel
       (new Image()).src = 'https://px.ads.linkedin.com/collect/?pid=42067&conversionId=2213244&fmt=gif';
 
+      // Adroll
+      if (this.state.product && this.state.product === 'deploy') {
+        // Deploy pixel
+        try {
+          window.__adroll.record_user({"adroll_segments": "57de1b27"});
+        } catch(err) {}
+      } else {
+        // Comply pixel
+        try {
+          window.__adroll.record_user({"adroll_segments": "b5d1620a"});
+        } catch(err) {}
+      }
+
       if (this.state.product) {
         if (this.state.product === 'deploy') {
           this.redirectToDeploy(email);
