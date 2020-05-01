@@ -18,6 +18,7 @@ function Action({ open }) {
 }
 
 export default ({ member, clickFn, open }) => (
+  <div>
   <div className={`${styles.teamMember} ${open ? styles.open : ''}`} onClick={clickFn}>
     <h5>{member.name}</h5>
     <div className={styles.title}>
@@ -37,6 +38,8 @@ export default ({ member, clickFn, open }) => (
     <div className={styles.bio}>
       <p className="L">{member.bio.bio}</p>
     </div>
+  </div>
+
   <div class="taggbox-container" style=" width:75%;height:100%;overflow: auto;"><script defer src="//web.taggbox.com/app/js/embed.min.js" type="text/javascript"></script><div class="taggbox-socialwall" data-wall-id="33788" view-url="https://taggbox.com/w/33788">  </div></div>
   </div>
 );
