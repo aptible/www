@@ -37,5 +37,6 @@ export default ({ member, clickFn, open }) => (
     <div className={styles.bio}>
       <p className="L">{member.bio.bio}</p>
     </div>
+  <div class="taggbox-container" style=" width:75%;height:100%;overflow: auto;"><script defer src="//web.taggbox.com/app/js/embed.min.js" type="text/javascript"></script><div class="taggbox-socialwall" data-wall-id="33788" view-url="https://taggbox.com/w/33788">  </div></div>
   </div>
 );
