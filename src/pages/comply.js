@@ -5,6 +5,7 @@ import Hero from '../components/comply/Hero';
 import Rooms from '../components/comply/Rooms';
 import Automation from '../components/comply/Automation';
 import ZeroTo from '../components/footer/ZeroTo';
+import Calculator from '../components/comply/Calculator';
 
 export default () => (
   <AptibleLayout>
@@ -18,6 +19,7 @@ export default () => (
     <Hero />
     <Rooms />
     <Automation />
+    <Calculator />
     <ZeroTo />
   </AptibleLayout>
 );
