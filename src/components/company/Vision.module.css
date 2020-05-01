@@ -2,6 +2,11 @@
   padding: 100px 0 50px 0;
 }
 
+.taggbox {
+  grid-column: 1 / span 7;
+  margin: 50px 0;
+}
+
 .intro {
   grid-column: 2 / span 4;
   margin-bottom: 50px;
