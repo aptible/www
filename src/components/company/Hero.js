@@ -24,7 +24,7 @@ export default ({ webcamPhotos }) => (
       </div>
 
       <div className={styles.whoWeAre}>
-        <h1>Who We Are</h1>
+        <h1>What We Do</h1>
         <WistiaVideo videoId="vjzole82z0" />
       </div>
     </Grid>
