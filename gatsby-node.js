@@ -135,10 +135,6 @@ exports.createPages = ({ graphql, actions }) => {
               section
               slug
               hidePage
-              contentfulparent {
-                title
-                slug
-              }
               body {
                 json
               }

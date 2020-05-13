@@ -7,7 +7,7 @@ import styles from './Subnav.module.css';
 const SECTIONS = ['Our Business', 'Our Culture', 'Our Teams'];
 
 const Section = ({ section, allPages }) => {
-  const sectionRootPages = allPages.filter(e => e.node.contentfulparent === null && e.node.section === section);
+  const sectionRootPages = allPages.filter(e => e.node.section === section);
   if (sectionRootPages.length < 1) {
     return null;
   }
@@ -51,7 +51,7 @@ const pagePath = (page) => {
 }
 
 export default ({ allPages }) => {
-  const rootWithoutSection = allPages.filter(e => e.node.contentfulparent === null && e.node.section === null);
+  const rootWithoutSection = allPages.filter(e => e.node.section === null);
 
   return (
     <SidebarNav title="Owner’s Manual">
