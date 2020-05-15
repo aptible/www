@@ -14,7 +14,7 @@ template: legal
 [contact us]:http://contact.aptible.com
 [Managed Host-based Intrusion Detection (HIDS)]:/deploy/hids/
 
-Version 3.13 - September 2019
+Version 3.14 - May 2020
 
 This policy outlines: 1) Aptible's security practices and resources, and 2) your security obligations. 
 
@@ -90,7 +90,7 @@ The AWS network prohibits a host from sending traffic with a source IP or MAC ad
 p. 13 - ["Amazon Web Services: Overview of Security Processes - May 2017"]
 
 ##### **2.F - Network and Host Vulnerability Scanning**
-Aptible scans both the Internet-facing network and private network of a master reference stack each month. Aptible is responsible for network and host security, and remediates adverse findings without customer intervention, however you may request a scan of your dedicated VPC and its hosts as needed for your own security assessments and audits.
+Aptible scans both the Internet-facing network and private network of a master reference stack each month. Aptible is responsible for network and host security, and remediates adverse findings without customer intervention, however you may request a scan of your dedicated VPC and its hosts as needed for your own security assessments and audits.  The scope of this scan is limited to the underlying Deploy architecture, and does not include your apps, databases, or endpoints.
 
 #### **3. Aptible Deploy Platform Security**
 
@@ -129,7 +129,7 @@ Aptible Deploy host operating systems are hardened based on the Center for Inter
 SSH public key authentication is used to limit access to your authorized backend users during git-based deploys. Following a successful push to an Aptible git endpoint, code is copied down to your stack's build layer. The resulting images are pushed to a private stack registry, backed by AWS S3, which provides redundant, access-controlled storage.
 
 ##### **3.G - Databases**
-Databases run in the database layer of your stack, on a private subnet accessible only from app or bastion layer. SSL/TLS is required if the database protocol supports it. Disk volumes backing databases are encrypted at the filesystem level using Aptible-managed AES encryption. You can check whether your database uses AES-192 or AES-256 in the Aptible Deploy dashboard. You can rekey the database by dumping/restoring it at any time. You may implement additional controls, such as database security policies or row-/column-level encryption with keys you manage.
+Databases run in the database layer of your stack, on a private subnet accessible only from app or bastion layer. SSL/TLS is required if the database protocol supports it. Disk volumes backing databases are encrypted at the filesystem level using Aptible-managed AES encryption. Aptible manages the creation, access security, and destruction of encryption keys. You can check whether your database uses AES-192 or AES-256 in the Aptible Deploy dashboard. You can rekey the database by dumping/restoring it at any time. You may implement additional controls, such as database security policies or row-/column-level encryption with keys you manage.
 
 ##### **3.H - Aptible Deploy Penetration Testing**
 Aptible conducts penetration testing of the Aptible Deploy infrastructure at least annually. These tests consist of open-ended, best-effort security assessments performed by qualified third-party testing firms that specialize in cloud and containerized infrastructures. The testers review the Aptible Deploy architecture, are given full read access to Aptible Deploy source code (and access to the Aptible Deploy engineering team to answer questions throughout the test), and are given privileged internal (i.e., backdoor) access to a sandbox Aptible Deploy environment. From this context, the testers attempt to identify vulnerabilities in Aptible Deploy’s control plane, core API, authentication API, and related Aptible Deploy services. 
