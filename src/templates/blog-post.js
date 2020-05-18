@@ -1,23 +1,25 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import Post from '../components/blog/Post';
-import shareImage from '../images/launch-post-visual.gif';
+import MetaHeader from '../components/shared/MetaHeader';
 
-export default ({ data }) => (
-  <AptibleLayout>
-    <Helmet>
-      <title>Aptible | {data.post.title}</title>
-      <meta name="description" content={data.post.title} />
-      <meta property="og:title" content={data.post.title} />
-      <meta property="og:description" content={`Aptible Blog: ${data.post.title}`} />
-      <meta property="og:image" content={shareImage} />
-      <meta name="twitter:card" content="summary_large_image" />
-    </Helmet>
-    <Post post={data.post} />
-  </AptibleLayout>
-);
+export default ({ data }) => {
+  const { post } = data;
+  const description = post.socialDescription || post.title;
+  return (
+    <AptibleLayout>
+      <MetaHeader
+        title={post.title}
+        description={description}
+        image={post.socialImage ? post.socialImage.file.url : ''}
+        section="blog"
+        slug={post.slug}
+      />
+      <Post post={post} />
+    </AptibleLayout>
+  );
+};
 
 export const query = graphql`
   query($slug: String!) {
@@ -25,6 +27,13 @@ export const query = graphql`
       title
       postedAt
       category
+      slug
+      socialDescription
+      socialImage {
+        file {
+          url
+        }
+      }
       author {
         name
         slug
@@ -35,14 +44,14 @@ export const query = graphql`
         }
       }
       secondAuthor {
-            name
-            slug
-            professionalPhoto {
-              file {
-                url
-              }
-            }
+        name
+        slug
+        professionalPhoto {
+          file {
+            url
           }
+        }
+      }
       body {
         json
       }

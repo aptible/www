@@ -135,6 +135,12 @@ exports.createPages = ({ graphql, actions }) => {
               section
               slug
               hidePage
+              socialDescription
+              socialImage {
+                file {
+                  url
+                }
+              }
               body {
                 json
               }

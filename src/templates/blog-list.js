@@ -1,17 +1,19 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import { graphql } from 'gatsby';
 import Index from '../components/blog/Index';
 import Pagination from '../components/blog/Pagination';
 import ZeroTo from '../components/footer/ZeroTo';
+import MetaHeader from '../components/shared/MetaHeader';
 
 export default ({ data, pageContext }) => (
   <AptibleLayout>
-    <Helmet>
-      <title>Aptible | Blog</title>
-      <meta name="description" content="Get the latest updates about Aptible, our security management platform, and app deployment platform." />
-    </Helmet>
+    <MetaHeader 
+      title="Blog"
+      description="Get the latest updates about Aptible, our security management platform, and app deployment platform."
+      image=""
+      section="blog"
+    />
     <Index posts={data.posts.edges} categorySlug={pageContext.categorySlug} />
     <Pagination
       numPages={pageContext.numPages}
@@ -19,7 +21,6 @@ export default ({ data, pageContext }) => (
     <ZeroTo />
   </AptibleLayout>
 );
-
 
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
