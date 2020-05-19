@@ -12,7 +12,7 @@ export default ({ data }) => {
       <MetaHeader
         title={post.title}
         description={description}
-        image={post.socialImage ? post.socialImage.file.url : ''}
+        image={post.socialImage ? `https:${post.socialImage.file.url}` : ''}
         section="blog"
         slug={post.slug}
       />

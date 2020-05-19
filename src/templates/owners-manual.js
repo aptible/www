@@ -18,7 +18,7 @@ export default ({ pageContext }) => {
         title={currentPage.displayTitle || currentPage.title}
         titlePrefix="Aptible Owner’s Manual"
         description={description}
-        image={currentPage.socialImage ? currentPage.socialImage.file.url : ''}
+        image={currentPage.socialImage ? `https:${currentPage.socialImage.file.url}` : ''}
         section="owners-manual"
         slug={currentPage.slug || ''}
       />
