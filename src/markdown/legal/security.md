@@ -14,7 +14,7 @@ template: legal
 [contact us]:http://contact.aptible.com
 [Managed Host-based Intrusion Detection (HIDS)]:/deploy/hids/
 
-Version 3.14 - May 2020
+Version 3.15 - June 2020
 
 This policy outlines: 1) Aptible's security practices and resources, and 2) your security obligations. 
 
@@ -152,7 +152,7 @@ Aptible automatically backs up several different types of data:
 
 - Customer metadata is stored in the Aptible APIs, backed by the Amazon Relational Database Service. This metadata includes customer account data (passwords, permissions, SSH keys), and Aptible Deploy configuration data, such as environmental variables. Backups are taken nightly and retained for one week.
 
-- Aptible Deploy customer database disks are automatically backed up every 24 hours and retained daily for 90 days, and monthly for 6 years. No customer action is required. Two backup copies are kept: One in the region where the database runs, to facilitate fast disaster recovery; the other in a separate geographic region to protect against loss of the original region. Customers may also take on-demand backups. Please see the [Aptible Deploy database backup](https://www.aptible.com/documentation/deploy/reference/databases/backups.html) documentation for more information.
+- Aptible Deploy customer database disks are automatically backed up every 24 hours and retained as per the policy defined by the each customer. No customer action is required for the automated backups to be generated. In addition to defining the retention period, customers can also specify that we should make two copies of each backup: One in the region where the database runs, to facilitate fast disaster recovery; the other in a separate geographic region to protect against loss of the original region. Customers may also take on-demand backups. Please see the [Aptible Deploy database backup](https://www.aptible.com/documentation/deploy/reference/databases/backups.html) documentation for more information.
 
 ##### **4.B - Fault Tolerance**
 AWS data centers are clustered into regions, and sub-clustered into availability zones, each of which is designed as an independent failure zone, meaning they are:
