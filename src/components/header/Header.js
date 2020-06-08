@@ -28,7 +28,8 @@ class Header extends React.Component {
     this.state = {
       navOpen: false,
       openSectionName: null,
-      isDeployPage: false
+      isDeployPage: false,
+      isRoomsPage: false,
     };
   }
 
@@ -55,6 +56,10 @@ class Header extends React.Component {
       this.setState({
         isDeployPage: window.location.pathname.includes('deploy')
       });
+
+      this.setState({
+        isRoomsPage: window.location.pathname.includes('comply/rooms')
+      });
     }
   }
 
@@ -62,6 +67,19 @@ class Header extends React.Component {
     let DropDownContent;
     if (this.state.navOpen && dropDowns[this.state.openSectionName]) {
       DropDownContent = dropDowns[this.state.openSectionName];
+    }
+
+    let headerCta;
+    if (this.state.isRoomsPage) {
+      headerCta = (
+        <Button size="small" href="https://comply-grc.aptible.com/signup?context=rooms">
+          Claim your room
+        </Button>
+      );
+    } else if (this.state.isDeployPage) {
+      headerCta = <SignupButton size="small" text="Start with Deploy" product="deploy" />;
+    } else {
+      headerCta = <SignupButton size="small" text="Get a demo" product="comply" />;
     }
 
     return (
@@ -117,11 +135,7 @@ class Header extends React.Component {
                   </div>
 
                   <div className={styles.ctaSignUp}>
-                    {this.state.isDeployPage ? (
-                      <SignupButton size="small" text="Start with Deploy" product="deploy" />
-                    ) : (
-                        <SignupButton size="small" text="Get a demo" product="comply" />
-                      )}
+                    {headerCta}
                   </div>
                 </Grid>
               </div>
