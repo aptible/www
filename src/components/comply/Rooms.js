@@ -34,9 +34,10 @@ export default () => (
 
       <div className={styles.content}>
         <p className="XL">
-          Win bigger deals faster by enabling your sales and customer-facing
-          teams to give your customers and prospects instant access to the
-          information that they need to buy you. 
+          Rooms is a <strong>free</strong> sales enablement platform for
+          security documentation requests. Win bigger deals faster by enabling
+          Sales to give customers and prospects instant access to the information
+          they need to buy.
         </p>
         <p className="XL">
           Lower churn and improve customer engagement by automatically
