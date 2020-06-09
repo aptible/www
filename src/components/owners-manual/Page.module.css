@@ -48,6 +48,10 @@
   grid-column: 6 / span 2;
 }
 
+.nextSection {
+  margin-top: 60px;
+}
+
 @media (--mobile) {
   .meta {
     padding-bottom: 30px;
@@ -63,5 +67,10 @@
     grid-row: 4;
     grid-column: 1 / span 7;
     padding-bottom: 30px;
+  }
+
+  .nextSection {
+    margin-bottom: 20px;
+    margin-top: 30px;
   }
 }

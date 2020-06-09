@@ -23,6 +23,7 @@ class ArrowButton extends React.Component {
           className={styles.link}
           onMouseEnter={() => this.setHover(true)}
           onMouseLeave={() => this.setHover(false)}
+          title={this.props.title}
         >
           {this.props.text}
           <div className={styles.arrowContainer}>
@@ -41,6 +42,7 @@ class ArrowButton extends React.Component {
           onClick={this.props.onClickFn}
           role="button"
           tabIndex={0}
+          title={this.props.title}
         >
           {this.props.text}
           <div className={styles.arrowContainer}>
@@ -56,6 +58,7 @@ class ArrowButton extends React.Component {
         className={styles.link}
         onMouseEnter={() => this.setHover(true)}
         onMouseLeave={() => this.setHover(false)}
+        title={this.props.title}
       >
         {this.props.text}
         <div className={styles.arrowContainer}>
