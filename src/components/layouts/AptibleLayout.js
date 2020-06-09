@@ -8,10 +8,10 @@ import Analytics from '../shared/Analytics';
 export default ({ children }) => (
   <div>
     <HelloBar
-      id="blog-aptible-response-to-covid-19"
-      to="/blog/aptible-response-to-covid-19/"
-      callout="New Blog Post"
-      text="Learn more about how we are supporting customers during COVID-19"
+      id="comply-rooms"
+      to="/comply/rooms/"
+      callout="Just Launched"
+      text="Comply Rooms: Turn compliance into customer trust with compliance datarooms"
     />
     <Header />
     <CookieConsent />
