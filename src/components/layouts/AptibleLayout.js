@@ -9,7 +9,7 @@ export default ({ children }) => (
   <div>
     <HelloBar
       id="comply-rooms"
-      to="/comply/rooms/"
+      to="/blog/turn-compliance-into-customer-trust/"
       callout="Just Launched"
       text="Comply Rooms: Turn compliance into customer trust with compliance datarooms"
     />
