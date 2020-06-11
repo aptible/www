@@ -65,7 +65,7 @@
 
 @media (--mobile) {
   .headerContainer {
-    height: 56px;
+    height: auto;
   }
 
   .header {
