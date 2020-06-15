@@ -73,7 +73,7 @@ class Header extends React.Component {
     if (this.state.isRoomsPage) {
       headerCta = (
         <Button size="small" href="https://comply-grc.aptible.com/signup?context=rooms">
-          Claim your room
+          Sign up for free
         </Button>
       );
     } else if (this.state.isDeployPage) {
