@@ -18,7 +18,7 @@ export default () => (
         </p>
 
         <Button href="https://comply-grc.aptible.com/signup?context=rooms">
-          Claim your room
+          Sign up for free
         </Button>
       </div>
 
