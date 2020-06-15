@@ -70,9 +70,15 @@
   top: 5px;
 }
 
+.cta {
+  grid-column: 2 / -1;
+  grid-row: 3;
+}
+
 @media (--mobile) {
-  .headline {
-    grid-column: 1 / span 7;
+  .headline,
+  .cta {
+    grid-column: 1 / -1;
   }
 
   .job:hover {
