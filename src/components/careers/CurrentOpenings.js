@@ -1,4 +1,5 @@
 import React from 'react';
+import ArrowButton from '../buttons/ArrowButton';
 import { Grid } from '../grid/Grid';
 import styles from './CurrentOpenings.module.css';
 
@@ -36,6 +37,13 @@ export default ({ jobs }) => (
             </a>
           </div>
         ))}
+      </div>
+
+      <div className={styles.cta}>
+        <ArrowButton
+          to="/owners-manual/interviewing-with-aptible/"
+          text="Learn More About Interviewing with Aptible"
+        />
       </div>
     </Grid>
   </div>
