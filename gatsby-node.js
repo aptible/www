@@ -175,20 +175,6 @@ exports.createPages = ({ graphql, actions }) => {
                 title
                 description
               }
-              customerQuote {
-                id
-                quote {
-                  quote
-                }
-                customerName
-                customerJobTitle
-                customerCompany
-                customerPhoto {
-                  file {
-                    url
-                  }
-                }
-              }
               logo {
                 file {
                   url
