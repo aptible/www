@@ -11,7 +11,7 @@ export default ({
   slug,
 }) => {
   const urlPrefix = 'https://www.aptible.com';
-  const url = `${urlPrefix}${section ? `/${section}` : ''}${slug ? `/${slug}` : ''}`;
+  const url = `${urlPrefix}${section ? `/${section}` : ''}${slug ? `/${slug}` : ''}/`;
 
   return (
     <Helmet>

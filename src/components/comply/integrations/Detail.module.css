@@ -1,0 +1,175 @@
+.container {
+  padding-top: 30px;
+}
+
+.link {
+  grid-column: 1 / -1;
+  margin-bottom: 25px;
+}
+
+.link a {
+  color: var(--white-fifty);
+  text-decoration: none;
+}
+
+.link a:hover {
+  color: white;
+}
+
+.header {
+  background: linear-gradient(168.29deg, rgba(255, 255, 255, 0.04) 7.84%, rgba(255, 255, 255, 0.032) 83.16%), #0A1B2B;
+  grid-column: 1 / -1;
+  margin-bottom: 140px;
+  height: 412px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.header h1 {
+  display: none;
+}
+
+.header p {
+  margin-top: 54px;
+  margin-bottom: 0;
+  font-size: 24px;
+  color: var(--white-seventy);
+  line-height: 1.44;
+  letter-spacing: .02em;
+  padding-left: 5em;
+  padding-right: 5em;
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  bottom: -26px;
+}
+
+.button a {
+  min-width: 162px;
+}
+
+.content {
+  grid-column: 1 / span 5;
+  padding-right: 80px;
+}
+
+.content h2 {
+  margin-top: 0;
+  margin-bottom: 1.333333em;
+  font-size: 24px;
+  color: white;
+  line-height: 1.44;
+  letter-spacing: .02em;
+}
+
+.body h3 {
+  font-size: 18px;
+  line-height: 1.44;
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+
+.body p,
+.body ul,
+.body ol {
+  font-size: 18px;
+  line-height: 1.44;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  color: var(--white-seventy);
+}
+
+.body ul,
+.body ol {
+  padding-left: 1em;
+}
+
+.body li p {
+  margin: 0
+}
+
+.sidebar {
+  grid-column: 6 / -1;
+  padding-right: 30px;
+}
+
+.sidebarSection + .sidebarSection {
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  margin-top: 24px;
+  padding-top: 24px;
+}
+
+.sidebarSection h4 {
+  color: var(--white-fifty);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.scopes {
+  color: var(--white-fifty);
+  font-size: 13px;
+  margin: 0;
+  padding-left: 1em;
+}
+
+.scopes b {
+  color: white;
+  font-weight: 400;
+}
+
+.documentationUrl {
+  font-size: 13px;
+  margin: 0;
+}
+
+.documentationUrl a {
+  text-decoration: none;
+}
+
+.documentationUrl a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--aptible-green);
+}
+
+.quote {
+  grid-column: 2 / span 5;
+  margin-top: 150px;
+}
+
+@media (--mobile) {
+  .header {
+    margin-bottom: 80px;
+    height: 300px;
+  }
+
+  .header p {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+  .header img {
+    max-width: 30%;
+  }
+
+  .content {
+    grid-column: 1 / -1;
+    padding-right: 0;
+  }
+
+  .sidebar {
+    grid-column: 1 / -1;
+    padding-right: 0;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    margin-top: 48px;
+    padding-top: 24px;
+  }
+}
