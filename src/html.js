@@ -55,22 +55,6 @@ adroll_pix_id = "ERBZPRNMMFELHNLX5C3Y34";
     if (window.addEventListener) {window.addEventListener('load', _onload, false);}
     else {window.attachEvent('onload', _onload)}
 }());
-
-var sf14gv = 32857;
-(function() {
-  var sf14g = document.createElement('script');
-  sf14g.src = 'https://tracking.leadlander.com/lt.min.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sf14g, s);
-})();
-
-(function () {
-  var zi = document.createElement('script');
-  zi.type = 'text/javascript';
-  zi.async = true;
-  zi.src = 'https://ws.zoominfo.com/pixel/oWUZ2VKQg8kZQNmDHm5U';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(zi, s);
-})();
 `;
 
 const segmentJs = `
