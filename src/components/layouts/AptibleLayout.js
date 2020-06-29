@@ -8,10 +8,10 @@ import Analytics from '../shared/Analytics';
 export default ({ children }) => (
   <div>
     <HelloBar
-      id="comply-rooms"
-      to="/blog/turn-compliance-into-customer-trust/"
+      id="comply-integrations"
+      to="/comply/integrations/"
       callout="Just Launched"
-      text="Comply Rooms: Turn compliance into customer trust with compliance datarooms"
+      text="Comply Integrations: Integrate with all of your SaaS services to automate compliance tasks"
     />
     <Header />
     <CookieConsent />
@@ -20,3 +20,4 @@ export default ({ children }) => (
     <Analytics />
   </div>
 );
+ 

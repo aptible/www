@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import illustration from '../../../images/comply/integrate-illustration.svg';
 import { Grid } from '../../grid/Grid';
-import SignupArrowButton from '../../signup/SignupArrowButton';
+import ArrowButton from '../../buttons/ArrowButton';
 import styles from './Integrate.module.css';
 
 export default () => (
@@ -21,7 +21,7 @@ export default () => (
         </p>
 
         <div className={classNames(styles.cta, styles.desktop)}>
-          <SignupArrowButton text="Get a demo and learn more" product="comply" />
+          <ArrowButton to="/comply/integrations/" text="Learn more about Integrations" />
         </div>
       </div>
 
@@ -30,7 +30,7 @@ export default () => (
       </div>
 
       <div className={classNames(styles.cta, styles.mobile)}>
-        <SignupArrowButton text="Get a demo and learn more" product="comply" />
+        <ArrowButton to="/comply/integrations/" text="Learn more about Integrations" />
       </div>
     </Grid>
   </div>
