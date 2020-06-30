@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import styles from './DeployCalculator.module.css';
 import PricingSlider from './PricingSlider';
 import ToolTip from '../shared/ToolTip';
-import checkmarkIcon from '../../images/pricing/checkmark.svg';
-
 
 const calculators = {
   containers: [
@@ -27,13 +25,13 @@ const calculators = {
     { tick: '2GB', cost: '29' },
     { tick: '4GB', cost: '58' },
     { tick: '6GB', cost: '88', alwaysDisplay: true, includedLimit: true },
-    { tick: '8GB', cost: '234' },
-    { tick: '12GB', cost: '526' },
-    { tick: '16GB', cost: '818' },
-    { tick: '32GB', cost: '1,986' },
-    { tick: '64GB', cost: '4,322' },
-    { tick: '128GB', cost: '8,994', alwaysDisplay: true },
-    { tick: '+', cost: '8,994', alwaysDisplay: true },
+    { tick: '8GB', cost: '117' }, // '234'
+    { tick: '12GB', cost: '176' }, // '526'
+    { tick: '16GB', cost: '234' }, // '818'
+    { tick: '32GB', cost: '468' }, // '1,986'
+    { tick: '64GB', cost: '935' }, // '4,322'
+    { tick: '128GB', cost: '1,869', alwaysDisplay: true }, // '8,994'
+    { tick: '+', cost: '1,869', alwaysDisplay: true }, // '8,994'
   ],
   encryptedDisk: [
     { tick: '0', cost: '0', alwaysDisplay: true },
@@ -48,6 +46,20 @@ const calculators = {
     { tick: '3TB', cost: '740' },
     { tick: '4TB', cost: '1,110' },
     { tick: '+', cost: '1,110', alwaysDisplay: true },
+  ],
+  backups: [
+    { tick: '0', cost: '0' },
+    { tick: '10GB', cost: '0' },
+    { tick: '50GB', cost: '0' },
+    { tick: '100GB', cost: '0' },
+    { tick: '250GB', cost: '0' },
+    { tick: '500GB', cost: '0' },
+    { tick: '1TB', cost: '0' },
+    { tick: '1.5TB', cost: '185' },
+    { tick: '2TB', cost: '370' },
+    { tick: '3TB', cost: '740' },
+    { tick: '4TB', cost: '1,110' },
+    { tick: '+', cost: '1,110' },
   ],
   endpoints: [
     { tick: '0', cost: '0', alwaysDisplay: true },
@@ -77,6 +89,17 @@ const calculators = {
     { tick: '10', cost: '990' },
     { tick: '+', cost: '990', alwaysDisplay: true },
   ],
+  supportPlan: {
+    standard: {
+      cost: '0',
+    },
+    premium: {
+      cost: '299',
+    },
+    enterprise: {
+      cost: '499',
+    },
+  },
 };
 
 const toolTips = {
@@ -91,9 +114,59 @@ const toolTips = {
           monthly for 6 years.`,
   endpoints: `Endpoints attach to your containers so that they can be accessed
               over the internet, or by other containers. May be HTTPS, TCP, or
-              TLS Endpoints.`
-}
+              TLS Endpoints.`,
+  backups: `Something backups`,
+  stack: `Something`,
+};
 
+const Amount = ({ value }) => {
+  return (
+    <div className={styles.amount}>
+      <h5><span>${value}</span>/mo</h5>
+    </div>
+  );
+};
+
+const LineItem = ({ title, helpText, calculatedAmount, lineItemAmount }) => (
+  <>
+    <div className={styles.lineItemContainer}>
+      <div className={styles.lineItemDescription}>
+        {title}
+        {helpText && <ToolTip text={helpText} />}
+      </div>
+
+      <Amount value={calculatedAmount} />
+    </div>
+
+    {lineItemAmount && (
+      <div className={styles.lineItemAmount}>
+        {lineItemAmount}
+      </div>
+    )}
+  </>
+);
+
+const Resource = ({
+  title,
+  helpText,
+  calculatedAmount,
+  lineItemAmount,
+  pricingSlider,
+  children,
+}) => (
+  <div className={styles.resource}>
+    <LineItem
+      title={title}
+      helpText={helpText}
+      calculatedAmount={calculatedAmount}
+      lineItemAmount={lineItemAmount}
+    />
+
+    {pricingSlider}
+
+    {children}
+  </div>
+);
 
 class DeployCalculator extends React.Component {
   constructor(props) {
@@ -103,20 +176,39 @@ class DeployCalculator extends React.Component {
       containersIndex: 0,
       diskIndex: 0,
       endpointsIndex: 0,
-      vpnConnectionsIndex: 0
+      vpnConnectionsIndex: 0,
+      estimatedMonthlyTotal: 0,
+      dedicatedStack: true,
+      supportPlan: 'standard',
     };
+  }
+
+  toggleDedicatedStack = () => {
+    this.setState({ dedicatedStack: !this.state.dedicatedStack });
+  }
+
+  toggleSupportPlanOption = (value) => {
+    if (value !== this.state.supportPlan) {
+      this.setState({
+        supportPlan: value,
+      });
+    }
   }
 
   toggleManagedHids = () => {
     this.setState({ managedHids: !this.state.managedHids });
   }
 
-  containersCalculator = () => {
-    return this.state.managedHids ? calculators.containersManagedHids : calculators.containers
+  containersAmount = () => {
+    return calculators.containers[this.state.containersIndex].cost;
   }
 
-  containersAmount = () => {
-    return this.containersCalculator()[this.state.containersIndex].cost;
+  containersManagedHidsAmount = () => {
+    if (!this.state.managedHids) {
+      return '0';
+    }
+
+    return calculators.containersManagedHids[this.state.containersIndex].cost;
   }
 
   updateContainersIndex = (idx) => {
@@ -124,7 +216,7 @@ class DeployCalculator extends React.Component {
   }
 
   diskAmount = () => {
-    return calculators.encryptedDisk[this.state.diskIndex].cost
+    return calculators.encryptedDisk[this.state.diskIndex].cost;
   }
 
   updateDiskIndex = (idx) => {
@@ -132,7 +224,7 @@ class DeployCalculator extends React.Component {
   }
 
   endpointsAmount = () => {
-    return calculators.endpoints[this.state.endpointsIndex].cost
+    return calculators.endpoints[this.state.endpointsIndex].cost;
   }
 
   updateEndpointsIndex = (idx) => {
@@ -140,142 +232,205 @@ class DeployCalculator extends React.Component {
   }
 
   vpnConnectionsAmount = () => {
-    return calculators.vpnConnections[this.state.vpnConnectionsIndex].cost
+    return calculators.vpnConnections[this.state.vpnConnectionsIndex].cost;
   }
 
   updateVpnConnectionsIndex = (idx) => {
     this.setState({ vpnConnectionsIndex: idx });
   }
 
+  dedicatedStackAmount = () => {
+    if (!this.state.dedicatedStack) {
+      return '0';
+    }
+
+    return '499';
+  }
+
+  supportPlanAmount = () => {
+    return calculators.supportPlan[this.state.supportPlan].cost;
+  }
+
+  backupsAmount = () => {
+    return calculators.backups[this.state.diskIndex].cost;
+  }
+
+  convertAmountToNumber = (amount) => parseInt(amount.replace(/,/g, ''), 10);
+
+  calculateEstimatedAmount = () => {
+    const amounts = [
+      this.containersAmount(),
+      this.containersManagedHidsAmount(),
+      this.diskAmount(),
+      this.backupsAmount(),
+      this.endpointsAmount(),
+      this.vpnConnectionsAmount(),
+      this.dedicatedStackAmount(),
+      this.supportPlanAmount(),
+    ].map((amount) => this.convertAmountToNumber(amount));
+
+    return amounts.reduce((a, b) => a + b, 0).toLocaleString('en');
+  }
+
   render() {
     return (
       <div className={styles.container}>
-        <h6 className="small">Resources</h6>
+        <h4>Estimate your monthly spend</h4>
 
         <div className={styles.calculator}>
-
-          <div className={styles.resource}>
-            <div className={styles.lineItemContainer}>
-              <div className={styles.lineItemDescriptionContainer}>
-                <div className={styles.lineItemLines}></div>
-                <div className={styles.lineItemDescription}>
-                  App & Database Containers
-                  <ToolTip text={toolTips.containers} />
-                </div>
-              </div>
-              <div className={styles.lineItemAmount}>
-                <span>$0.08</span>/GB/Hour
-              </div>
-            </div>
-
-            <div className={styles.lineItemContainer} style={{ marginTop: '10px' }}>
-              <div className={styles.lineItemDescriptionContainer}>
-                <div className={styles.lineItemLines}></div>
-                <div
-                  className={`${styles.lineItemDescription} ${styles.managedHids}`}
-                  onClick={this.toggleManagedHids}>
-                  <div className={styles.managedHidsCheckbox}>
-                    {this.state.managedHids &&
-                      <img src={checkmarkIcon} alt="checkmark" />
-                    }
-                  </div>
-                  With <Link to="/deploy/hids/">Managed HIDS</Link>
-                  <ToolTip text={toolTips.hids} />
-                </div>
-              </div>
-              <div className={styles.lineItemAmount}>
-                $0.02/GB/Hour
-              </div>
-            </div>
-
-            <div className={styles.pricingContainer}>
+          <Resource
+            title="App &amp; Database Containers"
+            helpText={toolTips.containers}
+            calculatedAmount={this.containersAmount()}
+            lineItemAmount={<><span>$0.08</span>/GB/Hour</>}
+            pricingSlider={
               <PricingSlider
-                calculator={this.containersCalculator()}
+                calculator={calculators.containers}
                 defaultValue="4"
                 updatePriceFn={this.updateContainersIndex}
               />
-              <div className={styles.amount}>
-                <h5><span>${this.containersAmount()}</span>/mo</h5>
-              </div>
+            }
+          > 
+            <div className={`${styles.lineItemDescription} ${styles.hidsLineItem}`}>
+              With Managed HIDS
+              <ToolTip text={toolTips.hids} />
             </div>
-          </div>
 
-          <div className={styles.resource}>
-            <div className={styles.lineItemContainer}>
-              <div className={styles.lineItemDescriptionContainer}>
-                <div className={styles.lineItemLines}></div>
-                <div className={styles.lineItemDescription}>
-                  Encrypted Disk
-                  <ToolTip text={toolTips.disk} />
+            <div className={styles.hidsToggle}>
+              <div className={styles.hidsToggleButtons}>
+                <div className={styles.toggleButtons}>
+                  <button
+                    onClick={this.toggleManagedHids}
+                    disabled={this.state.managedHids}
+                  >
+                    With HIDS
+                  </button>
+                  <button
+                    onClick={this.toggleManagedHids}
+                    disabled={!this.state.managedHids}
+                  >
+                    Without HIDS
+                  </button>
+                </div>
+
+                {/* <Link to="/deploy/hids/">Managed HIDS</Link> */}
+                {/* <div className={styles.lineItemAmount}>
+                  $0.02/GB/Hour
+                </div> */}
+
+                <div className={styles.hidsTooltipDesktop}>
+                  <ToolTip text={toolTips.hids} />
                 </div>
               </div>
-              <div className={styles.lineItemAmount}>
-                <span>$0.37</span>/GB/Month
-              </div>
+              <Amount value={this.containersManagedHidsAmount()} />
             </div>
-            <div className={styles.pricingContainer}>
+          </Resource>
+
+          <Resource
+            title="Encrypted Disk"
+            helpText={toolTips.disk}
+            calculatedAmount={this.diskAmount()}
+            lineItemAmount={<><span>$0.37</span>/GB/Month</>}
+            pricingSlider={
               <PricingSlider
                 calculator={calculators.encryptedDisk}
                 defaultValue="6"
                 updatePriceFn={this.updateDiskIndex}
               />
-              <div className={styles.amount}>
-                <h5><span>${this.diskAmount()}</span>/mo</h5>
-              </div>
+            }
+          >
+            <div className={styles.backupCosts}>
+              <LineItem
+                title="Estimated Backup Costs"
+                helpText={toolTips.backups}
+                calculatedAmount={this.backupsAmount()}
+                lineItemAmount={<><span>$0.02</span>/GB/Month</>}
+              />
             </div>
-          </div>
-
-          <div className={styles.resource}>
-            <div className={styles.lineItemContainer}>
-              <div className={styles.lineItemDescriptionContainer}>
-                <div className={styles.lineItemLines}></div>
-                <div className={styles.lineItemDescription}>
-                  Endpoints
-                  <ToolTip text={toolTips.endpoints} />
-                </div>
-              </div>
-              <div className={styles.lineItemAmount}>
-                <span>$0.05</span>/Hour
-              </div>
-            </div>
-            <div className={styles.pricingContainer}>
+          </Resource>
+          
+          <Resource
+            title="Endpoints"
+            helpText={toolTips.endpoints}
+            calculatedAmount={this.endpointsAmount()}
+            lineItemAmount={<><span>$0.05</span>/Hour/Month</>}
+            pricingSlider={
               <PricingSlider
                 calculator={calculators.endpoints}
                 defaultValue="4"
                 updatePriceFn={this.updateEndpointsIndex}
               />
-              <div className={styles.amount}>
-                <h5><span>${this.endpointsAmount()}</span>/mo</h5>
-              </div>
-            </div>
-          </div>
+            }
+          />
 
-          <div className={styles.resource}>
-            <div className={styles.lineItemContainer}>
-              <div className={styles.lineItemDescriptionContainer}>
-                <div className={styles.lineItemLines}></div>
-                <div className={styles.lineItemDescription}>
-                  VPN Connections
-                </div>
-              </div>
-              <div className={styles.lineItemAmount}>
-                <span>$99</span>/Connection/Month
-              </div>
-            </div>
-            <div className={styles.pricingContainer}>
+          <Resource
+            title="VPN Connections"
+            helpText={toolTips.endpoints}
+            calculatedAmount={this.vpnConnectionsAmount()}
+            lineItemAmount={<><span>$99</span>/Connection/Month</>}
+            pricingSlider={
               <PricingSlider
                 calculator={calculators.vpnConnections}
                 defaultValue="0"
                 updatePriceFn={this.updateVpnConnectionsIndex}
               />
-              <div className={styles.amount}>
-                <h5><span>${this.vpnConnectionsAmount()}</span>/mo</h5>
-              </div>
+            }
+          />
+          
+          <Resource
+            title="Dedicated Stack for Regulated Data"
+            helpText={toolTips.stack}
+            calculatedAmount={this.dedicatedStackAmount()}
+          >
+            <div className={styles.toggleButtons}>
+              <button
+                onClick={this.toggleDedicatedStack}
+                disabled={this.state.dedicatedStack}
+              >
+                With Dedicated Stack
+              </button>
+              <button
+                onClick={this.toggleDedicatedStack}
+                disabled={!this.state.dedicatedStack}
+              >
+                Without Dedicated Stack
+              </button>
             </div>
-          </div>
+          </Resource>
+
+          <Resource
+            title="Support Plan"
+            calculatedAmount={this.supportPlanAmount()}
+          >
+            <div className={styles.toggleButtons}>
+              <button
+                onClick={() => this.toggleSupportPlanOption('standard')}
+                disabled={this.state.supportPlan === 'standard'}
+              >
+                Standard
+              </button>
+              <button
+                onClick={() => this.toggleSupportPlanOption('premium')}
+                disabled={this.state.supportPlan === 'premium'}
+              >
+                Premium
+              </button>
+              <button
+                onClick={() => this.toggleSupportPlanOption('enterprise')}
+                disabled={this.state.supportPlan === 'enterprise'}
+              >
+                Enterprise
+              </button>
+            </div>
+          </Resource>
+        </div>
+
+        <div className={styles.estimatedMonthlyTotal}>
+          <h4>Estimated monthly total</h4>
+          <Amount value={this.calculateEstimatedAmount()} />
         </div>
       </div>
-    )
+    );
   }
 }
 

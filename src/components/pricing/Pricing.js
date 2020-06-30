@@ -51,12 +51,14 @@ class Pricing extends React.Component {
           <Comply
             clickFn={this.expandProduct}
             closeFn={this.closeExpandedProduct}
-            expanded={this.state.expanded === 'comply'} />
+            expanded={this.state.expanded === 'comply'}
+          />
 
           <Deploy
             clickFn={this.expandProduct}
             closeFn={this.closeExpandedProduct}
-            expanded={this.state.expanded === 'deploy'} />
+            expanded={this.state.expanded === 'deploy'}
+          />
         </Grid>
       </div>
     )

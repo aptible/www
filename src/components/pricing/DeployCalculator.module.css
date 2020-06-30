@@ -19,25 +19,15 @@
 }
 
 .lineItemContainer {
+  align-items: center;
   display: grid;
-  grid-template-columns: auto 210px;
-}
-
-.lineItemDescriptionContainer {
-  position: relative;
-}
-
-.lineItemLines {
-  position: relative;
-  top: 20px;
-  border-bottom: 1px dotted var(--white-thirty);
+  grid-template-columns: 1fr 210px;
 }
 
 .lineItemDescription {
   position: relative;
   display: inline-block;
   background-color: var(--aptible-black);
-  padding-right: 6px;
   font-size: 16px;
   font-weight: 500;
   color: white;
@@ -77,30 +67,93 @@
 }
 
 .lineItemAmount {
+  color: var(--white-fifty);
   font-size: 12px;
   font-weight: 500;
-  margin: 6px 0 0 6px;
+  margin-top: 15px;
 }
 
 .lineItemAmount span {
   color: white;
 }
 
-.pricingContainer {
-  display: grid;
-  grid-template-columns: 370px auto;
-}
-
 .amount {
-  margin: 30px 0 0 85px;
+  text-align: right;
 }
 
 .amount h5 {
-  color: var(--body-color);
+  color: var(--white-fifty);
 }
 
 .amount h5 span {
   color: white;
+}
+
+.hidsToggle {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.hidsTooltipDesktop {
+  margin-top: -6px;
+}
+
+.hidsLineItem {
+  display: none;
+}
+
+.hidsToggleButtons {
+  display: flex;
+  width: 80%;
+}
+
+.hidsToggleButtons .toggleButtons {
+  flex: 1;
+  margin-top: 0;
+}
+
+.toggleButtons {
+  display: flex;
+  margin-top: 20px;
+  max-width: 90%;
+}
+
+.toggleButtons button {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid var(--grays4);
+  color: var(--white-seventy);
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  font-size: 12px;
+  font-weight: 500;
+  height: 42px;
+  justify-content: center;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+.toggleButtons button:disabled {
+  background-color: var(--aptible-green-thirty);
+  border-color: var(--aptible-green);
+  color: white;
+}
+
+.backupCosts {
+  margin-top: 15px;
+}
+
+.estimatedMonthlyTotal {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  max-width: 660px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 @media (--mobile) {
@@ -117,32 +170,57 @@
     grid-template-columns: 1fr;
   }
 
-  .lineItemLines {
-    display: none;
-  }
-
   .lineItemDescription {
     background-color: transparent;
     font-size: 14px;
     padding-right: 0;
   }
 
-  .lineItemAmount {
-    margin: 0;
-    margin-bottom: 6px;
-  }
-
-  .pricingContainer {
-    grid-template-columns: 1fr;
-  }
-
   .amount {
-    margin: 0;
-    margin-top: 20px;
+    margin-top: 15px;
+    text-align: left;
   }
 
   .amount h5 {
     font-size: 24px;
     line-height: 30px;
+  }
+
+  .hidsToggle {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
+
+  .hidsTooltipDesktop {
+    display: none;
+  }
+  
+  .hidsLineItem {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .hidsToggle .amount {
+    margin-top: 0;
+  }
+  
+  .hidsToggleButtons {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .toggleButtons {
+    max-width: 100%;
+  }
+
+  .estimatedMonthlyTotal {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 40px;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

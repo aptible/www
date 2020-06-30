@@ -10,6 +10,6 @@ export default ({ title, amount, smallAmount, timePeriod }) => (
     {smallAmount &&
       <h2>{smallAmount}</h2>
     }
-    <p>{timePeriod}</p>
+    {timePeriod && <p>{timePeriod}</p>}
   </div>
 );

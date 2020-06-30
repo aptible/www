@@ -1,11 +1,16 @@
 .container {
-  margin: 60px 150px 0 0;
+  margin: 60px 130px 80px 0;
+}
+
+.container h2 {
+  margin-top: 14px;
 }
 
 .title {
   font-weight: 500;
   color: white;
   margin: 30px 0 10px 0;
+  white-space: nowrap;
 }
 
 .amount {

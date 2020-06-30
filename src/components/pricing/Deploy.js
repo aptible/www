@@ -52,14 +52,16 @@ class Deploy extends React.Component {
           <React.Fragment>
             <p className="L">
               Deploy audit-ready apps and databases using a developer workflow
-              you'll love.
+              you’ll love.
             </p>
             <div className={styles.button}>
               <PricingArrow text={<React.Fragment>Get<br />Started</React.Fragment>} hover={this.state.hover} />
             </div>
 
-            <PricingBlock title="Development stacks start at" amount="$0" timePeriod="Per Month" />
-            <PricingBlock title="Production stacks start at" amount="$999" timePeriod="Per Month" />
+            <PricingBlock
+              title="No upfront cost. No commitment"
+              smallAmount="Pay as you go"
+            />
 
             <div className={styles.seeDetails}>
               <img src={detailsIcons} className={styles.seeDetailsIcon} alt="Pricing details" />
@@ -71,11 +73,10 @@ class Deploy extends React.Component {
 
       {this.props.expanded &&
         <div>
-          <p className="L">
+          <p className={`L ${styles.description}`}>
             Deploy audit-ready apps and databases using a developer workflow
-            you'll love. Production Accounts
-            support <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">Dedicated Stacks</a> and
-            sensitive data such as HIPAA PHI.
+            you’ll love. PHI-ready <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">Dedicated Stacks</a>{' '}
+            are available when you need them.
           </p>
 
           <div className={styles.deployLearnMore}>
@@ -83,37 +84,18 @@ class Deploy extends React.Component {
           </div>
 
           <div className={styles.deployAccountContainer}>
-            <div className={styles.deployAccountType}>
-              <PricingBlock title="Development Account" amount="$0" timePeriod="Per Month Base Fee" />
-              <h6 className="small">Base Platform</h6>
-              <CheckmarkUnorderedList>
-                <li>Shared stack</li>
-                <li>No commitment</li>
-                <li>Only pay for the resources you use</li>
-                <li>First $500 worth of resources are complimentary</li>
-                <li className={checkmarkUnorderedListStyles.x}>Not ready for HIPAA PHI</li>
-              </CheckmarkUnorderedList>
-            </div>
-
-            <div className={styles.deployAccountType}>
-              <PricingBlock title="Production Account" amount="$999" timePeriod="Per Month Base Fee" />
-              <h6 className="small">Base Platform</h6>
-              <CheckmarkUnorderedList>
-                <li><strong>$1299/mo</strong> with no annual commitment</li>
-                <li><strong>6 GB</strong> App/DB Container RAM</li>
-                <li><strong>1 TB</strong> encrypted Database Disk, including automatic backups</li>
-                <li><strong>4</strong> TLS endpoints</li>
-                <li>Pay for additional resources as you use them</li>
-                <li>Ready for HIPAA PHI</li>
-              </CheckmarkUnorderedList>
-            </div>
+            <CheckmarkUnorderedList>
+              <li>Shared stack included</li>
+              <li>No commitment</li>
+              <li>First $500 worth of Resources is complimentary</li>
+              <li>Pay for additional resources as you need them</li>
+              <li>Dedicated stack available for regulated data</li>
+              <li>No upfront costs</li>
+              <li>No contract required</li>
+            </CheckmarkUnorderedList>
           </div>
 
           <DeployCalculator />
-
-          <div className="mobileOnly" style={{ display: 'block', marginTop: '30px' }}>
-            <SignupButton text="Start with Deploy" product="deploy" />
-          </div>
         </div>
       }
 

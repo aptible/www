@@ -45,17 +45,22 @@ class Comply extends React.Component {
         <div className={styles.title}>
           <h4>Aptible Comply</h4>
           <p className="L">
-            Monitor your security and automate compliance.
+            Design, operate, and audit your information security management
+            program.
           </p>
         </div>
 
         {!this.props.expanded && 
           <React.Fragment>
             <div className={styles.button}>
-              <PricingArrow text="Request Pricing" hover={this.state.hover} />
+              <PricingArrow text="Get Started" hover={this.state.hover} />
             </div>
 
-            <PricingBlock title="Pricing" smallAmount="Contact us" />
+            <PricingBlock
+              title="Packages start at"
+              amount="$13.5k"
+              timePeriod="Per Year"
+            />
 
             <div className={styles.seeDetails}>
               <img src={detailsIcons} className={styles.seeDetailsIcon} alt="Pricing details" />

@@ -11,7 +11,7 @@
   background-size: 700px auto;
   background-repeat: no-repeat;
   margin-bottom: 100px;
-  padding: 215px 85px 170px 85px;
+  padding: 215px 80px 170px 80px;
   cursor: pointer;
   z-index: 1;
 }
@@ -133,18 +133,7 @@
 }
 
 .deployAccountContainer {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  width: 700px;
-}
-
-.deployAccountType {
-  /*  */
-}
-
-.deployAccountType h6 {
-  color: var(--body-color);
-  margin: 60px 0 15px 0;
+  margin-top: 80px;
 }
 
 .closeIcon {
@@ -158,6 +147,10 @@
 
 .expanded .closeIcon {
   display: block;
+}
+
+.expanded .description {
+  max-width: 520px;
 }
 
 @media (--mobile) {
@@ -214,8 +207,7 @@
   }
 
   .deployAccountContainer {
-    grid-template-columns: 1fr;
-    width: 100%;
+    margin-top: 40px;
   }
 
   .seeDetails {
