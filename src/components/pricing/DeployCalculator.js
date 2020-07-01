@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'gatsby';
+import { Link } from 'gatsby';
 import styles from './DeployCalculator.module.css';
 import PricingSlider from './PricingSlider';
 import ToolTip from '../shared/ToolTip';
@@ -94,10 +94,10 @@ const calculators = {
       cost: '0',
     },
     premium: {
-      cost: '299',
+      cost: '499',
     },
     enterprise: {
-      cost: '499',
+      cost: '1499',
     },
   },
 };
@@ -117,6 +117,7 @@ const toolTips = {
               TLS Endpoints.`,
   backups: `Something backups`,
   stack: `Something`,
+  support: <>Learn more about <Link to="/deploy/support/">Deploy support plans</Link>.</>,
 };
 
 const Amount = ({ value }) => {
@@ -400,6 +401,7 @@ class DeployCalculator extends React.Component {
 
           <Resource
             title="Support Plan"
+            helpText={toolTips.support}
             calculatedAmount={this.supportPlanAmount()}
           >
             <div className={styles.toggleButtons}>
