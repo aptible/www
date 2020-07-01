@@ -115,10 +115,10 @@ export default () => (
 
         <div className={styles.benefit}>
           <div className={styles.benefitIcon}>{techIcon}</div>
-          <h6>Hardware & Software</h6>
+          <h6>Hardware &amp; Software</h6>
           <p>
             We help you create your ideal office setup and provide any software
-            you'll need. 
+            you’ll need. 
           </p>
         </div>
 
