@@ -77,6 +77,11 @@ export const query = graphql`
             file {
               url
             }
+            resize(width: 310, height: 200) {
+              src
+              width
+              height
+            }
           }
         }
       }
