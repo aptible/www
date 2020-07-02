@@ -15,6 +15,8 @@ export default ({ webinar }) => (
       </div>
 
       <div className={styles.body}>
+        <p>{webinar.webinarDate}</p>
+
         <ContentfulRichText json={webinar.body.json} />
 
         <h3 style={{ paddingTop: '30px' }}>Presented By</h3>
