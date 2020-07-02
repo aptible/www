@@ -15,13 +15,13 @@ export default ({ webcamPhotos }) => (
 
     <div className={styles.grid}>
       {webcamPhotos.map((employee) => {
-        const { slug, webcamPhoto } = employee.node;
+        const { name, webcamPhoto } = employee.node;
         return (
           <img
-            key={slug}
+            key={name}
             className={styles.photo}
             src={webcamPhoto.resize.src}
-            alt=""
+            alt={name}
           />
         );
       })}
