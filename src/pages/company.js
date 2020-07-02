@@ -34,7 +34,7 @@ export default ({ data }) => (
 export const query = graphql`
   query {
     employees: allContentfulEmployee(
-      filter: { name: { ne: null } }
+      filter: { name: { ne: null }, visible: { ne: false } }
       sort: { fields: [name] }
     ) {
       edges {
@@ -61,6 +61,7 @@ export const query = graphql`
 
     webcamPhotos: allContentfulEmployee(
       filter: {
+        visible: { ne: false },
         webcamPhoto: {
           file: {
             url:{
