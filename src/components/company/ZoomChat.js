@@ -14,9 +14,17 @@ export default ({ webcamPhotos }) => (
     </div>
 
     <div className={styles.grid}>
-      {webcamPhotos.map((employee, idx) => (
-        <div key={idx} className={styles.photo} style={{ backgroundImage: `url(${employee.node.webcamPhoto.file.url})`}}></div>
-      ))}
+      {webcamPhotos.map((employee) => {
+        const { name, webcamPhoto } = employee.node;
+        return (
+          <img
+            key={name}
+            className={styles.photo}
+            src={webcamPhoto.resize.src}
+            alt={name}
+          />
+        );
+      })}
     </div>
   </div>
 );

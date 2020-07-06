@@ -73,10 +73,16 @@ export const query = graphql`
     ) {
       edges {
         node {
+          name
           slug
           webcamPhoto {
             file {
               url
+            }
+            resize(width: 310, height: 200) {
+              src
+              width
+              height
             }
           }
         }
