@@ -6,7 +6,6 @@ export default () => (
   <SidebarNav title="Legal">
     <SidebarNavItem to="/legal/terms-of-service/" text="Terms of Service" />
     <SidebarNavItem to="/legal/service-level-agreement/" text="Service Level Agreement" />
-    <SidebarNavItem to="/legal/hipaa-breach-indemnification-agreement/" text="HIPAA Breach Indemnification Agreement" />
 
     <SidebarNavItem to="/legal/trademark/" text="Trademark Policy" />
     <SidebarNavItem to="/legal/acceptable-use/" text="Acceptable Use Policy" />

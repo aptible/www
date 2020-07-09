@@ -389,9 +389,10 @@
 /legal/billing.html /legal/billing/
 /legal/fees_and_pricing/ /legal/billing/
 /legal/fees_and_pricing.html /legal/billing/
-/legal/breach_indemnification_agreement.html /legal/hipaa-breach-indemnification-agreement/
-/legal/breach-indemnification-agreement/ /legal/hipaa-breach-indemnification-agreement/
-/legal/hipaa-breach-indemnification-agreement.html /legal/hipaa-breach-indemnification-agreement/
+/legal/breach_indemnification_agreement.html /legal/terms-of-service/
+/legal/breach-indemnification-agreement/ /legal/terms-of-service/
+/legal/hipaa-breach-indemnification-agreement.html /legal/terms-of-service/
+/legal/hipaa-breach-indemnification-agreement/ /legal/terms-of-service/
 /legal/privacy.html /legal/privacy/
 /legal/responsible_disclosure.html /legal/responsible-disclosure/
 /legal/security.html /legal/security/
