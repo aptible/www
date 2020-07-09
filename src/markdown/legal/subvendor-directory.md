@@ -40,3 +40,4 @@ This page provides a list of vendors with whom we share personal information as 
 | [Zoom](https://zoom.us) | Webinar and meeting hosting | United States |
 | [Zapier](https://zapier.com/apps/integrations) | Workflow automation | United States |
 | [NextRoll](https://www.nextroll.com) | Advertising | United States |
+| [Fullstory](https://www.fullstory.com/) | Analytics | United States |
