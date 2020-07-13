@@ -19,7 +19,7 @@ export const query = graphql`
     webinar: contentfulWebinar(slug: { eq: $slug }) {
       title
       subheadline
-      webinarDate(formatString: "MMMM D, YYYY")
+      webinarDate
       marketoFormId
       body {
         json

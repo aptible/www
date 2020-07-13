@@ -1,4 +1,5 @@
 import React from 'react';
+import { format } from 'date-fns';
 import { Grid } from '../grid/Grid';
 import styles from './Webinar.module.css';
 import ContentfulRichText from '../contentful/ContentfulRichText';
@@ -15,7 +16,11 @@ export default ({ webinar }) => (
       </div>
 
       <div className={styles.body}>
-        <p>{webinar.webinarDate}</p>
+        <p>
+          <time dateTime={webinar.webinarDate}>
+            {format(new Date(webinar.webinarDate), 'EEEE, MMMM d, yyyy, h:mm a')}
+          </time>
+        </p>
 
         <ContentfulRichText json={webinar.body.json} />
 
