@@ -45,8 +45,7 @@ class Comply extends React.Component {
         <div className={styles.title}>
           <h4>Aptible Comply</h4>
           <p className="L">
-            Turn security and compliance into repeatable processes that
-            accelerate your growth.
+            Monitor your security and automate compliance.
           </p>
         </div>
 
@@ -68,16 +67,17 @@ class Comply extends React.Component {
 
         {this.props.expanded && 
           <div className={styles.complyFormContainer}>
-            <h2>The #1 Security Management Platform</h2>
+            <h2>Compliance Monitoring &amp; Automations</h2>
 
             <div className={styles.complySidebar}>
               <CheckmarkUnorderedList>
-                <li>Shorten your sales sycle</li>
-                <li>Gain a competitive advantage</li>
-                <li>Simplify vendor security assessments</li>
-                <li>Pass your next compliance audit, guaranteed</li>
-                <li>Delegate Security Management tasks</li>
-                <li>Build a best-in-class security program</li>
+                <li>Integrate with all your SaaS services</li>
+                <li>Get a unified view of compliance</li>
+                <li>Continuously monitor people, device, and asset compliance status</li>
+                <li>Schedule and delegate compliance work</li>
+                <li>Automate evidence collection</li>
+                <li>Collect compliance metrics</li>
+                <li>Update your risk assessment as your company changes automatically</li>
               </CheckmarkUnorderedList>
             </div>
             <div className={styles.complyForm}>

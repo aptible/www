@@ -15,10 +15,10 @@ class CustomerCards extends React.Component {
         <Grid>
           <div className={styles.left}>
             <Card customer="ableHealth" />
-            <Card customer="atrium" />
             <Card customer="vergesense" />
             <Card customer="snaps" />
             <Card customer="pathAI" />
+            <Card customer="healthify" />
           </div>
 
           <div className={styles.right}>
@@ -26,7 +26,6 @@ class CustomerCards extends React.Component {
             <Card customer="quadpay" />
             <Card customer="mdsave" />
             <Card customer="virta" />
-            <Card customer="healthify" />
           </div>
         </Grid>
       </div>

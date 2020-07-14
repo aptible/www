@@ -24,8 +24,10 @@ export default ({ resource }) => {
   );
   
   const isDocumentationUrl = resource.url.includes("documentation");
+  const isPdfUrl = resource.url.includes(".pdf");
+  const isExternalUrl = resource.url.includes("http");
   
-  return isDocumentationUrl ? (
+  return (isDocumentationUrl || isPdfUrl || isExternalUrl) ? (
     <a href={resource.url} className={styles.container}>
       <LinkContent />
     </a>

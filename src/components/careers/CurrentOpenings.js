@@ -1,4 +1,5 @@
 import React from 'react';
+import ArrowButton from '../buttons/ArrowButton';
 import { Grid } from '../grid/Grid';
 import styles from './CurrentOpenings.module.css';
 
@@ -27,17 +28,22 @@ export default ({ jobs }) => (
                   <h5>{job.node.text}</h5>
                 </div>
                 <div className={styles.location}>
-                  <h6 className="small">Remote</h6>
+                  <h6 className="small">{job.node.categories.location}</h6>
                 </div>
                 <div className={styles.commitment}>
-                  <h6 className="small">Full-Time</h6>
-
                   <div className={styles.arrow}>{arrowIcon}</div>
                 </div>
               </Grid>
             </a>
           </div>
         ))}
+      </div>
+
+      <div className={styles.cta}>
+        <ArrowButton
+          to="/owners-manual/interviewing-with-aptible/"
+          text="Learn More About Interviewing with Aptible"
+        />
       </div>
     </Grid>
   </div>

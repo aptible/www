@@ -6,33 +6,31 @@ import WistiaVideo from './WistiaVideo';
 import videoPlayIcon from '../../images/video-play.svg';
 import customerCards from '../../data/customer-cards.json';
 
-import atriumPhoto from '../../images/customers/photos/atrium-justin-kan.jpg';
 import formaticPhoto from '../../images/customers/photos/fortmatic-arthur-jen.jpg';
 import quadpayPhoto from '../../images/customers/photos/quadpay-ian-yamey.jpg';
 
 import ableHealthLogo from '../../images/customers/logos/able-health.png';
-import atriumLogo from '../../images/customers/logos/atrium.png';
 import fortmaticLogo from '../../images/customers/logos/fortmatic.svg';
 import healthifyLogo from '../../images/customers/logos/healthify.svg';
 import mdsaveLogo from '../../images/customers/logos/mdsave.svg';
 import pathaiLogo from '../../images/customers/logos/pathai.png';
+import riffynLogo from '../../images/customers/logos/riffyn.png';
 import snapsLogo from '../../images/customers/logos/snaps.png';
 import vergesenseLogo from '../../images/customers/logos/vergesense.svg';
 import virtaLogo from '../../images/customers/logos/virta.svg';
 
 const photos = {
-  atrium: atriumPhoto,
   fortmatic: formaticPhoto,
   quadpay: quadpayPhoto
 };
 
 const logos = {
   ableHealth: ableHealthLogo,
-  atrium: atriumLogo,
   fortmatic: fortmaticLogo,
   healthify: healthifyLogo,
   mdsave: mdsaveLogo,
   pathAI: pathaiLogo,
+  riffyn: riffynLogo,
   snaps: snapsLogo,
   vergesense: vergesenseLogo,
   virta: virtaLogo

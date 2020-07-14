@@ -5,14 +5,14 @@ import ArrowButton from '../buttons/ArrowButton';
 import styles from './Culture.module.css';
 
 export default () => (
-  <div className={styles.container}>
+  <div>
     <Grid>
       <div className={styles.intro}>
         <p className="XL">
-          We're a team of mission-driven experts and learners who are committed
-          to making security a strength for every startup. We've already helped
+          We’re a team of mission-driven experts and learners who are committed
+          to making security a strength for every startup. We’ve already helped
           hundreds of innovative companies succeed at becoming trustworthy
-          custodians of sensitive data. And we're just getting started.
+          custodians of sensitive data. And we’re just getting started.
         </p>
 
         <ArrowButton to="/company/" text="Learn More About Aptible" />
@@ -20,26 +20,26 @@ export default () => (
 
       <div className={styles.cultureGrid}>
         <div className={styles.culture}>
-          <h4>We're Remote First</h4>
+          <h4>We’re Remote First</h4>
           <p className="L">
-            We've been fully distributed since Employee #1. We have teammates
+            We’ve been fully distributed since Employee #1. We have teammates
             across North America — from Vancouver to San Francisco to Dallas to
             Detroit to New York — who have the flexibility to work from home or
-            the co-working space of their choice. We're passionate about
+            the co-working space of their choice. We’re passionate about
             building a diverse team of talented people who accomplish great
             things together, regardless of where they are.
           </p>
         </div>
 
         <div className={styles.culture}>
-          <h4>We're Values Focused</h4>
+          <h4>We’re Values Focused</h4>
           <p className="L">
-            We're intentional about the culture we're trying to create, and take
-            the time to articulate what we mean by "us". Early on, we
+            We’re intentional about the culture we’re trying to create, and take
+            the time to articulate what we mean by “us”. Early on, we
             co-authored <Link to="/company/">Our Values</Link> to clearly
             communicate how we work together as a team. The more these values
             sound like you&mdash;and describe people you want to work with&mdash;the
-            more likely you'll thrive at Aptible.
+            more likely you’ll thrive at Aptible.
           </p>
         </div>
 
@@ -69,13 +69,17 @@ export default () => (
         <div className={styles.culture}>
           <h4>We Strive for Impact</h4>
           <p className="L">
-            We regularly reflect on the work we're doing and how it impacts
+            We regularly reflect on the work we’re doing and how it impacts
             others. We establish strong relationships with our customers, and
-            routinely engage with them to ensure that we're developing products
+            routinely engage with them to ensure that we’re developing products
             that resonate and deliver value. Internally, we create space to give
             each other feedback, express gratitude, and celebrate our wins.
           </p>
         </div>
+      </div>
+
+      <div className={styles.cta}>
+        <ArrowButton to="/owners-manual/" text="Read the Aptible Owner’s Manual" />
       </div>
     </Grid>
   </div>

@@ -31,8 +31,8 @@
   },
   {
     "title": "Components of an Effective Vendor Management Program",
-    "url": "/security-management/vendor-management/",
-    "description": "In this guide, we cover why vendor management is important, the essentials of an effective vendor management program, and information on how to use Aptible’s various vendor management tools and features to manage vendors securely.",
+    "url": "https://pages.aptible.com/Vendor-Management-Guide.html",
+    "description": "Looking to move beyond the basics of vendor management and start to streamline and automate your internal processes? Download this guide to learn how to level up your approach to vendor management to reduce risk and speed up sales cycles.",
     "tags": ["Guide"]
   },
   {
@@ -55,7 +55,7 @@
   },
   {
     "title": "Deploy Reference Architecture",
-    "url": "/documentation/deploy/reference.html",
+    "url": "/assets/deploy-reference-architecture.pdf",
     "description": "This reference guide provides you with all of the information you need to get started and be successful with Aptible Deploy.",
     "tags": ["Guide", "Deploy"]
   },

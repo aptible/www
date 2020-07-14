@@ -8,10 +8,8 @@ import snapsLogo from '../../images/customers/logos/snaps.png';
 import pathAILogo from '../../images/customers/logos/pathai.png';
 import ableHealthLogo from '../../images/customers/logos/able-health.png';
 import fortmaticLogo from '../../images/customers/logos/fortmatic.svg';
-import atriumLogo from '../../images/customers/logos/atrium.png';
 
 import fortmaticImage from '../../images/customers/photos/fortmatic-arthur-jen.jpg';
-import atriumImage from '../../images/customers/photos/atrium-justin-kan.jpg';
 
 const snapsQuote = (
   <span>
@@ -41,15 +39,6 @@ const fortmaticQuote = (
     We want our end users to know we take security integrity very seriously, with
     Aptible, we were able to secure our SOC 2 audit very quickly and we have a
     fleshed out plan for Security Management.
-  </span>
-);
-
-const atriumQuote = (
-  <span>
-    We needed a system that made it easy to operate a Security Management program,
-    that tracked our efforts and helped us share our position with
-    customers&hellip; with Aptible we've done that without having to hire a full-time
-    compliance team.
   </span>
 );
 
@@ -175,7 +164,7 @@ export default () => (
       </div>
     </Grid>
 
-    <Quote logo={pathAILogo} quote={pathAIQuote} author="Joe Adu, Director of IT" />
+    <Quote logo={pathAILogo} quote={pathAIQuote} author="Joe Adu, Director of Technology" />
 
     <Grid rows="2">
       <div className={styles.case} id="regulatory-compliance">
@@ -342,7 +331,7 @@ export default () => (
         </ul>
       </div>
 
-      <div className={`${styles.caseSolution} ${styles.caseSolutionBottomRight}`}>
+      <div className={`${styles.caseSolution} ${styles.caseSolutionBottomRight} ${styles.caseSolutionLast}`}>
         <h6 className="small">Who It's For</h6>
         <ul>
           <li>Companies that need to achieve and maintain security and compliance</li>
@@ -351,7 +340,5 @@ export default () => (
         <Button to="/deploy/">Learn More</Button>
       </div>
     </Grid>
-
-    <Quote logo={atriumLogo} quote={atriumQuote} image={atriumImage} author="Justin Kan, CEO & Co-founder" />
   </div>
 );

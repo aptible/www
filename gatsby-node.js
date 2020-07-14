@@ -119,6 +119,79 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+
+        allOwnersManualPages: allContentfulOwnersManualPage(
+          filter: {
+            hidePage: {
+              eq: false
+            }
+          }
+          sort: { fields: [createdAt], order: ASC }
+        ) {
+          edges {
+            node {
+              title
+              displayTitle
+              section
+              slug
+              hidePage
+              socialDescription
+              socialImage {
+                file {
+                  url
+                }
+              }
+              body {
+                json
+              }
+            }
+          }
+        }
+
+        allComplyIntegrationDefaultMeta: allContentfulComplyIntegrationsIndex(filter: { contentful_id: { eq: "2qsshTAFcEsWNAWBHfOFhy" } }) {
+          edges {
+            node {
+              metaTitle
+              metaDescription
+            }
+          }
+        }
+
+        allComplyIntegrationPages: allContentfulComplyIntegration {
+          edges {
+            node {
+              id
+              name
+              slug
+              shortDescription
+              description
+              assets
+              controls
+              installUrl
+              scopes
+              documentationUrl
+              evidenceChecks {
+                id
+                title
+                description
+              }
+              logo {
+                file {
+                  url
+                  details {
+                    image {
+                      width
+                      height
+                    }
+                  }
+                }
+              }
+              body {
+                json
+              }
+            }
+          }
+        }
       }
     `).then(result => {
       // Create pages for each blog post
@@ -266,6 +339,40 @@ exports.createPages = ({ graphql, actions }) => {
           },
         });
       }
+
+      result.data.allOwnersManualPages.edges.forEach(({ node }) => {
+        let pagePath = 'owners-manual';
+        if (node.slug) {
+          pagePath += `/${node.slug}`;
+        }
+
+        createPage({
+          path: pagePath,
+          component: path.resolve(`./src/templates/owners-manual.js`),
+          context: {
+            activePath: node.slug,
+            allPages: result.data.allOwnersManualPages.edges
+          },
+        });
+      });
+
+      // Create pages for each Comply Integration post
+      result.data.allComplyIntegrationPages.edges.forEach(({ node }) => {
+        let pagePath = 'comply/integrations';
+        if (node.slug) {
+          pagePath += `/${node.slug}`;
+        }
+
+        createPage({
+          path: pagePath,
+          component: path.resolve(`./src/templates/comply/integration-detail.js`),
+          context: {
+            activePath: node.slug,
+            allPages: result.data.allComplyIntegrationPages.edges,
+            defaultMeta: result.data.allComplyIntegrationDefaultMeta.edges[0].node
+          },
+        });
+      });
 
       resolve();
     });

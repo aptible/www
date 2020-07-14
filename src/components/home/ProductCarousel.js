@@ -9,13 +9,13 @@ const ALL_PRODUCTS = [
     id: 'comply',
     url: '/comply/',
     name: 'Aptible Comply',
-    description: 'Simplify the audit process and strengthen your security.'
+    description: 'Compliance monitoring and automation through integrations'
   },
   {
     id: 'deploy',
     url: '/deploy/',
     name: 'Aptible Deploy',
-    description: 'Deploy audit-ready apps<br/> and databases.'
+    description: 'Deploy audit-ready apps and databases'
   }
 ];
 

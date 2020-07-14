@@ -14,7 +14,7 @@ template: legal
 [contact us]:http://contact.aptible.com
 [Managed Host-based Intrusion Detection (HIDS)]:/deploy/hids/
 
-Version 3.13 - September 2019
+Version 3.15 - June 2020
 
 This policy outlines: 1) Aptible's security practices and resources, and 2) your security obligations. 
 
@@ -66,7 +66,7 @@ AWS data center environmental controls include:
 pp. 5-8 - ["Amazon Web Services: Overview of Security Processes - May 2017"]
 
 #### **2. Aptible Deploy Network Security**
-Please see our [Reference Architecture Diagram](/resources/enclave-reference-architecture-and-division-of-responsibilities) for an explanation of the terms in this section.
+Please see our [Reference Architecture Diagram](/assets/deploy-reference-architecture.pdf) for an explanation of the terms in this section.
 
 ##### **2.A - Secure Architecture**
 Aptible Aptible Deploy stacks run in separate AWS Virtual Private Clouds. Each stack is an isolated network. Most services run in a private subnet. Only SSL/TLS endpoints and a bastion host are exposed to the Internet. Backend users connect to the stack through the bastion host, which restricts access to stack components and logs activity for review.
@@ -90,7 +90,7 @@ The AWS network prohibits a host from sending traffic with a source IP or MAC ad
 p. 13 - ["Amazon Web Services: Overview of Security Processes - May 2017"]
 
 ##### **2.F - Network and Host Vulnerability Scanning**
-Aptible scans both the Internet-facing network and private network of a master reference stack each month. Aptible is responsible for network and host security, and remediates adverse findings without customer intervention, however you may request a scan of your dedicated VPC and its hosts as needed for your own security assessments and audits.
+Aptible scans both the Internet-facing network and private network of a master reference stack each month. Aptible is responsible for network and host security, and remediates adverse findings without customer intervention, however you may request a scan of your dedicated VPC and its hosts as needed for your own security assessments and audits.  The scope of this scan is limited to the underlying Deploy architecture, and does not include your apps, databases, or endpoints.
 
 #### **3. Aptible Deploy Platform Security**
 
@@ -129,7 +129,7 @@ Aptible Deploy host operating systems are hardened based on the Center for Inter
 SSH public key authentication is used to limit access to your authorized backend users during git-based deploys. Following a successful push to an Aptible git endpoint, code is copied down to your stack's build layer. The resulting images are pushed to a private stack registry, backed by AWS S3, which provides redundant, access-controlled storage.
 
 ##### **3.G - Databases**
-Databases run in the database layer of your stack, on a private subnet accessible only from app or bastion layer. SSL/TLS is required if the database protocol supports it. Disk volumes backing databases are encrypted at the filesystem level using Aptible-managed AES encryption. You can check whether your database uses AES-192 or AES-256 in the Aptible Deploy dashboard. You can rekey the database by dumping/restoring it at any time. You may implement additional controls, such as database security policies or row-/column-level encryption with keys you manage.
+Databases run in the database layer of your stack, on a private subnet accessible only from app or bastion layer. SSL/TLS is required if the database protocol supports it. Disk volumes backing databases are encrypted at the filesystem level using Aptible-managed AES encryption. Aptible manages the creation, access security, and destruction of encryption keys. You can check whether your database uses AES-192 or AES-256 in the Aptible Deploy dashboard. You can rekey the database by dumping/restoring it at any time. You may implement additional controls, such as database security policies or row-/column-level encryption with keys you manage.
 
 ##### **3.H - Aptible Deploy Penetration Testing**
 Aptible conducts penetration testing of the Aptible Deploy infrastructure at least annually. These tests consist of open-ended, best-effort security assessments performed by qualified third-party testing firms that specialize in cloud and containerized infrastructures. The testers review the Aptible Deploy architecture, are given full read access to Aptible Deploy source code (and access to the Aptible Deploy engineering team to answer questions throughout the test), and are given privileged internal (i.e., backdoor) access to a sandbox Aptible Deploy environment. From this context, the testers attempt to identify vulnerabilities in Aptible Deploy’s control plane, core API, authentication API, and related Aptible Deploy services. 
@@ -152,7 +152,7 @@ Aptible automatically backs up several different types of data:
 
 - Customer metadata is stored in the Aptible APIs, backed by the Amazon Relational Database Service. This metadata includes customer account data (passwords, permissions, SSH keys), and Aptible Deploy configuration data, such as environmental variables. Backups are taken nightly and retained for one week.
 
-- Aptible Deploy customer database disks are automatically backed up nightly and retained daily for 90 days, and monthly for 6 years. No customer action is required. Two backup copies are kept: One in the region where the database runs, to facilitate fast disaster recovery; the other in a separate geographic region to protect against loss of the original region. Customers may also take on-demand backups. Please see the [Aptible Deploy database backup](https://www.aptible.com/documentation/deploy/reference/databases/backups.html) documentation for more information.
+- Aptible Deploy customer database disks are automatically backed up every 24 hours and retained as per the policy defined by each customer. No customer action is required for the automated backups to be generated. In addition to defining the retention period, customers can also specify that we should make two copies of each backup: One in the region where the database runs, to facilitate fast disaster recovery; the other in a separate geographic region to protect against loss of the original region. Customers may also take on-demand backups. Please see the [Aptible Deploy database backup](https://www.aptible.com/documentation/deploy/reference/databases/backups.html) documentation for more information.
 
 ##### **4.B - Fault Tolerance**
 AWS data centers are clustered into regions, and sub-clustered into availability zones, each of which is designed as an independent failure zone, meaning they are:

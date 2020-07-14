@@ -21,7 +21,7 @@ a.button.small {
 .button:hover,
 .button:active,
 .button:focus {
-  background-color: transparent;
+  background-color: var(--aptible-black);
   color: white;
 }
 

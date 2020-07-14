@@ -67,6 +67,10 @@
   grid-column: 5 / span 3;
 }
 
+.caseSolutionLast {
+  padding-bottom: 100px;
+}
+
 @media (--mobile) {
   .case {
     grid-column: 1 / span 7;
@@ -92,5 +96,9 @@
   .caseSolutionBottomRight {
     grid-row: 5;
     grid-column: 1 / span 7;
+  }
+
+  .caseSolutionLast {
+    padding-bottom: 30px;
   }
 }

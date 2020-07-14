@@ -24,8 +24,8 @@ export default ({ setProduct }) => (
         <div className={styles.title}>
           <h5>Aptible Comply</h5>
           <p className="L">
-            Turn security and compliance into repeatable processes that
-            accelerate your growth.
+            Compliance monitoring and automation through integrations for SOC 2,
+            ISO 27001, HIPAA, GDPR and more.
           </p>
         </div>
 

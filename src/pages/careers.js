@@ -33,8 +33,8 @@ export const query = graphql`
       filter: {
         slug: {
           in: [
-            "ashley-mathew", "chris-gomes", "christian-pearson", "elyssa-cendana",
-            "david-wen", "mia-lopez", "sarah-veirs", "zachary-starr-glasser"
+            "ashley-mathew", "chris-gomes", "elyssa-cendana", "david-wen",
+            "mia-lopez", "sarah-veirs", "zachary-starr-glasser"
           ]
         }
       }
@@ -61,6 +61,7 @@ export const query = graphql`
           hostedUrl
           categories {
             team
+            location
           }
         }
       }

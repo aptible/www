@@ -38,11 +38,20 @@ class Email extends React.Component {
     }
   }
 
+  isFreeEmail = () => {
+    return this.state.email.match(/(gmail|yahoo|hotmail|aol|icloud)/)
+  }
+
   buttonClick = () => {
     if (this.state.email.length > 0 && this.state.email.indexOf('@') !== -1) {
       if (this.props.signupState.product === 'comply' && this.state.personaAnswer === '') {
         alert('Please tell us what\'s most important to you right now');
         return;
+      }
+
+      if (this.props.signupState.product !== 'deploy' && this.isFreeEmail()) {
+        alert('Please use your work email address');
+        return
       }
 
       this.props.setEmail(this.state.email, this.state.marketingConsent, this.state.personaAnswer);

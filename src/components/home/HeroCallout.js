@@ -4,9 +4,9 @@ import styles from './HeroCallout.module.css';
 
 export default () => (
   <div className={styles.callout}>
-    <Link to="/security-management/">
+    <Link to="/comply/rooms/">
       <span className={styles.pill}>Free</span>
-      <span className={styles.text}>Security Management Guide</span>
+      <span className={styles.text}>Aptible Comply Rooms</span>
       <span className={styles.arrow}>&rarr;</span>
     </Link>
   </div>

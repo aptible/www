@@ -36,6 +36,10 @@ class NewsletterSignup extends React.Component {
     submitMarketoForm(NEWSLETTER_FORM, payload, () => {
       this.setState({ finished: true });
     });
+
+    try {
+      window.__adroll.record_user({"adroll_segments": "647ff3ff"});
+    } catch(err) {}
   }
 
   render() {

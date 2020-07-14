@@ -1,94 +1,50 @@
 import React from 'react';
-import { Grid } from '../grid/Grid';
 import styles from './Hero.module.css';
+import { Grid } from '../grid/Grid';
 import SignupButton from '../signup/SignupButton';
-import WistiaVideo from '../shared/WistiaVideo';
-import videoPlayIcon from '../../images/video-play.svg';
-import atriumPhoto from '../../images/customers/photos/atrium-justin-kan.jpg';
-import atriumLogo from '../../images/customers/logos/atrium.png';
+import badges from '../../images/comply/badges.svg';
 
-class Hero extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      playVideo: false
-    };
-  }
-
-  playVideo = () => {
-    this.setState({ playVideo: true });
-  }
-
-  render() {
-    return (
-      <div className={styles.container}>
-        <Grid>
-          <div className={styles.content}>
-            <h5>Aptible Comply</h5>
-            {!this.props.headlineOverride &&
-              <h1>
-                Build your business.
-                <span>Not your compliance docs.</span>
-              </h1>
-            }
-            {this.props.headlineOverride &&
-              <h1>{this.props.headlineOverride}</h1>
-            }
-
-            {!this.props.paragraphOverride &&
-              <p className="XL">
-                Comply organizes and automates security and privacy management into
-                clear, simple processes that give you and your customers confidence.
-              </p>
-            }
-            {this.props.paragraphOverride &&
-              <p className="XL">{this.props.paragraphOverride}</p>
-            }
-
-            <SignupButton text="Schedule a Demo" product="comply" />
-          </div>
-
-          <div className={styles.cardContainer}>
-            {!this.state.playVideo &&
-              <div className={styles.imageContainer} onClick={this.playVideo}>
-                <img src={atriumPhoto} alt="atrium" className={styles.cardImage} />
-                <div className={styles.videoLength}>
-                  <div className={styles.videoPlayIcon}>
-                    <img src={videoPlayIcon} alt="Video" />
-                  </div>
-                  <p className="L-bold">1:47</p>
-                </div>
-              </div>
-              
-            }
-
-            {this.state.playVideo &&
-              <div className={styles.imageContainer}>
-                <WistiaVideo videoId="8p6ej6qqrg" autoPlay="true" />
-              </div>
-            }
-            
-            <div className={styles.cardContent}>
-              <img src={atriumLogo} alt="atrium logo" className={styles.logo} />
-
-              <p>
-                &ldquo;We needed a system that made it easy to operate a 
-                Security Management program, that tracked our efforts and 
-                helped us share our position with customers&hellip; with
-                Aptible we've done that without having to hire a full-time
-                compliance team.&rdquo;
-              </p>
-
-              <div className={styles.cardAuthor}>
-                Justin Kan, CEO
-              </div>
-            </div>
-          </div>
-        </Grid>
+export default () => (
+  <div className={styles.container}>
+    <Grid>
+      <div className={styles.heading}>
+        <h5>Aptible Comply</h5>
+        <h1 className="hero">
+          Close deals faster and automate compliance work
+        </h1>
       </div>
-    );
-  }
-}
 
-export default Hero;
-// export default ({ headlineOverride, paragraphOverride }) => 
+      <div className={styles.content}>
+        <p className="XL">
+          Aptible Comply is a customer trust system that helps B2B SaaS teams
+          shorten sales cycles and eliminate the manual work of compliance.
+        </p>
+
+        <div className={styles.cta}>
+          <SignupButton text="Get a demo" product="comply" />
+        </div>
+      </div>
+
+      <div className={styles.badges}>
+        <p>Automated compliance for ISO 27001, SOC 2, GDPR, HIPAA, and more.</p>
+        <img src={badges} alt="" />
+      </div>
+
+      <div className={styles.arrows}>
+        <div className={styles.without}>
+          <p>Your sales cycle without Comply</p>
+          <svg width="455" height="7" viewBox="0 0 455 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M444.134 0.395996L446.19 2.99996L8.0414 3L10.0966 0.396067L0.134361 3.38552H0.134278L0.134319 3.38553L0.134277 3.38555H0.134361L10.0966 6.375L8.22209 4L446.009 3.99996L444.134 6.37493L454.097 3.38547L444.134 0.395996Z" />
+          </svg>
+        </div>
+
+        <div className={styles.with}>
+          <p>Your sales cycle with Comply</p>
+          <svg width="97" height="7" viewBox="0 0 97 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M87 0.395996L89.0553 3.00001L7.90859 3L9.96378 0.396067L0.00154827 3.38552H0.00147342L0.00151084 3.38553L0.00146484 3.38555H0.00155685L9.96379 6.375L8.08928 4L88.8745 4.00001L87 6.37493L96.9623 3.38547L96.9622 3.38545L87 0.395996Z" />
+          </svg>
+        </div>
+      </div>
+    </Grid>
+  </div>
+);

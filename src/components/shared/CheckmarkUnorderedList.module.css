@@ -11,6 +11,11 @@
   padding: 0 0 20px 45px;
 }
 
+.container li.x {
+  background: url('../../images/signup/x.svg') no-repeat left 15%;
+  background-size: 20px 20px;
+}
+
 @media (--mobile) {
   .container li {
     background-size: 13px;

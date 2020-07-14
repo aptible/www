@@ -51,6 +51,7 @@
 
 .start h4 {
   color: var(--aptible-black);
+  padding-right: 80px;
 }
 
 .button {
@@ -100,6 +101,10 @@
     grid-column: 1 / span 7;
     margin: 15px 0;
     text-align: center;
+  }
+
+  .start h4 {
+    padding-right: 0;
   }
 
   .button {

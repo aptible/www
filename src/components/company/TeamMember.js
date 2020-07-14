@@ -27,9 +27,11 @@ export default ({ member, clickFn, open }) => (
       <Action open={open} />
     </div>
     <div className={styles.photo}>
-      <div className={styles.funPhoto}>
-        <img src={member.funPhoto.file.url} alt={member.name} />
-      </div>
+      {member.funPhoto && (
+        <div className={styles.funPhoto}>
+          <img src={member.funPhoto.file.url} alt={member.name} />
+        </div>
+      )}
       <img src={member.professionalPhoto.file.url} alt={member.name} />
     </div>
     <div className={styles.bio}>

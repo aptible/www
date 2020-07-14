@@ -6,7 +6,6 @@ import Hero from '../components/company/Hero';
 import Nav from '../components/shared/Nav';
 import Vision from '../components/company/Vision';
 import Values from '../components/company/Values';
-import HowWePrioritize from '../components/company/HowWePrioritize';
 import Team from '../components/company/Team';
 import Join from '../components/company/Join';
 
@@ -27,7 +26,6 @@ export default ({ data }) => (
     <Nav items={stickyNavItems} />
     <Vision />
     <Values />
-    <HowWePrioritize />
     <Team members={data.employees.edges} />
     <Join />
   </AptibleLayout>
@@ -36,7 +34,7 @@ export default ({ data }) => (
 export const query = graphql`
   query {
     employees: allContentfulEmployee(
-      filter: { name: { ne: null } }
+      filter: { name: { ne: null }, visible: { ne: false } }
       sort: { fields: [name] }
     ) {
       edges {
@@ -63,6 +61,7 @@ export const query = graphql`
 
     webcamPhotos: allContentfulEmployee(
       filter: {
+        visible: { ne: false },
         webcamPhoto: {
           file: {
             url:{
@@ -74,10 +73,16 @@ export const query = graphql`
     ) {
       edges {
         node {
+          name
           slug
           webcamPhoto {
             file {
               url
+            }
+            resize(width: 310, height: 200) {
+              src
+              width
+              height
             }
           }
         }

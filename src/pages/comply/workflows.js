@@ -4,7 +4,7 @@ import AptibleLayout from '../../components/layouts/AptibleLayout';
 import Hero from '../../components/comply/workflows/Hero';
 import Features from '../../components/comply/workflows/Features';
 import HowItWorks from '../../components/comply/workflows/HowItWorks';
-import WhoUses from '../../components/comply/WhoUses';
+import WhoUses from '../../components/comply/automation/WhoUses';
 import ZeroTo from '../../components/footer/ZeroTo';
 
 export default () => (

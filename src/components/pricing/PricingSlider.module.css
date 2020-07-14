@@ -83,3 +83,22 @@
   padding: 0 6px;
   font-size: 10px;
 }
+
+@media (--mobile) {
+  .handle {
+    margin-left: -14px;
+    margin-right: 14px;
+    margin-top: 27px;
+    width: 30px;
+    height: 20px;
+  }
+
+  .tick {
+    margin-top: 48px;
+  }
+
+  .includedText span {
+    top: -10px;
+    background-color: var(--aptible-black-light);
+  }
+}

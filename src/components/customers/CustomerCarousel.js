@@ -5,10 +5,8 @@ import ArrowButton from '../buttons/ArrowButton';
 import CustomerCarouselThumbnail from './CustomerCarouselThumbnail';
 
 import fortmaticPhoto from '../../images/customers/carousel/fortmatic.jpg';
-import atriumPhoto from '../../images/customers/carousel/atrium.jpg';
 import quadpayPhoto from '../../images/customers/carousel/quadpay.jpg';
 
-import atriumLogo from '../../images/customers/logos/atrium.png';
 import fortmaticLogo from '../../images/customers/logos/fortmatic.svg';
 import quadpayLogo from '../../images/customers/logos/quadpay.svg';
 
@@ -24,18 +22,6 @@ const customers = [
     description: 'Fortmatic uses Aptible Comply to build their Security Management Program and secured their SOC 2 audit in a fraction of the time.',
     photo: fortmaticPhoto,
     logo: fortmaticLogo
-  },
-  {
-    image: null,
-    headline: (
-      <React.Fragment>
-        <h2><span className={styles.quoteStart}>&ldquo;</span>We needed a system that made it easy to operate a Security Management program&hellip; with Aptible we've done that without having to hire a compliance team.&rdquo;</h2>
-      </React.Fragment>
-    ),
-    description: 'Atrium uses Aptible for managing their information security and compliance efforts, specifically around ISO 27001 and SOC 2.',
-    photo: atriumPhoto,
-    logo: atriumLogo,
-    caseStudy: '/customers/atrium/'
   },
   {
     image: null,

@@ -2,7 +2,7 @@
 title: Terms of Service
 tracked_title: Terms of Service
 description: "Aptible Terms of Service"
-posted: 2019-09-06
+posted: 2020-07-09
 section: Legal
 sub_section: Agreements
 order: 0
@@ -11,7 +11,6 @@ template: legal
 ---
 <!-- Reference Links -->
 [Service Level Agreement]:/legal/service-level-agreement
-[HIPAA Breach Indemnification Agreement]:/legal/hipaa-breach-indemnification-agreement
 [Acceptable Use Policy]:/legal/acceptable-use
 [Billing Policy]:/legal/billing
 [Privacy Policy]:/legal/privacy
@@ -20,7 +19,7 @@ template: legal
 [Support Policy]:/legal/support
 [Trademark Policy]:/legal/trademark
 
-Version 2.14 - September 2019
+Version 2.2 - July 2020
 
 Welcome, and thank you for your interest in Aptible! 
 
@@ -63,7 +62,7 @@ You acknowledge and agree that, as provided in greater detail in this Agreement:
 
 This Agreement takes effect when you click an "I Accept" button or checkbox presented with these terms, sign a contract that incorporates these terms by reference, or, if earlier, when you use any of the Services (the **"Effective Date"**).
 
-We provide certain Aptible Deploy Services pursuant to a [Service Level Agreement] and a [HIPAA Breach Indemnification Agreement].
+We provide certain Aptible Deploy Services pursuant to a [Service Level Agreement].
 
 In addition, please see our policy on [Responsible Disclosure] of security vulnerabilities.
 
@@ -230,9 +229,7 @@ If you do not accept the changed Terms or Policies, we may terminate your access
 Disputes arising under this Agreement will be resolved in accordance with the version of this Agreement that was in effect between the parties at the time the dispute arose.
 
 ### 13. Indemnification
-**A. Our Obligations to You.** Please see the [HIPAA Breach Indemnification Agreement].
-
-**B. Your Obligations to Us.** You agree that you will be responsible for your use of the Services, and if you harm someone or get in a dispute with someone else, we will not be involved. You agree to defend and indemnify Aptible and its officers, directors, employees, consultants, affiliates, subsidiaries and agents (together, the "**Aptible Entities**") from and against every third-party claim, liability, damage, loss, and expense, including reasonable attorneys' fees and costs, arising out of or in any way connected with: (a) your access to, use of, or alleged use of, the Services; (b) your violation of any portion of this Agreement, any representation, warranty, or agreement referenced in this Agreement, or any applicable law or regulation; (c&#41; your violation of any third-party right, including any intellectual property right or publicity, confidentiality, other property, or privacy right; or (d) any dispute or issue between you and any third party. We reserve the right, at our own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you (without limiting your indemnification obligations with respect to that matter), and in that case, you agree to cooperate with our defense of that claim. The assumption of such defense or control by us, however, shall not excuse any of your indemnity obligations.
+**A. Your Obligations to Us.** You agree that you will be responsible for your use of the Services, and if you harm someone or get in a dispute with someone else, we will not be involved. You agree to defend and indemnify Aptible and its officers, directors, employees, consultants, affiliates, subsidiaries and agents (together, the "**Aptible Entities**") from and against every third-party claim, liability, damage, loss, and expense, including reasonable attorneys' fees and costs, arising out of or in any way connected with: (a) your access to, use of, or alleged use of, the Services; (b) your violation of any portion of this Agreement, any representation, warranty, or agreement referenced in this Agreement, or any applicable law or regulation; (c&#41; your violation of any third-party right, including any intellectual property right or publicity, confidentiality, other property, or privacy right; or (d) any dispute or issue between you and any third party. We reserve the right, at our own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you (without limiting your indemnification obligations with respect to that matter), and in that case, you agree to cooperate with our defense of that claim. The assumption of such defense or control by us, however, shall not excuse any of your indemnity obligations.
 
 ### 14. EXCLUSION OF WARRANTIES
 EXCEPT AS EXPRESSLY PROVIDED FOR HEREIN, TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, APTIBLE DOES NOT MAKE ANY OTHER WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR USE AND NONINFRINGEMENT. APTIBLE IS NOT RESPONSIBLE OR LIABLE FOR THE DELETION OF OR FAILURE TO STORE ANY CONTENT AND OTHER COMMUNICATIONS MAINTAINED OR TRANSMITTED THROUGH USE OF THE SERVICE. YOU ARE SOLELY RESPONSIBLE FOR SECURING AND BACKING UP YOUR APPLICATION AND CUSTOMER DATA, EXCEPT WHERE BACKUP OR SECURITY CONTROLS ARE EXPRESSLY PROVIDED AS FEATURES OF THE SERVICES. APTIBLE DOES NOT WARRANT THAT THE OPERATION OF THE SERVICES WILL BE ERROR-FREE, TIMELY, OR UNINTERRUPTED. APTIBLE DOES NOT WARRANT THAT THE SERVICES WILL BE SECURE, EXCEPT AS EXPRESSLY DOCUMENTED. THE SERVICES ARE NOT DESIGNED, MANUFACTURED, OR INTENDED FOR HIGH RISK ACTIVITIES. YOU UNDERSTAND THAT YOU USE THE SERVICES AT YOUR OWN DISCRETION AND RISK.

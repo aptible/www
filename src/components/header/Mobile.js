@@ -29,8 +29,8 @@ export default () => (
             {context.isDeployPage ? (
               <SignupButton text="Start with Deploy" product="deploy" />
             ) : (
-              <SignupButton text="Schedule a Demo" product="comply" />
-            )}
+                <SignupButton text="Get a demo" product="comply" />
+              )}
           </div>
         </Grid>
       </div>

@@ -1,9 +1,6 @@
 .headerContainer {
   position: relative;
   z-index: 10;
-}
-
-.headerContainer.open {
   height: 192px;
 }
 
@@ -38,6 +35,7 @@
 }
 
 .logo img {
+  display: block;
   width: 100%;
 }
 
@@ -66,8 +64,8 @@
 }
 
 @media (--mobile) {
-  .headerContainer.open {
-    height: 56px;
+  .headerContainer {
+    height: auto;
   }
 
   .header {

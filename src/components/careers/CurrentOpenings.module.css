@@ -47,6 +47,7 @@
 
 .jobTitle {
   grid-column: 3 / span 3;
+  padding-right: 20px;
 }
 
 .location {
@@ -58,8 +59,7 @@
   position: relative;
 }
 
-.location h6,
-.commitment h6 {
+.location h6 {
   color: var(--white-seventy);
   margin-top: 5px;
 }
@@ -70,9 +70,15 @@
   top: 5px;
 }
 
+.cta {
+  grid-column: 2 / -1;
+  grid-row: 3;
+}
+
 @media (--mobile) {
-  .headline {
-    grid-column: 1 / span 7;
+  .headline,
+  .cta {
+    grid-column: 1 / -1;
   }
 
   .job:hover {
@@ -89,6 +95,14 @@
 
   .jobTitle {
     grid-column: 1 / span 4;
+  }
+
+  .location {
+    grid-column: 5 / -1;
+  }
+
+  .location h6 {
+    margin-top: 0;
   }
 
   .arrow {
