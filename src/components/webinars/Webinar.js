@@ -15,7 +15,12 @@ export default ({ webinar }) => (
       </div>
 
       <div className={styles.body}>
-        <p>{webinar.webinarDate}</p>
+        <p>
+          {webinar.webinarDate}
+          {webinar.webinarTime
+            ? `, ${webinar.webinarTime} ${webinar.webinarTimeZone}`
+            : ''}
+        </p>
 
         <ContentfulRichText json={webinar.body.json} />
 
