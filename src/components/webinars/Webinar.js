@@ -26,14 +26,18 @@ export default ({ webinar }) => (
 
         <h3 style={{ paddingTop: '30px' }}>Presented By</h3>
         <div className={styles.presenter}>
-          <img src={webinar.presenter1.professionalPhoto.file.url} alt={webinar.presenter1.name} />
+          {webinar.presenter1.professionalPhoto.file && (
+            <img src={webinar.presenter1.professionalPhoto.file.url} alt={webinar.presenter1.name} />
+          )}
           <h5>{webinar.presenter1.name}</h5>
           <p>{webinar.presenter1.jobTitle}</p>
         </div>
         
         {webinar.presenter2 &&
           <div className={styles.presenter}>
-            <img src={webinar.presenter2.professionalPhoto.file.url} alt={webinar.presenter2.name} />
+            {webinar.presenter2.professionalPhoto.file && (
+              <img src={webinar.presenter2.professionalPhoto.file.url} alt={webinar.presenter2.name} />
+            )}
             <h5>{webinar.presenter2.name}</h5>
             <p>{webinar.presenter2.jobTitle}</p>
           </div>
