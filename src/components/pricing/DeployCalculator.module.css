@@ -156,13 +156,6 @@
   padding-right: 30px;
 }
 
-.footnotes {
-  margin-top: 80px;
-  max-width: 660px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
 @media (--mobile) {
   .calculator {
     background-color: transparent;
@@ -226,13 +219,6 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 40px;
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .footnotes {
-    margin-top: 0;
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;

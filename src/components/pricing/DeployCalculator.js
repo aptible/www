@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import styles from './DeployCalculator.module.css';
 import PricingSlider from './PricingSlider';
 import ToolTip from '../shared/ToolTip';
-import Footnotes from '../shared/Footnotes';
 
 const calculators = {
   containers: [
@@ -11,7 +10,7 @@ const calculators = {
     { tick: '1GB', cost: '58' },
     { tick: '2GB', cost: '117' },
     { tick: '4GB', cost: '234' },
-    { tick: '6GB', cost: '350', alwaysDisplay: true, includedLimit: true },
+    { tick: '6GB', cost: '350', alwaysDisplay: true },
     { tick: '8GB', cost: '467' },
     { tick: '12GB', cost: '701' },
     { tick: '16GB', cost: '934' },
@@ -25,7 +24,7 @@ const calculators = {
     { tick: '1GB', cost: '15' },
     { tick: '2GB', cost: '29' },
     { tick: '4GB', cost: '59' },
-    { tick: '6GB', cost: '88', alwaysDisplay: true, includedLimit: true },
+    { tick: '6GB', cost: '88', alwaysDisplay: true },
     { tick: '8GB', cost: '117' },
     { tick: '12GB', cost: '175' },
     { tick: '16GB', cost: '234' },
@@ -41,7 +40,7 @@ const calculators = {
     { tick: '100GB', cost: '37' },
     { tick: '250GB', cost: '93' },
     { tick: '500GB', cost: '185' },
-    { tick: '1TB', cost: '370', alwaysDisplay: true, includedLimit: true },
+    { tick: '1TB', cost: '370', alwaysDisplay: true },
     { tick: '1.5TB', cost: '555' },
     { tick: '2TB', cost: '740' },
     { tick: '3TB', cost: '1,110' },
@@ -53,7 +52,7 @@ const calculators = {
     { tick: '1', cost: '37' },
     { tick: '2', cost: '73' },
     { tick: '3', cost: '110' },
-    { tick: '4', cost: '146', alwaysDisplay: true, includedLimit: true },
+    { tick: '4', cost: '146', alwaysDisplay: true },
     { tick: '5', cost: '183' },
     { tick: '6', cost: '219' },
     { tick: '7', cost: '256' },
@@ -105,13 +104,6 @@ const toolTips = {
   stack: <>Based on 730 hours/month, <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">more info</a></>,
   support: <>Learn more about <Link to="/deploy/support/">Deploy support plans</Link>.</>,
 };
-
-const footnotes = [
-  {
-    marker: 1,
-    note: <>Based on 730 hours/month; <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">view documentation</a> for more information</>
-  }
-];
 
 const Amount = ({ value }) => {
   return (
@@ -275,7 +267,7 @@ class DeployCalculator extends React.Component {
             pricingSlider={
               <PricingSlider
                 calculator={calculators.containers}
-                defaultValue="4"
+                defaultValue="0"
                 updatePriceFn={this.updateContainersIndex}
               />
             }
@@ -323,7 +315,7 @@ class DeployCalculator extends React.Component {
             pricingSlider={
               <PricingSlider
                 calculator={calculators.encryptedDisk}
-                defaultValue="6"
+                defaultValue="0"
                 updatePriceFn={this.updateDiskIndex}
               />
             }
@@ -337,7 +329,7 @@ class DeployCalculator extends React.Component {
             pricingSlider={
               <PricingSlider
                 calculator={calculators.endpoints}
-                defaultValue="4"
+                defaultValue="0"
                 updatePriceFn={this.updateEndpointsIndex}
               />
             }
@@ -408,10 +400,6 @@ class DeployCalculator extends React.Component {
         <div className={styles.estimatedMonthlyTotal}>
           <h4>Estimated monthly total</h4>
           <Amount value={this.calculateEstimatedAmount()} />
-        </div>
-
-        <div className={styles.footnotes}>
-          <Footnotes footnotes={footnotes} />
         </div>
       </div>
     );
