@@ -1,0 +1,34 @@
+.footnotes {
+  grid-row: 6;
+  grid-column: 2 / -1;
+  margin-top: 34px;
+  display: flex;
+  color: var(--white-seventy);
+  font-size: 13px;
+  line-height: 19px;
+}
+
+@media (--mobile) {
+  .footnotes {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 739px) {
+  .footnotes {
+    grid-row: 12;
+  }
+}
+
+.footnotes .footnoteMarker {
+  padding-left: 0;
+  padding-right: 8px;
+}
+
+.footnoteMarker {
+  color: var(--aptible-yellow);
+  font-weight: 500;
+  padding-left: 4px;
+  font-size: 10px;
+  line-height: 1;
+}

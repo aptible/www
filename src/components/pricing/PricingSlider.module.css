@@ -60,30 +60,6 @@
   margin: 7px 0 0 20px;
 }
 
-.included {
-  position: absolute;
-  left: 0;
-  border: 1px solid var(--body-color);
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  border-top: none;
-  height: 4px;
-  margin-top: 70px;
-}
-
-.includedText {
-  text-align: center;
-}
-
-.includedText span {
-  position: relative;
-  top: -15px;
-  background-color: var(--aptible-black);
-  color: white;
-  padding: 0 6px;
-  font-size: 10px;
-}
-
 @media (--mobile) {
   .handle {
     margin-left: -14px;
@@ -95,10 +71,5 @@
 
   .tick {
     margin-top: 48px;
-  }
-
-  .includedText span {
-    top: -10px;
-    background-color: var(--aptible-black-light);
   }
 }

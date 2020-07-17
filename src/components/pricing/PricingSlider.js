@@ -40,12 +40,6 @@ function Tick({ tick, count, calculator, active }) {
           <div className={styles.blankTick}></div>
         }
       </div>
-
-      {calculator[tick.value]['includedLimit'] &&
-        <div className={styles.included} style={{ width: `${tick.percent}%` }}>
-          <div className={styles.includedText}><span>Included</span></div>
-        </div>
-      }
     </div>
   )
 }
