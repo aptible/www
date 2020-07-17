@@ -294,11 +294,6 @@ class DeployCalculator extends React.Component {
                   </button>
                 </div>
 
-                {/* <Link to="/deploy/hids/">Managed HIDS</Link> */}
-                {/* <div className={styles.lineItemAmount}>
-                  $0.02/GB/Hour
-                </div> */}
-
                 <div className={styles.hidsTooltipDesktop}>
                   <ToolTip text={toolTips.hids} />
                 </div>
