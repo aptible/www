@@ -102,7 +102,7 @@ const toolTips = {
   endpoints: `Endpoints attach to your containers so that they can be accessed
               over the internet, or by other containers. May be HTTPS, TCP, or
               TLS Endpoints.`,
-  stack: `Something`,
+  stack: <>Based on 730 hours/month, <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">more info</a></>,
   support: <>Learn more about <Link to="/deploy/support/">Deploy support plans</Link>.</>,
 };
 
@@ -172,8 +172,13 @@ class DeployCalculator extends React.Component {
       endpointsIndex: 0,
       vpnConnectionsIndex: 0,
       estimatedMonthlyTotal: 0,
+      dedicatedStack: true,
       supportPlan: 'standard',
     };
+  }
+
+  toggleDedicatedStack = () => {
+    this.setState({ dedicatedStack: !this.state.dedicatedStack });
   }
 
   toggleSupportPlanOption = (value) => {
@@ -228,6 +233,14 @@ class DeployCalculator extends React.Component {
     this.setState({ vpnConnectionsIndex: idx });
   }
 
+  dedicatedStackAmount = () => {
+    if (!this.state.dedicatedStack) {
+      return '0';
+    }
+
+    return '499';
+  }
+
   supportPlanAmount = () => {
     return calculators.supportPlan[this.state.supportPlan].cost;
   }
@@ -241,6 +254,7 @@ class DeployCalculator extends React.Component {
       this.diskAmount(),
       this.endpointsAmount(),
       this.vpnConnectionsAmount(),
+      this.dedicatedStackAmount(),
       this.supportPlanAmount(),
     ].map((amount) => this.convertAmountToNumber(amount));
 
@@ -331,7 +345,6 @@ class DeployCalculator extends React.Component {
 
           <Resource
             title="VPN Connections"
-            helpText={toolTips.endpoints}
             calculatedAmount={this.vpnConnectionsAmount()}
             lineItemAmount={<><span>$99</span>/Connection/Month</>}
             pricingSlider={
@@ -342,6 +355,27 @@ class DeployCalculator extends React.Component {
               />
             }
           />
+
+          <Resource
+             title="Dedicated Stack for Regulated Data"
+             helpText={toolTips.stack}
+             calculatedAmount={this.dedicatedStackAmount()}
+           >
+             <div className={styles.toggleButtons}>
+               <button
+                 onClick={this.toggleDedicatedStack}
+                 disabled={this.state.dedicatedStack}
+               >
+                 With Dedicated Stack
+               </button>
+               <button
+                 onClick={this.toggleDedicatedStack}
+                 disabled={!this.state.dedicatedStack}
+               >
+                 Without Dedicated Stack
+               </button>
+             </div>
+           </Resource>
 
           <Resource
             title="Support Plan"
