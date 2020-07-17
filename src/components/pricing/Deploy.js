@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './Pricing.module.css';
 import PricingArrow from './PricingArrow';
 import CheckmarkUnorderedList from '../shared/CheckmarkUnorderedList';
-import checkmarkUnorderedListStyles from '../shared/CheckmarkUnorderedList.module.css';
 import PricingBlock from './PricingBlock';
 import DeployCalculator from './DeployCalculator';
 import SignupButton from '../signup/SignupButton';
+import { FootnoteMarker } from '../shared/Footnotes';
 import detailsIcons from '../../images/pricing/details.svg';
 import detailsArrow from '../../images/arrows/header-resources.svg';
 
@@ -75,7 +75,7 @@ class Deploy extends React.Component {
         <div>
           <p className={`L ${styles.description}`}>
             Deploy audit-ready apps and databases using a developer workflow
-            you’ll love. PHI-ready <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">Dedicated Stacks</a>{' '}
+            you’ll love. PHI-ready <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">Dedicated Stacks</a><FootnoteMarker>1</FootnoteMarker>{' '}
             are available when you need them.
           </p>
 
@@ -89,7 +89,7 @@ class Deploy extends React.Component {
               <li>No commitment</li>
               <li>First $500 worth of Resources is complimentary</li>
               <li>Pay for additional resources as you need them</li>
-              <li>Dedicated stack available for regulated data</li>
+              <li><a href="/documentation/deploy/reference/stacks/shared-dedicated.html">Dedicated stack</a><FootnoteMarker>1</FootnoteMarker> available for regulated data</li>
               <li>No upfront costs</li>
               <li>No contract required</li>
             </CheckmarkUnorderedList>

@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import styles from './DeployCalculator.module.css';
 import PricingSlider from './PricingSlider';
 import ToolTip from '../shared/ToolTip';
+import Footnotes from '../shared/Footnotes';
 
 const calculators = {
   containers: [
@@ -46,20 +47,6 @@ const calculators = {
     { tick: '3TB', cost: '740' },
     { tick: '4TB', cost: '1,110' },
     { tick: '+', cost: '1,110', alwaysDisplay: true },
-  ],
-  backups: [
-    { tick: '0', cost: '0' },
-    { tick: '10GB', cost: '0' },
-    { tick: '50GB', cost: '0' },
-    { tick: '100GB', cost: '0' },
-    { tick: '250GB', cost: '0' },
-    { tick: '500GB', cost: '0' },
-    { tick: '1TB', cost: '0' },
-    { tick: '1.5TB', cost: '185' },
-    { tick: '2TB', cost: '370' },
-    { tick: '3TB', cost: '740' },
-    { tick: '4TB', cost: '1,110' },
-    { tick: '+', cost: '1,110' },
   ],
   endpoints: [
     { tick: '0', cost: '0', alwaysDisplay: true },
@@ -115,10 +102,16 @@ const toolTips = {
   endpoints: `Endpoints attach to your containers so that they can be accessed
               over the internet, or by other containers. May be HTTPS, TCP, or
               TLS Endpoints.`,
-  backups: `Something backups`,
   stack: `Something`,
   support: <>Learn more about <Link to="/deploy/support/">Deploy support plans</Link>.</>,
 };
+
+const footnotes = [
+  {
+    marker: 1,
+    note: <>Based on 730 hours/month; <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">view documentation</a> for more information</>
+  }
+];
 
 const Amount = ({ value }) => {
   return (
@@ -179,13 +172,8 @@ class DeployCalculator extends React.Component {
       endpointsIndex: 0,
       vpnConnectionsIndex: 0,
       estimatedMonthlyTotal: 0,
-      dedicatedStack: true,
       supportPlan: 'standard',
     };
-  }
-
-  toggleDedicatedStack = () => {
-    this.setState({ dedicatedStack: !this.state.dedicatedStack });
   }
 
   toggleSupportPlanOption = (value) => {
@@ -240,20 +228,8 @@ class DeployCalculator extends React.Component {
     this.setState({ vpnConnectionsIndex: idx });
   }
 
-  dedicatedStackAmount = () => {
-    if (!this.state.dedicatedStack) {
-      return '0';
-    }
-
-    return '499';
-  }
-
   supportPlanAmount = () => {
     return calculators.supportPlan[this.state.supportPlan].cost;
-  }
-
-  backupsAmount = () => {
-    return calculators.backups[this.state.diskIndex].cost;
   }
 
   convertAmountToNumber = (amount) => parseInt(amount.replace(/,/g, ''), 10);
@@ -263,10 +239,8 @@ class DeployCalculator extends React.Component {
       this.containersAmount(),
       this.containersManagedHidsAmount(),
       this.diskAmount(),
-      this.backupsAmount(),
       this.endpointsAmount(),
       this.vpnConnectionsAmount(),
-      this.dedicatedStackAmount(),
       this.supportPlanAmount(),
     ].map((amount) => this.convertAmountToNumber(amount));
 
@@ -339,16 +313,7 @@ class DeployCalculator extends React.Component {
                 updatePriceFn={this.updateDiskIndex}
               />
             }
-          >
-            <div className={styles.backupCosts}>
-              <LineItem
-                title="Estimated Backup Costs"
-                helpText={toolTips.backups}
-                calculatedAmount={this.backupsAmount()}
-                lineItemAmount={<><span>$0.02</span>/GB/Month</>}
-              />
-            </div>
-          </Resource>
+          />
           
           <Resource
             title="Endpoints"
@@ -377,27 +342,6 @@ class DeployCalculator extends React.Component {
               />
             }
           />
-          
-          <Resource
-            title="Dedicated Stack for Regulated Data"
-            helpText={toolTips.stack}
-            calculatedAmount={this.dedicatedStackAmount()}
-          >
-            <div className={styles.toggleButtons}>
-              <button
-                onClick={this.toggleDedicatedStack}
-                disabled={this.state.dedicatedStack}
-              >
-                With Dedicated Stack
-              </button>
-              <button
-                onClick={this.toggleDedicatedStack}
-                disabled={!this.state.dedicatedStack}
-              >
-                Without Dedicated Stack
-              </button>
-            </div>
-          </Resource>
 
           <Resource
             title="Support Plan"
@@ -430,6 +374,10 @@ class DeployCalculator extends React.Component {
         <div className={styles.estimatedMonthlyTotal}>
           <h4>Estimated monthly total</h4>
           <Amount value={this.calculateEstimatedAmount()} />
+        </div>
+
+        <div className={styles.footnotes}>
+          <Footnotes footnotes={footnotes} />
         </div>
       </div>
     );
