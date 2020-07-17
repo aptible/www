@@ -1,12 +1,20 @@
 import React from 'react';
 import classNames from 'classnames';
 import ArrowButton from '../buttons/ArrowButton';
+import Footnotes, { FootnoteMarker } from '../shared/Footnotes';
 import styles from './SupportPriceTable.module.css';
 
 const tiers = [
   { name: 'Standard', price: 0 },
   { name: 'Premium', price: 499 },
   { name: 'Enterprise', price: 1499 }
+];
+
+const footnotes = [
+  {
+    marker: 1,
+    note: "Support via Slack is only offered at the Low and Normal severity levels, 9am-6pm M-F. For High and Urgent severity issues, a ticket must be opened through Zendesk. After the initial ticket is opened, Aptible may communicate to resolve the issue through Slack if that is mutually agreeable."
+  }
 ];
 
 const Container = ({ children }) => (
@@ -41,12 +49,12 @@ const TierHeading = () => tiers.map(tier => (
 
 const HeadingBlock = ({ title, items, footnote, footnoteRow, className}) => (
   <div className={classNames(styles.block, styles.headingBlock, className)}>
-    <h4>{title}{footnote && !footnoteRow && <sup className={styles.footnoteMarker}>{footnote}</sup>}</h4>
+    <h4>{title}{footnote && !footnoteRow && <FootnoteMarker>{footnote}</FootnoteMarker>}</h4>
     {items.map((item, index) => (
       <div key={item} aria-hidden="true">
         {item}
         {footnote && footnoteRow === index + 1 && (
-          <sup className={styles.footnoteMarker}>{footnote}</sup>
+          <FootnoteMarker>{footnote}</FootnoteMarker>
         )}
       </div>
     ))}
@@ -64,7 +72,7 @@ const DataBlock = ({ title, tier, rows, items, footnote, footnoteRow, className 
         <div className={styles.dataBlockMobileLabel}>{rows[index]}</div>
         {item}
         {footnote && footnoteRow === index + 1 && (
-          <sup className={styles.footnoteMarker}>{footnote}</sup>
+          <FootnoteMarker>{footnote}</FootnoteMarker>
         )}
       </div>
     ))}
@@ -190,22 +198,6 @@ const BeyondRow = () => {
   );
 };
 
-const Footnotes = () => {
-  const footnotes = [
-    {
-      marker: 1,
-      note: "Support via Slack is only offered at the Low and Normal severity levels, 9am-6pm M-F. For High and Urgent severity issues, a ticket must be opened through Zendesk. After the initial ticket is opened, Aptible may communicate to resolve the issue through Slack if that is mutually agreeable."
-    }
-  ];
-
-  return footnotes.map(footnote => (
-    <div className={styles.footnotes} key={footnote.marker}>
-      <sup className={styles.footnoteMarker}>{footnote.marker}</sup>
-      <div>{footnote.note}</div>
-    </div>
-  ));
-};
-
 const ResponseTimes = () => (
   <div className={styles.responseTimes}>
     <h5>Target Response Times by Ticket Severity</h5>
@@ -257,7 +249,7 @@ const Details = () => (
         <li>VPC, TGW, VPN initial setup, configuration verification and update</li>
       </ul>
 
-      <h5>Maintenance Operations<sup className={styles.footnoteMarker}>2</sup></h5>
+      <h5>Maintenance Operations<FootnoteMarker>2</FootnoteMarker></h5>
       <p>Maintenance operations are operations that require more downtime than a traditional “restart” operation and are not self-service.</p>
       <p className={styles.smallHeading}>Example maintenance operations</p>
       <ul>
@@ -268,7 +260,7 @@ const Details = () => (
     </div>
 
     <div className={styles.detailsRight}>
-      <h5>Beyond Support<sup className={styles.footnoteMarker}>3</sup></h5>
+      <h5>Beyond Support<FootnoteMarker>3</FootnoteMarker></h5>
       <p>Beyond Support requests are included in Premium and Enterprise support plans only.</p>
       <p className={styles.smallHeading}>Included Beyond Support requests</p>
       <ul>
@@ -290,7 +282,7 @@ export default () => (
     <SupportRow />
     <Divider className={styles.beyondDivider} />
     <BeyondRow />
-    <Footnotes />
+    <Footnotes footnotes={footnotes} />
     <ResponseTimes />
     <GetStarted />
     <Details />
