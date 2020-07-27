@@ -107,23 +107,6 @@ export default () => (
             </tr>
 
             <tr>
-              <td data-label="Method of Support">Drift Chat (in Comply)</td>
-              <td data-label="Intended Party">DPA</td>
-              <td data-label="Standard Response Time">
-                24 Hours (or end of next business day if on weekends)
-              </td>
-              <td data-label="Ideal Use Scenario">
-                Non-urgent questions regarding designing or operating your ISMS,
-                typically when onboarding to Comply.
-              </td>
-              <td data-label="Examples">
-                What does “MDM” stand for?
-                <br />
-                How can I copy this template?
-              </td>
-            </tr>
-
-            <tr>
               <td data-label="Method of Support">
                 ZenDesk Ticket support@aptible.com
               </td>
