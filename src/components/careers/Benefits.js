@@ -99,7 +99,7 @@ export default () => (
           <div className={styles.benefitIcon}>{parentalIcon}</div>
           <h6>Paid Parental Leave</h6>
           <p>
-            We offer job-protected Paid Time Off&mdash;12 Weeks, Fully Paid&mdash;for
+            We offer job-protected Paid Time Off&mdash;14 Weeks, Fully Paid&mdash;for
             all parents to bond with a newly born, adopted, or fostered child.
           </p>
         </div>
