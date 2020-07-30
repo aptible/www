@@ -131,7 +131,7 @@ class Header extends React.Component {
               <div className={styles.cta}>
                 <Grid>
                   <div className={styles.ctaLogIn}>
-                    <Button size="small" href="https://dashboard.aptible.com/login">Log In</Button>
+                    <Button size="small" href="https://account.aptible.com/login">Log In</Button>
                   </div>
 
                   <div className={styles.ctaSignUp}>

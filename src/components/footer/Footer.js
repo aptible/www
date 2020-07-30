@@ -113,7 +113,7 @@ export default () => (
 
       <div className={styles.links}>
         <Link to="/"><h6 className="small">Aptible Home</h6></Link>
-        <a href="https://dashboard.aptible.com/login"><h6 className="small">Log In</h6></a>
+        <a href="https://account.aptible.com/login"><h6 className="small">Log In</h6></a>
         <a href="mailto:hello@aptible.com"><h6 className="small">hello@aptible.com</h6></a>
         <a href="tel:18662965003"><h6 className="small">+1 (866) 296-5003</h6></a>
       </div>
