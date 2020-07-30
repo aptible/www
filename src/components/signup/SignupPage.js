@@ -1,5 +1,6 @@
 import React from 'react';
 import Signup from './Signup';
+import styles from './SignupPage.module.css';
 
 class SignupPage extends React.Component {
   constructor(props) {
@@ -24,7 +25,9 @@ class SignupPage extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Signup</h1>
+        <div className={styles.container}>
+          <h1 className={styles.heading}>Signup</h1>
+        </div>
         {this.state.open &&
           <Signup closeFn={this.closeSignup} product={this.props.product} />
         }
