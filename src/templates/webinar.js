@@ -23,6 +23,7 @@ export const query = graphql`
       webinarTime
       webinarTimeZone
       marketoFormId
+      formOptInOverride
       body {
         json
       }

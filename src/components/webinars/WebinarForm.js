@@ -4,6 +4,13 @@ import TextInput from '../forms/TextInput';
 import Button from '../buttons/Button';
 import { submitMarketoForm } from '../../lib/marketo';
 
+const DefaultOptInText = () => (
+  <>
+    I consent to receiving Aptible marketing emails. <br className="desktopOnly" />View our
+    {' '}<a href="/legal/privacy/" target="_blank">Privacy Policy</a>
+  </>
+)
+
 class WebinarForm extends React.Component {
   constructor(props) {
     super(props);
@@ -54,8 +61,7 @@ class WebinarForm extends React.Component {
               <label>
               <input type="radio" name="marketing_consent" value="yes" checked={this.state.marketingConsent === 'yes'} onChange={(e) => this.fieldChanged('marketingConsent', e.target.value)} />
                 <span>
-                  I consent to receiving Aptible marketing emails. <br className="desktopOnly" />View our
-                  <a href="/legal/privacy/" target="_blank">Privacy Policy</a>
+                  {this.props.optInTextOverride || <DefaultOptInText />}
                 </span>
               </label>
 
