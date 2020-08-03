@@ -61,6 +61,7 @@ export default () => (
         <Link to="/customers/">Customers</Link>
         <Link to="/hipaa/">Compliance Guides</Link>
         <Link to="/blog/">Blog</Link>
+        <Link to="/blog/category/engineering/">Engineering Blog</Link>
       </div>
 
       <div className={styles.support}>
@@ -77,6 +78,7 @@ export default () => (
         <Link to="/company/">About</Link>
         <Link to="/careers/">Careers</Link>
         <Link to="/press/">Press</Link>
+        <Link to="/owners-manual/">Owner’s Manual</Link>
         <Link to="/legal/terms-of-service/">Legal</Link>
       </div>
 
