@@ -11,6 +11,14 @@ export default () => (
           <div>Security Management Resources</div>
         </Link>
 
+        <Link to="/blog/">
+          <div>Blog</div>
+        </Link>
+
+        <Link to="/blog/category/engineering/">
+          <div>Engineering Blog</div>
+        </Link>
+
         <a href="/documentation/index.html">
           <div>Product Documentation</div>
         </a>

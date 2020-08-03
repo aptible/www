@@ -11,16 +11,12 @@ export default () => (
           <div>About</div>
         </Link>
 
-        <Link to="/blog/">
-          <div>Blog</div>
+        <Link to="/careers/">
+          <div>Careers</div>
         </Link>
 
         <Link to="/press/">
-          <div>News</div>
-        </Link>
-
-        <Link to="/careers/">
-          <div>Careers</div>
+          <div>Press</div>
         </Link>
 
         <Link to="/owners-manual/">
