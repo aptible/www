@@ -64,5 +64,23 @@
     "url": "/deploy/features/#division-of-responsibility",
     "description": "This guide is a breakdown of the functionalities (and their responsible parties) provided as part of the Deploy service.",
     "tags": ["Guide", "Deploy"]
+  },
+  {
+    "title": "Taking Compliance out of the Sales Cycle",
+    "url": "/webinars/taking-compliance-out-of-the-sales-cycle/",
+    "description": "Compliance teams at B2B SaaS companies are spending up to 25% of their time being pulled into sales conversations when prospects request security and compliance documentation. Not to mention the time that Sales, Legal, and Engineering spend to coordinate and fulfill these requests. Imagine if you could skip all the run-around and radically reduce the amount of time it takes to provide prospects with the information they need to buy.",
+    "tags": ["Webinar"]
+  },
+  {
+    "title": "Sneak Peek: Aptible Comply Integrations",
+    "url": "/webinars/sneak-peek-integrations/",
+    "description": "Aptible VP of Product Management Chris Gomes and Product Marketing Manager Rob deJuana-Matthews give an early look at Aptible Comply Integrations. Aptible Comply Integrations connects to every app that matters to you--every app that contains or touches sensitive data--and keeps track of your current security position, ensuring your company stays in compliance, so that you don’t have to.",
+    "tags": ["Webinar"]
+  },
+  {
+    "title": "The Death of Privacy Shield: What it means for your business",
+    "url": "/webinars/privacy-shield-no-more-what-it-means-for-businesses/",
+    "description": "With the EU Court of Justice invalidating Privacy Shield, what are the implications for businesses in the EU and US? Will the Standard Contractual Clauses remain effective for controlling information transfer? What does this mean from an operational perspective? The list of questions goes on! Watch our 30 minute recorded webinar with Aptible CEO, Chas Ballew, as we break down what this news means, what businesses are affected, and what are the options for your business as we move forward.",
+    "tags": ["Webinar"]
   }
 ]
