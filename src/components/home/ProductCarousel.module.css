@@ -1,12 +1,13 @@
 .productSelector {
   position: relative;
-  height: 425px;
+  height: 468px;
   overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .productSelector::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+  width: 0;
+  background: transparent;
 }
 
 .carouselContainer {
@@ -84,7 +85,7 @@
 
 @media (--mobile) {
   .productSelector {
-    height: 310px;
+    height: 324px;
   }
 
   .product {
