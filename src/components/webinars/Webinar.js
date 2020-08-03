@@ -24,12 +24,16 @@ export default ({ webinar }) => (
 
         <ContentfulRichText json={webinar.body.json} />
 
-        <h3 style={{ paddingTop: '30px' }}>Presented By</h3>
-        <div className={styles.presenter}>
-          <img src={webinar.presenter1.professionalPhoto.file.url} alt={webinar.presenter1.name} />
-          <h5>{webinar.presenter1.name}</h5>
-          <p>{webinar.presenter1.jobTitle}</p>
-        </div>
+        {(webinar.presenter1 || webinar.presenter2) && (
+          <h3 style={{ paddingTop: '30px' }}>Presented By</h3>
+        )}
+        {webinar.presenter1 &&
+          <div className={styles.presenter}>
+            <img src={webinar.presenter1.professionalPhoto.file.url} alt={webinar.presenter1.name} />
+            <h5>{webinar.presenter1.name}</h5>
+            <p>{webinar.presenter1.jobTitle}</p>
+          </div>
+        }
         
         {webinar.presenter2 &&
           <div className={styles.presenter}>
