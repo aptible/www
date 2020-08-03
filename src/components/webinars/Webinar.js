@@ -56,7 +56,10 @@ export default ({ webinar }) => (
 
       {!webinar.wistiaVideoId &&
         <div className={styles.form}>
-          <WebinarForm formId={webinar.marketoFormId} />
+          <WebinarForm
+            formId={webinar.marketoFormId}
+            optInTextOverride={webinar.formOptInOverride}
+          />
         </div>
       }
     </Grid>
