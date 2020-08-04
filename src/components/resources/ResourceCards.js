@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './ResourceCards.module.css';
 import ResourceCard from './ResourceCard';
-import resources from '../../data/resources.json';
 
 const FILTERS = {
   ALL: "All",
@@ -26,6 +25,7 @@ class ResourceCards extends React.Component {
   }
 
   render() {
+    const { resources } = this.props;
     const { activeFilter } = this.state;
 
     let filteredResources = resources;
