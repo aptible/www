@@ -12,3 +12,23 @@
   display: inline-block;
   margin-left: 5px;
 }
+
+.statusLabel {
+  margin-bottom: 4px;
+  margin-top: 2em;
+}
+
+.status {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.statusColor {
+  border-radius: 8px;
+  height: 8px;
+  margin-right: 8px;
+  width: 8px;
+}

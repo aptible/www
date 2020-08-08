@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { Grid } from '../grid/Grid';
 import styles from './Mobile.module.css';
 import Button from '../buttons/Button';
-import SignupButton from '../signup/SignupButton';
+// import SignupButton from '../signup/SignupButton';
 import HeaderContext from './HeaderContext';
 
 export default () => (
@@ -25,13 +25,13 @@ export default () => (
             <Button href="https://account.aptible.com/login">Log In</Button>
           </div>
 
-          <div className={styles.cta}>
+          {/* <div className={styles.cta}>
             {context.isDeployPage ? (
               <SignupButton text="Start with Deploy" product="deploy" />
             ) : (
                 <SignupButton text="Get a demo" product="comply" />
               )}
-          </div>
+          </div> */}
         </Grid>
       </div>
     )}

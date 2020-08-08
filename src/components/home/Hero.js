@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Hero.module.css';
 import { Grid } from '../grid/Grid';
 import SignupButton from '../signup/SignupButton';
-import ContentfulBlock from '../contentful/ContentfulBlock';
+// import ContentfulBlock from '../contentful/ContentfulBlock';
 import HeroArrow from './HeroArrow';
 import HeroCallout from './HeroCallout';
 import WistiaVideo from '../shared/WistiaVideo';
@@ -11,7 +11,7 @@ export default ({ heroBlock }) => (
   <Grid>
     <div className={styles.contentArea}>
       <HeroArrow />
-      <ContentfulBlock block={heroBlock} />
+      {/* <ContentfulBlock block={heroBlock} /> */}
     </div>
 
     <div className={styles.cta}>

@@ -1,36 +1,62 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import AptibleLayout from '../components/layouts/AptibleLayout';
-import Hero from '../components/home/Hero';
-import ProductCarousel from '../components/home/ProductCarousel';
-import Logos from '../components/home/Logos';
-import Customers from '../components/home/Customers';
-import ZeroTo from '../components/footer/ZeroTo';
-import { findBlockById } from '../lib/blocks';
+import Index from '../components/blog/Index';
 import { graphql } from 'gatsby';
 
-export default ({ data }) => (
-  <AptibleLayout>
-    <Helmet>
-      <title>Aptible | Security Management Platform</title>
-      <meta
-        name="description"
-        content="Aptible is the leading trust management platform for B2B SaaS teams that offers compliance monitoring and workflow automation, audit ready hosting, and fast and easy audit prep."
-      />
-    </Helmet>
-    <Hero heroBlock={findBlockById(data.blocks.edges, 'home-hero')} />
-    <ProductCarousel />
-    <Logos />
-    <Customers />
-    <ProductCarousel startPosition="right" />
-    <ZeroTo />
-  </AptibleLayout>
-);
+export default ({ data }) => {
+  return (
+    <AptibleLayout>
+      <Helmet>
+        <title>Aptible | Product Weekly</title>
+        <meta
+          name="description"
+          content="Aptible is the leading trust management platform for B2B SaaS teams that offers compliance monitoring and workflow automation, audit ready hosting, and fast and easy audit prep."
+        />
+      </Helmet>
+      <Index posts={data.posts.edges} />
+    </AptibleLayout>
+  );
+};
+
+// query($skip: Int!, $limit: Int!) {
+//   posts: allContentfulProductUpdate(
+//     sort: { fields: [createdAt], order: DESC }
+//     limit: $limit
+//     skip: $skip
+//   ) {
 
 export const query = graphql`
   query {
-    blocks: allContentfulContentBlock(filter: { page: { eq: "home" } }) {
-      ...blockProperties
+    posts: allContentfulProductUpdate(
+      sort: { fields: [createdAt], order: DESC }
+    ) {
+      edges {
+        node {
+          title
+          date
+          createdAt
+          author {
+            name
+            photo {
+              file {
+                url
+              }
+            }
+          }
+          status
+          statusColor
+          body {
+            json
+          }
+          materials {
+            title
+            subtitle
+            icon
+            url
+          }
+        }
+      }
     }
   }
 `;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styles from './Meta.module.css';
 
 const dateFormat = {
@@ -8,26 +7,21 @@ const dateFormat = {
   month: 'long'
 }
 
-export default ({ post, disableAuthorLink }) => (
+export default ({ post }) => (
   <div className={styles.meta}>
     <div className={styles.author}>
-      {!disableAuthorLink &&
-        <Link to="/">{post.author.name}</Link>
-      }
-
-      {disableAuthorLink &&
-        <span>
-          {post.author.name}
-          {post.secondAuthor &&
-            <React.Fragment> &amp; {post.secondAuthor.name}</React.Fragment>
-          }
-        </span>
-      }
+      <span>
+        {post.author.name}
+      </span>
     </div>
-
     &bull;
     <div className={styles.postedAt}>
-      {new Date(post.postedAt).toLocaleDateString('en-US', dateFormat)}
+      {new Date(post.createdAt).toLocaleDateString('en-US', dateFormat)}
+    </div>
+    <div className={styles.statusLabel}>Status</div>
+    <div className={styles.status}>
+      <div className={styles.statusColor} style={{ backgroundColor: post.statusColor }} />
+      {post.status}
     </div>
   </div>
 );
