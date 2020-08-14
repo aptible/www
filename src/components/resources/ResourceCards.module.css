@@ -14,7 +14,7 @@
   margin-bottom: 40px;
 }
 
-.navigation button {
+.navigation a {
   cursor: pointer;
   position: relative;
   font-size: 16px;
@@ -24,20 +24,22 @@
   border: 0;
   color: var(--white-fifty);
   padding: 0;
-}
-
-.navigation button:hover,
-.navigation button:focus,
-.navigation button:active,
-.navigation button.active {
+  text-decoration: none;
   color: white;
 }
 
-.navigation button:focus {
+.navigation a:hover,
+.navigation a:focus,
+.navigation a:active,
+.navigation a.active {
+  color: var(--white-fifty);
+}
+
+.navigation a:focus {
   outline: none;
 }
 
-.navigation button.active::after {
+.navigation a.active::after {
   content: "";
   display: block;
   position: absolute;
@@ -90,7 +92,7 @@
     margin-bottom: 20px;
   }
 
-  .navigation button {
+  .navigation a {
     font-size: 14px;
   }
 }

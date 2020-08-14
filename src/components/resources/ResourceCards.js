@@ -1,78 +1,55 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import categories from '../../data/resource-categories.json';
 import { Grid } from '../grid/Grid';
 import styles from './ResourceCards.module.css';
 import ResourceCard from './ResourceCard';
 
-const FILTERS = {
-  ALL: "All",
-  GUIDES: "Guides",
-  WEBINAR: "Webinar",
-  DEPLOY: "Deploy"
-};
+const ResourceCards = ({ resources, categorySlug }) => {
+  const halfwayThrough = Math.floor(resources.length / 2)
+  const leftResources = resources.slice(0, halfwayThrough);
+  const rightResources = resources.slice(halfwayThrough, resources.length);
 
-class ResourceCards extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeFilter: FILTERS.ALL,
-    };
-  }
+  return (
+    <div className={styles.container}>
+      <Grid>
+        <div className={styles.left}>
+          <div className={styles.navigation}>
+            <h6 className="small">Resources</h6>
 
-  filterResources = (event) => {
-    this.setState({
-      activeFilter: event.target.textContent,
-    });
-  }
+            <Link
+              className={categorySlug === '' ? styles.active : ""}
+              to="/resources/"
+            >
+              All
+            </Link>
 
-  render() {
-    const { resources } = this.props;
-    const { activeFilter } = this.state;
-
-    let filteredResources = resources;
-    filteredResources = filteredResources.filter(item => {
-      if (activeFilter === FILTERS.ALL) {
-        return resources;
-      }
-
-      return item.tags.includes(activeFilter.replace(/s$/, "")); 
-    });
-    
-    const halfwayThrough = Math.floor(filteredResources.length / 2)
-    const leftResources = filteredResources.slice(0, halfwayThrough);
-    const rightResources = filteredResources.slice(halfwayThrough, filteredResources.length);
-
-    return (
-      <div className={styles.container}>
-        <Grid>
-          <div className={styles.left}>
-            <div className={styles.navigation}>
-              <h6 className="small">Resources</h6>
-
-              {Object.values(FILTERS).map(filter => (
-                <button
-                  key={filter}
-                  onClick={this.filterResources}
-                  className={activeFilter === filter ? styles.active : ""}
+            {categories.map((category) => {
+              return (
+                <Link
+                  className={categorySlug === category.slug ? styles.active : ""}
+                  to={`/resources/${category.slug}/`}
+                  key={category.slug}
                 >
-                  {filter}
-                </button>
-              ))}
-            </div>
-
-            {leftResources.map(resource => (
-              <ResourceCard key={resource.url} resource={resource} />
-            ))}
+                  {category.title}{category.title !== 'Deploy' ? 's' : ''}
+                </Link>
+              );
+            })}
           </div>
 
-          <div className={styles.right}>
-            {rightResources.map(resource => (
-              <ResourceCard key={resource.url} resource={resource} />
-            ))}
-          </div>
-        </Grid>
-      </div>
-    );
-  }
-}
+          {leftResources.map(resource => (
+            <ResourceCard key={resource.url} resource={resource} />
+          ))}
+        </div>
+
+        <div className={styles.right}>
+          {rightResources.map(resource => (
+            <ResourceCard key={resource.url} resource={resource} />
+          ))}
+        </div>
+      </Grid>
+    </div>
+  );
+};
 
 export default ResourceCards;
