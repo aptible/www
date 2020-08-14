@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { Grid } from '../grid/Grid';
 import styles from './Index.module.css';
 import Meta from './Meta';
+import Markdown from './Markdown';
 import blogCategories from '../../data/blog-categories.json';
 
 function ChangelogSummary({ post }) {
@@ -16,7 +17,12 @@ function ChangelogSummary({ post }) {
       <div className={styles.metaContainer}>
         <Meta post={post} disableAuthorLink="true" />
       </div>
-      <p>{post.excerpt.excerpt}</p>
+
+      {post.excerpt && (
+        <div className={styles.excerpt}>
+          <Markdown>{post.excerpt.excerpt}</Markdown>
+        </div>
+      )}
 
       <div className={styles.tags}>
         <span className={styles.tag}>{post.product}</span>
