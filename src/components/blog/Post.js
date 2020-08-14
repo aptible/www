@@ -5,16 +5,19 @@ import styles from './Post.module.css';
 import ContentfulRichText from '../contentful/ContentfulRichText';
 import ShareIcons from '../shared/ShareIcons';
 import Meta from './Meta';
+import Markdown from './Markdown';
 
 export default ({ post }) => (
   <div className={styles.container}>
     <Grid>
-      <div className={styles.authorPhoto}>
-        <img src={post.author.professionalPhoto.file.url} alt={post.author.name} />
-        {post.secondAuthor &&
-          <img src={post.secondAuthor.professionalPhoto.file.url} alt={post.secondAuthor.name} />
-        }
-      </div>
+      {post.author && (
+        <div className={styles.authorPhoto}>
+          <img src={post.author.professionalPhoto.file.url} alt={post.author.name} />
+          {post.secondAuthor &&
+            <img src={post.secondAuthor.professionalPhoto.file.url} alt={post.secondAuthor.name} />
+          }
+        </div>
+      )}
 
       <div className={styles.content}>
         <h5><Link to="/blog/">Blog</Link></h5>
@@ -29,9 +32,19 @@ export default ({ post }) => (
           <ShareIcons />
         </div>
 
-        <div className={styles.body}>
-          <ContentfulRichText json={post.body.json} />
-        </div>
+        {post.body && (
+          <div className={styles.body}>
+            <ContentfulRichText json={post.body.json} />
+          </div>
+        )}
+
+        {post.bodyMarkdown && (
+          <div className={styles.body}>
+            <Markdown>
+              {post.bodyMarkdown.bodyMarkdown}
+            </Markdown>
+          </div>
+        )}
       </div>
     </Grid>
   </div>

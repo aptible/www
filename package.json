@@ -8,9 +8,9 @@
     "build-production": "yarn run build && cp _redirects ./public/_redirects && cat _production-redirects >> ./public/_redirects",
     "build-staging": "yarn run build && cp _redirects ./public/_redirects && cat _staging-redirects >> ./public/_redirects",
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -p 8001",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "start": "yarn run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
@@ -32,7 +32,9 @@
     "react": "^16.8.4",
     "react-compound-slider": "^2.0.0",
     "react-dom": "^16.8.4",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-markdown": "^4.3.1",
+    "react-syntax-highlighter": "^13.3.1"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.6.0",
