@@ -22,9 +22,11 @@ export default ({ data }) => {
         <title>Aptible | Security Management Resources</title>
         <meta name="description" content="Resources to help security teams maintain compliance and improve security management programs. Learn more." />
       </Helmet>
-
       <Introduction />
-      <ResourceCards resources={[...resources, ...webinars]} />
+      <ResourceCards
+        resources={[...resources, ...webinars]}
+        categorySlug=""
+      />
     </AptibleLayout>
   )
 };

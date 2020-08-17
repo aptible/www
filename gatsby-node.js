@@ -4,6 +4,8 @@ const fs = require('fs');
 
 const BLOG_CATEGORIES = require('./src/data/blog-categories.json');
 const BLOG_POSTS_PER_PAGE = 5;
+const RESOURCE_CATEGORIES = require('./src/data/resource-categories.json');
+const resourceEntries = require('./src/data/resources.json');
 
 const COMPLIANCE_SITES = ['hipaa', 'gdpr'];
 let protocolData = {};
@@ -68,7 +70,11 @@ exports.createPages = ({ graphql, actions }) => {
         allWebinars: allContentfulWebinar {
           edges {
             node {
+              title
               slug
+              description {
+                description
+              }
             }
           }
         }
@@ -264,6 +270,29 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve(`./src/templates/resource.js`),
           context: {
             slug: node.slug
+          },
+        });
+      });
+
+      // Create pages resource categories
+      const webinarEntries = result.data.allWebinars.edges.map(({ node }) => {
+        return {
+          title: node.title,
+          url: `/webinars/${node.slug}/`,
+          description: node.description ? node.description.description : '',
+          tags: ['Webinar', node.webinarType ? 'On Demand' : 'Upcoming'],
+        }
+      });
+      RESOURCE_CATEGORIES.forEach((category) => {
+        createPage({
+          path: `resources/${category.slug}`,
+          component: path.resolve(`./src/templates/resource-category.js`),
+          context: {
+            title: category.title,
+            slug: category.slug,
+            entries: category.slug === 'webinars' ?
+              webinarEntries :
+              resourceEntries.filter((entry) => entry.tags.includes(category.title))
           },
         });
       });
