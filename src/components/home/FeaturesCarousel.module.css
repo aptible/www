@@ -1,0 +1,156 @@
+.container {
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.productSelector {
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.carouselContainer {
+  position: absolute;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+}
+
+.item {
+  width: 100%;
+}
+
+.product {
+  box-sizing: border-box;
+  position: relative;
+  width: 558px;
+  max-width: 558px;
+  background-color: var(--aptible-black-light);
+  text-decoration: none;
+  border-bottom: 4px solid var(--aptible-black-light);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.product {
+  margin-right: 8px;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.content {
+  margin-top: auto;
+}
+
+.product p {
+  color: var(--white-seventy);
+  font-size: 18px;
+  margin-top: 50px;
+  line-height: 1.44;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  margin-top: 34px;
+  margin-bottom: 62px;
+}
+
+.button .arrow {
+  margin-left: 2px;
+}
+
+.product:hover,
+.product:active,
+.product:focus {
+  background: linear-gradient(360deg, var(--aptible-card-hover) 10%, var(--aptible-black) 80%);
+  border-bottom-color: var(--aptible-yellow);
+}
+
+.productArrow {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.product:hover .productArrow {
+  display: block;
+}
+
+.circles {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: var(--aptible-green-thirty);
+  cursor: pointer;
+}
+
+.circle + .circle {
+  margin-left: 4px;
+}
+
+.active {
+  background-color: var(--aptible-green);
+}
+
+@media (--mobile) {
+  .item:first-child {
+    margin-left: 24px;
+  }
+
+  .item:last-child {
+    margin-right: 16px;
+  }
+
+  .product {
+    background-size: 250px auto;
+    background-position: top center;
+    width: 40vw;
+    min-width: 272px;
+  }
+
+  .content {
+    padding: 0 15px 30px;
+  }
+
+  .product h5 {
+    margin-bottom: 4px;
+  }
+
+  .product p {
+    font-size: 14px;
+    margin-top: 20px;
+    max-width: 90%;
+  }
+
+  .button {
+    font-size: 12px;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  .button > div {
+    font-size: 1em;
+  }
+
+  .productArrow {
+    display: block;
+  }
+}

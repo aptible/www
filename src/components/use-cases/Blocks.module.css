@@ -1,0 +1,20 @@
+.blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+  gap: 8px;
+}
+
+.block {
+  background-color: var(--aptible-black-light);
+  padding: 70px 48px 58px;
+}
+
+.block p {
+  margin-bottom: 0;
+}
+
+@media (--mobile) {
+  .block {
+    padding: 35px 24px 29px;
+  }
+}

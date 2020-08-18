@@ -15,7 +15,6 @@ const inlineStyles = (rows) => {
   return s;
 }
 
-
 export function Grid ({ children, classOverride, rows }) {
   return (
     <div className={classNames(classOverride)} style={inlineStyles(rows)}>
@@ -23,7 +22,6 @@ export function Grid ({ children, classOverride, rows }) {
     </div>
   )
 }
-
 
 export function Row({ children }) {
   return (

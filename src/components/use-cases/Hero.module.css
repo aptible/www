@@ -1,56 +1,148 @@
 .container {
-  padding: 30px 0 100px 0;
+  padding-top: 85px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .text {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 4;
 }
 
-.arrow {
-  grid-column: 4 / span 2;
-  margin-top: 45px;
+.text h5 {
+  margin-bottom: 2.5em;
 }
 
-.nav {
-  grid-column: 6 / span 2;
-  margin-top: 190px;
+.text p {
+  padding-right: 80px;
 }
 
-.nav a {
+.button {
+  margin-top: 80px;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 192px;
+  left: 0;
+  right: 0;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image {
   display: block;
-  color: var(--body-color);
-  text-decoration: none;
-  font-size: 16px;
-  margin-bottom: 20px;
+  height: 100%;
+  position: relative;
 }
 
-.nav a:hover {
-  color: white;
+.audits {
+  width: 606px;
+  top: 260px;
+  right: 0;
+}
+
+.compliance {
+  width: 1168px;
+  top: 140px;
+  right: -220px;
+}
+
+.source {
+  width: 1470px;
+  top: -280px;
+  right: -450px;
+}
+
+.vendors {
+  width: 587px;
+  top: 260px;
+  right: 0;
+}
+
+.trust {
+  width: 1440px;
+  top: 260px;
+  right: 0;
 }
 
 @media (--mobile) {
-  .container {
-    padding: 30px 0;
-  }
-
   .text {
     grid-row: 1;
-    grid-column: 1 / span 7;
+    grid-column: 1 / -1;
+    max-width: 50%;
   }
 
-  .arrow {
+  .text p {
+    padding-right: 0;
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+
+  .audits {
+    width: 400px;
+    top: 85px;
+  }
+  
+  .compliance {
+    width: 560px;
+    top: 0;
+    right: -50px;
+  }
+  
+  .source {
+    width: 790px;
+    top: -300px;
+    right: -200px;
+  }
+  
+  .vendors {
+    width: 380px;
+    top: 85px;
+  }
+  
+  .trust {
+    width: 800px;
+    top: 130px;
+    right: 0;
+  }
+}
+
+@media (max-width: 799px) {
+  .source {
+    width: 500px;
+    top: -150px;
+    right: -150px;
+  }
+
+  .compliance {
+    right: -100px;
+  }
+
+  .audits {
+    right: -100px;
+  }
+
+  .vendors {
+    right: -100px;
+  }
+
+  .trust {
+    right: -100px;
+  }
+}
+
+@media (max-width: 569px) {
+  .text {
+    max-width: 100%;
+  }
+
+  .background {
     display: none;
-  }
-
-  .nav {
-    grid-row: 2;
-    grid-column: 1 / span 7;
-    margin-top: 30px;
-  }
-
-  .nav a {
-    color: white;
-    text-decoration: underline;
-    text-decoration-color: var(--aptible-green);
   }
 }

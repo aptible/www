@@ -1,0 +1,44 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M47 39C47 46.72 40.72 53 33 53H27C19.28 53 13 46.72 13 39V29H11V39C11 47.822 18.178 55 27 55H33C41.822 55 49 47.822 49 39V29H47V39Z" fill="#33C69F"/>
+<path d="M28 29V39C28 39.552 28.447 40 29 40H33V38H30V29H28Z" fill="#33C69F"/>
+<path d="M13 19H11V21H13V19Z" fill="#33C69F"/>
+<path d="M17 19H15V21H17V19Z" fill="#33C69F"/>
+<path d="M21 19H19V21H21V19Z" fill="#33C69F"/>
+<path d="M25 19H23V21H25V19Z" fill="#33C69F"/>
+<path d="M29 19H27V21H29V19Z" fill="#33C69F"/>
+<path d="M33 19H31V21H33V19Z" fill="#33C69F"/>
+<path d="M41 19H35V21H41V19Z" fill="#33C69F"/>
+<path d="M45 19H43V21H45V19Z" fill="#33C69F"/>
+<path d="M49 19H47V21H49V19Z" fill="#33C69F"/>
+<path d="M17 15H11V17H17V15Z" fill="#33C69F"/>
+<path d="M21 15H19V17H21V15Z" fill="#33C69F"/>
+<path d="M29 15H23V17H29V15Z" fill="#33C69F"/>
+<path d="M33 15H31V17H33V15Z" fill="#33C69F"/>
+<path d="M37 15H35V17H37V15Z" fill="#33C69F"/>
+<path d="M41 15H39V17H41V15Z" fill="#33C69F"/>
+<path d="M45 15H43V17H45V15Z" fill="#33C69F"/>
+<path d="M49 15H47V17H49V15Z" fill="#33C69F"/>
+<path d="M13 11H11V13H13V11Z" fill="#33C69F"/>
+<path d="M17 11H15V13H17V11Z" fill="#33C69F"/>
+<path d="M21 11H19V13H21V11Z" fill="#33C69F"/>
+<path d="M25 11H23V13H25V11Z" fill="#33C69F"/>
+<path d="M29 11H27V13H29V11Z" fill="#33C69F"/>
+<path d="M33 11H31V13H33V11Z" fill="#33C69F"/>
+<path d="M37 11H35V13H37V11Z" fill="#33C69F"/>
+<path d="M41 11H39V13H41V11Z" fill="#33C69F"/>
+<path d="M49 11H43V13H49V11Z" fill="#33C69F"/>
+<path d="M13 7H11V9H13V7Z" fill="#33C69F"/>
+<path d="M17 7H15V9H17V7Z" fill="#33C69F"/>
+<path d="M25 7H19V9H25V7Z" fill="#33C69F"/>
+<path d="M29 7H27V9H29V7Z" fill="#33C69F"/>
+<path d="M33 7H31V9H33V7Z" fill="#33C69F"/>
+<path d="M41 7H35V9H41V7Z" fill="#33C69F"/>
+<path d="M45 7H43V9H45V7Z" fill="#33C69F"/>
+<path d="M49 7H47V9H49V7Z" fill="#33C69F"/>
+<path d="M58 24H2V21H0V24V26V29H2V26H58V29H60V26V24V21H58V24Z" fill="#33C69F"/>
+<path opacity="0.5" d="M2 2H5V0H1C0.447 0 0 0.448 0 1V5H2V2Z" fill="#33C69F"/>
+<path opacity="0.5" d="M59 0H55V2H58V5H60V1C60 0.448 59.553 0 59 0Z" fill="#33C69F"/>
+<path opacity="0.5" d="M58 58H55V60H59C59.553 60 60 59.552 60 59V55H58V58Z" fill="#33C69F"/>
+<path opacity="0.5" d="M2 55H0V59C0 59.552 0.447 60 1 60H5V58H2V55Z" fill="#33C69F"/>
+<path d="M33 48H27V50H33V48Z" fill="#33C69F"/>
+</svg>

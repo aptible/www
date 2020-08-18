@@ -1,14 +1,16 @@
 .circle {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 56px;
   height: 56px;
-  border-radius: 100px;
+  border-radius: 56px;
   background-color: var(--aptible-yellow);
   border: 1px solid var(--aptible-yellow);
 }
 
 .circle svg path {
-  fill: #0A1B2B;
+  fill: #0a1b2b;
 }
 
 .outline {
@@ -18,10 +20,6 @@
 
 .outline svg path {
   fill: var(--aptible-yellow);
-}
-
-.arrowContainer {
-  margin: 18px 0 0 18px;
 }
 
 .noCircle {

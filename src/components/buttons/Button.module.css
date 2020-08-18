@@ -9,6 +9,11 @@ a.button {
   color: var(--aptible-black);
   text-decoration: none;
   border-radius: 28px;
+  white-space: nowrap;
+}
+
+.button:not(.noClick),
+a.button:not(.noClick) {
   cursor: pointer;
 }
 
@@ -18,14 +23,14 @@ a.button.small {
   padding: 3px 16px 4px;
 }
 
-.button:hover,
-.button:active,
-.button:focus {
+.button:not(.noClick):hover,
+.button:not(.noClick):active,
+.button:not(.noClick):focus {
   background-color: var(--aptible-black);
   color: white;
 }
 
-.button:focus {
+.button:not(.noClick):focus {
   outline: none;
 }
 
@@ -44,7 +49,7 @@ a.button.small {
 @media (--mobile) {
   .button,
   a.button {
-    display: block;
+    /* display: block; */
     font-size: 18px;
   }
 }

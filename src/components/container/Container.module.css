@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+  max-width: var(--content-max-width);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (--mobile) {
+  .container {
+    width: 85%;
+  }
+}

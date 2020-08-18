@@ -19,7 +19,7 @@ export default ({ data }) => {
   return (
     <AptibleLayout>
       <Helmet>
-        <title>Aptible | Security Management Resources</title>
+        <title>Aptible | Security Management Library</title>
         <meta name="description" content="Resources to help security teams maintain compliance and improve security management programs. Learn more." />
       </Helmet>
       <Introduction />

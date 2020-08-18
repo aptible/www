@@ -1,0 +1,45 @@
+.container {
+  margin-bottom: 190px;
+  margin-top: 190px;
+}
+
+.content {
+  grid-column: 2 / span 5;
+}
+
+.content h2 {
+  font-size: 64px;
+  line-height: 70px;
+}
+
+.paragraph {
+  width: 80%;
+}
+
+.module {
+  margin-top: 55px;
+}
+
+@media (--mobile) {
+  .container {
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
+
+  .content {
+    grid-column: 1 / -1;
+  }
+
+  .content h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .paragraph {
+    width: 100%;
+  }
+
+  .module {
+    margin-top: 35px;
+  }
+}

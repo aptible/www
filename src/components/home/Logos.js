@@ -1,32 +1,35 @@
 import React from 'react';
-import styles from './Logos.module.css';
-import { Grid, Row } from '../grid/Grid';
-import riffynLogo from '../../images/customers/logos/riffyn.png';
+import cn from 'classnames';
+import healthifyLogo from '../../images/customers/logos/healthify.svg';
+import vergesenseLogo from '../../images/customers/logos/vergesense.svg';
+import mdsaveLogo from '../../images/customers/logos/mdsave.svg';
 import cityBlockLogo from '../../images/customers/logos/cityblock.svg';
-import fortmaticLogo from '../../images/customers/logos/fortmatic.svg';
-import quadpayLogo from '../../images/customers/logos/quadpay.svg';
-import pathaiLogo from '../../images/customers/logos/pathai.png';
+import simpleCitizenLogo from '../../images/customers/logos/simple-citizen.svg';
+import Container from '../container/Container';
+import styles from './Logos.module.css';
 
-export default () => (
-  <Grid>
-    <Row>
-      <div className={styles.logos}>
-        <div className={styles.logo}>
-          <img src={riffynLogo} alt="Riffyn logo" />
-        </div>
-        <div className={styles.logo}>
-          <img src={cityBlockLogo} alt="Cityblock logo" />
-        </div>
-        <div className={styles.logo}>
-          <img src={fortmaticLogo} alt="Fortmatic logo" />
-        </div>
-        <div className={styles.logo}>
-          <img src={quadpayLogo} alt="Quadpay logo" />
-        </div>
-        <div className={styles.logo}>
-          <img src={pathaiLogo} alt="PathAI logo" />
-        </div>
+const Logos = () => (
+  <Container className={styles.container}>
+    <h3>Companies that trust Aptible</h3>
+
+    <div className={styles.logos}>
+      <div className={cn(styles.logo, styles.healthifyLogo)}>
+        <img src={healthifyLogo} alt="Healthify logo" />
       </div>
-    </Row>
-  </Grid>
+      <div className={styles.logo}>
+        <img src={vergesenseLogo} alt="Vergesense logo" />
+      </div>
+      <div className={styles.logo}>
+        <img src={mdsaveLogo} alt="MDSave logo" />
+      </div>
+      <div className={styles.logo}>
+        <img src={cityBlockLogo} alt="Cityblock logo" />
+      </div>
+      <div className={cn(styles.logo, styles.simpleCitizenLogo)}>
+        <img src={simpleCitizenLogo} alt="Simple Citizen logo" />
+      </div>
+    </div>
+  </Container>
 );
+
+export default Logos;

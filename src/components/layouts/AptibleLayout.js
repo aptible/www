@@ -5,8 +5,8 @@ import HelloBar from '../shared/HelloBar';
 import CookieConsent from '../shared/CookieConsent';
 import Analytics from '../shared/Analytics';
 
-export default ({ children }) => (
-  <div>
+const AptibleLayout = ({ children }) => (
+  <>
     <HelloBar
       id="comply-integrations"
       to="/comply/integrations/"
@@ -18,6 +18,7 @@ export default ({ children }) => (
     {children}
     <Footer />
     <Analytics />
-  </div>
+  </>
 );
- 
+
+export default AptibleLayout;

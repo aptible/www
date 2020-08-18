@@ -1,28 +1,31 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import pages from '../../data/use-cases.json';
 import { Grid } from '../grid/Grid';
 import styles from './UseCases.module.css';
 
-export default () => (
+export const USE_CASES_NAV = pages.map((page) => ({
+  title: page.title,
+  url: `/use-cases/${page.slug}`,
+  excerpt: page.excerpt,
+}));
+
+const UseCases = () => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.links}>
-        <Link to="/use-cases/">
-          <div>Vendor Management</div>
-        </Link>
+        {USE_CASES_NAV.map((link) => (
+          <div className={styles.link} key={link.title}>
+            <Link to={link.url}>{link.title}</Link>
 
-        <Link to="/use-cases/">
-          <div>Access Control Reviews</div>
-        </Link>
-
-        <Link to="/use-cases/">
-          <div>Identity and Access Management</div>
-        </Link>
-
-        <Link to="/use-cases/">
-          <div>Human Resources Security</div>
-        </Link>
+            <div className={styles.body}>
+              <p>{link.excerpt}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </Grid>
   </div>
 );
+
+export default UseCases;
