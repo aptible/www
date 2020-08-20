@@ -1,7 +1,7 @@
 .container {
   position: fixed;
   bottom: 30px;
-  left: 30px;
+  right: 30px;
   width: 400px;
   padding: 30px 40px;
   background-color: var(--aptible-black-light);

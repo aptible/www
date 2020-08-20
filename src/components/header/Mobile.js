@@ -1,24 +1,80 @@
 import React from 'react';
+import cn from 'classnames';
 import { Link } from 'gatsby';
 import { Grid } from '../grid/Grid';
 import styles from './Mobile.module.css';
 import Button from '../buttons/Button';
 import SignupButton from '../signup/SignupButton';
 import HeaderContext from './HeaderContext';
+import { PRODUCTS_NAV } from './Products';
+import { USE_CASES_NAV } from './UseCases';
+import { RESOURCES_NAV } from './Resources';
+import { COMPANY_NAV } from './Company';
 
-export default () => (
+const Mobile = () => (
   <HeaderContext.Consumer>
     {context => (
       <div>
         <Grid>
           <div className={styles.mainItems}>
-            <Link to="/comply/"><h1 className="hero">Comply</h1></Link>
-            <Link to="/deploy/"><h1 className="hero">Deploy</h1></Link>
-            <Link to="/pricing-plans/"><h1 className="hero">Pricing</h1></Link>
-            <Link to="/use-cases/"><h1 className="hero">Use Cases</h1></Link>
-            <Link to="/customers/"><h1 className="hero">Customers</h1></Link>
-            <Link to="/resources/"><h1 className="hero">Resources</h1></Link>
-            <Link to="/company/"><h1 className="hero">Company</h1></Link>
+            {PRODUCTS_NAV.map((product) => (
+              <div key={product.title} className={styles.mainItem}>
+                <Link className={cn(styles.heading, "h4")} to={product.url}>{product.title}</Link>
+                {product.links.map((link) => (
+                  <div className={styles.subItem} key={link.url}>
+                    <Link className="h6" to={link.url}>{link.title}</Link>
+                  </div>
+                ))}
+              </div>
+            ))}
+            
+            <div className={styles.mainItem}>
+              <div className={cn(styles.heading, "h4")}>Use Cases</div>
+              {USE_CASES_NAV.map((link) => (
+                <div className={styles.subItem} key={link.url}>
+                  <Link className="h6" to={link.url}>{link.title}</Link>
+                </div>
+              ))}
+            </div>
+            
+            <div className={styles.mainItem}>
+              <Link className={cn(styles.heading, "h4")} to="/customers/">Customers</Link>
+            </div>
+            
+            <div className={styles.mainItem}>
+              <Link className={cn(styles.heading, "h4")} to="/resources/">Resources</Link>
+              {RESOURCES_NAV.map((link) => {
+                if (link.external) {
+                  return (
+                    <div className={styles.subItem} key={link.url}>
+                      <a
+                        className="h6"
+                        href={link.url}
+                        target={link.newDomain ? "_blank" : null}
+                        rel={link.newDomain ? "noopener noreferrer": null}
+                      >
+                        {link.title}
+                      </a>
+                    </div>
+                  );
+                }
+
+                return (
+                  <div className={styles.subItem} key={link.url}>
+                    <Link className="h6" to={link.url}>{link.title}</Link>
+                  </div>
+                );
+              })}
+            </div>
+            
+            <div className={styles.mainItem}>
+              <Link className={cn(styles.heading, "h4")} to="/company/">Company</Link>
+              {COMPANY_NAV.map((link) => (
+                <div className={styles.subItem} key={link.url}>
+                  <Link className="h6" to={link.url}>{link.title}</Link>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className={styles.login}>
@@ -37,3 +93,5 @@ export default () => (
     )}
   </HeaderContext.Consumer>
 );
+
+export default Mobile;

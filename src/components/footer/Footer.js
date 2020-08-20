@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styles from './Footer.module.css';
+import useCases from '../../data/use-cases.json';
 import { Grid } from '../grid/Grid';
 import NewsletterSignup from './NewsletterSignup';
+import styles from './Footer.module.css';
 
 const twitterIcon = (
   <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +29,7 @@ const linkedInIcon = (
   </svg>
 );
 
-export default () => (
+const Footer = () => (
   <div className={styles.footer}>
     <Grid rows="3">
       <div className={styles.products}>
@@ -39,27 +40,21 @@ export default () => (
         <Link to="/deploy/">
           <h3>Deploy</h3>
         </Link>
-        <Link to="/pricing-plans/">
-          <h3>Pricing</h3>
-        </Link>
       </div>
 
       <div className={styles.useCases}>
         <h6 className="small">Use Cases</h6>
-        <Link to="/use-cases/#vendor-security-assessments">
-          <span className="desktopOnly">VSAs and External Audits</span>
-          <span className="mobileOnly">VSAs and Audits</span>
-        </Link>
-        <Link to="/use-cases/#security-standards">Security Standards</Link>
-        <Link to="/use-cases/#regulatory-compliance">Regulatory Compliance</Link>
-        <Link to="/use-cases/#security-awareness">Security Awareness</Link>
-        <Link to="/use-cases/#internal-audits">Internal Audits</Link>
+        {useCases.map((link) => (
+          <Link key={link.slug} to={`/use-cases/${link.slug}`}>
+            {link.title}
+          </Link>
+        ))}
       </div>
 
       <div className={styles.resources}>
         <h6 className="small">Resources</h6>
         <Link to="/customers/">Customers</Link>
-        <Link to="/hipaa/">Compliance Guides</Link>
+        <Link to="/resources/guides/">Compliance Guides</Link>
         <Link to="/blog/">Blog</Link>
         <Link to="/blog/category/engineering/">Engineering Blog</Link>
       </div>
@@ -135,3 +130,5 @@ export default () => (
     </Grid>
   </div>
 );
+
+export default Footer;

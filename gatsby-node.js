@@ -6,6 +6,7 @@ const BLOG_CATEGORIES = require('./src/data/blog-categories.json');
 const BLOG_POSTS_PER_PAGE = 5;
 const RESOURCE_CATEGORIES = require('./src/data/resource-categories.json');
 const resourceEntries = require('./src/data/resources.json');
+const useCasesEntries = require('./src/data/use-cases.json');
 
 const COMPLIANCE_SITES = ['hipaa', 'gdpr'];
 let protocolData = {};
@@ -293,6 +294,17 @@ exports.createPages = ({ graphql, actions }) => {
             entries: category.slug === 'webinars' ?
               webinarEntries :
               resourceEntries.filter((entry) => entry.tags.includes(category.title))
+          },
+        });
+      });
+
+      // Create pages for use cases
+      useCasesEntries.forEach((entry) => {
+        createPage({
+          path: `use-cases/${entry.slug}`,
+          component: path.resolve(`./src/templates/use-case.js`),
+          context: {
+            ...entry
           },
         });
       });

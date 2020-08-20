@@ -37,7 +37,6 @@
 .useCases {
   grid-row: 1;
   grid-column: 2 / span 2;
-  margin-left: 80px;
 }
 
 .resources {

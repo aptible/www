@@ -1,13 +1,15 @@
 .grid {
   position: relative;
   display: grid;
-  width: var(--content-max-width);
-  margin: 0 auto;
+  max-width: var(--content-max-width);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   grid-template-columns: repeat(var(--grid-columns), 1fr);
 }
 
 .fullRow {
-  grid-column: 1 / span var(--grid-columns);
+  grid-column: 1 / -1;
 }
 
 @media (--mobile) {

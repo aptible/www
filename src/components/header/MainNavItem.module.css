@@ -11,19 +11,19 @@ a.mainNavItem {
 }
 
 .open {
-  color: white;
-}
-
-.mainNavItem.open:hover {
-  color: white;
-}
-
-.mainNavItem:hover {
   color: var(--aptible-yellow);
 }
 
+.mainNavItem.open:hover {
+  color: var(--aptible-yellow);
+}
+
+.mainNavItem:hover {
+  color: white;
+}
+
 .mainNavItem:hover .arrow.down {
-  border-top-color: var(--aptible-yellow);
+  border-top-color: white;
 }
 
 .arrow {
@@ -42,7 +42,7 @@ a.mainNavItem {
 .arrow.up {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid var(--aptible-yellow);
 }
 
 @media (--mobile) {

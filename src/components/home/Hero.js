@@ -1,41 +1,39 @@
 import React from 'react';
-import styles from './Hero.module.css';
+import heroIllustration from '../../images/home/illustrations/source-of-truth-landing.png';
 import { Grid } from '../grid/Grid';
 import SignupButton from '../signup/SignupButton';
-import ContentfulBlock from '../contentful/ContentfulBlock';
-import HeroArrow from './HeroArrow';
+import Paragraph from '../shared/Paragraph';
 import HeroCallout from './HeroCallout';
-import WistiaVideo from '../shared/WistiaVideo';
+import styles from './Hero.module.css';
 
-export default ({ heroBlock }) => (
-  <Grid>
-    <div className={styles.contentArea}>
-      <HeroArrow />
-      <ContentfulBlock block={heroBlock} />
+const Hero = () => (
+  <div className={styles.container}>
+    <div className={styles.background}>
+      <img src={heroIllustration} alt="" />
     </div>
 
-    <div className={styles.cta}>
-      <SignupButton text="Get Started" />
-    </div>
+    <Grid>
+      <div className={styles.content}>
+        <h1 className="hero">Build Customer Trust with Compliance</h1>
 
-    <div className={styles.callout}>
-      <HeroCallout />
-    </div>
+        <div className={styles.paragraph}>
+          <Paragraph>
+            Aptible helps create a more trustworthy internet by improving data
+            security and compliance. We make it simple for modern businesses to
+            manage compliance so that they can build customer trust.
+          </Paragraph>
+        </div>
 
-    <div className={styles.videoContainer}>
-      <WistiaVideo videoId="kf1hbw3as5" autoPlay="true" silentAutoPlay="true" />
-      <div className={styles.videoCard}>
-        <p>
-          &ldquo;What I really wanted at QuadPay, where security is of
-          tantamount importance, was to have something that was comprehensive,
-          followed best practices, and could actually be implemented across an
-          organization at scale.&rdquo;
-        </p>
-
-        <div className={styles.cardAuthor}>
-          Ian Yamey, CTO
+        <div className={styles.button}>
+          <SignupButton text="Get a demo" />
         </div>
       </div>
-    </div>
-  </Grid>
+
+      <div className={styles.callout}>
+        <HeroCallout />
+      </div>
+    </Grid>
+  </div>
 );
+
+export default Hero;

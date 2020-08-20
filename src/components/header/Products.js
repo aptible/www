@@ -2,96 +2,74 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Grid } from '../grid/Grid';
 import styles from './Products.module.css';
-import complyBg from '../../images/illustrations/comply.png';
-import deployBg from '../../images/illustrations/deploy.png';
 
-const backgroundImages = {
-  comply: complyBg,
-  deploy: deployBg
-};
+export const PRODUCTS_NAV = [
+  {
+    title: 'Comply',
+    body:
+      'The end-to-end compliance management platform that uses intelligent automations to simplify compliance work.',
+    url: '/comply/',
+    links: [
+      {
+        title: 'GRC',
+        url: '/comply/automation/',
+      },
+      {
+        title: 'Rooms',
+        url: '/comply/rooms/',
+      },
+      {
+        title: 'Integrations',
+        url: '/comply/integrations/',
+      },
+      {
+        title: 'Pricing',
+        url: '/pricing-plans/#comply',
+      },
+    ],
+  },
+  {
+    title: 'Deploy',
+    body:
+      'The container orchestration platform that automates the data security controls required for software in regulated industries.',
+    url: '/deploy/',
+    links: [
+      {
+        title: 'Features',
+        url: '/deploy/features/',
+      },
+      {
+        title: 'Pricing',
+        url: '/pricing-plans/#deploy',
+      },
+    ],
+  },
+];
 
+const Products = () => (
+  <div className={styles.container}>
+    <Grid>
+      <div className={styles.links}>
+        {PRODUCTS_NAV.map((product) => (
+          <div key={product.title} className={styles.section}>
+            <h3>
+              <Link to={product.url}>
+                {product.title} <span className={styles.arrow}>&rarr;</span>
+              </Link>
+            </h3>
 
-function ComplyHover() {
-  return (
-    <div className={styles.hoverDescription}>
-      <h5>
-        Compliance monitoring and automation<br />through integrations for SOC
-        2, ISO 27001, HIPAA, GDPR and more.
-      </h5>
-    </div>
-  )
-}
+            <p>{product.body}</p>
 
-function DeployHover() {
-  return (
-    <div className={styles.hoverDescription}>
-      <h5>Deploy audit-ready apps<br />and databases.</h5>
-    </div>
-  );
-}
-
-class Products extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      openSectionName: null
-    };
-  }
-
-  setHover = (sectionName) => {
-    this.setState({ openSectionName: sectionName });
-  }
-
-  renderHoverContent = () => {
-    const content = {
-      comply: <ComplyHover />,
-      deploy: <DeployHover />
-    }
-
-    if (this.state.openSectionName in content) {
-      return content[this.state.openSectionName];
-    }
-  }
-
-  render() {
-    return (
-      <div className={styles.container}>
-        <Grid>
-          <div className={styles.links}>
-            <Link
-              to="/comply/"
-              onMouseEnter={() => this.setHover('comply')}
-              onMouseLeave={() => this.setHover(null)}
-            >
-              <h3>Comply</h3>
-            </Link>
-
-            <Link
-              to="/deploy/"
-              onMouseEnter={() => this.setHover('deploy')}
-              onMouseLeave={() => this.setHover(null)}
-            >
-              <h3>Deploy</h3>
-            </Link>
-
-            <Link to="/pricing-plans/">
-              <h3>Pricing</h3>
-            </Link>
+            {product.links.map(link => (
+              <div className={styles.childLink} key={link.url}>
+                <Link to={link.url}>{link.title}</Link>
+              </div>
+            ))}
           </div>
-
-          <div className={styles.hoverContent}>
-            {this.renderHoverContent()}
-          </div>
-        </Grid>
-
-        {this.state.openSectionName && (
-          <div className={styles.hoverImage}>
-            <img src={backgroundImages[this.state.openSectionName]} alt="logo" />
-          </div>
-        )}
+        ))}
       </div>
-    );
-  }
-}
+    </Grid>
+  </div>
+);
 
 export default Products;

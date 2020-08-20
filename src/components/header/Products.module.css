@@ -6,49 +6,69 @@
   position: relative;
   z-index: 2;
   grid-row: 1;
-  grid-column: 3 / span 2;
-  padding: 60px 0;
+  grid-column: 3 / span 4;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  width: calc(100% + 60px);
 }
 
 .links a {
   text-decoration: none;
 }
 
-.links a h3 {
-  color: var(--body-color);
-  line-height: 48px;
+.links h3 {
   margin-bottom: 20px;
+  line-height: 48px;
 }
 
-.links a:hover h3 {
-  color: white;
+.links h3 a {
+  color: white; 
+  display: inline-flex;
+  align-items: center;
 }
 
-.hoverContent {
-  grid-row: 1;
-  grid-column: 4 / span 4;
+.arrow {
+  display: none;
+  color: var(--white-fifty);
+  font-size: .7em;
+  margin-left: 12px;
+  top: 2px;
+  position: relative;
 }
 
-.links a:hover + .hoverContent {
+.links h3 a:hover .arrow,
+.links h3 a:active .arrow,
+.links h3 a:focus .arrow {
   display: block;
 }
 
-.hoverDescription {
-  margin: 70px 0 0 70px;
+.section {
+  width: 50%;
 }
 
-.hoverDescription h5 {
+.section p {
   color: var(--body-color);
-  max-width: 500px;
+  font-size: 16px;
+  line-height: 1.44;
+  margin-bottom: 40px;
 }
 
-.hoverImage {
-  position: absolute;
-  left: 40%;
-  top: 100px;
-  z-index: 1;
+.childLink {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.hoverImage img {
-  max-width: 900px;
+.childLink a {
+  color: var(--body-color);
+  display: inline-block;
+}
+
+.childLink a:hover,
+.childLink a:active,
+.childLink a:focus {
+  color: white;
 }

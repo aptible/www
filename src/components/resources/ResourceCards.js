@@ -15,7 +15,7 @@ const ResourceCards = ({ resources, categorySlug }) => {
       <Grid>
         <div className={styles.left}>
           <div className={styles.navigation}>
-            <h6 className="small">Resources</h6>
+            <h6 className="small">Library</h6>
 
             <Link
               className={categorySlug === '' ? styles.active : ""}

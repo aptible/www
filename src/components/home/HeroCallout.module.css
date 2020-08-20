@@ -4,6 +4,8 @@
 }
 
 .callout a {
+  align-items: center;
+  display: flex;
   text-decoration: none;
 }
 
@@ -37,10 +39,6 @@
 }
 
 @media (--mobile) {
-  .callout {
-    text-align: center;
-  }
-
   .pill {
     font-size: 10px;
   }

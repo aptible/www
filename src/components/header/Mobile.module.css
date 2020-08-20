@@ -1,13 +1,26 @@
 .mainItems {
   grid-row: 1;
   grid-column: 1 / -1;
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.mainItems a {
+.mainItem {
+  margin-bottom: 16px;
+}
+
+.heading,
+.mainItem a {
+  color: white;
   display: block;
   text-decoration: none;
-  padding: 8px 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: 500;
+}
+
+.subItem a {
+  color: var(--body-color);
 }
 
 .login {
@@ -19,5 +32,6 @@
 .cta {
   grid-row: 3;
   grid-column: 1 / -1;
-  padding: 30px 0 60px 0;
+  padding-top: 30px;
+  padding-bottom: 60px;
 }
