@@ -51,8 +51,15 @@
   margin: 60px 0 30px 0;
 }
 
-.body p {
+.body p,
+.body ul,
+.body ol {
   line-height: 1.6;
+}
+
+.body li > p {
+  display: contents;
+  margin: 0;
 }
 
 .body blockquote {
