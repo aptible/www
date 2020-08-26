@@ -8,10 +8,9 @@ import Analytics from '../shared/Analytics';
 const AptibleLayout = ({ children }) => (
   <>
     <HelloBar
-      id="comply-integrations"
-      to="/comply/integrations/"
-      callout="Just Launched"
-      text="Comply Integrations: Integrate with all of your SaaS services to automate compliance tasks"
+      id="hitrust-now-available"
+      to="/comply/signup/"
+      text="Now Available in Comply: HITRUST. Contact Us to learn more"
     />
     <Header />
     <CookieConsent />

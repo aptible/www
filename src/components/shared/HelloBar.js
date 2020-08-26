@@ -50,7 +50,9 @@ class HelloBar extends React.Component {
             <Grid>
               <Link className={styles.content} to={this.props.to}>
                 <p>
-                  <span>{this.props.callout}</span>
+                  {this.props.callout && (
+                    <span>{this.props.callout}</span>
+                  )}
                   {this.props.text}
                 </p>
               </Link>
