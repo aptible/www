@@ -22,16 +22,23 @@
   grid-row: 1;
   grid-column: 7;
   text-align: right;
+  padding: 80px 0 70px 0;
+}
+
+.closeButton,
+a.closeButton {
   font-size: 12px;
   font-weight: 500;
   color: var(--body-color);
   text-transform: uppercase;
   cursor: pointer;
   user-select: none;
-  padding: 80px 0 70px 0;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.close:hover {
+.closeButton:hover,
+a.closeButton:hover {
   color: white;
 }
 
