@@ -18,18 +18,14 @@ class SignupPage extends React.Component {
     this.setState({ open: true });
   }
 
-  closeSignup = () => {
-    window.location = '/';
-  }
-
   render() {
     return (
       <React.Fragment>
         <div className={styles.container}>
-          <h1 className={styles.heading}>Signup</h1>
+          <h1 className={styles.heading}>Sign Up</h1>
         </div>
         {this.state.open &&
-          <Signup closeFn={this.closeSignup} product={this.props.product} />
+          <Signup to="/" product={this.props.product} />
         }
       </React.Fragment>
     );
