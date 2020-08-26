@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Portal from '../shared/Portal';
 import styles from './Signup.module.css';
 import { Grid } from '../grid/Grid';
@@ -176,9 +177,21 @@ class InnerSignup extends React.Component {
             <img src={logoImage} alt="Aptible logo" />
           </div>
 
-          <div className={styles.close} onClick={this.props.closeFn}>
-            Back to Aptible.com
-          </div>
+          {this.props.closeFn && (
+            <div className={styles.close}>
+              <div className={styles.closeButton} onClick={this.props.closeFn}>
+                Back to Aptible.com
+              </div>
+            </div>
+          )}
+
+          {this.props.to && (
+            <div className={styles.close}>
+              <Link className={styles.closeButton} to={this.props.to}>
+                Back to Aptible.com
+              </Link>
+            </div>
+          )}
 
           <div className={styles.content}>
             <CurrentView
