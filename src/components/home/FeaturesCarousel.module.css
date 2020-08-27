@@ -1,26 +1,4 @@
-.container {
-  overflow: hidden;
-  margin-bottom: 24px;
-}
-
-.productSelector {
-  position: relative;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-
-.carouselContainer {
-  position: absolute;
-  display: flex;
-  -webkit-overflow-scrolling: touch;
-  overflow: hidden;
-}
-
-.item {
-  width: 100%;
-}
-
-.product {
+.useCase {
   box-sizing: border-box;
   position: relative;
   width: 558px;
@@ -32,9 +10,10 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100%;
 }
 
-.product {
+.useCase {
   margin-right: 8px;
 }
 
@@ -50,7 +29,7 @@
   margin-top: auto;
 }
 
-.product p {
+.useCase p {
   color: var(--white-seventy);
   font-size: 18px;
   margin-top: 50px;
@@ -69,57 +48,26 @@
   margin-left: 2px;
 }
 
-.product:hover,
-.product:active,
-.product:focus {
+.useCase:hover,
+.useCase:active,
+.useCase:focus {
   background: linear-gradient(360deg, var(--aptible-card-hover) 10%, var(--aptible-black) 80%);
   border-bottom-color: var(--aptible-yellow);
 }
 
-.productArrow {
+.bigArrow {
   display: none;
   position: absolute;
   top: 30px;
   right: 30px;
 }
 
-.product:hover .productArrow {
+.useCase:hover .bigArrow {
   display: block;
-}
-
-.circles {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.circle {
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-radius: 8px;
-  background-color: var(--aptible-green-thirty);
-  cursor: pointer;
-}
-
-.circle + .circle {
-  margin-left: 4px;
-}
-
-.active {
-  background-color: var(--aptible-green);
 }
 
 @media (--mobile) {
-  .item:first-child {
-    margin-left: 24px;
-  }
-
-  .item:last-child {
-    margin-right: 16px;
-  }
-
-  .product {
+  .useCase {
     background-size: 250px auto;
     background-position: top center;
     width: 40vw;
@@ -130,11 +78,11 @@
     padding: 0 15px 30px;
   }
 
-  .product h5 {
+  .useCase h5 {
     margin-bottom: 4px;
   }
 
-  .product p {
+  .useCase p {
     font-size: 14px;
     margin-top: 20px;
     max-width: 90%;
@@ -150,7 +98,7 @@
     font-size: 1em;
   }
 
-  .productArrow {
+  .bigArrow {
     display: block;
   }
 }
