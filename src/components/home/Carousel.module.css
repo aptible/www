@@ -1,0 +1,56 @@
+.container {
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.scrollContainer {
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.itemsContainer {
+  position: absolute;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+  height: 100%;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+}
+
+.dots {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: var(--aptible-green-thirty);
+  cursor: pointer;
+}
+
+.dot + .dot {
+  margin-left: 4px;
+}
+
+.active {
+  background-color: var(--aptible-green);
+}
+
+@media (--mobile) {
+  .item:first-child {
+    margin-left: 24px;
+  }
+
+  .item:last-child {
+    margin-right: 16px;
+  }
+}

@@ -1,27 +1,3 @@
-.container {
-  overflow: hidden;
-  margin-bottom: 24px;
-}
-
-.productSelector {
-  position: relative;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-
-.carouselContainer {
-  position: absolute;
-  display: flex;
-  -webkit-overflow-scrolling: touch;
-  overflow: hidden;
-  height: 100%;
-}
-
-.item {
-  width: 100%;
-  height: 100%;
-}
-
 .product {
   box-sizing: border-box;
   position: relative;
@@ -85,38 +61,7 @@
   display: block;
 }
 
-.circles {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.circle {
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-radius: 8px;
-  background-color: var(--aptible-green-thirty);
-  cursor: pointer;
-}
-
-.circle + .circle {
-  margin-left: 4px;
-}
-
-.active {
-  background-color: var(--aptible-green);
-}
-
 @media (--mobile) {
-  .item:first-child {
-    margin-left: 24px;
-  }
-
-  .item:last-child {
-    margin-right: 16px;
-  }
-
   .product {
     background-size: 500px;
     background-position: 290px -120px;
