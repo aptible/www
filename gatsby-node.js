@@ -73,6 +73,7 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               title
               slug
+              webinarType
               description {
                 description
               }
