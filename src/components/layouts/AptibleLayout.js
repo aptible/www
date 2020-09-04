@@ -8,9 +8,10 @@ import Analytics from '../shared/Analytics';
 const AptibleLayout = ({ children }) => (
   <>
     <HelloBar
-      id="hitrust-now-available"
-      to="/comply/signup/"
-      text="Now Available in Comply: HITRUST. Contact Us to learn more"
+      id="webinars-a-new-era-for-evidence-collection"
+      to="/webinars/a-new-era-for-evidence-collection/"
+      callout="Upcoming"
+      text="September 22nd: Learn how automated evidence collection can streamline audit preparation"
     />
     <Header />
     <CookieConsent />
