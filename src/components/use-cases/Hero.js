@@ -97,6 +97,7 @@ const Hero = ({ title, body, illustrationKey }) => (
           // top: `${illustrations[illustrationKey].t}px`,
           // right: `${illustrations[illustrationKey].r}px`,
         }}
+        alt="illustration"
       />
     </div>
     {/* <div
