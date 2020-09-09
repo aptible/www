@@ -153,6 +153,7 @@ class InnerSignup extends React.Component {
       debug: true,
       onSuccess: this.setCall,
       closeOnOutside: true,
+      map: true,
       lead: {
         Email: this.state.email
       }
