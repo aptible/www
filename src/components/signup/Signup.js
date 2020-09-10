@@ -148,11 +148,12 @@ class InnerSignup extends React.Component {
       return;
     }
 
-    window.ChiliPiper.submit('aptible', 'gridiron-signup', {
+    window.ChiliPiper.submit('aptible', 'comply-signup', {
       handleSubmit: false,
       debug: true,
       onSuccess: this.setCall,
       closeOnOutside: true,
+      map: true,
       lead: {
         Email: this.state.email
       }
