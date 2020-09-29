@@ -8,10 +8,10 @@ import Analytics from '../shared/Analytics';
 const AptibleLayout = ({ children }) => (
   <>
     <HelloBar
-      id="webinars-a-new-era-for-evidence-collection"
-      to="/webinars/a-new-era-for-evidence-collection/"
+      id="webinars-make-audits-simple-smooth-and-effective"
+      to="/webinars/make-audits-simple-smooth-and-effective/"
       callout="Upcoming"
-      text="September 22nd: Learn how automated evidence collection can streamline audit preparation"
+      text="October 27th: Achieve simple, smooth audits with automations & integrations"
     />
     <Header />
     <CookieConsent />
