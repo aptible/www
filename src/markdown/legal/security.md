@@ -179,10 +179,10 @@ Aptible monitors the stability and availability of customer infrastructure and a
 We do not access or use Your Content for any purpose other than for developing and operating the Services and as required by law. As a routine matter, Aptible workforce members do not require access to data processed by your Aptible Deploy Containerized Services, such as data stored in your databases. Aptible workforce members are granted least-privilege access to customer environments only when a specific business need arises. Workforce members undergo criminal background screening before hire. In some cases, such as Aptible Deploy databases, you may encrypt Your Content using keys you manage.
 
 ##### **5.B - Security Management**
-Aptible manages information security consistent with ISO 27001, SOC 2, HITRUST, and applicable legal and regulatory requirements such as HIPAA and GDPR. 
+Aptible manages information security consistent with ISO 27001, SOC 2, HITRUST, and applicable legal and regulatory requirements such as HIPAA and GDPR. Aptible's security reports and certifications can be accessed under NDA via Aptible's Comply Room; [click here](https://comply-grc.aptible.com/datarooms/ad352ac5-7d3b-4097-a1ac-894e34b4cba9) to request access. The list of documents includes the following:
 
-- Aptible's [ISO 27001 certification for Aptible Deploy and Gridron is available here](/compliance/iso-27001-certification/). 
-- You can view Aptible's [HITRUST CSF standalone certification letter here](/compliance/hitrust-csf-certification/). 
-- Aptible's current SOC 2 Type 2 report and HITRUST CSF Validated Assessment Report are available under NDA, please [contact us].
+- Aptible's ISO 27001 certification for Aptible Deploy and Gridron 
+- Aptible's HITRUST CSF standalone certification letter
+- Aptible's current SOC 2 Type 2 report and HITRUST CSF Validated Assessment Report
 
 We also run a [responsible disclosure program](/legal/responsible-disclosure) for security vulnerabilities, with cash bounties.
