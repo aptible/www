@@ -181,8 +181,8 @@ We do not access or use Your Content for any purpose other than for developing a
 ##### **5.B - Security Management**
 Aptible manages information security consistent with ISO 27001, SOC 2, HITRUST, and applicable legal and regulatory requirements such as HIPAA and GDPR. Aptible's security reports and certifications can be accessed under NDA via Aptible's Comply Room; [click here](https://comply-grc.aptible.com/datarooms/ad352ac5-7d3b-4097-a1ac-894e34b4cba9) to request access. The list of documents includes the following:
 
-- Aptible's ISO 27001 certification for Aptible Deploy and Gridron 
-- Aptible's HITRUST CSF standalone certification letter
+- Aptible's ISO 27001 certification for Aptible Deploy and Aptible Comply 
+- Aptible's HITRUST CSF stand-alone certification letter
 - Aptible's current SOC 2 Type 2 report and HITRUST CSF Validated Assessment Report
 
 We also run a [responsible disclosure program](/legal/responsible-disclosure) for security vulnerabilities, with cash bounties.
