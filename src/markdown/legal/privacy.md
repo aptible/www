@@ -235,13 +235,13 @@ To exercise any of these options, or for additional information about our privac
 
 Unfortunately, no data transmission over the Internet or data storage system can be guaranteed to be 100% secure. That said, we certainly try very hard, employing a variety of organizational, technical and administrative measures to provide a level of security appropriate to the risk associated with the personal information you trust us with. 
 
-To that end, we manage our data protection program consistent with ISO 27001, SOC 2, HITRUST, and applicable legal and regulatory requirements such as HIPAA and GDPR.
+To that end, we manage our data protection program consistent with ISO 27001, SOC 2, HITRUST, and applicable legal and regulatory requirements such as HIPAA and GDPR. Aptible's security reports and certifications can be accessed under NDA via Aptible's Comply Room; [click here](https://comply-grc.aptible.com/datarooms/ad352ac5-7d3b-4097-a1ac-894e34b4cba9) to request access. The list of documents includes the following:
 
-  * Aptible’s ISO 27001 certification for Aptible Deploy and Aptible Comply is available [here](/compliance/iso-27001-certification/).
+  * Aptible’s ISO 27001 certification for Aptible Deploy and Aptible Comply
 
-  * Aptible’s HITRUST CSF stand-alone certification letter is available [here](/compliance/hitrust-csf-certification/).
+  * Aptible’s HITRUST CSF stand-alone certification letter
 
-  * Aptible’s current SOC 2 Type 2 report and HITRUST CSF Validated Assessment Report are available under NDA to customers only (please contact [support@aptible.com][2] for copies)
+  * Aptible’s current SOC 2 Type 2 report and HITRUST CSF Validated Assessment Report
 
 Please see our [Security Policy][3] for more details.
 
