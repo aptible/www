@@ -1,7 +1,8 @@
+console.log(`.env.${process.env.NODE_ENV}`);
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
-
 
 module.exports = {
   siteMetadata: {
@@ -74,10 +75,10 @@ module.exports = {
           favicons: true,
           firefox: true,
           yandex: false,
-          windows: false
-        }
-      }
+          windows: false,
+        },
+      },
     },
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
   ],
 };
