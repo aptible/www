@@ -14,7 +14,10 @@ export default ({ data }) => (
   <AptibleLayout>
     <Helmet>
       <title>Aptible | Careers</title>
-      <meta name="description" content="Aptible is a remote team seeking to build trust on the internet. Learn more about open opportunities at Aptible." />
+      <meta
+        name="description"
+        content="Aptible is a remote team seeking to build trust on the internet. Learn more about open opportunities at Aptible."
+      />
     </Helmet>
     <Hero />
     <PhotoCarousel />
@@ -23,7 +26,7 @@ export default ({ data }) => (
       <QuotesCarousel quotedEmployees={data.quotedEmployees.edges} />
       <Benefits />
     </MapBackground>
-    <CurrentOpenings jobs={data.jobs.edges} />
+    <CurrentOpenings jobs={[]} />
   </AptibleLayout>
 );
 
@@ -33,8 +36,13 @@ export const query = graphql`
       filter: {
         slug: {
           in: [
-            "ashley-mathew", "chris-gomes", "elyssa-cendana", "david-wen",
-            "mia-lopez", "sarah-veirs", "zachary-starr-glasser"
+            "ashley-mathew"
+            "chris-gomes"
+            "elyssa-cendana"
+            "david-wen"
+            "mia-lopez"
+            "sarah-veirs"
+            "zachary-starr-glasser"
           ]
         }
       }
@@ -46,22 +54,6 @@ export const query = graphql`
             file {
               url
             }
-          }
-        }
-      }
-    }
-    jobs: allLever(
-      sort: {
-        fields: [categories___team]
-      }
-    ) {
-      edges {
-        node {
-          text
-          hostedUrl
-          categories {
-            team
-            location
           }
         }
       }
