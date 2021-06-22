@@ -3,6 +3,7 @@ FROM node:10 AS builder
 ARG NODE_ENV=production
 ARG CONTENTFUL_HOST="cdn.contentful.com"
 ARG CONTENTFUL_SPACE_ID="cdn.contentful.com"
+ARG CONTENTFUL_ACCESS_TOKEN=""
 
 RUN env
 

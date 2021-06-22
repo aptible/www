@@ -34,7 +34,9 @@ IMG="quay.io/aptible/${NAME}:${TAG}"
   # Extract build commit
   COMMIT="$(git rev-parse --verify "${BRANCH}^{commit}")"
 
-  docker build -t "$IMG" "$@" "$PROJECT"
+  docker build -t "$IMG" \
+      --build-arg "CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN" \
+      "$@" "$PROJECT"
 } 1>&2
 
 echo "$IMG"
