@@ -4,8 +4,12 @@ import { Slider, Rail, Handles, Tracks, Ticks } from 'react-compound-slider';
 
 export function Handle({ handle: { id, percent }, getHandleProps }) {
   return (
-    <div className={styles.handle} style={{ left: `${percent}%` }} {...getHandleProps(id)}></div>
-  )
+    <div
+      className={styles.handle}
+      style={{ left: `${percent}%` }}
+      {...getHandleProps(id)}
+    />
+  );
 }
 
 function Track({ source, target, getTrackProps }) {
@@ -18,53 +22,54 @@ function Track({ source, target, getTrackProps }) {
       }}
       {...getTrackProps()}
     />
-  )
+  );
 }
 
 function Tick({ tick, count, calculator, active }) {
   return (
     <div>
       <div
-        className={`${styles.tick} ${tick.value === active ? styles.activeTick : ''}`}
+        className={`${styles.tick} ${
+          tick.value === active ? styles.activeTick : ''
+        }`}
         style={{
           marginLeft: `${-(100 / count) / 2}%`,
           width: `${100 / count}%`,
           left: `${tick.percent}%`,
         }}
       >
-        {(tick.value === active || calculator[tick.value]['alwaysDisplay']) && 
-          calculator[tick.value].tick
-        }
+        {(tick.value === active || calculator[tick.value]['alwaysDisplay']) &&
+          calculator[tick.value].tick}
 
-        {(tick.value !== active && !calculator[tick.value]['alwaysDisplay']) &&
-          <div className={styles.blankTick}></div>
-        }
+        {tick.value !== active && !calculator[tick.value]['alwaysDisplay'] && (
+          <div className={styles.blankTick} />
+        )}
       </div>
     </div>
-  )
+  );
 }
 
 class PricingSlider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: this.props.defaultValue
+      value: this.props.defaultValue,
     };
   }
 
-  valueChanged = (value) => {
+  valueChanged = value => {
     this.setState({ value: value[0] });
 
     if (this.props.updatePriceFn) {
       this.props.updatePriceFn(value[0]);
     }
-  }
+  };
 
   render() {
     return (
       <Slider
         className={styles.slider}
-        domain={[0, (this.props.calculator.length - 1)]}
+        domain={[0, this.props.calculator.length - 1]}
         step={1}
         values={[this.state.value]}
         onUpdate={this.valueChanged}
@@ -111,14 +116,15 @@ class PricingSlider extends React.Component {
                     tick={tick}
                     count={ticks.length}
                     calculator={this.props.calculator}
-                    active={this.state.value} />
+                    active={this.state.value}
+                  />
                 ))}
               </div>
-            )
+            );
           }}
         </Ticks>
       </Slider>
-    )
+    );
   }
 }
 

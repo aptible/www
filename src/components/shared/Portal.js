@@ -1,29 +1,33 @@
-import { Component } from 'react'
-import ReactDOM from 'react-dom'
+import { Component } from 'react';
+import ReactDOM from 'react-dom';
 
-const portalRoot = typeof document !== `undefined` ? document.getElementById('modal-portal') : null
+const portalRoot =
+  typeof document !== `undefined`
+    ? document.getElementById('modal-portal')
+    : null;
 
 export default class Portal extends Component {
   constructor() {
-    super()
-    this.el = typeof document !== `undefined` ? document.createElement('div') : null
+    super();
+    this.el =
+      typeof document !== `undefined` ? document.createElement('div') : null;
   }
 
   componentDidMount = () => {
-    portalRoot.appendChild(this.el)
-  }
+    portalRoot.appendChild(this.el);
+  };
 
   componentWillUnmount = () => {
-    portalRoot.removeChild(this.el)
-  }
+    portalRoot.removeChild(this.el);
+  };
 
   render() {
-    const { children } = this.props
+    const { children } = this.props;
 
     if (this.el) {
-      return ReactDOM.createPortal(children, this.el)
+      return ReactDOM.createPortal(children, this.el);
     } else {
-      return null
+      return null;
     }
   }
 }

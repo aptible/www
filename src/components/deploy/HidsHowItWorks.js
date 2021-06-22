@@ -16,8 +16,8 @@ export default () => (
           <h3>Event Collection & Monitoring</h3>
           <p>
             Security events are collected using OSSEC, a leading open source
-            intrusion detection system. The Aptible Security Team monitors
-            these events.
+            intrusion detection system. The Aptible Security Team monitors these
+            events.
           </p>
         </div>
       </div>
@@ -29,7 +29,8 @@ export default () => (
           <p>
             The Aptible Security Team actively reviews each security event using
             our ISO 27001 certified security review process. The Security Team
-            classifies each as either legitimate or indicative of potential attack.
+            classifies each as either legitimate or indicative of potential
+            attack.
           </p>
         </div>
       </div>
@@ -50,11 +51,13 @@ export default () => (
         <h1>Sample HIDS Compliance Report</h1>
         <p className="XL">
           Provide your customers and auditors with evidence that your host-based
-          intrusion detection system is monitoring activity and potential threats
-          are resolved.
+          intrusion detection system is monitoring activity and potential
+          threats are resolved.
         </p>
 
-        <Button href="/assets/Enclave-Intrusion-Detection-Report_shared-us-west-1_2017-11-06.pdf">Download Sample Report</Button>
+        <Button href="/assets/Enclave-Intrusion-Detection-Report_shared-us-west-1_2017-11-06.pdf">
+          Download Sample Report
+        </Button>
       </div>
     </Grid>
   </div>

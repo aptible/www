@@ -7,14 +7,16 @@ class WistiaVideo extends React.Component {
   }
 
   componentWillMount() {
-    if (typeof (window) === 'undefined') {
-      return
+    if (typeof window === 'undefined') {
+      return;
     }
 
     const script1 = window.document.createElement('script');
     const script2 = window.document.createElement('script');
 
-    script1.src = `https://fast.wistia.com/embed/medias/${this.props.videoId}.jsonp`;
+    script1.src = `https://fast.wistia.com/embed/medias/${
+      this.props.videoId
+    }.jsonp`;
     script1.async = true;
 
     script2.src = 'https://fast.wistia.com/assets/external/E-v1.js';
@@ -27,7 +29,13 @@ class WistiaVideo extends React.Component {
   render() {
     return (
       <div>
-        <div className={`wistia_embed wistia_async_${this.props.videoId} videoFoam=true ${this.props.autoPlay ? 'autoPlay=true' : ''} ${this.props.silentAutoPlay ? 'silentAutoPlay=true' : ''}`} />
+        <div
+          className={`wistia_embed wistia_async_${
+            this.props.videoId
+          } videoFoam=true ${this.props.autoPlay ? 'autoPlay=true' : ''} ${
+            this.props.silentAutoPlay ? 'silentAutoPlay=true' : ''
+          }`}
+        />
       </div>
     );
   }

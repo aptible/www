@@ -9,7 +9,9 @@ import ZeroTo from '../components/footer/ZeroTo';
 export default () => (
   <AptibleLayout>
     <Helmet>
-      <title>Aptible Comply | Shorten sales cycles &amp; automate compliance work</title>
+      <title>
+        Aptible Comply | Shorten sales cycles &amp; automate compliance work
+      </title>
       <meta
         name="description"
         content="Aptible Comply helps you win bigger deals faster by giving customers instant access to the security and information they need to buy and gives your customer trust team superpowers through automated compliance operations and evidence collection."

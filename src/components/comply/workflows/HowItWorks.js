@@ -15,9 +15,9 @@ export default () => (
           <div>
             <p>
               We give you the “instruction manual” for what needs to be done to
-              satisfy the requirements of your targeted frameworks. Each Workflow
-              is mapped cleanly to your policies out of the box, and you can
-              make customizations as needed.
+              satisfy the requirements of your targeted frameworks. Each
+              Workflow is mapped cleanly to your policies out of the box, and
+              you can make customizations as needed.
             </p>
           </div>
         </div>
@@ -29,7 +29,8 @@ export default () => (
           <div>
             <p>
               As events are triggered, the “instruction manual” for that event
-              kicks off the activities necessary to satisfy the appropriate policies.
+              kicks off the activities necessary to satisfy the appropriate
+              policies.
             </p>
           </div>
         </div>
@@ -40,8 +41,8 @@ export default () => (
           <h3 className={styles.number}>03</h3>
           <div>
             <p>
-              The team responsible for completing the activities will receive
-              an email notifying them that there is work to be completed. By
+              The team responsible for completing the activities will receive an
+              email notifying them that there is work to be completed. By
               logging into the app, they can see what needs to be done along
               with specific instructions.
             </p>
@@ -55,7 +56,8 @@ export default () => (
           <div>
             <p>
               The required activity is tracked and the assigned team member can
-              mark it as complete, creating an audit-ready log of what’s been done.
+              mark it as complete, creating an audit-ready log of what’s been
+              done.
             </p>
           </div>
         </div>

@@ -24,7 +24,9 @@ export default () => (
       </div>
 
       <div className={`${styles.persona} ${styles.personaThree}`}>
-        <h6>Teams that need to focus on development and still get compliant.</h6>
+        <h6>
+          Teams that need to focus on development and still get compliant.
+        </h6>
       </div>
 
       <div className={styles.customersLeft}>

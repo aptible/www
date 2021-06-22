@@ -3,10 +3,12 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import WistiaVideo from '../shared/WistiaVideo';
 import styles from './RichText.module.css';
 
-const renderAssetBlock = (node) => {
+const renderAssetBlock = node => {
   const { file } = node.data.target.fields;
-  return <img className={styles.image} src={file['en-US'].url} alt="contentful" />
-}
+  return (
+    <img className={styles.image} src={file['en-US'].url} alt="contentful" />
+  );
+};
 
 const renderWistiaBlockquote = (node, children) => {
   if (node.content.length === 1 && node.content[0].content.length === 1) {
@@ -17,25 +19,25 @@ const renderWistiaBlockquote = (node, children) => {
         <div className={styles.video}>
           <WistiaVideo videoId={videoId} />
         </div>
-      )
+      );
     }
   }
 
   return <blockquote>{children}</blockquote>;
-}
+};
 
 const renderHyperlink = (node, children) => {
   const url = node.data.uri.replace('https://app.contentful.com', '');
-  return <a href={url}>{children}</a>
-}
+  return <a href={url}>{children}</a>;
+};
 
 const options = {
   renderNode: {
     'embedded-asset-block': renderAssetBlock,
-    'blockquote': renderWistiaBlockquote,
-    'hyperlink': renderHyperlink
-  }
-}
+    blockquote: renderWistiaBlockquote,
+    hyperlink: renderHyperlink,
+  },
+};
 
 export default ({ json }) => {
   return documentToReactComponents(json, options);

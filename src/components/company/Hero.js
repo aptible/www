@@ -10,7 +10,8 @@ export default ({ webcamPhotos }) => (
     <Grid rows="2">
       <div className={styles.headline}>
         <h1 className="hero">
-          We're building<br />
+          We're building
+          <br />
           trust on the internet.
         </h1>
       </div>

@@ -9,7 +9,9 @@ export default () => (
     <Grid>
       <div className={styles.content}>
         <h5>Aptible Comply</h5>
-        <h1 className="hero">Sell faster and smarter with compliance datarooms</h1>
+        <h1 className="hero">
+          Sell faster and smarter with compliance datarooms
+        </h1>
 
         <p className="XL">
           Aptible Comply Rooms is a <strong>free</strong> dataroom solution for

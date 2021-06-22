@@ -6,8 +6,10 @@ import ShareIcons from '../shared/ShareIcons';
 import ContentfulRichText from '../contentful/ContentfulRichText';
 import ArrowButton from '../buttons/ArrowButton';
 
-export default ({ currentPage, allPages }) => {  
-  const currentIndex = allPages.map(page => page.node.title).indexOf(currentPage.title);
+export default ({ currentPage, allPages }) => {
+  const currentIndex = allPages
+    .map(page => page.node.title)
+    .indexOf(currentPage.title);
   const nextIndex = currentIndex + 1;
   const nextPage = allPages.length !== nextIndex ? allPages[nextIndex] : null;
 

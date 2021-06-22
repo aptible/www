@@ -6,48 +6,50 @@ class TextInput extends React.Component {
     super(props);
     this.state = {
       focus: false,
-      value: this.props.value
+      value: this.props.value,
     };
   }
 
-  setFocus = (focus) => {
+  setFocus = focus => {
     this.setState({ focus: focus });
-  }
+  };
 
-  valueChange = (e) => {
+  valueChange = e => {
     this.setState({ value: e.target.value });
 
     if (this.props.changeFn) {
       this.props.changeFn(e.target.value);
     }
-  }
+  };
 
   showOutsideLabel = () => {
-    return this.state.focus || (this.state.value && this.state.value.length > 0)
-  }
+    return (
+      this.state.focus || (this.state.value && this.state.value.length > 0)
+    );
+  };
 
   showPlaceholder = () => {
     return !this.showOutsideLabel();
-  }
+  };
 
   render() {
     return (
       <div className={styles.container}>
-        <label className={`${styles.label} ${this.showOutsideLabel() ? styles.focused : ''}`}>
+        <label
+          className={`${styles.label} ${
+            this.showOutsideLabel() ? styles.focused : ''
+          }`}
+        >
           {this.props.labelText}
-          {this.props.required && 
-            <span className={styles.required}>*</span>
-          }
+          {this.props.required && <span className={styles.required}>*</span>}
         </label>
 
-        {this.showPlaceholder() && 
+        {this.showPlaceholder() && (
           <div className={styles.placeholder}>
             {this.props.labelText}
-            {this.props.required &&
-              <span className={styles.required}>*</span>
-            }
+            {this.props.required && <span className={styles.required}>*</span>}
           </div>
-        }
+        )}
 
         <input
           type="text"
@@ -55,9 +57,10 @@ class TextInput extends React.Component {
           value={this.state.value}
           onChange={this.valueChange}
           onFocus={() => this.setFocus(true)}
-          onBlur={() => this.setFocus(false)} />
+          onBlur={() => this.setFocus(false)}
+        />
       </div>
-    )
+    );
   }
 }
 

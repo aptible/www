@@ -3,8 +3,5 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from './CodeBlock';
 
 export default ({ children }) => (
-  <ReactMarkdown
-    source={children}
-    renderers={{ code: CodeBlock }}
-  />
+  <ReactMarkdown source={children} renderers={{ code: CodeBlock }} />
 );

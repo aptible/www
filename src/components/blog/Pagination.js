@@ -4,7 +4,9 @@ import { Grid } from '../grid/Grid';
 import styles from './Pagination.module.css';
 
 function urlForPage(pageNum, categorySlug) {
-  const categoryBase = categorySlug ? `/blog/category/${categorySlug}/` : `/blog/`;
+  const categoryBase = categorySlug
+    ? `/blog/category/${categorySlug}/`
+    : `/blog/`;
 
   if (pageNum < 2) {
     return categoryBase;
@@ -20,7 +22,10 @@ export default ({ numPages, currentPage, categorySlug }) => (
         <Link
           key={i}
           to={urlForPage(i + 1, categorySlug)}
-          className={`${styles.pageLink} ${currentPage === (i + 1) ? styles.current : ''}`}>
+          className={`${styles.pageLink} ${
+            currentPage === i + 1 ? styles.current : ''
+          }`}
+        >
           {i + 1}
         </Link>
       ))}

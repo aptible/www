@@ -8,19 +8,28 @@ class MobileMenu extends React.Component {
   }
 
   toggleMenu = () => {
-    this.props.onClickFn('mobile')
-  }
+    this.props.onClickFn('mobile');
+  };
 
   menuItemText = () => {
     return this.props.navOpen ? 'Close' : 'Menu';
-  }
+  };
 
   render() {
     return (
       <div className={styles.container}>
-        <div className={`${styles.menuItem} ${this.props.navOpen ? styles.menuItemOpen : ''}`} onClick={this.toggleMenu}>
+        <div
+          className={`${styles.menuItem} ${
+            this.props.navOpen ? styles.menuItemOpen : ''
+          }`}
+          onClick={this.toggleMenu}
+        >
           {this.menuItemText()}
-          <span className={`${styles.arrow} ${this.props.navOpen ? styles.up : styles.down}`}></span>
+          <span
+            className={`${styles.arrow} ${
+              this.props.navOpen ? styles.up : styles.down
+            }`}
+          />
         </div>
       </div>
     );

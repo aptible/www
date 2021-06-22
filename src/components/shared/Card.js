@@ -21,7 +21,7 @@ import virtaLogo from '../../images/customers/logos/virta.svg';
 
 const photos = {
   fortmatic: formaticPhoto,
-  quadpay: quadpayPhoto
+  quadpay: quadpayPhoto,
 };
 
 const logos = {
@@ -33,21 +33,21 @@ const logos = {
   riffyn: riffynLogo,
   snaps: snapsLogo,
   vergesense: vergesenseLogo,
-  virta: virtaLogo
+  virta: virtaLogo,
 };
 
 class Card extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showVideo: false
+      showVideo: false,
     };
   }
 
-  videoClick = (e) => {
+  videoClick = e => {
     e.preventDefault();
     this.setState({ showVideo: true });
-  }
+  };
 
   render() {
     const customer = this.props.customer;
@@ -58,18 +58,24 @@ class Card extends React.Component {
     const ContainerElement = to ? Link : 'div';
 
     return (
-      <ContainerElement to={to} className={`${styles.container} ${to ? styles.linkedContainer : ''}`}>
-        {image &&
+      <ContainerElement
+        to={to}
+        className={`${styles.container} ${to ? styles.linkedContainer : ''}`}
+      >
+        {image && (
           <div className={styles.imageContainer}>
-            {customerData.videoId &&
+            {customerData.videoId && (
               <React.Fragment>
-                {this.state.showVideo &&
+                {this.state.showVideo && (
                   <div className={styles.videoContainer}>
-                    <WistiaVideo videoId={customerData.videoId} autoPlay="true" />
+                    <WistiaVideo
+                      videoId={customerData.videoId}
+                      autoPlay="true"
+                    />
                   </div>
-                }
+                )}
 
-                {!this.state.showVideo &&
+                {!this.state.showVideo && (
                   <React.Fragment>
                     <div className={styles.videoLength}>
                       <div className={styles.videoPlayIcon}>
@@ -77,56 +83,65 @@ class Card extends React.Component {
                       </div>
                       <p className="L-bold">{customerData.videoLength}</p>
                     </div>
-                    <div className={styles.videoClick} onClick={this.videoClick}></div>
+                    <div
+                      className={styles.videoClick}
+                      onClick={this.videoClick}
+                    />
                   </React.Fragment>
-                }
+                )}
               </React.Fragment>
-            }
+            )}
 
-            {!this.state.showVideo &&
+            {!this.state.showVideo && (
               <img src={image} className={styles.image} alt="Customer" />
-            }
+            )}
           </div>
-        }
+        )}
 
         <div className={styles.card}>
-          <div className={`${styles.arrow} ${image ? styles.withImage : ''}`}><Arrow /></div>
+          <div className={`${styles.arrow} ${image ? styles.withImage : ''}`}>
+            <Arrow />
+          </div>
 
-          {logos[customer] &&
-            <img src={logos[customer]} className={styles.logo} alt="Customer logo" />
-          }
+          {logos[customer] && (
+            <img
+              src={logos[customer]}
+              className={styles.logo}
+              alt="Customer logo"
+            />
+          )}
 
-          {customerData.headline &&
-            <h5 dangerouslySetInnerHTML={{ __html: customerData.headline }}></h5>
-          }
+          {customerData.headline && (
+            <h5 dangerouslySetInnerHTML={{ __html: customerData.headline }} />
+          )}
 
-          {customerData.text &&
-            <p>{customerData.text}</p>
-          }
+          {customerData.text && <p>{customerData.text}</p>}
 
-          {customerData.author &&
+          {customerData.author && (
             <p className={styles.author}>{customerData.author}</p>
-          }
+          )}
 
-          {to &&
+          {to && (
             <div className={styles.readMore}>
               <p>Read More</p>
             </div>
-          }
+          )}
 
-          {customerData.tags &&
+          {customerData.tags && (
             <div className={styles.tags}>
               {customerData.tags.map((tag, idx) => {
-                return <span key={idx} className={styles.tag}>{tag}</span>
+                return (
+                  <span key={idx} className={styles.tag}>
+                    {tag}
+                  </span>
+                );
               })}
             </div>
-          }
-
+          )}
         </div>
       </ContainerElement>
     );
   }
 }
-
 
 export default Card;

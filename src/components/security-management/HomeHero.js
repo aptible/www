@@ -7,9 +7,7 @@ export default ({ chapter }) => (
   <Grid>
     <div className={styles.container}>
       <h3>Chapter 01</h3>
-      <h1 className="hero">
-        {chapter.pageTitle}
-      </h1>
+      <h1 className="hero">{chapter.pageTitle}</h1>
       <img src={heroImage} alt="Introduction to Security Management" />
     </div>
   </Grid>

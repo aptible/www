@@ -15,26 +15,39 @@ const customers = [
     image: null,
     headline: (
       <React.Fragment>
-        <h2><span className={styles.quoteStart}>&ldquo;</span>We want our end users to know we take security very seriously.</h2>
-        <h2>With Aptible we were able to secure our SOC 2 audit very quickly.&rdquo;</h2>
+        <h2>
+          <span className={styles.quoteStart}>&ldquo;</span>We want our end
+          users to know we take security very seriously.
+        </h2>
+        <h2>
+          With Aptible we were able to secure our SOC 2 audit very
+          quickly.&rdquo;
+        </h2>
       </React.Fragment>
     ),
-    description: 'Fortmatic uses Aptible Comply to build their Security Management Program and secured their SOC 2 audit in a fraction of the time.',
+    description:
+      'Fortmatic uses Aptible Comply to build their Security Management Program and secured their SOC 2 audit in a fraction of the time.',
     photo: fortmaticPhoto,
-    logo: fortmaticLogo
+    logo: fortmaticLogo,
   },
   {
     image: null,
     headline: (
       <React.Fragment>
-        <h2><span className={styles.quoteStart}>&ldquo;</span>Aptible Comply is amazing.</h2>
-        <h2>It's very easy to use, and the pre-built content is a huge win.&rdquo;</h2>
+        <h2>
+          <span className={styles.quoteStart}>&ldquo;</span>Aptible Comply is
+          amazing.
+        </h2>
+        <h2>
+          It's very easy to use, and the pre-built content is a huge win.&rdquo;
+        </h2>
       </React.Fragment>
     ),
-    description: 'Quadpay uses Aptible to build out best practice policies and procedures and to streamline answering VSAs.',
+    description:
+      'Quadpay uses Aptible to build out best practice policies and procedures and to streamline answering VSAs.',
     photo: quadpayPhoto,
-    logo: quadpayLogo
-  }
+    logo: quadpayLogo,
+  },
 ];
 
 class CustomerCarousel extends React.Component {
@@ -43,7 +56,7 @@ class CustomerCarousel extends React.Component {
     this.state = {
       openIdx: 0,
       timerRunning: true,
-      animateIn: true
+      animateIn: true,
     };
 
     this.animationInterval = null;
@@ -55,57 +68,69 @@ class CustomerCarousel extends React.Component {
     const stopAnimation = () => {
       this.stopAnimationTimeout = setTimeout(() => {
         this.setState({ animateIn: false });
-      }, 9000)
+      }, 9000);
     };
 
     stopAnimation();
 
     this.animationInterval = setInterval(() => {
-      const nextIdx = this.state.openIdx === (customers.length - 1) ? 0 : this.state.openIdx + 1;
+      const nextIdx =
+        this.state.openIdx === customers.length - 1
+          ? 0
+          : this.state.openIdx + 1;
       this.setState({ openIdx: nextIdx, animateIn: true }, stopAnimation);
     }, 10000);
-  }
+  };
 
   componentWillUnmount = () => {
     this.clearTimers();
-  }
+  };
 
   clearTimers = () => {
     clearTimeout(this.stopAnimationTimeout);
     clearInterval(this.animationInterval);
-  }
+  };
 
-  thumbnailClick = (idx) => {
+  thumbnailClick = idx => {
     this.clearTimers();
     this.setState({ openIdx: idx, timerRunning: false });
-  }
+  };
 
   render() {
     return (
       <Grid>
-        <div className={`${styles.content} ${this.state.animateIn ? styles.animateIn : ''} ${this.state.timerRunning ? '' : styles.animationStopped}`} ref={this.contentRef}>
+        <div
+          className={`${styles.content} ${
+            this.state.animateIn ? styles.animateIn : ''
+          } ${this.state.timerRunning ? '' : styles.animationStopped}`}
+          ref={this.contentRef}
+        >
           <h5>Our Customers</h5>
 
           {customers[this.state.openIdx].headline}
-          <p className="L">
-            {customers[this.state.openIdx].description}
-          </p>
+          <p className="L">{customers[this.state.openIdx].description}</p>
 
-          {this.props.linkToCustomers &&
+          {this.props.linkToCustomers && (
             <ArrowButton to="/customers/" text="Our Customers" />
-          }
+          )}
 
-          {(!this.props.linkToCustomers && customers[this.state.openIdx].caseStudy) &&
-            <ArrowButton to={customers[this.state.openIdx].caseStudy} text="Read The Case Study" />
-          }
-
+          {!this.props.linkToCustomers &&
+            customers[this.state.openIdx].caseStudy && (
+              <ArrowButton
+                to={customers[this.state.openIdx].caseStudy}
+                text="Read The Case Study"
+              />
+            )}
         </div>
 
         <div className={styles.mainImage}>
           <div className={styles.photo}>
             <img src={customers[this.state.openIdx].photo} alt="Customer" />
             <div className={styles.logo}>
-              <img src={customers[this.state.openIdx].logo} alt="Customer Logo" />
+              <img
+                src={customers[this.state.openIdx].logo}
+                alt="Customer Logo"
+              />
             </div>
           </div>
         </div>
@@ -117,11 +142,12 @@ class CustomerCarousel extends React.Component {
               clickFn={() => this.thumbnailClick(idx)}
               timerRunning={this.state.timerRunning}
               customer={customers[idx]}
-              active={this.state.openIdx === idx} />
+              active={this.state.openIdx === idx}
+            />
           ))}
         </div>
       </Grid>
-    )
+    );
   }
 }
 

@@ -17,11 +17,11 @@ export default ({ customerQuote }) => {
         </div>
       )}
       <div>
-        <p className={styles.quote}>
-          “{quote.quote}”
-        </p>
+        <p className={styles.quote}>“{quote.quote}”</p>
         <div className={styles.citation}>
-          <div>{name}, {jobTitle}</div>
+          <div>
+            {name}, {jobTitle}
+          </div>
           <div className={styles.company}>{company}</div>
         </div>
       </div>

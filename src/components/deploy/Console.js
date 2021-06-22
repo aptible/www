@@ -47,7 +47,7 @@ class Console extends React.Component {
     this.state = {
       lines: [],
       nextCommand: 0,
-      clicked: { close: false, minimize: false, expand: false }
+      clicked: { close: false, minimize: false, expand: false },
     };
   }
 
@@ -57,11 +57,11 @@ class Console extends React.Component {
 
   startTyping = () => {
     this.outputNextCommand();
-  }
+  };
 
   outputNextCommand = () => {
-    if (this.state.nextCommand > (commands.length - 1)) {
-      return
+    if (this.state.nextCommand > commands.length - 1) {
+      return;
     }
 
     let lines = this.state.lines;
@@ -73,8 +73,10 @@ class Console extends React.Component {
     lines.push(
       <div>
         <span className={styles.prompt}>$</span>
-        <div className={styles.input} ref={lineRef}>{typedCommand.chars}</div>
-      </div>
+        <div className={styles.input} ref={lineRef}>
+          {typedCommand.chars}
+        </div>
+      </div>,
     );
 
     this.setState({ lines: lines });
@@ -98,25 +100,28 @@ class Console extends React.Component {
     } else {
       this.scheduleNextCommand();
     }
-  }
+  };
 
-  typeCommand = (command) => {
+  typeCommand = command => {
     const chars = command.split('');
     const response = {
-      delay: chars.length * KEYPRESS_DELAY_MS
+      delay: chars.length * KEYPRESS_DELAY_MS,
     };
 
     response.chars = chars.map((char, idx) => {
-      return <span
-              key={idx}
-              className={styles.inputChar}
-              style={{ transitionDelay: `${idx * KEYPRESS_DELAY_MS}ms`}}>
-                {char}
-              </span>
+      return (
+        <span
+          key={idx}
+          className={styles.inputChar}
+          style={{ transitionDelay: `${idx * KEYPRESS_DELAY_MS}ms` }}
+        >
+          {char}
+        </span>
+      );
     });
 
     return response;
-  }
+  };
 
   scheduleNextCommand = () => {
     this.setState({ nextCommand: this.state.nextCommand + 1 });
@@ -124,42 +129,56 @@ class Console extends React.Component {
     setTimeout(() => {
       this.outputNextCommand();
     }, NEXT_INPUT_DELAY_MS);
-  }
+  };
 
-  clickButton = (button) => {
+  clickButton = button => {
     const clicked = this.state.clicked;
     clicked[button] = true;
-    this.setState({ clicked: clicked })
-  }
+    this.setState({ clicked: clicked });
+  };
 
   renderLines = () => {
-    if (this.state.clicked.close && this.state.clicked.minimize && this.state.clicked.expand) {
-      return <pre>{oswaldo}</pre>
+    if (
+      this.state.clicked.close &&
+      this.state.clicked.minimize &&
+      this.state.clicked.expand
+    ) {
+      return <pre>{oswaldo}</pre>;
     } else {
       return this.state.lines.map((line, idx) => {
-        return <div key={idx} className={styles.line}>{line}</div>
+        return (
+          <div key={idx} className={styles.line}>
+            {line}
+          </div>
+        );
       });
     }
-  }
+  };
 
   render() {
     return (
       <div className={styles.console}>
         <div className={styles.taskbar}>
-          <div className={`${styles.button} ${styles.close}`} onClick={() => this.clickButton('close')}></div>
-          <div className={`${styles.button} ${styles.minimize}`} onClick={() => this.clickButton('minimize')}></div>
-          <div className={`${styles.button} ${styles.expand}`} onClick={() => this.clickButton('expand')}></div>
+          <div
+            className={`${styles.button} ${styles.close}`}
+            onClick={() => this.clickButton('close')}
+          />
+          <div
+            className={`${styles.button} ${styles.minimize}`}
+            onClick={() => this.clickButton('minimize')}
+          />
+          <div
+            className={`${styles.button} ${styles.expand}`}
+            onClick={() => this.clickButton('expand')}
+          />
         </div>
-        <div className={styles.content}>
-          {this.renderLines()}
-        </div>
+        <div className={styles.content}>{this.renderLines()}</div>
       </div>
-    )
+    );
   }
 }
 
 export default Console;
-
 
 const oswaldo = `
                             .---.         ,,

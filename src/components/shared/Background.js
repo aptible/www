@@ -22,11 +22,7 @@ const Background = ({
     backgroundSize: size,
   };
 
-  return (
-    <div style={backgroundStyle}>
-      {children}
-    </div>
-  );
+  return <div style={backgroundStyle}>{children}</div>;
 };
 
 export default Background;

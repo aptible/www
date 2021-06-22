@@ -33,14 +33,26 @@ export default () => (
       <div className={styles.arrows}>
         <div className={styles.without}>
           <p>Your sales cycle without Comply</p>
-          <svg width="455" height="7" viewBox="0 0 455 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="455"
+            height="7"
+            viewBox="0 0 455 7"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path d="M444.134 0.395996L446.19 2.99996L8.0414 3L10.0966 0.396067L0.134361 3.38552H0.134278L0.134319 3.38553L0.134277 3.38555H0.134361L10.0966 6.375L8.22209 4L446.009 3.99996L444.134 6.37493L454.097 3.38547L444.134 0.395996Z" />
           </svg>
         </div>
 
         <div className={styles.with}>
           <p>Your sales cycle with Comply</p>
-          <svg width="97" height="7" viewBox="0 0 97 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="97"
+            height="7"
+            viewBox="0 0 97 7"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path d="M87 0.395996L89.0553 3.00001L7.90859 3L9.96378 0.396067L0.00154827 3.38552H0.00147342L0.00151084 3.38553L0.00146484 3.38555H0.00155685L9.96379 6.375L8.08928 4L88.8745 4.00001L87 6.37493L96.9623 3.38547L96.9622 3.38545L87 0.395996Z" />
           </svg>
         </div>

@@ -11,7 +11,10 @@ export default () => (
   <AptibleLayout>
     <Helmet>
       <title>Aptible Comply | Automate Security and Compliance</title>
-      <meta name="description" content="Aptible Comply Workflows automate the management of your company’s security, keeping track of everything you have to do to maintain compliance (and stay secure)." />
+      <meta
+        name="description"
+        content="Aptible Comply Workflows automate the management of your company’s security, keeping track of everything you have to do to maintain compliance (and stay secure)."
+      />
     </Helmet>
     <Hero />
     <Features />

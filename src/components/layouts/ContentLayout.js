@@ -10,11 +10,11 @@ export default ({ title, SidebarComponent, children, fullWidth }) => (
         <h1>{title}</h1>
       </div>
 
-      {SidebarComponent &&
+      {SidebarComponent && (
         <div className={styles.sidebar}>
           <SidebarComponent />
         </div>
-      }
+      )}
 
       <div className={fullWidth ? styles.contentFullWidth : styles.content}>
         {children}

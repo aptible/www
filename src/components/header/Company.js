@@ -36,7 +36,7 @@ const Company = () => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.links}>
-        {COMPANY_NAV.filter((link) => link.show).map((link) => (
+        {COMPANY_NAV.filter(link => link.show).map(link => (
           <div className={styles.link} key={link.url}>
             <Link to={link.url}>{link.title}</Link>
           </div>
@@ -47,8 +47,12 @@ const Company = () => (
         <Link className={styles.callout} to="/owners-manual/">
           <img src={teamPhoto} alt="" />
           <div className={styles.calloutText}>
-            <h5>Owner’s Manual <span className={styles.arrow}>&rarr;</span></h5>
-            <p>Get a clear sense of what this team is — what we mean by “us.”</p>
+            <h5>
+              Owner’s Manual <span className={styles.arrow}>&rarr;</span>
+            </h5>
+            <p>
+              Get a clear sense of what this team is — what we mean by “us.”
+            </p>
           </div>
         </Link>
       </div>

@@ -12,16 +12,16 @@ export default ({ integration }) => {
   return (
     <Link className={styles.link} to={`/comply/integrations/${slug}/`}>
       <div className={styles.container}>
-        <div
-          className={styles.header}
-        >
+        <div className={styles.header}>
           <Logo
             src={logo.file.url}
             width={logo.file.details.image.width / 4}
             alt={`${name} integration logo`}
           />
 
-          <div className={styles.arrow}><Arrow /></div>
+          <div className={styles.arrow}>
+            <Arrow />
+          </div>
         </div>
         <div className={styles.body}>
           <h4>{name}</h4>

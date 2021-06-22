@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import { Grid } from '../components/grid/Grid';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 
-
 export default () => (
   <AptibleLayout>
     <Helmet>
@@ -18,7 +17,9 @@ export default () => (
           Maybe you mistyped the address? If not, the page may have moved.
         </h4>
 
-        <p style={{ marginBottom: '30px' }}><Link to="/">Back to Home</Link></p>
+        <p style={{ marginBottom: '30px' }}>
+          <Link to="/">Back to Home</Link>
+        </p>
 
         <p>
           <a href="/documentation/index.html">Documentation</a> &nbsp;
@@ -27,7 +28,9 @@ export default () => (
           <a href="https://account.aptible.com">Account</a> &nbsp;
           <a href="http://status.aptible.com/">Aptible Status</a> &nbsp;
           <a href="https://twitter.com/aptiblestatus">@aptiblestatus</a> &nbsp;
-          <a href="https://aptible.zendesk.com/hc/en-us/requests/new">Contact Support</a>
+          <a href="https://aptible.zendesk.com/hc/en-us/requests/new">
+            Contact Support
+          </a>
         </p>
       </div>
     </Grid>

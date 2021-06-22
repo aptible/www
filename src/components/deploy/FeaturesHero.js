@@ -8,7 +8,11 @@ export default () => (
     <Grid>
       <div className={styles.content}>
         <h5>Aptible Deploy Features</h5>
-        <h1 className="hero">Automate<br className="mobileOnly" /> your<br className="desktopOnly" /> security controls</h1>
+        <h1 className="hero">
+          Automate
+          <br className="mobileOnly" /> your
+          <br className="desktopOnly" /> security controls
+        </h1>
         <SignupButton text="Start with Deploy" product="deploy" />
       </div>
     </Grid>

@@ -14,7 +14,9 @@ export default () => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.automates}>
-        <h2>Workflows turns your Security Management program into Actions...</h2>
+        <h2>
+          Workflows turns your Security Management program into Actions...
+        </h2>
       </div>
 
       <div className={styles.firstLeft}>
@@ -53,9 +55,9 @@ export default () => (
           </div>
           <h5>Automated Follow-up</h5>
           <p>
-            Aptible Comply Workflows measures all security and compliance related
-            activities so you can see what <i>needs</i> to be done, what is being
-            done, and report on security progress quickly and easily.
+            Aptible Comply Workflows measures all security and compliance
+            related activities so you can see what <i>needs</i> to be done, what
+            is being done, and report on security progress quickly and easily.
           </p>
         </div>
 
@@ -66,9 +68,9 @@ export default () => (
           <h5>Delegation</h5>
           <p>
             Turn compliance requirements into discrete, assignable tasks with
-            owners and deadlines, providing to dos that can be configured and are
-            automatically delegated to your team members, who get notified of
-            what they need to do.
+            owners and deadlines, providing to dos that can be configured and
+            are automatically delegated to your team members, who get notified
+            of what they need to do.
           </p>
         </div>
       </div>
@@ -84,11 +86,11 @@ export default () => (
           </div>
           <h5>Streamline Audits</h5>
           <p>
-            Aptible Comply Workflows showcases the responsibility and consistency
-            with which your team is handling security, creating documentation
-            that puts all of your security and compliance related activities on
-            a silver platter for your auditor, ensuring you pass every audit
-            with flying colors.
+            Aptible Comply Workflows showcases the responsibility and
+            consistency with which your team is handling security, creating
+            documentation that puts all of your security and compliance related
+            activities on a silver platter for your auditor, ensuring you pass
+            every audit with flying colors.
           </p>
         </div>
 
@@ -129,8 +131,8 @@ export default () => (
             Aptible Workflows keeps track of your compliance efforts for you so
             that you don’t worry about remembering to complete ad hoc, manual
             processes or reminding team members of their responsibilities. You
-            know that everything is being done to keep your company in compliance
-            at all times.
+            know that everything is being done to keep your company in
+            compliance at all times.
           </p>
         </div>
       </div>

@@ -8,20 +8,20 @@ class NewsletterSignup extends React.Component {
     super(props);
     this.state = {
       email: '',
-      finished: false
+      finished: false,
     };
   }
 
-  emailChanged = (e) => {
+  emailChanged = e => {
     this.setState({ email: e.target.value });
-  }
+  };
 
-  keyPress = (e) => {
+  keyPress = e => {
     if (e.key === 'Enter') {
       e.preventDefault();
       this.submit();
     }
-  }
+  };
 
   submit = () => {
     if (this.state.email.length < 1 || this.state.email.indexOf('@') === -1) {
@@ -30,7 +30,7 @@ class NewsletterSignup extends React.Component {
 
     const payload = {
       Email: this.state.email,
-      LeadSource: 'Content Signup'
+      LeadSource: 'Content Signup',
     };
 
     submitMarketoForm(NEWSLETTER_FORM, payload, () => {
@@ -38,14 +38,14 @@ class NewsletterSignup extends React.Component {
     });
 
     try {
-      window.__adroll.record_user({"adroll_segments": "647ff3ff"});
-    } catch(err) {}
-  }
+      window.__adroll.record_user({ adroll_segments: '647ff3ff' });
+    } catch (err) {}
+  };
 
   render() {
     return (
       <form className={styles.form}>
-        {!this.state.finished &&
+        {!this.state.finished && (
           <React.Fragment>
             <input
               className={styles.input}
@@ -53,16 +53,15 @@ class NewsletterSignup extends React.Component {
               placeholder="youremail@address.com"
               value={this.state.email}
               onChange={this.emailChanged}
-              onKeyDown={this.keyPress} />
+              onKeyDown={this.keyPress}
+            />
             <div className={styles.arrow} onClick={this.submit}>
               <Arrow theme="noCircle" />
             </div>
           </React.Fragment>
-        }
+        )}
 
-        {this.state.finished &&
-          <p>You are subscribed!</p>
-        }
+        {this.state.finished && <p>You are subscribed!</p>}
       </form>
     );
   }

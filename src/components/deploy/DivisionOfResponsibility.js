@@ -27,7 +27,9 @@ export default () => (
 
         <div className={styles.featureGrid}>
           {deployFeatures.slice(0, 6).map((feature, idx) => (
-            <div key={idx} className={styles.feature}>{feature.headline}</div>
+            <div key={idx} className={styles.feature}>
+              {feature.headline}
+            </div>
           ))}
         </div>
       </div>
@@ -40,7 +42,9 @@ export default () => (
 
         <div className={styles.featureGrid}>
           {deployFeatures.slice(6).map((feature, idx) => (
-            <div key={idx} className={styles.feature}>{feature.headline}</div>
+            <div key={idx} className={styles.feature}>
+              {feature.headline}
+            </div>
           ))}
         </div>
       </div>
@@ -54,7 +58,9 @@ export default () => (
         <div className={styles.featureGrid}>
           <div className={styles.feature}>AWS Shield DDoS Protection</div>
           <div className={styles.feature}>Spoofing & Sniffing Protection</div>
-          <div className={styles.feature}>Physical and Environmental Controls</div>
+          <div className={styles.feature}>
+            Physical and Environmental Controls
+          </div>
           <div className={styles.feature}>Hypervisor Security</div>
           <div className={styles.feature}>Port Scanning Protection</div>
         </div>

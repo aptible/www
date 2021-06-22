@@ -13,7 +13,10 @@ export default () => (
           up-to-date and suggest your own integrations on Comply’s Integration
           Roadmap.
         </p>
-        <ArrowButton href="https://roadmap.aptible.com/" text="See Comply’s Integration Roadmap" />
+        <ArrowButton
+          href="https://roadmap.aptible.com/"
+          text="See Comply’s Integration Roadmap"
+        />
       </div>
     </Grid>
   </div>

@@ -6,7 +6,7 @@ import styles from './ResourceCards.module.css';
 import ResourceCard from './ResourceCard';
 
 const ResourceCards = ({ resources, categorySlug }) => {
-  const halfwayThrough = Math.floor(resources.length / 2)
+  const halfwayThrough = Math.floor(resources.length / 2);
   const leftResources = resources.slice(0, halfwayThrough);
   const rightResources = resources.slice(halfwayThrough, resources.length);
 
@@ -18,20 +18,23 @@ const ResourceCards = ({ resources, categorySlug }) => {
             <h6 className="small">Library</h6>
 
             <Link
-              className={categorySlug === '' ? styles.active : ""}
+              className={categorySlug === '' ? styles.active : ''}
               to="/resources/"
             >
               All
             </Link>
 
-            {categories.map((category) => {
+            {categories.map(category => {
               return (
                 <Link
-                  className={categorySlug === category.slug ? styles.active : ""}
+                  className={
+                    categorySlug === category.slug ? styles.active : ''
+                  }
                   to={`/resources/${category.slug}/`}
                   key={category.slug}
                 >
-                  {category.title}{category.title !== 'Deploy' ? 's' : ''}
+                  {category.title}
+                  {category.title !== 'Deploy' ? 's' : ''}
                 </Link>
               );
             })}

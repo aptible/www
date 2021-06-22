@@ -9,10 +9,11 @@
     "build-staging": "yarn run build && cp _redirects ./public/_redirects && cat _staging-redirects >> ./public/_redirects",
     "build": "gatsby build",
     "develop": "gatsby develop -p 8001",
-    "format": "prettier --write src/**/*.{js,jsx}",
+    "format": "prettier --write 'src/**/*.js'",
     "start": "yarn run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.2.0",
@@ -30,7 +31,6 @@
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-yaml": "^2.1.10",
     "postcss-preset-env": "^6.6.0",
-    "prettier": "^1.16.4",
     "react": "^16.8.4",
     "react-compound-slider": "^2.0.0",
     "react-dom": "^16.8.4",
@@ -40,6 +40,12 @@
     "react-use": "^15.3.3"
   },
   "devDependencies": {
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^1.16.4"
   },
-  "browserslist": "last 1 version and not dead and > 0.2%"
+  "browserslist": "last 1 version and not dead and > 0.2%",
+  "lint-staged": {
+    "*.js": "prettier --write"
+  }
 }

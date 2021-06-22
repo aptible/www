@@ -12,20 +12,28 @@ export default ({ post }) => (
     <Grid>
       {post.author && (
         <div className={styles.authorPhoto}>
-          <img src={post.author.professionalPhoto.file.url} alt={post.author.name} />
-          {post.secondAuthor &&
-            <img src={post.secondAuthor.professionalPhoto.file.url} alt={post.secondAuthor.name} />
-          }
+          <img
+            src={post.author.professionalPhoto.file.url}
+            alt={post.author.name}
+          />
+          {post.secondAuthor && (
+            <img
+              src={post.secondAuthor.professionalPhoto.file.url}
+              alt={post.secondAuthor.name}
+            />
+          )}
         </div>
       )}
 
       <div className={styles.content}>
-        <h5><Link to="/blog/">Blog</Link></h5>
+        <h5>
+          <Link to="/blog/">Blog</Link>
+        </h5>
 
         <div className={styles.metaContainer}>
           <Meta post={post} disableAuthorLink="true" />
         </div>
-        
+
         <h1>{post.title}</h1>
 
         <div className={styles.share}>
@@ -40,9 +48,7 @@ export default ({ post }) => (
 
         {post.bodyMarkdown && (
           <div className={styles.body}>
-            <Markdown>
-              {post.bodyMarkdown.bodyMarkdown}
-            </Markdown>
+            <Markdown>{post.bodyMarkdown.bodyMarkdown}</Markdown>
           </div>
         )}
       </div>

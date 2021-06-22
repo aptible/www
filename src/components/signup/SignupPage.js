@@ -6,17 +6,17 @@ class SignupPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: false,
     };
   }
 
   componentDidMount = () => {
-    if (typeof (window) === 'undefined') {
+    if (typeof window === 'undefined') {
       return;
     }
 
     this.setState({ open: true });
-  }
+  };
 
   render() {
     return (
@@ -24,9 +24,7 @@ class SignupPage extends React.Component {
         <div className={styles.container}>
           <h1 className={styles.heading}>Sign Up</h1>
         </div>
-        {this.state.open &&
-          <Signup to="/" product={this.props.product} />
-        }
+        {this.state.open && <Signup to="/" product={this.props.product} />}
       </React.Fragment>
     );
   }

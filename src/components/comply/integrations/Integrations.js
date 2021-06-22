@@ -18,11 +18,11 @@ class Integrations extends React.Component {
     };
   }
 
-  filterResources = (event) => {
+  filterResources = event => {
     this.setState({
       activeFilter: event.target.textContent,
     });
-  }
+  };
 
   render() {
     const { integrations } = this.props;
@@ -34,7 +34,7 @@ class Integrations extends React.Component {
         return integrations;
       }
 
-      return integration.controls.includes(activeFilter); 
+      return integration.controls.includes(activeFilter);
     });
 
     return (
@@ -46,7 +46,7 @@ class Integrations extends React.Component {
               <button
                 key={filter}
                 onClick={this.filterResources}
-                className={activeFilter === filter ? styles.active : ""}
+                className={activeFilter === filter ? styles.active : ''}
               >
                 {filter}
               </button>
@@ -57,10 +57,7 @@ class Integrations extends React.Component {
         <div className={styles.container}>
           {filteredIntegrations.map(integration => {
             return (
-              <IntegrationCard
-                key={integration.id}
-                integration={integration}
-              />
+              <IntegrationCard key={integration.id} integration={integration} />
             );
           })}
         </div>

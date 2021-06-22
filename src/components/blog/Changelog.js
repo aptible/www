@@ -10,11 +10,16 @@ export default ({ post }) => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.authorPhoto}>
-        <img src={post.author.professionalPhoto.file.url} alt={post.author.name} />
+        <img
+          src={post.author.professionalPhoto.file.url}
+          alt={post.author.name}
+        />
       </div>
 
       <div className={styles.content}>
-        <h5><Link to="/changelog/">Changelog</Link></h5>
+        <h5>
+          <Link to="/changelog/">Changelog</Link>
+        </h5>
 
         <div className={styles.metaContainer}>
           <Meta post={post} disableAuthorLink="true" />

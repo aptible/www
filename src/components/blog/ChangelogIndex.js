@@ -10,7 +10,10 @@ function ChangelogSummary({ post }) {
   return (
     <Link className={styles.postSummary} to={`/changelog/${post.slug}/`}>
       <div className={styles.authorPhoto}>
-        <img src={post.author.professionalPhoto.file.url} alt={post.author.name} />
+        <img
+          src={post.author.professionalPhoto.file.url}
+          alt={post.author.name}
+        />
       </div>
 
       <h3>{post.title}</h3>
@@ -30,7 +33,7 @@ function ChangelogSummary({ post }) {
 
       <p className={styles.readMore}>Read More</p>
     </Link>
-  )
+  );
 }
 
 export default ({ posts }) => (
@@ -46,16 +49,12 @@ export default ({ posts }) => (
         </Link>
 
         {blogCategories.map((category, idx) => (
-          <Link
-            key={idx}
-            to={`/blog/category/${category.slug}/`}>
+          <Link key={idx} to={`/blog/category/${category.slug}/`}>
             <h6 className="small">{category.title}</h6>
           </Link>
         ))}
 
-        <Link
-          className={styles.activeCategory}
-          to="/changelog/">
+        <Link className={styles.activeCategory} to="/changelog/">
           <h6 className="small">Changelog</h6>
         </Link>
       </div>

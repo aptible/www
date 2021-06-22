@@ -24,7 +24,9 @@ const stickyNavItems = [
 export default ({ data }) => (
   <AptibleLayout>
     <Helmet>
-      <title>Aptible Comply | Compliance monitoring &amp; workflow automation</title>
+      <title>
+        Aptible Comply | Compliance monitoring &amp; workflow automation
+      </title>
       <meta
         name="description"
         content="Aptible Comply takes you Beyond GRC through integrations with your SaaS systems, continuous monitoring for security configuration changes, and automatic workflow delegation, tracking, and analytics."

@@ -29,7 +29,7 @@ class CustomerCards extends React.Component {
           </div>
         </Grid>
       </div>
-    )
+    );
   }
 }
 

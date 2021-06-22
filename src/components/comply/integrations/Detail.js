@@ -29,7 +29,9 @@ export default ({ post }) => {
     <div className={styles.container}>
       <Grid>
         <div className={styles.link}>
-          <Link to="/comply/integrations">&#8592; Back to all integrations</Link>
+          <Link to="/comply/integrations">
+            &#8592; Back to all integrations
+          </Link>
         </div>
 
         <div className={styles.header}>
@@ -83,7 +85,7 @@ export default ({ post }) => {
                   const tag = scope.substring(0, scope.indexOf(':'));
                   return (
                     <li key={scope}>
-                      {tag && <b>{tag}:{' '}</b>}
+                      {tag && <b>{tag}: </b>}
                       {tag ? scope.replace(`${tag}:`, '') : scope}
                     </li>
                   );
@@ -95,7 +97,9 @@ export default ({ post }) => {
           <div className={styles.sidebarSection}>
             <h4>Learn More</h4>
             <p className={styles.documentationUrl}>
-              <a href={documentationUrl}>{`${name} Integration Documentation`}</a>
+              <a
+                href={documentationUrl}
+              >{`${name} Integration Documentation`}</a>
             </p>
           </div>
         </aside>

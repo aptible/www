@@ -8,8 +8,8 @@ export default () => (
       <div className={styles.content}>
         <h2>You're in Great Company</h2>
         <p className="XL">
-          We help hundreds of the most innovative companies to protect
-          sensitive data when the stakes matters most.
+          We help hundreds of the most innovative companies to protect sensitive
+          data when the stakes matters most.
         </p>
       </div>
     </Grid>

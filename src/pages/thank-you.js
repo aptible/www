@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import { Grid } from '../components/grid/Grid';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 
-
 export default () => (
   <AptibleLayout>
     <Helmet>
@@ -19,7 +18,9 @@ export default () => (
           shortly.
         </h4>
 
-        <p style={{ marginBottom: '30px' }}><Link to="/">Back to Home</Link></p>
+        <p style={{ marginBottom: '30px' }}>
+          <Link to="/">Back to Home</Link>
+        </p>
       </div>
     </Grid>
   </AptibleLayout>

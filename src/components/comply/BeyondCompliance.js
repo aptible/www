@@ -9,9 +9,7 @@ export default () => (
     <div className={styles.intro}>
       <Grid>
         <div className={styles.content}>
-          <h1 className="hero">
-            Beyond Compliance
-          </h1>
+          <h1 className="hero">Beyond Compliance</h1>
           <p className="L">
             Compliance is what you need to do: it's the requirement. Aptible
             Comply helps you move Beyond Compliance, to protect data and stay

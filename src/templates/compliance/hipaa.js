@@ -9,12 +9,13 @@ export default ({ data }) => {
     <ComplianceLayout
       regulation={data.hipaa}
       title={data.page.frontmatter.displayTitle}
-      SidebarComponent={HipaaSubnav}>
+      SidebarComponent={HipaaSubnav}
+    >
       <Helmet>
         <title>{data.page.frontmatter.title}</title>
         <meta name="description" content={data.page.frontmatter.displayTitle} />
       </Helmet>
-      <div dangerouslySetInnerHTML={{ __html: data.page.html }}></div>
+      <div dangerouslySetInnerHTML={{ __html: data.page.html }} />
     </ComplianceLayout>
   );
 };

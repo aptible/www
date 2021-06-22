@@ -8,7 +8,7 @@ export default ({ data }) => {
     <ComplianceLayout
       regulation={{
         hero: {
-          subtitle: "CCPA Compliance Guide",
+          subtitle: 'CCPA Compliance Guide',
         },
       }}
       title={data.page.frontmatter.displayTitle}
@@ -17,7 +17,7 @@ export default ({ data }) => {
         <title>{data.page.frontmatter.title}</title>
         <meta name="description" content={data.page.frontmatter.displayTitle} />
       </Helmet>
-      <div dangerouslySetInnerHTML={{ __html: data.page.html }}></div>
+      <div dangerouslySetInnerHTML={{ __html: data.page.html }} />
     </ComplianceLayout>
   );
 };

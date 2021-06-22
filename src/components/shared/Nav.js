@@ -16,16 +16,16 @@ class Nav extends React.Component {
   componentDidMount = () => {
     this.toggleStickyNav();
     this.lookForActiveItem();
-  }
+  };
 
   componentWillUnmount = () => {
     clearInterval(this.navTimer);
     clearInterval(this.activeItemTimer);
-  }
+  };
 
   toggleStickyNav = () => {
     if (!this.beaconRef.current) {
-      return
+      return;
     }
 
     let beacon, container, beaconPosY, navVisible;
@@ -42,32 +42,32 @@ class Nav extends React.Component {
         this.containerRef.current.style.visibility = 'hidden';
       }
     }, 500);
-  }
+  };
 
   lookForActiveItem = () => {
     let scrollPosition;
-    let reverseRefs = [...this.props.items].map((item) => item.ref).reverse();
+    let reverseRefs = [...this.props.items].map(item => item.ref).reverse();
 
     this.activeItemTimer = setInterval(() => {
-      scrollPosition = window.scrollY + (window.innerHeight / 2);
+      scrollPosition = window.scrollY + window.innerHeight / 2;
 
       for (let id of reverseRefs) {
         const ref = window.document.getElementById(id.replace('#', ''));
         if (!ref) {
-          return
+          return;
         }
 
         const refY = ref.getBoundingClientRect().top + window.scrollY;
 
         if (scrollPosition >= refY) {
           this.setActiveItem(id);
-          return
+          return;
         }
       }
     }, 1000);
-  }
+  };
 
-  setActiveItem = (ref) => {
+  setActiveItem = ref => {
     for (let node of document.querySelectorAll(`.${styles.navItem}`)) {
       if (node.classList.contains(styles.active)) {
         node.classList.remove(styles.active);
@@ -79,16 +79,20 @@ class Nav extends React.Component {
         node.classList.add(styles.active);
       }
     }
-  }
+  };
 
   render() {
     return (
       <React.Fragment>
-        <div className={styles.scrollBeacon} ref={this.beaconRef}></div>
+        <div className={styles.scrollBeacon} ref={this.beaconRef} />
 
         <div className={styles.container} ref={this.containerRef}>
           <Grid>
-            <div className={`${styles.navItems} ${this.props.ctaText ? '' : styles.noCta}`}>
+            <div
+              className={`${styles.navItems} ${
+                this.props.ctaText ? '' : styles.noCta
+              }`}
+            >
               {this.props.items.map((item, idx) => {
                 return (
                   <a href={item.ref} className={styles.navItem} key={idx}>
@@ -101,7 +105,10 @@ class Nav extends React.Component {
 
             {this.props.ctaText && (
               <div className={styles.cta}>
-                <SignupButton text={this.props.ctaText} product={this.props.product} />
+                <SignupButton
+                  text={this.props.ctaText}
+                  product={this.props.product}
+                />
               </div>
             )}
           </Grid>

@@ -21,24 +21,24 @@ class GdprSubnav extends React.Component {
         section.classList.add(styles.sectionOpen);
       }
     }
-  }
+  };
 
-  openSection = (e) => {
+  openSection = e => {
     e.target.parentNode.classList.toggle(styles.sectionOpen);
-  }
+  };
 
-  openSubpart = (e) => {
+  openSubpart = e => {
     e.target.parentNode.classList.toggle(styles.subpartOpen);
-  }
+  };
 
   render() {
     return (
       <SidebarNav title="GDPR Compliance Guide" shortTitle="GDPR Guide">
-        {this.props.regulation.name === 'HIPAA' &&
+        {this.props.regulation.name === 'HIPAA' && (
           <div className={styles.regulationTitle}>
             {this.props.regulation.nav.regulations_title}
           </div>
-        }
+        )}
 
         {this.props.regulation.regulation.map((section, sectionIdx) => (
           <div className={styles.section} key={sectionIdx}>
@@ -51,17 +51,26 @@ class GdprSubnav extends React.Component {
                 <div
                   className={styles.subpartTitle}
                   onClick={this.openSubpart}
-                  dangerouslySetInnerHTML={{ __html: `${subpart.id}: ${subpart.title}` }}>
-                </div>
+                  dangerouslySetInnerHTML={{
+                    __html: `${subpart.id}: ${subpart.title}`,
+                  }}
+                />
 
                 <div className={styles.articleList}>
                   {subpart.subparts.map((article, articleIdx) => (
                     <Link
                       className={styles.articleLink}
-                      to={`/${this.props.regulation.slugs.site}/${this.props.regulation.slugs.regulations}/${article.url}/`}
-                      key={articleIdx}>
-                      <span className={styles.articleId}>Article {article.id}</span>
-                      <span className={styles.articleTitle}>{article.title}</span>
+                      to={`/${this.props.regulation.slugs.site}/${
+                        this.props.regulation.slugs.regulations
+                      }/${article.url}/`}
+                      key={articleIdx}
+                    >
+                      <span className={styles.articleId}>
+                        Article {article.id}
+                      </span>
+                      <span className={styles.articleTitle}>
+                        {article.title}
+                      </span>
                       <div className={styles.circle} />
                     </Link>
                   ))}
@@ -71,7 +80,7 @@ class GdprSubnav extends React.Component {
           </div>
         ))}
       </SidebarNav>
-    )
+    );
   }
 }
 

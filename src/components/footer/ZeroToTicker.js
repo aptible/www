@@ -21,7 +21,7 @@ class ZeroTo extends React.Component {
 
   componentDidMount() {
     if ('IntersectionObserver' in window) {
-      let observer = new IntersectionObserver((entries) => {
+      let observer = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) {
           this.startAnimation();
         } else {
@@ -47,7 +47,8 @@ class ZeroTo extends React.Component {
   }
 
   calculateTargetScrollPosition() {
-    const elYPosition = this.tickerRef.current.getBoundingClientRect().y + window.scrollY;
+    const elYPosition =
+      this.tickerRef.current.getBoundingClientRect().y + window.scrollY;
     const halfViewport = window.innerHeight * TARGET_VIEWPORT_PERCENTAGE;
 
     return elYPosition - halfViewport;
@@ -68,7 +69,7 @@ class ZeroTo extends React.Component {
       this.lastScrollPercent = percentInt;
       window.requestAnimationFrame(() => {
         this.tickerRef.current.children[0].style.transform = `translateY(-${percentInt}%)`;
-      })
+      });
     }
   }, 100);
 
@@ -76,8 +77,12 @@ class ZeroTo extends React.Component {
     return (
       <div className={styles.zero}>
         <Grid rows="2">
-          <div className={styles.zeroTo}><h1>Beyond</h1></div>
-          <div className={styles.arrow}><img src={arrowImage} alt="Arrow" /></div>
+          <div className={styles.zeroTo}>
+            <h1>Beyond</h1>
+          </div>
+          <div className={styles.arrow}>
+            <img src={arrowImage} alt="Arrow" />
+          </div>
           <div className={styles.protocols} ref={this.tickerRef}>
             <div className={styles.protocolTicker}>
               <h1>Spreadsheets</h1>
@@ -88,7 +93,9 @@ class ZeroTo extends React.Component {
           </div>
 
           <div className={styles.start}>
-            <h4>Start eliminating the manual work of security and compliance now.</h4>
+            <h4>
+              Start eliminating the manual work of security and compliance now.
+            </h4>
           </div>
           <div className={styles.button}>
             <SignupButton text="Get Started" theme="black" />

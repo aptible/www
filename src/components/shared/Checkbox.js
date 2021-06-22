@@ -4,8 +4,6 @@ import checkmarkIcon from '../../images/pricing/checkmark.svg';
 
 export default ({ checked }) => (
   <div className={styles.checkbox}>
-    {checked &&
-      <img src={checkmarkIcon} alt="checkmark" />
-    }
+    {checked && <img src={checkmarkIcon} alt="checkmark" />}
   </div>
 );

@@ -13,16 +13,26 @@ export default ({ data, pageContext }) => {
     <ContentLayout title={caseStudy.title} SidebarComponent={CaseStudiesNav}>
       <Helmet>
         <title>Aptible | {caseStudy.title} Case Study</title>
-        <meta name="description" content="Aptible is the leading security management platform for small companies. Here are posts and videos detailing how customers are using Aptible to propel their businesses forward." />
+        <meta
+          name="description"
+          content="Aptible is the leading security management platform for small companies. Here are posts and videos detailing how customers are using Aptible to propel their businesses forward."
+        />
       </Helmet>
-      <ContentfulBlock block={findBlockById(data.blocks.edges, `case-study-${caseStudy.customer}`)} />
+      <ContentfulBlock
+        block={findBlockById(
+          data.blocks.edges,
+          `case-study-${caseStudy.customer}`,
+        )}
+      />
     </ContentLayout>
   );
 };
 
 export const query = graphql`
   query {
-    blocks: allContentfulContentBlock(filter: { page: { eq: "case-studies" } }) {
+    blocks: allContentfulContentBlock(
+      filter: { page: { eq: "case-studies" } }
+    ) {
       ...blockProperties
     }
   }

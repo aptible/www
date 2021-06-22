@@ -11,8 +11,8 @@ export default () => (
           We see a future where it's easy to bring a great idea into the world
           using the internet, while respecting data security and privacy. The
           next generation of businesses will design security and privacy into
-          their operating processes. If every business is going to be a
-          software business, every business will need to be a security business.
+          their operating processes. If every business is going to be a software
+          business, every business will need to be a security business.
         </p>
         <p className="XL">
           We're working to make information security a core competency of every

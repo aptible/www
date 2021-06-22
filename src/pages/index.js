@@ -23,9 +23,7 @@ const primarySections = [
     title: 'Simplify building customer trust',
     body:
       'Comply and Deploy make it easier for compliance managers and developers to create customer trust.',
-    module: (
-      <FeaturesCarousel />
-    ),
+    module: <FeaturesCarousel />,
   },
   {
     id: 'customers',
@@ -43,7 +41,7 @@ const secondarySections = [
     body:
       'We know how important data security is, it’s not just what we help you with, it’s also core to how we operate.',
     module: <Frameworks />,
-  }
+  },
 ];
 
 const IndexPage = () => (

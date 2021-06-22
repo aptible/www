@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const customJs = `
 (function(h,o,t,j,a,r){
@@ -75,8 +75,8 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <script dangerouslySetInnerHTML={{ __html: customJs }}></script>
-        <script dangerouslySetInnerHTML={{ __html: segmentJs }}></script>
+        <script dangerouslySetInnerHTML={{ __html: customJs }} />
+        <script dangerouslySetInnerHTML={{ __html: segmentJs }} />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -90,10 +90,13 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
-      <script src="https://js.chilipiper.com/marketing.js" type="text/javascript"></script>
-      <script src="//app-ab35.marketo.com/js/forms2/js/forms2.min.js"></script>
+      <script
+        src="https://js.chilipiper.com/marketing.js"
+        type="text/javascript"
+      />
+      <script src="//app-ab35.marketo.com/js/forms2/js/forms2.min.js" />
     </html>
-  )
+  );
 }
 
 HTML.propTypes = {
@@ -103,4 +106,4 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
-}
+};

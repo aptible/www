@@ -20,7 +20,10 @@ export default ({ data }) => (
   <AptibleLayout>
     <Helmet>
       <title>Aptible | About Aptible</title>
-      <meta name="description" content="Aptible is a remote team seeking to build trust on the internet. Learn more about Aptible and the team behind it." />
+      <meta
+        name="description"
+        content="Aptible is a remote team seeking to build trust on the internet. Learn more about Aptible and the team behind it."
+      />
     </Helmet>
     <Hero webcamPhotos={data.webcamPhotos.edges} />
     <Nav items={stickyNavItems} />
@@ -61,14 +64,8 @@ export const query = graphql`
 
     webcamPhotos: allContentfulEmployee(
       filter: {
-        visible: { ne: false },
-        webcamPhoto: {
-          file: {
-            url:{
-              ne: null
-            }
-          }
-        }
+        visible: { ne: false }
+        webcamPhoto: { file: { url: { ne: null } } }
       }
     ) {
       edges {

@@ -3,12 +3,26 @@ import Portal from '../shared/Portal';
 import CheckmarkUnorderedList from '../shared/CheckmarkUnorderedList';
 import Button from '../buttons/Button';
 import styles from './Download.module.css';
-import { submitMarketoForm, SECURITY_MANAGEMENT_GUIDE_FORM } from '../../lib/marketo';
+import {
+  submitMarketoForm,
+  SECURITY_MANAGEMENT_GUIDE_FORM,
+} from '../../lib/marketo';
 import heroImage from '../../images/security-management/sm1.jpg';
 
 const closeIcon = (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M19 1L1.32993 18.9924M18.6841 19L1 1.02118" stroke="white" strokeOpacity="0.7" strokeWidth="2" />
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19 1L1.32993 18.9924M18.6841 19L1 1.02118"
+      stroke="white"
+      strokeOpacity="0.7"
+      strokeWidth="2"
+    />
   </svg>
 );
 
@@ -24,13 +38,13 @@ class InnerDownload extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: ''
+      email: '',
     };
   }
 
-  emailChanged = (e) => {
+  emailChanged = e => {
     this.setState({ email: e.target.value });
-  }
+  };
 
   submit = () => {
     if (this.state.email.length < 1 || this.state.email.indexOf('@') === -1) {
@@ -39,21 +53,22 @@ class InnerDownload extends React.Component {
 
     const payload = {
       Email: this.state.email,
-      LeadSource: 'Content Signup'
+      LeadSource: 'Content Signup',
     };
 
     submitMarketoForm(SECURITY_MANAGEMENT_GUIDE_FORM, payload, () => {
-      window.location = 'https://pages.aptible.com/rs/620-GAP-535/images/2019.10.17%20Security%20Management%20Guide.pdf';
+      window.location =
+        'https://pages.aptible.com/rs/620-GAP-535/images/2019.10.17%20Security%20Management%20Guide.pdf';
     });
-  }
+  };
 
   closeWindow = () => {
     this.props.closeFn();
-  }
+  };
 
-  dontClose = (e) => {
+  dontClose = e => {
     e.stopPropagation();
-  }
+  };
 
   render() {
     return (
@@ -65,7 +80,12 @@ class InnerDownload extends React.Component {
             </div>
 
             <h4>Download the Security Management Guide</h4>
-            <input type="email" placeholder="you@yourwork.com" value={this.state.value} onChange={this.emailChanged} />
+            <input
+              type="email"
+              placeholder="you@yourwork.com"
+              value={this.state.value}
+              onChange={this.emailChanged}
+            />
 
             <div className={styles.button}>
               <Button onClickFn={this.submit}>Download the Guide</Button>
@@ -88,7 +108,7 @@ class InnerDownload extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

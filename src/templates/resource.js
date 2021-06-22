@@ -10,7 +10,10 @@ export default ({ data }) => (
       <title>Aptible | {data.resource.title}</title>
       <meta name="description" content={data.resource.title} />
       <meta property="og:title" content={data.resource.title} />
-      <meta property="og:description" content={`Aptible: ${data.resource.title}`} />
+      <meta
+        property="og:description"
+        content={`Aptible: ${data.resource.title}`}
+      />
     </Helmet>
 
     <Resource resource={data.resource} />

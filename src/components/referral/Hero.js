@@ -15,11 +15,11 @@ export default () => (
         </h1>
 
         <p className="XL">
-          Whether a company is working to prepare for a compliance audit,
-          spends a significant amount of time completing Vendor Security
-          Assessments, is searching for their first full time security hire,
-          or is selling into the enterprise and needs help proving their
-          security position, Aptible can help!
+          Whether a company is working to prepare for a compliance audit, spends
+          a significant amount of time completing Vendor Security Assessments,
+          is searching for their first full time security hire, or is selling
+          into the enterprise and needs help proving their security position,
+          Aptible can help!
         </p>
       </div>
 
@@ -30,8 +30,8 @@ export default () => (
         </p>
 
         <p className="L">
-          To get started, send an email
-          to <a href="mailto:referrals@aptible.com">referrals@aptible.com</a> with
+          To get started, send an email to{' '}
+          <a href="mailto:referrals@aptible.com">referrals@aptible.com</a> with
           the following information:
         </p>
 
@@ -47,7 +47,6 @@ export default () => (
 
         <Button href="mailto:referrals@aptible.com">Send Referral</Button>
       </div>
-      
     </Grid>
   </div>
 );

@@ -8,7 +8,7 @@ export default () => (
     <Helmet>
       <title>Aptible Referral Program</title>
     </Helmet>
-    
+
     <Hero />
   </AptibleLayout>
 );

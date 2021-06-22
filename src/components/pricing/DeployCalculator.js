@@ -96,19 +96,32 @@ const toolTips = {
          intrusion detection monitoring and incident response. The Aptible
          Security Team investigates, responds to, and resolves any security
          incidents.`,
-  disk:  `Encrypted database storage. Includes backups: daily for 90 days,
+  disk: `Encrypted database storage. Includes backups: daily for 90 days,
           monthly for 6 years.`,
   endpoints: `Endpoints attach to your containers so that they can be accessed
               over the internet, or by other containers. May be HTTPS, TCP, or
               TLS Endpoints.`,
-  stack: <>Based on 730 hours/month, <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">more info</a></>,
-  support: <>Learn more about <Link to="/deploy/support/">Deploy support plans</Link>.</>,
+  stack: (
+    <>
+      Based on 730 hours/month,{' '}
+      <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">
+        more info
+      </a>
+    </>
+  ),
+  support: (
+    <>
+      Learn more about <Link to="/deploy/support/">Deploy support plans</Link>.
+    </>
+  ),
 };
 
 const Amount = ({ value }) => {
   return (
     <div className={styles.amount}>
-      <h5><span>${value}</span>/mo</h5>
+      <h5>
+        <span>${value}</span>/mo
+      </h5>
     </div>
   );
 };
@@ -125,9 +138,7 @@ const LineItem = ({ title, helpText, calculatedAmount, lineItemAmount }) => (
     </div>
 
     {lineItemAmount && (
-      <div className={styles.lineItemAmount}>
-        {lineItemAmount}
-      </div>
+      <div className={styles.lineItemAmount}>{lineItemAmount}</div>
     )}
   </>
 );
@@ -171,23 +182,23 @@ class DeployCalculator extends React.Component {
 
   toggleDedicatedStack = () => {
     this.setState({ dedicatedStack: !this.state.dedicatedStack });
-  }
+  };
 
-  toggleSupportPlanOption = (value) => {
+  toggleSupportPlanOption = value => {
     if (value !== this.state.supportPlan) {
       this.setState({
         supportPlan: value,
       });
     }
-  }
+  };
 
   toggleManagedHids = () => {
     this.setState({ managedHids: !this.state.managedHids });
-  }
+  };
 
   containersAmount = () => {
     return calculators.containers[this.state.containersIndex].cost;
-  }
+  };
 
   containersManagedHidsAmount = () => {
     if (!this.state.managedHids) {
@@ -195,35 +206,35 @@ class DeployCalculator extends React.Component {
     }
 
     return calculators.containersManagedHids[this.state.containersIndex].cost;
-  }
+  };
 
-  updateContainersIndex = (idx) => {
+  updateContainersIndex = idx => {
     this.setState({ containersIndex: idx });
-  }
+  };
 
   diskAmount = () => {
     return calculators.encryptedDisk[this.state.diskIndex].cost;
-  }
+  };
 
-  updateDiskIndex = (idx) => {
+  updateDiskIndex = idx => {
     this.setState({ diskIndex: idx });
-  }
+  };
 
   endpointsAmount = () => {
     return calculators.endpoints[this.state.endpointsIndex].cost;
-  }
+  };
 
-  updateEndpointsIndex = (idx) => {
+  updateEndpointsIndex = idx => {
     this.setState({ endpointsIndex: idx });
-  }
+  };
 
   vpnConnectionsAmount = () => {
     return calculators.vpnConnections[this.state.vpnConnectionsIndex].cost;
-  }
+  };
 
-  updateVpnConnectionsIndex = (idx) => {
+  updateVpnConnectionsIndex = idx => {
     this.setState({ vpnConnectionsIndex: idx });
-  }
+  };
 
   dedicatedStackAmount = () => {
     if (!this.state.dedicatedStack) {
@@ -231,13 +242,13 @@ class DeployCalculator extends React.Component {
     }
 
     return '499';
-  }
+  };
 
   supportPlanAmount = () => {
     return calculators.supportPlan[this.state.supportPlan].cost;
-  }
+  };
 
-  convertAmountToNumber = (amount) => parseInt(amount.replace(/,/g, ''), 10);
+  convertAmountToNumber = amount => parseInt(amount.replace(/,/g, ''), 10);
 
   calculateEstimatedAmount = () => {
     const amounts = [
@@ -248,10 +259,10 @@ class DeployCalculator extends React.Component {
       this.vpnConnectionsAmount(),
       this.dedicatedStackAmount(),
       this.supportPlanAmount(),
-    ].map((amount) => this.convertAmountToNumber(amount));
+    ].map(amount => this.convertAmountToNumber(amount));
 
     return amounts.reduce((a, b) => a + b, 0).toLocaleString('en');
-  }
+  };
 
   render() {
     return (
@@ -263,7 +274,11 @@ class DeployCalculator extends React.Component {
             title="App &amp; Database Containers"
             helpText={toolTips.containers}
             calculatedAmount={this.containersAmount()}
-            lineItemAmount={<><span>$0.08</span>/GB/Hour</>}
+            lineItemAmount={
+              <>
+                <span>$0.08</span>/GB/Hour
+              </>
+            }
             pricingSlider={
               <PricingSlider
                 calculator={calculators.containers}
@@ -271,8 +286,10 @@ class DeployCalculator extends React.Component {
                 updatePriceFn={this.updateContainersIndex}
               />
             }
-          > 
-            <div className={`${styles.lineItemDescription} ${styles.hidsLineItem}`}>
+          >
+            <div
+              className={`${styles.lineItemDescription} ${styles.hidsLineItem}`}
+            >
               With Managed HIDS
               <ToolTip text={toolTips.hids} />
             </div>
@@ -306,7 +323,11 @@ class DeployCalculator extends React.Component {
             title="Encrypted Disk"
             helpText={toolTips.disk}
             calculatedAmount={this.diskAmount()}
-            lineItemAmount={<><span>$0.37</span>/GB/Month</>}
+            lineItemAmount={
+              <>
+                <span>$0.37</span>/GB/Month
+              </>
+            }
             pricingSlider={
               <PricingSlider
                 calculator={calculators.encryptedDisk}
@@ -315,12 +336,16 @@ class DeployCalculator extends React.Component {
               />
             }
           />
-          
+
           <Resource
             title="Endpoints"
             helpText={toolTips.endpoints}
             calculatedAmount={this.endpointsAmount()}
-            lineItemAmount={<><span>$0.05</span>/Hour/Month</>}
+            lineItemAmount={
+              <>
+                <span>$0.05</span>/Hour/Month
+              </>
+            }
             pricingSlider={
               <PricingSlider
                 calculator={calculators.endpoints}
@@ -333,7 +358,11 @@ class DeployCalculator extends React.Component {
           <Resource
             title="VPN Connections"
             calculatedAmount={this.vpnConnectionsAmount()}
-            lineItemAmount={<><span>$99</span>/Connection/Month</>}
+            lineItemAmount={
+              <>
+                <span>$99</span>/Connection/Month
+              </>
+            }
             pricingSlider={
               <PricingSlider
                 calculator={calculators.vpnConnections}
@@ -344,25 +373,25 @@ class DeployCalculator extends React.Component {
           />
 
           <Resource
-             title="Dedicated Stack for Regulated Data"
-             helpText={toolTips.stack}
-             calculatedAmount={this.dedicatedStackAmount()}
-           >
-             <div className={styles.toggleButtons}>
-               <button
-                 onClick={this.toggleDedicatedStack}
-                 disabled={this.state.dedicatedStack}
-               >
-                 With Dedicated Stack
-               </button>
-               <button
-                 onClick={this.toggleDedicatedStack}
-                 disabled={!this.state.dedicatedStack}
-               >
-                 Without Dedicated Stack
-               </button>
-             </div>
-           </Resource>
+            title="Dedicated Stack for Regulated Data"
+            helpText={toolTips.stack}
+            calculatedAmount={this.dedicatedStackAmount()}
+          >
+            <div className={styles.toggleButtons}>
+              <button
+                onClick={this.toggleDedicatedStack}
+                disabled={this.state.dedicatedStack}
+              >
+                With Dedicated Stack
+              </button>
+              <button
+                onClick={this.toggleDedicatedStack}
+                disabled={!this.state.dedicatedStack}
+              >
+                Without Dedicated Stack
+              </button>
+            </div>
+          </Resource>
 
           <Resource
             title="Support Plan"

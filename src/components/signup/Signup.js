@@ -8,7 +8,12 @@ import Email from './Email';
 import ProductSelection from './ProductSelection';
 import Confirmation from './Confirmation';
 import Unqualified from './Unqualified';
-import { submitMarketoForm, COMPLY_SIGNUP_FORM, DEPLOY_SIGNUP_FORM, GENERIC_SIGNUP_FORM } from '../../lib/marketo';
+import {
+  submitMarketoForm,
+  COMPLY_SIGNUP_FORM,
+  DEPLOY_SIGNUP_FORM,
+  GENERIC_SIGNUP_FORM,
+} from '../../lib/marketo';
 import { analytics } from '../../lib/aptible';
 
 function Signup(props) {
@@ -27,18 +32,18 @@ class InnerSignup extends React.Component {
       marketingConsent: null,
       product: this.props.product ? this.props.product : null,
       scheduledCall: null,
-      currentView: Email
+      currentView: Email,
     };
   }
 
   componentDidMount = () => {
     this.funnelEvent('open');
-  }
+  };
 
-  funnelEvent = (name) => {
+  funnelEvent = name => {
     const funnelType = this.props.product ? this.props.product : 'generic';
     analytics.event(`signup:${funnelType}:${name}`);
-  }
+  };
 
   setEmail = (email, marketingConsent, personaAnaswer) => {
     this.setState({ email, marketingConsent });
@@ -46,19 +51,20 @@ class InnerSignup extends React.Component {
       this.funnelEvent('email_collected');
 
       // Linkedin pixel
-      (new Image()).src = 'https://px.ads.linkedin.com/collect/?pid=42067&conversionId=2213244&fmt=gif';
+      new Image().src =
+        'https://px.ads.linkedin.com/collect/?pid=42067&conversionId=2213244&fmt=gif';
 
       // Adroll
       if (this.state.product && this.state.product === 'deploy') {
         // Deploy pixel
         try {
-          window.__adroll.record_user({"adroll_segments": "57de1b27"});
-        } catch(err) {}
+          window.__adroll.record_user({ adroll_segments: '57de1b27' });
+        } catch (err) {}
       } else {
         // Comply pixel
         try {
-          window.__adroll.record_user({"adroll_segments": "b5d1620a"});
-        } catch(err) {}
+          window.__adroll.record_user({ adroll_segments: 'b5d1620a' });
+        } catch (err) {}
       }
 
       if (this.state.product) {
@@ -73,9 +79,9 @@ class InnerSignup extends React.Component {
         this.setState({ currentView: ProductSelection });
       }
     });
-  }
+  };
 
-  setProduct = (productName) => {
+  setProduct = productName => {
     this.setState({ product: productName });
     this.funnelEvent('product_selected');
     if (productName === 'deploy') {
@@ -83,11 +89,11 @@ class InnerSignup extends React.Component {
     } else {
       this.qualifyComplySignup();
     }
-  }
+  };
 
   isQualified = () => {
-    return this.state.email.match(/(test|gmail|yahoo|hotmail|aol)/) === null
-  }
+    return this.state.email.match(/(test|gmail|yahoo|hotmail|aol)/) === null;
+  };
 
   qualifyComplySignup = () => {
     if (this.isQualified()) {
@@ -97,9 +103,9 @@ class InnerSignup extends React.Component {
       this.funnelEvent('unqualified');
       this.setState({ currentView: Unqualified });
     }
-  }
+  };
 
-  setCall = (scheduledCall) => {
+  setCall = scheduledCall => {
     const popupWindow = document.querySelector('.chilipiper-popup');
     popupWindow.parentNode.removeChild(popupWindow);
 
@@ -107,7 +113,7 @@ class InnerSignup extends React.Component {
 
     const sampleCall = {};
     this.setState({ scheduledCall: sampleCall, currentView: Confirmation });
-  }
+  };
 
   marketoFormId = () => {
     if (this.state.product === 'comply') {
@@ -117,7 +123,7 @@ class InnerSignup extends React.Component {
     } else {
       return GENERIC_SIGNUP_FORM;
     }
-  }
+  };
 
   marketoLeadSource = () => {
     if (this.state.product === 'comply') {
@@ -127,13 +133,13 @@ class InnerSignup extends React.Component {
     } else {
       return 'Website Signup';
     }
-  }
+  };
 
   sendToMarketo = (email, marketingConsent, personaAnaswer, callback) => {
     const payload = {
       Email: email,
       Contact_Consent__c: marketingConsent,
-      LeadSource: this.marketoLeadSource()
+      LeadSource: this.marketoLeadSource(),
     };
 
     if (personaAnaswer) {
@@ -141,7 +147,7 @@ class InnerSignup extends React.Component {
     }
 
     submitMarketoForm(this.marketoFormId(), payload, callback);
-  }
+  };
 
   openChiliPiper = () => {
     if (!window.ChiliPiper) {
@@ -155,18 +161,18 @@ class InnerSignup extends React.Component {
       closeOnOutside: true,
       map: true,
       lead: {
-        Email: this.state.email
-      }
+        Email: this.state.email,
+      },
     });
-  }
+  };
 
-  redirectToDeploy = (email) => {
-    if (typeof(window) === 'undefined') {
+  redirectToDeploy = email => {
+    if (typeof window === 'undefined') {
       return;
     }
 
     window.location = `https://dashboard.aptible.com/signup?email=${email}`;
-  }
+  };
 
   render() {
     const CurrentView = this.state.currentView;
@@ -196,9 +202,10 @@ class InnerSignup extends React.Component {
 
           <div className={styles.content}>
             <CurrentView
-              signupState={this.state} 
+              signupState={this.state}
               setEmail={this.setEmail}
-              setProduct={this.setProduct} />
+              setProduct={this.setProduct}
+            />
           </div>
         </Grid>
       </div>

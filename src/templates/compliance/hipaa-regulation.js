@@ -24,12 +24,16 @@ export default ({ data, pageContext }) => {
     <ComplianceLayout
       regulation={data.hipaa}
       title={title}
-      SidebarComponent={HipaaSubnav}>
+      SidebarComponent={HipaaSubnav}
+    >
       <Helmet>
         <title>{title} | HIPAA Regulations hosted by Aptible</title>
-        <meta name="description" content={`Explore ${title} of the HIPAA Regulations. The full HIPAA Regulation text as provided in the HIPAA Administrative Simplification, annotated by Aptible, easily searchable.`} />
+        <meta
+          name="description"
+          content={`Explore ${title} of the HIPAA Regulations. The full HIPAA Regulation text as provided in the HIPAA Administrative Simplification, annotated by Aptible, easily searchable.`}
+        />
       </Helmet>
-      <div dangerouslySetInnerHTML={{ __html: data.regulation.html }}></div>
+      <div dangerouslySetInnerHTML={{ __html: data.regulation.html }} />
     </ComplianceLayout>
   );
 };

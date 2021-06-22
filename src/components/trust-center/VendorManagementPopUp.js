@@ -134,7 +134,8 @@ export default class VendorManagementPopUp extends React.Component {
   click = () => {
     analytics.event('tc_vm_popup:click');
     cookies.write(DISABLE_POPUP_COOKIE, 'true', this.cookieExpiresAt());
-    window.location.href = 'https://trust.aptible.com/vendor-management?source=www';
+    window.location.href =
+      'https://trust.aptible.com/vendor-management?source=www';
   };
 
   mappedProtocols = () => {
@@ -146,7 +147,7 @@ export default class VendorManagementPopUp extends React.Component {
   render() {
     return (
       <Portal>
-        {this.state.isOpen &&
+        {this.state.isOpen && (
           <div className={styles.container}>
             <div className={styles.closeIcon} onClick={this.close}>
               {closeIcon}
@@ -176,8 +177,9 @@ export default class VendorManagementPopUp extends React.Component {
                 <div className={styles.protocols}>
                   <VendorProtocolIcons
                     mappedProtocols={this.mappedProtocols()}
-                    protocolIds={v.vendorToProtocols.map(vp => vp.protocolId)} />
-              </div>
+                    protocolIds={v.vendorToProtocols.map(vp => vp.protocolId)}
+                  />
+                </div>
               </div>
             ))}
 
@@ -185,7 +187,7 @@ export default class VendorManagementPopUp extends React.Component {
               <Button onClickFn={this.click}>Start Vendor Management</Button>
             </div>
           </div>
-        }
+        )}
       </Portal>
     );
   }

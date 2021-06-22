@@ -10,25 +10,27 @@ export default ({ data, pageContext }) => (
   <AptibleLayout>
     <Helmet>
       <title>Aptible | Changelog</title>
-      <meta name="description" content="Product updates for Aptible Comply and Deploy." />
+      <meta
+        name="description"
+        content="Product updates for Aptible Comply and Deploy."
+      />
     </Helmet>
-    <ChangelogIndex posts={data.posts.edges} categorySlug={pageContext.categorySlug} />
+    <ChangelogIndex
+      posts={data.posts.edges}
+      categorySlug={pageContext.categorySlug}
+    />
     <Pagination
       numPages={pageContext.numPages}
-      currentPage={pageContext.currentPage} />
+      currentPage={pageContext.currentPage}
+    />
     <ZeroTo />
   </AptibleLayout>
 );
 
-
 export const query = graphql`
   query {
     posts: allContentfulBlogPost(
-      filter: {
-        type: {
-          eq: "changelog"
-        }
-      }
+      filter: { type: { eq: "changelog" } }
       sort: { fields: [postedAt], order: DESC }
     ) {
       edges {

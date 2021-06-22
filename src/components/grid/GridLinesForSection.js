@@ -6,9 +6,11 @@ import styleVars from '../../styles/variables';
 export default () => (
   <div className={styles.container}>
     <Grid classOverride={styles.gridLines}>
-      {Array.from({ length: styleVars.customProperties['--grid-columns'] }).map((_, i) => (
-        <div key={i} className={styles.column} />
-      ))}
+      {Array.from({ length: styleVars.customProperties['--grid-columns'] }).map(
+        (_, i) => (
+          <div key={i} className={styles.column} />
+        ),
+      )}
     </Grid>
   </div>
 );

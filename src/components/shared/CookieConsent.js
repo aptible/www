@@ -17,12 +17,12 @@ class InnerCookieConsent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false
+      show: false,
     };
   }
 
   componentDidMount = () => {
-    if (typeof (window) === 'undefined') {
+    if (typeof window === 'undefined') {
       return;
     }
 
@@ -35,7 +35,7 @@ class InnerCookieConsent extends React.Component {
     }
 
     this.setState({ show: true });
-  }
+  };
 
   close = () => {
     const cookieExpiresAt = new Date();
@@ -43,18 +43,18 @@ class InnerCookieConsent extends React.Component {
     cookies.write('cookieConsent', '1', cookieExpiresAt);
 
     this.setState({ show: false });
-  }
+  };
 
   render() {
     return (
       <React.Fragment>
-        {this.state.show &&
+        {this.state.show && (
           <div className={styles.container}>
             <p>
-              This site uses cookies to store information on your computer.
-              Some are essential to make our site work; others help us improve
-              the user experience. By using the site, you consent to the
-              placement of these cookies.
+              This site uses cookies to store information on your computer. Some
+              are essential to make our site work; others help us improve the
+              user experience. By using the site, you consent to the placement
+              of these cookies.
             </p>
 
             <div className={styles.ctas}>
@@ -64,9 +64,9 @@ class InnerCookieConsent extends React.Component {
               </p>
             </div>
           </div>
-        }
+        )}
       </React.Fragment>
-    )
+    );
   }
 }
 

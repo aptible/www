@@ -7,7 +7,7 @@ import Roadmap from '../../components/comply/integrations/Roadmap';
 const getCurrentPage = (activePath, allPages) => {
   const pageEdge = allPages.find(e => e.node.slug === activePath);
   return pageEdge.node;
-}
+};
 
 export default ({ pageContext }) => {
   const { activePath, allPages, defaultMeta } = pageContext;

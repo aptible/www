@@ -27,45 +27,51 @@ export default ({ webinar }) => (
         {(webinar.presenter1 || webinar.presenter2) && (
           <h3 style={{ paddingTop: '30px' }}>Presented By</h3>
         )}
-        {webinar.presenter1 &&
+        {webinar.presenter1 && (
           <div className={styles.presenter}>
-            <img src={webinar.presenter1.professionalPhoto.file.url} alt={webinar.presenter1.name} />
+            <img
+              src={webinar.presenter1.professionalPhoto.file.url}
+              alt={webinar.presenter1.name}
+            />
             <h5>{webinar.presenter1.name}</h5>
             <p>{webinar.presenter1.jobTitle}</p>
           </div>
-        }
-        
-        {webinar.presenter2 &&
+        )}
+
+        {webinar.presenter2 && (
           <div className={styles.presenter}>
-            <img src={webinar.presenter2.professionalPhoto.file.url} alt={webinar.presenter2.name} />
+            <img
+              src={webinar.presenter2.professionalPhoto.file.url}
+              alt={webinar.presenter2.name}
+            />
             <h5>{webinar.presenter2.name}</h5>
             <p>{webinar.presenter2.jobTitle}</p>
           </div>
-        }
+        )}
 
-        {webinar.wistiaVideoId &&
+        {webinar.wistiaVideoId && (
           <React.Fragment>
             <h3 style={{ padding: '30px 0' }}>Video</h3>
             <WistiaVideo videoId={webinar.wistiaVideoId} />
           </React.Fragment>
-        }
+        )}
 
-        {webinar.transcript &&
+        {webinar.transcript && (
           <React.Fragment>
             <h3 style={{ padding: '60px 0 30px 0' }}>Transcript</h3>
             <ContentfulRichText json={webinar.transcript.json} />
           </React.Fragment>
-        }
+        )}
       </div>
 
-      {!webinar.wistiaVideoId &&
+      {!webinar.wistiaVideoId && (
         <div className={styles.form}>
           <WebinarForm
             formId={webinar.marketoFormId}
             optInTextOverride={webinar.formOptInOverride}
           />
         </div>
-      }
+      )}
     </Grid>
   </div>
 );

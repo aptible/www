@@ -17,49 +17,68 @@ const Section = ({ section, allPages }) => {
       <div className={styles.section}>
         <h6 className="small">{section}</h6>
       </div>
-      
-      {sectionRootPages.map((page) => (
-        <PageNavItem key={page.node.slug} page={page.node} allPages={allPages} depth={0} />
+
+      {sectionRootPages.map(page => (
+        <PageNavItem
+          key={page.node.slug}
+          page={page.node}
+          allPages={allPages}
+          depth={0}
+        />
       ))}
     </div>
-  )
+  );
 };
 
 const PageNavItem = ({ page, allPages, depth }) => {
   // TODO: probably best to handle the spacing in CSS
   const depthPadding = '\u00A0\u00A0\u00A0\u00A0'.repeat(depth);
-  const children = allPages.filter(e => e.node.contentfulparent && e.node.contentfulparent.slug === page.slug);
+  const children = allPages.filter(
+    e => e.node.contentfulparent && e.node.contentfulparent.slug === page.slug,
+  );
 
   return (
     <>
-      <SidebarNavItem to={pagePath(page)} text={`${depthPadding}${page.displayTitle || page.title}`} />
+      <SidebarNavItem
+        to={pagePath(page)}
+        text={`${depthPadding}${page.displayTitle || page.title}`}
+      />
 
-      {children.map((child) => (
-        <PageNavItem key={child.node} page={child.node} allPages={allPages} depth={depth + 1} />
+      {children.map(child => (
+        <PageNavItem
+          key={child.node}
+          page={child.node}
+          allPages={allPages}
+          depth={depth + 1}
+        />
       ))}
     </>
-  )
-}
+  );
+};
 
-const pagePath = (page) => {
+const pagePath = page => {
   let path = '/owners-manual';
   if (page.slug) {
     path += `/${page.slug}`;
   }
 
   return path;
-}
+};
 
 export default ({ allPages }) => {
   const rootWithoutSection = allPages.filter(e => e.node.section === null);
 
   return (
     <SidebarNav title="Owner’s Manual">
-      {rootWithoutSection.map((e) => (
-        <SidebarNavItem key={e.node.slug} to={pagePath(e.node)} text={e.node.title} />
+      {rootWithoutSection.map(e => (
+        <SidebarNavItem
+          key={e.node.slug}
+          to={pagePath(e.node)}
+          text={e.node.title}
+        />
       ))}
 
-      {SECTIONS.map((section) => (
+      {SECTIONS.map(section => (
         <Section key={section} section={section} allPages={allPages} />
       ))}
 
@@ -67,5 +86,5 @@ export default ({ allPages }) => {
         <Button to="/careers">Aptible Careers</Button>
       </div>
     </SidebarNav>
-  )
+  );
 };

@@ -30,25 +30,20 @@ const ITEMS = useCases.map((useCase, i) => ({
 
 const FeaturesCarousel = () => {
   return (
-    <Carousel
-      height={776}
-      mobileHeight={550}
-    >
+    <Carousel height={776} mobileHeight={550}>
       {ITEMS.map(item => {
         const { url, id, title, body, image } = item;
         return (
-          <Link
-            key={id}
-            to={url}
-            className={styles.useCase}
-          >
+          <Link key={id} to={url} className={styles.useCase}>
             <div
               className={styles.background}
               style={{
                 backgroundImage: `url(${image})`,
               }}
             />
-            <div role="presentation" className={styles.bigArrow}><Arrow /></div>
+            <div role="presentation" className={styles.bigArrow}>
+              <Arrow />
+            </div>
             <div className={styles.content}>
               <h3>{title}</h3>
               <p>{body}</p>

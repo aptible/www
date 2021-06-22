@@ -5,26 +5,23 @@ import styles from './Meta.module.css';
 const dateFormat = {
   day: 'numeric',
   year: 'numeric',
-  month: 'long'
-}
+  month: 'long',
+};
 
 export default ({ post, disableAuthorLink }) => (
   <div className={styles.meta}>
     <div className={styles.author}>
-      {!disableAuthorLink &&
-        <Link to="/">{post.author.name}</Link>
-      }
+      {!disableAuthorLink && <Link to="/">{post.author.name}</Link>}
 
-      {disableAuthorLink &&
+      {disableAuthorLink && (
         <span>
           {post.author.name}
-          {post.secondAuthor &&
+          {post.secondAuthor && (
             <React.Fragment> &amp; {post.secondAuthor.name}</React.Fragment>
-          }
+          )}
         </span>
-      }
+      )}
     </div>
-
     &bull;
     <div className={styles.postedAt}>
       {new Date(post.postedAt).toLocaleDateString('en-US', dateFormat)}

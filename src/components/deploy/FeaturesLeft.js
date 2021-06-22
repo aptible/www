@@ -9,13 +9,19 @@ export default () => (
         <h1>Only four steps left for you&hellip;</h1>
         <p className="XL">
           &ldquo;[Aptible] just works. Nice UI to setup components and
-          environments which eliminates the complexity of setting up and managing
-          AWS directly. Allows me to worry about the code instead of the
-          underlying deployment infrastructure.&rdquo;
+          environments which eliminates the complexity of setting up and
+          managing AWS directly. Allows me to worry about the code instead of
+          the underlying deployment infrastructure.&rdquo;
         </p>
         <h6 className="small">
-          - Andrew F., Platform Manager at DIAL Insights. 
-          Posted On <a href="https://www.g2.com/products/aptible/reviews/aptible-review-2120360" target="_blank" rel="noopener noreferrer">G2Crowd.com</a>
+          - Andrew F., Platform Manager at DIAL Insights. Posted On{' '}
+          <a
+            href="https://www.g2.com/products/aptible/reviews/aptible-review-2120360"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            G2Crowd.com
+          </a>
         </h6>
       </div>
 
@@ -30,7 +36,11 @@ export default () => (
         </div>
 
         <div className={styles.step}>
-          <h3>Web App Vulnerability<br />Scanning</h3>
+          <h3>
+            Web App Vulnerability
+            <br />
+            Scanning
+          </h3>
           <p className="L">
             You are responsible for detecting and mitigating vulnerabilities in
             your Deploy apps.
@@ -48,7 +58,11 @@ export default () => (
         </div>
 
         <div className={styles.step}>
-          <h3>Protection of Credentials,<br />Tokens, Secrets</h3>
+          <h3>
+            Protection of Credentials,
+            <br />
+            Tokens, Secrets
+          </h3>
           <p className="L">
             You are responsible for managing your passwords, API keys, and other
             secrets. You may use Deploy environment variables to store sensitive

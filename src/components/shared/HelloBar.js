@@ -5,8 +5,19 @@ import styles from './HelloBar.module.css';
 import { cookies } from '../../lib/aptible';
 
 const closeIcon = (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M19 1L1.32993 18.9924M18.6841 19L1 1.02118" stroke="white" strokeOpacity="0.7" strokeWidth="2" />
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19 1L1.32993 18.9924M18.6841 19L1 1.02118"
+      stroke="white"
+      strokeOpacity="0.7"
+      strokeWidth="2"
+    />
   </svg>
 );
 
@@ -14,13 +25,13 @@ class HelloBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false
+      show: false,
     };
   }
 
   componentDidMount = () => {
-    if (typeof(window) === 'undefined') {
-      return
+    if (typeof window === 'undefined') {
+      return;
     }
 
     if (cookies.get(this.cookieName())) {
@@ -28,11 +39,11 @@ class HelloBar extends React.Component {
     }
 
     this.setState({ show: true });
-  }
+  };
 
   cookieName = () => {
     return `hello-${this.props.id}`;
-  }
+  };
 
   close = () => {
     const cookieExpiresAt = new Date();
@@ -40,19 +51,17 @@ class HelloBar extends React.Component {
     cookies.write(this.cookieName(), '1', cookieExpiresAt);
 
     this.setState({ show: false });
-  }
+  };
 
   render() {
     return (
       <React.Fragment>
-        {this.state.show &&
+        {this.state.show && (
           <div className={styles.container}>
             <Grid>
               <Link className={styles.content} to={this.props.to}>
                 <p>
-                  {this.props.callout && (
-                    <span>{this.props.callout}</span>
-                  )}
+                  {this.props.callout && <span>{this.props.callout}</span>}
                   {this.props.text}
                 </p>
               </Link>
@@ -62,9 +71,9 @@ class HelloBar extends React.Component {
               </div>
             </Grid>
           </div>
-        }
+        )}
       </React.Fragment>
-    )
+    );
   }
 }
 

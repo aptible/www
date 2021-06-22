@@ -5,12 +5,15 @@ import ContentLayout from '../components/layouts/ContentLayout';
 import LegalSubnav from '../components/legal/Subnav';
 
 export default ({ data }) => (
-  <ContentLayout title={data.page.frontmatter.title} SidebarComponent={LegalSubnav}>
+  <ContentLayout
+    title={data.page.frontmatter.title}
+    SidebarComponent={LegalSubnav}
+  >
     <Helmet>
       <title>Aptible | {data.page.frontmatter.title}</title>
       <meta name="description" content={data.page.frontmatter.title} />
     </Helmet>
-    <div dangerouslySetInnerHTML={{ __html: data.page.html}}></div>
+    <div dangerouslySetInnerHTML={{ __html: data.page.html }} />
   </ContentLayout>
 );
 

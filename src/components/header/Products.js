@@ -50,7 +50,7 @@ const Products = () => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.links}>
-        {PRODUCTS_NAV.map((product) => (
+        {PRODUCTS_NAV.map(product => (
           <div key={product.title} className={styles.section}>
             <h3>
               <Link to={product.url}>

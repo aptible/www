@@ -8,7 +8,7 @@ import MetaHeader from '../components/shared/MetaHeader';
 
 export default ({ data, pageContext }) => (
   <AptibleLayout>
-    <MetaHeader 
+    <MetaHeader
       title="Blog"
       description="Get the latest updates about Aptible, our security management platform, and app deployment platform."
       image=""
@@ -17,7 +17,8 @@ export default ({ data, pageContext }) => (
     <Index posts={data.posts.edges} categorySlug={pageContext.categorySlug} />
     <Pagination
       numPages={pageContext.numPages}
-      currentPage={pageContext.currentPage} />
+      currentPage={pageContext.currentPage}
+    />
     <ZeroTo />
   </AptibleLayout>
 );
@@ -25,11 +26,7 @@ export default ({ data, pageContext }) => (
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
     posts: allContentfulBlogPost(
-      filter: {
-        type: {
-          eq: "blog"
-        }
-      }
+      filter: { type: { eq: "blog" } }
       sort: { fields: [postedAt], order: DESC }
       limit: $limit
       skip: $skip

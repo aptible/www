@@ -21,10 +21,7 @@ class SignupArrowButton extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <ArrowButton
-          onClickFn={this.openSignup}
-          text={this.props.text}
-        />
+        <ArrowButton onClickFn={this.openSignup} text={this.props.text} />
 
         {this.state.open && (
           <Signup closeFn={this.closeSignup} product={this.props.product} />

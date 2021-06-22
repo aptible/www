@@ -7,17 +7,25 @@ const Button = ({ to, onClickFn, theme, size, children, href }) => {
   const buttonStyle = cn([
     styles.button,
     theme && styles[theme],
-    size && styles[size]
+    size && styles[size],
   ]);
 
   if (href) {
-    return <a href={href} className={buttonStyle}>{children}</a>;
+    return (
+      <a href={href} className={buttonStyle}>
+        {children}
+      </a>
+    );
   }
 
   if (to) {
-    return <Link to={to} className={buttonStyle}>{children}</Link>;
+    return (
+      <Link to={to} className={buttonStyle}>
+        {children}
+      </Link>
+    );
   }
-  
+
   if (onClickFn) {
     return (
       <div
@@ -31,11 +39,7 @@ const Button = ({ to, onClickFn, theme, size, children, href }) => {
     );
   }
 
-  return (
-    <div className={cn(buttonStyle, styles.noClick)}>
-      {children}
-    </div>
-  );
+  return <div className={cn(buttonStyle, styles.noClick)}>{children}</div>;
 };
 
 export default Button;

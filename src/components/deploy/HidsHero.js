@@ -9,8 +9,8 @@ export default () => (
       <div className={styles.content}>
         <h5>Aptible Deploy Features</h5>
         <h1>
-          Host-based Intrusion Detection <br className="desktopOnly" />(HIDS)
-          and Incident Response
+          Host-based Intrusion Detection <br className="desktopOnly" />
+          (HIDS) and Incident Response
         </h1>
 
         <p className="XL">

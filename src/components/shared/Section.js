@@ -19,9 +19,7 @@ const Section = ({ title, body, children }) => (
       </Grid>
     )}
 
-    <div className={styles.module}>
-      {children}
-    </div>
+    <div className={styles.module}>{children}</div>
   </div>
 );
 

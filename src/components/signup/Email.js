@@ -18,47 +18,54 @@ class Email extends React.Component {
       email: '',
       invalidEmail: false,
       personaAnswer: '',
-      marketingConsent: null
+      marketingConsent: null,
     };
   }
 
-  emailChange = (e) => {
+  emailChange = e => {
     this.setState({ email: e.target.value });
-  }
+  };
 
-  consentChange = (e) => {
+  consentChange = e => {
     this.setState({ marketingConsent: e.target.value });
-  }
+  };
 
-  personaChange = (persona) => {
+  personaChange = persona => {
     if (persona === this.state.personaAnswer) {
       this.setState({ personaAnswer: '' });
     } else {
       this.setState({ personaAnswer: persona });
     }
-  }
+  };
 
   isFreeEmail = () => {
-    return this.state.email.match(/(gmail|yahoo|hotmail|aol|icloud)/)
-  }
+    return this.state.email.match(/(gmail|yahoo|hotmail|aol|icloud)/);
+  };
 
   buttonClick = () => {
     if (this.state.email.length > 0 && this.state.email.indexOf('@') !== -1) {
-      if (this.props.signupState.product === 'comply' && this.state.personaAnswer === '') {
-        alert('Please tell us what\'s most important to you right now');
+      if (
+        this.props.signupState.product === 'comply' &&
+        this.state.personaAnswer === ''
+      ) {
+        alert("Please tell us what's most important to you right now");
         return;
       }
 
       if (this.props.signupState.product !== 'deploy' && this.isFreeEmail()) {
         alert('Please use your work email address');
-        return
+        return;
       }
 
-      this.props.setEmail(this.state.email, this.state.marketingConsent, this.state.personaAnswer);
+      this.props.setEmail(
+        this.state.email,
+        this.state.marketingConsent,
+        this.state.personaAnswer,
+      );
     } else {
       this.setState({ invalidEmail: true });
     }
-  }
+  };
 
   render() {
     return (
@@ -72,7 +79,7 @@ class Email extends React.Component {
             <p>Register with your work email</p>
           </div>
 
-          {this.props.signupState.product === 'comply' &&
+          {this.props.signupState.product === 'comply' && (
             <div className={styles.persona}>
               <h6>What’s most important to you right now?</h6>
 
@@ -80,25 +87,29 @@ class Email extends React.Component {
                 <PersonaOption
                   answer="Putting basic policies in place"
                   clickFn={this.personaChange}
-                  currentAnswer={this.state.personaAnswer} />
+                  currentAnswer={this.state.personaAnswer}
+                />
 
                 <PersonaOption
                   answer="Preparing for our first audit"
                   clickFn={this.personaChange}
-                  currentAnswer={this.state.personaAnswer} />
+                  currentAnswer={this.state.personaAnswer}
+                />
 
                 <PersonaOption
                   answer="Streamlining our existing security/compliance processes"
                   clickFn={this.personaChange}
-                  currentAnswer={this.state.personaAnswer} />
+                  currentAnswer={this.state.personaAnswer}
+                />
 
                 <PersonaOption
                   answer="Other"
                   clickFn={this.personaChange}
-                  currentAnswer={this.state.personaAnswer} />
+                  currentAnswer={this.state.personaAnswer}
+                />
               </div>
             </div>
-          }
+          )}
 
           <div className={styles.input}>
             <input
@@ -106,7 +117,8 @@ class Email extends React.Component {
               placeholder="you@yourwork.com"
               spellCheck="false"
               onChange={this.emailChange}
-              className={this.state.invalidEmail ? styles.invalidEmail : ''}/>
+              className={this.state.invalidEmail ? styles.invalidEmail : ''}
+            />
           </div>
 
           <div className={styles.button}>
@@ -115,13 +127,27 @@ class Email extends React.Component {
 
           <div className={styles.marketingConsent}>
             <label>
-              <input type="radio" name="marketing_consent" value="yes" checked={this.state.marketingConsent === 'yes'} onChange={this.consentChange} />
+              <input
+                type="radio"
+                name="marketing_consent"
+                value="yes"
+                checked={this.state.marketingConsent === 'yes'}
+                onChange={this.consentChange}
+              />
               I consent to receiving Aptible marketing emails. View our
-              <a href="/legal/privacy/" target="_blank">Privacy Policy</a>
+              <a href="/legal/privacy/" target="_blank">
+                Privacy Policy
+              </a>
             </label>
 
             <label>
-              <input type="radio" name="marketing_consent" value="no" checked={this.state.marketingConsent === 'no'} onChange={this.consentChange} />
+              <input
+                type="radio"
+                name="marketing_consent"
+                value="no"
+                checked={this.state.marketingConsent === 'no'}
+                onChange={this.consentChange}
+              />
               No, I don't want to receive marketing emails.
             </label>
           </div>

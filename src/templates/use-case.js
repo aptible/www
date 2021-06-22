@@ -7,12 +7,7 @@ import Blocks from '../components/use-cases/Blocks';
 import ZeroTo from '../components/footer/ZeroTo';
 
 const UseCaseTemplate = ({ pageContext }) => {
-  const {
-    title,
-    body,
-    sections,
-    illustrationKey,
-  } = pageContext;
+  const { title, body, sections, illustrationKey } = pageContext;
 
   const description = Array.isArray(body) ? body[0] : body;
 
@@ -23,13 +18,9 @@ const UseCaseTemplate = ({ pageContext }) => {
         <meta name="description" content={description} />
       </Helmet>
 
-      <Hero
-        title={title}
-        body={body}
-        illustrationKey={illustrationKey}
-      />
+      <Hero title={title} body={body} illustrationKey={illustrationKey} />
 
-      {sections.map((section) => (
+      {sections.map(section => (
         <Section key={section.title} title={section.title} body={section.body}>
           <Blocks blocks={section.blocks} />
         </Section>
@@ -37,7 +28,7 @@ const UseCaseTemplate = ({ pageContext }) => {
 
       <ZeroTo />
     </AptibleLayout>
-  )
+  );
 };
 
 export default UseCaseTemplate;

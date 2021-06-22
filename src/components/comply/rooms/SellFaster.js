@@ -20,7 +20,7 @@ export default () => (
         </p>
         <p className="XL">
           Automated e-signing of NDAs, report watermarking, document versioning,
-          and update pushes simplify the distribution process.        
+          and update pushes simplify the distribution process.
         </p>
 
         <div className={styles.screenshot}>
@@ -29,7 +29,7 @@ export default () => (
 
         <p className="XL">
           Give customers the ability to instantly access the confidential
-          security documentation they need to buy your service. 
+          security documentation they need to buy your service.
         </p>
         <p className="XL">
           Streamline the manual processes of providing security documentation.
@@ -41,15 +41,24 @@ export default () => (
       <div className={styles.boxes}>
         <div className={styles.box}>
           <h6>Secure Self-Serve Access</h6>
-          <p>Get your security and compliance documents into prospects’ hands quicker without sacrificing security</p>
+          <p>
+            Get your security and compliance documents into prospects’ hands
+            quicker without sacrificing security
+          </p>
         </div>
         <div className={styles.box}>
           <h6>Clickwrap or DocuSign NDAs</h6>
-          <p>Customers can sign the NDA right in the Room so that sales isn’t slowed down by security processes</p>
+          <p>
+            Customers can sign the NDA right in the Room so that sales isn’t
+            slowed down by security processes
+          </p>
         </div>
         <div className={styles.box}>
           <h6>Automatic Watermark</h6>
-          <p>Each document is automatically watermarked upon download, preventing engineering interruptions</p>
+          <p>
+            Each document is automatically watermarked upon download, preventing
+            engineering interruptions
+          </p>
         </div>
 
         <div className={styles.box}>
@@ -67,7 +76,10 @@ export default () => (
 
         <div className={styles.box}>
           <h6>Invite Sales Prospects</h6>
-          <p>Easily invite from Salesforce. Share your documentation with prospects with a single click</p>
+          <p>
+            Easily invite from Salesforce. Share your documentation with
+            prospects with a single click
+          </p>
         </div>
       </div>
     </Grid>

@@ -7,19 +7,19 @@ class Accordion extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      openIdx: 0
+      openIdx: 0,
     };
   }
 
-  toggleItem = (idx) => {
+  toggleItem = idx => {
     if (this.state.openIdx === idx) {
       this.setState({ openIdx: null });
     } else {
       this.setState({ openIdx: idx });
     }
-  }
+  };
 
-  render () {
+  render() {
     return (
       <Row>
         <Grid>
@@ -27,28 +27,28 @@ class Accordion extends React.Component {
             <h1>{this.props.title}</h1>
             <p className="L">{this.props.description}</p>
 
-            {this.props.linkText && this.props.linkTo &&
+            {this.props.linkText && this.props.linkTo && (
               <ArrowButton to={this.props.linkTo} text={this.props.linkText} />
-            }
+            )}
           </div>
 
           <div className={styles.container}>
-            {this.props.items.map((item, idx) =>
+            {this.props.items.map((item, idx) => (
               <div
                 key={idx}
-                className={`${styles.item} ${this.state.openIdx === idx ? styles.open : ''}`}
+                className={`${styles.item} ${
+                  this.state.openIdx === idx ? styles.open : ''
+                }`}
               >
-                <div className={styles.circle}></div>
+                <div className={styles.circle} />
                 <h4 onClick={() => this.toggleItem(idx)}>{item.title}</h4>
-                <div className={styles.content}>
-                  {item.content}
-                </div>
+                <div className={styles.content}>{item.content}</div>
               </div>
-            )}
+            ))}
           </div>
         </Grid>
       </Row>
-    )
+    );
   }
 }
 

@@ -12,11 +12,11 @@ class SignupButton extends React.Component {
 
   openSignup = () => {
     this.setState({ open: true });
-  }
+  };
 
   closeSignup = () => {
     this.setState({ open: false });
-  }
+  };
 
   render() {
     return (
@@ -24,15 +24,15 @@ class SignupButton extends React.Component {
         <Button
           onClickFn={this.openSignup}
           theme={this.props.theme}
-          size={this.props.size}>
+          size={this.props.size}
+        >
           {this.props.text}
         </Button>
 
-        {
-          this.state.open &&
+        {this.state.open && (
           <Signup closeFn={this.closeSignup} product={this.props.product} />
-        }
-      </React.Fragment >
+        )}
+      </React.Fragment>
     );
   }
 }

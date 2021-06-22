@@ -21,7 +21,10 @@ export default () => (
   <AptibleLayout>
     <Helmet>
       <title>Aptible Deploy | Audit-ready App Deployment Platform</title>
-      <meta name="description" content="Get to market faster with a developer-friendly deployment platform that provides the security controls needed to comply with SOC 2, ISO 27001, HIPAA, GDPR, and more." />
+      <meta
+        name="description"
+        content="Get to market faster with a developer-friendly deployment platform that provides the security controls needed to comply with SOC 2, ISO 27001, HIPAA, GDPR, and more."
+      />
     </Helmet>
     <Hero />
     <Nav items={stickyNavItems} ctaText="Start With Deploy" product="deploy" />

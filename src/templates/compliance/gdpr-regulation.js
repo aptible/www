@@ -24,12 +24,20 @@ export default ({ data, pageContext }) => {
     <ComplianceLayout
       regulation={data.gdpr}
       title={`Article ${title}`}
-      SidebarComponent={GdprSubnav}>
+      SidebarComponent={GdprSubnav}
+    >
       <Helmet>
-        <title>Article {part.id}: {part.title} | GDPR Requirements hosted by Aptible</title>
-        <meta name="description" content={`Explore ${part.title} (Article ${part.id}) of the GDPR Requirements. The full GDPR Requirements text, annotated by Aptible, easily searchable.`} />
+        <title>
+          Article {part.id}: {part.title} | GDPR Requirements hosted by Aptible
+        </title>
+        <meta
+          name="description"
+          content={`Explore ${part.title} (Article ${
+            part.id
+          }) of the GDPR Requirements. The full GDPR Requirements text, annotated by Aptible, easily searchable.`}
+        />
       </Helmet>
-      <div dangerouslySetInnerHTML={{ __html: data.regulation.html }}></div>
+      <div dangerouslySetInnerHTML={{ __html: data.regulation.html }} />
     </ComplianceLayout>
   );
 };

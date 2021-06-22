@@ -12,7 +12,7 @@ export const SECURITY_MANAGEMENT_GUIDE_FORM = 1074;
 const FORM_SUBMIT_TIMEOUT_MS = 7000;
 
 export function submitMarketoForm(formId, payload, callback) {
-  if (typeof(window) === 'undefined' || !window.MktoForms2) {
+  if (typeof window === 'undefined' || !window.MktoForms2) {
     callback();
     return;
   }
@@ -52,7 +52,7 @@ export function submitMarketoForm(formId, payload, callback) {
   }, FORM_SUBMIT_TIMEOUT_MS);
 
   window.MktoForms2.loadForm('//app-ab35.marketo.com', '620-GAP-535', formId);
-  window.MktoForms2.whenReady((marketoForm) => {
+  window.MktoForms2.whenReady(marketoForm => {
     marketoForm.addHiddenFields(payload);
 
     marketoForm.onSuccess(() => {

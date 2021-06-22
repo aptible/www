@@ -22,21 +22,24 @@ class HipaaSubnav extends React.Component {
         section.classList.add(styles.sectionOpen);
       }
     }
-  }
+  };
 
-  openSection = (e) => {
+  openSection = e => {
     e.target.parentNode.classList.toggle(styles.sectionOpen);
-  }
+  };
 
-  openSubpart = (e) => {
+  openSubpart = e => {
     e.target.parentNode.classList.toggle(styles.subpartOpen);
-  }
+  };
 
   render() {
     return (
       <SidebarNav title="HIPAA Compliance Guide" shortTitle="HIPAA Guide">
         <SidebarNavItem to="/hipaa/" text="What is HIPAA?" />
-        <SidebarNavItem to="/hipaa/what-is-a-baa/" text="What is a HIPAA BAA?" />
+        <SidebarNavItem
+          to="/hipaa/what-is-a-baa/"
+          text="What is a HIPAA BAA?"
+        />
 
         <div className={styles.regulationTitle}>
           {this.props.regulation.nav.regulations_title}
@@ -58,10 +61,15 @@ class HipaaSubnav extends React.Component {
                   {subpart.subparts.map((article, articleIdx) => (
                     <Link
                       className={styles.articleLink}
-                      to={`/${this.props.regulation.slugs.site}/${this.props.regulation.slugs.regulations}/${article.url}/`}
-                      key={articleIdx}>
+                      to={`/${this.props.regulation.slugs.site}/${
+                        this.props.regulation.slugs.regulations
+                      }/${article.url}/`}
+                      key={articleIdx}
+                    >
                       <span className={styles.articleId}>{article.id}</span>
-                      <span className={styles.articleTitle}>{article.title}</span>
+                      <span className={styles.articleTitle}>
+                        {article.title}
+                      </span>
                       <div className={styles.circle} />
                     </Link>
                   ))}
@@ -71,7 +79,7 @@ class HipaaSubnav extends React.Component {
           </div>
         ))}
       </SidebarNav>
-    )
+    );
   }
 }
 

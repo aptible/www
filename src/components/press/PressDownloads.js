@@ -8,8 +8,10 @@ import logoDarkPng from '../../images/logos/aptible-logo-dark.png';
 import markSvg from '../../images/logos/mark.svg';
 import markPng from '../../images/logos/mark.png';
 
-const Download = ({ href, children, fileName}) => (
-  <a class={styles.downloadLink} href={href} download={`${fileName}`}>{children}</a>
+const Download = ({ href, children, fileName }) => (
+  <a class={styles.downloadLink} href={href} download={`${fileName}`}>
+    {children}
+  </a>
 );
 
 const PressDownload = ({ fileName, title, className, downloads }) => (
@@ -18,13 +20,15 @@ const PressDownload = ({ fileName, title, className, downloads }) => (
       <img src={downloads[0][1]} alt={title} />
       <h6>{title}</h6>
       <p className={styles.downloadOptions}>
-        { downloads.map((d) => (
-          <Download href={d[1]} fileName={`${title}.${d[0]}`}>{`↓ ${d[0]}`}</Download>  
-        )) }
+        {downloads.map(d => (
+          <Download href={d[1]} fileName={`${title}.${d[0]}`}>{`↓ ${
+            d[0]
+          }`}</Download>
+        ))}
       </p>
     </div>
   </div>
-)
+);
 
 export default () => (
   <div className={styles.container}>
@@ -33,17 +37,20 @@ export default () => (
       <PressDownload
         className={styles.first}
         title="Aptible Logo - White"
-        downloads={[['svg', logoWhiteSvg], ['png', logoWhitePng]]} />
+        downloads={[['svg', logoWhiteSvg], ['png', logoWhitePng]]}
+      />
 
       <PressDownload
         className={styles.middle}
         title="Aptible Logo - Dark"
-        downloads={[['svg', logoDarkSvg], ['png', logoDarkPng]]} />
+        downloads={[['svg', logoDarkSvg], ['png', logoDarkPng]]}
+      />
 
       <PressDownload
         className={styles.last}
         title="Aptible Mark"
-        downloads={[['svg', markSvg], ['png', markPng]]} />
+        downloads={[['svg', markSvg], ['png', markPng]]}
+      />
     </Grid>
   </div>
-)
+);

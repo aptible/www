@@ -19,4 +19,4 @@ export function throttle(fn, limit) {
       }, limit - (Date.now() - lastRan));
     }
   };
-};
+}

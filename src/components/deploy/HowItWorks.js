@@ -47,7 +47,8 @@ export default () => (
           <p>
             Deploy natively supports 12-factor apps: provide Deploy with a list
             of environment variables your app needs and Deploy will securely
-            store them and make sure they're available when your containers start.
+            store them and make sure they're available when your containers
+            start.
           </p>
         </div>
       </div>

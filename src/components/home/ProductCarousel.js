@@ -27,20 +27,14 @@ const ITEMS = [
 
 const ProductCarousel = () => {
   return (
-    <Carousel
-      id="ProductCarousel"
-      height={450}
-      mobileHeight={380}
-    >
+    <Carousel id="ProductCarousel" height={450} mobileHeight={380}>
       {ITEMS.map(product => {
         const { url, id, name, title, body } = product;
         return (
-          <Link
-            key={id}
-            className={cn(styles.product, styles[id])}
-            to={url}
-          >
-            <div role="presentation" className={styles.productArrow}><Arrow /></div>
+          <Link key={id} className={cn(styles.product, styles[id])} to={url}>
+            <div role="presentation" className={styles.productArrow}>
+              <Arrow />
+            </div>
             <h5>{name}</h5>
             <h2>{title}</h2>
             <p>{body}</p>
@@ -55,6 +49,6 @@ const ProductCarousel = () => {
       })}
     </Carousel>
   );
-}
+};
 
 export default ProductCarousel;

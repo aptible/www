@@ -1,16 +1,25 @@
-export const utmVars = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'gclid'];
+export const utmVars = [
+  'utm_source',
+  'utm_medium',
+  'utm_campaign',
+  'utm_content',
+  'gclid',
+];
 
 export const events = {
   EMAIL_COLLECTED: 'Email Collected',
   SIGNUP_NEWSLETTER: 'Newsletter Signup',
   SIGNUP_DRIFT: 'Drift Email Collected',
-  COOKIE_CONSENT: 'Cookie Consent Dismissed'
+  COOKIE_CONSENT: 'Cookie Consent Dismissed',
 };
 
 export function allParams() {
   const params = {};
 
-  const queryString = (window.location.search[0] === '?' ? window.location.search.substr(1) : window.location.search);
+  const queryString =
+    window.location.search[0] === '?'
+      ? window.location.search.substr(1)
+      : window.location.search;
   if (queryString.length < 1) {
     return params;
   }
@@ -59,9 +68,13 @@ export function identify(email) {
   // losing track of who the user is and breaking any open chat they might
   // have.
   if (window.analytics) {
-    window.analytics.identify(email, {
-      email: email,
-      url: currentURL()
-    }, { 'Drift': false });
+    window.analytics.identify(
+      email,
+      {
+        email: email,
+        url: currentURL(),
+      },
+      { Drift: false },
+    );
   }
 }

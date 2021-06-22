@@ -10,13 +10,13 @@ class Analytics extends React.Component {
   }
 
   componentDidMount = () => {
-    if (typeof(window) === 'undefined') {
-      return
+    if (typeof window === 'undefined') {
+      return;
     }
 
     this.cookieParamsForTracking();
     this.cookieSessionRefUrl();
-  }
+  };
 
   cookieParamsForTracking = () => {
     const expiresAt = this.paramsCookieExpirationDate();
@@ -27,14 +27,14 @@ class Analytics extends React.Component {
         cookies.write(param, analytics.getParam(param), expiresAt);
       }
     }
-  }
+  };
 
   paramsCookieExpirationDate = () => {
     const cookieExpiresAt = new Date();
     cookieExpiresAt.setDate(cookieExpiresAt.getDate() + 1);
 
     return cookieExpiresAt;
-  }
+  };
 
   cookieSessionRefUrl = () => {
     let sessionRefUrl = cookies.get(SESSION_REF_URL_COOKIE);
@@ -43,20 +43,28 @@ class Analytics extends React.Component {
     if (sessionRefUrl === null || sessionRefUrl === undefined) {
       sessionRefUrl = '';
 
-      if (document.referrer && document.referrer.length > 0 && document.referrer.indexOf('https://www.aptible.com') === -1) {
+      if (
+        document.referrer &&
+        document.referrer.length > 0 &&
+        document.referrer.indexOf('https://www.aptible.com') === -1
+      ) {
         sessionRefUrl = document.referrer;
       }
 
-      cookies.write(SESSION_REF_URL_COOKIE, sessionRefUrl, this.sessionCookieExpirationDate());
+      cookies.write(
+        SESSION_REF_URL_COOKIE,
+        sessionRefUrl,
+        this.sessionCookieExpirationDate(),
+      );
     }
-  }
+  };
 
   sessionCookieExpirationDate = () => {
     const cookieExpiresAt = new Date();
     cookieExpiresAt.setHours(cookieExpiresAt.getHours() + 1);
 
     return cookieExpiresAt;
-  }
+  };
 
   render() {
     return null;

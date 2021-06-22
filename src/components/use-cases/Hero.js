@@ -70,20 +70,23 @@ const illustrations = {
 const Hero = ({ title, body, illustrationKey }) => (
   <div
     className={styles.container}
-    style={{
-      // backgroundImage: `url(${illustrations[illustrationKey].src})`,
-
-      // backgroundSize: `${illustrations[illustrationKey].w}px ${illustrations[illustrationKey].h}px`,
-      // backgroundSize: `${illustrations[illustrationKey].w}px auto`,
-    }}
+    style={
+      {
+        // backgroundImage: `url(${illustrations[illustrationKey].src})`,
+        // backgroundSize: `${illustrations[illustrationKey].w}px ${illustrations[illustrationKey].h}px`,
+        // backgroundSize: `${illustrations[illustrationKey].w}px auto`,
+      }
+    }
   >
     <div
       className={styles.background}
-      style={{
-        // backgroundImage: `url(${illustrations[illustrationKey].src})`,
-        // backgroundPosition: illustrations[illustrationKey].position,
-        // paddingTop: `${illustrations[illustrationKey].t}px`,
-      }}
+      style={
+        {
+          // backgroundImage: `url(${illustrations[illustrationKey].src})`,
+          // backgroundPosition: illustrations[illustrationKey].position,
+          // paddingTop: `${illustrations[illustrationKey].t}px`,
+        }
+      }
     >
       <img
         src={illustrations[illustrationKey].src}
@@ -91,12 +94,14 @@ const Hero = ({ title, body, illustrationKey }) => (
           styles.image,
           styles[illustrations[illustrationKey].className],
         )}
-        style={{
-          // width: `${illustrations[illustrationKey].w / 1440 * 100 < 100 ? illustrations[illustrationKey].w / 1440 * 100 : 100}%`,
-          // // width: `${illustrations[illustrationKey].w}px`,
-          // top: `${illustrations[illustrationKey].t}px`,
-          // right: `${illustrations[illustrationKey].r}px`,
-        }}
+        style={
+          {
+            // width: `${illustrations[illustrationKey].w / 1440 * 100 < 100 ? illustrations[illustrationKey].w / 1440 * 100 : 100}%`,
+            // // width: `${illustrations[illustrationKey].w}px`,
+            // top: `${illustrations[illustrationKey].t}px`,
+            // right: `${illustrations[illustrationKey].r}px`,
+          }
+        }
         alt="illustration"
       />
     </div>
@@ -126,10 +131,11 @@ const Hero = ({ title, body, illustrationKey }) => (
       <div className={styles.text}>
         <h5>Use Case</h5>
         <h1>{title}</h1>
-        {Array.isArray(body)
-          ? body.map((p) => <p className="XL">{p}</p>)
-          : <p className="XL">{body}</p>
-        }
+        {Array.isArray(body) ? (
+          body.map(p => <p className="XL">{p}</p>)
+        ) : (
+          <p className="XL">{body}</p>
+        )}
 
         <div className={styles.button}>
           <SignupButton text="Get a demo" />

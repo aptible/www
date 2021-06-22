@@ -6,7 +6,11 @@ import ShareIcons from '../shared/ShareIcons';
 import ContentfulBlock from '../contentful/ContentfulBlock';
 
 export default ({ chapter, contentBlock, edges }) => (
-  <div className={`${styles.container} ${chapter.id === 1 ? styles.firstPageSidebar : ''}`}>
+  <div
+    className={`${styles.container} ${
+      chapter.id === 1 ? styles.firstPageSidebar : ''
+    }`}
+  >
     <Grid>
       <div className={styles.meta}>
         <ShareIcons />

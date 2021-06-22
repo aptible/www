@@ -28,7 +28,9 @@ export default () => (
       <div className={styles.right}>
         <h6 className="small">Support</h6>
         <Link to="/deploy/support">Support Plans</Link>
-        <a href="/documentation/support.html#contacting-support">Contact Support</a>
+        <a href="/documentation/support.html#contacting-support">
+          Contact Support
+        </a>
         <a href="/documentation/support.html#best-practices">Best Practices</a>
         <a href="/documentation/support.html#active-tickets">Active Tickets</a>
       </div>

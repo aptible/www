@@ -20,8 +20,8 @@ export default () => (
           <p>
             We show you what it will take to achieve your goals, including the
             process and timelines for getting and staying compliant. We teach
-            you what you need to know about the product and your desired security
-            framework, so you’re ready to begin your journey.
+            you what you need to know about the product and your desired
+            security framework, so you’re ready to begin your journey.
           </p>
         </div>
       </div>
@@ -31,7 +31,7 @@ export default () => (
           <h3 className={styles.number}>02</h3>
           <h3>Design</h3>
           <p>
-            We give you live-support and  baseline policies and procedures to
+            We give you live-support and baseline policies and procedures to
             help you author your Security Management system by entering specific
             information about your company.
           </p>
@@ -43,9 +43,9 @@ export default () => (
           <h3 className={styles.number}>03</h3>
           <h3>Operate</h3>
           <p>
-            We give you an implementation roadmap with tasks that can be delegated
-            to teammates or to us, to help you run your Security Management
-            system and increase your team’s security awareness.
+            We give you an implementation roadmap with tasks that can be
+            delegated to teammates or to us, to help you run your Security
+            Management system and increase your team’s security awareness.
           </p>
         </div>
       </div>

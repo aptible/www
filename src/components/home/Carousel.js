@@ -4,13 +4,7 @@ import { useMeasure, useScroll, useWindowSize, useMedia } from 'react-use';
 import { Grid, Row } from '../grid/Grid';
 import styles from './Carousel.module.css';
 
-const Carousel = ({
-  children,
-  selectedItem = 1,
-  height,
-  mobileHeight,
-  id,
-}) => {
+const Carousel = ({ children, selectedItem = 1, height, mobileHeight, id }) => {
   const scrollRef = useRef(null);
   const carouselRef = useRef(null);
   const [carouselPadding, setCarouselPadding] = useState(0);
@@ -27,18 +21,20 @@ const Carousel = ({
   const dots = Array.from(Array(totalItems), (_, i) => i + 1);
 
   const startPositions = Children.map(children, (_, index) => {
-    return (adjustedItemWidth * (index + 1)) - adjustedItemWidth;
+    return adjustedItemWidth * (index + 1) - adjustedItemWidth;
   });
 
-  const scrollTo = (itemNumber) => {
+  const scrollTo = itemNumber => {
     const index = itemNumber - 1;
     scrollRef.current.scrollLeft = startPositions[index];
-  }
+  };
 
   const highlightDots = () => {
-    const activeDots = startPositions.filter((position) => scrollXPosition >= position);
+    const activeDots = startPositions.filter(
+      position => scrollXPosition >= position,
+    );
     setActiveDot(activeDots.length);
-  }
+  };
 
   const padCarouselToScreenSize = () => {
     const carouselContainer = carouselRef.current;
@@ -79,7 +75,11 @@ const Carousel = ({
         >
           <div className={styles.itemsContainer} ref={carouselRef}>
             {Children.map(children, (item, index) => (
-              <div key={`${id}-item-${index}`} ref={itemRef} className={styles.item}>
+              <div
+                key={`${id}-item-${index}`}
+                ref={itemRef}
+                className={styles.item}
+              >
                 {item}
               </div>
             ))}
@@ -90,14 +90,11 @@ const Carousel = ({
       <Grid>
         <Row>
           <div className={styles.dots} ref={gridRef}>
-            {dots.map((dot) => (
+            {dots.map(dot => (
               <span
                 key={`${id}-dot-${dot}`}
                 onClick={() => scrollTo(dot)}
-                className={cn([
-                  styles.dot,
-                  activeDot === dot && styles.active,
-                ])}
+                className={cn([styles.dot, activeDot === dot && styles.active])}
               />
             ))}
           </div>
@@ -105,6 +102,6 @@ const Carousel = ({
       </Grid>
     </div>
   );
-}
+};
 
 export default Carousel;

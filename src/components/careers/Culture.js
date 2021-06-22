@@ -38,8 +38,8 @@ export default () => (
             the time to articulate what we mean by “us”. Early on, we
             co-authored <Link to="/company/">Our Values</Link> to clearly
             communicate how we work together as a team. The more these values
-            sound like you&mdash;and describe people you want to work with&mdash;the
-            more likely you’ll thrive at Aptible.
+            sound like you&mdash;and describe people you want to work
+            with&mdash;the more likely you’ll thrive at Aptible.
           </p>
         </div>
 
@@ -49,9 +49,9 @@ export default () => (
             We care deeply about fostering an environment where teammates feel
             safe taking risks&mdash;asking questions, offering new ideas, making
             mistakes&mdash;and bringing their full emotional selves to work. We
-            encourage each other to share our personal and work style preferences,
-            and talk openly about the things we know to be true and unique
-            about ourselves.
+            encourage each other to share our personal and work style
+            preferences, and talk openly about the things we know to be true and
+            unique about ourselves.
           </p>
         </div>
 
@@ -59,10 +59,10 @@ export default () => (
           <h4>We Invest in Clarity</h4>
           <p className="L">
             We regularly communicate our goals and our strategy for achieving
-            them. Like many successful companies, we use Objectives & Key Results
-            (OKRs) to organize our work. Throughout each week, we come together
-            for 1:1s, Team Syncs, and All-Hands to ensure focus on OKRs and
-            empower teammates to make progress towards them.
+            them. Like many successful companies, we use Objectives & Key
+            Results (OKRs) to organize our work. Throughout each week, we come
+            together for 1:1s, Team Syncs, and All-Hands to ensure focus on OKRs
+            and empower teammates to make progress towards them.
           </p>
         </div>
 
@@ -79,7 +79,10 @@ export default () => (
       </div>
 
       <div className={styles.cta}>
-        <ArrowButton to="/owners-manual/" text="Read the Aptible Owner’s Manual" />
+        <ArrowButton
+          to="/owners-manual/"
+          text="Read the Aptible Owner’s Manual"
+        />
       </div>
     </Grid>
   </div>

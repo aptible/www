@@ -9,8 +9,13 @@ import ZeroTo from '../../components/footer/ZeroTo';
 export default () => (
   <AptibleLayout>
     <Helmet>
-      <title>Aptible Managed Host-based Intrusion Detection System (HIDS)</title>
-      <meta name="description" content="Aptible Deploy protects infrastructure with Managed Host-based Intrusion Detection System (HIDS) and Incident Response, monitoring and analyzing events for anomalous activities." />
+      <title>
+        Aptible Managed Host-based Intrusion Detection System (HIDS)
+      </title>
+      <meta
+        name="description"
+        content="Aptible Deploy protects infrastructure with Managed Host-based Intrusion Detection System (HIDS) and Incident Response, monitoring and analyzing events for anomalous activities."
+      />
     </Helmet>
     <HidsHero />
     <HidsHowItWorks />

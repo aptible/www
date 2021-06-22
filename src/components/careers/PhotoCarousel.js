@@ -34,16 +34,16 @@ class PhotoCarousel extends React.Component {
             <div className={styles.video}>
               <WistiaVideo videoId="24g31c7wor" />
             </div>
-            {IMAGES.map((image, idx) =>
+            {IMAGES.map((image, idx) => (
               <div key={idx} className={styles.image}>
                 <img src={image} key={idx} alt="Aptible team" />
               </div>
-            )}
+            ))}
           </div>
         </div>
         <Grid>
           <Row>
-            <div ref={this.gridRef}></div>
+            <div ref={this.gridRef} />
           </Row>
         </Grid>
       </div>

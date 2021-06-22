@@ -21,7 +21,10 @@ export default () => (
         </p>
 
         <div className={classNames(styles.cta, styles.desktop)}>
-          <ArrowButton to="/comply/integrations/" text="Learn more about Integrations" />
+          <ArrowButton
+            to="/comply/integrations/"
+            text="Learn more about Integrations"
+          />
         </div>
       </div>
 
@@ -30,7 +33,10 @@ export default () => (
       </div>
 
       <div className={classNames(styles.cta, styles.mobile)}>
-        <ArrowButton to="/comply/integrations/" text="Learn more about Integrations" />
+        <ArrowButton
+          to="/comply/integrations/"
+          text="Learn more about Integrations"
+        />
       </div>
     </Grid>
   </div>

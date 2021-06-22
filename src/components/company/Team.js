@@ -8,17 +8,17 @@ class Team extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      openIdx: null
+      openIdx: null,
     };
   }
 
-  toggleItem = (idx) => {
+  toggleItem = idx => {
     if (this.state.openIdx === idx) {
       this.setState({ openIdx: null });
     } else {
       this.setState({ openIdx: idx });
     }
-  }
+  };
 
   render() {
     return (
@@ -29,19 +29,20 @@ class Team extends React.Component {
             <ArrowButton to="/careers/" text="See Careers at Aptible" />
           </div>
           <div className={styles.list}>
-
             {this.props.members.map((member, idx) => {
-              return <TeamMember
-                      key={idx}
-                      member={member.node}
-                      open={this.state.openIdx === idx}
-                      clickFn={(_) => this.toggleItem(idx)} />
+              return (
+                <TeamMember
+                  key={idx}
+                  member={member.node}
+                  open={this.state.openIdx === idx}
+                  clickFn={_ => this.toggleItem(idx)}
+                />
+              );
             })}
-
           </div>
         </Grid>
       </div>
-    )
+    );
   }
 }
 

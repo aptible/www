@@ -10,7 +10,10 @@ export default ({ chapter }) => (
         <img src={chapterThreeIllustration} alt={chapter.pageTitle} />
       </div>
       <div className={styles.headline}>
-        <h3>Chapter 0{chapter.contentfulid.replace('security-management-chapter-', '')}</h3>
+        <h3>
+          Chapter 0
+          {chapter.contentfulid.replace('security-management-chapter-', '')}
+        </h3>
         <h1>{chapter.pageTitle}</h1>
       </div>
     </Grid>

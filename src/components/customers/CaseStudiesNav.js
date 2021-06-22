@@ -6,7 +6,11 @@ import caseStudies from '../../data/case-studies.json';
 export default () => (
   <SidebarNav title="Case Studies">
     {caseStudies.map((caseStudy, idx) => (
-      <SidebarNavItem key={idx} to={`/customers/${caseStudy.customer}/`} text={caseStudy.title} />
+      <SidebarNavItem
+        key={idx}
+        to={`/customers/${caseStudy.customer}/`}
+        text={caseStudy.title}
+      />
     ))}
   </SidebarNav>
 );

@@ -10,13 +10,16 @@ export default ({ chapter, contentBlock }) => (
   <Grid>
     <div className={styles.container}>
       <div className={styles.grid}>
-
         <Link to="/security-management/what-it-is/">
           <div className={styles.card}>
             <img src={chapterTwoIllustration} alt="Chapter 2" />
             <div className={styles.cardContent}>
-              <div className={styles.arrow}><Arrow /></div>
-              <h4><span>02</span>What is Security Management?</h4>
+              <div className={styles.arrow}>
+                <Arrow />
+              </div>
+              <h4>
+                <span>02</span>What is Security Management?
+              </h4>
               <p>Security by design.</p>
             </div>
           </div>
@@ -26,13 +29,16 @@ export default ({ chapter, contentBlock }) => (
           <div className={styles.card}>
             <img src={chapterThreeIllustration} alt="Chapter 3" />
             <div className={styles.cardContent}>
-              <div className={styles.arrow}><Arrow /></div>
-              <h4><span>03</span>Fundamentals</h4>
+              <div className={styles.arrow}>
+                <Arrow />
+              </div>
+              <h4>
+                <span>03</span>Fundamentals
+              </h4>
               <p>Defining scope, building governance, thinking about risk.</p>
             </div>
           </div>
         </Link>
-
       </div>
     </div>
   </Grid>
