@@ -38,12 +38,6 @@ export const RESOURCES_NAV = [
     newDomain: false,
   },
   {
-    title: 'Comply Documentation',
-    url: 'https://docs.aptible.com/',
-    external: true,
-    newDomain: true,
-  },
-  {
     title: 'Open a Support Ticket',
     url: 'https://aptible.zendesk.com/hc/en-us/requests/new',
     external: true,
