@@ -7,7 +7,6 @@ import Button from '../buttons/Button';
 import SignupButton from '../signup/SignupButton';
 import MainNavItem from './MainNavItem';
 import MobileMenuItem from './MobileMenuItem';
-import Products from './Products';
 import Resources from './Resources';
 import Company from './Company';
 import UseCases from './UseCases';
@@ -15,11 +14,10 @@ import Mobile from './Mobile';
 import HeaderContext from './HeaderContext';
 
 const dropDowns = {
-  products: Products,
   resources: Resources,
   company: Company,
   useCases: UseCases,
-  mobile: Mobile
+  mobile: Mobile,
 };
 
 class Header extends React.Component {
@@ -33,7 +31,7 @@ class Header extends React.Component {
     };
   }
 
-  toggleNavSection = (sectionName) => {
+  toggleNavSection = sectionName => {
     if (this.state.navOpen && sectionName === this.state.openSectionName) {
       this.setState({ navOpen: false, openSectionName: null });
     } else if (this.state.navOpen) {
@@ -41,27 +39,27 @@ class Header extends React.Component {
     } else {
       this.setState({ navOpen: true, openSectionName: sectionName });
     }
-  }
+  };
 
   closeNav = () => {
     this.setState({ navOpen: false, openSectionName: null });
-  }
+  };
 
   componentDidMount = () => {
-    if (typeof (window) === 'undefined') {
+    if (typeof window === 'undefined') {
       return;
     }
 
     if (window.location.pathname) {
       this.setState({
-        isDeployPage: window.location.pathname.includes('deploy')
+        isDeployPage: window.location.pathname.includes('deploy'),
       });
 
       this.setState({
-        isRoomsPage: window.location.pathname.includes('comply/rooms')
+        isRoomsPage: window.location.pathname.includes('comply/rooms'),
       });
     }
-  }
+  };
 
   render() {
     const { openSectionName } = this.state;
@@ -70,48 +68,34 @@ class Header extends React.Component {
       DropDownContent = dropDowns[openSectionName];
     }
 
-    let headerCta;
-    if (this.state.isRoomsPage) {
-      headerCta = (
-        <Button size="small" href="https://comply-grc.aptible.com/signup?context=rooms">
-          Sign up for free
-        </Button>
-      );
-    } else if (this.state.isDeployPage) {
-      headerCta = <SignupButton size="small" text="Start with Deploy" product="deploy" />;
-    } else {
-      headerCta = <SignupButton size="small" text="Sign up for free" product="comply" />;
-    }
+    const headerCta = (
+      <SignupButton size="small" text="Start with Deploy" product="deploy" />
+    );
 
     return (
       <HeaderContext.Provider value={this.state}>
-        <div className={`${styles.headerContainer} ${this.state.navOpen ? styles.open : ''}`}>
-          <div className={styles.navOverlay} onClick={this.closeNav}></div>
+        <div
+          className={`${styles.headerContainer} ${
+            this.state.navOpen ? styles.open : ''
+          }`}
+        >
+          <div className={styles.navOverlay} onClick={this.closeNav} />
           <header className={`${styles.header} `}>
             <Grid>
               <Link to="/" className={styles.logo}>
                 <img src={logoImage} alt="Aptible logo" />
               </Link>
-
               <MainNavItem
-                title="Products"
+                title="Features"
+                to="/deploy/features"
                 gridColumn="3"
-                onClickFn={this.toggleNavSection}
-                sectionName="products"
-                openSectionName={openSectionName}
               />
               <MainNavItem
-                title="Use Cases"
+                title="Pricing"
+                to="/pricing-plans/#deploy"
                 gridColumn="4"
-                onClickFn={this.toggleNavSection}
-                sectionName="useCases"
-                openSectionName={openSectionName}
               />
-              <MainNavItem
-                title="Customers"
-                to="/customers/"
-                gridColumn="5"
-              />
+              <MainNavItem title="Customers" to="/customers/" gridColumn="5" />
               <MainNavItem
                 title="Resources"
                 gridColumn="6"
@@ -128,18 +112,24 @@ class Header extends React.Component {
               />
 
               <div className={styles.mobileNav}>
-                <MobileMenuItem navOpen={this.state.navOpen} onClickFn={this.toggleNavSection} />
+                <MobileMenuItem
+                  navOpen={this.state.navOpen}
+                  onClickFn={this.toggleNavSection}
+                />
               </div>
 
               <div className={styles.cta}>
                 <Grid>
                   <div className={styles.ctaLogIn}>
-                    <Button size="small" href="https://account.aptible.com/login">Log In</Button>
+                    <Button
+                      size="small"
+                      href="https://account.aptible.com/login"
+                    >
+                      Log In
+                    </Button>
                   </div>
 
-                  <div className={styles.ctaSignUp}>
-                    {headerCta}
-                  </div>
+                  <div className={styles.ctaSignUp}>{headerCta}</div>
                 </Grid>
               </div>
             </Grid>
