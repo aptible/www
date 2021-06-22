@@ -30,7 +30,7 @@
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-yaml": "^2.1.10",
     "postcss-preset-env": "^6.6.0",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
     "react": "^16.8.4",
     "react-compound-slider": "^2.0.0",
     "react-dom": "^16.8.4",
