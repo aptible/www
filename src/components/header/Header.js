@@ -9,14 +9,12 @@ import MainNavItem from './MainNavItem';
 import MobileMenuItem from './MobileMenuItem';
 import Resources from './Resources';
 import Company from './Company';
-import UseCases from './UseCases';
 import Mobile from './Mobile';
 import HeaderContext from './HeaderContext';
 
 const dropDowns = {
   resources: Resources,
   company: Company,
-  useCases: UseCases,
   mobile: Mobile,
 };
 
@@ -87,7 +85,7 @@ class Header extends React.Component {
               </Link>
               <MainNavItem
                 title="Features"
-                to="/deploy/features"
+                to="/features"
                 gridColumn="3"
               />
               <MainNavItem

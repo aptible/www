@@ -1,9 +1,0 @@
-.customers {
-  margin-bottom: 175px;
-}
-
-@media (--mobile) {
-  .customers {
-    margin-bottom: 10px;
-  }
-}

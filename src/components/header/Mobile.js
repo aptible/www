@@ -6,7 +6,6 @@ import styles from './Mobile.module.css';
 import Button from '../buttons/Button';
 import SignupButton from '../signup/SignupButton';
 import HeaderContext from './HeaderContext';
-import { USE_CASES_NAV } from './UseCases';
 import { RESOURCES_NAV } from './Resources';
 import { COMPANY_NAV } from './Company';
 

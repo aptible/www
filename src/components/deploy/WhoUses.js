@@ -30,7 +30,6 @@ export default () => (
       </div>
 
       <div className={styles.customersLeft}>
-        <Card customer="vergesense" />
         <Card customer="mdsave" />
       </div>
 

@@ -16,25 +16,6 @@ const customers = [
     headline: (
       <React.Fragment>
         <h2>
-          <span className={styles.quoteStart}>&ldquo;</span>We want our end
-          users to know we take security very seriously.
-        </h2>
-        <h2>
-          With Aptible we were able to secure our SOC 2 audit very
-          quickly.&rdquo;
-        </h2>
-      </React.Fragment>
-    ),
-    description:
-      'Fortmatic uses Aptible Comply to build their Security Management Program and secured their SOC 2 audit in a fraction of the time.',
-    photo: fortmaticPhoto,
-    logo: fortmaticLogo,
-  },
-  {
-    image: null,
-    headline: (
-      <React.Fragment>
-        <h2>
           <span className={styles.quoteStart}>&ldquo;</span>Aptible Comply is
           amazing.
         </h2>

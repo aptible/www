@@ -14,32 +14,6 @@ const ResourceCards = ({ resources, categorySlug }) => {
     <div className={styles.container}>
       <Grid>
         <div className={styles.left}>
-          <div className={styles.navigation}>
-            <h6 className="small">Library</h6>
-
-            <Link
-              className={categorySlug === '' ? styles.active : ''}
-              to="/resources/"
-            >
-              All
-            </Link>
-
-            {categories.map(category => {
-              return (
-                <Link
-                  className={
-                    categorySlug === category.slug ? styles.active : ''
-                  }
-                  to={`/resources/${category.slug}/`}
-                  key={category.slug}
-                >
-                  {category.title}
-                  {category.title !== 'Deploy' ? 's' : ''}
-                </Link>
-              );
-            })}
-          </div>
-
           {leftResources.map(resource => (
             <ResourceCard key={resource.url} resource={resource} />
           ))}

@@ -26,7 +26,7 @@ class Deploy extends React.Component {
         <p className={`L ${styles.description}`}>
           Deploy audit-ready apps and databases using a developer workflow
           you’ll love. PHI-ready{' '}
-          <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">
+          <a href="https://deploy-docs.aptible.com/docs/shared-dedicated">
             Dedicated Stacks
           </a>{' '}
           are available when you need them.
@@ -43,7 +43,7 @@ class Deploy extends React.Component {
             <li>First $500 worth of Resources is complimentary</li>
             <li>Pay for additional resources as you need them</li>
             <li>
-              <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">
+              <a href="https://deploy-docs.aptible.com/docs/shared-dedicated">
                 Dedicated stack
               </a>{' '}
               available for regulated data

@@ -6,19 +6,10 @@ export default () => (
   <div className={styles.container}>
     <div className={styles.column}>
       <Link to="/resources/">Library</Link>
-      <Link to="/resources/guides/">Guides</Link>
-      <Link to="/resources/webinars/">Webinars</Link>
-
-      <h6 className="small">Compliance Guides</h6>
-      <Link to="/gdpr/articles/1-subject-matter-objectives/">GDPR</Link>
-      <Link to="/hipaa/">HIPAA</Link>
-    </div>
-
-    <div className={styles.column}>
       <Link to="/blog/">Blog</Link>
       <Link to="/blog/category/engineering">Engineering Blog</Link>
 
-      <a href="/documentation/index.html">Documentation</a>
+      <a href="https://deploy-docs.aptible.com">Documentation</a>
 
       <h6 className="small">Support</h6>
       <a

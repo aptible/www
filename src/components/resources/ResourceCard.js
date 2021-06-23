@@ -27,7 +27,7 @@ export default ({ resource }) => {
     </div>
   );
 
-  const isDocumentationUrl = resource.url.includes('documentation');
+  const isDocumentationUrl = resource.url.includes('docs');
   const isPdfUrl = resource.url.includes('.pdf');
   const isExternalUrl = resource.url.includes('http');
 

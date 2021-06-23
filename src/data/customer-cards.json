@@ -1,9 +1,4 @@
 {
-  "vergesense": {
-    "headline": "Aptible helped us immediately cut our sales cycle in half and win 5 more enterprise deals in our first quarter as a customer.",
-    "author": "Dean Ryan, CEO",
-    "tags": ["technology"]
-  },
   "virta": {
     "headline": "&ldquo;Being able to launch and scale (just by toggling option in the admin panel) is really exciting. It’s not just that it frees me up from working on security and compliance. It frees me up from worrying about them.&rdquo;",
     "text": "Virta uses Aptible to easily fulfill compliance requirements and maintain security so its team can stay focused on delivering a personalized clinic experience.",
@@ -20,19 +15,6 @@
     "author": "Alex Villa, COO",
     "tags": ["health"]
   },
-  "fortmatic": {
-    "headline": "&ldquo;We want our end users to know we take security integrity very seriously. With Aptible, we were able to secure our SOC 2 audit very quickly and we have a fleshed out plan for Security Management&rdquo;",
-    "author": "Arthur Jen, Co-Founder",
-    "text": "Fortmatic used Aptible Comply to build their Security Management program and secure their SOC 2 audit in a fraction of the time.",
-    "tags": ["technology"],
-    "videoId": "d0t63nclmk",
-    "videoLength": "1:41"
-  },
-  "snaps": {
-    "headline": "&ldquo;Our software is used by Fortune 100 companies, which means completing time-consuming vendor security assessments. Comply has helped us prepare for ISO 27001 certification, which is helping our team take a 'preemptive strike' against VSAs and shorten the enterprise sales cycle.&rdquo;",
-    "author": "Joe Rettenmyer, VP of Engineering",
-    "tags": ["technology"]
-  },
   "ableHealth": {
     "headline": "&ldquo;Our team couldn’t relate to what we had pieced together (with different systems, sources, and spreadsheets.) We needed something that was tailored to us.&rdquo;",
     "author": "Steve Daniels, Co-founder and President",
@@ -48,17 +30,12 @@
     "link": "/customers/pathai/"
   },
   "quadpay": {
-    "headline": "&ldquo;What I really wanted at QuadPay, where security is of tantamount importance, was to have something that was comprehensive, followed best practices, and could actually be implemented across an organization at scale.&rdquo;",
+    "headline": "&ldquo;What I really wanted at QuadPay, where security is of paramount importance, was to have something that was comprehensive, followed best practices, and could actually be implemented across an organization at scale.&rdquo;",
     "author": "Ian Yamey, CTO",
     "tags": [
       "technology"
     ],
     "videoId": "kf1hbw3as5",
     "videoLength": "2:07"
-  },
-  "riffyn": {
-    "headline": "&ldquo;Had we not purchased Aptible Comply, we would have been left with a slew of spreadsheets, online tools, and templates but without a truly scalable solution.&rdquo;",
-    "author": "Claude Calegari, VP of Operations and Finance",
-    "tags": ["technology"]
   }
 }
