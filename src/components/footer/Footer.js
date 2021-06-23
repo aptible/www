@@ -90,7 +90,7 @@ const Footer = () => (
       <div className={styles.support}>
         <h6 className="small">Support</h6>
         <a
-          href="https://aptible.zendesk.com/"
+          href="https://aptible.zendesk.com/hc/en-us/requests/new"
           target="_blank"
           rel="noopener noreferrer"
         >

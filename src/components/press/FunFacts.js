@@ -16,8 +16,8 @@ export default () => (
       <FunFact style={{ gridColumn: 1 }} label="Customers">
         300+
       </FunFact>
-      <FunFact style={{ gridColumn: 2 }} label="Employees">
-        30+
+      <FunFact style={{ gridColumn: 2 }} label="Containers Deployed">
+        20MM+
       </FunFact>
       <FunFact style={{ gridColumn: 3 }} label="Founded">
         2013
