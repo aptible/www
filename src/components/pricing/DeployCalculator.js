@@ -35,17 +35,45 @@ const calculators = {
   ],
   encryptedDisk: [
     { tick: '0', cost: '0', alwaysDisplay: true },
-    { tick: '10GB', cost: '4' },
-    { tick: '50GB', cost: '19' },
-    { tick: '100GB', cost: '37' },
-    { tick: '250GB', cost: '93' },
-    { tick: '500GB', cost: '185' },
-    { tick: '1TB', cost: '370', alwaysDisplay: true },
-    { tick: '1.5TB', cost: '555' },
-    { tick: '2TB', cost: '740' },
-    { tick: '3TB', cost: '1,110' },
-    { tick: '4TB', cost: '1,480' },
-    { tick: '+', cost: '1,480', alwaysDisplay: true },
+    { tick: '10GB', cost: '2' },
+    { tick: '50GB', cost: '10' },
+    { tick: '100GB', cost: '20' },
+    { tick: '250GB', cost: '50' },
+    { tick: '500GB', cost: '100' },
+    { tick: '1TB', cost: '200', alwaysDisplay: true },
+    { tick: '1.5TB', cost: '250' },
+    { tick: '2TB', cost: '400' },
+    { tick: '3TB', cost: '600' },
+    { tick: '4TB', cost: '800' },
+    { tick: '+', cost: '800', alwaysDisplay: true },
+  ],
+  encryptedBackups: [
+    { tick: '0', cost: '0', alwaysDisplay: true },
+    { tick: '100GB', cost: '2' },
+    { tick: '250GB', cost: '5' },
+    { tick: '500GB', cost: '10' },
+    { tick: '750GB', cost: '15' },
+    { tick: '1TB', cost: '20', alwaysDisplay: true },
+    { tick: '1.5TB', cost: '30' },
+    { tick: '2TB', cost: '40' },
+    { tick: '3TB', cost: '60' },
+    { tick: '5TB', cost: '100' },
+    { tick: '10TB', cost: '200' },
+    { tick: '+', cost: '200', alwaysDisplay: true },
+  ],
+  provisionedIOPS: [
+    { tick: '0', cost: '0', alwaysDisplay: true },
+    { tick: '100', cost: '1' },
+    { tick: '500', cost: '5' },
+    { tick: '1000', cost: '10' },
+    { tick: '1500', cost: '15' },
+    { tick: '2000', cost: '20', alwaysDisplay: true },
+    { tick: '3000', cost: '30' },
+    { tick: '5000', cost: '50' },
+    { tick: '10000', cost: '100' },
+    { tick: '15000', cost: '150' },
+    { tick: '20000', cost: '200' },
+    { tick: '+', cost: '200', alwaysDisplay: true },
   ],
   endpoints: [
     { tick: '0', cost: '0', alwaysDisplay: true },
@@ -96,11 +124,25 @@ const toolTips = {
          intrusion detection monitoring and incident response. The Aptible
          Security Team investigates, responds to, and resolves any security
          incidents.`,
-  disk: `Encrypted database storage. Includes backups: daily for 90 days,
-          monthly for 6 years.`,
+  disk: `Encrypted database storage.`,
+  backups: `Encrypted database backups. Backup retention policies are
+            customizable, with the default retention policy creating
+            daily backups for 90 days, and monthly backups for 6 years,
+            with all backups copied to a second region for disaster recovery
+            purposes.`,
   endpoints: `Endpoints attach to your containers so that they can be accessed
               over the internet, or by other containers. May be HTTPS, TCP, or
               TLS Endpoints.`,
+  provisionedIOPS: (
+    <>
+      Additional database disk I/O operations per second provisioned over the
+      baseline (3000 IOPS). See the{' '}
+      <a href="https://deploy-docs.aptible.com/docs/database-scaling">
+        Database Scaling documentation
+      </a>{' '}
+      for more details.
+    </>
+  ),
   stack: (
     <>
       Based on 730 hours/month,{' '}
@@ -170,11 +212,13 @@ class DeployCalculator extends React.Component {
     super(props);
     this.state = {
       managedHids: false,
-      containersIndex: 0,
-      diskIndex: 0,
-      endpointsIndex: 0,
-      vpnConnectionsIndex: 0,
-      estimatedMonthlyTotal: 0,
+      containersIndex: '0',
+      diskIndex: '0',
+      backupIndex: '0',
+      provisionedIOPSIndex: '0',
+      endpointsIndex: '0',
+      vpnConnectionsIndex: '0',
+      estimatedMonthlyTotal: '0',
       dedicatedStack: true,
       supportPlan: 'standard',
     };
@@ -220,6 +264,22 @@ class DeployCalculator extends React.Component {
     this.setState({ diskIndex: idx });
   };
 
+  backupAmount = () => {
+    return calculators.encryptedBackups[this.state.backupIndex].cost;
+  };
+
+  updateBackupIndex = idx => {
+    this.setState({ backupIndex: idx });
+  };
+
+  provisionedIOPSAmount = () => {
+    return calculators.provisionedIOPS[this.state.provisionedIOPSIndex].cost;
+  };
+
+  updateProvisionedIOPSIndex = idx => {
+    this.setState({ provisionedIOPSIndex: idx });
+  };
+
   endpointsAmount = () => {
     return calculators.endpoints[this.state.endpointsIndex].cost;
   };
@@ -255,6 +315,8 @@ class DeployCalculator extends React.Component {
       this.containersAmount(),
       this.containersManagedHidsAmount(),
       this.diskAmount(),
+      this.backupAmount(),
+      this.provisionedIOPSAmount(),
       this.endpointsAmount(),
       this.vpnConnectionsAmount(),
       this.dedicatedStackAmount(),
@@ -325,7 +387,7 @@ class DeployCalculator extends React.Component {
             calculatedAmount={this.diskAmount()}
             lineItemAmount={
               <>
-                <span>$0.37</span>/GB/Month
+                <span>$0.20</span>/GB/Month
               </>
             }
             pricingSlider={
@@ -333,6 +395,60 @@ class DeployCalculator extends React.Component {
                 calculator={calculators.encryptedDisk}
                 defaultValue="0"
                 updatePriceFn={this.updateDiskIndex}
+              />
+            }
+          />
+
+          <Resource
+            title="Encrypted Backups"
+            helpText={toolTips.backups}
+            calculatedAmount={this.backupAmount()}
+            lineItemAmount={
+              <>
+                <span>$0.02</span>/GB/Month
+              </>
+            }
+            pricingSlider={
+              <PricingSlider
+                calculator={calculators.encryptedBackups}
+                defaultValue="0"
+                updatePriceFn={this.updateBackupIndex}
+              />
+            }
+          />
+
+          <Resource
+            title="Provisioned IOPS"
+            helpText={toolTips.provisionedIOPS}
+            calculatedAmount={this.provisionedIOPSAmount()}
+            lineItemAmount={
+              <>
+                <span>$0.01</span>/Provisioned IOPS/Month
+              </>
+            }
+            pricingSlider={
+              <PricingSlider
+                calculator={calculators.provisionedIOPS}
+                defaultValue="0"
+                updatePriceFn={this.updateProvisionedIOPSIndex}
+              />
+            }
+          />
+
+          <Resource
+            title="Endpoints"
+            helpText={toolTips.endpoints}
+            calculatedAmount={this.endpointsAmount()}
+            lineItemAmount={
+              <>
+                <span>$0.05</span>/Hour/Month
+              </>
+            }
+            pricingSlider={
+              <PricingSlider
+                calculator={calculators.endpoints}
+                defaultValue="0"
+                updatePriceFn={this.updateEndpointsIndex}
               />
             }
           />
