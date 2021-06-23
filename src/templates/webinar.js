@@ -27,15 +27,6 @@ export const query = graphql`
       body {
         json
       }
-      presenter1 {
-        name
-        jobTitle
-        professionalPhoto {
-          file {
-            url
-          }
-        }
-      }
       presenter2 {
         name
         jobTitle
