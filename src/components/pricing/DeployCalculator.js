@@ -146,14 +146,14 @@ const toolTips = {
   stack: (
     <>
       Based on 730 hours/month,{' '}
-      <a href="/documentation/deploy/reference/stacks/shared-dedicated.html">
+      <a href="https://deploy-docs.aptible.com/docs/shared-dedicated">
         more info
       </a>
     </>
   ),
   support: (
     <>
-      Learn more about <Link to="/deploy/support/">Deploy support plans</Link>.
+      Learn more about <Link to="/support-plans/">Deploy support plans</Link>.
     </>
   ),
 };

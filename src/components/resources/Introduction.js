@@ -6,10 +6,9 @@ export default () => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.content}>
-        <h1>Security Management Library</h1>
+        <h1>Resource Library</h1>
         <p className="XL">
-          Access security management resources to learn best practices for
-          growing, improving and communicating your security management program.
+          Learn about compliance best practices and how Aptible helps you follow them.
         </p>
       </div>
     </Grid>

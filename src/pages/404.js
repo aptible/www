@@ -22,10 +22,8 @@ export default () => (
         </p>
 
         <p>
-          <a href="/documentation/index.html">Documentation</a> &nbsp;
-          <a href="https://dashboard.aptible.com">Aptible Deploy</a> &nbsp;
-          <a href="https://comply-grc.aptible.com">Aptible Comply</a> &nbsp;
-          <a href="https://account.aptible.com">Account</a> &nbsp;
+          <a href="https://deploy-docs.aptible.com">Documentation</a> &nbsp;
+          <a href="https://dashboard.aptible.com">Aptible Dashboard</a> &nbsp;
           <a href="http://status.aptible.com/">Aptible Status</a> &nbsp;
           <a href="https://twitter.com/aptiblestatus">@aptiblestatus</a> &nbsp;
           <a href="https://aptible.zendesk.com/hc/en-us/requests/new">

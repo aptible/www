@@ -12,16 +12,6 @@ export const RESOURCES_NAV = [
     external: false,
   },
   {
-    title: 'Guides',
-    url: '/resources/guides/',
-    external: false,
-  },
-  {
-    title: 'Webinars',
-    url: '/resources/webinars/',
-    external: false,
-  },
-  {
     title: 'Blog',
     url: '/blog/',
     external: false,
@@ -33,7 +23,7 @@ export const RESOURCES_NAV = [
   },
   {
     title: 'Deploy Documentation',
-    url: '/documentation/index.html',
+    url: 'https://deploy-docs.aptible.com',
     external: true,
     newDomain: false,
   },
@@ -59,11 +49,11 @@ const Resources = () => (
       </div>
 
       <div className={styles.calloutContainer}>
-        <Link className={styles.callout} to="/security-management/">
+        <Link className={styles.callout} to="/hipaa/">
           <img src={pic} alt="" />
           <div className={styles.calloutText}>
             <p>Aptible Guide</p>
-            <h5>Introduction to Security Management</h5>
+            <h5>HIPAA Compliance: Guide for Startups</h5>
           </div>
         </Link>
       </div>

@@ -8,10 +8,10 @@ import Analytics from '../shared/Analytics';
 const AptibleLayout = ({ children }) => (
   <>
     <HelloBar
-      id="webinars-make-audits-simple-smooth-and-effective"
-      to="/webinars/make-audits-simple-smooth-and-effective/"
-      callout="Upcoming"
-      text="October 27th: Achieve simple, smooth audits with automations & integrations"
+      id="blog-implement-redux-toolkit-createslice"
+      to="/blog/implement-redux-toolkit-createslice/"
+      callout="Announcement"
+      text="Recreating redux-toolkit’s createSlice"
     />
     <Header />
     <CookieConsent />

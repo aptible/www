@@ -1,7 +1,7 @@
 /press-kit/badges/* /assets/badges/:splat 200!
 /pages/assets/press-kit/badges/* /assets/badges/:splat 200!
 /about/ /company/
-/assets/aptible-reference-architecture.pdf /deploy/features/
+/assets/aptible-reference-architecture.pdf /features/
 /benfits/ /enclave/
 /blog/alb-endpoints-now-support-ssl_protocols_override/ /changelog/alb-endpoints-now-support-ssl_protocols_override/
 /blog/aptible-2-factor-authentication-now-supports-fido-u2f-security-keys/ /changelog/aptible-2-factor-authentication-now-supports-fido-u2f-security-keys/
@@ -299,15 +299,14 @@
 /support/topics/troubleshooting/support-ticket-best-practices/ /documentation/support.html
 /support/topics/troubleshooting/unexpected-requests-in-app-logs/ /documentation/enclave/troubleshooting/unexpected-requests.html
 /support/topics/troubleshooting/what-is-a-csr/ /documentation/enclave/troubleshooting/csr-how-to.html
-/support-plans/ /deploy/support/
 /technology/ /enclave/
 /training/ /
 /assets/aptible-enclave-division-of-responsibilities.pdf /assets/deploy-division-of-responsibilities.pdf
 /assets/aptible-enclave-security-division-of-responsibilities.pdf /assets/deploy-division-of-responsibilities.pdf
 /assets/aptible-enclave-reference-architecture.pdf /assets/deploy-reference-architecture.pdf
-/resources/enclave-reference-architecture-and-division-of-responsibilities/ /deploy/features/
-/resources/enclave-reference-architecture-division-of-responsibilities/ /deploy/features/
-/assets/aptible-reference-architecture.pdf /deploy/features/
+/resources/enclave-reference-architecture-and-division-of-responsibilities/ /features/
+/resources/enclave-reference-architecture-division-of-responsibilities/ /features/
+/assets/aptible-reference-architecture.pdf /features/
 /compliance/hipaa-cloud/ /hipaa/
 /learn/hipaa-compliance-for-developers-getting-started/ /hipaa/
 /resources/what-is-a-hipaa-baa/ /hipaa/what-is-a-baa/
@@ -416,14 +415,16 @@
 /pricing/ /pricing-plans/
 /pricing/enclave/ /pricing-plans/
 /support/toolbelt /documentation/deploy/cli.html
-/resources/enclave-reference-architecture-and-division-of-responsibilities /deploy/features/
+/resources/enclave-reference-architecture-and-division-of-responsibilities /features/
 /enclave/ /deploy/
 /enclave/hipaa-compliant-hosting/ /deploy/
 /enclave/managed-host-intrusion-detection-system/ /deploy/
 /gridiron/ /comply/
 /aws-vs-aptible/ /deploy/
-/resources/enclave-security-division-of-responsibilities/ /deploy/features/
+/resources/enclave-security-division-of-responsibilities/ /features/
 /resources/enclave-reference-architecture/ /assets/deploy-reference-architecture.pdf
 /comply/workflows/ /comply/ 302!
 /use-cases/ /use-cases/create-single-source-of-truth/
 /signup-comply/ /comply/signup/
+/deploy-features/ /features/
+/deploy/support/ /support-plans/

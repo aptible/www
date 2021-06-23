@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import useCases from '../../data/use-cases.json';
 import { Grid } from '../grid/Grid';
 import NewsletterSignup from './NewsletterSignup';
 import styles from './Footer.module.css';
@@ -76,23 +75,22 @@ const Footer = () => (
     <Grid rows="3">
       <div className={styles.product}>
         <h6 className="small">Product</h6>
-        <Link to="/deploy/features">Features</Link>
+        <Link to="/features">Features</Link>
         <Link to="/pricing-plans/#deploy">Pricing</Link>
       </div>
 
       <div className={styles.resources}>
         <h6 className="small">Resources</h6>
         <Link to="/customers/">Customers</Link>
-        <Link to="/resources/guides/">Compliance Guides</Link>
+        <Link to="/resources/guides/">Resource Library</Link>
         <Link to="/blog/">Blog</Link>
         <Link to="/blog/category/engineering/">Engineering Blog</Link>
       </div>
 
       <div className={styles.support}>
         <h6 className="small">Support</h6>
-        <a href="/documentation/faq.html">FAQs</a>
         <a
-          href="https://aptible.zendesk.com/"
+          href="https://aptible.zendesk.com/hc/en-us/requests/new"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -105,8 +103,8 @@ const Footer = () => (
         >
           Aptible Status
         </a>
-        <Link to="/changelog/">Deploy Changelog</Link>
-        <a href="/documentation/index.html">Documentation</a>
+        <Link to="/changelog/">Changelog</Link>
+        <a href="https://deploy-docs.aptible.com">Documentation</a>
       </div>
 
       <div className={styles.company}>
