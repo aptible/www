@@ -23,11 +23,24 @@ gatsby develop
 Sometimes changes you make in Contentful won't show up locally because Gatsby
 caches the data. To clear the cache, delete the `.cache` directory.
 
+## GraphQL Contentful Restrictions
+
+When working with contentful, there is an important caveat on the
+[gatsby-source-contentful documentation](https://www.gatsbyjs.com/plugins/gatsby-source-contentful/#restrictions-and-limitations):
+
+> At the moment, fields that do not have at least one populated instance will
+> not be created in the GraphQL schema. This can break your site when field values
+> get removed. You may workaround with an extra content entry with all fields filled out.
+
+What this means is if we query for "author" on blog posts but our author value
+for all blogs posts being returned are `null` or empty, then we have have a
+build-time error that will prevent us from building the app locally.
+
 ## Deploying
 
 All commits to `master` will get deployed automatically to the staging site:
 
-[http://aptible-staging.netlify.com/](http://aptible-staging.netlify.com/) 
+[http://aptible-staging.netlify.com/](http://aptible-staging.netlify.com/)
 (password `aptible2019`)
 
 Additionally, every PR will get its own preview build in a staging environment
@@ -48,7 +61,7 @@ Deploys currently take ~5 mins.
 Login to Contentful using the shared credentials in 1Password, and make sure
 you are in the `www.aptible.com` workspace in the top left of the screen.
 
-You can then add or edit content entries. Any changes you make will *not* be
+You can then add or edit content entries. Any changes you make will _not_ be
 visible in production until you `Publish` them - before that, they will only be
 visible locally and on staging / PR preview sites.
 
