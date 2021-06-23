@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../buttons/Button';
-import Signup from './Signup';
 
 class SignupButton extends React.Component {
   render() {
