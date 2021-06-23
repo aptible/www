@@ -8,23 +8,27 @@ const dateFormat = {
   month: 'long',
 };
 
-export default ({ post, disableAuthorLink }) => (
-  <div className={styles.meta}>
-    <div className={styles.author}>
-      {!disableAuthorLink && <Link to="/">{post.author.name}</Link>}
+export default ({ post, disableAuthorLink }) => {
+  const author = post.author ? post.author.name : '';
+  const secondAuthor = post.secondAuthor ? post.secondAuthor.name : '';
+  return (
+    <div className={styles.meta}>
+      <div className={styles.author}>
+        {!disableAuthorLink && <Link to="/">{author}</Link>}
 
-      {disableAuthorLink && (
-        <span>
-          {post.author.name}
-          {post.secondAuthor && (
-            <React.Fragment> &amp; {post.secondAuthor.name}</React.Fragment>
-          )}
-        </span>
-      )}
+        {disableAuthorLink && (
+          <span>
+            {author}
+            {secondAuthor ? (
+              <React.Fragment> &amp; {secondAuthor}</React.Fragment>
+            ) : null}
+          </span>
+        )}
+      </div>
+      &bull;
+      <div className={styles.postedAt}>
+        {new Date(post.postedAt).toLocaleDateString('en-US', dateFormat)}
+      </div>
     </div>
-    &bull;
-    <div className={styles.postedAt}>
-      {new Date(post.postedAt).toLocaleDateString('en-US', dateFormat)}
-    </div>
-  </div>
-);
+  );
+};

@@ -36,15 +36,6 @@ export const query = graphql`
           }
         }
       }
-      presenter2 {
-        name
-        jobTitle
-        professionalPhoto {
-          file {
-            url
-          }
-        }
-      }
       wistiaVideoId
       transcript {
         json
