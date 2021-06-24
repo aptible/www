@@ -9,7 +9,7 @@ export default () => (
       <div className={styles.hero}>
         <h1>Division of Responsibility</h1>
         <p className="L">
-          Aptible is an ISO 27001 and SOC 2 certified, AWS-based application
+          Aptible is a SOC 2 and HITRUST certified, AWS-based application
           platform for deploying apps and databases that run in a scalable,
           HIPAA-compliant environment.
         </p>
