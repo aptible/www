@@ -9,7 +9,7 @@ import console from '../../images/deploy/console.png';
 export default () => (
   <Grid rows="3">
     <div className={styles.intro}>
-      <h1>14 fewer steps than AWS</h1>
+      <h1>16 fewer steps than AWS</h1>
       <h4>
         Aptible automates most of the steps to AWS deployment, so you can launch
         without roadblocks or delays.
