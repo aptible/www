@@ -8,7 +8,7 @@ import customerCards from '../../data/customer-cards.json';
 
 import quadpayPhoto from '../../images/customers/photos/quadpay-ian-yamey.jpg';
 
-import healthCatalystLogo from '../../images/customers/logos/able-health.png';
+import healthCatalystLogo from '../../images/customers/logos/health-catalyst.png';
 import ableHealthLogo from '../../images/customers/logos/able-health.png';
 import healthifyLogo from '../../images/customers/logos/healthify.svg';
 import mdsaveLogo from '../../images/customers/logos/mdsave.svg';
