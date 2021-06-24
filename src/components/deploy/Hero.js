@@ -22,10 +22,6 @@ export default () => (
         <SignupButton text="Start with Deploy" product="deploy" />
       </div>
 
-      <div className={styles.illustration}>
-        <img src={quadpayIllustration} alt="quadpay" />
-      </div>
-
       <div className={styles.consoleContainer}>
         <Console />
       </div>
