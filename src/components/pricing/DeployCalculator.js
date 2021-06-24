@@ -153,7 +153,7 @@ const toolTips = {
   ),
   support: (
     <>
-      Learn more about <Link to="/support-plans/">Deploy support plans</Link>.
+      Learn more about <Link to="/support-plans/">Aptible support plans</Link>.
     </>
   ),
 };

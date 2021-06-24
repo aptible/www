@@ -8,10 +8,10 @@ import Analytics from '../shared/Analytics';
 const AptibleLayout = ({ children }) => (
   <>
     <HelloBar
-      id="blog-implement-redux-toolkit-createslice"
-      to="/blog/implement-redux-toolkit-createslice/"
+      id="blog-greater-focus-on-deploy-as-comply-becomes-conveyor"
+      to="/blog/greater-focus-on-deploy-as-comply-becomes-conveyor/"
       callout="Announcement"
-      text="Recreating redux-toolkit’s createSlice"
+      text="Aptible Comply is now Conveyor. Click here to learn more."
     />
     <Header />
     <CookieConsent />

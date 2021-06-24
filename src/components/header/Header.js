@@ -67,7 +67,7 @@ class Header extends React.Component {
     }
 
     const headerCta = (
-      <SignupButton size="small" text="Start with Deploy" product="deploy" />
+      <SignupButton size="small" text="Sign up for free" product="deploy" />
     );
 
     return (

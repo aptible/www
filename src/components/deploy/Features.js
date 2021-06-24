@@ -383,18 +383,30 @@ class Features extends React.Component {
   render() {
     return (
       <div className={styles.container} id="features">
+        <div className={styles.images}>
+          <Grid>
+            <div className={styles.screenshot}>
+              <img src={screenshot} alt="Aptible" />
+            </div>
+            <div className={styles.console}>
+              <img src={console} alt="Aptible Console" />
+            </div>
+          </Grid>
+        </div>
+
         <div className={styles.intro}>
           <Grid>
             <div className={styles.content}>
-              <h4>Features</h4>
               <h1>
-                The Security
-                <br /> Question, Solved
+                Automate the steps to compliance
               </h1>
               <p className="L">
-                Robust security controls + Platform flexibility =<br /> Progress
-                + Compliance. Deploy audit-ready apps and databases and all
-                supporting infrastructure.
+                When you launch on Aptible, you’ll be fully compliant with
+                standards like HIPAA/HITECH and HITRUST. Just add your code to
+                a platform already equipped to meet customer requirements for
+                encryption, backups, monitoring, access, and specific compliance
+                protocols.
+
               </p>
             </div>
           </Grid>
@@ -411,7 +423,7 @@ class Features extends React.Component {
                     : ''
                 }
               >
-                Audit-Readiness
+                Audit-ready
                 <div className={styles.circle} />
               </h4>
               <h4
@@ -422,16 +434,16 @@ class Features extends React.Component {
                     : ''
                 }
               >
-                Automated Dev-Ops
+                Automated DevOps
                 <div className={styles.circle} />
               </h4>
               <h4
-                onClick={() => this.openSection('easeOfUse')}
+                onClick={() => this.openSection('hardenedSecurity')}
                 className={
-                  this.state.openSection === 'easeOfUse' ? styles.active : ''
+                  this.state.openSection === 'hardenedSecurity' ? styles.active : ''
                 }
               >
-                Ease of Use
+                Hardened security
                 <div className={styles.circle} />
               </h4>
             </div>
@@ -439,10 +451,10 @@ class Features extends React.Component {
             {this.state.openSection === 'auditReadiness' && (
               <div className={styles.feature}>
                 <div className={styles.featureTitle}>
-                  <h6 className="small">Audit-Readiness</h6>
+                  <h6 className="small">Audit-ready</h6>
                 </div>
                 <h5>
-                  Out-of-the-box compliance. Deploy enables you to meet and
+                  Out-of-the-box compliance. Aptible enables you to meet and
                   maintain regulatory compliance and customer audit requirements
                   automatically.
                 </h5>
@@ -453,7 +465,7 @@ class Features extends React.Component {
                   </div>
                   <h6>Data Encryption</h6>
                   <p>
-                    Deploy provides everything you need to meet encryption
+                    Aptible provides everything you need to meet encryption
                     requirements so your Databases, traffic, and certificates
                     are secure.
                   </p>
@@ -481,21 +493,20 @@ class Features extends React.Component {
             {this.state.openSection === 'automatedDevOps' && (
               <div className={styles.feature}>
                 <div className={styles.featureTitle}>
-                  <h6 className="small">Automated Dev-Ops</h6>
+                  <h6 className="small">Automated DevOps</h6>
                 </div>
                 <h5>
-                  Deploying should be easier. Deploy helps you automate your
-                  DevOps work as it implements the security controls you need
-                  for regulated industries.
+                  Can’t spend hours a day on DevOps? Aptible automatically
+                  manages and monitors infrastructure, scaling up easily as
+                  your capacity demands increase.
                 </h5>
 
                 <div className={styles.featureBullet}>
                   <div className={styles.featureIcon}>{icons.paas}</div>
-                  <h6>PaaS for Dockerized Apps</h6>
+                  <h6>Easy Deployment</h6>
                   <p>
-                    Deploy provisions a VPC for you and hosts your containers
-                    and databases in it. Run any code on Deploy that runs inside
-                    Docker.
+                    Deploy easily from an existing Docker image registry, or
+                    have Aptible build an image for you from your code.
                   </p>
                 </div>
                 <div className={styles.featureBullet}>
@@ -508,64 +519,28 @@ class Features extends React.Component {
                 </div>
                 <div className={styles.featureBullet}>
                   <div className={styles.featureIcon}>{icons.database}</div>
-                  <h6>Database Management</h6>
+                  <h6>Container Scaling</h6>
                   <p>
-                    Easily launch, scale, and deprovision any database without
-                    being limited to a single database technology.
+                    Easily scale your app and database containers, both
+                    horizontally (more containers per service) and vertically.
                   </p>
                 </div>
               </div>
             )}
 
-            {this.state.openSection === 'easeOfUse' && (
+            {this.state.openSection === 'hardenedSecurity' && (
               <div className={styles.feature}>
                 <div className={styles.featureTitle}>
-                  <h6 className="small">Ease of Use</h6>
+                  <h6 className="small">Hardened security</h6>
                 </div>
                 <h5>
-                  Security and compliance shouldn't slow you down. Deploy
-                  provides you with the access and tools you need while still
-                  giving you best-in-class security controls.
-                </h5>
+                  Get a security operations center out of the box with managed
+                  host intrusion detection, vulnerability scanning,
+                  network anomaly monitoring, and more.
 
-                <div className={styles.featureBullet}>
-                  <div className={styles.featureIcon}>{icons.twelve}</div>
-                  <h6>Twelve-factor App Deployment</h6>
-                  <p>
-                    Deploy natively supports 12-factor apps so you can use your
-                    existing developer workflow.
-                  </p>
-                </div>
-                <div className={styles.featureBullet}>
-                  <div className={styles.featureIcon}>{icons.whatYouKnow}</div>
-                  <h6>Use what you know</h6>
-                  <p>
-                    Deploy supports many languages, tools, and database
-                    technologies, so you can be secure and still work the way
-                    you're used to.
-                  </p>
-                </div>
-                <div className={styles.featureBullet}>
-                  <div className={styles.featureIcon}>{icons.scalability}</div>
-                  <h6>Scalability</h6>
-                  <p>
-                    Deploy scales with your business. As you grow, you can
-                    resize your container and disk at any time.
-                  </p>
-                </div>
+                </h5>
               </div>
             )}
-          </Grid>
-        </div>
-
-        <div className={styles.images}>
-          <Grid>
-            <div className={styles.screenshot}>
-              <img src={screenshot} alt="Aptible Deploy" />
-            </div>
-            <div className={styles.console}>
-              <img src={console} alt="Aptible Deploy Console" />
-            </div>
           </Grid>
         </div>
       </div>

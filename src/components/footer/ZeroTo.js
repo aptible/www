@@ -8,15 +8,16 @@ const ZeroTo = () => {
     <div className={styles.zero}>
       <Grid rows="2">
         <div className={styles.zeroTo}>
-          <h1>Build Customer Trust</h1>
+          <h1>Focus on innovation,
+          <br /> not compliance</h1>
         </div>
         <div className={styles.start}>
           <h4>
-            Start eliminating the manual work of security and compliance now.
+            Eliminate compliance stress and get your app out into the world.
           </h4>
         </div>
         <div className={styles.button}>
-          <SignupButton text="Get a demo" theme="black" />
+          <SignupButton text="Sign up for free" theme="black" />
         </div>
       </Grid>
     </div>

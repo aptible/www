@@ -33,7 +33,7 @@ class Deploy extends React.Component {
         </p>
 
         <div className={styles.deployLearnMore}>
-          <SignupButton text="Start with Deploy" product="deploy" />
+          <SignupButton text="Sign up for free" product="deploy" />
         </div>
 
         <div className={styles.deployAccountContainer}>

@@ -34,7 +34,7 @@ a.button.small {
   outline: none;
 }
 
-.black {
+a.black {
   background-color: var(--aptible-black);
   border-color: var(--aptible-black);
   color: white;

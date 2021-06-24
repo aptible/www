@@ -150,7 +150,7 @@ export default () => (
           <h5>Continuous Host Activity Monitoring</h5>
           <p>
             Your infrastructure generates a constant stream of events relevant
-            to the security of your data. Aptible Deploy HIDS is installed on
+            to the security of your data. Aptible Managed HIDS is installed on
             each host that runs your containers by default and will detect
             potential intrusions and other anomalous activities.
           </p>

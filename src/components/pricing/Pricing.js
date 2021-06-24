@@ -12,7 +12,7 @@ class Pricing extends React.Component {
     return (
       <Grid>
         <div className={styles.hero}>
-          <h1 className="XL">Pricing for Aptible Deploy</h1>
+          <h1 className="XL">Aptible Pricing</h1>
           <p className="XL">Plans that scale to meet your needs</p>
         </div>
 

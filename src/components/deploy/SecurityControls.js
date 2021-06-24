@@ -3,12 +3,17 @@ import { Grid } from '../grid/Grid';
 import styles from './SecurityControls.module.css';
 import awsLogo from '../../images/aws.png';
 import ArrowButton from '../buttons/ArrowButton';
+import screenshot from '../../images/deploy/screenshot.svg';
+import console from '../../images/deploy/console.png';
 
 export default () => (
   <Grid rows="3">
     <div className={styles.intro}>
-      <h5>Would you build HTTPS from scratch?</h5>
-      <h1>Don't Reinvent Application Security Controls.</h1>
+      <h1>14 fewer steps than AWS</h1>
+      <h4>
+        Aptible automates most of the steps to AWS deployment, so you can launch
+        without roadblocks or delays.
+      </h4>
     </div>
 
     <div className={styles.callout}>

@@ -7,13 +7,12 @@ export default () => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.content}>
-        <h5>Aptible Deploy Features</h5>
+        <h5>Aptible Features</h5>
         <h1 className="hero">
-          Automate
-          <br className="mobileOnly" /> your
-          <br className="desktopOnly" /> security controls
+          DevSecOps without
+          <br className="desktopOnly" /> the overhead
         </h1>
-        <SignupButton text="Start with Deploy" product="deploy" />
+        <SignupButton text="Sign up for free" product="deploy" />
       </div>
     </Grid>
   </div>
