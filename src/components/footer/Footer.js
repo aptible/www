@@ -103,7 +103,7 @@ const Footer = () => (
         >
           Aptible Status
         </a>
-        <Link to="https://deploy-docs.aptible.com/changelog">Changelog</Link>
+        <a href="https://deploy-docs.aptible.com/changelog">Changelog</a>
         <a href="https://deploy-docs.aptible.com">Documentation</a>
       </div>
 
