@@ -454,24 +454,6 @@ class DeployCalculator extends React.Component {
           />
 
           <Resource
-            title="Endpoints"
-            helpText={toolTips.endpoints}
-            calculatedAmount={this.endpointsAmount()}
-            lineItemAmount={
-              <>
-                <span>$0.05</span>/Hour/Month
-              </>
-            }
-            pricingSlider={
-              <PricingSlider
-                calculator={calculators.endpoints}
-                defaultValue="0"
-                updatePriceFn={this.updateEndpointsIndex}
-              />
-            }
-          />
-
-          <Resource
             title="VPN Connections"
             calculatedAmount={this.vpnConnectionsAmount()}
             lineItemAmount={
