@@ -116,18 +116,6 @@ const Footer = () => (
         <Link to="/legal/terms-of-service/">Legal</Link>
       </div>
 
-      <div className={styles.newsletter}>
-        <h5>Defense in Brief</h5>
-        <p>
-          We’ll send you the best from Krebs on Security, Bleeping Computer, and
-          more in a brief monthly digest.
-        </p>
-      </div>
-
-      <div className={styles.newsletterForm}>
-        <NewsletterSignup />
-      </div>
-
       <div className={styles.social}>
         <a
           href="https://twitter.com/aptible"
@@ -169,11 +157,8 @@ const Footer = () => (
         <a href="https://account.aptible.com/login">
           <h6 className="small">Log In</h6>
         </a>
-        <a href="mailto:hello@aptible.com">
-          <h6 className="small">hello@aptible.com</h6>
-        </a>
-        <a href="tel:18662965003">
-          <h6 className="small">+1 (866) 296-5003</h6>
+        <a href="mailto:support@aptible.com">
+          <h6 className="small">support@aptible.com</h6>
         </a>
       </div>
 
