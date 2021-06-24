@@ -9,24 +9,19 @@ export default () => (
   <div className={styles.container}>
     <Grid rows="2">
       <div className={styles.content}>
-        <h5>Aptible Deploy</h5>
         <h1 className="hero">
-          Launch apps and databases that
-          <br className="desktopOnly" /> are audit-ready
+          Deploy a secure, compliant app from day one
         </h1>
         <p className="XL">
-          Deploy automatically implements the security controls you need to
-          achieve regulatory compliance and pass customer audits.
+          Aptible is a fully managed application platform with automated
+          security and compliance controls baked in. Get to market faster,
+          easily pass vendor audits, and never worry about maintaining servers.
         </p>
 
-        <SignupButton text="Start with Deploy" product="deploy" />
+        <SignupButton text="Sign up for free" product="deploy" />
       </div>
 
       <div className={styles.illustration}>
-        <img src={quadpayIllustration} alt="quadpay" />
-      </div>
-
-      <div className={styles.consoleContainer}>
         <Console />
       </div>
     </Grid>

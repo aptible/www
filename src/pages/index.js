@@ -25,9 +25,9 @@ export default () => (
       />
     </Helmet>
     <Hero />
-    <Nav items={stickyNavItems} ctaText="Start With Deploy" product="deploy" />
-    <Features />
+    <Nav items={stickyNavItems} ctaText="Sign up for free" product="deploy" />
     <SecurityControls />
+    <Features />
     <HowItWorks />
     <WhoUses />
     <ZeroTo />

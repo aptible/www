@@ -7,7 +7,7 @@
   {
     "headline": "HIPAA Compliance",
     "filters": ["auditReady"],
-    "body": "Run healthcare workloads that process, store, and transmit HIPAA protected health information with Aptible. BAAs are available for Deploy dedicated stacks and Comply."
+    "body": "Run healthcare workloads that process, store, and transmit HIPAA protected health information with Aptible. BAAs are available for Aptible dedicated stacks."
   },
   {
     "headline": "2-Factor Authentication",
@@ -32,17 +32,17 @@
   {
     "headline": "Container Recovery",
     "filters": ["reliability"],
-    "body": "Deploy containers that exit unexpectedly are restarted in pristine condition, ensuring uptime even if your app crashes."
+    "body": "Aptible containers that exit unexpectedly are restarted in pristine condition, ensuring uptime even if your app crashes."
   },
   {
     "headline": "Memory Management",
     "filters": ["flexible"],
-    "body": "Deploy containers that exceed their memory allocation are allowed to gracefully exit before being restarted. This helps avoid contention on the underlying EC2 instances and increases overall stability of your Deploy workloads."
+    "body": "Aptible containers that exceed their memory allocation are allowed to gracefully exit before being restarted. This helps avoid contention on the underlying EC2 instances and increases overall stability of your Aptible workloads."
   },
   {
     "headline": "Fault-Tolerant Container Distribution",
     "filters": ["flexible"],
-    "body": "Deploy automatically deploys horizontally-scaled app and database containers across separate AWS Availability Zones, to ensure high availability."
+    "body": "Aptible automatically deploys horizontally-scaled app and database containers across separate AWS Availability Zones, to ensure high availability."
   },
   {
     "headline": "SRE Team Monitoring and Response",
@@ -52,22 +52,22 @@
   {
     "headline": "Host Hardening",
     "filters": ["security", "convenience"],
-    "body": "Deploy host operating systems are hardened to disable unnecessary services and limit surface area for attacks."
+    "body": "Aptible host operating systems are hardened to disable unnecessary services and limit surface area for attacks."
   },
   {
     "headline": "Managed TLS Endpoints",
     "filters": ["security", "convenience"],
-    "body": "Deploy automatically procures and renews free TLS certificates via Let’s Encrypt on your behalf."
+    "body": "Aptible automatically procures and renews free TLS certificates via Let’s Encrypt on your behalf."
   },
   {
     "headline": "Endpoint IP Filtering",
     "filters": ["security"],
-    "body": "Restrict access to Deploy apps and databases to a set of whitelisted IP addresses or networks, and block other incoming traffic."
+    "body": "Restrict access to Aptible apps and databases to a set of whitelisted IP addresses or networks, and block other incoming traffic."
   },
   {
     "headline": "Container Log Drains",
     "filters": ["auditReady", "convenience"],
-    "body": "Route Deploy container logs to logging destinations for review, alerting, and archiving. Stream logs to your console in real time with the Aptible Toolbelt."
+    "body": "Route Aptible container logs to logging destinations for review, alerting, and archiving. Stream logs to your console in real time with the Aptible Toolbelt."
   },
   {
     "headline": "Container Metrics",
@@ -82,7 +82,7 @@
   {
     "headline": "Managed VPNs",
     "filters": ["flexible", "convenience"],
-    "body": "Integrate with partners or connect privately to your Deploy dedicated stacks using Managed IPsec VPNs."
+    "body": "Integrate with partners or connect privately to your Aptible dedicated stacks using Managed IPsec VPNs."
   },
   {
     "headline": "Internal Endpoints",
@@ -92,7 +92,7 @@
   {
     "headline": "VPC Peering",
     "filters": ["flexible", "convenience"],
-    "body": "Securely connect your Deploy dedicated stack to other AWS VPCs in the same region."
+    "body": "Securely connect your Aptible dedicated stack to other AWS VPCs in the same region."
   },
   {
     "headline": "Database Replication",
@@ -112,22 +112,22 @@
   {
     "headline": "Direct Deploy from Docker Image",
     "filters": ["convenience"],
-    "body": "Build your Docker image locally or in a CI platform, push the image to a Docker registry, and deploy straight to Deploy."
+    "body": "Build your Docker image locally or in a CI platform, push the image to a Docker registry, and deploy straight to Aptible."
   },
   {
     "headline": "Dockerfile Deploy",
     "filters": ["convenience"],
-    "body": "Let Deploy build your container images using a Dockerfile you specify, initiated with push to an Deploy git endpoint."
+    "body": "Let Aptible build your container images using a Dockerfile you specify, initiated with push to an Aptible git endpoint."
   },
   {
     "headline": "Network and Host Vulnerability Scanning",
     "filters": ["auditReady", "security"],
-    "body": "Deploy scans both the Internet-facing network and private network of a master reference stack each month. The Aptible Security Team remediates adverse findings without customer intervention. You may request a scan of your dedicated stack and its hosts as needed for your own security assessments and audits."
+    "body": "Aptible scans both the Internet-facing network and private network of a master reference stack each month. The Aptible Security Team remediates adverse findings without customer intervention. You may request a scan of your dedicated stack and its hosts as needed for your own security assessments and audits."
   },
   {
     "headline": "DDoS Avoidance",
     "filters": ["security"],
-    "body": "Deploy VPC-based approach means that most stack components are not accessible from the Internet, and cannot be targeted directly by a DDoS attack. Deploy SSL/TLS endpoints include an AWS Elastic Load Balancer, which only supports valid TCP requests, meaning DDoS attacks such as UDP and SYN floods will not reach your app layer."
+    "body": "Aptible VPC-based approach means that most stack components are not accessible from the Internet, and cannot be targeted directly by a DDoS attack. Aptible SSL/TLS endpoints include an AWS Elastic Load Balancer, which only supports valid TCP requests, meaning DDoS attacks such as UDP and SYN floods will not reach your app layer."
   },
   {
     "headline": "Container Scaling",
@@ -137,17 +137,17 @@
   {
     "headline": "Managed Host Intrusion Detection",
     "filters": ["security"],
-    "body": "Deploy monitors the underlying EC2 instances in your stacks for potential intrusions, such as unauthorized SSH access, rootkits, file integrity issues, and privilege escalation. The Aptible Security Team responds on your behalf 24/7 to investigate and resolve issues as they arise."
+    "body": "Aptible monitors the underlying EC2 instances in your stacks for potential intrusions, such as unauthorized SSH access, rootkits, file integrity issues, and privilege escalation. The Aptible Security Team responds on your behalf 24/7 to investigate and resolve issues as they arise."
   },
   {
     "headline": "Automatic Database Backups",
     "filters": ["auditReady", "flexible", "convenience"],
-    "body": "Deploy takes automatic daily backups of your databases, and distributes those backups across geographically separate regions."
+    "body": "Aptible takes automatic daily backups of your databases, and distributes those backups across geographically separate regions."
   },
   {
     "headline": "Major OSS Database Support",
     "filters": ["flexible"],
-    "body": "Run Elasticsearch, MongoDB, MySQL, PostgreSQL, RabbitMQ, Redis, or SFTP containers on Deploy."
+    "body": "Run Elasticsearch, MongoDB, MySQL, PostgreSQL, RabbitMQ, Redis, or SFTP containers on Aptible."
   },
   {
     "headline": "End-to-End Encryption in Transit",
@@ -167,12 +167,12 @@
   {
     "headline": "Database Tunneling",
     "filters": ["convenience"],
-    "body": "Use the Aptible CLI to securely connect to your Deploy databases and audit each access."
+    "body": "Use the Aptible CLI to securely connect to your Aptible databases and audit each access."
   },
   {
     "headline": "Dedicated Stacks and Environments",
     "filters": ["security", "flexible"],
-    "body": "Each Deploy dedicated Stack runs in its own private VPC, making it easy to provision and manage multiple VPCs to support customers with stringent requirements for isolation and security."
+    "body": "Each Aptible dedicated Stack runs in its own private VPC, making it easy to provision and manage multiple VPCs to support customers with stringent requirements for isolation and security."
   },
   {
     "headline": "Security Group Firewalls",
@@ -180,29 +180,29 @@
     "body": "Public-facing EC2 instances use inbound Security Group rules configured in denyall mode. Only necessary ports are opened, and configuration is checked and enforced on a regular basis."
   },
   {
-    "headline": "Deploy Service Status Page",
+    "headline": "Aptible Service Status Page",
     "filters": ["flexible"],
     "body": "Access real-time information about the status of the Aptible services at status.aptible.com."
   },
   {
     "headline": "Web Service Health Checks",
     "filters": ["flexible"],
-    "body": "Deploy performs both release and runtime health checks to ensure your web services are performant and responsive."
+    "body": "Aptible performs both release and runtime health checks to ensure your web services are performant and responsive."
   },
   {
     "headline": "Safe Deploy Rollbacks",
     "filters": ["auditReady", "flexible"],
-    "body": "When encountering a failure during a deployment operation (e.g. one of your stack's underlying EC2 instances fails, AWS S3 has an outage, etc.), Deploy automatically restores your architecture to the last known good state."
+    "body": "When encountering a failure during a deployment operation (e.g. one of your stack's underlying EC2 instances fails, AWS S3 has an outage, etc.), Aptible automatically restores your architecture to the last known good state."
   },
   {
     "headline": "Intermediate Backups",
     "filters": ["auditReady", "flexible", "convenience"],
-    "body": "Deploy automatically enables data integrity controls for database types that support it (e.g. PostgreSQL write-ahead logs; MySQL binary logging; Redis RDB backups; MongoDB journaling, etc)."
+    "body": "Aptible automatically enables data integrity controls for database types that support it (e.g. PostgreSQL write-ahead logs; MySQL binary logging; Redis RDB backups; MongoDB journaling, etc)."
   },
   {
     "headline": "Zero-Downtime Deployments",
     "filters": ["flexible", "convenience"],
-    "body": "Deploy automatically performs zero downtime rolling deployments when you release your app."
+    "body": "Aptible automatically performs zero downtime rolling deployments when you release your app."
   },
   {
     "headline": "Maintenance Pages",

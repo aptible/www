@@ -26,7 +26,7 @@ export default ({ data }) => {
         />
       </Helmet>
       <Introduction />
-      <ResourceCards resources={[...resources, ...webinars]} categorySlug="" />
+      <ResourceCards resources={[...resources]} categorySlug="" />
     </AptibleLayout>
   );
 };

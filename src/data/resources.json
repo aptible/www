@@ -6,15 +6,15 @@
     "tags": ["Guide"]
   },
   {
-    "title": "Deploy Reference Architecture",
+    "title": "Aptible Reference Architecture",
     "url": "/assets/deploy-reference-architecture.pdf",
-    "description": "This reference guide provides you with all of the information you need to get started and be successful with Aptible Deploy.",
-    "tags": ["Guide", "Deploy"]
+    "description": "This reference guide provides you with all of the information you need to get started and be successful with Aptible.",
+    "tags": ["One-Pager"]
   },
   {
-    "title": "Deploy Division of Responsibilities",
+    "title": "Aptible Division of Responsibilities",
     "url": "/assets/deploy-division-of-responsibilities.pdf",
-    "description": "This guide is a breakdown of the functionalities (and their responsible parties) provided as part of the Deploy service.",
-    "tags": ["Guide", "Deploy"]
+    "description": "This guide is a breakdown of the functionalities (and their responsible parties) provided as part of the Aptible service.",
+    "tags": ["One-Pager"]
   }
 ]

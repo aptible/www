@@ -84,7 +84,7 @@ const Mobile = () => (
           </div>
 
           <div className={styles.cta}>
-            <SignupButton text="Start with Deploy" product="deploy" />
+            <SignupButton text="Sign up for free" product="deploy" />
           </div>
         </Grid>
       </div>

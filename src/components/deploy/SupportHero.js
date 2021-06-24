@@ -6,7 +6,7 @@ export default () => (
   <div>
     <Grid>
       <div className={styles.content}>
-        <h5>Aptible Deploy</h5>
+        <h5>Aptible</h5>
         <h1 className="hero">Support Plans</h1>
       </div>
     </Grid>

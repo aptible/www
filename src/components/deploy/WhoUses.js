@@ -7,9 +7,9 @@ export default () => (
   <div className={styles.container} id="who-uses-deploy">
     <Grid rows="3">
       <div className={styles.intro}>
-        <h1>Who Uses Deploy?</h1>
+        <h1>Who uses Aptible?</h1>
         <p className="XL">
-          Small companies who need to focus on development goals, achieve
+          Companies who need to focus on development goals, achieve
           regulatory compliance, get audit ready without the benefit of a
           security and compliance expert.
         </p>
@@ -20,7 +20,7 @@ export default () => (
       </div>
 
       <div className={`${styles.persona} ${styles.personaTwo}`}>
-        <h6>Small dev teams with no security expert.</h6>
+        <h6>Dev teams with no security expert.</h6>
       </div>
 
       <div className={`${styles.persona} ${styles.personaThree}`}>
@@ -30,6 +30,7 @@ export default () => (
       </div>
 
       <div className={styles.customersLeft}>
+        <Card customer="healthCatalyst" />
         <Card customer="mdsave" />
       </div>
 

@@ -52,7 +52,7 @@ export default () => (
           and fewer people. Our products give them do just that by making
           complex processes simple and safe. With Comply, our customers can
           launch an enterprise-grade compliance program without a CISO or
-          security department. With Deploy, our customers get a secure,
+          security department. With Aptible, our customers get a secure,
           highly-available, fault-tolerant infrastructure without the overhead
           of a DevOps team.
         </p>
