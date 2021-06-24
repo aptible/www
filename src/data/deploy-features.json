@@ -1,10 +1,5 @@
 [
   {
-    "headline": "ISO 27001 Compliance",
-    "filters": ["auditReady"],
-    "body": "Use Aptible’s ISO 27001 certification to show your customers that your cloud computing stack meets the international gold standard for security."
-  },
-  {
     "headline": "HIPAA Compliance",
     "filters": ["auditReady"],
     "body": "Run healthcare workloads that process, store, and transmit HIPAA protected health information with Aptible. BAAs are available for Aptible dedicated stacks."

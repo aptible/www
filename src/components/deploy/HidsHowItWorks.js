@@ -27,10 +27,9 @@ export default () => (
           <h3 className={styles.number}>02</h3>
           <h3>Investigation & Response Process</h3>
           <p>
-            The Aptible Security Team actively reviews each security event using
-            our ISO 27001 certified security review process. The Security Team
-            classifies each as either legitimate or indicative of potential
-            attack.
+            The Aptible Security Team actively reviews each security event.
+            The Security Team classifies each as either legitimate or
+            indicative of potential attack.
           </p>
         </div>
       </div>
