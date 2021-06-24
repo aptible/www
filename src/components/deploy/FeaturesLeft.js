@@ -16,7 +16,7 @@ export default () => (
         <h6 className="small">
           - Andrew F., Platform Manager at DIAL Insights. Posted On{' '}
           <a
-            href="https://www.g2.com/products/aptible/reviews/aptible-review-2120360"
+            href="https://www.g2.com/products/aptible-deploy/reviews/aptible-deploy-review-2120360"
             target="_blank"
             rel="noopener noreferrer"
           >
