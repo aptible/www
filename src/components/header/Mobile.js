@@ -16,7 +16,7 @@ const Mobile = () => (
         <Grid>
           <div className={styles.mainItems}>
             <div className={styles.mainItem}>
-              <Link className={cn(styles.heading, 'h4')} to="/features/deploy">
+              <Link className={cn(styles.heading, 'h4')} to="/features/">
                 Features
               </Link>
             </div>
