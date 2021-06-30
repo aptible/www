@@ -1,11 +1,11 @@
 ---
-title: Subvendor Directory
-tracked_title: Subvendors
-description: "Aptible's subvendor directory."
+title: Subprocessor Directory
+tracked_title: Subprocessors
+description: "Aptible's subprocessor directory."
 posted: 2019-03-17
 section: Legal
 sub_section: Policies
-slug: /legal/subvendor-directory/
+slug: /legal/subprocessor-directory/
 template: legal
 ---
 
@@ -16,7 +16,7 @@ Aptible shares information with service providers and other third parties who pe
 This page provides a list of vendors with whom we share personal information as well as describes where each is located and what services these vendors provide for us.
 
 
-| Subvendor | Service Provided | Location |
+| Subprocessor | Service Provided | Location |
 |-----------|------------------|----------|
 | [Adobe Sign](https://acrobat.adobe.com/us/en/sign.html) | Contract management | United States |
 | [AWS](https://aws.amazon.com) | Cloud infrastructure | United States |
