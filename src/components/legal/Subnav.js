@@ -19,8 +19,8 @@ export default () => (
       text="Responsible Disclosure Policy"
     />
     <SidebarNavItem
-      to="/legal/subvendor-directory/"
-      text="Subvendor Directory"
+      to="/legal/subprocessor-directory/"
+      text="Subprocessor Directory"
     />
     <SidebarNavItem to="/legal/billing/" text="Billing Policy" />
     <SidebarNavItem to="/legal/security/" text="Security Policy" />

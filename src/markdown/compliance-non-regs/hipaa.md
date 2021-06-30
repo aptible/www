@@ -96,7 +96,7 @@ Two special notes:
     * Risk assessment reviews of your answers
     * Negotiation of remedial controls and timelines for implementing those controls
     * Requests for third-party assessments of your risk and security management program (vuln scans, pen tests, HITRUST/SOC/ISO certifications, etc.)
-    * Requests for direct evidence of your risk and security management program (policies and procedures, audit logs, training records, subvendor contracts, etc.)
+    * Requests for direct evidence of your risk and security management program (policies and procedures, audit logs, training records, subprocessor contracts, etc.)
 
 - **Third-Party Auditors** you hire to assess your organization. HITRUST is commonly used, although many consulting firms will conduct HIPAA-specific assessments.
 
