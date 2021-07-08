@@ -1,0 +1,126 @@
+@value marginLg: 120px;
+@value marginMd: 55px;
+@value marginSm: 36px;
+@value marginXs: 22px;
+
+.colorWhite {
+  color: #fff;
+}
+
+.fontLg {
+  font-size: 72px;
+}
+
+.fontMd {
+  font-size: 32px;
+}
+
+.fontSm {
+  font-size: 24px;
+}
+
+.marginBotSm {
+  margin-bottom: marginSm;
+}
+
+.inputGroup {
+  width: 480px;
+  height: 70px;
+  margin-bottom: marginLg;
+}
+
+.headerText {
+  margin-bottom: marginMd;
+  line-height: 76px;
+}
+
+.headerSubText {
+  margin-top: 0;
+  margin-bottom: marginMd;
+  width: 800px;
+}
+
+.layout {
+  background: url(/assets/hero.svg) no-repeat center center;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: marginLg;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  height: 35px;
+  height: auto;
+}
+
+.testimonial {
+  margin-top: marginLg;
+  width: 954px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.testimonialImage {
+  margin: marginSm 0;
+}
+
+.videoGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoText {
+  margin-bottom: marginXs;
+}
+
+.video {
+  width: 900px;
+  height: 548px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.footerCta {
+  margin-top: marginLg;
+  width: 954px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (--mobile) {
+  .fontLg {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .fontMd {
+    font-size: 24px;
+  }
+
+  .fontSm {
+    font-size: 16px;
+  }
+
+  .hbspt-form {
+    width: 350px;
+  }
+
+  .headerSubText,
+  .footerCta,
+  .video,
+  .testimonial,
+  .inputGroup {
+    width: 90%;
+  }
+}
