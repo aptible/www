@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import classnames from 'classnames';
 
-
-import { Grid } from '../../components/grid/Grid';
 import styles from './hipaa-readiness-in-deploy.module.css';
 import logoImage from '../../images/aptible.svg';
 import healthCatalystLogo from '../../images/customers/logos/health-catalyst-color.png';
@@ -38,30 +36,69 @@ export default () => {
           property="og:image"
           content="https://aptible.com/assets/hipaa-readiness-meta.png"
         />
+        <script
+          src="https://fast.wistia.com/embed/medias/faliwbcnei.jsonp"
+          async
+        />
+        <script src="https://fast.wistia.com/assets/external/E-v1.js" async />
       </Helmet>
       <div className={styles.layout}>
         <div className={classnames(styles.container, styles.textCenter)}>
-          
           <img className={styles.logo} src={logoImage} alt="Aptible logo" />
           <h1 className={styles.headerText}>
             Go From Zero to HIPAA-Compliant Docker Deployment in Minutes
           </h1>
 
-          <p className={classnames("XL", styles.headerSubText)}>
+          <p className={classnames('XL', styles.headerSubText)}>
             Don’t waste engineering time building compliance into your cloud
-            infrastructure. Just use Aptible and be HIPAA-compliant from day one.
+            infrastructure. Just use Aptible and be HIPAA-compliant from day
+            one.
           </p>
-          
+
           <div className={styles.inputGroup} id="header-form" />
           <div className={styles.videoGroup}>
             <div className={classnames('L', styles.videoText)}>
               Watch the video below to see how Aptible can save your engineers
               time on HIPAA-compliance.
             </div>
-            <div className={styles.video}>Video placeholder</div>
+            <div className={styles.video}>
+              <div
+                className="wistia_embed wistia_async_faliwbcnei"
+                style={{
+                  position: 'relative',
+                  width: 900,
+                  height: 548,
+                }}
+              >
+                <div
+                  className="wistia_swatch"
+                  style={{
+                    height: '100%',
+                    left: 0,
+                    opacity: 0,
+                    overflow: 'hidden',
+                    position: 'absolute',
+                    top: 0,
+                    width: '100%',
+                  }}
+                >
+                  <img
+                    src="https://fast.wistia.com/embed/medias/faliwbcnei/swatch"
+                    style={{
+                      filter: 'blur(5px)',
+                      height: '100%',
+                      objectFit: 'contain',
+                      width: '100%',
+                    }}
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <div className={styles.testimonial}>
-            <h3 className={classnames()}>
+            <h3>
               “I'm not sure what we would do without Aptible. We would have to
               hire 3 more people and we still would not have the high level of
               support and tooling that Aptible provides.”
@@ -69,12 +106,16 @@ export default () => {
             <img src={healthCatalystLogo} className={styles.testimonialImage} />
             <div>Mark Siemers, Software Engineering Manager</div>
           </div>
-          <div className={styles.footerCta}>
-            <h3
-              className={styles.marginBotSm}>
-              Get a demo today
-            </h3>
-            <div className={styles.inputGroup} id="footer-form" />
+          <div className={styles.testimonial}>
+            <div className={classnames(styles.fontMd, styles.colorWhite)}>
+              “I'm not sure what we would do without Aptible. We would have to
+              hire 3 more people and we still would not have the high level of
+              support and tooling that Aptible provides.”
+            </div>
+            <div className={styles.footerCta}>
+              <h3 className={styles.marginBotSm}>Get a demo today</h3>
+              <div className={styles.inputGroup} id="footer-form" />
+            </div>
           </div>
         </div>
       </div>
