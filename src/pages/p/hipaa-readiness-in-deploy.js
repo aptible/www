@@ -2,9 +2,11 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import classnames from 'classnames';
 
+
+import { Grid } from '../../components/grid/Grid';
 import styles from './hipaa-readiness-in-deploy.module.css';
 import logoImage from '../../images/aptible.svg';
-import healthCatalystLogo from '../../images/customers/logos/health-catalyst.png';
+import healthCatalystLogo from '../../images/customers/logos/health-catalyst-color.png';
 
 export default () => {
   useEffect(() => {
@@ -38,48 +40,42 @@ export default () => {
         />
       </Helmet>
       <div className={styles.layout}>
-        <img className={styles.logo} src={logoImage} alt="Aptible logo" />
-        <p
-          className={classnames(
-            styles.fontLg,
-            styles.colorWhite,
-            styles.headerText,
-          )}
-        >
-          Go From Zero to HIPAA-Compliant Docker Deployment in Minutes
-        </p>
-        <p className={classnames(styles.fontSm, styles.headerSubText)}>
-          Don’t waste engineering time building compliance into your cloud
-          infrastructure. Just use Aptible and be HIPAA-Compliant from day one.
-        </p>
-        <div className={styles.inputGroup} id="header-form" />
-        <div className={styles.videoGroup}>
-          <div className={classnames(styles.fontSm, styles.videoText)}>
-            Watch the video below to see how Aptible can save your engineers
-            time on HIPAA Compliance
+        <div className={classnames(styles.container, styles.textCenter)}>
+          
+          <img className={styles.logo} src={logoImage} alt="Aptible logo" />
+          <h1 className={styles.headerText}>
+            Go From Zero to HIPAA-Compliant Docker Deployment in Minutes
+          </h1>
+
+          <p className={classnames("XL", styles.headerSubText)}>
+            Don’t waste engineering time building compliance into your cloud
+            infrastructure. Just use Aptible and be HIPAA-compliant from day one.
+          </p>
+          
+          <div className={styles.inputGroup} id="header-form" />
+          <div className={styles.videoGroup}>
+            <div className={classnames('L', styles.videoText)}>
+              Watch the video below to see how Aptible can save your engineers
+              time on HIPAA-compliance.
+            </div>
+            <div className={styles.video}>Video placeholder</div>
           </div>
-          <div className={styles.video}>Video placeholder</div>
-        </div>
-        <div className={styles.testimonial}>
-          <div className={classnames(styles.fontMd, styles.colorWhite)}>
-            “I'm not sure what we would do without Aptible. We would have to
-            hire 3 more people and we still would not have the high level of
-            support and tooling that Aptible provides.”
+          <div className={styles.testimonial}>
+            <h3 className={classnames()}>
+              “I'm not sure what we would do without Aptible. We would have to
+              hire 3 more people and we still would not have the high level of
+              support and tooling that Aptible provides.”
+            </h3>
+            <img src={healthCatalystLogo} className={styles.testimonialImage} />
+            <div>Mark Siemers, Software Engineering Manager</div>
           </div>
-          <img src={healthCatalystLogo} className={styles.testimonialImage} />
-          <div>Mark Siemers, Software Engineering Manager</div>
-        </div>
-        <div className={styles.footerCta}>
-          <div
-            className={classnames(
-              styles.fontMd,
-              styles.colorWhite,
-              styles.marginBotSm,
-            )}
-          >
-            Get a demo today
+          <div className={styles.footerCta}>
+            <h3
+              className={styles.marginBotSm}>
+              Get a demo today
+            </h3>
+            <div className={styles.inputGroup} id="footer-form" />
           </div>
-          <div className={styles.inputGroup} id="footer-form" />
         </div>
       </div>
     </div>

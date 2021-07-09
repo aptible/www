@@ -1,57 +1,45 @@
-@value marginLg: 120px;
-@value marginMd: 55px;
-@value marginSm: 36px;
-@value marginXs: 22px;
-
-.colorWhite {
-  color: #fff;
-}
-
-.fontLg {
-  font-size: 72px;
-}
-
-.fontMd {
-  font-size: 32px;
-}
-
-.fontSm {
-  font-size: 24px;
-}
+@value marginLg: 128px;
+@value marginMd: 56px;
+@value marginSm: 32px;
+@value marginXs: 24px;
 
 .marginBotSm {
   margin-bottom: marginSm;
 }
 
+.textCenter {
+  text-align: center;
+}
+
 .inputGroup {
   width: 480px;
-  height: 70px;
-  margin-bottom: marginLg;
+  margin-bottom: marginSm;
 }
 
 .headerText {
   margin-bottom: marginMd;
-  line-height: 76px;
 }
 
 .headerSubText {
-  margin-top: 0;
   margin-bottom: marginMd;
-  width: 800px;
+  max-width: 800px;
 }
 
-.layout {
-  background: url(/assets/radar.svg) no-repeat center center;
-  width: 100vw;
+.container {
+  margin: marginLg auto;
+  max-width: 1120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: marginLg;
-  text-align: center;
+}
+
+.layout {
+  background: url(/assets/radar.svg) no-repeat center center;
 }
 
 .logo {
+  margin-bottom: marginMd;
   width: 150px;
   height: 35px;
   height: auto;
@@ -102,21 +90,27 @@
 }
 
 @media (--mobile) {
-  .fontLg {
-    font-size: 36px;
-    line-height: 40px;
+  .inputGroup,
+  .headerText,
+  .headerSubText,
+  .logo {
+    margin-bottom: marginSm;
   }
 
-  .fontMd {
-    font-size: 24px;
-  }
-
-  .fontSm {
-    font-size: 16px;
+  .testimonial {
+    margin-top: marginMd;
   }
 
   .hbspt-form {
     width: 350px;
+  }
+
+  .container {
+    margin: marginMd auto;
+  }
+
+  .footerCta {
+    margin-top: marginMd;
   }
 
   .headerSubText,
