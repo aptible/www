@@ -61,39 +61,35 @@ export default () => {
               Watch the video below to see how Aptible can save your engineers
               time on HIPAA-compliance.
             </div>
-            <div className={styles.video}>
+            <div
+              className={`${styles.video} wistia_embed wistia_async_faliwbcnei`}
+              style={{
+                position: 'relative',
+              }}
+            >
               <div
-                className="wistia_embed wistia_async_faliwbcnei"
+                className="wistia_swatch"
                 style={{
-                  position: 'relative',
-                  width: 900,
-                  height: 548,
+                  height: '100%',
+                  left: 0,
+                  opacity: 0,
+                  overflow: 'hidden',
+                  position: 'absolute',
+                  top: 0,
+                  width: '100%',
                 }}
               >
-                <div
-                  className="wistia_swatch"
+                <img
+                  src="https://fast.wistia.com/embed/medias/faliwbcnei/swatch"
                   style={{
+                    filter: 'blur(5px)',
                     height: '100%',
-                    left: 0,
-                    opacity: 0,
-                    overflow: 'hidden',
-                    position: 'absolute',
-                    top: 0,
+                    objectFit: 'contain',
                     width: '100%',
                   }}
-                >
-                  <img
-                    src="https://fast.wistia.com/embed/medias/faliwbcnei/swatch"
-                    style={{
-                      filter: 'blur(5px)',
-                      height: '100%',
-                      objectFit: 'contain',
-                      width: '100%',
-                    }}
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </div>
+                  alt=""
+                  aria-hidden="true"
+                />
               </div>
             </div>
           </div>
