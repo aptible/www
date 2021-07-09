@@ -41,7 +41,7 @@
 }
 
 .layout {
-  background: url(/assets/hero.svg) no-repeat center center;
+  background: url(/assets/radar.svg) no-repeat center center;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -67,6 +67,8 @@
 
 .testimonialImage {
   margin: marginSm 0;
+  width: 141px;
+  height: auto;
 }
 
 .videoGroup {
@@ -88,6 +90,7 @@
   align-items: center;
   border: 1px solid #000;
   border-radius: 10px;
+  background-color: #000;
 }
 
 .footerCta {
