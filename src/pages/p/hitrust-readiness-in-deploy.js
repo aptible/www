@@ -27,10 +27,10 @@ export default () => {
   return (
     <div>
       <Helmet>
-        <title>Aptible | HIPAA-Readiness in Deploy</title>
+        <title>Aptible | HITRUST-Readiness in Deploy</title>
         <meta
           name="description"
-          content="Go from zero to HIPAA-compliant docker deployment in minutes"
+          content="Go from zero to HITRUST-compliant Docker deployment in minutes"
         />
         <meta
           property="og:image"
@@ -46,12 +46,12 @@ export default () => {
         <div className={classnames(styles.container, styles.textCenter)}>
           <img className={styles.logo} src={logoImage} alt="Aptible logo" />
           <h1 className={styles.headerText}>
-            Go From Zero to HIPAA-Compliant Docker Deployment in Minutes
+            Go From Zero to HITRUST-Compliant Docker Deployment in Minutes
           </h1>
 
           <p className={classnames('XL', styles.headerSubText)}>
             Don’t waste engineering time building compliance into your cloud
-            infrastructure. Just use Aptible and be HIPAA-compliant from day
+            infrastructure. Just use Aptible and be HITRUST-compliant from day
             one.
           </p>
 
@@ -59,7 +59,7 @@ export default () => {
           <div className={styles.videoGroup}>
             <div className={classnames('L', styles.videoText)}>
               Watch the video below to see how Aptible can save your engineers
-              time on HIPAA-compliance.
+              time on HITRUST-compliance.
             </div>
             <div
               className={`${styles.video} wistia_embed wistia_async_faliwbcnei`}
