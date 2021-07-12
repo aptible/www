@@ -16,13 +16,6 @@ export default () => {
       region: 'na1',
       portalId: '20235662',
       formId: '7b0b2c16-112d-42e6-a45a-33cb2063a80f',
-      target: '#header-form',
-    });
-
-    hbspt.forms.create({
-      region: 'na1',
-      portalId: '20235662',
-      formId: '7b0b2c16-112d-42e6-a45a-33cb2063a80f',
       target: '#footer-form',
     });
   }, []);
@@ -46,17 +39,14 @@ export default () => {
             title="Go From Zero to HITRUST-Compliant Docker Deployment in Minutes"
             summary="Don’t waste engineering time building compliance into your cloud
             infrastructure. Just use Aptible and be HITRUST-compliant from day
-            one." />
-          
-          <div className={styles.inputGroup} id="header-form" />
+            one. Watch the video below to see how." />
           
           <Video />
-          <Testimonial />
-          
           <div className={styles.footerCta}>
             <h3 className={styles.marginBotSm}>Get a demo today</h3>
             <div className={styles.inputGroup} id="footer-form" />
           </div>
+          <Testimonial />
         </div>
       </div>
     </div>

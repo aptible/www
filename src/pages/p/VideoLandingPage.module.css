@@ -29,7 +29,7 @@
 }
 
 .container {
-  margin: marginLg auto;
+  margin: marginMd auto;
   max-width: 1120px;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
 }
 
 .layout {
-  background: url(/assets/radar.svg) no-repeat center center;
+  background: url(/assets/radar.svg) no-repeat center 70px;
 }
 
 .logo {
@@ -49,7 +49,7 @@
 }
 
 .testimonial {
-  margin-top: marginLg;
+  margin-top: marginMd;
   width: 954px;
   display: flex;
   align-items: center;
@@ -83,36 +83,12 @@
 }
 
 .footerCta {
-  margin-top: marginLg;
+  margin-top: marginMd;
   width: 954px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-/* .responsivePadding {
-  padding:56.25% 0 0 0;
-  position:relative;
-}
-
-.responsiveWrapper {
-  height:100%;
-  left:0;
-  position:absolute;
-  top:0;
-  width:100%;
-}
-
-.swatch {
-  height:100%;
-  left:0;
-  overflow:hidden;
-  position:absolute;
-  top:0;
-  transition:opacity 200ms;
-  width:100%;
-} */
-
 
 @media (--mobile) {
   .inputGroup,

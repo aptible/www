@@ -14,10 +14,6 @@ export default () => {
         <script src="https://fast.wistia.com/assets/external/E-v1.js" async />
       </Helmet>
       <div className={styles.videoGroup}>
-        <div className={classnames('L', styles.videoText)}>
-          Watch the video below to see how Aptible can save your engineers
-          time on HITRUST-compliance.
-        </div>
         <div
           className={`${styles.video} wistia_embed wistia_async_faliwbcnei`}
           style={{
