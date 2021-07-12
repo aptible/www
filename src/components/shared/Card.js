@@ -44,6 +44,7 @@ class Card extends React.Component {
   render() {
     const customer = this.props.customer;
     const customerData = customerCards[customer];
+    console.log(customer);
 
     const to = customerData.link;
     const image = photos[customer];

@@ -1,10 +1,4 @@
 {
-  "virta": {
-    "headline": "&ldquo;Being able to launch and scale (just by toggling option in the admin panel) is really exciting. It’s not just that it frees me up from working on security and compliance. It frees me up from worrying about them.&rdquo;",
-    "text": "Virta uses Aptible to easily fulfill compliance requirements and maintain security so its team can stay focused on delivering a personalized clinic experience.",
-    "tags": ["health"],
-    "link": "/customers/virta/"
-  },
   "mdsave": {
     "headline": "&ldquo;Aptible enabled us to develop our application more efficiently and to breeze through hospital security audits, saving us effort and speeding up our sales process.&rdquo;",
     "author": "Ryan Aipperspach, CTO",
@@ -32,15 +26,43 @@
   "quadpay": {
     "headline": "&ldquo;What I really wanted at QuadPay, where security is of paramount importance, was to have something that was comprehensive, followed best practices, and could actually be implemented across an organization at scale.&rdquo;",
     "author": "Ian Yamey, CTO",
-    "tags": [
-      "technology"
-    ],
+    "tags": ["technology"],
     "videoId": "kf1hbw3as5",
     "videoLength": "2:07"
   },
   "healthCatalyst": {
     "headline": "&ldquo;I'm not sure what we would do without Aptible. We would have to hire 3 more people and we still would not have the high level of support and tooling that Aptible provides.&rdquo;",
     "author": "Mark Siemers, Software Engineering Manager",
+    "tags": ["health"]
+  },
+  "glidianInc": {
+    "headline": "&ldquo;Aptible Deploy has made it easy for us to manage our infrastructure. We are able to scale and upgrade our app without needing to worry about configuration details and downtime.&rdquo;",
+    "author": "Solomon Liu, Principal Software Engineer",
+    "tags": ["health"]
+  },
+  "medicalMemory": {
+    "headline": "&ldquo;We literally wouldn't be in business without Aptible. Aptible handles almost 90% of my DevOps requirements. This frees precious developer resources so that they can do what they love to do - develop great software. I can also rely on the experts at Aptible to ensure the system is secure. I've even had potential clients start their security review with 'who is your hosting provider?' and when we answer 'Aptible' they respond 'Oh yes, that's a good start.'&rdquo;",
+    "author": "Bruce White, CTO",
+    "tags": ["health"]
+  },
+  "vidscrip": {
+    "headline": "&ldquo;We've used Aptible to host our application for ~3 years now. During this time we've scaled flexibly, experienced zero down time, and have been privy to tremendous, timely support when we've needed it.&rdquo;",
+    "author": "Brian Kuyath, CTO",
+    "tags": ["health"]
+  },
+  "rightwayHealthcare": {
+    "headline": "&ldquo;[Aptible Deploy] helps me sleep better at night.It handles all the DevOps and offers turnkey HIPAA compliance in the cloud. Support is stellar and they are always happy to talk through issues big and small. Aptible [Deploy] allows us to feel confident we're able to use the cloud safely with PHI. Everything we need is automatic.&rdquo;",
+    "author": "Ion Feldman, CTO",
+    "tags": ["health"]
+  },
+  "pager": {
+    "headline": "&ldquo;Aptible provides us a robust and secure platform to build our technology on. It's alleviated pain points with HIPAA compliance and saved us tons of money and time.&rdquo;",
+    "author": "Sameer Khanna, VP of Engineering",
+    "tags": ["health"]
+  },
+  "aidin": {
+    "headline": "&ldquo;Aptible provides infrastructure software we’ve come to rely on every day. They’ve played a significant role in our appeal and ability to take on new clients--both in our sales process and technical integration process.&rdquo;",
+    "author": "James Dempsey, Lead Developer",
     "tags": ["health"]
   }
 }
