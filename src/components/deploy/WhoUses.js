@@ -9,9 +9,9 @@ export default () => (
       <div className={styles.intro}>
         <h1>Who uses Aptible?</h1>
         <p className="XL">
-          Companies who need to focus on development goals, achieve
-          regulatory compliance, get audit ready without the benefit of a
-          security and compliance expert.
+          Companies who need to focus on development goals, achieve regulatory
+          compliance, get audit ready without the benefit of a security and
+          compliance expert.
         </p>
       </div>
 
@@ -31,12 +31,11 @@ export default () => (
 
       <div className={styles.customersLeft}>
         <Card customer="healthCatalyst" />
-        <Card customer="mdsave" />
       </div>
 
       <div className={styles.customersRight}>
-        <Card customer="virta" />
         <Card customer="healthify" />
+        <Card customer="mdsave" />
       </div>
     </Grid>
   </div>
