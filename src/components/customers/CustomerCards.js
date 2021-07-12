@@ -17,11 +17,18 @@ class CustomerCards extends React.Component {
             <Card customer="ableHealth" />
             <Card customer="pathAI" />
             <Card customer="healthify" />
+            <Card customer="glidianInc" />
+            <Card customer="vidscrip" />
+            <Card customer="aidin" />
           </div>
 
           <div className={styles.right}>
             <Card customer="mdsave" />
-            <Card customer="virta" />
+            <Card customer="quadpay" />
+            <Card customer="healthCatalyst" />
+            <Card customer="medicalMemory" />
+            <Card customer="rightwayHealthcare" />
+            <Card customer="pager" />
           </div>
         </Grid>
       </div>
