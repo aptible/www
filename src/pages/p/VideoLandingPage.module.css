@@ -1,0 +1,149 @@
+@value marginLg: 128px;
+@value marginMd: 56px;
+@value marginSm: 32px;
+@value marginXs: 24px;
+
+.marginBotSm {
+  margin-bottom: marginSm;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.inputGroup {
+  width: 480px;
+  background: rgba(0,0,0,0.75);
+  border-radius: 8px;
+  padding: 32px 32px 15px;
+  margin-bottom: marginSm;
+}
+
+.headerText {
+  margin-bottom: marginMd;
+}
+
+.headerSubText {
+  margin: 0 auto marginMd;
+  max-width: 800px;
+}
+
+.container {
+  margin: marginLg auto;
+  max-width: 1120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout {
+  background: url(/assets/radar.svg) no-repeat center center;
+}
+
+.logo {
+  margin-bottom: marginMd;
+  width: 150px;
+  height: 35px;
+  height: auto;
+}
+
+.testimonial {
+  margin-top: marginLg;
+  width: 954px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.testimonialImage {
+  margin: marginSm 0;
+  width: 141px;
+  height: auto;
+}
+
+.videoGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoText {
+  margin-bottom: marginXs;
+}
+
+ .video {
+  width: 900px;
+  height: 548px;
+  background: black;
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.40), 0px 10px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.footerCta {
+  margin-top: marginLg;
+  width: 954px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .responsivePadding {
+  padding:56.25% 0 0 0;
+  position:relative;
+}
+
+.responsiveWrapper {
+  height:100%;
+  left:0;
+  position:absolute;
+  top:0;
+  width:100%;
+}
+
+.swatch {
+  height:100%;
+  left:0;
+  overflow:hidden;
+  position:absolute;
+  top:0;
+  transition:opacity 200ms;
+  width:100%;
+} */
+
+
+@media (--mobile) {
+  .inputGroup,
+  .headerText,
+  .headerSubText,
+  .logo {
+    margin-bottom: marginSm;
+  }
+
+  .testimonial {
+    margin-top: marginMd;
+  }
+
+  .hbspt-form {
+    width: 350px;
+  }
+
+  .container {
+    margin: marginMd auto;
+  }
+
+  .footerCta {
+    margin-top: marginMd;
+  }
+
+  .videoText,
+  .headerSubText,
+  .footerCta,
+  .video,
+  .testimonial,
+  .inputGroup {
+    width: 90%;
+  }
+}

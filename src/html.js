@@ -11,27 +11,6 @@ const customJs = `
   a.appendChild(r);
 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 
-(function() {
-  var didInit = false;
-  function initMunchkin() {
-    if(didInit === false) {
-      didInit = true;
-      Munchkin.init('620-GAP-535');
-    }
-  }
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = '//munchkin.marketo.net/munchkin.js';
-  s.onreadystatechange = function() {
-    if (this.readyState == 'complete' || this.readyState == 'loaded') {
-      initMunchkin();
-    }
-  };
-  s.onload = initMunchkin;
-  document.getElementsByTagName('head')[0].appendChild(s);
-})();
-
 (function(w,d,t,u,n,s,e){w['SwiftypeObject'] = n; w[n]=w[n]||function(){
 (w[n].q = w[n].q || []).push(arguments);};s=d.createElement(t);
 e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
@@ -77,6 +56,11 @@ export default function HTML(props) {
         {props.headComponents}
         <script dangerouslySetInnerHTML={{ __html: customJs }} />
         <script dangerouslySetInnerHTML={{ __html: segmentJs }} />
+        <script
+          charset="utf-8"
+          type="text/javascript"
+          src="//js.hsforms.net/forms/shell.js"
+        />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -94,7 +78,6 @@ export default function HTML(props) {
         src="https://js.chilipiper.com/marketing.js"
         type="text/javascript"
       />
-      <script src="//app-ab35.marketo.com/js/forms2/js/forms2.min.js" />
     </html>
   );
 }
