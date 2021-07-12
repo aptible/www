@@ -27,9 +27,11 @@ export default () => {
     setTimeout(() => {
       document.querySelectorAll('.hs-form-iframe').forEach(iframe => {
         const el = iframe.contentWindow.document.querySelector('.hs-button');
-        el.value = 'Get a demo';
+        if (el) {
+          el.value = 'Get a demo';
+        }
       });
-    }, 500);
+    }, 1000);
   }, []);
 
   return (
