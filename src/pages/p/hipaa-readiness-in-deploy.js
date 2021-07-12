@@ -23,6 +23,15 @@ export default () => {
       formId: '7b0b2c16-112d-42e6-a45a-33cb2063a80f',
       target: '#footer-form',
     });
+
+    setTimeout(() => {
+      document.querySelectorAll('.hs-form-iframe').forEach(iframe => {
+        const el = iframe.contentWindow.document.querySelector('.hs-button');
+        if (el) {
+          el.value = 'Get a demo';
+        }
+      });
+    }, 1000);
   }, []);
 
   return (
@@ -41,13 +50,14 @@ export default () => {
       <div className={styles.layout}>
         <div className={classnames(styles.container, styles.textCenter)}>
           <Title
-          title="Go From Zero to HIPAA-Compliant Docker Deployment in Minutes"
-          summary="Don’t waste engineering time building compliance into your cloud
+            title="Go From Zero to HIPAA-Compliant Docker Deployment in Minutes"
+            summary="Don’t waste engineering time building compliance into your cloud
           infrastructure. Just use Aptible and be HIPAA-compliant from day
-          one." />
+          one."
+          />
 
           <div className={styles.inputGroup} id="header-form" />
-          
+
           <Video />
           <Testimonial />
 
