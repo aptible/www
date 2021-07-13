@@ -25,3 +25,8 @@
 .leadFormInput[type="email"]::placeholder {
   color: rgba(255,255,255,.5);
 }
+
+.submissionNotification {
+  margin-top: -25px;
+  margin-bottom: 25px;
+}
