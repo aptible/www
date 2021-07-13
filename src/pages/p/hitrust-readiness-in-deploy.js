@@ -39,10 +39,3 @@ export default () => {
     </div>
   );
 };
-
-
-/*
-<div className={styles.footerCta}>
-            <h3 className={styles.marginBotSm}>Get a demo today</h3>
-            <div className={styles.inputGroup} id="footer-form" />
-          </div>*/
