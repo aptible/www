@@ -5,21 +5,10 @@ import classnames from 'classnames';
 import Title from './components/Title';
 import Video from './components/Video';
 import Testimonial from './components/Testimonial';
-
+import LeadForm from './components/LeadForm';
 import styles from './VideoLandingPage.module.css';
 
-
 export default () => {
-  useEffect(() => {
-    /* eslint-disable no-undef */
-    hbspt.forms.create({
-      region: 'na1',
-      portalId: '20235662',
-      formId: '7b0b2c16-112d-42e6-a45a-33cb2063a80f',
-      target: '#footer-form',
-    });
-  }, []);
-
   return (
     <div>
       <Helmet>
@@ -41,11 +30,9 @@ export default () => {
             infrastructure. Just use Aptible and be HITRUST-compliant from day
             one. Watch the video below to see how." />
           
+          <LeadForm id="HITRUST Readiness Video Campaign - 1" />
+
           <Video />
-          <div className={styles.footerCta}>
-            <h3 className={styles.marginBotSm}>Get a demo today</h3>
-            <div className={styles.inputGroup} id="footer-form" />
-          </div>
           <Testimonial />
         </div>
       </div>
@@ -54,3 +41,8 @@ export default () => {
 };
 
 
+/*
+<div className={styles.footerCta}>
+            <h3 className={styles.marginBotSm}>Get a demo today</h3>
+            <div className={styles.inputGroup} id="footer-form" />
+          </div>*/

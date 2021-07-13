@@ -1,0 +1,27 @@
+.leadFormContainer {
+  height: 56px;
+  padding: 8px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 35px;
+  margin-bottom: 56px;
+}
+
+.button {
+  height: 56px;
+}
+
+.leadFormInput[type="email"] {
+  border: 0;
+  background: 0;
+  height: 56px;
+  padding: 0 16px;
+  width: 290px;
+  font-size: 18px;
+  color: white;
+  mix-blend-mode: unset;
+  box-shadow: none;
+}
+
+.leadFormInput[type="email"]::placeholder {
+  color: rgba(255,255,255,.5);
+}

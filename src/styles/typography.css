@@ -138,6 +138,12 @@ a:hover {
   display: none;
 }
 
+button {
+  font-family: 'NeueMontreal', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 500;
+  font-size: 18px;
+}
+
 @media (--mobile) {
   body {
     font-size: 14px;
