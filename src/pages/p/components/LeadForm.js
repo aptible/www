@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import cn from 'classnames';
 import styles from './LeadForm.module.css';
 import buttonStyles from '../../../components/buttons/Button.module.css'
-import { event, identify  } from '../../../lib/aptible/analytics'
+import { event, identify, trackOnLinkedIn } from '../../../lib/aptible/analytics'
 
 export default ({ id }) => {
   const [submitted, setSubmitted] = useState(false);
@@ -12,7 +12,8 @@ export default ({ id }) => {
   const onSubmit = () => {
     identify(email)
     event(`Submitted Form: ${id}`);
-    setSubmitted(true) ;
+    setSubmitted(true);
+    trackOnLinkedIn();
   }
 
   return (
