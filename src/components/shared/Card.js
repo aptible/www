@@ -7,13 +7,18 @@ import videoPlayIcon from '../../images/video-play.svg';
 import customerCards from '../../data/customer-cards.json';
 
 import quadpayPhoto from '../../images/customers/photos/quadpay-ian-yamey.jpg';
-
 import healthCatalystLogo from '../../images/customers/logos/health-catalyst.png';
 import ableHealthLogo from '../../images/customers/logos/able-health.png';
 import healthifyLogo from '../../images/customers/logos/healthify.svg';
 import mdsaveLogo from '../../images/customers/logos/mdsave.svg';
 import pathaiLogo from '../../images/customers/logos/pathai.png';
 import virtaLogo from '../../images/customers/logos/virta.svg';
+import medicalMemoryLogo from '../../images/customers/logos/medical-memory-logo.png';
+import pagerLogo from '../../images/customers/logos/pager-logo.png';
+import vidscripLogo from '../../images/customers/logos/vidscip-logo.png';
+import rightwayLogo from '../../images/customers/logos/rightway-logo.png';
+import aidinLogo from '../../images/customers/logos/aidin-logo.png';
+import glidianLogo from '../../images/customers/logos/glidian-logo.png';
 
 const photos = {
   quadpay: quadpayPhoto,
@@ -26,6 +31,12 @@ const logos = {
   mdsave: mdsaveLogo,
   pathAI: pathaiLogo,
   virta: virtaLogo,
+  medicalMemory: medicalMemoryLogo,
+  pager: pagerLogo,
+  vidscrip: vidscripLogo,
+  rightwayHealthcare: rightwayLogo,
+  aidin: aidinLogo,
+  glidianInc: glidianLogo,
 };
 
 class Card extends React.Component {
