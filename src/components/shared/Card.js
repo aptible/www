@@ -107,11 +107,13 @@ class Card extends React.Component {
           </div>
 
           {logos[customer] && (
-            <img
-              src={logos[customer]}
-              className={styles.logo}
-              alt="Customer logo"
-            />
+            <a href={customerData.website} target="_blank">
+              <img
+                src={logos[customer]}
+                className={styles.logo}
+                alt={`${customerData.name} logo`}
+              />
+            </a>
           )}
 
           {customerData.headline && (
@@ -122,6 +124,14 @@ class Card extends React.Component {
 
           {customerData.author && (
             <p className={styles.author}>{customerData.author}</p>
+          )}
+
+          {customerData.name && (
+            <div className={styles.companyName}>
+              <a href={customerData.website} target="_blank">
+                {customerData.name}
+              </a>
+            </div>
           )}
 
           {to && (
