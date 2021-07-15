@@ -127,11 +127,11 @@ class Card extends React.Component {
           )}
 
           {customerData.name && (
-            <div className={styles.companyName}>
+            <h6 className={styles.companyName}>
               <a href={customerData.website} target="_blank">
                 {customerData.name}
               </a>
-            </div>
+            </h6>
           )}
 
           {to && (

@@ -103,8 +103,7 @@ a.linkedContainer {
 }
 
 .companyName {
-  font-size: 16px;
-  color: white;
+  margin: 0;
 }
 
 .tags {
