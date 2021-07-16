@@ -1,9 +1,9 @@
 .container {
   padding: 30px 0 200px 0;
-  /* background-image: url('../../images/illustrations/deploy.png');
-  background-size: 900px auto;
-  background-repeat: no-repeat;
-  background-position: 90% 350px; */
+}
+
+.mobileHero {
+  display: none;
 }
 
 .content {
@@ -78,17 +78,33 @@
   left: -192px;
 }
 
-
-
 @media (--mobile) {
   .container {
     background: none;
+    padding: 0;
+    margin: 48px 0;
+  }
+
+  .compliancePills {
+    display: none
+  }
+
+  .mobileHero {
+    display: block;
+  }
+
+  .heroItem {
+    margin-bottom: 24px
+  }
+
+  .containerMeticsDashboard {
+    display: none;
   }
 
   .content {
     grid-row: 1;
     grid-column: 1 / span 7;
-    padding-bottom: 30px;
+    padding-bottom: 0;
   }
 
   .content h5 {

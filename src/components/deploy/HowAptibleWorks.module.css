@@ -31,3 +31,24 @@
   width: 33%;
   margin-bottom: 48px;
 }
+
+@media (--mobile) {
+  .container {
+    width: 100%;
+    margin: 48px 24px; 
+  }
+
+  .intro {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .stepRow {
+    flex-direction: column;
+  }
+
+  .step {
+    padding: 16px 16px 16px 0;
+    width: 100%;
+  }
+}

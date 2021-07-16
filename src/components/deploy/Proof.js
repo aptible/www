@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid } from '../grid/Grid';
 import styles from './Proof.module.css';
 import cn from 'classnames';
 import vidScripLogo from '../../images/customers/logos/vidscip-logo.png'

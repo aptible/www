@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Solutions.module.css';
-import cn from 'classnames';
 import zeroConfigImg from '../../images/home/illustrations/solution-devops.svg';
 import auditReadyImg from '../../images/home/illustrations/solution-audit-readiness.svg';
 import securityImg from '../../images/home/illustrations/solution-security.svg';

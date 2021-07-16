@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './HowAptibleWorks.module.css';
 import cn from 'classnames';
-import style from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
 
 const steps = [
   [

@@ -29,22 +29,33 @@
   width: var(--side-width);
 }
 
-
-.solutionMain {}
-
-.solutionPrimaryImage {
-
-}
-
 .solutionPrimaryImage img,
 .solutionSupportingImage img { max-width: 100% }
 
-
-.solutionFeatures {
-
-}
-
-
 .feature {
   margin: 0 0 48px;
+}
+
+@media (--mobile) {
+  .container {
+    width: 100%;
+    margin: 48px 24px;
+    padding: 0;
+  }
+
+  .solution {
+    margin-bottom: 48px;
+  }
+
+  .solutionTitle,
+  .solutionPrimaryImage,
+  .solutionSupportingImage,
+  .solutionFeatures{
+    width: 100%;
+  }
+
+  .solutionHeading, .solutionMain {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
