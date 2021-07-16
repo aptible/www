@@ -1,0 +1,22 @@
+.container {
+  margin-bottom: 196px;
+  max-width: 1120px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.proofTitle {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.logoBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoBar img {
+}

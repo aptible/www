@@ -1,14 +1,18 @@
 .container {
   padding: 30px 0 200px 0;
-  background-image: url('../../images/illustrations/deploy.png');
+  /* background-image: url('../../images/illustrations/deploy.png');
   background-size: 900px auto;
   background-repeat: no-repeat;
-  background-position: 90% 350px;
+  background-position: 90% 350px; */
 }
 
 .content {
   grid-row: 1;
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 4;
+}
+
+.heroItem {
+  margin-bottom: 48px
 }
 
 .content h5 {
@@ -16,18 +20,15 @@
 }
 
 .content p {
-  padding: 20px 0;
+  padding: 0;
+  margin: 0;
   max-width: 600px;
 }
 
 .illustration {
   grid-row: 1 / span 2;
-  grid-column: 6 / span 2;
-  padding-top: 60px;
-}
-
-.illustration img {
-  width: 100%;
+  grid-column: 5 / span 3;
+  position: relative;
 }
 
 .consoleContainer {
@@ -35,6 +36,49 @@
   grid-column: 1 / span 4;
   margin-top: 120px;
 }
+
+.compliancePills {
+  display: flex;
+  flex-direction: row;
+}
+
+.compliancePillBadge {
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+}
+
+.compliancePill {
+  display: flex;
+  margin-right: 12px;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--aptible-green-ten);
+  border-radius: 14px;
+  height: 28px;
+  padding: 0px 16px 0px 12px;
+}
+
+.compliancePill > h6 {
+  color: var(--aptible-green);
+}
+
+.containerMeticsDashboard {
+  height: 920px;
+  width:800px;
+  position: absolute;
+  left: -60px;
+  top: -160px;
+}
+
+.containerDeploymentConsole {
+  position: absolute;
+  top:800px;
+  top: 450px;
+  left: -192px;
+}
+
+
 
 @media (--mobile) {
   .container {
@@ -63,3 +107,6 @@
     display: none;
   }
 }
+
+
+

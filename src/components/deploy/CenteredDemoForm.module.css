@@ -1,0 +1,12 @@
+.container {
+  margin: 196px auto;
+  padding: 0 210px;
+  max-width: 1120px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.leadFormContainer {
+  box-sizing: border-box;
+  padding: 0 90px;
+}

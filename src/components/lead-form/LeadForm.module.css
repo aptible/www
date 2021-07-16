@@ -6,6 +6,12 @@
   margin: 0;
   transition: opacity 300ms;
 }
+.leadFormContainer form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
 
 .button {
   height: 56px;
