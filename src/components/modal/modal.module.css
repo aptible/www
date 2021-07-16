@@ -1,0 +1,32 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 101;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.view {
+  width: 640px;
+  height: 900px;
+  background: linear-gradient(
+      153deg,
+      rgba(255, 255, 255, 0.04) 7.84%,
+      rgba(255, 255, 255, 0.032) 83.16%
+    ),
+    #0a1b2b;
+}
+
+@media only screen and (max-width: 650px) {
+  .view {
+    width: 100%;
+    height: auto;
+  }
+}

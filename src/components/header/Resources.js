@@ -49,7 +49,7 @@ const Resources = () => (
       </div>
 
       <div className={styles.calloutContainer}>
-        <Link className={styles.callout} to="/hipaa-guide-form/">
+        <Link className={styles.callout} to="/hipaa/">
           <img src={pic} alt="" />
           <div className={styles.calloutText}>
             <p>Aptible Guide</p>

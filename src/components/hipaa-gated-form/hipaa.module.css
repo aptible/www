@@ -1,0 +1,18 @@
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.modal {
+  padding: 20px 80px;
+}
+
+.text {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 650px) {
+  .modal {
+    padding: 20px;
+  }
+}

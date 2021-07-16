@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import ComplianceLayout from '../../components/layouts/ComplianceLayout';
 import HipaaSubnav from '../../components/compliance/HipaaSubnav';
+import HipaaGatedForm from '../../components/hipaa-gated-form';
 
 function getRegulation(data, slug) {
   for (let section of data.regulation) {
@@ -33,6 +34,7 @@ export default ({ data, pageContext }) => {
           content={`Explore ${title} of the HIPAA Regulations. The full HIPAA Regulation text as provided in the HIPAA Administrative Simplification, annotated by Aptible, easily searchable.`}
         />
       </Helmet>
+      <HipaaGatedForm />
       <div dangerouslySetInnerHTML={{ __html: data.regulation.html }} />
     </ComplianceLayout>
   );
