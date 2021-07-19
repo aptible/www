@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import classnames from 'classnames';
 
 import Title from './components/Title';
 import Video from './components/Video';
 import Testimonial from './components/Testimonial';
-import LeadForm from './components/LeadForm';
+import LeadForm from '../../components/lead-form';
 import styles from './VideoLandingPage.module.css';
 
 export default () => {
@@ -28,8 +28,9 @@ export default () => {
             title="Go From Zero to HITRUST-Compliant Docker Deployment in Minutes"
             summary="Don’t waste engineering time building compliance into your cloud
             infrastructure. Just use Aptible and be HITRUST-compliant from day
-            one. Watch the video below to see how." />
-          
+            one. Watch the video below to see how."
+          />
+
           <LeadForm id="HITRUST Readiness Video Campaign - 1" />
 
           <Video />

@@ -1,0 +1,22 @@
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.modal {
+  padding: 48px;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.formContainer {
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 650px) {
+  .modal {
+    padding: 20px;
+  }
+}

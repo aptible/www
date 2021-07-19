@@ -1,8 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
+
 import ComplianceLayout from '../../components/layouts/ComplianceLayout';
 import HipaaSubnav from '../../components/compliance/HipaaSubnav';
+import HipaaGatedForm from '../../components/hipaa-gated-form';
 
 export default ({ data }) => {
   return (
@@ -15,6 +17,7 @@ export default ({ data }) => {
         <title>{data.page.frontmatter.title}</title>
         <meta name="description" content={data.page.frontmatter.displayTitle} />
       </Helmet>
+      <HipaaGatedForm />
       <div dangerouslySetInnerHTML={{ __html: data.page.html }} />
     </ComplianceLayout>
   );

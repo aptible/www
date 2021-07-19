@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import classnames from 'classnames';
 
 import Title from './components/Title';
 import Video from './components/Video';
 import Testimonial from './components/Testimonial';
-import LeadForm from './components/LeadForm';
+import LeadForm from '../../components/lead-form';
 import styles from './VideoLandingPage.module.css';
 
 export default () => {
@@ -25,12 +25,16 @@ export default () => {
       <div className={styles.layout}>
         <div className={classnames(styles.container, styles.textCenter)}>
           <Title
-          title="Go From Zero to HIPAA-Compliant Docker Deployment in Minutes"
-          summary="Don’t waste engineering time building compliance into your cloud
+            title="Go From Zero to HIPAA-Compliant Docker Deployment in Minutes"
+            summary="Don’t waste engineering time building compliance into your cloud
           infrastructure. Just use Aptible and be HIPAA-compliant from day
-          one. Watch the video below to see how." />
+          one. Watch the video below to see how."
+          />
 
-          <LeadForm id="HIPAA Readiness Video Campaign - 1" />
+          <LeadForm
+            id="HIPAA Readiness Video Campaign - 1"
+            inputPlaceholder="Enter your work email to get started"
+          />
 
           <Video />
           <Testimonial />
