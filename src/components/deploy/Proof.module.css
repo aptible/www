@@ -24,10 +24,7 @@
 @media (--mobile) {
   .container {
     margin: 48px 16px;
-  }
-
-  .proofTitle {
-    text-align: left;
+    width: auto;
   }
 
   .logoBar {

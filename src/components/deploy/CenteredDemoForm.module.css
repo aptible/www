@@ -13,7 +13,7 @@
 
 @media (--mobile) {
   .container {
-    width: 100%;
+    width: auto;
     margin: 48px 24px;
     padding: 0;
   }

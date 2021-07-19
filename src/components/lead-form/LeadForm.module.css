@@ -48,3 +48,22 @@
   color: tomato;
   margin-top: 10px;
 }
+
+@media (--mobile) {
+  .leadFormContainer form {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .leadFormInput[type='email'] {
+    padding: 12px;
+    margin-bottom: 4px;
+  }
+
+  .leadFormContainer {
+    height: auto;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px
+  }
+}

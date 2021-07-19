@@ -86,6 +86,10 @@
 }
 
 @media (--mobile) {
+  .leadFormWrapper {
+    width: 100%;
+  }
+
   .container {
     background: none;
     padding: 0;
