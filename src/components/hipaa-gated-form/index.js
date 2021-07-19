@@ -21,7 +21,9 @@ export default () => {
           alt="security is eating the world"
         />
         <div className={styles.modal}>
-          <h3 className={styles.title}>HIPAA Compliance: The Guide for Startups</h3>
+          <h3 className={styles.title}>
+            HIPAA Compliance: The Guide for Startups
+          </h3>
 
           <div className={styles.formContainer}>
             <LeadForm
@@ -32,7 +34,6 @@ export default () => {
             />
           </div>
 
-          
           <p className={styles.text}>
             Explosive growth in digital health over the last few years means
             there are many developers and managers who haven’t worked under

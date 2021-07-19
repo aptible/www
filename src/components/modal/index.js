@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 
-import Portal from '../shared/Portal';
 import styles from './modal.module.css';
 
 export default ({ children }) => {
@@ -12,11 +11,7 @@ export default ({ children }) => {
     };
   }, []);
 
-  return (
-    <Portal>
-      <div className={styles.modal}>{children}</div>
-    </Portal>
-  );
+  return <div className={styles.modalContainer}>{children}</div>;
 };
 
 export const ModalView = ({ children }) => {
