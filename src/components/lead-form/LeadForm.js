@@ -51,7 +51,7 @@ export const LeadForm = ({
         name="captureFrame"
         height="0"
         width="0"
-        style={{ visibility: 'hidden' }}
+        style={{ display: 'none' }}
       />
 
       <div

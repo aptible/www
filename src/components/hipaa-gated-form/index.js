@@ -21,7 +21,18 @@ export default () => {
           alt="security is eating the world"
         />
         <div className={styles.modal}>
-          <h2>The HIPAA Compliance Guide for Startups</h2>
+          <h3 className={styles.title}>HIPAA Compliance: The Guide for Startups</h3>
+
+          <div className={styles.formContainer}>
+            <LeadForm
+              id="hipaa-guide"
+              btnText="Get the Guide"
+              successText="Thanks!  Redirecting to our HIPAA guide"
+              onSuccess={onComplete}
+            />
+          </div>
+
+          
           <p className={styles.text}>
             Explosive growth in digital health over the last few years means
             there are many developers and managers who haven’t worked under
@@ -29,12 +40,6 @@ export default () => {
             businesses operating online) who could use some help with the basics
             of HIPAA compliance.
           </p>
-          <LeadForm
-            id="hipaa-guide"
-            btnText="Get the Guide"
-            successText="Thanks!  Redirecting to our HIPAA guide"
-            onSuccess={onComplete}
-          />
         </div>
       </ModalView>
     </Modal>
