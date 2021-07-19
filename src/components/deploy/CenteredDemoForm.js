@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CenteredDemoForm.module.css';
 
-import LeadForm from '../shared/LeadForm';
+import LeadForm from '../lead-form';
 
 export default () => (
   <div className={styles.container}>

@@ -1,5 +1,5 @@
 .container {
-  padding: 30px 0 200px 0;
+  padding: 64px 0 200px 0;
 }
 
 .mobileHero {
@@ -9,6 +9,10 @@
 .content {
   grid-row: 1;
   grid-column: 1 / span 4;
+}
+
+.signUpYourself {
+  margin-top: 32px;
 }
 
 .heroItem {

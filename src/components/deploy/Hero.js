@@ -8,7 +8,7 @@ import isoBadge from '../../images/home/badges/iso-24x24.svg';
 import dashboardIlly from '../../images/home/illustrations/deploy-container-metrics-dashboard.svg';
 import deployConsoleIlly from '../../images/home/illustrations/deploy-console.svg';
 import mobileHero from '../../images/home/illustrations/mobile-hero-dashboard.svg';
-import LeadForm from '../../components/shared/LeadForm';
+import LeadForm from '../../components/lead-form';
 
 const CompliancePills = () => {
   return (
@@ -50,7 +50,10 @@ export default () => (
         </div>
 
         <div className={styles.leadFormWrapper}>
-          <LeadForm id="Home Page Hero - Request a Demo" placeholder="Enter your email" />
+          <LeadForm id="Home Page Hero - Request a Demo" inputPlaceholder="Enter your email" />
+          <div className={styles.signUpYourself}>
+            <p className="M">Or try it yourself. <a href="https://dashboard.aptible.com/signup">Sign up for a free account today</a></p>
+          </div>
         </div>
       </div>
 

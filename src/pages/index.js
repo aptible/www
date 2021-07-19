@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import Hero from '../components/deploy/Hero';
 import Nav from '../components/shared/Nav';
-import Features from '../components/deploy/Features';
+
 import SecurityControls from '../components/deploy/SecurityControls';
 import HowAptibleWorks from '../components/deploy/HowAptibleWorks';
 import WhoUses from '../components/deploy/WhoUses';
@@ -35,8 +35,6 @@ export default () => (
     <CenteredDemoForm />
     <Solutions />
     <SecurityControls />
-    
-
     <WhoUses />
     <ZeroTo />
   </AptibleLayout>

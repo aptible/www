@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import classnames from 'classnames';
 import styles from '../VideoLandingPage.module.css';
 export default () => {
   return (
