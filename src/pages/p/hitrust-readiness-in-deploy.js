@@ -6,6 +6,7 @@ import Title from './components/Title';
 import Video from './components/Video';
 import Testimonial from './components/Testimonial';
 import LeadForm from '../../components/lead-form';
+
 import styles from './VideoLandingPage.module.css';
 
 export default () => {

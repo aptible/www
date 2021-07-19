@@ -1,0 +1,50 @@
+.leadFormContainer {
+  height: 56px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 35px;
+  margin: 0;
+  transition: opacity 300ms;
+}
+.leadFormContainer form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button {
+  height: 56px;
+}
+
+.leadForm {
+  display: flex;
+  justify-content: center;
+}
+
+.leadFormInput[type='email'] {
+  flex: 1;
+  border: 0;
+  background: 0;
+  height: 56px;
+  padding: 0;
+  padding-left: 10px;
+  font-size: 18px;
+  color: white;
+  mix-blend-mode: unset;
+  box-shadow: none;
+}
+
+.leadFormInput[type='email']::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.submissionNotification {
+  margin-top: -25px;
+  margin-bottom: 25px;
+}
+
+.error {
+  color: tomato;
+  margin-top: 10px;
+}

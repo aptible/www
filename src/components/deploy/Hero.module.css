@@ -22,7 +22,6 @@
 .content p {
   padding: 0;
   margin: 0;
-  max-width: 600px;
 }
 
 .illustration {
@@ -67,15 +66,19 @@
   height: 920px;
   width:800px;
   position: absolute;
-  left: -60px;
+  left: -40px;
   top: -160px;
 }
 
 .containerDeploymentConsole {
   position: absolute;
   top:800px;
-  top: 450px;
-  left: -192px;
+  top: 460px;
+  left: -152px;
+}
+
+.leadFormWrapper {
+  width: 480px;
 }
 
 @media (--mobile) {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './Hero.module.css';
-import SignupButton from '../signup/SignupButton';
 import hipaaBadge from '../../images/home/badges/hipaa-24x24.svg';
 import hitrustBadge from '../../images/home/badges/hitrust-24x24.svg'
 import soc2Badge from '../../images/home/badges/soc-24x24.svg';
@@ -9,6 +8,7 @@ import isoBadge from '../../images/home/badges/iso-24x24.svg';
 import dashboardIlly from '../../images/home/illustrations/deploy-container-metrics-dashboard.svg';
 import deployConsoleIlly from '../../images/home/illustrations/deploy-console.svg';
 import mobileHero from '../../images/home/illustrations/mobile-hero-dashboard.svg';
+import LeadForm from '../../components/shared/LeadForm';
 
 const CompliancePills = () => {
   return (
@@ -49,7 +49,9 @@ export default () => (
           </p>
         </div>
 
-        <SignupButton text="Sign up for free" product="deploy" />
+        <div className={styles.leadFormWrapper}>
+          <LeadForm id="Home Page Hero - Request a Demo" placeholder="Enter your email" />
+        </div>
       </div>
 
       <div className={styles.illustration}>
