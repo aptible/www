@@ -39,7 +39,7 @@ const Feature = ({ title, description }) => (
 const features = {
   audit: [
     {
-      title: 'Ensure Compliance from Day 1',
+      title: 'Ensure Compliance from Day One',
       description: 'Deploy automates and continuously monitors all of the infrastructure controls required to safely handle sensitive or regulated data. '
     },
     {
