@@ -16,6 +16,7 @@ export const LeadForm = ({
   successText = 'Thanks! Our team will contact you to schedule a demo shortly.',
   inputPlaceholder = 'Enter your email',
   onSuccess = () => {},
+  calendarId,
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [email, setEmail] = useState('');
@@ -45,15 +46,17 @@ export const LeadForm = ({
           defer
           src="//js.hs-scripts.com/20235662.js"
         />
+        <script
+          type="text/javascript"
+          src="//static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"
+        />
       </Helmet>
-
       <iframe
         name="captureFrame"
         height="0"
         width="0"
         style={{ display: 'none' }}
       />
-
       <div
         className={styles.leadFormContainer}
         style={{ opacity: submitted ? 0 : 1 }}
@@ -80,10 +83,15 @@ export const LeadForm = ({
         </form>
         <div className={styles.error}>{error ? error : ''}</div>
       </div>
-
-      {submitted && (
+      {submitted && successText ? (
         <div className={styles.submissionNotification}>{successText}</div>
-      )}
+      ) : null}
+      {submitted && calendarId ? (
+        <div
+          className="meetings-iframe-container"
+          data-src={`https://meetings.hubspot.com/${calendarId}?embed=true`}
+        />
+      ) : null}
     </div>
   );
 };

@@ -32,7 +32,10 @@ export default () => {
             one. Watch the video below to see how."
           />
 
-          <LeadForm id="HITRUST Readiness Video Campaign - 1" />
+          <LeadForm
+            id="HITRUST Readiness Video Campaign - 1"
+            calendarId="frank-macreery"
+          />
 
           <Video />
           <Testimonial />
