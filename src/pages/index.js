@@ -10,7 +10,7 @@ import WhoUses from '../components/deploy/WhoUses';
 import ZeroTo from '../components/footer/ZeroTo';
 import Proof from '../components/deploy/Proof';
 import CenteredDemoForm from '../components/deploy/CenteredDemoForm';
-import Solutions from '../components/deploy/solutions';
+import Solutions from '../components/deploy/Solutions';
 
 const stickyNavItems = [
   { title: 'How Aptible Works', ref: '#how-aptible-works' },
