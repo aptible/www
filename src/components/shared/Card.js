@@ -19,6 +19,7 @@ import vidscripLogo from '../../images/customers/logos/vidscip-logo.png';
 import rightwayLogo from '../../images/customers/logos/rightway-logo.png';
 import aidinLogo from '../../images/customers/logos/aidin-logo.png';
 import glidianLogo from '../../images/customers/logos/glidian-logo.png';
+import projectBeaconLogo from '../../images/customers/logos/project-beacon-logo.png';
 
 const photos = {
   quadpay: quadpayPhoto,
@@ -37,6 +38,7 @@ const logos = {
   rightwayHealthcare: rightwayLogo,
   aidin: aidinLogo,
   glidianInc: glidianLogo,
+  projectBeacon: projectBeaconLogo,
 };
 
 class Card extends React.Component {

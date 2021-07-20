@@ -34,8 +34,6 @@
     "headline": "&ldquo;What I really wanted at QuadPay, where security is of paramount importance, was to have something that was comprehensive, followed best practices, and could actually be implemented across an organization at scale.&rdquo;",
     "author": "Ian Yamey, CTO",
     "tags": ["technology"],
-    "videoId": "kf1hbw3as5",
-    "videoLength": "2:07",
     "name": "Quad Pay",
     "website": "https://www.quadpay.com"
   },
@@ -87,5 +85,12 @@
     "tags": ["health"],
     "name": "Aidin",
     "website": "https://www.myaidin.com"
+  },
+  "projectBeacon": {
+    "headline": "&ldquo;We were able to rely on Aptible’s functionality to give us the controls we would need to handle sensitive data in the midst of a pandemic. Time and quality was of the essence. Aptible helped us to get to both quickly.&rdquo;",
+    "author": "M. Jackson Wilkinson, CTO",
+    "tags": ["health"],
+    "name": "Project Beacon",
+    "website": "https://app.beacontesting.com"
   }
 }
