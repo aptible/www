@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import AptibleLayout from '../components/layouts/AptibleLayout';
-import CustomerCarousel from '../components/customers/CustomerCarousel';
 import GreatCompany from '../components/customers/GreatCompany';
 import CustomerCards from '../components/customers/CustomerCards';
 import CustomerEmpowerment from '../components/customers/CustomerEmpowerment';

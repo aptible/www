@@ -3,15 +3,19 @@ import { Helmet } from 'react-helmet';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import Hero from '../components/deploy/Hero';
 import Nav from '../components/shared/Nav';
-import Features from '../components/deploy/Features';
+
 import SecurityControls from '../components/deploy/SecurityControls';
-import HowItWorks from '../components/deploy/HowItWorks';
+import HowAptibleWorks from '../components/deploy/HowAptibleWorks';
 import WhoUses from '../components/deploy/WhoUses';
 import ZeroTo from '../components/footer/ZeroTo';
+import Proof from '../components/deploy/Proof';
+import CenteredDemoForm from '../components/deploy/CenteredDemoForm';
+import Solutions from '../components/deploy/solutions';
 
 const stickyNavItems = [
-  { title: 'Features', ref: '#features' },
-  { title: 'How It Works', ref: '#how-it-works' },
+  { title: 'How Aptible Works', ref: '#how-aptible-works' },
+  { title: 'Solutions', ref: '#solutions' },
+  { title: 'Aptible vs AWS', ref: '#aptible-vs-aws' },
   { title: 'Who Uses Deploy', ref: '#who-uses-deploy' },
 ];
 
@@ -25,10 +29,12 @@ export default () => (
       />
     </Helmet>
     <Hero />
+    <Proof />
     <Nav items={stickyNavItems} ctaText="Sign up for free" product="deploy" />
+    <HowAptibleWorks />
+    <CenteredDemoForm />
+    <Solutions />
     <SecurityControls />
-    <Features />
-    <HowItWorks />
     <WhoUses />
     <ZeroTo />
   </AptibleLayout>

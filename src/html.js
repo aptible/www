@@ -11,11 +11,6 @@ const customJs = `
   a.appendChild(r);
 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 
-(function(w,d,t,u,n,s,e){w['SwiftypeObject'] = n; w[n]=w[n]||function(){
-(w[n].q = w[n].q || []).push(arguments);};s=d.createElement(t);
-e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
 adroll_adv_id = "WMSDVEVOKVFFJDALB2CFXO";
 adroll_pix_id = "ERBZPRNMMFELHNLX5C3Y34";
 
@@ -74,10 +69,6 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
-      <script
-        src="https://js.chilipiper.com/marketing.js"
-        type="text/javascript"
-      />
     </html>
   );
 }

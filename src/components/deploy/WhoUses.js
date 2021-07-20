@@ -9,9 +9,10 @@ export default () => (
       <div className={styles.intro}>
         <h1>Who uses Aptible?</h1>
         <p className="XL">
-          Companies who need to focus on development goals, achieve regulatory
-          compliance, get audit ready without the benefit of a security and
-          compliance expert.
+          Aptible is built for engineers who would rather focus on product
+          innovation rather than building compliant cloud infrastructure.
+          Engineers choose Aptible because it's the fastest and safest way
+          to bring a new product to market. 
         </p>
       </div>
 

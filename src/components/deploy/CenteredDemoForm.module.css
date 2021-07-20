@@ -1,0 +1,24 @@
+.container {
+  margin: 196px auto;
+  padding: 0 210px;
+  max-width: 1120px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.leadFormContainer {
+  box-sizing: border-box;
+  padding: 0 90px;
+}
+
+@media (--mobile) {
+  .container {
+    width: auto;
+    margin: 48px 24px;
+    padding: 0;
+  }
+
+  .leadFormContainer {
+    padding: 0;
+  }
+}
