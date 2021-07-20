@@ -11,8 +11,8 @@ export default () => (
         <p className="XL">
           Aptible is built for engineers who would rather focus on product
           innovation rather than building compliant cloud infrastructure.
-          Engineers choose Aptible because it's the fastest and safest way
-          to bring a new product to market. 
+          Engineers choose Aptible because it's the fastest and safest way to
+          bring a new product to market.
         </p>
       </div>
 
@@ -32,6 +32,7 @@ export default () => (
 
       <div className={styles.customersLeft}>
         <Card customer="healthCatalyst" />
+        <Card customer="projectBeacon" />
       </div>
 
       <div className={styles.customersRight}>
