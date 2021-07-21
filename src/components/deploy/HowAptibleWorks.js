@@ -1,4 +1,5 @@
 import React from 'react';
+import WistiaVideo from '../shared/WistiaVideo';
 import styles from './HowAptibleWorks.module.css';
 import cn from 'classnames';
 
@@ -34,7 +35,7 @@ const steps = [
     {
       id: '06',
       title: 'Pass Audits',
-      text: 'Aptible automates the implementation of all of your infrastructure’s security controls. Evidence of your controls performance is continuously collected for you.'
+      text: 'Aptible automates the design and operation of all of your infrastructure’s security controls. Evidence of your controls\' performance is made available directly in your Aptible Dashboard.'
     }
   ]
 ]
@@ -50,10 +51,16 @@ const Step = ({ id, title, text }) => (
 
 export default () => (
   <div className={styles.container} id="how-aptible-works">
-    <div className={styles.intro}>
-      <h2>How Aptible Works</h2>
-      <p className='XL'>Aptible is a Docker-based Platform-as-a-Service that helps you go from code to cloud without ever worrying about managing servers.</p>
+    <div className={styles.heading}>
+      <div className={styles.intro}>
+        <h2>How Aptible Works</h2>
+        <p className='XL'>Aptible is a Docker-based Platform-as-a-Service that helps you go from code to cloud without ever worrying about managing servers.</p>
+      </div>
+      <div className={styles.videoContainer}>
+        <WistiaVideo videoId="somm4d44rt" />
+      </div>
     </div>
+
     <div className={styles.steps}>
       {steps.map((stepRow, i) => (
         <div key={`step-row-${i}`} className={styles.stepRow}>
