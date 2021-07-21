@@ -28,9 +28,24 @@
 }
 
 .intro {
-  width: 33%;
+  width: calc(100%*5/13);
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-bottom: 48px;
 }
+
+.videoContainer {
+  margin-left: calc(100%*1/13);
+  width: calc(100%*7/13);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 16px 16px rgba(0,0,0,0.5);
+}
+
 
 @media (--mobile) {
   .container {
@@ -38,10 +53,22 @@
     margin: 48px 24px; 
   }
 
-  .intro {
+  .intro,
+  .videoContainer {
     width: 100%;
+    margin: 0;
+  }
+
+  .intro {
     margin-bottom: 16px;
   }
+
+
+  .heading {
+    margin-bottom: 16px;
+    flex-direction: column;
+  }
+
 
   .stepRow {
     flex-direction: column;

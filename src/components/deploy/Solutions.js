@@ -100,7 +100,7 @@ export default () => (
     <Solution
       id="solution-automated-devops"
       title="Zero-configuration DevOps"
-      description="Can’t spend hours a day on DevOps? Aptible automatically manages and monitors infrastructure, scaling up easily as your capacity demands increase."
+      description="Aptible solves the hard parts of deploying and scaling high-availability infrastructure"
       primaryImage={<img src={zeroConfigImg} alt="Aptibles Container Dashboard. Horizontal and Vertical scaling of your Docker containers on Aptible." />}
       supportingImage={<img src={devOpsSupportingImage} alt="List of target frameworks that Aptible addresses. HIPAA, HITRUST, SOC 2, ISO 27001" />}
       features={features['devops']} />
