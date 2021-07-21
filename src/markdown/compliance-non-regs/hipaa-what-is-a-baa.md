@@ -8,7 +8,7 @@ template: compliance/hipaa
 
 At Aptible, we get a lot of questions about HIPAA business associate agreements, or "BAAs." This post will explain some of the essential concepts that cloud-hosted software development organizations should know about BAAs.
 
-For a broader overview of HIPAA, see our post on [common HIPAA questions](/resources/common-hipaa-questions/).
+For a broader overview of HIPAA, see the full [HIPAA Compliance Guide for Startups](/hipaa/).
 
 _One caveat, as always: This post is for informational purposes only. Aptible is not a law firm, and this post is not legal advice. You should contact an attorney to obtain advice with respect to particular issues or problems, including contracts and BAAs._
 
@@ -36,7 +36,7 @@ Like most contracts, if one party violates the agreement, the other party may ha
 
 <span id="what-or-who-is-a-business-associate"></span>
 ### What (or who?) is a Business Associate?
-Check out that post on [common HIPAA questions](/resources/common-hipaa-questions/). The most common type of business associate is a person or organization that creates, receives, transmits, or maintains protected health information (PHI) "on behalf of" a covered entity or another business associate.
+The most common type of business associate is a person or organization that creates, receives, transmits, or maintains protected health information (PHI) "on behalf of" a covered entity or another business associate.
 
 The regulations are more nuanced, but in the real world, if you handle identifiable patient data for *any* reason, most covered entities (healthcare providers, insurance companies, pharmacies, self-ensured employers, etc.) will consider you to be a business associate and make you sign a BAA.
 
