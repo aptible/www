@@ -15,7 +15,7 @@ import Solutions from '../components/deploy/Solutions';
 const stickyNavItems = [
   { title: 'How Aptible Works', ref: '#how-aptible-works' },
   { title: 'Solutions', ref: '#solutions' },
-  { title: 'Aptible vs AWS', ref: '#aptible-vs-aws' },
+  { title: 'Aptible vs DIY on AWS', ref: '#aptible-vs-aws' },
   { title: 'Who Uses Deploy', ref: '#who-uses-deploy' },
 ];
 
@@ -32,9 +32,18 @@ export default () => (
     <Proof />
     <Nav items={stickyNavItems} ctaText="Sign up for free" product="deploy" />
     <HowAptibleWorks />
-    <CenteredDemoForm />
+    <CenteredDemoForm
+      title="A Trusted Platform That Grows With You"
+      body="Complete audits faster with well-documented controls, clear
+      audit trails for third parties, and all of the security and
+      compliance features you need get certified."
+      leadFormId="Home Page - Request a Demo" />
     <Solutions />
     <SecurityControls />
+    <CenteredDemoForm
+      title="Use Aptible and Deploy in Three Steps"
+      body="Save your engineering team the headache of building compliant infra on AWS. Use Aptible and get back to building your product. Request a demo to see how it works."
+      leadFormId="Home Page - Request a Demo" />
     <WhoUses />
     <ZeroTo />
   </AptibleLayout>

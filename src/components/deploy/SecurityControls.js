@@ -72,11 +72,6 @@ export default () => (
           />
         </svg>
       </div>
-
-      <div className={styles.useAptible}>
-        <h2>Or Use Aptible and Deploy in Just 3 Steps.</h2>
-        <LeadForm id="Home Page - Request a Demo" />
-      </div>
     </Grid>
   </div>
 );
