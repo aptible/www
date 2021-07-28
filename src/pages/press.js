@@ -4,6 +4,7 @@ import AptibleLayout from '../components/layouts/AptibleLayout';
 import Hero from '../components/press/Hero';
 import FunFacts from '../components/press/FunFacts';
 import PressDownloads from '../components/press/PressDownloads';
+
 export default ({ data }) => (
   <AptibleLayout>
     <Helmet>

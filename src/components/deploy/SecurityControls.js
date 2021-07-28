@@ -10,8 +10,8 @@ export default () => (
       <div className={styles.intro}>
         <h1>Secure, Audit-ready App Deployment in 16 Fewer Steps Than AWS</h1>
         <p className="XL">
-          Aptible automates most of the steps to AWS deployment, so you can launch
-          without roadblocks or delays.
+          Aptible automates most of the steps to AWS deployment, so you can
+          launch without roadblocks or delays.
         </p>
       </div>
 

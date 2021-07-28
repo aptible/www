@@ -32,9 +32,7 @@ export default ({ data, pageContext }) => {
         </title>
         <meta
           name="description"
-          content={`Explore ${part.title} (Article ${
-            part.id
-          }) of the GDPR Requirements. The full GDPR Requirements text, annotated by Aptible, easily searchable.`}
+          content={`Explore ${part.title} (Article ${part.id}) of the GDPR Requirements. The full GDPR Requirements text, annotated by Aptible, easily searchable.`}
         />
       </Helmet>
       <div dangerouslySetInnerHTML={{ __html: data.regulation.html }} />

@@ -54,9 +54,8 @@ export function currentURL() {
   return `${window.location.origin}${window.location.pathname}`;
 }
 
-export function trackOnLinkedIn(pid='42067', conversionId='2213244') {
-  new Image().src =
-    `https://px.ads.linkedin.com/collect/?pid=${pid}&conversionId=${conversionId}&fmt=gif`
+export function trackOnLinkedIn(pid = '42067', conversionId = '2213244') {
+  new Image().src = `https://px.ads.linkedin.com/collect/?pid=${pid}&conversionId=${conversionId}&fmt=gif`;
 }
 
 export function event(name, payload = {}) {

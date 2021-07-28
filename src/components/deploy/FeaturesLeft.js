@@ -52,8 +52,8 @@ export default () => (
           <p className="L">
             You are responsible for managing your apps' dependencies (e.g.
             package.json, Gemfiles, etc.) and patching vulnerabilities. You may
-            use Aptible App Security Scans to detect potential issues with system
-            packages installed in your Docker images.
+            use Aptible App Security Scans to detect potential issues with
+            system packages installed in your Docker images.
           </p>
         </div>
 
@@ -65,8 +65,8 @@ export default () => (
           </h3>
           <p className="L">
             You are responsible for managing your passwords, API keys, and other
-            secrets. You may use Aptible environment variables to store sensitive
-            information and configuration.
+            secrets. You may use Aptible environment variables to store
+            sensitive information and configuration.
           </p>
         </div>
       </div>

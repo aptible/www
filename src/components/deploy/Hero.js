@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './Hero.module.css';
 import hipaaBadge from '../../images/home/badges/hipaa-24x24.svg';
-import hitrustBadge from '../../images/home/badges/hitrust-24x24.svg'
+import hitrustBadge from '../../images/home/badges/hitrust-24x24.svg';
 import soc2Badge from '../../images/home/badges/soc-24x24.svg';
 import isoBadge from '../../images/home/badges/iso-24x24.svg';
 import dashboardIlly from '../../images/home/illustrations/deploy-container-metrics-dashboard.svg';
@@ -10,7 +10,7 @@ import deployConsoleIlly from '../../images/home/illustrations/deploy-console.sv
 import mobileHero from '../../images/home/illustrations/mobile-hero-dashboard.svg';
 import LeadForm from '../../components/lead-form';
 
-const CompliancePills = () => {
+export const CompliancePills = () => {
   return (
     <div className={styles.compliancePills}>
       <CompliancePill title="✓ HIPAA" svg={hipaaBadge} />
@@ -18,8 +18,8 @@ const CompliancePills = () => {
       <CompliancePill title="✓ SOC 2 Type 2" svg={soc2Badge} />
       <CompliancePill title="✓ ISO 27001" svg={isoBadge} />
     </div>
-  )
-}
+  );
+};
 
 const CompliancePill = ({ title, svg }) => {
   return (
@@ -28,7 +28,7 @@ const CompliancePill = ({ title, svg }) => {
       <h6 className="small">{title}</h6>
     </div>
   );
-}
+};
 
 export default () => (
   <div className={styles.container}>
@@ -44,27 +44,40 @@ export default () => (
 
         <div className={styles.heroItem}>
           <p className="XL">
-            Don’t waste engineering time building compliance into your cloud infrastructure.
-            Use Aptible to get your product to market faster and be HIPAA-compliant from day one.
+            Don’t waste engineering time building compliance into your cloud
+            infrastructure. Use Aptible to get your product to market faster and
+            be HIPAA-compliant from day one.
           </p>
         </div>
 
         <div className={styles.leadFormWrapper}>
-          <LeadForm id="Home Page Hero - Request a Demo" inputPlaceholder="Enter your email" />
+          <LeadForm
+            id="Home Page Hero - Request a Demo"
+            inputPlaceholder="Enter your email"
+          />
           <div className={styles.signUpYourself}>
-            <p className="M">Or try it yourself. <a href="https://dashboard.aptible.com/signup">Sign up for a free account today</a></p>
+            <p className="M">
+              Or try it yourself.{' '}
+              <a href="https://dashboard.aptible.com/signup">
+                Sign up for a free account today
+              </a>
+            </p>
           </div>
         </div>
       </div>
 
       <div className={styles.illustration}>
-        <img src={mobileHero} className={styles.mobileHero}/>
+        <img src={mobileHero} className={styles.mobileHero} />
         <img
           className={styles.containerMeticsDashboard}
-          alt="Container Metrics Dashboard." src={dashboardIlly} />
-          <img
+          alt="Container Metrics Dashboard."
+          src={dashboardIlly}
+        />
+        <img
           className={styles.containerDeploymentConsole}
-          alt="Image of console deploying a docker app on Aptible." src={deployConsoleIlly} />
+          alt="Image of console deploying a docker app on Aptible."
+          src={deployConsoleIlly}
+        />
       </div>
     </Grid>
   </div>

@@ -8,6 +8,7 @@ import SignupButton from '../signup/SignupButton';
 import MainNavItem from './MainNavItem';
 import MobileMenuItem from './MobileMenuItem';
 import Resources from './Resources';
+import Solutions from './Solutions';
 import Company from './Company';
 import Mobile from './Mobile';
 import HeaderContext from './HeaderContext';
@@ -16,6 +17,7 @@ const dropDowns = {
   resources: Resources,
   company: Company,
   mobile: Mobile,
+  solutions: Solutions,
 };
 
 class Header extends React.Component {
@@ -84,30 +86,36 @@ class Header extends React.Component {
                 <img src={logoImage} alt="Aptible logo" />
               </Link>
               <MainNavItem
-                title="Features"
-                to="/features"
+                title="Solutions"
+                onClickFn={this.toggleNavSection}
+                sectionName="solutions"
                 gridColumn="3"
+              />
+              <MainNavItem
+                title="Secured by Aptible"
+                to="/secured-by-aptible"
+                gridColumn="4"
               />
               <MainNavItem
                 title="Pricing"
                 to="/pricing-plans/#deploy"
-                gridColumn="4"
+                gridColumn="5"
               />
-              <MainNavItem title="Customers" to="/customers/" gridColumn="5" />
+              <MainNavItem title="Customers" to="/customers/" gridColumn="6" />
               <MainNavItem
                 title="Resources"
-                gridColumn="6"
+                gridColumn="7"
                 onClickFn={this.toggleNavSection}
                 sectionName="resources"
                 openSectionName={openSectionName}
               />
-              <MainNavItem
+              {/* <MainNavItem
                 title="Company"
                 gridColumn="7"
                 onClickFn={this.toggleNavSection}
                 sectionName="company"
                 openSectionName={openSectionName}
-              />
+              /> */}
 
               <div className={styles.mobileNav}>
                 <MobileMenuItem

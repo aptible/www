@@ -9,7 +9,9 @@ export default ({ title, summary }) => {
     <div>
       <img className={styles.logo} src={logoImage} alt="Aptible logo" />
       <h1 className={styles.headerText}>{title}</h1>
-      <p className={classnames('XL', styles.textCenter, styles.headerSubText)}>{summary}</p>
+      <p className={classnames('XL', styles.textCenter, styles.headerSubText)}>
+        {summary}
+      </p>
     </div>
   );
 };

@@ -24,9 +24,9 @@ export default () => (
     />
     <SidebarNavItem to="/legal/billing/" text="Billing Policy" />
     <SidebarNavItem to="/legal/security/" text="Security Policy" />
-   <SidebarNavItem
-     to="/legal/supplemental-terms-of-service-for-the-security-assessment-questionnaire-offering/"
-     text="Supplemental Terms of Service for the Security Assessment Questionnaire Offering"
-   />
+    <SidebarNavItem
+      to="/legal/supplemental-terms-of-service-for-the-security-assessment-questionnaire-offering/"
+      text="Supplemental Terms of Service for the Security Assessment Questionnaire Offering"
+    />
   </SidebarNav>
 );

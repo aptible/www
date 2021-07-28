@@ -397,16 +397,13 @@ class Features extends React.Component {
         <div className={styles.intro}>
           <Grid>
             <div className={styles.content}>
-              <h1>
-                Automate the steps to compliance
-              </h1>
+              <h1>Automate the steps to compliance</h1>
               <p className="L">
                 When you launch on Aptible, you’ll be fully compliant with
-                standards like HIPAA/HITECH and HITRUST. Just add your code to
-                a platform already equipped to meet customer requirements for
+                standards like HIPAA/HITECH and HITRUST. Just add your code to a
+                platform already equipped to meet customer requirements for
                 encryption, backups, monitoring, access, and specific compliance
                 protocols.
-
               </p>
             </div>
           </Grid>
@@ -440,7 +437,9 @@ class Features extends React.Component {
               <h4
                 onClick={() => this.openSection('hardenedSecurity')}
                 className={
-                  this.state.openSection === 'hardenedSecurity' ? styles.active : ''
+                  this.state.openSection === 'hardenedSecurity'
+                    ? styles.active
+                    : ''
                 }
               >
                 Hardened security
@@ -497,8 +496,8 @@ class Features extends React.Component {
                 </div>
                 <h5>
                   Can’t spend hours a day on DevOps? Aptible automatically
-                  manages and monitors infrastructure, scaling up easily as
-                  your capacity demands increase.
+                  manages and monitors infrastructure, scaling up easily as your
+                  capacity demands increase.
                 </h5>
 
                 <div className={styles.featureBullet}>
@@ -535,9 +534,8 @@ class Features extends React.Component {
                 </div>
                 <h5>
                   Get a security operations center out of the box with managed
-                  host intrusion detection, vulnerability scanning,
-                  network anomaly monitoring, and more.
-
+                  host intrusion detection, vulnerability scanning, network
+                  anomaly monitoring, and more.
                 </h5>
               </div>
             )}

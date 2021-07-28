@@ -42,9 +42,7 @@ export default () => (
       </div>
 
       <div
-        className={`${styles.bullet} ${styles.bulletLeft} ${
-          styles.bulletBottom
-        }`}
+        className={`${styles.bullet} ${styles.bulletLeft} ${styles.bulletBottom}`}
       >
         <h3>We'll share our knowledge even if you're not a customer</h3>
         <p className="L">
@@ -59,9 +57,7 @@ export default () => (
       </div>
 
       <div
-        className={`${styles.bullet} ${styles.bulletRight} ${
-          styles.bulletBottom
-        }`}
+        className={`${styles.bullet} ${styles.bulletRight} ${styles.bulletBottom}`}
       >
         <h3>The customer is not always right</h3>
         <p className="L">

@@ -1,0 +1,37 @@
+.steps {
+  margin-bottom: -48px;
+}
+
+.step {
+  padding: 48px 32px 48px 0;
+  border-top: 1px solid var(--aptible-green-dark);
+  box-sizing: border-box;
+  width: 33%;
+}
+
+.stepId {
+  color: var(--aptible-yellow);
+}
+
+.stepTitle {
+  color: white;
+}
+
+.stepRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+@media (--mobile) {
+  .stepRow {
+    flex-direction: column;
+  }
+
+  .step {
+    padding: 16px 16px 16px 0;
+    width: 100%;
+  }
+}
