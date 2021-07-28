@@ -172,7 +172,7 @@ export default () => (
     <Grid>
       <div className={styles.container}>
         <div className={styles.heroItem}>
-          <h4>Solutions</h4>
+          <h4>Why Aptible</h4>
           <h1 className="hero">Reliable DevOps Without the Overhead</h1>
         </div>
 

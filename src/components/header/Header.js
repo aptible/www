@@ -88,7 +88,7 @@ class Header extends React.Component {
               </Link>
               <div className={styles.navItems}>
                 <MainNavItem
-                  title="Solutions"
+                  title="Why Aptible"
                   onClickFn={this.toggleNavSection}
                   sectionName="solutions"
                   openSectionName={openSectionName}
