@@ -261,7 +261,12 @@ export default () => (
             title="Minimize Downtime And Deliver High Availability"
             description="Ensure your end users never have to experience a moment of downtime with Aptible providing you with all the required features to ensure high availability, with a guaranteed SLA of 99.95%"
             smallImage={null}
-            heroImage={<img src={devopsUptime} alt='99.95% Uptime dashboard for apps deployed on Aptible'/> }
+            heroImage={
+              <img
+                src={devopsUptime}
+                alt="99.95% Uptime dashboard for apps deployed on Aptible"
+              />
+            }
             steps={availabilitySteps}
           />
         </div>

@@ -179,8 +179,8 @@ export default () => (
 
         <div className={styles.heroItem}>
           <p className="XL">
-            Aptible saves you valuable engineering time by implementing
-            and managing the operation of all the infrastructure security controls
+            Aptible saves you valuable engineering time by implementing and
+            managing the operation of all the infrastructure security controls
             required to satisfy a variety of regulations and security frameworks
             such as HIPAA, HITRUST, and SOC 2 Type 2. Using Aptible means you'll
             be compliant and audit-ready from day one.

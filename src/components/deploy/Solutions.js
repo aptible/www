@@ -16,7 +16,7 @@ const Solution = ({
   primaryImage,
   supportingImage,
   features,
-  learnMore
+  learnMore,
 }) => (
   <div className={styles.solution} id={id}>
     <div className={styles.solutionHeading}>
@@ -32,7 +32,9 @@ const Solution = ({
       <div className={styles.solutionPrimaryImage}>
         {primaryImage}
         <div className={styles.learnMore}>
-          <Link className={buttonStyles.button} to={`/solutions/${learnMore}`}>Learn More</Link>
+          <Link className={buttonStyles.button} to={`/solutions/${learnMore}`}>
+            Learn More
+          </Link>
         </div>
       </div>
       <div className={styles.solutionFeatures}>
@@ -78,7 +80,7 @@ const features = {
     {
       title: 'Harden Your Network Security',
       description:
-        'Develop and launch applications in a network that’s fully protected through a series of mechanisms and controls thoughtfully implemented for defense-in-depth network security.'
+        'Develop and launch applications in a network that’s fully protected through a series of mechanisms and controls thoughtfully implemented for defense-in-depth network security.',
     },
     {
       title: 'Simplify Identity and Access Management (IAM)',
@@ -128,7 +130,12 @@ export default () => (
     />
     <Solution
       id="solution-security-first"
-      title={<>Rest Easy With <br />Fully-Managed Security for Your Cloud Infra.</>}
+      title={
+        <>
+          Rest Easy With <br />
+          Fully-Managed Security for Your Cloud Infra.
+        </>
+      }
       description="Deliver digital products in the fastest time possible while keeping your sensitive data safe, secure, and available—24x7 through fully-managed infrastructure security controls."
       primaryImage={
         <img

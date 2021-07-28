@@ -5,10 +5,7 @@ import styles from './MainNavItem.module.css';
 function NavLink({ title, to }) {
   if (to.indexOf('http') !== -1) {
     return (
-      <a
-        href={to}
-        className={styles.mainNavItem}
-      >
+      <a href={to} className={styles.mainNavItem}>
         {title}
       </a>
     );
@@ -26,15 +23,10 @@ function NavLink({ title, to }) {
   }
 }
 
-function DropDown({
-  title,
-  onClickFn,
-  sectionName,
-  openSectionName,
-}) {
+function DropDown({ title, onClickFn, sectionName, openSectionName }) {
   const url = typeof window !== 'undefined' ? window.location.href : '';
   const isActive = url.toLowerCase().indexOf(sectionName.toLowerCase()) > -1;
-  const style = isActive ? { color: "white" } : {}
+  const style = isActive ? { color: 'white' } : {};
   return (
     <div
       onClick={() => onClickFn(sectionName)}
@@ -53,13 +45,7 @@ function DropDown({
   );
 }
 
-export default ({
-  title,
-  to,
-  onClickFn,
-  sectionName,
-  openSectionName,
-}) => {
+export default ({ title, to, onClickFn, sectionName, openSectionName }) => {
   if (to) {
     return <NavLink title={title} to={to} />;
   } else if (onClickFn) {

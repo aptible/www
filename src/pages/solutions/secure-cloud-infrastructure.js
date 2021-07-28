@@ -183,7 +183,7 @@ export default () => (
                  Type 2."
       />
     </Helmet>
-    
+
     <Nav items={stickyNavItems} />
 
     <Grid>
