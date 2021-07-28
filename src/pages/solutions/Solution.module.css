@@ -34,6 +34,10 @@
     margin-bottom: 16px;
   }
 
+  .heroItem > img {
+    width: 100%;
+  }
+
   .block {
     margin-top: 48px;
     margin-bottom: 48px;

@@ -2,12 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styles from './MainNavItem.module.css';
 
-function NavLink({ gridColumn, title, to }) {
+function NavLink({ title, to }) {
   if (to.indexOf('http') !== -1) {
     return (
       <a
         href={to}
-        style={{ gridColumn: gridColumn }}
         className={styles.mainNavItem}
       >
         {title}
@@ -17,8 +16,9 @@ function NavLink({ gridColumn, title, to }) {
     return (
       <Link
         to={to}
-        style={{ gridColumn: gridColumn }}
         className={styles.mainNavItem}
+        activeClassName={styles.active}
+        partiallyActive={true}
       >
         {title}
       </Link>
@@ -27,16 +27,18 @@ function NavLink({ gridColumn, title, to }) {
 }
 
 function DropDown({
-  gridColumn,
   title,
   onClickFn,
   sectionName,
   openSectionName,
 }) {
+  const url = typeof window !== 'undefined' ? window.location.href : '';
+  const isActive = url.toLowerCase().indexOf(sectionName.toLowerCase()) > -1;
+  const style = isActive ? { color: "white" } : {}
   return (
     <div
       onClick={() => onClickFn(sectionName)}
-      style={{ gridColumn: gridColumn }}
+      style={null}
       className={`${styles.mainNavItem} ${
         sectionName === openSectionName ? styles.open : ''
       }`}
@@ -52,7 +54,6 @@ function DropDown({
 }
 
 export default ({
-  gridColumn,
   title,
   to,
   onClickFn,
@@ -60,11 +61,10 @@ export default ({
   openSectionName,
 }) => {
   if (to) {
-    return <NavLink gridColumn={gridColumn} title={title} to={to} />;
+    return <NavLink title={title} to={to} />;
   } else if (onClickFn) {
     return (
       <DropDown
-        gridColumn={gridColumn}
         title={title}
         onClickFn={onClickFn}
         sectionName={sectionName}

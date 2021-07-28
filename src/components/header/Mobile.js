@@ -8,6 +8,7 @@ import SignupButton from '../signup/SignupButton';
 import HeaderContext from './HeaderContext';
 import { RESOURCES_NAV } from './Resources';
 import { COMPANY_NAV } from './Company';
+import { SOLUTIONS_NAV } from './Solutions';
 
 const Mobile = () => (
   <HeaderContext.Consumer>
@@ -15,9 +16,24 @@ const Mobile = () => (
       <div>
         <Grid>
           <div className={styles.mainItems}>
+
             <div className={styles.mainItem}>
-              <Link className={cn(styles.heading, 'h4')} to="/features/">
-                Features
+              <h4 className={cn(styles.heading, 'h4')}>
+                Solutions
+              </h4>
+
+              {SOLUTIONS_NAV.map(link => (
+                <div className={styles.subItem} key={link.url}>
+                  <Link className="h6" to={link.url}>
+                    {link.title}
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            <div className={styles.mainItem}>
+              <Link className={cn(styles.heading, 'h4')} to="/secured-by-aptible">
+                Secured by Aptible
               </Link>
             </div>
             <div className={styles.mainItem}>

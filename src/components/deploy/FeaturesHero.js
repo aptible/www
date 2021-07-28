@@ -10,7 +10,7 @@ export default () => (
     <Grid>
       <div className={styles.content}>
         <h1 className="hero">
-          Secured By Aptible
+          Secured by Aptible
         </h1>
 
         <div className={styles.descriptionContainer}>

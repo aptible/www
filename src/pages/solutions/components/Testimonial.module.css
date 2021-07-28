@@ -47,3 +47,33 @@
   width: 100%;
   margin-bottom: -7px;
 }
+
+
+@media (--mobile) {
+  .card {
+    flex-direction: column-reverse;
+  }
+
+  .logo {
+    height: 16px;
+    margin-bottom: 16px;
+  }
+
+  .quoteArea h5 {
+    margin-bottom: 16px;
+  }
+
+  .quoteArea {
+    width: 100%;
+    padding: 24px;
+    display: block;
+  }
+
+  .byline {
+    margin-bottom: 0;
+  }
+
+  .mediaArea {
+    width: 100%;
+  }
+} 

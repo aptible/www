@@ -30,8 +30,22 @@
   display: block;
 }
 
+.navRow {
+  grid-column: 1 / span 7;
+  display: flex;
+  flex-direction: row;
+}
+
+.navItems {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+}
+
 .logo {
-  grid-column: 1;
+  width: 160px;
+  margin-right: 160px;
 }
 
 .logo img {
@@ -41,8 +55,6 @@
 
 .mobileNav {
   display: none;
-  grid-row: 1;
-  grid-column: 6 / span 2;
 }
 
 .cta {
@@ -59,7 +71,6 @@
 }
 
 .ctaSignUp {
-  margin-right: 90px;
   grid-column: -1;
 }
 
@@ -73,11 +84,15 @@
   }
 
   .logo {
-    grid-column: 1 / span 2;
+    margin-right: 0;
+    width: 160px;
   }
 
   .mobileNav {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex: 1;
   }
 
   .cta {
