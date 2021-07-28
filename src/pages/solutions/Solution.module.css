@@ -4,8 +4,9 @@
 }
 
 .block {
-  margin-top: 128px;
-  margin-bottom: 128px;
+  padding: 74px 0;
+  margin-top: 54px;
+  margin-bottom: 54px;
 }
 
 .container p {
@@ -39,6 +40,7 @@
   }
 
   .block {
+    padding: 0;
     margin-top: 48px;
     margin-bottom: 48px;
   }
