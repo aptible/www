@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from './Solutions.module.css';
+import { Link } from 'gatsby';
 import zeroConfigImg from '../../images/home/illustrations/solution-devops.svg';
 import auditReadyImg from '../../images/home/illustrations/solution-audit-readiness.svg';
 import securityImg from '../../images/home/illustrations/solution-security.svg';
 import allBadges from '../../images/home/illustrations/all-badges.svg';
 import securitySupportingImage from '../../images/home/illustrations/security-supporting-image.png';
 import devOpsSupportingImage from '../../images/home/illustrations/devops-supporting-logos.png';
+import buttonStyles from '../buttons/Button.module.css';
 
 const Solution = ({
   id,
@@ -14,6 +16,7 @@ const Solution = ({
   primaryImage,
   supportingImage,
   features,
+  learnMore
 }) => (
   <div className={styles.solution} id={id}>
     <div className={styles.solutionHeading}>
@@ -26,7 +29,12 @@ const Solution = ({
     </div>
 
     <div className={styles.solutionMain}>
-      <div className={styles.solutionPrimaryImage}>{primaryImage}</div>
+      <div className={styles.solutionPrimaryImage}>
+        {primaryImage}
+        <div className={styles.learnMore}>
+          <Link className={buttonStyles.button} to={`/solutions/${learnMore}`}>Learn More</Link>
+        </div>
+      </div>
       <div className={styles.solutionFeatures}>
         {features.map(feature => (
           <Feature {...feature} />
@@ -115,6 +123,7 @@ export default () => (
           alt="List of target frameworks that Aptible addresses. HIPAA, HITRUST, SOC 2, ISO 27001"
         />
       }
+      learnMore="hipaa-hitrust-soc2-compliant-hosting"
       features={features['audit']}
     />
     <Solution
@@ -133,6 +142,7 @@ export default () => (
           alt="List of target frameworks that Aptible addresses. HIPAA, HITRUST, SOC 2, ISO 27001"
         />
       }
+      learnMore="secure-cloud-infrastructure"
       features={features['security']}
     />
     <Solution
@@ -151,6 +161,7 @@ export default () => (
           alt="List of target frameworks that Aptible addresses. HIPAA, HITRUST, SOC 2, ISO 27001"
         />
       }
+      learnMore="reliable-devops"
       features={features['devops']}
     />
   </div>
