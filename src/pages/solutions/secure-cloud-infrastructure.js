@@ -234,7 +234,7 @@ export default () => (
 
         <div className={styles.block} id="network">
           <Feature
-            title="Secure Your Cloud Network"
+            title="Harden Your Network Security"
             description="Develop and launch applications in a network that’s fully protected
                          through a series of mechanisms and controls thoughtfully implemented for defense-in-depth network security."
             smallImage={null}
