@@ -1,5 +1,9 @@
 .container {
+  /* Internal links work better if we use padding isntead of margins */
   margin: 196px auto;
+  padding-top: 74px;
+  margin-top: calc(196px - 74px);
+  margin-bottom: calc(196px - 74px);
   max-width: 1120px;
   box-sizing: border-box;
 }

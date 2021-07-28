@@ -5,7 +5,7 @@ import awsLogo from '../../images/home/illustrations/aws-logo.png';
 import LeadForm from '../lead-form';
 
 export default () => (
-  <div id="aptible-vs-aws">
+  <div id="aptible-vs-aws" className={styles.container}>
     <Grid rows="3">
       <div className={styles.intro}>
         <h1>Secure, Audit-ready App Deployment in 16 Fewer Steps Than AWS</h1>
