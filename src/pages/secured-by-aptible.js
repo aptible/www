@@ -6,6 +6,7 @@ import FeaturesGrid from '../components/deploy/FeaturesGrid';
 import DivisionOfResponsibility from '../components/deploy/DivisionOfResponsibility';
 import FeaturesLeft from '../components/deploy/FeaturesLeft';
 import ZeroTo from '../components/footer/ZeroTo';
+import SecurityControlTable from '../components/deploy/SecurityControlTable';
 
 export default () => (
   <AptibleLayout>
@@ -17,7 +18,7 @@ export default () => (
       />
     </Helmet>
     <FeaturesHero />
-    <FeaturesGrid />
+    <SecurityControlTable />
     <DivisionOfResponsibility />
     <FeaturesLeft />
     <ZeroTo />
