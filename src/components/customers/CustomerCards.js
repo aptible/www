@@ -25,7 +25,6 @@ class CustomerCards extends React.Component {
 
           <div className={styles.right}>
             <Card customer="mdsave" />
-            <Card customer="quadpay" />
             <Card customer="healthCatalyst" />
             <Card customer="medicalMemory" />
             <Card customer="rightwayHealthcare" />
