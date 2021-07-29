@@ -248,14 +248,12 @@ export default () => (
           />
         </div>
 
-        <div className={styles.block}>
-          <CenteredDemoForm
-            title="Deploy and scale your App on Aptible."
-            body="Don't spend another minute building for compliance without first talking to Aptible."
-            leadFormId={LEAD_FORM_ID}
-          />
-        </div>
-
+        <CenteredDemoForm
+          title="Deploy and scale your App on Aptible."
+          body="Don't spend another minute building for compliance without first talking to Aptible."
+          leadFormId={LEAD_FORM_ID}
+        />
+        
         <div className={styles.block} id="availability">
           <Feature
             title="Minimize Downtime And Deliver High Availability"

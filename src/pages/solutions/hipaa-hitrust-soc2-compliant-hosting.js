@@ -244,13 +244,13 @@ export default () => (
             image={mdsaveBranded}
           />
         </div>
-        <div className={styles.block}>
-          <CenteredDemoForm
-            title="Get started today."
-            body="Don't spend another minute building for compliance without first talking to Aptible."
-            leadFormId={LEAD_FORM_ID}
-          />
-        </div>
+        
+        <CenteredDemoForm
+          title="Get started today."
+          body="Don't spend another minute building for compliance without first talking to Aptible."
+          leadFormId={LEAD_FORM_ID}
+        />
+        
         <div className={styles.block} id="soc2">
           <Feature
             title="Get SOC 2 Type 2 Certified"

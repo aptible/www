@@ -284,14 +284,12 @@ export default () => (
           />
         </div>
 
-        <div className={styles.block}>
-          <CenteredDemoForm
-            title="Don't reinvent infrastructure security--use Aptible instead."
-            body="See how using Aptible can help get your product to market faster without
-                  compromising on security."
-            leadFormId={LEAD_FORM_ID}
-          />
-        </div>
+        <CenteredDemoForm
+          title="Don't reinvent infrastructure security--use Aptible instead."
+          body="See how using Aptible can help get your product to market faster without
+                compromising on security."
+          leadFormId={LEAD_FORM_ID}
+        />
 
         <div className={styles.block} id="audit">
           <Feature
@@ -319,14 +317,12 @@ export default () => (
           />
         </div>
 
-        <div className={styles.block}>
-          <CenteredDemoForm
-            title="Don't reinvent infrastructure security--use Aptible instead."
-            body="See how using Aptible can help get your product to market faster
-                  without compromising on security."
-            leadFormId={LEAD_FORM_ID}
-          />
-        </div>
+        <CenteredDemoForm
+          title="Don't reinvent infrastructure security--use Aptible instead."
+          body="See how using Aptible can help get your product to market faster
+                without compromising on security."
+          leadFormId={LEAD_FORM_ID}
+        />
 
         <div className={styles.block} id="support">
           <Feature
