@@ -25,6 +25,10 @@ a.mainNavItem {
   border-top-color: white;
 }
 
+a.mainNavItem.active {
+  color: var(--aptible-yellow);
+}
+
 .arrow {
   width: 0;
   height: 0;

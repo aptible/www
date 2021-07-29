@@ -8,7 +8,8 @@ export default () => (
       <div className={styles.content}>
         <h1>Resource Library</h1>
         <p className="XL">
-          Learn about compliance best practices and how Aptible helps you follow them.
+          Learn about compliance best practices and how Aptible helps you follow
+          them.
         </p>
       </div>
     </Grid>

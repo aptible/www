@@ -1,5 +1,9 @@
 .container {
+  /* Internal links work better if we use padding isntead of margins */
   margin: 196px auto;
+  padding-top: 74px;
+  margin-top: calc(196px - 74px);
+  margin-bottom: calc(196px - 74px);
   max-width: 1120px;
   box-sizing: border-box;
 }
@@ -36,6 +40,12 @@
   margin: 0 0 48px;
 }
 
+.learnMore {
+  width: 100%;
+  text-align: center;
+  margin-top: -96px;
+}
+
 @media (--mobile) {
   .container {
     width: auto;
@@ -45,6 +55,14 @@
 
   .solution {
     margin-bottom: 48px;
+  }
+
+  .solutionPrimaryImage {
+    margin-bottom: 24px;
+  }
+
+  .learnMore {
+    margin-top: -48px;
   }
 
   .solutionTitle,

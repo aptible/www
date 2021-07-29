@@ -8,8 +8,10 @@ const ZeroTo = () => {
     <div className={styles.zero}>
       <Grid rows="2">
         <div className={styles.zeroTo}>
-          <h1>Focus on innovation,
-          <br /> not compliance</h1>
+          <h1>
+            Focus on innovation,
+            <br /> not compliance
+          </h1>
         </div>
         <div className={styles.start}>
           <h4>

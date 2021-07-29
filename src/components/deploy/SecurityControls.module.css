@@ -1,3 +1,7 @@
+.container {
+  padding-top: 74px;
+}
+
 .intro {
   grid-row: 1;
   grid-column: 2 / span 4;
@@ -92,6 +96,10 @@
 @media (--mobile) {
   .intro {
     grid-column: 1 / span 7;
+  }
+
+  .container {
+    padding: 0;
   }
 
   .calloutStatic {

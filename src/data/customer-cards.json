@@ -30,13 +30,6 @@
     "name": "PathAI",
     "website": "https://www.pathai.com"
   },
-  "quadpay": {
-    "headline": "&ldquo;What I really wanted at QuadPay, where security is of paramount importance, was to have something that was comprehensive, followed best practices, and could actually be implemented across an organization at scale.&rdquo;",
-    "author": "Ian Yamey, CTO",
-    "tags": ["technology"],
-    "name": "Quad Pay",
-    "website": "https://www.quadpay.com"
-  },
   "healthCatalyst": {
     "headline": "&ldquo;I'm not sure what we would do without Aptible. We would have to hire 3 more people and we still would not have the high level of support and tooling that Aptible provides.&rdquo;",
     "author": "Mark Siemers, Software Engineering Manager",
@@ -45,7 +38,7 @@
     "website": "https://www.healthcatalyst.com"
   },
   "glidianInc": {
-    "headline": "&ldquo;Aptible Deploy has made it easy for us to manage our infrastructure. We are able to scale and upgrade our app without needing to worry about configuration details and downtime.&rdquo;",
+    "headline": "&ldquo;Aptible has made it easy for us to manage our infrastructure. We are able to scale and upgrade our app without needing to worry about configuration details and downtime.&rdquo;",
     "author": "Solomon Liu, Principal Software Engineer",
     "tags": ["health"],
     "name": "Glidian",
@@ -62,11 +55,11 @@
     "headline": "&ldquo;We've used Aptible to host our application for ~3 years now. During this time we've scaled flexibly, experienced zero down time, and have been privy to tremendous, timely support when we've needed it.&rdquo;",
     "author": "Brian Kuyath, CTO",
     "tags": ["health"],
-    "name": "Vidscript",
+    "name": "Vidscrip",
     "website": "https://www.vidscrip.com"
   },
   "rightwayHealthcare": {
-    "headline": "&ldquo;[Aptible Deploy] helps me sleep better at night.It handles all the DevOps and offers turnkey HIPAA compliance in the cloud. Support is stellar and they are always happy to talk through issues big and small. Aptible [Deploy] allows us to feel confident we're able to use the cloud safely with PHI. Everything we need is automatic.&rdquo;",
+    "headline": "&ldquo;[Aptible] helps me sleep better at night.It handles all the DevOps and offers turnkey HIPAA compliance in the cloud. Support is stellar and they are always happy to talk through issues big and small. Aptible [Deploy] allows us to feel confident we're able to use the cloud safely with PHI. Everything we need is automatic.&rdquo;",
     "author": "Ion Feldman, CTO",
     "tags": ["health"],
     "name": "Rightway Healthcare",

@@ -22,7 +22,7 @@ const stickyNavItems = [
 export default () => (
   <AptibleLayout>
     <Helmet>
-      <title>Aptible Deploy | Audit-ready App Deployment Platform</title>
+      <title>Aptible | Audit-ready App Deployment Platform</title>
       <meta
         name="description"
         content="Get to market faster with a developer-friendly deployment platform that provides the security controls needed to comply with SOC 2, ISO 27001, HIPAA, GDPR, and more."
@@ -37,13 +37,15 @@ export default () => (
       body="Complete audits faster with well-documented controls, clear
       audit trails for third parties, and all of the security and
       compliance features you need get certified."
-      leadFormId="Home Page - Request a Demo" />
+      leadFormId="Home Page - Request a Demo"
+    />
     <Solutions />
     <SecurityControls />
     <CenteredDemoForm
       title="Use Aptible and Deploy in Three Steps"
       body="Save your engineering team the headache of building compliant infra on AWS. Use Aptible and get back to building your product. Request a demo to see how it works."
-      leadFormId="Home Page - Request a Demo" />
+      leadFormId="Home Page - Request a Demo"
+    />
     <WhoUses />
     <ZeroTo />
   </AptibleLayout>

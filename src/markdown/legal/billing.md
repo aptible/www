@@ -19,9 +19,9 @@ This policy outlines how Aptible determines fees and charges, and performs billi
 Aptible prices and invoice amounts are denominated in United States dollars.
 
 #### Base Fee
-Your Aptible account has a base fee for each product you use. Some accounts, such as Aptible Deploy Development Accounts, have a base fee of $0. If you want to lock in bulk pricing, just ask us for a higher base fee and more included resources.
+Your Aptible account has a base fee for each product you use. Some accounts, such as Aptible Development Accounts, have a base fee of $0. If you want to lock in bulk pricing, just ask us for a higher base fee and more included resources.
 
-You may use Aptible Deploy resources included in your base fee across any Aptible Deploy stack or environment. 
+You may use Aptible resources included in your base fee across any Aptible stack or environment. 
 
 Base fees are always paid in advance.
 

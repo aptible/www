@@ -7,9 +7,7 @@ export default () => (
     <Grid rows="6">
       <div className={styles.intro}>
         <h1>How it works</h1>
-        <p className="XL">
-          Get set up in under an hour.
-        </p>
+        <p className="XL">Get set up in under an hour.</p>
       </div>
 
       <div className={styles.one}>
@@ -32,7 +30,6 @@ export default () => (
             Quickly provision a database by picking a type and footprint and
             letting Aptible do the rest. Get your credentials instantly and
             resize the container and disk anytime.
-
           </p>
         </div>
       </div>
@@ -42,10 +39,10 @@ export default () => (
           <h3 className={styles.number}>03</h3>
           <h3>Configure ENV variables</h3>
           <p>
-            Aptible natively supports 12-factor apps: provide Aptible with a list
-            of environment variables your app needs and Aptible will securely
-            store them and make sure they're available when your containers
-            start.
+            Aptible natively supports 12-factor apps: provide Aptible with a
+            list of environment variables your app needs and Aptible will
+            securely store them and make sure they're available when your
+            containers start.
           </p>
         </div>
       </div>
@@ -68,9 +65,9 @@ export default () => (
           <h3 className={styles.number}>05</h3>
           <h3>Integrate Logging and Metrics</h3>
           <p>
-            Integrate with your existing logging and metrics provider, or
-            choose self-hosted options on Aptible, to get full visibility into
-            your app and database logs and metrics.
+            Integrate with your existing logging and metrics provider, or choose
+            self-hosted options on Aptible, to get full visibility into your app
+            and database logs and metrics.
           </p>
         </div>
       </div>

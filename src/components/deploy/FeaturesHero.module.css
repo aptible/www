@@ -1,12 +1,9 @@
 .container {
-  background:
-    no-repeat -700px 100px/1000px url('../../images/illustrations/deploy.png'),
-    no-repeat 1200px -150px/1000px url('../../images/illustrations/deploy.png'); 
 }
 
 .content {
-  grid-column: 1 / span 7;
   text-align: center;
+  grid-column: 1 / span 7;
   padding: 60px 0 150px 0;
 }
 
@@ -18,13 +15,26 @@
   margin-bottom: 15px;
 }
 
-@media (--mobile) {
-  .container {
-    background: none;
-  }
+.descriptionContainer {
+  width: calc(100%*9/13);
+  margin: 0 auto;
+}
 
+.leadFormContainer {
+  margin-top: 48px;
+  margin-right: auto;
+  margin-left: auto;
+  width: calc(100%*7/13);
+}
+
+@media (--mobile) {
   .content {
     text-align: left;
     padding: 30px 0;
+  }
+
+  .leadFormContainer {
+    margin-top: 24px;
+    width: 100%;
   }
 }

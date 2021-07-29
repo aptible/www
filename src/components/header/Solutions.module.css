@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+}
+
+.links {
+  position: relative;
+  z-index: 2;
+  grid-row: 1;
+  grid-column: 3 / span 7;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.link {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.link a {
+  color: var(--body-color);
+  text-decoration: none;
+}
+
+.link a:hover,
+.link a:active,
+.link a:focus {
+  color: white;
+}

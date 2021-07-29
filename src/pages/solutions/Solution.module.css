@@ -1,0 +1,53 @@
+.container, .features{
+  grid-row: 1;
+  grid-column: 1 / span 7;
+}
+
+.block {
+  padding: 74px 0;
+  margin-top: 54px;
+  margin-bottom: 54px;
+}
+
+.container p {
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+.container h4 {
+  margin-bottom: 24px;
+}
+
+.heroItem {
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.leadContainer {
+  margin-right: 240px;
+  margin-left: 240px;
+}
+
+@media (--mobile) {
+  .heroItem {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .heroItem > img {
+    width: 100%;
+  }
+
+  .block {
+    padding: 0;
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .leadContainer,
+  .container > p {
+    margin-right: 0;
+    margin-left: 0;
+  } 
+}
