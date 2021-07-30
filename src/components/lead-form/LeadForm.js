@@ -28,7 +28,7 @@ export const LeadForm = ({
       return;
     }
     identify(email);
-    event(`Submitted Form: ${id}`);
+    event('Email Collected', { formId: id });
     setSubmitted(true);
     setError('');
     trackOnLinkedIn();
