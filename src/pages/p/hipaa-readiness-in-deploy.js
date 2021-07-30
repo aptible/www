@@ -15,7 +15,7 @@ export default () => {
         <title>Aptible | HIPAA-Readiness in Deploy</title>
         <meta
           name="description"
-          content="Go from zero to HIPAA-compliant docker deployment in minutes"
+          content="Go from zero to HIPAA-Compliant docker deployment in minutes"
         />
         <meta
           property="og:image"

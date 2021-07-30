@@ -56,7 +56,7 @@ const Feature = ({ title, description }) => (
 const features = {
   audit: [
     {
-      title: 'Deploy a HIPAA-compliant App',
+      title: 'Deploy a HIPAA-Compliant App',
       description:
         'Aptible’s HIPAA-compliant App and Database hosting frees your engineering team to focus on innovation--and not compliance--by providing you with all of the security and compliance controls required to safely store or process HIPAA-protected health information.',
     },
@@ -111,7 +111,7 @@ export default () => (
   <div className={styles.container} id="solutions">
     <Solution
       id="solution-audit-readiness"
-      title="Prove HIPAA-compliance and Pass Security Audits"
+      title="Prove Compliance With HIPAA and Pass Security Audits"
       description="Aptible saves you valuable engineering time by implementing and managing the operation of all the infrastructure security controls required to satisfy a variety of regulations and security frameworks such as HIPAA, HITRUST, and SOC 2 Type 2. Using Aptible means you'll be compliant and audit-ready from day one."
       primaryImage={
         <img
@@ -132,8 +132,7 @@ export default () => (
       id="solution-security-first"
       title={
         <>
-          Rest Easy With <br />
-          Fully-Managed Security for Your Cloud Infra.
+          Get To Market Faster Without Compromising on Security
         </>
       }
       description="Deliver digital products in the fastest time possible while keeping your sensitive data safe, secure, and available—24x7 through fully-managed infrastructure security controls."
