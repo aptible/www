@@ -2,12 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import AptibleLayout from '../components/layouts/AptibleLayout';
 import FeaturesHero from '../components/deploy/FeaturesHero';
-import FeaturesGrid from '../components/deploy/FeaturesGrid';
-import DivisionOfResponsibility from '../components/deploy/DivisionOfResponsibility';
 import FeaturesLeft from '../components/deploy/FeaturesLeft';
-import ZeroTo from '../components/footer/ZeroTo';
+import BadgeCallout from '../components/deploy/BadgeCallout';
 import SecurityControlTable from '../components/deploy/SecurityControlTable';
-
+import ZeroTo from '../components/footer/ZeroTo';
 export default () => (
   <AptibleLayout>
     <Helmet>
@@ -19,8 +17,8 @@ export default () => (
     </Helmet>
     <FeaturesHero />
     <SecurityControlTable />
-    <DivisionOfResponsibility />
     <FeaturesLeft />
+    <BadgeCallout />
     <ZeroTo />
   </AptibleLayout>
 );

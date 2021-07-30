@@ -65,6 +65,11 @@ h5, .h5 {
   line-height: 30px;
 }
 
+h5.h55 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
 h6, .h6 {
   font-size: 16px;
   line-height: 22px;
@@ -114,7 +119,12 @@ p.XL {
   letter-spacing: 0.03em;
 }
 
+.bold {
+  font-weight: 500;
+}
+
 strong,
+.bold,
 .white-text {
   color: white;
 }

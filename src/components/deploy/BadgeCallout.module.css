@@ -1,0 +1,48 @@
+.container {
+  margin: 128px auto 196px;
+  max-width: 1120px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container h2,
+.container p {
+  margin-right: 160px;
+  margin-left: 160px;
+}
+
+.container p {
+  margin-bottom: 32px;
+}
+
+.badgeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (--mobile) {
+  .container {
+    width: auto;
+    margin: 48px 24px;
+    padding: 0;
+  }
+
+  .container h2,
+  .container p {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .badgeContainer {
+    padding: 0;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .badgeContainer img {
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+}
