@@ -1,129 +1,160 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
 import { Grid } from '../grid/Grid';
 import styles from './SecurityControlTable.module.css';
-import securityControls from '../../data/security-controls.json'
+import securityControls from '../../data/security-controls.json';
 import aptibleFavicon from '../../images/aptible-favicon-32.png';
 import aptibleFavicon100 from '../../images/aptible-favicon-100.png';
 import awsFavicon from '../../images/aws-badge.png';
 
-const Control = ({ headline, body, category='Host Security', provider='Aptible'}) => {
+const Control = ({
+  headline,
+  body,
+  category = 'Host Security',
+  provider = 'Aptible',
+}) => {
   return (
     <div className={styles.control}>
       <h5 className="h55">{headline}</h5>
       <p>{body}</p>
       <div className={styles.providedBy}>
-        {provider==='Aptible' && <img src={aptibleFavicon} className={styles.providedByImage} />}
-        {provider==='AWS' && <img src={awsFavicon} className={styles.providedByImage} />}
-        <p className="S">{category} provided by {provider}</p>
+        {provider === 'Aptible' && (
+          <img src={aptibleFavicon} className={styles.providedByImage} />
+        )}
+        {provider === 'AWS' && (
+          <img src={awsFavicon} className={styles.providedByImage} />
+        )}
+        <p className="S">
+          {category} provided by {provider}
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const ControlList = ({ category }) => {
   return (
     <div className={styles.controlList}>
-      {Object.keys(securityControls).map((f) => (
+      {Object.keys(securityControls).map(f => (
         <>
-        {(!category || category === f) && (
-          <>
-            {securityControls[f].map((control,idx) =>(
-              <Control
-                {...control}
-                category={getCategoryName(f)}
-                provider={APTIBLE_CATEGORIES[f] ? 'Aptible' : 'AWS' }
-                key={`${f}-${idx}`} />
-            ))}
-          </>
-        )}
+          {(!category || category === f) && (
+            <>
+              {securityControls[f].map((control, idx) => (
+                <Control
+                  {...control}
+                  category={getCategoryName(f)}
+                  provider={APTIBLE_CATEGORIES[f] ? 'Aptible' : 'AWS'}
+                  key={`${f}-${idx}`}
+                />
+              ))}
+            </>
+          )}
         </>
       ))}
     </div>
   );
-}
+};
 
 const Category = ({ id, name, count, setCategory, currentCategory }) => {
   const isActive = currentCategory === id;
   const onClick = () => {
-    setCategory(isActive ? null : id)
-  }
+    setCategory(isActive ? null : id);
+  };
   return (
-    <li className={cn("S", styles.category, { [styles.activeCategory]: isActive })} onClick={onClick}>
+    <li
+      className={cn('S', styles.category, {
+        [styles.activeCategory]: isActive,
+      })}
+      onClick={onClick}
+    >
       <span className={cn('bold', styles.categoryBadge)}>{count}</span>
       <span className={styles.categoryName}>{name}</span>
       <span className={styles.closeCategory}>&times;</span>
     </li>
-  )
-}
+  );
+};
 
 const APTIBLE_CATEGORIES = {
   access: 'Access Management',
-  auditing: "Auditing",
-  availability: "Availability",
-  encryption: "Encryption",
-  network: "Network Protection",
-  vulnerability: "Vulnerability Management"
-}
+  auditing: 'Auditing',
+  availability: 'Availability',
+  encryption: 'Encryption',
+  network: 'Network Protection',
+  vulnerability: 'Vulnerability Management',
+};
 
 const AWS_CATEGORIES = {
-  infra: 'Infrastructure Security'
-}
+  infra: 'Infrastructure Security',
+};
 
-const getCategoryName = (category) => {
-  return APTIBLE_CATEGORIES[category] || AWS_CATEGORIES[category] || 'Not Found';
-}
+const getCategoryName = category => {
+  return (
+    APTIBLE_CATEGORIES[category] || AWS_CATEGORIES[category] || 'Not Found'
+  );
+};
 
 const SecurityControlTable = () => {
   const [category, setCategory] = useState(null);
-  
+
   return (
     <Grid>
       <div className={styles.securityControlTable}>
         <div className={styles.index}>
           <div className={cn(styles.indexPanel, styles.aptible)}>
-            <div className={styles.indexPanelImage}><img src={aptibleFavicon100} alt="Aptible Logo" /></div>
-            <h6>Security &amp; Availability Controls <br/>Provided by Aptible</h6>
+            <div className={styles.indexPanelImage}>
+              <img src={aptibleFavicon100} alt="Aptible Logo" />
+            </div>
+            <h6>
+              Security &amp; Availability Controls <br />
+              Provided by Aptible
+            </h6>
             <ul className={styles.categoryList}>
-              {Object.keys(APTIBLE_CATEGORIES).map(id =>
+              {Object.keys(APTIBLE_CATEGORIES).map(id => (
                 <Category
                   name={getCategoryName(id)}
                   key={id}
                   id={id}
                   count={securityControls[id].length}
                   currentCategory={category}
-                  setCategory={setCategory} />  
-              )}
+                  setCategory={setCategory}
+                />
+              ))}
             </ul>
           </div>
 
           <div className={styles.indexPanel}>
-            <div className={styles.indexPanelImage}><img src={awsFavicon} alt="AWS Logo" /></div>
-            <h6>Security Controls Provided by <br />Amazon Web Services</h6>
+            <div className={styles.indexPanelImage}>
+              <img src={awsFavicon} alt="AWS Logo" />
+            </div>
+            <h6>
+              Security Controls Provided by <br />
+              Amazon Web Services
+            </h6>
             <ul className={styles.categoryList}>
-              {Object.keys(AWS_CATEGORIES).map(id =>
+              {Object.keys(AWS_CATEGORIES).map(id => (
                 <Category
                   name={getCategoryName(id)}
                   id={id}
                   count={3}
                   currentCategory={category}
-                  setCategory={setCategory} />  
-              )}
+                  setCategory={setCategory}
+                />
+              ))}
             </ul>
           </div>
         </div>
 
         <div className={styles.table}>
           <h5>
-            { category && (<>{getCategoryName(category)} Controls</>)}
-            {!category && ("All Controls")}
+            {category && <>{getCategoryName(category)} Controls</>}
+            {!category && 'All Controls'}
           </h5>
           <ControlList category={category} />
         </div>
       </div>
     </Grid>
-  )
-}
+  );
+};
 
 export default SecurityControlTable;
 

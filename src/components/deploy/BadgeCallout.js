@@ -6,10 +6,21 @@ import hitrustBadge from '../../images/secured-by-aptible-badges/HITRUST Complia
 import isoBadge from '../../images/secured-by-aptible-badges/ISO 27001 Dark.svg';
 import soc2Badge from '../../images/secured-by-aptible-badges/SOC 2 Type 2 Dark.svg';
 
-const DEFAULT_TITLE=<>Security and Compliance as<br />a Differentiator</>
-const DEFAULT_DESCRIPTION=<>Build trust with customers and grow your business by deploying on Aptible and sharing your security and compliance posture on your website with a “Secured by Aptible” Badge. </>
+const DEFAULT_TITLE = (
+  <>
+    Security and Compliance as
+    <br />a Differentiator
+  </>
+);
+const DEFAULT_DESCRIPTION = (
+  <>
+    Build trust with customers and grow your business by deploying on Aptible
+    and sharing your security and compliance posture on your website with a
+    “Secured by Aptible” Badge.{' '}
+  </>
+);
 
-export default ({ title=DEFAULT_TITLE, body=DEFAULT_DESCRIPTION }) => (
+export default ({ title = DEFAULT_TITLE, body = DEFAULT_DESCRIPTION }) => (
   <div className={styles.container}>
     <h2>{title}</h2>
     <p className="L">{body}</p>
