@@ -10,7 +10,7 @@ const Step = ({ id, title, text }) => (
   </div>
 );
 
-export default ({ steps=[] }) => (
+export default ({ steps = [] }) => (
   <div className={styles.steps}>
     {steps.map((stepRow, i) => (
       <div key={`step-row-${i}`} className={styles.stepRow}>

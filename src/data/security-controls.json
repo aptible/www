@@ -1,0 +1,152 @@
+{
+  "access": [
+    {
+      "headline": "Multi-factor Authentication",
+      "body": "Protect your Aptible accounts with both token-based 2FA and FIDO U2F security keys."
+    },
+    {
+      "headline": "Centralized Identity and Access Management (IAM)",
+      "body": "Reduce access issues and manage access to your Aptible services with simple role-based permissions."
+    },
+    {
+      "headline": "Log in With Single Sign-on",
+      "body": "Seamlessly manage your team's access to your Aptible account by enrolling Aptible with your SSO provider."
+    }
+  ],
+  "auditing": [
+    {
+      "headline": "Platform Activity Logging",
+      "body": "Aptible aggregates all of your team's activity into a Weekly Activity Report"
+    },
+    {
+      "headline": "Centralized Container Logging",
+      "body": "Aptible log drains capture and route container logs to your logging provider. The Aptible CLI also allows you to stream logs to a local console in real time."
+    },
+    {
+      "headline": "SSH Session Logging",
+      "body": "Aptible log drains also capture and route SSH session activity to your logging provider for additional auditing an analysis."
+    },
+    {
+      "headline": "Host Intrusion Detection",
+      "body": "Aptible monitors the underlying EC2 instances in your stacks for potential intrusions, such as unauthorized SSH access, rootkits, file integrity issues, and privilege escalation. The Aptible Security Team responds on your behalf 24/7 to investigate and resolve issues as they arise."
+    },
+    {
+      "headline": "Network Intrusion Detection",
+      "body": "Aptible monitors your VPC for potential network intrusions and proactively responds on your behalf 24/7."
+    },
+    {
+      "headline": "Drift Detection",
+      "body": "Aptible ensures that the configuration of your environment is hardened to avoid unintentional or unapproved configuration changes."
+    }
+  ],
+  "availability": [
+    {
+      "headline": "24/7 Site Reliability and Incident Response",
+      "body": "The Aptible SRE Team monitors your infrastructure 24/7 and responds to host and network incidents on your behalf."
+    },
+    {
+      "headline": "Automatic Container Recovery",
+      "body": "Aptible containers that exit unexpectedly are restarted in pristine condition, ensuring uptime even if your app crashes."
+    },
+    {
+      "headline": "DDos Protection",
+      "body": "Aptible VPC-based approach means that most stack components are not accessible from the Internet, and cannot be targeted directly by a DDoS attack. Aptible SSL/TLS endpoints include an AWS Elastic Load Balancer, which only supports valid TCP requests, meaning DDoS attacks such as UDP and SYN floods will not reach your app layer."
+    },
+    {
+      "headline": "High-availability (HA) App Deployment",
+      "body": "Aptible automatically deploys horizontally-scaled app and database containers across separate AWS Availability Zones, to ensure high availability."
+    },
+    {
+      "headline": "Database Replication and Clustering",
+      "body": "Aptible simplifies replication (PostgreSQL, MySQL, Redis) and clustering (MongoDB) databases in high-availability setups."
+    },
+    {
+      "headline": "Automatic Cross-Region Backups",
+      "body": "Aptible takes automatic daily backups of your databases, and distributes those backups across geographically separate regions."
+    },
+    {
+      "headline": "Automated Backup Testing",
+      "body": "Database backups are frequently tested to ensure restoration viability."
+    },
+    {
+      "headline": "Zero-downtime Deployments",
+      "body": "Aptible automatically performs zero downtime rolling deployments when you release your app."
+    }
+  ],
+  "encryption": [
+    {
+      "headline": "Database Encryption at Rest",
+      "body": "Database volumes are encrypted at rest using AES-256 with Aptible-managed keys."
+    },
+    {
+      "headline": "End-to-end Encryption in transit",
+      "body": "Traffic is encrypted all the way from your endpoints to your app and database containers using strong TLS ciphers."
+    },
+    {
+      "headline": "Forced TLS/HTTPS",
+      "body": "Aptible endpoints can automatically redirect all HTTP traffic to HTTPS."
+    },
+    {
+      "headline": "Standards-compliant TLS Configuration",
+      "body": "Aptible ensures that insecure versions of TLS and weak TLS cipher suites are never used on your TLS endpoints."
+    }
+  ],
+  "network": [
+    {
+      "headline": "Application Endpoint Filtering",
+      "body": "Protect internal tools or admin panels by restricting access to your application to an IP allow-list"
+    },
+    {
+      "headline": "Database Endpoint Filtering",
+      "body": "For databases with an external endpoint, Aptible allows you to restrict access to a set of allow-listed IP addresses or networks, and block all other incoming traffic."
+    },
+    {
+      "headline": "Network Segregation",
+      "body": "Your infrastructure on Aptible is isolated to its own private VPC and is not directly accessible by the Internet."
+    },
+    {
+      "headline": "Secure Network Architecture",
+      "body": "Network access to public-facing EC2 instances is configured via Security Group rules that are reviewed and enforced by the Aptible Security Team on a regular basis."
+    }
+  ],
+  "vulnerability": [
+    {
+      "headline": "Docker Image Vulnerability Scanning",
+      "body": "The Aptible Platform proactively scans your Docker images for vulnerable system packages and alerts you of any addressable vulnerabilities."
+    },
+    {
+      "headline": "Host Hardening",
+      "body": "Aptible host operating systems are hardened to disable unnecessary services and limit surface area for attacks."
+    },
+    {
+      "headline": "Web Application Vulnerability Scanning (DAST)",
+      "body": "Applications deployed on Aptbile are continuously scanned for vulnerabilities such as SQL injection and Crosss-site Scripting."
+    },
+    {
+      "headline": "Kernel Vulnerability Management",
+      "body": "The Aptible Security Team patches kernel vulnerabilities and other host- and network-level issues on your behalf."
+    }
+  ],
+  "infra": [
+    {
+      "headline": "Hypervisor Security",
+      "body": "Aptible uses a custom version of the Xen hypervisor that limits gues OS privileges. AWS is responsible for patching and maintenance of the hypervisor."
+    },
+    {
+      "headline": "Port Scanning Protection",
+      "body": "AWS monitors for unauthorized port scanning activity and blocks it when detected."
+    },
+    {
+      "headline": "AWS Shield DDoS Protection",
+      "body": "Aptible stacks benefit from AWS Shield Standard, a managed Distributed Denial of Service (DDoS) protection service that defends against most common, frequently occuring network and transport layer DDoS attacks that target your web site or applications."
+    },
+    {
+      "headline": "Spoofing and Sniffing Protection",
+      "body": "The AWS hypervisor only delivers traffic to the EC2 instances that the traffic is addres to, preventing sniffing. AWS's host-based firewalls do not permit instances to send traffic with a source IP or MAC address other than their own."
+    },
+    {
+      "headline": "Physical and Environmental Controls",
+      "body": "Aptible runs on AWS, which provides robust, ISO 27001 certified physical and environmental security for data centers."
+    }
+  ]
+}

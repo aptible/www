@@ -6,28 +6,12 @@ export default () => (
   <div className={styles.container}>
     <Grid>
       <div className={styles.hero}>
-        <h1>Only four steps left for you&hellip;</h1>
-        <p className="XL">
-          &ldquo;[Aptible] just works. Nice UI to setup components and
-          environments which eliminates the complexity of setting up and
-          managing AWS directly. Allows me to worry about the code instead of
-          the underlying deployment infrastructure.&rdquo;
-        </p>
-        <h6 className="small">
-          - Andrew F., Platform Manager at DIAL Insights. Posted On{' '}
-          <a
-            href="https://www.g2.com/products/aptible-deploy/reviews/aptible-deploy-review-2120360"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            G2Crowd.com
-          </a>
-        </h6>
+        <h3>That leaves just 4 steps for your engineering team&hellip;</h3>
       </div>
 
       <div className={styles.stepsGrid}>
         <div className={styles.step}>
-          <h3>Application-level Controls</h3>
+          <h5>Application-level Controls</h5>
           <p className="L">
             You are responsible for implementing security controls in your app
             business logic, such as authentication, app-level access controls,
@@ -36,11 +20,11 @@ export default () => (
         </div>
 
         <div className={styles.step}>
-          <h3>
+          <h5>
             Web App Vulnerability
             <br />
-            Scanning
-          </h3>
+            Scanning and Patching
+          </h5>
           <p className="L">
             You are responsible for detecting and mitigating vulnerabilities in
             your Aptible apps.
@@ -48,7 +32,7 @@ export default () => (
         </div>
 
         <div className={styles.step}>
-          <h3>Web App Dependency Management</h3>
+          <h5>Web App Dependency Management</h5>
           <p className="L">
             You are responsible for managing your apps' dependencies (e.g.
             package.json, Gemfiles, etc.) and patching vulnerabilities. You may
@@ -58,11 +42,11 @@ export default () => (
         </div>
 
         <div className={styles.step}>
-          <h3>
+          <h5>
             Protection of Credentials,
             <br />
             Tokens, Secrets
-          </h3>
+          </h5>
           <p className="L">
             You are responsible for managing your passwords, API keys, and other
             secrets. You may use Aptible environment variables to store

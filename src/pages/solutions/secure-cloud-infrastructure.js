@@ -82,7 +82,7 @@ const networkSteps = [
       id: '02',
       title: 'Segregation of Networks',
       text:
-        'Your infrastructure on Aptible is isolated to its own private VPC.',
+        'Your infrastructure on Aptible is isolated to its own private VPC and is not directly accessible by the Internet.',
     },
     {
       id: '03',
@@ -146,13 +146,13 @@ const auditSteps = [
     },
     {
       id: '02',
-      title: 'SSH Activity Logging',
+      title: 'SSH Session Logging',
       text:
-        'The Aptible Security Team monitors the underlying EC2 instances in your stack for potential intrusions and responds on your behalf 24/7.',
+        'Aptible captures and routes SSH session activity to your logging provider for additional auditing an analysis.',
     },
     {
       id: '03',
-      title: 'Operation Activity Logging',
+      title: 'Platform Activity Logging',
       text:
         'The Aptible Security Team monitors the underlying EC2 instances in your stack for potential intrusions and responds on your behalf 24/7.',
     },
