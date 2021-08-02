@@ -171,7 +171,7 @@ export default () => (
   <AptibleLayout>
     <Helmet>
       <title>
-        Aptible | Fully-Managed Security for your Cloud Infrastructure
+        Aptible | Fully-Managed Security for Your Cloud Infrastructure
       </title>
       <meta
         name="description"

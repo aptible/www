@@ -5,17 +5,17 @@ import styles from './Solutions.module.css';
 
 export const SOLUTIONS_NAV = [
   {
-    title: 'Fully-Managed Security for your Cloud Infrastructure',
+    title: 'Fully-Managed Security for Your Cloud Infrastructure',
     url: '/solutions/secure-cloud-infrastructure',
     show: true,
   },
   {
-    title: 'Prove HIPAA-compliance and Pass Security Audits',
+    title: 'Prove Compliance and Pass Security Audits',
     url: '/solutions/hipaa-hitrust-soc2-compliant-hosting',
     show: true,
   },
   {
-    title: 'DevOps Without the Overhead ',
+    title: 'Reliable DevOps Without the Overhead ',
     url: '/solutions/reliable-devops',
     show: true,
   },

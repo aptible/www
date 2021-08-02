@@ -35,7 +35,7 @@ export default () => (
     <Grid rows="2">
       <div className={styles.content}>
         <h1 className={styles.heroItem}>
-          Deploy a fully secure, HIPAA-compliant app from day one
+          Deploy a Secure, HIPAA-Compliant App From Day One
         </h1>
 
         <div className={styles.heroItem}>

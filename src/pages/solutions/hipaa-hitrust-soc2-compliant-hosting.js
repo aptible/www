@@ -166,14 +166,14 @@ export default () => (
         <div className={styles.heroItem}>
           <h4>Why Aptible</h4>
           <h1 className="hero">
-            Prove HIPAA-compliance and Pass Security Audits
+            Prove Compliance With HIPAA  and Pass Security Audits
           </h1>
         </div>
 
         <div className={styles.heroItem}>
           <img
             src={complianceBadges}
-            alt="Aptible is HIPAA-Compliant, SOC 2 Compliant, HITRUST Certified, ISO 27001 Certified"
+            alt="Aptible is HIPAA-compliant, SOC 2 Compliant, HITRUST Certified, ISO 27001 Certified"
           />
         </div>
 
@@ -197,7 +197,7 @@ export default () => (
       <div className={styles.features}>
         <div className={styles.block} id="hipaa">
           <Feature
-            title="Deploy a HIPAA-compliant App"
+            title="Deploy a HIPAA-Compliant App"
             description="Aptible’s HIPAA-compliant App and Database hosting frees your engineering team to focus on innovation--and not compliance--by providing you with all of the security and compliance controls required to safely store or process HIPAA-protected health information."
             smallImage={<img src={hipaaBadge} alt="HIPAA Compliant" />}
             heroImage={
