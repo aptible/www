@@ -130,7 +130,7 @@
   "infra": [
     {
       "headline": "Hypervisor Security",
-      "body": "Aptible uses a custom version of the Xen hypervisor that limits gues OS privileges. AWS is responsible for patching and maintenance of the hypervisor."
+      "body": "Aptible uses a custom version of the Xen hypervisor that limits guest OS privileges. AWS is responsible for patching and maintenance of the hypervisor."
     },
     {
       "headline": "Port Scanning Protection",
