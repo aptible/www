@@ -10,7 +10,6 @@ import deployConsoleIlly from '../../images/home/illustrations/deploy-console.sv
 import mobileHero from '../../images/home/illustrations/mobile-hero-dashboard.svg';
 import LeadForm from '../../components/lead-form';
 
-
 const Question = ({ title, question }) => {
   return (
     <div className={styles.question}>
@@ -20,7 +19,7 @@ const Question = ({ title, question }) => {
   );
 };
 
-export default ({ title="Frequently Asked Questions", questions }) => (
+export default ({ title = 'Frequently Asked Questions', questions }) => (
   <div>
     <h3 className={styles.title}>{title}</h3>
     <div className={styles.questions}>

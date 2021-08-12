@@ -1,4 +1,4 @@
-import * as queryString from "query-string";
+import * as queryString from 'query-string';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import cn from 'classnames';
@@ -13,19 +13,19 @@ const injectedQueryParams = [
   'utm_medium',
   'utm_source',
   'utm_term',
-  AWS_ACTIVATE_UNIQUE_CODE
-]
+  AWS_ACTIVATE_UNIQUE_CODE,
+];
 
 const options = [
-  "SOC 2 ",
-  "HIPAA",
-  "HITRUST",
-  "FedRAMP",
-  "PCI DSS",
-  "ISO 27001",
-  "Other Security Framework",
-  "None"
-]
+  'SOC 2 ',
+  'HIPAA',
+  'HITRUST',
+  'FedRAMP',
+  'PCI DSS',
+  'ISO 27001',
+  'Other Security Framework',
+  'None',
+];
 
 const validateEmail = email => {
   if (!email) return { ok: false, message: 'email cannot be empty' };
@@ -39,7 +39,7 @@ export const ActivateForm = ({
   inputPlaceholder = 'Enter your email',
   location = null,
   onSuccess = () => {},
-  onCancel = () => {}
+  onCancel = () => {},
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [name, setName] = useState('');
@@ -59,7 +59,14 @@ export const ActivateForm = ({
     }
     identify(email);
     event('Email Collected', { formId: id });
-    event('AWS Activate Application Submitted', { name, email, company, website, requirements, currentHost });
+    event('AWS Activate Application Submitted', {
+      name,
+      email,
+      company,
+      website,
+      requirements,
+      currentHost,
+    });
     setSubmitted(true);
     setError('');
     trackOnLinkedIn();
@@ -85,6 +92,10 @@ export const ActivateForm = ({
         style={{ display: 'none' }}
       />
 
+      {submitted && (
+        <div className={styles.submissionNotification}>{successText}</div>
+      )}
+      
       <div
         className={styles.leadFormContainer}
         style={{ opacity: submitted ? 0 : 1 }}
@@ -98,18 +109,22 @@ export const ActivateForm = ({
           <h3>Submit Your Application</h3>
 
           {injectedQueryParams.map(k => (
-            <input hidden name={k} key={k} value={queryParams[k]} />  
+            <input hidden name={k} key={k} value={queryParams[k]} />
           ))}
 
-          <p className="L">Please complete the application form below. Someone from Aptible will reach out to discuss next steps once your application has been received.</p>
-          
+          <p className="L">
+            Please complete the application form below. Someone from Aptible
+            will reach out to discuss next steps once your application has been
+            received.
+          </p>
+
           <input
             required
             className={styles.leadFormInput}
             onChange={e => setName(e.target.value)}
             name="Name"
             type="text"
-            placeholder={"Your Full Name"}
+            placeholder={'Your Full Name'}
           />
 
           <input
@@ -118,7 +133,7 @@ export const ActivateForm = ({
             onChange={e => setEmail(e.target.value)}
             type="email"
             name="Email"
-            placeholder={"Your Company Email"}
+            placeholder={'Your Company Email'}
           />
 
           <input
@@ -127,7 +142,7 @@ export const ActivateForm = ({
             onChange={e => setCompany(e.target.value)}
             type="text"
             name="Company Name"
-            placeholder={"Company Name"}
+            placeholder={'Company Name'}
           />
 
           <input
@@ -136,7 +151,7 @@ export const ActivateForm = ({
             onChange={e => setWebsite(e.target.value)}
             type="url"
             name="Company Website"
-            placeholder={"Company Website"}
+            placeholder={'Company Website'}
           />
 
           <input
@@ -145,22 +160,28 @@ export const ActivateForm = ({
             onChange={e => setCurrentHost(e.target.value)}
             type="text"
             name="Current Hosting Provider"
-            placeholder={"Current Hosting Provider"}
+            placeholder={'Current Hosting Provider'}
           />
 
           <p style={{ marginTop: 0 }}>
-            Do you have any compliance and security requirements? Select all that apply.
+            Do you have any compliance and security requirements? Select all
+            that apply.
           </p>
 
           <div className={styles.options}>
             {options.map(option => (
               <div className={styles.option}>
-                <input name="complianceRequirements[]" id={option} type="checkbox" value={option} />
+                <input
+                  name="complianceRequirements[]"
+                  id={option}
+                  type="checkbox"
+                  value={option}
+                />
                 <label for={option}>{option}</label>
               </div>
             ))}
           </div>
-          
+
           <button
             className={cn(buttonStyles.button, styles.button)}
             type="submit"
@@ -168,21 +189,12 @@ export const ActivateForm = ({
             {btnText}
           </button>
 
-          <button
-            type="cancel"
-            className={styles.cancel}
-            onClick={onCancel}
-          >
+          <button type="cancel" className={styles.cancel} onClick={onCancel}>
             Cancel
           </button>
-
         </form>
         <div className={styles.error}>{error ? error : ''}</div>
       </div>
-
-      {submitted && (
-        <div className={styles.submissionNotification}>{successText}</div>
-      )}
     </div>
   );
 };

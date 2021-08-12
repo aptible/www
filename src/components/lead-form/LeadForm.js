@@ -1,4 +1,4 @@
-import * as queryString from "query-string";
+import * as queryString from 'query-string';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import cn from 'classnames';
@@ -6,12 +6,7 @@ import styles from './LeadForm.module.css';
 import buttonStyles from '../buttons/Button.module.css';
 import { event, identify, trackOnLinkedIn } from '../../lib/aptible/analytics';
 
-const utmKeywords = [
-  'utm_campaign',
-  'utm_medium',
-  'utm_source',
-  'utm_term'
-]
+const utmKeywords = ['utm_campaign', 'utm_medium', 'utm_source', 'utm_term'];
 
 const validateEmail = email => {
   if (!email) return { ok: false, message: 'email cannot be empty' };
@@ -30,7 +25,7 @@ export const LeadForm = ({
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const queryParams = location ? queryString.parse(location.search) : {};
-  
+
   const onSubmit = () => {
     const result = validateEmail(email);
     if (!result.ok) {
@@ -75,7 +70,7 @@ export const LeadForm = ({
           className={styles.leadForm}
         >
           {utmKeywords.map(k => (
-            <input hidden name={k} key={k} value={queryParams[k]} />  
+            <input hidden name={k} key={k} value={queryParams[k]} />
           ))}
           <input
             required

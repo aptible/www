@@ -60,7 +60,9 @@ class GdprSubnav extends React.Component {
                   {subpart.subparts.map((article, articleIdx) => (
                     <Link
                       className={styles.articleLink}
-                      to={`/${this.props.regulation.slugs.site}/${this.props.regulation.slugs.regulations}/${article.url}/`}
+                      to={`/${this.props.regulation.slugs.site}/${
+                        this.props.regulation.slugs.regulations
+                      }/${article.url}/`}
                       key={articleIdx}
                     >
                       <span className={styles.articleId}>

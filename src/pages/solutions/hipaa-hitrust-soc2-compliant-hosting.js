@@ -166,7 +166,7 @@ export default () => (
         <div className={styles.heroItem}>
           <h4>Why Aptible</h4>
           <h1 className="hero">
-            Prove Compliance With HIPAA  and Pass Security Audits
+            Prove Compliance With HIPAA and Pass Security Audits
           </h1>
         </div>
 

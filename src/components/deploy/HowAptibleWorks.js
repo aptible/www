@@ -46,10 +46,16 @@ const defaultSteps = [
   ],
 ];
 
-const defaultTitle = "How Aptible Works";
-const defaultDescription = "Aptible is a Docker-based Platform-as-a-Service that helps you go from code to cloud without ever worrying about managing servers.";
+const defaultTitle = 'How Aptible Works';
+const defaultDescription =
+  'Aptible is a Docker-based Platform-as-a-Service that helps you go from code to cloud without ever worrying about managing servers.';
 
-export default ({ steps=defaultSteps, title=defaultTitle, description=defaultDescription, includeVideo=true }) => (
+export default ({
+  steps = defaultSteps,
+  title = defaultTitle,
+  description = defaultDescription,
+  includeVideo = true,
+}) => (
   <div className={styles.container} id="how-aptible-works">
     <div className={styles.heading}>
       <div className={styles.intro}>

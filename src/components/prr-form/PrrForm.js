@@ -1,8 +1,8 @@
-import * as queryString from "query-string";
+import * as queryString from 'query-string';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import cn from 'classnames';
-import styles from '../aws-activate-form/ActivateForm.module.css'
+import styles from '../aws-activate-form/ActivateForm.module.css';
 import buttonStyles from '../buttons/Button.module.css';
 import { event, identify, trackOnLinkedIn } from '../../lib/aptible/analytics';
 
@@ -10,7 +10,7 @@ const injectedQueryParams = [
   'utm_campaign',
   'utm_medium',
   'utm_source',
-  'utm_term'
+  'utm_term',
 ];
 
 const validateEmail = email => {
@@ -25,7 +25,7 @@ export const PrrForm = ({
   inputPlaceholder = 'Enter your email',
   location = null,
   onSuccess = () => {},
-  onCancel = () => {}
+  onCancel = () => {},
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [name, setName] = useState('');
@@ -85,18 +85,22 @@ export const PrrForm = ({
           <h3>Start Your Production Readiness Review</h3>
 
           {injectedQueryParams.map(k => (
-            <input hidden name={k} key={k} value={queryParams[k]} />  
+            <input hidden name={k} key={k} value={queryParams[k]} />
           ))}
 
-          <p className="L">Please complete the application form below. Someone from Aptible will reach out to discuss next steps once your application has been received.</p>
-          
+          <p className="L">
+            Please complete the application form below. Someone from Aptible
+            will reach out to discuss next steps once your application has been
+            received.
+          </p>
+
           <input
             required
             className={styles.leadFormInput}
             onChange={e => setName(e.target.value)}
             name="Name"
             type="text"
-            placeholder={"Your Name"}
+            placeholder={'Your Name'}
           />
 
           <input
@@ -105,7 +109,7 @@ export const PrrForm = ({
             onChange={e => setEmail(e.target.value)}
             type="email"
             name="Email"
-            placeholder={"Your Company Email"}
+            placeholder={'Your Company Email'}
           />
 
           <input
@@ -114,7 +118,7 @@ export const PrrForm = ({
             onChange={e => setCompany(e.target.value)}
             type="text"
             name="Company Name"
-            placeholder={"Company Name"}
+            placeholder={'Company Name'}
           />
 
           <button
@@ -124,17 +128,12 @@ export const PrrForm = ({
             {btnText}
           </button>
 
-          <button
-            type="cancel"
-            className={styles.cancel}
-            onClick={onCancel}
-          >
+          <button type="cancel" className={styles.cancel} onClick={onCancel}>
             Cancel
           </button>
-
         </form>
         <div className={styles.error}>{error ? error : ''}</div>
-      </div>      
+      </div>
     </div>
   );
 };
