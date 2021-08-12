@@ -31,10 +31,12 @@ export default () => {
           one. Watch the video below to see how."
           />
 
-          <LeadForm
-            id="HIPAA Readiness Video Campaign - 1"
-            inputPlaceholder="Enter your work email to get started"
-          />
+          <div className={styles.formWrapper}>
+            <LeadForm
+              id="HIPAA Readiness Video Campaign - 1"
+              inputPlaceholder="Enter your work email"
+            />
+          </div>
 
           <Video />
           <Testimonial />
