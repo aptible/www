@@ -20,3 +20,10 @@ export function throttle(fn, limit) {
     }
   };
 }
+
+export function querystring() {
+  if (typeof window === 'object') {
+    return window.location.search;
+  }
+  return null;
+}

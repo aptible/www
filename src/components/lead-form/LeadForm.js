@@ -5,6 +5,7 @@ import cn from 'classnames';
 import styles from './LeadForm.module.css';
 import buttonStyles from '../buttons/Button.module.css';
 import { event, identify, trackOnLinkedIn } from '../../lib/aptible/analytics';
+import { querystring } from '../../lib/util';
 
 const utmKeywords = ['utm_campaign', 'utm_medium', 'utm_source', 'utm_term'];
 
@@ -18,13 +19,12 @@ export const LeadForm = ({
   btnText = 'Get a demo',
   successText = 'Thanks! Our team will contact you to schedule a demo shortly.',
   inputPlaceholder = 'Enter your email',
-  location = null,
   onSuccess = () => {},
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
-  const queryParams = location ? queryString.parse(location.search) : {};
+  const queryParams = queryString.parse(querystring());
 
   const onSubmit = () => {
     const result = validateEmail(email);

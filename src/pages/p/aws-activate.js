@@ -25,7 +25,7 @@ const RedeemButton = ({ setShowForm }) => (
   </a>
 );
 
-export default props => {
+export default () => {
   const [showForm, setShowForm] = useState(false);
 
   return (
@@ -240,7 +240,6 @@ export default props => {
           <Modal>
             <ModalView>
               <ActivateForm
-                location={props.location}
                 id="activate-form"
                 onSuccess={() => {
                   setShowForm(false);

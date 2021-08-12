@@ -5,6 +5,7 @@ import cn from 'classnames';
 import styles from '../aws-activate-form/ActivateForm.module.css';
 import buttonStyles from '../buttons/Button.module.css';
 import { event, identify, trackOnLinkedIn } from '../../lib/aptible/analytics';
+import { querystring } from '../../lib/util';
 
 const injectedQueryParams = [
   'utm_campaign',
@@ -22,8 +23,6 @@ export const PrrForm = ({
   id,
   btnText = 'Submit',
   successText = 'Thanks! Our team will follow up shortly.',
-  inputPlaceholder = 'Enter your email',
-  location = null,
   onSuccess = () => {},
   onCancel = () => {},
 }) => {
@@ -32,7 +31,7 @@ export const PrrForm = ({
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
   const [error, setError] = useState('');
-  const queryParams = location ? queryString.parse(location.search) : {};
+  const queryParams = queryString.parse(querystring());
 
   const onSubmit = () => {
     const result = validateEmail(email);

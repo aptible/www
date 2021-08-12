@@ -14,7 +14,7 @@ const SignupButton = ({ setShowForm }) => (
   </a>
 );
 
-export default props => {
+export default () => {
   const [showForm, setShowForm] = useState(false);
 
   return (
@@ -98,7 +98,6 @@ export default props => {
           <Modal>
             <ModalView>
               <PrrForm
-                location={props.location}
                 id="production-readiness-form"
                 onSuccess={() => {
                   setShowForm(false);

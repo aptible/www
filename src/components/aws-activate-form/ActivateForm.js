@@ -5,6 +5,7 @@ import cn from 'classnames';
 import styles from './ActivateForm.module.css';
 import buttonStyles from '../buttons/Button.module.css';
 import { event, identify, trackOnLinkedIn } from '../../lib/aptible/analytics';
+import { querystring } from '../../lib/util';
 
 const AWS_ACTIVATE_UNIQUE_CODE = `A3POPC`;
 
@@ -37,7 +38,6 @@ export const ActivateForm = ({
   btnText = 'Submit',
   successText = 'Thanks! Our team will follow up shortly.',
   inputPlaceholder = 'Enter your email',
-  location = null,
   onSuccess = () => {},
   onCancel = () => {},
 }) => {
@@ -49,7 +49,7 @@ export const ActivateForm = ({
   const [requirements, setRequirements] = useState('');
   const [currentHost, setCurrentHost] = useState('');
   const [error, setError] = useState('');
-  const queryParams = location ? queryString.parse(location.search) : {};
+  const queryParams = queryString.parse(querystring());
 
   const onSubmit = () => {
     const result = validateEmail(email);
@@ -95,7 +95,7 @@ export const ActivateForm = ({
       {submitted && (
         <div className={styles.submissionNotification}>{successText}</div>
       )}
-      
+
       <div
         className={styles.leadFormContainer}
         style={{ opacity: submitted ? 0 : 1 }}
