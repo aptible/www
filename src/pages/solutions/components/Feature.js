@@ -10,7 +10,12 @@ export default ({ title, description, smallImage, heroImage, steps }) => (
 
       <div className={styles.featureTitleText}>
         <h2>{title}</h2>
-        <p className="XL">{description}</p>
+        {(typeof description ==="string") && (
+          <p className="XL">{description}</p>
+        )}
+
+        {(typeof description !== "string") && description}
+        
         {heroImage && (
           <div className={styles.featureHeroImage}>{heroImage}</div>
         )}

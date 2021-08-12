@@ -1,0 +1,127 @@
+.leadFormContainer {
+  padding: 48px;
+  margin: 0;
+  transition: opacity 300ms;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.leadFormContainer form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.button {
+  height: 56px;
+}
+
+.leadForm {
+  display: flex;
+  justify-content: center;
+}
+
+.leadFormInput[type='email'],
+.leadFormInput[type='url'],
+.leadFormInput[type='text'] {
+  flex: 1;
+  border: 1px solid rgba(255,255,255,.25);
+  border-width: 0;
+  border-bottom-width: 1px;
+  background: 0;
+  padding: 16px;
+  padding-left: 10px;
+  font-size: 18px;
+  color: white;
+  mix-blend-mode: unset;
+  box-shadow: none;
+  margin-bottom: 16px;
+  transition: 220ms all;
+}
+
+.leadFormInput[type='email']:hover,
+.leadFormInput[type='url']:hover,
+.leadFormInput[type='text']:hover {
+  background: rgba(255,255,255,.05);
+}
+
+.leadFormInput[type='email']:focus,
+.leadFormInput[type='url']:focus,
+.leadFormInput[type='text']:focus {
+  border-color: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.10);
+}
+
+.leadFormInput[type='email']::placeholder,
+.leadFormInput[type='url']::placeholder,
+.leadFormInput[type='text']::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.submissionNotification {
+  margin-top: -25px;
+  margin-bottom: 25px;
+}
+
+.error {
+  color: tomato;
+  margin-top: 10px;
+}
+
+
+.options {
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.options, .option {
+  display: flex;
+  flex-direction: row;
+}
+
+.option {
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.options label {
+  line-height: 14px; 
+}
+
+.options input {
+  margin-right: 12px;
+  margin-top: 1px;
+}
+
+.cancel {
+  color: var(--white-seventy);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 24px 0;
+  display: block;
+  cursor: pointer;
+}
+
+.cancel:hover {
+  color: white;
+}
+
+@media (--mobile) {
+  .leadFormContainer form {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .leadFormInput[type='email'] {
+    padding: 12px;
+    margin-bottom: 4px;
+  }
+
+  .leadFormContainer {
+    height: auto;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px
+  }
+}
