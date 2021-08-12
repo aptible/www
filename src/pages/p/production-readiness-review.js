@@ -21,7 +21,7 @@ export default () => {
     <div>
       <AptibleLayout>
         <Helmet>
-          <title>Aptible | AWS Activate</title>
+          <title>Aptible | Production Readiness Reviews</title>
           <meta name="description" content="Production Readiness Reviews" />
         </Helmet>
 
