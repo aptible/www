@@ -3,7 +3,7 @@ import WistiaVideo from '../shared/WistiaVideo';
 import styles from './HowAptibleWorks.module.css';
 import StepByStep from './StepByStep';
 
-const steps = [
+const defaultSteps = [
   [
     {
       id: '01',
@@ -46,19 +46,21 @@ const steps = [
   ],
 ];
 
-export default () => (
+const defaultTitle = "How Aptible Works";
+const defaultDescription = "Aptible is a Docker-based Platform-as-a-Service that helps you go from code to cloud without ever worrying about managing servers.";
+
+export default ({ steps=defaultSteps, title=defaultTitle, description=defaultDescription, includeVideo=true }) => (
   <div className={styles.container} id="how-aptible-works">
     <div className={styles.heading}>
       <div className={styles.intro}>
-        <h2>How Aptible Works</h2>
-        <p className="XL">
-          Aptible is a Docker-based Platform-as-a-Service that helps you go from
-          code to cloud without ever worrying about managing servers.
-        </p>
+        <h2>{title}</h2>
+        <p className="XL">{description}</p>
       </div>
-      <div className={styles.videoContainer}>
-        <WistiaVideo videoId="somm4d44rt" />
-      </div>
+      {includeVideo && (
+        <div className={styles.videoContainer}>
+          <WistiaVideo videoId="somm4d44rt" />
+        </div>
+      )}
     </div>
 
     <StepByStep steps={steps} />
