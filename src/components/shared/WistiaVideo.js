@@ -14,7 +14,9 @@ class WistiaVideo extends React.Component {
     const script1 = window.document.createElement('script');
     const script2 = window.document.createElement('script');
 
-    script1.src = `https://fast.wistia.com/embed/medias/${this.props.videoId}.jsonp`;
+    script1.src = `https://fast.wistia.com/embed/medias/${
+      this.props.videoId
+    }.jsonp`;
     script1.async = true;
 
     script2.src = 'https://fast.wistia.com/assets/external/E-v1.js';

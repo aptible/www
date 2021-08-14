@@ -96,7 +96,7 @@ const hitrustSteps = [
           </a>
           <br />
           <br />
-          <a href="https://comply-grc.aptible.com/datarooms/ad352ac5-7d3b-4097-a1ac-894e34b4cba9">
+          <a href="https://app.conveyor.com/datarooms/ad352ac5-7d3b-4097-a1ac-894e34b4cba9">
             Download Aptible’s HITRUST CSF Certification Letter
           </a>
         </>
@@ -126,7 +126,7 @@ const soc2Steps = [
         <>
           Aptible has achieved SOC 2 Type 2 compliance for the security and
           availability Trust Service Principles. &nbsp;
-          <a href="https://comply-grc.aptible.com/datarooms/ad352ac5-7d3b-4097-a1ac-894e34b4cba9">
+          <a href="https://app.conveyor.com/datarooms/ad352ac5-7d3b-4097-a1ac-894e34b4cba9">
             Request a copy of our SOC 2 Type 2 Report.
           </a>
         </>
@@ -166,7 +166,7 @@ export default () => (
         <div className={styles.heroItem}>
           <h4>Why Aptible</h4>
           <h1 className="hero">
-            Prove Compliance With HIPAA  and Pass Security Audits
+            Prove Compliance With HIPAA and Pass Security Audits
           </h1>
         </div>
 

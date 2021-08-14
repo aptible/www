@@ -21,10 +21,9 @@ const PressDownload = ({ fileName, title, className, downloads }) => (
       <h6>{title}</h6>
       <p className={styles.downloadOptions}>
         {downloads.map(d => (
-          <Download
-            href={d[1]}
-            fileName={`${title}.${d[0]}`}
-          >{`↓ ${d[0]}`}</Download>
+          <Download href={d[1]} fileName={`${title}.${d[0]}`}>{`↓ ${
+            d[0]
+          }`}</Download>
         ))}
       </p>
     </div>
@@ -38,28 +37,19 @@ export default () => (
       <PressDownload
         className={styles.first}
         title="Aptible Logo - White"
-        downloads={[
-          ['svg', logoWhiteSvg],
-          ['png', logoWhitePng],
-        ]}
+        downloads={[['svg', logoWhiteSvg], ['png', logoWhitePng]]}
       />
 
       <PressDownload
         className={styles.middle}
         title="Aptible Logo - Dark"
-        downloads={[
-          ['svg', logoDarkSvg],
-          ['png', logoDarkPng],
-        ]}
+        downloads={[['svg', logoDarkSvg], ['png', logoDarkPng]]}
       />
 
       <PressDownload
         className={styles.last}
         title="Aptible Mark"
-        downloads={[
-          ['svg', markSvg],
-          ['png', markPng],
-        ]}
+        downloads={[['svg', markSvg], ['png', markPng]]}
       />
     </Grid>
   </div>

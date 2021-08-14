@@ -90,6 +90,10 @@
   align-items: center;
 }
 
+.formWrapper {
+  margin-bottom: 48px;
+}
+
 @media (--mobile) {
   .inputGroup,
   .headerText,

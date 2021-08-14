@@ -32,7 +32,12 @@ export default () => {
             one. Watch the video below to see how."
           />
 
-          <LeadForm id="HITRUST Readiness Video Campaign - 1" />
+          <div className={styles.formWrapper}>
+            <LeadForm
+              id="HITRUST Readiness Video Campaign - 1"
+              inputPlaceholder="Enter your work email"
+            />
+          </div>
 
           <Video />
           <Testimonial />

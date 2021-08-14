@@ -130,11 +130,7 @@ export default () => (
     />
     <Solution
       id="solution-security-first"
-      title={
-        <>
-          Get To Market Faster Without Compromising on Security
-        </>
-      }
+      title={<>Get To Market Faster Without Compromising on Security</>}
       description="Deliver digital products in the fastest time possible while keeping your sensitive data safe, secure, and available—24x7 through fully-managed infrastructure security controls."
       primaryImage={
         <img
