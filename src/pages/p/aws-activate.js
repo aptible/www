@@ -8,7 +8,6 @@ import AptibleLayout from '../../components/layouts/AptibleLayout';
 import Title from './components/Title';
 import buttonStyles from '../../components/buttons/Button.module.css';
 import ActivateForm from '../../components/aws-activate-form';
-// import styles from './ContentPage.module.css';
 import securityImage from '../../images/solutions/security-controls.svg';
 import heroStyles from '../../components/deploy/Hero.module.css';
 import Feature from '../../pages/solutions/components/Feature';
@@ -18,6 +17,8 @@ import rightwayLogo from '../../images/customers/logos/rightway-logo.png';
 import rightwayBranded from '../../images/solutions/rightway-branded-panel.png';
 import Modal, { ModalView } from '../../components/modal';
 import Faq from '../../components/deploy/Faq';
+import awsLogo from '../../images/aws-activate-logo.png'
+import styles from './AwsActivate.module.css';
 
 const RedeemButton = ({ setShowForm }) => (
   <a onClick={() => setShowForm(true)} className={cn(buttonStyles.button)}>
@@ -56,8 +57,12 @@ export default () => {
               </p>
             </div>
 
-            <div className={heroStyles.heroItem}>
+            <div className={cn(heroStyles.heroItem, styles.ctaRow)}>
               <RedeemButton setShowForm={setShowForm} />
+
+              <div className={styles.awsLogoContainer}>
+                <img src={awsLogo} alt="Aptible + AWS Activate | Submit Your Aplication" />
+              </div>
             </div>
 
             <div style={{ margin: '128px 0' }}>
@@ -162,7 +167,7 @@ export default () => {
                     question: (
                       <p className="">
                         Businesses have to show proof of active AWS Activate
-                        membership.
+                        membership.&nbsp;
                         <a onClick={() => setShowForm(true)} href="#">
                           Submit your info
                         </a>{' '}

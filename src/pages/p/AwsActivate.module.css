@@ -1,0 +1,28 @@
+.awsLogoContainer {
+  padding: 16px 16px 4px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.45);
+  margin-left: 16px;
+  flex: 0;
+}
+
+.awsLogoContainer img {
+  height: 32px;
+}
+
+.ctaRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (--mobile) {
+  .ctaRow {
+    flex-direction: column;
+  }
+
+  .awsLogoContainer {
+    margin-top: 16px;
+    margin-left: 0;
+  }
+}
