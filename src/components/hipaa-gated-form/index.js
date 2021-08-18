@@ -1,16 +1,18 @@
 import React from 'react';
-
+import * as queryString from 'query-string';
 import { useFormCompletion } from '../../hooks/use-form-completion';
 import pic from '../../images/security-management/sm1.jpg';
-
+import { querystring } from '../../lib/util';
 import LeadForm from '../lead-form';
 import Modal, { ModalView } from '../modal';
 
 import styles from './hipaa.module.css';
 
 export default () => {
+  const queryParams = queryString.parse(querystring());
+  const bypass = !!queryParams.bypass;
   const { completed, onComplete } = useFormCompletion('hipaa-guide');
-  if (completed) return null;
+  if (completed || bypass) return null;
 
   return (
     <Modal>
