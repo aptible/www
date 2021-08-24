@@ -8,6 +8,7 @@ module.exports = {
     '--white-fifty': 'rgba(255, 255, 255, 0.5)',
     '--white-thirty': 'rgba(255, 255, 255, 0.3)',
     '--white-ten': 'rgba(255, 255, 255, 0.1)',
+    '--white-five': 'rgba(255, 255, 255, 0.05)',
     '--aptible-black': '#0a1b28',
     '--aptible-black-light': '#132433',
     '--aptible-black-seventy': 'rgba(10, 27, 40, 0.7)',

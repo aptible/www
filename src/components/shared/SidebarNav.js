@@ -69,7 +69,7 @@ class SidebarNav extends React.Component {
   render() {
     return (
       <div
-        className={`${styles.container} ${
+        className={`${styles[this.props.layout]} ${styles.container} ${
           this.state.open ? '' : styles.closed
         }`}
       >

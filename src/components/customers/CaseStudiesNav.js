@@ -3,8 +3,8 @@ import SidebarNav from '../shared/SidebarNav';
 import SidebarNavItem from '../shared/SidebarNavItem';
 import caseStudies from '../../data/case-studies.json';
 
-export default () => (
-  <SidebarNav title="Case Studies">
+export default ({ layout }) => (
+  <SidebarNav title="Case Studies" layout={layout}>
     {caseStudies.map((caseStudy, idx) => (
       <SidebarNavItem
         key={idx}
