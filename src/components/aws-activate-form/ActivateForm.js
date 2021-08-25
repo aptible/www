@@ -118,50 +118,58 @@ export const ActivateForm = ({
             received.
           </p>
 
-          <input
-            required
-            className={styles.leadFormInput}
-            onChange={e => setName(e.target.value)}
-            name="Name"
-            type="text"
-            placeholder={'Your Full Name'}
-          />
+          <div className={styles.inputGroup}>
+            <label>Your Name:</label>
+            <input
+              required
+              className={styles.leadFormInput}
+              onChange={e => setName(e.target.value)}
+              name="Name"
+              type="text"
+            />
+          </div>
 
-          <input
-            required
-            className={styles.leadFormInput}
-            onChange={e => setEmail(e.target.value)}
-            type="email"
-            name="Email"
-            placeholder={'Your Company Email'}
-          />
+          <div className={styles.inputGroup}>
+            <label>Work Email:</label>
+            <input
+              required
+              className={styles.leadFormInput}
+              onChange={e => setEmail(e.target.value)}
+              type="email"
+              name="Email"
+            />
+          </div>
 
-          <input
-            required
-            className={styles.leadFormInput}
-            onChange={e => setCompany(e.target.value)}
-            type="text"
-            name="Company Name"
-            placeholder={'Company Name'}
-          />
-
-          <input
-            required
-            className={styles.leadFormInput}
-            onChange={e => setWebsite(e.target.value)}
-            type="url"
-            name="Company Website"
-            placeholder={'Company Website'}
-          />
-
-          <input
-            required
-            className={styles.leadFormInput}
-            onChange={e => setCurrentHost(e.target.value)}
-            type="text"
-            name="Current Hosting Provider"
-            placeholder={'Current Hosting Provider'}
-          />
+          <div className={styles.inputGroup}>
+            <label>Company Name:</label>
+            <input
+              required
+              className={styles.leadFormInput}
+              onChange={e => setCompany(e.target.value)}
+              type="text"
+              name="Company Name"
+            />
+          </div>
+          <div className={styles.inputGroup}>
+            <label>Company Website:</label>
+            <input
+              required
+              className={styles.leadFormInput}
+              onChange={e => setWebsite(e.target.value)}
+              type="text"
+              name="Company Website"
+            />
+          </div>
+          <div className={cn(styles.inputGroup, styles.verticalInputGroup)}>
+            <label>Current Hosting Provider:</label>
+            <input
+              required
+              className={styles.leadFormInput}
+              onChange={e => setCurrentHost(e.target.value)}
+              type="text"
+              name="Current Hosting Provider"
+            />
+          </div>
 
           <p style={{ marginTop: 0 }}>
             Do you have any compliance and security requirements? Select all

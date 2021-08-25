@@ -10,7 +10,7 @@ export default ({ data, pageContext }) => {
   const caseStudy = pageContext.caseStudy;
 
   return (
-    <ContentLayout title={caseStudy.title} SidebarComponent={CaseStudiesNav}>
+    <ContentLayout title={caseStudy.title} SidebarComponent={CaseStudiesNav} fullWidth={true}>
       <Helmet>
         <title>Aptible | {caseStudy.title} Case Study</title>
         <meta

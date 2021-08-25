@@ -4,7 +4,7 @@
   padding: 80px 0 160px 0;
 }
 
-.content {
+.contentHalfWidth {
   grid-row: 2;
   grid-column: 1 / span 4;
   padding-bottom: 200px;
@@ -16,13 +16,7 @@
   padding-bottom: 200px;
 }
 
-.content h2:not(:first-child),
-.content h3:not(:first-child),
-.content h4:not(:first-child) {
-  margin-top: 100px;
-}
-
-.content li {
+.contentHalfWidth li {
   font-size: 16px;
   margin-bottom: 15px;
 }
@@ -31,6 +25,48 @@
   grid-row: 2;
   grid-column: 6 / span 2;
 }
+
+.richContent h1 {
+  margin-bottom: 64px;
+}
+
+.richContent h4 {
+  margin: 64px 0 32px;
+}
+
+.richContent hr {
+  border: 0;
+  border-bottom: 1px solid var(--white-ten);
+  margin: 64px 0 128px;
+  height: 0;
+}
+
+.richContent.contentFullWidth h1,
+.richContent.contentFullWidth h5 {
+  padding-right: 360px;
+}
+
+.richContent.contentHalfWidth p {
+  font-size: 18px;
+}
+
+.richContent.contentFullWidth p {
+  font-size: 24px;
+}
+
+.richContent blockquote {
+  padding: 32px 128px;
+  margin: 64px 0;
+  background: var(--white-five);
+}
+
+.richContent blockquote p {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+}
+
 
 @media (--mobile) {
   .title {

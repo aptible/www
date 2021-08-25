@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 import AptibleLayout from '../layouts/AptibleLayout';
 import { Grid } from '../grid/Grid';
 import styles from './ContentLayout.module.css';
@@ -12,11 +13,11 @@ export default ({ title, SidebarComponent, children, fullWidth }) => (
 
       {SidebarComponent && (
         <div className={styles.sidebar}>
-          <SidebarComponent />
+          <SidebarComponent layout={fullWidth ? 'fullWidth' : 'halfWidth' } />
         </div>
       )}
 
-      <div className={fullWidth ? styles.contentFullWidth : styles.content}>
+      <div className={cn(styles.richContent, fullWidth ? styles.contentFullWidth : styles.contentHalfWidth)}>
         {children}
       </div>
     </Grid>

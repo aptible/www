@@ -21,17 +21,36 @@
   justify-content: center;
 }
 
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  color: white;
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.inputGroup input {
+  flex: 1;
+}
+
+.inputGroup.verticalInputGroup {
+  flex-direction: column
+}
+
+
 .leadFormInput[type='email'],
 .leadFormInput[type='url'],
 .leadFormInput[type='text'] {
   flex: 1;
-  border: 1px solid rgba(255,255,255,.25);
-  border-width: 0;
-  border-bottom-width: 1px;
+  border: 1px solid var(--white-ten);
   background: 0;
-  padding: 16px;
+  padding: 12px 16px;
   padding-left: 10px;
-  font-size: 18px;
+  font-size: 14px;
   color: white;
   mix-blend-mode: unset;
   box-shadow: none;
