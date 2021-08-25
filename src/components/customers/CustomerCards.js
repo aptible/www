@@ -20,10 +20,10 @@ class CustomerCards extends React.Component {
             <Card customer="glidianInc" />
             <Card customer="vidscrip" />
             <Card customer="aidin" />
-            <Card customer="projectBeacon" />
           </div>
 
           <div className={styles.right}>
+            <Card customer="projectBeacon" />
             <Card customer="mdsave" />
             <Card customer="healthCatalyst" />
             <Card customer="medicalMemory" />
