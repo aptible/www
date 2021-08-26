@@ -173,7 +173,7 @@ export default () => (
         <div className={styles.heroItem}>
           <img
             src={complianceBadges}
-            alt="Aptible is HIPAA-compliant, SOC 2 Compliant, HITRUST Certified, ISO 27001 Certified"
+            alt="Aptible is HIPAA-compliant, SOC 2 Compliant, and HITRUST Certified"
           />
         </div>
 

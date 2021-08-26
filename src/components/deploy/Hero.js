@@ -16,7 +16,6 @@ export const CompliancePills = () => {
       <CompliancePill title="✓ HIPAA" svg={hipaaBadge} />
       <CompliancePill title="✓ HITRUST" svg={hitrustBadge} />
       <CompliancePill title="✓ SOC 2 Type 2" svg={soc2Badge} />
-      <CompliancePill title="✓ ISO 27001" svg={isoBadge} />
     </div>
   );
 };

@@ -9,7 +9,7 @@ export default () => (
       <title>Aptible | Sign Up</title>
       <meta
         name="description"
-        content="Aptible is the leading security management platform for small companies. Grow by meeting security requirements for SOC 2, ISO 27001, HIPAA, GDPR, and more."
+        content="Aptible is the leading security management platform for small companies. Grow by meeting security requirements for SOC 2 Type 2, HIPAA, HITRUST, and more."
       />
     </Helmet>
     <SignupPage />

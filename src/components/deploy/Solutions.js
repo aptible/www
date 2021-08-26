@@ -116,13 +116,13 @@ export default () => (
       primaryImage={
         <img
           src={auditReadyImg}
-          alt="Aptible Audit Readiness dashboard showing status of HIPAA, HITRUST, SOC 2 Type 2, and ISO 27001 Audit Readiness"
+          alt="Aptible Audit Readiness dashboard showing status of HIPAA, HITRUST, and SOC 2 Type 2 Audit Readiness"
         />
       }
       supportingImage={
         <img
           src={allBadges}
-          alt="List of target frameworks that Aptible addresses. HIPAA, HITRUST, SOC 2, ISO 27001"
+          alt="List of target frameworks that Aptible addresses. HIPAA, HITRUST, and SOC 2 Type 2"
         />
       }
       learnMore="hipaa-hitrust-soc2-compliant-hosting"
@@ -141,7 +141,7 @@ export default () => (
       supportingImage={
         <img
           src={securitySupportingImage}
-          alt="List of target frameworks that Aptible addresses. HIPAA, HITRUST, SOC 2, ISO 27001"
+          alt="List of target frameworks that Aptible addresses. HIPAA, HITRUST, and SOC 2 Type 2"
         />
       }
       learnMore="secure-cloud-infrastructure"
@@ -160,7 +160,7 @@ export default () => (
       supportingImage={
         <img
           src={devOpsSupportingImage}
-          alt="List of target frameworks that Aptible addresses. HIPAA, HITRUST, SOC 2, ISO 27001"
+          alt="List of target frameworks that Aptible addresses. HIPAA, HITRUST, and SOC 2 Type 2"
         />
       }
       learnMore="reliable-devops"

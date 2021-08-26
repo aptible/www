@@ -235,9 +235,7 @@ To exercise any of these options, or for additional information about our privac
 
 Unfortunately, no data transmission over the Internet or data storage system can be guaranteed to be 100% secure. That said, we certainly try very hard, employing a variety of organizational, technical and administrative measures to provide a level of security appropriate to the risk associated with the personal information you trust us with. 
 
-To that end, we manage our data protection program consistent with ISO 27001, SOC 2, HITRUST, and applicable legal and regulatory requirements such as HIPAA and GDPR.
-
-  * Aptible’s ISO 27001 certification for Aptible Deploy and Aptible Comply is available [here](/compliance/iso-27001-certification/).
+To that end, we manage our data protection program consistent with SOC 2, HITRUST, and applicable legal and regulatory requirements such as HIPAA and GDPR.
 
   * Aptible’s HITRUST CSF stand-alone certification letter is available [here](/compliance/hitrust-csf-certification/).
 
