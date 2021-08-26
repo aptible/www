@@ -3,7 +3,6 @@ import styles from './BadgeCallout.module.css';
 import hipaaBadge from '../../images/secured-by-aptible-badges/HIPAA Compliant Dark.svg';
 import hipaaHitrust from '../../images/secured-by-aptible-badges/HIPAA + HITRUST Compliant Dark.svg';
 import hitrustBadge from '../../images/secured-by-aptible-badges/HITRUST Compliant Dark.svg';
-import isoBadge from '../../images/secured-by-aptible-badges/ISO 27001 Dark.svg';
 import soc2Badge from '../../images/secured-by-aptible-badges/SOC 2 Type 2 Dark.svg';
 
 const DEFAULT_TITLE = (
@@ -28,7 +27,6 @@ export default ({ title = DEFAULT_TITLE, body = DEFAULT_DESCRIPTION }) => (
       <img src={hipaaBadge} alt="HIPAA Compliant" />
       <img src={hitrustBadge} alt="HITRUST Certified" />
       <img src={hipaaHitrust} alt="HIPAA + HITRUST Compliant" />
-      <img src={isoBadge} alt="ISO 27001 Certified" />
       <img src={soc2Badge} alt="SOC 2 Certified" />
     </div>
   </div>

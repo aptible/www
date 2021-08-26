@@ -11,7 +11,7 @@ export default () => (
       <title>Aptible | Support Pricing Plans</title>
       <meta
         name="description"
-        content="Get to market faster with a developer-friendly deployment platform that provides the security controls needed to comply with SOC 2, ISO 27001, HIPAA, GDPR, and more."
+        content="Get to market faster with a developer-friendly deployment platform that provides the security controls needed to comply with SOC 2 Type 2, HIPAA, HITRUST, and more."
       />
     </Helmet>
     <SupportHero />
