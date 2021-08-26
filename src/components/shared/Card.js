@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 import { Link } from 'gatsby';
 import styles from './Card.module.css';
 import Arrow from '../shared/Arrow';
@@ -20,9 +21,14 @@ import rightwayLogo from '../../images/customers/logos/rightway-logo.png';
 import aidinLogo from '../../images/customers/logos/aidin-logo.png';
 import glidianLogo from '../../images/customers/logos/glidian-logo.png';
 import projectBeaconLogo from '../../images/customers/logos/project-beacon-logo.png';
+import medicalMemoryBranded from '../../images/solutions/medical-memory-branded-half-height.png';
+import rightwayBranded from '../../images/solutions/rightway-branded-panel-half-height.png';
+import glidianBranded from '../../images/solutions/gildian-branded-panel-half-height.png';
 
 const photos = {
-  quadpay: quadpayPhoto,
+  medicalMemory: medicalMemoryBranded,
+  rightwayHealthcare: rightwayBranded,
+  glidianInc: glidianBranded
 };
 
 const logos = {
@@ -40,6 +46,90 @@ const logos = {
   glidianInc: glidianLogo,
   projectBeacon: projectBeaconLogo,
 };
+
+
+const CardLogo = ({ logo, to, website, alt }) => {
+  const img = (
+    <img
+      src={logo}
+      className={styles.logo}
+      alt={alt}
+    />
+  );
+
+  if(website && !to) {
+    return <a href={website} target="_blank">{img}</a>
+  }
+  
+  return img
+}
+
+const CardContent = ({ logo, customerData, image, to }) => (
+  <div className={styles.card}>
+    <div className={`${styles.arrow} ${image ? styles.withImage : ''}`}>
+      <Arrow />
+    </div>
+
+    { logo && <CardLogo
+      logo={logo}
+      to={to}
+      website={customerData.website}
+      alt={customerData.name}
+    />}
+
+    {customerData.headline && (
+      <h5 dangerouslySetInnerHTML={{ __html: customerData.headline }} />
+    )}
+
+    {customerData.text && <p>{customerData.text}</p>}
+
+    {customerData.author && (
+      <p className={styles.author}>{customerData.author}</p>
+    )}
+
+    {to && (
+      <div className={styles.readMore}>
+        <p>Read More</p>
+      </div>
+    )}
+  </div>
+)
+
+const CardMedia = ({ videoId, showVideo, videoLength, videoClick, image }) => (  
+  <div className={styles.imageContainer}>
+    {videoId && (
+      <React.Fragment>
+        {this.state.showVideo && (
+          <div className={styles.videoContainer}>
+            <WistiaVideo
+              videoId={videoId}
+              autoPlay="true"
+            />
+          </div>
+        )}
+
+        {showVideo && (
+          <React.Fragment>
+            <div className={styles.videoLength}>
+              <div className={styles.videoPlayIcon}>
+                <img src={videoPlayIcon} alt="Video" />
+              </div>
+              <p className="L-bold">{videoLength}</p>
+            </div>
+            <div
+              className={styles.videoClick}
+              onClick={videoClick}
+            />
+          </React.Fragment>
+        )}
+      </React.Fragment>
+    )}
+
+    {!showVideo && (
+      <img src={image} className={styles.image} alt="Customer" />
+    )}
+  </div>
+)
 
 class Card extends React.Component {
   constructor(props) {
@@ -62,99 +152,38 @@ class Card extends React.Component {
     const image = photos[customer];
     const ContainerElement = to ? Link : 'div';
 
+    const cardContent = (
+      <>
+        {image && <CardMedia
+          showVideo={this.state.showVideo}
+          videoId={customerData.videoId}
+          videoLength={customerData.videoLength}
+          image={image}
+          videoClick={this.videoClick}
+        />}
+
+        <CardContent
+          logo={logos[customer]}
+          customerData={customerData}
+          image={image}
+          to={to}
+        />
+      </>
+    )
+
+    if(to) {
+      return (
+        <Link
+          to={to}
+          className={cn(styles.container, styles.linkedContainer)}
+        >
+          {cardContent}
+        </Link>
+      )
+    }
+
     return (
-      <ContainerElement
-        to={to}
-        className={`${styles.container} ${to ? styles.linkedContainer : ''}`}
-      >
-        {image && (
-          <div className={styles.imageContainer}>
-            {customerData.videoId && (
-              <React.Fragment>
-                {this.state.showVideo && (
-                  <div className={styles.videoContainer}>
-                    <WistiaVideo
-                      videoId={customerData.videoId}
-                      autoPlay="true"
-                    />
-                  </div>
-                )}
-
-                {!this.state.showVideo && (
-                  <React.Fragment>
-                    <div className={styles.videoLength}>
-                      <div className={styles.videoPlayIcon}>
-                        <img src={videoPlayIcon} alt="Video" />
-                      </div>
-                      <p className="L-bold">{customerData.videoLength}</p>
-                    </div>
-                    <div
-                      className={styles.videoClick}
-                      onClick={this.videoClick}
-                    />
-                  </React.Fragment>
-                )}
-              </React.Fragment>
-            )}
-
-            {!this.state.showVideo && (
-              <img src={image} className={styles.image} alt="Customer" />
-            )}
-          </div>
-        )}
-
-        <div className={styles.card}>
-          <div className={`${styles.arrow} ${image ? styles.withImage : ''}`}>
-            <Arrow />
-          </div>
-
-          {logos[customer] && (
-            <a href={customerData.website} target="_blank">
-              <img
-                src={logos[customer]}
-                className={styles.logo}
-                alt={`${customerData.name} logo`}
-              />
-            </a>
-          )}
-
-          {customerData.headline && (
-            <h5 dangerouslySetInnerHTML={{ __html: customerData.headline }} />
-          )}
-
-          {customerData.text && <p>{customerData.text}</p>}
-
-          {customerData.author && (
-            <p className={styles.author}>{customerData.author}</p>
-          )}
-
-          {customerData.name && (
-            <h6 className={styles.companyName}>
-              <a href={customerData.website} target="_blank">
-                {customerData.name}
-              </a>
-            </h6>
-          )}
-
-          {to && (
-            <div className={styles.readMore}>
-              <p>Read More</p>
-            </div>
-          )}
-
-          {customerData.tags && (
-            <div className={styles.tags}>
-              {customerData.tags.map((tag, idx) => {
-                return (
-                  <span key={idx} className={styles.tag}>
-                    {tag}
-                  </span>
-                );
-              })}
-            </div>
-          )}
-        </div>
-      </ContainerElement>
+      <div className={styles.container}>{cardContent}</div>
     );
   }
 }

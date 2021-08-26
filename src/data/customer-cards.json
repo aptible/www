@@ -27,6 +27,7 @@
     "author": "Joe Adu, Director of Technology",
     "text": "PathAI used Aptible to design a Security Management program and get ISO 27001 certified months ahead of schedule.",
     "tags": ["technology"],
+    "link": "/customers/pathai/",
     "name": "PathAI",
     "website": "https://www.pathai.com"
   },
@@ -84,6 +85,8 @@
     "author": "M. Jackson Wilkinson, CTO",
     "tags": ["health"],
     "name": "Project Beacon",
+    "link": "/customers/project-beacon/",
+    "text": "Project Beacon deploys rapidly to optimize COVID-19 testing strategies and improve public health in Massachusetts",
     "website": "https://app.beacontesting.com"
   }
 }

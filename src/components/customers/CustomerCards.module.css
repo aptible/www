@@ -5,8 +5,8 @@
 .left {
   grid-row: 1;
   grid-column: 1 / span 4;
-  padding-top: 160px;
   padding-right: 85px;
+  padding-top: 120px;
 }
 
 .right {
