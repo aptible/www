@@ -38,6 +38,7 @@ export default () => {
             name="description"
             content="Instant HIPAA, HITRUST and SOC 2 Compliance with $5,000 in Free Credits"
           />
+          <meta name="robots" content="noindex" />
         </Helmet>
 
         <Grid rows="2">
