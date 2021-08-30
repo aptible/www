@@ -19,6 +19,16 @@ const hotjarJs = `
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 `;
 
+const aptibleJs = `
+      (function(a,p,t,i,b,l,e) {
+        a.aptible=a.aptible||{_q:[]};f='event,identify'.split(',');
+        l=function(n){return function(){a.aptible._q.push([n,Array.prototype.slice.call(arguments)])}};
+        for(e=0;e<f.length;e++){a.aptible[f[e]]=l(f[e])};
+        i=p.createElement(t);i.type='text/javascript';i.async=1;i.src="/aptible.js";
+        b=p.getElementsByTagName(t)[0];b.parentNode.insertBefore(i,b);
+      })(window, document, 'script');
+`;
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -32,6 +42,7 @@ export default function HTML(props) {
         {props.headComponents}
         <script dangerouslySetInnerHTML={{ __html: segmentJs }} />
         <script dangerouslySetInnerHTML={{ __html: hotjarJs }} />
+        <script dangerouslySetInnerHTML={{ __html: aptibleJs }} />
         <script
           charset="utf-8"
           type="text/javascript"
