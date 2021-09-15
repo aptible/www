@@ -35,9 +35,12 @@ const validateEmail = email => {
 
 export const ActivateForm = ({
   id,
+  eventName='AWS Activate Application Submitted',
   btnText = 'Submit',
   successText = 'Thanks! Our team will follow up shortly.',
   inputPlaceholder = 'Enter your email',
+  offerChoices,
+  disclaimer,
   onSuccess = () => {},
   onCancel = () => {},
 }) => {
@@ -59,7 +62,7 @@ export const ActivateForm = ({
     }
     identify(email);
     event('Email Collected', { formId: id });
-    event('AWS Activate Application Submitted', {
+    event(eventName, {
       name,
       email,
       company,
@@ -171,6 +174,25 @@ export const ActivateForm = ({
             />
           </div>
 
+          {offerChoices && (
+            <div className={cn(styles.inputGroup, styles.verticalInputGroup)}>
+              <label>Which offer are you interested in?</label>
+              <div className={styles.options} style={{margin: 0}}>
+                {offerChoices.map(oc => (
+                  <div className={styles.option}>
+                    <input
+                      name="offerChoices[]"
+                      type="radio"
+                      id={oc}
+                      value={oc}
+                    />
+                    <label for={oc}>{oc}</label>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <p style={{ marginTop: 0 }}>
             Do you have any compliance and security requirements? Select all
             that apply.
@@ -200,6 +222,11 @@ export const ActivateForm = ({
           <button type="cancel" className={styles.cancel} onClick={onCancel}>
             Cancel
           </button>
+
+          {disclaimer && (
+            <p class="S">{disclaimer}</p>
+          )}
+
         </form>
         <div className={styles.error}>{error ? error : ''}</div>
       </div>
