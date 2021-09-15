@@ -5,9 +5,9 @@ import Footnotes, { FootnoteMarker } from '../shared/Footnotes';
 import styles from './SupportPriceTable.module.css';
 
 const tiers = [
-  { name: 'Standard', price: 0 },
-  { name: 'Premium', price: 499 },
-  { name: 'Enterprise', price: 1499 },
+  { name: 'Standard', showPrice: true, price: 0 },
+  { name: 'Premium' },
+  { name: 'Enterprise' },
 ];
 
 const footnotes = [
@@ -38,10 +38,19 @@ const TierHeading = () =>
     >
       <p className={classNames(styles.tierName, 'L')}>{tier.name}</p>
 
-      <p className={classNames(styles.tierPrice, 'h3')}>
-        ${tier.price}
-        <span className="h6">/mo</span>
-      </p>
+      {tier.showPrice && (
+        <p className={classNames(styles.tierPrice, 'h3')}>
+          ${tier.price}
+          <span className="h6">/mo</span>
+        </p>
+      )}
+
+      {!tier.showPrice && (
+        <p className={classNames(styles.tierPrice, 'h3')}>
+          Contact Us
+        </p>
+      )}
+
     </div>
   ));
 
@@ -217,7 +226,7 @@ const ResponseTimes = () => (
 
       <div className={styles.responseTime}>
         <span>High</span>
-        <span className={styles.responseTimePeriod}>6 hours</span>
+        <span className={styles.responseTimePeriod}>3 business hours</span>
       </div>
 
       <div className={styles.responseTime}>
