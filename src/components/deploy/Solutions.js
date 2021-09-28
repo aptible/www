@@ -38,8 +38,8 @@ const Solution = ({
         </div>
       </div>
       <div className={styles.solutionFeatures}>
-        {features.map(feature => (
-          <Feature {...feature} />
+        {features.map((feature, idx) => (
+          <Feature {...feature} key={idx} />
         ))}
       </div>
     </div>

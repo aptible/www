@@ -1,5 +1,5 @@
 import * as queryString from 'query-string';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { navigate } from 'gatsby'
 import { Helmet } from 'react-helmet';
 import cn from 'classnames';
@@ -61,6 +61,7 @@ export const LeadForm = ({
       </Helmet>
 
       <iframe
+        title="Lead Form"
         name="captureFrame"
         height="0"
         width="0"

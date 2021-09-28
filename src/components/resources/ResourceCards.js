@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import categories from '../../data/resource-categories.json';
 import { Grid } from '../grid/Grid';
 import styles from './ResourceCards.module.css';
 import ResourceCard from './ResourceCard';

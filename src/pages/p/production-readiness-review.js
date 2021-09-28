@@ -9,9 +9,9 @@ import heroStyles from '../../components/deploy/Hero.module.css';
 import Modal, { ModalView } from '../../components/modal';
 
 const SignupButton = ({ setShowForm }) => (
-  <a onClick={() => setShowForm(true)} className={cn(buttonStyles.button)}>
+  <button onClick={() => setShowForm(true)} className={cn(buttonStyles.button)}>
     Start Your Production Readiness Review
-  </a>
+  </button>
 );
 
 export default () => {

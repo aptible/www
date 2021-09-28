@@ -6,8 +6,6 @@ import Arrow from '../shared/Arrow';
 import WistiaVideo from './WistiaVideo';
 import videoPlayIcon from '../../images/video-play.svg';
 import customerCards from '../../data/customer-cards.json';
-
-import quadpayPhoto from '../../images/customers/photos/quadpay-ian-yamey.jpg';
 import healthCatalystLogo from '../../images/customers/logos/health-catalyst.png';
 import ableHealthLogo from '../../images/customers/logos/able-health.png';
 import healthifyLogo from '../../images/customers/logos/healthify.svg';
@@ -58,7 +56,7 @@ const CardLogo = ({ logo, to, website, alt }) => {
   );
 
   if(website && !to) {
-    return <a href={website} target="_blank">{img}</a>
+    return <a href={website} target="_blank" rel="noopener noreferrer">{img}</a>
   }
   
   return img
@@ -150,8 +148,6 @@ class Card extends React.Component {
 
     const to = customerData.link;
     const image = photos[customer];
-    const ContainerElement = to ? Link : 'div';
-
     const cardContent = (
       <>
         {image && <CardMedia

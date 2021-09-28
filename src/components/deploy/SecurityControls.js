@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './SecurityControls.module.css';
 import awsLogo from '../../images/home/illustrations/aws-logo.png';
-import LeadForm from '../lead-form';
 
 export default () => (
   <div id="aptible-vs-aws" className={styles.container}>

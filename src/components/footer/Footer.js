@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Grid } from '../grid/Grid';
-import NewsletterSignup from './NewsletterSignup';
 import styles from './Footer.module.css';
 
 const twitterIcon = (

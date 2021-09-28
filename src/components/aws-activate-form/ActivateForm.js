@@ -49,7 +49,6 @@ export const ActivateForm = ({
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
   const [website, setWebsite] = useState('');
-  const [requirements, setRequirements] = useState('');
   const [currentHost, setCurrentHost] = useState('');
   const [useCase, setUseCase] = useState('');
   const [error, setError] = useState('');
@@ -68,8 +67,8 @@ export const ActivateForm = ({
       email,
       company,
       website,
-      requirements,
       currentHost,
+      useCase
     });
     setSubmitted(true);
     setError('');
@@ -90,6 +89,7 @@ export const ActivateForm = ({
       </Helmet>
 
       <iframe
+        title="AWS Activate Capture Form"
         name="captureFrame"
         height="0"
         width="0"
