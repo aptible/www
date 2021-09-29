@@ -94,6 +94,10 @@
   margin-bottom: 48px;
 }
 
+.meetingsFormWrapper {
+  width: 720px;
+}
+
 @media (--mobile) {
   .inputGroup,
   .headerText,
@@ -125,5 +129,9 @@
   .testimonial,
   .inputGroup {
     width: 90%;
+  }
+
+  .meetingsFormWrapper {
+    width: 100%;
   }
 }

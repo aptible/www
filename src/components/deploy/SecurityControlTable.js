@@ -19,10 +19,10 @@ const Control = ({
       <p>{body}</p>
       <div className={styles.providedBy}>
         {provider === 'Aptible' && (
-          <img src={aptibleFavicon} className={styles.providedByImage} />
+          <img alt="aptible icon" src={aptibleFavicon} className={styles.providedByImage} />
         )}
         {provider === 'AWS' && (
-          <img src={awsFavicon} className={styles.providedByImage} />
+          <img alt="aws icon" src={awsFavicon} className={styles.providedByImage} />
         )}
         <p className="S">
           {category} provided by {provider}

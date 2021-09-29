@@ -99,7 +99,7 @@
 
 .option {
   margin-right: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 .options label {
@@ -111,12 +111,20 @@
   margin-top: 1px;
 }
 
+.actions {
+  display: flex;
+  flex-direction: row;
+}
+
+.actions button {
+  flex: 1;
+}
+
 .cancel {
   color: var(--white-seventy);
   background: none;
   border: none;
   padding: 0;
-  margin: 24px 0;
   display: block;
   cursor: pointer;
 }

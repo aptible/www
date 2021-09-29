@@ -6,15 +6,15 @@ import ResourceCards from '../components/resources/ResourceCards';
 import resources from '../data/resources.json';
 
 export default ({ data }) => {
-  const webinars = data.posts.edges.map(webinar => {
-    const { node } = webinar;
-    return {
-      title: node.title,
-      url: `/webinars/${node.slug}/`,
-      description: node.description ? node.description.description : '',
-      tags: ['Webinar', node.webinarType ? 'On Demand' : 'Upcoming'],
-    };
-  });
+  // const webinars = data.posts.edges.map(webinar => {
+  //   const { node } = webinar;
+  //   return {
+  //     title: node.title,
+  //     url: `/webinars/${node.slug}/`,
+  //     description: node.description ? node.description.description : '',
+  //     tags: ['Webinar', node.webinarType ? 'On Demand' : 'Upcoming'],
+  //   };
+  // });
 
   return (
     <AptibleLayout>

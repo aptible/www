@@ -24,9 +24,6 @@ function NavLink({ title, to }) {
 }
 
 function DropDown({ title, onClickFn, sectionName, openSectionName }) {
-  const url = typeof window !== 'undefined' ? window.location.href : '';
-  const isActive = url.toLowerCase().indexOf(sectionName.toLowerCase()) > -1;
-  const style = isActive ? { color: 'white' } : {};
   return (
     <div
       onClick={() => onClickFn(sectionName)}

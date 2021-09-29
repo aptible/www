@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Feature.module.css';
-import cn from 'classnames';
 import StepByStep from '../../../components/deploy/StepByStep';
 
 export default ({ title, description, smallImage, heroImage, steps }) => (

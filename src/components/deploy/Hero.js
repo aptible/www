@@ -4,7 +4,6 @@ import styles from './Hero.module.css';
 import hipaaBadge from '../../images/home/badges/hipaa-24x24.svg';
 import hitrustBadge from '../../images/home/badges/hitrust-24x24.svg';
 import soc2Badge from '../../images/home/badges/soc-24x24.svg';
-import isoBadge from '../../images/home/badges/iso-24x24.svg';
 import dashboardIlly from '../../images/home/illustrations/deploy-container-metrics-dashboard.svg';
 import deployConsoleIlly from '../../images/home/illustrations/deploy-console.svg';
 import mobileHero from '../../images/home/illustrations/mobile-hero-dashboard.svg';
@@ -23,7 +22,7 @@ export const CompliancePills = () => {
 const CompliancePill = ({ title, svg }) => {
   return (
     <div className={styles.compliancePill}>
-      <img src={svg} className={styles.compliancePillBadge} />
+      <img alt={title} src={svg} className={styles.compliancePillBadge} />
       <h6 className="small">{title}</h6>
     </div>
   );
@@ -66,7 +65,7 @@ export default () => (
       </div>
 
       <div className={styles.illustration}>
-        <img src={mobileHero} className={styles.mobileHero} />
+        <img alt="Aptible Illustration" src={mobileHero} className={styles.mobileHero} />
         <img
           className={styles.containerMeticsDashboard}
           alt="Container Metrics Dashboard."
@@ -74,7 +73,7 @@ export default () => (
         />
         <img
           className={styles.containerDeploymentConsole}
-          alt="Image of console deploying a docker app on Aptible."
+          alt="Terminal deploying a docker app on Aptible."
           src={deployConsoleIlly}
         />
       </div>

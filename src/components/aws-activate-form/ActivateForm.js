@@ -49,8 +49,8 @@ export const ActivateForm = ({
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
   const [website, setWebsite] = useState('');
-  const [requirements, setRequirements] = useState('');
   const [currentHost, setCurrentHost] = useState('');
+  const [useCase, setUseCase] = useState('');
   const [error, setError] = useState('');
   const queryParams = queryString.parse(querystring());
 
@@ -67,8 +67,8 @@ export const ActivateForm = ({
       email,
       company,
       website,
-      requirements,
       currentHost,
+      useCase
     });
     setSubmitted(true);
     setError('');
@@ -89,6 +89,7 @@ export const ActivateForm = ({
       </Helmet>
 
       <iframe
+        title="AWS Activate Capture Form"
         name="captureFrame"
         height="0"
         width="0"
@@ -109,13 +110,13 @@ export const ActivateForm = ({
           target="captureFrame"
           className={styles.leadForm}
         >
-          <h3>Submit Your Application</h3>
+          <h5>Submit Your Application</h5>
 
           {injectedQueryParams.map(k => (
             <input hidden name={k} key={k} value={queryParams[k]} />
           ))}
 
-          <p className="L">
+          <p className="">
             Please complete the application form below. Someone from Aptible
             will reach out to discuss next steps once your application has been
             received.
@@ -163,6 +164,7 @@ export const ActivateForm = ({
               name="Company Website"
             />
           </div>
+
           <div className={cn(styles.inputGroup, styles.verticalInputGroup)}>
             <label>Current Hosting Provider:</label>
             <input
@@ -171,6 +173,17 @@ export const ActivateForm = ({
               onChange={e => setCurrentHost(e.target.value)}
               type="text"
               name="Current Hosting Provider"
+            />
+          </div>
+
+          <div className={cn(styles.inputGroup, styles.verticalInputGroup)}>
+            <label>What's prompting you to try Aptible?</label>
+            <input
+              required
+              className={styles.leadFormInput}
+              onChange={e => setUseCase(e.target.value)}
+              type="text"
+              name="Use Case"
             />
           </div>
 
@@ -212,16 +225,18 @@ export const ActivateForm = ({
             ))}
           </div>
 
-          <button
-            className={cn(buttonStyles.button, styles.button)}
-            type="submit"
-          >
-            {btnText}
-          </button>
+          <div className={styles.actions}>
+            <button
+              className={cn(buttonStyles.button, styles.button)}
+              type="submit"
+            >
+              {btnText}
+            </button>
 
-          <button type="cancel" className={styles.cancel} onClick={onCancel}>
-            Cancel
-          </button>
+            <button type="cancel" className={styles.cancel} onClick={onCancel}>
+              Cancel
+            </button>
+          </div>
 
           {disclaimer && (
             <p class="S">{disclaimer}</p>

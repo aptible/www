@@ -1,5 +1,6 @@
 import * as queryString from 'query-string';
 import React, { useState } from 'react';
+import { navigate } from 'gatsby'
 import { Helmet } from 'react-helmet';
 import cn from 'classnames';
 import styles from './LeadForm.module.css';
@@ -19,12 +20,15 @@ export const LeadForm = ({
   btnText = 'Get a demo',
   successText = 'Thanks! Our team will contact you to schedule a demo shortly.',
   inputPlaceholder = 'Enter your email',
+  scheduleDemoOnSubmit = true,
+  calendarId = 'frank-macreery',
   onSuccess = () => {},
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const queryParams = queryString.parse(querystring());
+  const shouldShowSuccessMessage = !scheduleDemoOnSubmit && submitted;
 
   const onSubmit = () => {
     const result = validateEmail(email);
@@ -38,6 +42,10 @@ export const LeadForm = ({
     setError('');
     trackOnLinkedIn();
     onSuccess();
+
+    if (scheduleDemoOnSubmit) {
+      navigate(`/p/schedule-a-demo?calendar=${calendarId}`)
+    }
   };
 
   return (
@@ -53,6 +61,7 @@ export const LeadForm = ({
       </Helmet>
 
       <iframe
+        title="Lead Form"
         name="captureFrame"
         height="0"
         width="0"
@@ -70,7 +79,7 @@ export const LeadForm = ({
           className={styles.leadForm}
         >
           {utmKeywords.map(k => (
-            <input hidden name={k} key={k} value={queryParams[k]} />
+            <input hidden readOnly name={k} key={k} value={queryParams[k]} />
           ))}
           <input
             required
@@ -89,7 +98,7 @@ export const LeadForm = ({
         <div className={styles.error}>{error ? error : ''}</div>
       </div>
 
-      {submitted && (
+      {shouldShowSuccessMessage && (
         <div className={styles.submissionNotification}>{successText}</div>
       )}
     </div>

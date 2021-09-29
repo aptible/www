@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Testimonial.module.css';
-import cn from 'classnames';
 
 export default ({ quote, author, title, company, url, logo, image }) => (
   <div className={styles.card}>

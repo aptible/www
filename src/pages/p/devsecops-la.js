@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { Grid } from '../../components/grid/Grid';
 import cn from 'classnames';
 import Proof from '../../components/deploy/Proof';
 import AptibleLayout from '../../components/layouts/AptibleLayout';
-import Title from './components/Title';
 import buttonStyles from '../../components/buttons/Button.module.css';
 import ActivateForm from '../../components/aws-activate-form';
 import securityImage from '../../images/solutions/security-controls.svg';
@@ -20,9 +18,9 @@ import Faq from '../../components/deploy/Faq';
 import styles from './AwsActivate.module.css';
 
 const RedeemButton = ({ setShowForm }) => (
-  <a onClick={() => setShowForm(true)} className={cn(buttonStyles.button)}>
+  <button onClick={() => setShowForm(true)} className={cn(buttonStyles.button)}>
     Redeem Now
-  </a>
+  </button>
 );
 
 export default () => {
@@ -78,7 +76,7 @@ export default () => {
                   </p>
                 </>
               }
-              smallImage={<img width="50%" src={aptibleIcon} />}
+              smallImage={<img width="50%" alt="Aptible icon" src={aptibleIcon} />}
               heroImage={
                 <img
                   src={securityImage}
@@ -151,7 +149,7 @@ export default () => {
                       <p className="">
                         Businesses have to show proof of DevSecOps Days 2021 attendance.
                         &nbsp;
-                        <a onClick={() => setShowForm(true)} href="#">
+                        <a href="" onClick={() => setShowForm(true)} href="#">
                           Submit your info
                         </a>{' '}
                         and a member of the Aptible team will reach out with
