@@ -130,4 +130,8 @@
   .inputGroup {
     width: 90%;
   }
+
+  .meetingsFormWrapper {
+    width: 100%;
+  }
 }
