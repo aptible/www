@@ -31,6 +31,7 @@ export default () => {
         />
         <script
           type="text/javascript"
+          defer
           src="//static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"
         />
       </Helmet>
