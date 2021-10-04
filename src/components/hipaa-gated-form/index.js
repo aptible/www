@@ -32,6 +32,7 @@ export default () => {
               id="hipaa-guide"
               btnText="Get the Guide"
               successText="Thanks!  Redirecting to our HIPAA guide"
+              scheduleDemoOnSubmit={false}
               onSuccess={onComplete}
             />
           </div>
