@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import Title from './components/Title';
 import { useQueryParam } from '../../hooks/use-query-param';
 import styles from './VideoLandingPage.module.css';
+import { event } from '../../lib/aptible/analytics';
 
 const availableCalendars = {
   'frank-macreery': 1,
@@ -12,6 +13,7 @@ const availableCalendars = {
 }
 
 const DEFAULT_CALENDAR = 'frank-macreery';
+const LINKEDIN_CONVERSION_ID = '5063932';
 
 const getCalendarIdFromQueryParam = (calendar) => {
   return availableCalendars[calendar] ? calendar : DEFAULT_CALENDAR;
@@ -20,6 +22,20 @@ const getCalendarIdFromQueryParam = (calendar) => {
 export default () => {
   const { calendar } = useQueryParam('calendar');
   const calendarId = getCalendarIdFromQueryParam(calendar);
+
+  const handleMeetingScheduled = (e) => {
+    if (e.data.meetingBookSucceeded) {
+      window.lintrk('track', { conversion_id: LINKEDIN_CONVERSION_ID });
+      event('Meeting Scheduled')
+    }
+  }
+
+  React.useEffect(() => {
+    window.addEventListener('message', handleMeetingScheduled);
+    return () => {
+      window.removeEventListener('message', handleMeetingScheduled);
+    };
+  }, []);
 
   return (
     <div>
