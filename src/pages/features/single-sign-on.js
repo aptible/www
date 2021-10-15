@@ -29,7 +29,7 @@ export default () => (
           Seamlessly manage your team's access to your Aptible account by enrolling Aptible with your SSO provider.
         </p>
       }
-      leadFormId="Web Application Scanning"
+      leadFormId="Single Sign On"
     />
     <FeaturePageFeatureList>
       <Feature
