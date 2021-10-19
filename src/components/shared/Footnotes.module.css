@@ -3,9 +3,15 @@
   grid-column: 2 / -1;
   margin-top: 34px;
   display: flex;
+  flex-direction: column;
   color: var(--white-seventy);
   font-size: 13px;
   line-height: 19px;
+}
+
+.footnote {
+  display: flex;
+  margin-bottom: 8px;
 }
 
 @media (--mobile) {

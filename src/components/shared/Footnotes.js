@@ -6,12 +6,16 @@ export const FootnoteMarker = ({ children }) => (
 );
 
 const Footnotes = ({ footnotes }) => {
-  return footnotes.map(footnote => (
-    <div className={styles.footnotes} key={footnote.marker}>
-      <FootnoteMarker>{footnote.marker}</FootnoteMarker>
-      <div>{footnote.note}</div>
-    </div>
-  ));
+  return (
+  <div className={styles.footnotes}>
+    { footnotes.map(footnote => (
+      <div className={styles.footnote} key={footnote.marker}>
+        <FootnoteMarker>{footnote.marker}</FootnoteMarker>
+        <div>{footnote.note}</div>
+      </div>
+    ))}
+  </div>
+  )
 };
 
 export default Footnotes;
