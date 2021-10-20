@@ -5,17 +5,28 @@ import Footnotes, { FootnoteMarker } from '../shared/Footnotes';
 import styles from './SupportPriceTable.module.css';
 
 const tiers = [
-  { name: 'Standard', showPrice: true, price: 0 },
-  { name: 'Premium' },
-  { name: 'Enterprise' },
+  { name: 'Standard', showPrice: true, price: 0, description: 'Recommended for non-criticial workloads' },
+  { name: 'Premium', showPrice: true, price: 499, description: 'Recommended for production workloads that do not require 24/7 support' },
+  { name: 'Enterprise', showPrice: true, price: 1499, description: 'Recommended for critcal production workloads that require 24/7 support' }
 ];
 
 const footnotes = [
   {
     marker: 1,
     note:
+      'Support Plan Pricing + 3% of your monthly invoice'
+  },
+  {
+    marker: 2,
+    note:
       'Support via Slack is only offered at the Low and Normal severity levels, 9am-6pm M-F. For High and Urgent severity issues, a ticket must be opened through Zendesk. After the initial ticket is opened, Aptible may communicate to resolve the issue through Slack if that is mutually agreeable.',
   },
+  {
+    marker: 3,
+    note:(
+      <>Aptible-caused downtimes are subject to the <a href="https://www.aptible.com/legal/service-level-agreement/">Aptible Service-Level Agreement</a> and are not subject to our Support Target Response Times. </>
+    )
+  }
 ];
 
 const Container = ({ children }) => (
@@ -39,16 +50,27 @@ const TierHeading = () =>
       <p className={classNames(styles.tierName, 'L')}>{tier.name}</p>
 
       {tier.showPrice && (
-        <p className={classNames(styles.tierPrice, 'h3')}>
-          ${tier.price}
-          <span className="h6">/mo</span>
-        </p>
+        <>
+          {tier.price !== 0 && (
+            <p className={styles.tierStartingAt}>Starting at</p>
+          )}
+          <p className={classNames(styles.tierPrice, 'h3')}>
+            ${tier.price}
+            <span className="h6">
+              /mo{tier.price !== 0 && <FootnoteMarker>1</FootnoteMarker>}
+            </span>
+          </p>
+        </>
       )}
 
       {!tier.showPrice && (
         <p className={classNames(styles.tierPrice, 'h3')}>
           Contact Us
         </p>
+      )}
+
+      {tier.description && (
+        <p className={styles.tierDescription}>{tier.description}</p>
       )}
 
     </div>
@@ -107,13 +129,65 @@ const DataBlock = ({
   </div>
 );
 
-const SupportRow = () => {
-  const title = 'Support';
+
+const TRTRow = () => {
+  const title = 'Target Response Times'
   const rows = [
-    'Supported Ticket Severities',
-    'Available Hours for Support',
-    'Available Channels',
-    'Maintenance Operation Hours',
+    'Low Priority', 'Normal Priority', 'High Priority', 'Urgent Priority'
+  ]
+  return (
+    <>
+      <HeadingBlock
+        className={styles.trtHeadingBlock}
+        title={title}
+        items={rows}
+        footnote={null}
+        footnoteRow={null}
+      />
+       <DataBlock
+        tier="Standard"
+        className={styles.standardTrtBlock}
+        title={title}
+        rows={rows}
+        items={[
+          '2 Business Days', '1 Business Day', '1 Business Day', '1 Business Day'
+        ]}
+      />
+      <DataBlock
+        tier="Premium"
+        className={styles.premiumTrtBlock}
+        title={title}
+        rows={rows}
+        items={[
+          '2 Business Days', '1 Business Day', '3 Business Hours', '3 Business Hours'
+        ]}
+      />
+
+      <DataBlock
+        tier="Enterprise"
+        className={styles.enterpriseTrtBlock}
+        title={title}
+        rows={rows}
+        items={[
+          '2 Business Days', '1 Business Day', '3 Business Hours', '1 Calendar Hour'
+        ]}
+        footnote={null}
+        footnoteRow={null}
+      />
+    </>
+  );
+}
+
+const SupportRow = () => {
+  const title = 'Support Options';
+  const rows = [
+    '24/7 Support (for Urgent)',
+    'Email and Zendesk Support',
+    'Slack Support (for Low/Normal)',
+    'Production Readiness Reviews',
+    'Architectural Reviews',
+    'Technical Account Manager',
+    'Quarterly Reviews'
   ];
 
   return (
@@ -123,7 +197,7 @@ const SupportRow = () => {
         title={title}
         items={rows}
         footnote={2}
-        footnoteRow={4}
+        footnoteRow={3}
       />
 
       <DataBlock
@@ -132,10 +206,7 @@ const SupportRow = () => {
         title={title}
         rows={rows}
         items={[
-          'Low, Normal',
-          '9am-6pm ET, M-F',
-          'Email, Zendesk',
-          '9am-9pm ET, M-F',
+          'N/A', '✔ Included', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'
         ]}
       />
 
@@ -145,10 +216,7 @@ const SupportRow = () => {
         title={title}
         rows={rows}
         items={[
-          'Low, Normal, High',
-          '9am-6pm ET, M-F',
-          'Email, Zendesk',
-          '9am-9pm ET, M-F',
+          'N/A', '✔ Included', 'N/A', '✔ Included', 'N/A', '✔ Included', 'N/A'
         ]}
       />
 
@@ -158,13 +226,10 @@ const SupportRow = () => {
         title={title}
         rows={rows}
         items={[
-          'Low, Normal, High, Urgent',
-          '24/7 (for Urgent tickets)',
-          'Email, Zendesk, Slack',
-          '9am-9pm ET, M-F',
+          '✔ Included', '✔ Included', '✔ Included', '✔ Included', '✔ Included', '✔ Included', '✔ Included'
         ]}
-        footnote={1}
-        footnoteRow={3}
+        footnote={null}
+        footnoteRow={null}
       />
     </>
   );
@@ -251,8 +316,7 @@ const Details = () => (
   <div className={styles.details}>
     <div className={styles.detailsLeft}>
       <h5>In-scope Support</h5>
-      <p>In-Scope support requests are included in all support plans.</p>
-      <p className={styles.smallHeading}>Included in-scope support requests</p>
+      <p>In-Scope support requests are included in all support plans. Examples include:</p>
       <ul>
         <li>Answering questions about Aptible services and features</li>
         <li>
@@ -266,40 +330,20 @@ const Details = () => (
           VPC, TGW, VPN initial setup, configuration verification and update
         </li>
       </ul>
-
+    </div>
+    <div className={styles.detailsRight}>
       <h5>
-        Maintenance Operations<FootnoteMarker>2</FootnoteMarker>
+        Maintenance Operations
       </h5>
       <p>
         Maintenance operations are operations that require more downtime than a
-        traditional “restart” operation and are not self-service.
+        traditional “restart” operation and are not self-service. Example maintenance operations:
       </p>
-      <p className={styles.smallHeading}>Example maintenance operations</p>
+
       <ul>
         <li>Major database version upgrades</li>
         <li>VPN tunnel replacements</li>
         <li>Environment migrations (shared-tenancy to dedicated-tenancy)</li>
-      </ul>
-    </div>
-
-    <div className={styles.detailsRight}>
-      <h5>
-        Beyond Support<FootnoteMarker>3</FootnoteMarker>
-      </h5>
-      <p>
-        Beyond Support requests are included in Premium and Enterprise support
-        plans only.
-      </p>
-      <p className={styles.smallHeading}>Included Beyond Support requests</p>
-      <ul>
-        <li>Developing your application code</li>
-        <li>Debugging custom software</li>
-        <li>Performing manual system administration tasks</li>
-        <li>Architectural review</li>
-        <li>
-          Live debugging of VPN connectivity issues with customers or partners
-        </li>
-        <li>Database upgrades outside of maintenance operation hours</li>
       </ul>
     </div>
   </div>
@@ -309,11 +353,10 @@ export default () => (
   <Container>
     <TierHeading />
     <Divider className={styles.supportDivider} />
+    <TRTRow />
+    <Divider className={styles.supportDivider} />
     <SupportRow />
-    <Divider className={styles.beyondDivider} />
-    <BeyondRow />
     <Footnotes footnotes={footnotes} />
-    <ResponseTimes />
     <GetStarted />
     <Details />
   </Container>
