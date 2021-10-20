@@ -26,38 +26,15 @@ export default ({ jobs }) => (
         <h1>Current Openings</h1>
       </div>
 
-      <div className={styles.jobsList}>
-        {jobs.map((job, idx) => (
-          <div className={styles.job} key={idx}>
-            <a
-              href={job.node.hostedUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Grid>
-                <div className={styles.team}>
-                  <h6 className="small">{job.node.categories.team}</h6>
-                </div>
-                <div className={styles.jobTitle}>
-                  <h5>{job.node.text}</h5>
-                </div>
-                <div className={styles.location}>
-                  <h6 className="small">{job.node.categories.location}</h6>
-                </div>
-                <div className={styles.commitment}>
-                  <div className={styles.arrow}>{arrowIcon}</div>
-                </div>
-              </Grid>
-            </a>
-          </div>
-        ))}
-      </div>
-
       <div className={styles.cta}>
-        <ArrowButton
+        <div><ArrowButton
+          href="https://boards.greenhouse.io/aptible"
+          text="Check out our current openings"
+        /></div>
+        <div><ArrowButton
           to="/owners-manual/interviewing-with-aptible/"
           text="Learn More About Interviewing with Aptible"
-        />
+        /></div>
       </div>
     </Grid>
   </div>
