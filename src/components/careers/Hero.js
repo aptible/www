@@ -10,7 +10,7 @@ export default () => (
       <h1 className="hero">
         Want to build the future of privacy and security on the web? Join us.
       </h1>
-      <Button to="/careers/#openings">See Job Openings</Button>
+      <Button href="https://boards.greenhouse.io/aptible">See Job Openings</Button>
     </div>
   </Grid>
 );
