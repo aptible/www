@@ -27,7 +27,6 @@ This page provides a list of vendors with whom we share personal information as 
 | [Fullstory](https://www.fullstory.com/) | Analytics | United States |
 | [Google Inc](https://about.google/) | Cloud service provider & marketing analytics | United States |
 | [Gong](https://www.gong.io/) | Webinar and meeting recording & analytics | United States |
-| [Hotjar](https://www.hotjar.com) | Analytics | Malta |
 | [Hubspot](https://www.hubspot.com/) | Customer relationship management, onsite chat & marketing automation | United States |
 | [New Relic](https://newrelic.com) | Logging and monitoring | United States |
 | [Postmark](https://postmarkapp.com) | Email | United States |
