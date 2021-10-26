@@ -39,7 +39,7 @@ export const SignupForm = ({
 
     // Give time for HubSpot & analytics to fire
     setTimeout(() => {
-      window.location = `https://dashboard.aptible.com/signup?email=${email}`;
+      window.location = `https://dashboard.aptible.com/signup?email=${encodeURIComponent(email)}`;
     }, 250);
   };
 
