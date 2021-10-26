@@ -1,8 +1,7 @@
 import * as queryString from 'query-string';
 import React, { useState } from 'react';
-import { navigate } from 'gatsby'
 import cn from 'classnames';
-import styles from './LeadForm.module.css';
+import styles from './SignupForm.module.css';
 import buttonStyles from '../buttons/Button.module.css';
 import { event, identify, trackOnLinkedIn } from '../../lib/aptible/analytics';
 import { querystring } from '../../lib/util';
@@ -14,20 +13,16 @@ const validateEmail = email => {
   return { ok: true, message: '' };
 };
 
-export const LeadForm = ({
+export const SignupForm = ({
   id,
-  btnText = 'Get a demo',
-  successText = 'Thanks! Our team will contact you to schedule a demo shortly.',
+  btnText = 'Sign Up For Free',
   inputPlaceholder = 'Enter your email',
-  scheduleDemoOnSubmit = true,
-  calendarId = 'frank-macreery',
-  onSuccess = () => {},
+  onSuccess = () => { },
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const queryParams = queryString.parse(querystring());
-  const shouldShowSuccessMessage = !scheduleDemoOnSubmit && submitted;
 
   const onSubmit = () => {
     const result = validateEmail(email);
@@ -42,15 +37,16 @@ export const LeadForm = ({
     trackOnLinkedIn();
     onSuccess();
 
-    if (scheduleDemoOnSubmit) {
-      navigate(`/p/schedule-a-demo?calendar=${calendarId}`)
-    }
+    // Give time for HubSpot & analytics to fire
+    setTimeout(() => {
+      window.location = `https://dashboard.aptible.com/signup?email=${email}`;
+    }, 250);
   };
 
   return (
     <div>
       <iframe
-        title="Lead Form"
+        title="Signup Form"
         name="captureFrame"
         height="0"
         width="0"
@@ -58,21 +54,21 @@ export const LeadForm = ({
       />
 
       <div
-        className={styles.leadFormContainer}
+        className={styles.signupFormContainer}
         style={{ opacity: submitted ? 0 : 1 }}
       >
         <form
           id={id}
           onSubmit={onSubmit}
           target="captureFrame"
-          className={styles.leadForm}
+          className={styles.signupForm}
         >
           {utmKeywords.map(k => (
             <input hidden readOnly name={k} key={k} value={queryParams[k]} />
           ))}
           <input
             required
-            className={styles.leadFormInput}
+            className={styles.signupFormInput}
             onChange={e => setEmail(e.target.value)}
             type="email"
             placeholder={inputPlaceholder}
@@ -86,10 +82,6 @@ export const LeadForm = ({
         </form>
         <div className={styles.error}>{error ? error : ''}</div>
       </div>
-
-      {shouldShowSuccessMessage && (
-        <div className={styles.submissionNotification}>{successText}</div>
-      )}
     </div>
   );
 };

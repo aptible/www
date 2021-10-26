@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Grid } from '../grid/Grid';
 import styles from './Hero.module.css';
 import hipaaBadge from '../../images/home/badges/hipaa-24x24.svg';
@@ -7,7 +8,7 @@ import soc2Badge from '../../images/home/badges/soc-24x24.svg';
 import dashboardIlly from '../../images/home/illustrations/deploy-container-metrics-dashboard.svg';
 import deployConsoleIlly from '../../images/home/illustrations/deploy-console.svg';
 import mobileHero from '../../images/home/illustrations/mobile-hero-dashboard.svg';
-import LeadForm from '../../components/lead-form';
+import SignupForm from '../../components/signup-form';
 
 export const CompliancePills = () => {
   return (
@@ -49,16 +50,16 @@ export default () => (
         </div>
 
         <div className={styles.leadFormWrapper}>
-          <LeadForm
-            id="Home Page Hero - Request a Demo"
+          <SignupForm
+            id="Home Page Hero - Product Signup"
             inputPlaceholder="Enter your email"
           />
           <div className={styles.signUpYourself}>
             <p className="M">
-              Or try it yourself.{' '}
-              <a href="https://dashboard.aptible.com/signup">
-                Sign up for a free account today
-              </a>
+              Still have questions? {' '}
+              <Link to="/p/schedule-a-demo/">
+                Schedule a demo
+              </Link>
             </p>
           </div>
         </div>

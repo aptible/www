@@ -44,7 +44,16 @@ a.closeButton:hover {
 
 .content {
   grid-row: 2;
-  grid-column: 1 / span 7;
+  grid-column: 2 / span 5;
+  text-align: center;
+}
+
+.content h2 {
+  margin-bottom: 3rem;
+}
+
+.content h2 span {
+  color: var(--aptible-green);
 }
 
 @media (--mobile) {
@@ -56,5 +65,9 @@ a.closeButton:hover {
   .close {
     padding-top: 30px;
     grid-column: 5 / span 3;
+  }
+
+  .content {
+    grid-column: 1 / span 7;
   }
 }

@@ -64,11 +64,6 @@ export default function HTML(props) {
         <script dangerouslySetInnerHTML={{ __html: segmentJs }} />
         <script dangerouslySetInnerHTML={{ __html: hotjarJs }} />
         <script dangerouslySetInnerHTML={{ __html: aptibleJs }} />
-        <script
-          charset="utf-8"
-          type="text/javascript"
-          src="//js.hsforms.net/forms/shell.js"
-        />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -81,6 +76,14 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js.hs-scripts.com/20235662.js"
+        />
       </body>
     </html>
   );
