@@ -37,16 +37,17 @@ export default () => (
       body="Complete audits faster with well-documented controls, clear
       audit trails for third parties, and all of the security and
       compliance features you need get certified."
-      leadFormId="Home Page - Request a Demo"
+      formId="Home Page - Product Signup"
     />
     <Solutions />
     <SecurityControls />
     <CenteredDemoForm
       title="Use Aptible and Deploy in Three Steps"
       body="Save your engineering team the headache of building compliant infra on AWS. Use Aptible and get back to building your product. Request a demo to see how it works."
-      leadFormId="Home Page - Request a Demo"
+      formId="Home Page - Product Signup"
     />
     <WhoUses />
     <ZeroTo />
   </AptibleLayout>
 );
+

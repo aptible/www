@@ -6,7 +6,7 @@ import ZeroTo from '../../components/footer/ZeroTo';
 import { Grid } from '../../components/grid/Grid';
 import Nav from '../../components/shared/Nav';
 import AptibleLayout from '../../components/layouts/AptibleLayout';
-import LeadForm from '../../components/lead-form';
+import SignupForm from '../../components/signup-form';
 import CenteredDemoForm from '../../components/deploy/CenteredDemoForm';
 import Feature from './components/Feature';
 import Testimonial from './components/Testimonial';
@@ -204,7 +204,7 @@ export default () => (
         </div>
 
         <div className={cn(styles.heroItem, styles.leadContainer)}>
-          <LeadForm id={LEAD_FORM_ID} />
+          <SignupForm id={LEAD_FORM_ID} />
         </div>
 
         <div className={styles.heroItem}>
@@ -288,7 +288,7 @@ export default () => (
           title="Don't reinvent infrastructure security--use Aptible instead."
           body="See how using Aptible can help get your product to market faster without
                 compromising on security."
-          leadFormId={LEAD_FORM_ID}
+          formId={LEAD_FORM_ID}
         />
 
         <div className={styles.block} id="audit">
@@ -321,7 +321,7 @@ export default () => (
           title="Don't reinvent infrastructure security--use Aptible instead."
           body="See how using Aptible can help get your product to market faster
                 without compromising on security."
-          leadFormId={LEAD_FORM_ID}
+          formId={LEAD_FORM_ID}
         />
 
         <div className={styles.block} id="support">

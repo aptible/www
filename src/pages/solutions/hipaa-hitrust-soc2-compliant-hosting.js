@@ -7,7 +7,7 @@ import { Grid } from '../../components/grid/Grid';
 import ZeroTo from '../../components/footer/ZeroTo';
 import Nav from '../../components/shared/Nav';
 import AptibleLayout from '../../components/layouts/AptibleLayout';
-import LeadForm from '../../components/lead-form';
+import SignupForm from '../../components/signup-form';
 import CenteredDemoForm from '../../components/deploy/CenteredDemoForm';
 import complianceBadges from '../../images/all-compliance-badges-line.svg';
 import Feature from './components/Feature';
@@ -188,7 +188,7 @@ export default () => (
         </div>
 
         <div className={cn(styles.heroItem, styles.leadContainer)}>
-          <LeadForm id={LEAD_FORM_ID} />
+          <SignupForm id={LEAD_FORM_ID} />
         </div>
       </div>
     </Grid>
@@ -248,7 +248,7 @@ export default () => (
         <CenteredDemoForm
           title="Get started today."
           body="Don't spend another minute building for compliance without first talking to Aptible."
-          leadFormId={LEAD_FORM_ID}
+          formId={LEAD_FORM_ID}
         />
 
         <div className={styles.block} id="soc2">
