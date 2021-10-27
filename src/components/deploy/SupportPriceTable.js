@@ -1,31 +1,32 @@
 import React from 'react';
 import classNames from 'classnames';
+import { Link } from 'gatsby';
 import ArrowButton from '../buttons/ArrowButton';
 import Footnotes, { FootnoteMarker } from '../shared/Footnotes';
 import styles from './SupportPriceTable.module.css';
 
 const tiers = [
-  { name: 'Standard', showPrice: true, price: 0, description: 'Recommended for non-criticial workloads' },
-  { name: 'Premium', showPrice: true, price: 499, description: 'Recommended for production workloads that do not require 24/7 support' },
+  { name: 'Standard', showPrice: true, price: 0, description: 'Recommended for production workloads' },
+  { name: 'Premium', showPrice: true, price: 499, description: 'Recommended for production workloads, with same day Support for tickets submitted before 3PM during the work week.' },
   { name: 'Enterprise', showPrice: true, price: 1499, description: 'Recommended for critcal production workloads that require 24/7 support' }
 ];
 
 const footnotes = [
   {
     marker: 1,
-    note:
-      'Support Plan Pricing + 3% of your monthly invoice'
-  },
-  {
-    marker: 2,
-    note:
-      'Support via Slack is only offered at the Low and Normal severity levels, 9am-6pm M-F. For High and Urgent severity issues, a ticket must be opened through Zendesk. After the initial ticket is opened, Aptible may communicate to resolve the issue through Slack if that is mutually agreeable.',
-  },
-  {
-    marker: 3,
     note:(
-      <>Aptible-caused downtimes are subject to the <a href="https://www.aptible.com/legal/service-level-agreement/">Aptible Service-Level Agreement</a> and are not subject to our Support Target Response Times. </>
-    )
+    <>
+      Regardless of support plan, Aptible is committed to best-in-class uptime for all customers.
+      Aptible will use commercially reasonable efforts to make your Aptible Containerized Services running
+      in Dedicated Environments available with a Monthly Uptime Percentage of at least 99.95% during any
+      monthly billing cycle. A Monthly Uptime Percentage of 99.95% means that we guarantee you will
+      experience no more than 21.56 min/month of Unavailability. Unavailability, for app services and
+      databases, is when your service or database is not running or not reachable due to Aptible's fault.
+      ou can find details on our commitment to uptime and company level SLAs
+      <Link to="/legal/service-level-agreement">here</Link>. The Support plans and their associated target
+      response times are for roadblocks that customers run into while Aptible Services are up and running
+      as expected.
+    </>)
   }
 ];
 
@@ -51,15 +52,15 @@ const TierHeading = () =>
 
       {tier.showPrice && (
         <>
-          {tier.price !== 0 && (
-            <p className={styles.tierStartingAt}>Starting at</p>
-          )}
           <p className={classNames(styles.tierPrice, 'h3')}>
             ${tier.price}
             <span className="h6">
-              /mo{tier.price !== 0 && <FootnoteMarker>1</FootnoteMarker>}
+              /mo
             </span>
           </p>
+          {tier.price !== 0 && (
+            <p className={styles.priceSubtext}>+3% of Monthly Invoice</p>
+          )}
         </>
       )}
 
@@ -141,8 +142,8 @@ const TRTRow = () => {
         className={styles.trtHeadingBlock}
         title={title}
         items={rows}
-        footnote={null}
-        footnoteRow={null}
+        footnote={1}
+        footnoteRow={0}
       />
        <DataBlock
         tier="Standard"
@@ -196,8 +197,8 @@ const SupportRow = () => {
         className={styles.supportHeadingBlock}
         title={title}
         items={rows}
-        footnote={2}
-        footnoteRow={3}
+        footnote={null}
+        footnoteRow={null}
       />
 
       <DataBlock
@@ -244,7 +245,7 @@ const BeyondRow = () => {
       <HeadingBlock
         className={styles.beyondHeadingBlock}
         title={title}
-        footnote={3}
+        footnote={null}
         items={rows}
       />
 
