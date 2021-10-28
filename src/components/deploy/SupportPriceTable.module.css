@@ -166,10 +166,10 @@
   margin: 0;
 }
 
-.tierHeading .tierStartingAt {
-  font-size: 12px;
+.tierHeading .priceSubtext {
+  font-size: 14px;
   margin: 0;
-  color: var(--white-fifty);
+  color: var(--white-seventy);
 }
 
 .tierHeadingStandard {
