@@ -64,7 +64,7 @@ export default ({
       </div>
       {includeVideo && (
         <div className={styles.videoContainer}>
-          <WistiaVideo videoId="somm4d44rt" />
+          <WistiaVideo videoId="vesrt04o10" />
         </div>
       )}
     </div>
