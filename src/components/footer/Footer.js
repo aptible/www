@@ -74,8 +74,10 @@ const Footer = () => (
     <Grid rows="3">
       <div className={styles.product}>
         <h6 className="small">Product</h6>
-        <Link to="/features">Features</Link>
         <Link to="/pricing-plans/#deploy">Pricing</Link>
+        <Link to="/solutions/secure-cloud-infrastructure">Fully-Managed Security for Your Cloud Infrastructure</Link>
+        <Link to="/solutions/hipaa-hitrust-soc2-compliant-hosting">Prove Compliance and Pass Security Audits</Link>
+        <Link to="/solutions/reliable-devops">Reliable DevOps Without the Overhead</Link>
       </div>
 
       <div className={styles.resources}>

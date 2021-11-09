@@ -83,13 +83,6 @@ export default () => {
                 you have completed the pre-assessment, to review the results of
                 your assessment and discuss additional recommendations.
               </p>
-              <p className="L">
-                Upon successful completion of the PRR and CRE approval, Aptible
-                will provide you access to Urgent Support at no additional cost.
-                You will have 24/7 access for urgent priority requests and an
-                Aptible engineer will follow-up within one hour of the request
-                being made.
-              </p>
             </div>
           </div>
         </Grid>
