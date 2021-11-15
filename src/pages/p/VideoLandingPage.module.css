@@ -54,6 +54,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 4rem 0;
 }
 
 .testimonialImage {
@@ -92,6 +93,16 @@
 
 .formWrapper {
   margin-bottom: 48px;
+}
+
+.signupFormWrapper {
+  margin-bottom: 48px;
+  width: 45%;
+}
+
+.signupFormWrapperBig {
+  margin-bottom: 48px;
+  width: 55%;
 }
 
 .meetingsFormWrapper {
@@ -133,5 +144,10 @@
 
   .meetingsFormWrapper {
     width: 100%;
+  }
+
+  .signupFormWrapper,
+  .signupFormWrapperBig {
+    width: 90%;
   }
 }
