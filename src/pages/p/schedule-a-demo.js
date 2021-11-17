@@ -12,7 +12,7 @@ const availableCalendars = {
   'skylar-anderson': 1
 }
 
-const DEFAULT_CALENDAR = 'frank-macreery';
+const DEFAULT_CALENDAR = 'skylar-anderson';
 const LINKEDIN_CONVERSION_ID = '5063932';
 
 const getCalendarIdFromQueryParam = (calendar) => {
