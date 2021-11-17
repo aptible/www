@@ -20,7 +20,7 @@ export const LeadForm = ({
   successText = 'Thanks! Our team will contact you to schedule a demo shortly.',
   inputPlaceholder = 'Enter your email',
   scheduleDemoOnSubmit = true,
-  calendarId = 'frank-macreery',
+  calendarId = 'skylar-anderson',
   onSuccess = () => {},
 }) => {
   const [submitted, setSubmitted] = useState(false);
