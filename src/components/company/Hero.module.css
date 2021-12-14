@@ -37,6 +37,11 @@
   margin-bottom: 45px;
 }
 
+.video {
+  width: 640px;
+  height: 320px;
+}
+
 @media (--mobile) {
   .container {
     margin-bottom: 0;

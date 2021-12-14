@@ -8,10 +8,10 @@ import Analytics from '../shared/Analytics';
 const AptibleLayout = ({ children }) => (
   <>
     <HelloBar
-      id="blog-greater-focus-on-deploy-as-comply-becomes-conveyor"
-      to="/blog/greater-focus-on-deploy-as-comply-becomes-conveyor/"
-      callout="Announcement"
-      text="Aptible Comply is now Conveyor. Click here to learn more."
+      id="p-2021-year-in-review"
+      to="/p/2021-year-in-review"
+      callout="2021 Year in Review"
+      text="Watch Aptible CEO, Frank Macreery, review highlights from 2021 and preview what's coming in 2022."
     />
     <Header />
     <CookieConsent />
