@@ -4,10 +4,6 @@ import classnames from 'classnames';
 
 import Title from './components/Title';
 import Video from './components/Video';
-import Testimonial from './components/Testimonial';
-import LeadForm from '../../components/lead-form';
-import WistiaVideo from '../../components/shared/WistiaVideo';
-
 import styles from './VideoLandingPage.module.css';
 
 export default () => {
@@ -21,7 +17,7 @@ export default () => {
         />
         <meta
           property="og:image"
-          content="https://aptible.com/assets/hipaa-readiness-meta.png"
+          content="https://aptible.com/assets/2021-year-in-review.png"
         />
       </Helmet>
       <div className={styles.layout}>
