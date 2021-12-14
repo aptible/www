@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styles from '../VideoLandingPage.module.css';
-export default () => {
+export default ({ videoId="faliwbcnei" }) => {
   return (
     <div className={styles.video}>
       <Helmet>
         <script
-          src="https://fast.wistia.com/embed/medias/faliwbcnei.jsonp"
+          src={`https://fast.wistia.com/embed/medias/${videoId}.jsonp`}
           async
         />
         <script src="https://fast.wistia.com/assets/external/E-v1.js" async />
@@ -28,7 +28,7 @@ export default () => {
           }}
         >
           <div
-            className="wistia_embed wistia_async_faliwbcnei videoFoam=true"
+            className={`wistia_embed wistia_async_${videoId} videoFoam=true`}
             style={{ height: '100%', position: 'relative', width: '100%' }}
           >
             <div
@@ -44,7 +44,7 @@ export default () => {
               }}
             >
               <img
-                src="https://fast.wistia.com/embed/medias/faliwbcnei/swatch"
+                src={`https://fast.wistia.com/embed/medias/${videoId}/swatch`}
                 style={{
                   filter: 'blur(5px)',
                   height: '100%',
