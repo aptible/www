@@ -1,0 +1,18 @@
+.intro {
+  padding: 32px 64px;
+}
+
+.intro h1 {
+  padding-bottom: 32px;
+}
+
+.links {
+  margin-bottom: 32px;
+}
+
+.transcript {
+  margin-top: 32px;
+  padding: 64px;
+  background: var(--aptible-black-light);
+  text-align: left;
+}
