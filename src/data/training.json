@@ -1,0 +1,177 @@
+{
+  "business-continuity": {
+    "modules": [
+      { "key": "introduction", "name": "Introduction"
+      },
+      { "key": "basics", "name": "Aptible Incident Response and Business Continuity Training"
+      },
+      { "key": "tabletop-exercises-1", "name": "Business Continuity Tabletop Exercises"
+      },
+      { "key": "tabletop-exercises-2", "name": "How to pick scenarios for tabletop exercises"
+      },
+      { "key": "functional-exercises", "name": "Business Continuity Functional Exercises"
+      },
+      { "key": "questions", "name": "Questions"
+      }
+    ]
+  },
+  "culture-and-security": {
+    "modules": [
+      { "key": "objectives", "name": "Objectives"
+      },
+      { "key": "world", "name": "The world has changed"
+      },
+      { "key": "questions", "name": "What do you want to know?"
+      },
+      { "key": "what-is-isms", "name": "What is an ISMS?"
+      },
+      { "key": "isms", "name": "Information Security Management System"
+      },
+      { "key": "isms-parameters", "name": "ISMS Parameters = ƒ(Requirements • Risk)"
+      },
+      { "key": "what-is-risk", "name": "What is a risk?"
+      },
+      { "key": "buckets-of-risk", "name": "Buckets of risk"
+      },
+      { "key": "threat-sources", "name": "Threat Sources"
+      },
+      { "key": "risk-statement-format", "name": "Risk Statement Format"
+      },
+      { "key": "opm-breach", "name": "The OPM Breach"
+      },
+      { "key": "hierarchy", "name": "Security Hierarchy"
+      },
+      { "key": "build-security-culture", "name": "How Can You Build a Great Security Culture?"
+      },
+      { "key": "discussion", "name": "Discussion"
+      },
+      { "key": "next-steps", "name": "Next Steps"
+      }
+    ]
+  },
+  "gdpr-awareness": {
+    "modules": [
+      { "key": "introduction", "name": "Introduction" },
+      { "key": "objectives", "name": "Objectives" },
+      { "key": "history", "name": "The History of Data Protection in Europe" },
+      { "key": "what-is-gdpr", "name": "What is the GDPR?" },
+      { "key": "scope", "name": "The Scope of the GDPR" },
+      { "key": "data-protection-terms", "name": "Data Protection Terms" },
+      { "key": "data-processing-principles", "name": "Data Processing Principles" },
+      { "key": "accountability", "name": "Accountability Under the GDPR" },
+      { "key": "data-subject-requests", "name": "Data Subject Rights" },
+      { "key": "responding-data-subject-requests", "name": "Responding to Data Subject Requests" },
+      { "key": "dpia", "name": "Data Protection Impact Assessments" },
+      { "key": "eprivacy-directive", "name": "The ePrivacy Directive, Direct Marketing, and Cookies" },
+      { "key": "international-data-transfers", "name": "International Data Transfers" },
+      { "key": "enforcement", "name": "Enforcement" },
+      { "key": "recent-enforcement-actions", "name": "Recent Enforcement Actions" },
+      { "key": "conclusion", "name": "Conclusion" },
+      { "key": "attestation", "name": "Attestation" }
+    ]
+  },
+  "hipaa-workforce": {
+    "modules": [
+      { "key": "introduction", "name": "Introduction" },
+      { "key": "objectives", "name": "Objectives" },
+      { "key": "what-is-hipaa", "name": "What is HIPAA" },
+      { "key": "protected-health-information", "name": "Protected Health Information (PHI)" },
+      { "key": "phi-continued", "name": "PHI" },
+      { "key": "hipaa-compliant", "name": "What does it mean to be \"HIPAA Compliant\"?" },
+      { "key": "privacy", "name": "Privacy" },
+      { "key": "privacy-3-rules", "name": "Privacy - 3 Simple Rules" },
+      { "key": "privacy-rule-1", "name": "Privacy - Rule #1" },
+      { "key": "privacy-rule-2", "name": "Privacy - Rule #2" },
+      { "key": "privacy-rule-3", "name": "Privacy - Rule #3" },
+      { "key": "security", "name": "Security" },
+      { "key": "security-2-rules", "name": "Security - 2 Simple Rules" },
+      { "key": "security-rule-1", "name": "Security - Rule #1" },
+      { "key": "security-rule-2", "name": "Security - Rule #2" },
+      { "key": "mandatory-reporting", "name": "Mandatory Reporting" },
+      { "key": "sanctions", "name": "Sanctions" },
+      { "key": "criminal-penalties", "name": "Criminal Penalties" },
+      { "key": "bring-home", "name": "Bring it Home" },
+      { "key": "objectives-recap", "name": "Objectives Recap" },
+      { "key": "next-steps", "name": "Next Steps" },
+      { "key": "attestation", "name": "Attestation" },
+      { "key": "quiz", "name": "Quiz" },
+      { "key": "feedback", "name": "Feedback" }
+    ]
+  },
+  "security-awareness": {
+    "modules": [
+      { "key": "introduction", "name": "Introduction"
+      },
+      { "key": "objectives", "name": "Objectives"
+      },
+      { "key": "security-goals", "name": "Security Goals"
+      },
+      { "key": "security-culture", "name": "Security Culture"
+      },
+      { "key": "risk", "name": "Risk"
+      },
+      { "key": "likelihood", "name": "Likelihood"
+      },
+      { "key": "bad-things", "name": "Bad Things"
+      },
+      { "key": "passwords", "name": "Passwords"
+      },
+      { "key": "credential-sniffing", "name": "Credential Sniffing"
+      },
+      { "key": "passwords-in-common", "name": "Passwords"
+      },
+      { "key": "choosing-a-password", "name": "Choosing a Password"
+      },
+      { "key": "credential-leakage", "name": "Credential leakage and linked accounts"
+      },
+      { "key": "mfa", "name": "2-factor authentication"
+      },
+      { "key": "social-engineering", "name": "Social Engineering"
+      },
+      { "key": "social-engineering-phishing", "name": "Phishing"
+      },
+      { "key": "social-engineering-phishing-2", "name": "Phishing"
+      },
+      { "key": "social-engineering-phishing-3", "name": "Phishing"
+      },
+      { "key": "social-engineering-phishing-4", "name": "Phishing"
+      },
+      { "key": "social-engineering-phishing-5", "name": "Phishing"
+      },
+      { "key": "social-engineering-phishing-6", "name": "Phishing"
+      },
+      { "key": "avoiding-social-engineering", "name": "Avoiding Social Engineering"
+      },
+      { "key": "insider-threats", "name": "Insider Threats"
+      },
+      { "key": "laptops", "name": "Laptops"
+      },
+      { "key": "user-device-risks", "name": "User Device Risks"
+      },
+      { "key": "user-device-risks-2", "name": "User Device Risks"
+      },
+      { "key": "user-device-controls", "name": "User Device Controls"
+      },
+      { "key": "mac-malware", "name": "Mac Malware"
+      },
+      { "key": "osx-warnings", "name": "OSX Warnings"
+      },
+      { "key": "browsers", "name": "Browsers"
+      },
+      { "key": "browser-risks", "name": "Browser Risks"
+      },
+      { "key": "social-engineering-browser", "name": "Social Engineering in the Browser"
+      },
+      { "key": "security-policies", "name": "Security Policies"
+      },
+      { "key": "personal-use-byod", "name": "Personal Use and BYOD"
+      },
+      { "key": "mandatory-reporting", "name": "Mandatory Reporting"
+      },
+      { "key": "objectives-review", "name": "Objectives"
+      },
+      { "key": "ongoing-security-awareness", "name": "Ongoing Security Awareness"
+      }
+    ]
+  }
+}
