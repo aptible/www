@@ -20,6 +20,13 @@ export default () => (
         Open a Ticket
       </a>
       <a
+        href="https://community.aptible.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Community
+      </a>
+      <a
         href="https://status.aptible.com/"
         target="_blank"
         rel="noopener noreferrer"
