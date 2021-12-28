@@ -16,7 +16,7 @@ const stickyNavItems = [
   { title: 'How Aptible Works', ref: '#how-aptible-works' },
   { title: 'Solutions', ref: '#solutions' },
   { title: 'Aptible vs DIY on AWS', ref: '#aptible-vs-aws' },
-  { title: 'Who Uses Deploy', ref: '#who-uses-deploy' },
+  { title: 'Who Uses Aptible', ref: '#who-uses-deploy' },
 ];
 
 export default () => (

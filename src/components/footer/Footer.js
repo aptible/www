@@ -90,13 +90,9 @@ const Footer = () => (
 
       <div className={styles.support}>
         <h6 className="small">Support</h6>
-        <a
-          href="https://aptible.zendesk.com/hc/en-us/requests/new"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Contact Support
-        </a>
+        <a href="https://community.aptible.com">Community</a>
+        <a href="https://deploy-docs.aptible.com">Documentation</a>
+        <a href="https://deploy-docs.aptible.com/changelog">Changelog</a>
         <a
           href="https://status.aptible.com/"
           target="_blank"
@@ -104,8 +100,13 @@ const Footer = () => (
         >
           Aptible Status
         </a>
-        <a href="https://deploy-docs.aptible.com/changelog">Changelog</a>
-        <a href="https://deploy-docs.aptible.com">Documentation</a>
+        <a
+          href="https://aptible.zendesk.com/hc/en-us/requests/new"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contact Support
+        </a>
       </div>
 
       <div className={styles.company}>
@@ -162,6 +163,8 @@ const Footer = () => (
           <h6 className="small">support@aptible.com</h6>
         </a>
       </div>
+
+      <div className={styles.newsletter} />
 
       <div className={styles.copyright}>
         <div>
