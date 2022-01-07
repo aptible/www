@@ -83,7 +83,8 @@ const Footer = () => (
       <div className={styles.resources}>
         <h6 className="small">Resources</h6>
         <Link to="/customers/">Customers</Link>
-        <Link to="/resources/guides/">Resource Library</Link>
+        <Link to="/resources/">Resource Library</Link>
+        <Link to="/training/">Training</Link>
         <Link to="/blog/">Blog</Link>
         <Link to="/blog/category/engineering/">Engineering Blog</Link>
       </div>

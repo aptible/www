@@ -1,5 +1,6 @@
 {
   "business-continuity": {
+    "description": "Covers the concepts related to business continuity; the content of your actual Business Continuity policies, plan, and playbooks; and your ongoing obligations related to training and exercises.",
     "modules": [
       { "key": "introduction", "name": "Introduction"
       },
@@ -16,6 +17,7 @@
     ]
   },
   "culture-and-security": {
+    "description": "How good security and privacy management helps answer critical questions about your business, how your culture affects risk, and how you can build a great security and privacy culture.",
     "modules": [
       { "key": "objectives", "name": "Objectives"
       },
@@ -50,6 +52,7 @@
     ]
   },
   "gdpr-awareness": {
+    "description": "This training is designed to give you a basic working knowledge of the GDPR and what you need to know about it to do your job.",
     "modules": [
       { "key": "introduction", "name": "Introduction" },
       { "key": "objectives", "name": "Objectives" },
@@ -71,6 +74,7 @@
     ]
   },
   "hipaa-workforce": {
+    "description": "This training is designed to give you a basic working knowledge of HIPAA and what you need to know about it to do your job.",
     "modules": [
       { "key": "introduction", "name": "Introduction" },
       { "key": "objectives", "name": "Objectives" },
@@ -99,6 +103,7 @@
     ]
   },
   "security-awareness": {
+    "description": "This training is designed to give you a basic working knowledge of what you need to know about security to do your job. This training is supplemented with training for specific security management frameworks (like HIPAA, GDPR, SOC 2, and ISO 27001).",
     "modules": [
       { "key": "introduction", "name": "Introduction"
       },
