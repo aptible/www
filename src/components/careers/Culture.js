@@ -80,8 +80,8 @@ export default () => (
 
       <div className={styles.cta}>
         <ArrowButton
-          to="/owners-manual/"
-          text="Read the Aptible Owner’s Manual"
+          to="/handbook/"
+          text="Read the Aptible Handbook"
         />
       </div>
     </Grid>

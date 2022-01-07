@@ -380,9 +380,11 @@ exports.createPages = async ({ graphql, actions }) => {
           let markdown = fs.readFileSync(node.absolutePath).toString();
           
           // Edit image paths to point to /static
-          markdown = markdown.replace(/\(images\//g, '(/handbook-assets/');
+          markdown = markdown.replace(/\/?images\//g, '/handbook-assets/');
 
           // Edit link paths
+          markdown = markdown.replace(/\]\(\/?(?!\/?images|https|\/?handbook)/g, '](/handbook/');
+          markdown = markdown.replace(/\.md/g, '/');
 
           // Convert markdown to HTML
           const html = markdownConverter.makeHtml(markdown);

@@ -11,17 +11,26 @@ const parsePages = (pages) => {
 
   pages.edges.forEach((page) => {
     if (page.node.context.section === null) {
-      handbook.root.push(page.node);
+      addPageToSection(page, handbook.root);
     } else {
       if (!handbook.sections[page.node.context.section]) {
         handbook.sections[page.node.context.section] = [];
       }
-      handbook.sections[page.node.context.section].push(page.node);
+      addPageToSection(page, handbook.sections[page.node.context.section]);
     }
 
   });
 
   return handbook;
+};
+
+const addPageToSection = (page, section) => {
+  if (page.node.context.title === 'Overview') {
+    // Overview pages always go at the start of a section
+    section.unshift(page.node);
+  } else {
+    section.push(page.node);
+  }
 };
 
 const NavItemForPage = ({ page }) => {

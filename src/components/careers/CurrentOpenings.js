@@ -32,7 +32,7 @@ export default ({ jobs }) => (
           text="Check out our current openings"
         /></div>
         <div><ArrowButton
-          to="/owners-manual/interviewing-with-aptible/"
+          to="/handbook/recruiting-process/"
           text="Learn More About Interviewing with Aptible"
         /></div>
       </div>

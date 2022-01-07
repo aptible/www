@@ -26,8 +26,8 @@ export const COMPANY_NAV = [
     show: true,
   },
   {
-    title: 'Owner’s Manual',
-    url: '/owners-manual/',
+    title: 'Aptible Handbook',
+    url: '/handbook/',
     show: false,
   },
 ];
@@ -44,11 +44,11 @@ const Company = () => (
       </div>
 
       <div className={styles.calloutContainer}>
-        <Link className={styles.callout} to="/owners-manual/">
+        <Link className={styles.callout} to="/handbook/">
           <img src={teamPhoto} alt="" />
           <div className={styles.calloutText}>
             <h5>
-              Owner’s Manual <span className={styles.arrow}>&rarr;</span>
+              Aptible Handbook <span className={styles.arrow}>&rarr;</span>
             </h5>
             <p>
               Get a clear sense of what this team is — what we mean by “us.”
