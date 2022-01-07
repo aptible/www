@@ -119,10 +119,6 @@
       "body": "Aptible host operating systems are hardened to disable unnecessary services and limit surface area for attacks."
     },
     {
-      "headline": "Web Application Vulnerability Scanning (DAST)",
-      "body": "Applications deployed on Aptbile are continuously scanned for vulnerabilities such as SQL injection and Crosss-site Scripting."
-    },
-    {
       "headline": "Kernel Vulnerability Management",
       "body": "The Aptible Security Team patches kernel vulnerabilities and other host- and network-level issues on your behalf."
     }
