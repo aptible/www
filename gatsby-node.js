@@ -1,6 +1,16 @@
 const path = require('path');
 const yaml = require('js-yaml');
 const fs = require('fs');
+const showdown = require('showdown');
+
+
+const writeImage = async (destinationPath, contents) => {
+  await fs.promises.mkdir(path.dirname(destinationPath), { recursive: true });
+  return fs.promises.writeFile(destinationPath, contents);
+}
+
+const markdownConverter = new showdown.Converter();
+
 
 const BLOG_CATEGORIES = require('./src/data/blog-categories.json');
 const BLOG_POSTS_PER_PAGE = 5;
@@ -14,6 +24,7 @@ for (let protocol of COMPLIANCE_SITES) {
 }
 
 const CASE_STUDIES = require('./src/data/case-studies.json');
+const TRAINING_COURSES = require('./src/data/training.json');
 
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -34,7 +45,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 };
 
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
     graphql(`
@@ -132,6 +143,27 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
 
+        allHandbook: allFile(filter: { sourceInstanceName: { eq: "handbook" } }) {
+          edges {
+            node {
+              name
+              extension
+              relativePath
+              absolutePath
+            }
+          }
+        }
+        
+        allTraining: allFile(filter: { sourceInstanceName: { eq: "training" } }) {
+          edges {
+            node {
+              name
+              extension
+              relativePath
+              absolutePath
+            }
+          }
+        }
       }
     `).then(result => {
       // Create pages for each blog post
@@ -272,6 +304,41 @@ exports.createPages = ({ graphql, actions }) => {
         });
       }
 
+      // Training courses
+      result.data.allTraining.edges.forEach(async ({ node }) => {
+        if (node.extension === 'md' && node.name !== 'README') {
+          let course = node.relativePath.split('/')[0];
+          let markdown = fs.readFileSync(node.absolutePath).toString();
+          let relativePath = `training/${course}/${node.name}/`;
+
+          // Edit image paths to point to /static
+          markdown = markdown.replace(/\.\.\/images\//g, '/training-assets/');
+
+          // Convert markdown to HTML
+          const html = markdownConverter.makeHtml(markdown);
+
+          createPage({
+            path: relativePath,
+            component: path.resolve(`./src/templates/training.js`),
+            context: {
+              slug: node.name,
+              url: relativePath,
+              course: course,
+              html: html,
+              modules: TRAINING_COURSES[course].modules
+            },
+          });
+        }
+
+        // Move images into static folder
+        if (['jpg', 'png', 'gif', 'svg'].indexOf(node.extension) !== -1) {
+          let destinationPath = node.relativePath.replace('images/', './static/training-assets/');
+          let imgData = fs.readFileSync(node.absolutePath);
+
+          writeImage(destinationPath, imgData);
+        }
+      });
+
       for (let caseStudy of CASE_STUDIES) {
         createPage({
           path: `customers/${caseStudy.customer}`,
@@ -296,6 +363,57 @@ exports.createPages = ({ graphql, actions }) => {
             allPages: result.data.allOwnersManualPages.edges
           },
         });
+      });
+
+      result.data.allHandbook.edges.forEach(async ({ node }) => {
+        if (node.extension === 'md') {
+          let relativePath = `handbook/${node.relativePath.replace('.md', '').replace('README', '')}`;
+          if (relativePath.endsWith('/') === false) {
+            relativePath += '/';
+          }
+
+          let section = node.relativePath.split('/')[0];
+          if (section.indexOf('.md') !== -1) {
+            section = null;
+          }
+
+          let markdown = fs.readFileSync(node.absolutePath).toString();
+          
+          // Edit image paths to point to /static
+          markdown = markdown.replace(/\/?images\//g, '/handbook-assets/');
+
+          // Edit link paths
+          markdown = markdown.replace(/\]\(\/?(?!\/?images|https|\/?handbook)/g, '](/handbook/');
+          markdown = markdown.replace(/\.md/g, '/');
+
+          // Convert markdown to HTML
+          const html = markdownConverter.makeHtml(markdown);
+
+          let title = 'Overview';
+          if (node.name !== 'README') {
+            title = node.name.replace('-', ' ').replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));
+          }
+
+          createPage({
+            path: relativePath,
+            component: path.resolve(`./src/templates/handbook.js`),
+            context: {
+              tag: 'handbook',
+              url: relativePath,
+              section: section,
+              html: html,
+              title: title,
+            },
+          });
+        }
+
+        // Move images into static folder
+        if (['jpg', 'png', 'gif', 'svg'].indexOf(node.extension) !== -1) {
+          let destinationPath = node.relativePath.replace('images/', './static/handbook-assets/');
+          let imgData = fs.readFileSync(node.absolutePath);
+
+          writeImage(destinationPath, imgData);
+        }
       });
 
       resolve();

@@ -83,7 +83,8 @@ const Footer = () => (
       <div className={styles.resources}>
         <h6 className="small">Resources</h6>
         <Link to="/customers/">Customers</Link>
-        <Link to="/resources/guides/">Resource Library</Link>
+        <Link to="/resources/">Resource Library</Link>
+        <Link to="/training/">Training</Link>
         <Link to="/blog/">Blog</Link>
         <Link to="/blog/category/engineering/">Engineering Blog</Link>
       </div>
@@ -114,7 +115,7 @@ const Footer = () => (
         <Link to="/company/">About</Link>
         <Link to="/careers/">Careers</Link>
         <Link to="/press/">Press</Link>
-        <Link to="/owners-manual/">Owner’s Manual</Link>
+        <Link to="/handbook/">Aptible Handbook</Link>
         <Link to="/legal/terms-of-service/">Legal</Link>
       </div>
 

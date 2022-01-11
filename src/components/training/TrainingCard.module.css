@@ -1,0 +1,49 @@
+.container {
+  line-height: 0;
+  margin-bottom: 10px;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--body-color);
+}
+
+.card {
+  position: relative;
+  padding: 80px;
+  background-color: var(--aptible-black-light);
+  border-bottom: 4px solid var(--aptible-black-light);
+}
+
+.card h5 {
+  margin-bottom: 40px;
+}
+
+.container:hover .card {
+  background-color: var(--aptible-card-hover);
+  border-bottom-color: var(--aptible-yellow);
+}
+
+.tags {
+  margin-top: 50px;
+}
+
+.tag {
+  background-color: var(--aptible-green-ten);
+  color: var(--aptible-green);
+  padding: 8px 14px;
+  border-radius: 24px;
+  margin-right: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.readMore {
+  float: right;
+  padding-top: 5px;
+}
+
+@media (--mobile) {
+  .card {
+    padding: 30px;
+  }
+}

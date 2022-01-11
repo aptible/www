@@ -35,3 +35,15 @@
 .active a:hover {
   color: var(--aptible-green);
 }
+
+.sectionTitle {
+  display: block;
+  margin: 0;
+  line-height: 16px;
+  text-decoration: none;
+  color: var(--white-seventy);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 25px 40px;
+}

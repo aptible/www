@@ -6,6 +6,12 @@
     "tags": ["Guide"]
   },
   {
+    "title": "Open Source Training Library",
+    "url": "/training/",
+    "description": "Free and open source training courses about common security and compliance topics.",
+    "tags": ["Training"]
+  },
+  {
     "title": "Aptible Reference Architecture",
     "url": "/assets/deploy-reference-architecture.pdf",
     "description": "This reference guide provides you with all of the information you need to get started and be successful with Aptible.",

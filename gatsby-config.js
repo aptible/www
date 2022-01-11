@@ -80,5 +80,19 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: 'handbook',
+        remote: 'https://github.com/aptible/handbook.git',
+      }
+    },
+    {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: 'training',
+        remote: 'https://github.com/aptible/training.git'
+      },
+    },
   ],
 };
