@@ -311,6 +311,12 @@ exports.createPages = async ({ graphql, actions }) => {
           let markdown = fs.readFileSync(node.absolutePath).toString();
           let relativePath = `training/${course}/${node.name}/`;
 
+          // Don't build a page for a module not in training.json
+          let module = TRAINING_COURSES[course].modules.find(m => m.key === node.name);
+          if (module === undefined) {
+            return;
+          }
+
           // Edit image paths to point to /static
           markdown = markdown.replace(/\.\.\/images\//g, '/training-assets/');
 
