@@ -1,4 +1,4 @@
-FROM node:10 AS builder
+FROM node:12.22.9 AS builder
 
 ARG NODE_ENV=production
 ARG CONTENTFUL_HOST="cdn.contentful.com"
