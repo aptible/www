@@ -37,6 +37,7 @@ export default () => {
               id="Paid - HIPAA First Month Free"
               btnText="Get Your 1st Month Free"
               inputPlaceholder="Enter your work email"
+              allowPersonalEmails={false}
             />
           </div>
 

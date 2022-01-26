@@ -37,6 +37,7 @@ export default () => {
               id="Paid - HIPAA 499 Free Credits"
               btnText="Get $499 in Free Credits"
               inputPlaceholder="Enter your work email"
+              allowPersonalEmails={false}
             />
           </div>
 

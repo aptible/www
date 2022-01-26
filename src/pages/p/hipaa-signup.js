@@ -36,6 +36,7 @@ export default () => {
             <SignupForm
               id="Paid - HIPAA Signup"
               inputPlaceholder="Enter your work email"
+              allowPersonalEmails={false}
             />
           </div>
 
