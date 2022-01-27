@@ -7,9 +7,18 @@ import { event, identify, trackOnLinkedIn } from '../../lib/aptible/analytics';
 import { querystring } from '../../lib/util';
 
 const utmKeywords = ['utm_campaign', 'utm_medium', 'utm_source', 'utm_term'];
+const freeEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com'];
 
-const validateEmail = email => {
+const validateEmail = (email, allowPersonalEmails) => {
   if (!email) return { ok: false, message: 'email cannot be empty' };
+
+  if (!allowPersonalEmails) {
+    const emailTokens = email.split('@');
+    if (emailTokens.length > 1 && freeEmailDomains.indexOf(emailTokens[1]) !== -1) {
+      return { ok: false, message: 'Please use your work email address' };
+    }
+  }
+
   return { ok: true, message: '' };
 };
 
@@ -17,6 +26,7 @@ export const SignupForm = ({
   id,
   btnText = 'Sign Up For Free',
   inputPlaceholder = 'Enter your email',
+  allowPersonalEmails = true,
   onSuccess = () => { },
 }) => {
   const [submitted, setSubmitted] = useState(false);
@@ -25,7 +35,7 @@ export const SignupForm = ({
   const queryParams = queryString.parse(querystring());
 
   const onSubmit = () => {
-    const result = validateEmail(email);
+    const result = validateEmail(email, allowPersonalEmails);
     if (!result.ok) {
       setError(result.message);
       return;

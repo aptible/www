@@ -392,6 +392,9 @@ exports.createPages = async ({ graphql, actions }) => {
           markdown = markdown.replace(/\]\(\/?(?!\/?images|https|\/?handbook)/g, '](/handbook/');
           markdown = markdown.replace(/\.md/g, '/');
 
+          // Remove "read on aptible.com"
+          markdown = markdown.replace(/\*\*\[Read on aptible.*/, '');
+
           // Convert markdown to HTML
           const html = markdownConverter.makeHtml(markdown);
 
