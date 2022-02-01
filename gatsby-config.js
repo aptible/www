@@ -94,5 +94,12 @@ module.exports = {
         remote: 'https://github.com/aptible/training.git'
       },
     },
+    {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: 'policy-content',
+        remote: 'https://github.com/aptible/policy-content.git'
+      },
+    },
   ],
 };
