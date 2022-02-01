@@ -29,7 +29,7 @@ const CompliancePill = ({ title, svg }) => {
   );
 };
 
-export default () => (
+export default ({ allowPersonalEmails = true }) => (
   <div className={styles.container}>
     <Grid rows="2">
       <div className={styles.content}>
@@ -53,15 +53,19 @@ export default () => (
           <SignupForm
             id="Home Page Hero - Product Signup"
             inputPlaceholder="Enter your email"
+            allowPersonalEmails={allowPersonalEmails}
           />
-          <div className={styles.signUpYourself}>
-            <p className="M">
-              Still have questions? {' '}
-              <Link to="/p/schedule-a-demo/">
-                Schedule a demo
-              </Link>
-            </p>
-          </div>
+
+          {allowPersonalEmails &&
+            <div className={styles.signUpYourself}>
+              <p className="M">
+                Still have questions? {' '}
+                <Link to="/p/schedule-a-demo/">
+                  Schedule a demo
+                </Link>
+              </p>
+            </div>
+          }
         </div>
       </div>
 
