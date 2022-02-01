@@ -389,7 +389,7 @@ exports.createPages = async ({ graphql, actions }) => {
           markdown = markdown.replace(/\/?images\//g, '/handbook-assets/');
 
           // Edit link paths
-          markdown = markdown.replace(/\]\(\/?(?!\/?images|https|\/?handbook)/g, '](/handbook/');
+          markdown = markdown.replace(/\]\(\/(?!\/?images|https|\/?handbook)/g, '](/handbook/');
           markdown = markdown.replace(/\.md/g, '/');
 
           // Remove "read on aptible.com"
