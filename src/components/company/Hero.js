@@ -23,11 +23,6 @@ export default ({ webcamPhotos }) => (
       <div className={styles.zoomChat}>
         <ZoomChat webcamPhotos={webcamPhotos} />
       </div>
-
-      <div className={styles.whoWeAre}>
-        <h1>What We Do</h1>
-        <WistiaVideo videoId="vjzole82z0" />
-      </div>
     </Grid>
   </div>
 );
