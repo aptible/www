@@ -41,6 +41,10 @@
   background: url(/assets/radar.svg) no-repeat center 70px;
 }
 
+.homeCopyLayout {
+  padding-top: 100px;
+}
+
 .logo {
   margin-bottom: marginMd;
   width: 150px;
