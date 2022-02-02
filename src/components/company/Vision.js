@@ -6,22 +6,16 @@ export default () => (
   <div className={styles.container} id="vision">
     <Grid>
       <div className={styles.intro}>
-        <h1>Our Vision</h1>
+        <h1>Our Mission &amp; Strategy</h1>
         <p className="XL">
-          We see a future where it's easy to bring a great idea into the world
-          using the internet, while respecting data security and privacy. The
-          next generation of businesses will design security and privacy into
-          their operating processes. If every business is going to be a software
-          business, every business will need to be a security business.
+          Aptible helps developers do their best work by empowering them to use any cloud infrastructure securely.
         </p>
         <p className="XL">
-          We're working to make information security a core competency of every
-          startup. We envision a world in which startups have access to great
-          information security, are empowered to focus on their business instead
-          of on compliance, can scale faster and more efficiently, and are
-          confident that they're creating quality products.
+          We intend to deliver the best way for developers to provision, monitor, and test any resource in any cloud environment to ensure their infrastructure always meets rigorous security and compliance requirements.
         </p>
       </div>
     </Grid>
   </div>
 );
+
+
