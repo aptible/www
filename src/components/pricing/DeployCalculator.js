@@ -523,6 +523,9 @@ class DeployCalculator extends React.Component {
           <h4>Estimated monthly total</h4>
           <Amount value={this.calculateEstimatedAmount()} />
         </div>
+        <div className={styles.volumePricing}>
+            Volume pricing available. <a href="http://contact.aptible.com/">Contact us</a>{' '}for details
+          </div>
       </div>
     );
   }
