@@ -46,6 +46,7 @@ class Deploy extends React.Component {
             </li>
             <li>No upfront costs</li>
             <li>No contract required</li>
+            <li>Volume pricing available</li>
           </CheckmarkUnorderedList>
         </div>
 

@@ -156,6 +156,11 @@
   padding-right: 30px;
 }
 
+.volumePricing {
+  font-size: 14px;
+  margin: 40px 0 0 30px;
+}
+
 @media (--mobile) {
   .calculator {
     background-color: transparent;
