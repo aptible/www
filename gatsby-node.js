@@ -1,15 +1,16 @@
 const path = require('path');
 const yaml = require('js-yaml');
 const fs = require('fs');
-const showdown = require('showdown');
+var md = require('markdown-it')({
+  html: true,
+  typographer: true
+});
 
 
 const writeImage = async (destinationPath, contents) => {
   await fs.promises.mkdir(path.dirname(destinationPath), { recursive: true });
   return fs.promises.writeFile(destinationPath, contents);
 }
-
-const markdownConverter = new showdown.Converter();
 
 
 const BLOG_CATEGORIES = require('./src/data/blog-categories.json');
@@ -321,7 +322,7 @@ exports.createPages = async ({ graphql, actions }) => {
           markdown = markdown.replace(/\.\.\/images\//g, '/training-assets/');
 
           // Convert markdown to HTML
-          const html = markdownConverter.makeHtml(markdown);
+          const html = md.render(markdown);
 
           createPage({
             path: relativePath,
@@ -389,14 +390,14 @@ exports.createPages = async ({ graphql, actions }) => {
           markdown = markdown.replace(/\/?images\//g, '/handbook-assets/');
 
           // Edit link paths
-          markdown = markdown.replace(/\]\(\/?(?!\/?images|https|\/?handbook)/g, '](/handbook/');
+          markdown = markdown.replace(/\]\(\/(?!\/?images|https|\/?handbook)/g, '](/handbook/');
           markdown = markdown.replace(/\.md/g, '/');
 
           // Remove "read on aptible.com"
           markdown = markdown.replace(/\*\*\[Read on aptible.*/, '');
 
           // Convert markdown to HTML
-          const html = markdownConverter.makeHtml(markdown);
+          const html = md.render(markdown);
 
           let title = 'Overview';
           if (node.name !== 'README') {
