@@ -165,6 +165,17 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+
+        allPolicyContent: allFile(filter: { sourceInstanceName: { eq: "policy-content" } }) {
+          edges {
+            node {
+              name
+              extension
+              relativePath
+              absolutePath
+            }
+          }
+        }
       }
     `).then(result => {
       // Create pages for each blog post
@@ -423,6 +434,38 @@ exports.createPages = async ({ graphql, actions }) => {
           let imgData = fs.readFileSync(node.absolutePath);
 
           writeImage(destinationPath, imgData);
+        }
+      });
+
+      result.data.allPolicyContent.edges.forEach(async ({ node }) => {
+        if (node.extension === 'md') {
+          if (node.relativePath === 'README.md') {
+            return;
+          }
+
+          let relativePath = `policy-content/${node.relativePath.replace('.md', '').replace('policies/', '')}`;
+          if (relativePath.endsWith('/') === false) {
+            relativePath += '/';
+          }
+
+          const isPolicy = node.relativePath !== 'controls.md';
+
+          // Convert markdown to HTML
+          const markdown = fs.readFileSync(node.absolutePath).toString();
+          const html = markdownConverter.makeHtml(markdown);
+          const title = node.name.replace(/\-/g, ' ').replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));
+
+          createPage({
+            path: relativePath,
+            component: path.resolve(`./src/templates/policy-content.js`),
+            context: {
+              tag: 'policy-content',
+              url: relativePath,
+              isPolicy: isPolicy,
+              html: html,
+              title: title,
+            },
+          });
         }
       });
 

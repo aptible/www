@@ -9,7 +9,13 @@
     "title": "Open Source Training Library",
     "url": "/training/",
     "description": "Free and open source training courses about common security and compliance topics.",
-    "tags": ["Training"]
+    "tags": ["Training", "Open Source"]
+  },
+  {
+    "title": "Open Source Policy Content",
+    "url": "/policy-content/",
+    "description": "Free and open source policies and controls for your ISMS.",
+    "tags": ["Open Source"]
   },
   {
     "title": "Aptible Reference Architecture",
