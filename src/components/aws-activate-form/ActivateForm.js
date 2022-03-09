@@ -4,16 +4,13 @@ import { Helmet } from 'react-helmet';
 import cn from 'classnames';
 import styles from './ActivateForm.module.css';
 import buttonStyles from '../buttons/Button.module.css';
-import { event, identify, trackOnLinkedIn } from '../../lib/aptible/analytics';
 import { querystring } from '../../lib/util';
+import { event } from '../../lib/aptible/analytics';
+import { submitHubspotForm, HUBSPOT_FORM_AWS_ACTIVATE } from '../../lib/hubspot.js';
 
 const AWS_ACTIVATE_UNIQUE_CODE = `A3POPC`;
 
 const injectedQueryParams = [
-  'utm_campaign',
-  'utm_medium',
-  'utm_source',
-  'utm_term',
   AWS_ACTIVATE_UNIQUE_CODE,
 ];
 
@@ -27,11 +24,6 @@ const options = [
   'Other Security Framework',
   'None',
 ];
-
-const validateEmail = email => {
-  if (!email) return { ok: false, message: 'email cannot be empty' };
-  return { ok: true, message: '' };
-};
 
 export const ActivateForm = ({
   id,
@@ -55,13 +47,12 @@ export const ActivateForm = ({
   const queryParams = queryString.parse(querystring());
 
   const onSubmit = () => {
-    const result = validateEmail(email);
+    const result = submitHubspotForm(HUBSPOT_FORM_AWS_ACTIVATE, email, true);
     if (!result.ok) {
       setError(result.message);
       return;
     }
-    identify(email);
-    event('Email Collected', { formId: id });
+
     event(eventName, {
       name,
       email,
@@ -72,7 +63,6 @@ export const ActivateForm = ({
     });
     setSubmitted(true);
     setError('');
-    trackOnLinkedIn();
     setTimeout(onSuccess, 500);
   };
 
@@ -88,14 +78,6 @@ export const ActivateForm = ({
         />
       </Helmet>
 
-      <iframe
-        title="AWS Activate Capture Form"
-        name="captureFrame"
-        height="0"
-        width="0"
-        style={{ display: 'none' }}
-      />
-
       {submitted && (
         <div className={styles.submissionNotification}>{successText}</div>
       )}
@@ -104,10 +86,8 @@ export const ActivateForm = ({
         className={styles.leadFormContainer}
         style={{ opacity: submitted ? 0 : 1 }}
       >
-        <form
+        <div
           id={id}
-          onSubmit={onSubmit}
-          target="captureFrame"
           className={styles.leadForm}
         >
           <h5>Submit Your Application</h5>
@@ -229,6 +209,7 @@ export const ActivateForm = ({
             <button
               className={cn(buttonStyles.button, styles.button)}
               type="submit"
+              onClick={onSubmit}
             >
               {btnText}
             </button>
@@ -242,7 +223,7 @@ export const ActivateForm = ({
             <p class="S">{disclaimer}</p>
           )}
 
-        </form>
+        </div>
         <div className={styles.error}>{error ? error : ''}</div>
       </div>
     </div>

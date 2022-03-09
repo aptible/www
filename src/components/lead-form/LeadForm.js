@@ -1,18 +1,9 @@
-import * as queryString from 'query-string';
 import React, { useState } from 'react';
 import { navigate } from 'gatsby'
 import cn from 'classnames';
 import styles from './LeadForm.module.css';
 import buttonStyles from '../buttons/Button.module.css';
-import { event, identify, trackOnLinkedIn } from '../../lib/aptible/analytics';
-import { querystring } from '../../lib/util';
-
-const utmKeywords = ['utm_campaign', 'utm_medium', 'utm_source', 'utm_term'];
-
-const validateEmail = email => {
-  if (!email) return { ok: false, message: 'email cannot be empty' };
-  return { ok: true, message: '' };
-};
+import { submitHubspotForm, HUBSPOT_FORM_DEMO } from '../../lib/hubspot.js';
 
 export const LeadForm = ({
   id,
@@ -26,20 +17,22 @@ export const LeadForm = ({
   const [submitted, setSubmitted] = useState(false);
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
-  const queryParams = queryString.parse(querystring());
   const shouldShowSuccessMessage = !scheduleDemoOnSubmit && submitted;
+  
+  const onKeypress = (e) => {
+    if (e.key === 'Enter') {
+      onSubmit();
+    }
+  };
 
   const onSubmit = () => {
-    const result = validateEmail(email);
+    const result = submitHubspotForm(HUBSPOT_FORM_DEMO, email, true);
     if (!result.ok) {
       setError(result.message);
       return;
     }
-    identify(email);
-    event('Email Collected', { formId: id });
     setSubmitted(true);
     setError('');
-    trackOnLinkedIn();
     onSuccess();
 
     if (scheduleDemoOnSubmit) {
@@ -49,30 +42,18 @@ export const LeadForm = ({
 
   return (
     <div>
-      <iframe
-        title="Lead Form"
-        name="captureFrame"
-        height="0"
-        width="0"
-        style={{ display: 'none' }}
-      />
-
       <div
         className={styles.leadFormContainer}
         style={{ opacity: submitted ? 0 : 1 }}
       >
-        <form
+        <div
           id={id}
-          onSubmit={onSubmit}
-          target="captureFrame"
           className={styles.leadForm}
         >
-          {utmKeywords.map(k => (
-            <input hidden readOnly name={k} key={k} value={queryParams[k]} />
-          ))}
           <input
             required
             className={styles.leadFormInput}
+            onKeyPress={onKeypress}
             onChange={e => setEmail(e.target.value)}
             type="email"
             placeholder={inputPlaceholder}
@@ -80,10 +61,11 @@ export const LeadForm = ({
           <button
             className={cn(buttonStyles.button, styles.button)}
             type="submit"
+            onClick={onSubmit}
           >
             {btnText}
           </button>
-        </form>
+        </div>
         <div className={styles.error}>{error ? error : ''}</div>
       </div>
 
