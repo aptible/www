@@ -116,34 +116,6 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
 
-        allOwnersManualPages: allContentfulOwnersManualPage(
-          filter: {
-            hidePage: {
-              eq: false
-            }
-          }
-          sort: { fields: [createdAt], order: ASC }
-        ) {
-          edges {
-            node {
-              title
-              displayTitle
-              section
-              slug
-              hidePage
-              socialDescription
-              socialImage {
-                file {
-                  url
-                }
-              }
-              body {
-                json
-              }
-            }
-          }
-        }
-
         allHandbook: allFile(filter: { sourceInstanceName: { eq: "handbook" } }) {
           edges {
             node {
@@ -355,22 +327,6 @@ exports.createPages = async ({ graphql, actions }) => {
           },
         });
       }
-
-      result.data.allOwnersManualPages.edges.forEach(({ node }) => {
-        let pagePath = 'owners-manual';
-        if (node.slug) {
-          pagePath += `/${node.slug}`;
-        }
-
-        createPage({
-          path: pagePath,
-          component: path.resolve(`./src/templates/owners-manual.js`),
-          context: {
-            activePath: node.slug,
-            allPages: result.data.allOwnersManualPages.edges
-          },
-        });
-      });
 
       result.data.allHandbook.edges.forEach(async ({ node }) => {
         if (node.extension === 'md') {
