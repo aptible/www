@@ -28,17 +28,6 @@ const linkedIn = `
   })(window.lintrk);
 `;
 
-const hotjarJs = `
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:2572054,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-`;
-
 const aptibleJs = `
       (function(a,p,t,i,b,l,e) {
         a.aptible=a.aptible||{_q:[]};f='event,identify'.split(',');
@@ -62,7 +51,6 @@ export default function HTML(props) {
         {props.headComponents}
         <script dangerouslySetInnerHTML={{ __html: linkedIn }} />
         <script dangerouslySetInnerHTML={{ __html: segmentJs }} />
-        <script dangerouslySetInnerHTML={{ __html: hotjarJs }} />
         <script dangerouslySetInnerHTML={{ __html: aptibleJs }} />
       </head>
       <body {...props.bodyAttributes}>
