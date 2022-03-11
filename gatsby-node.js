@@ -15,8 +15,6 @@ const writeImage = async (destinationPath, contents) => {
 
 const BLOG_CATEGORIES = require('./src/data/blog-categories.json');
 const BLOG_POSTS_PER_PAGE = 5;
-const RESOURCE_CATEGORIES = require('./src/data/resource-categories.json');
-const resourceEntries = require('./src/data/resources.json');
 
 const COMPLIANCE_SITES = ['hipaa'];
 let protocolData = {};
@@ -73,19 +71,6 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               slug
               subfolder
-            }
-          }
-        }
-
-        allWebinars: allContentfulWebinar {
-          edges {
-            node {
-              title
-              slug
-              webinarType
-              description {
-                description
-              }
             }
           }
         }
@@ -207,40 +192,6 @@ exports.createPages = async ({ graphql, actions }) => {
         createPage({
           path: `${node.subfolder}/${node.slug}`,
           component: path.resolve(`./src/templates/resource.js`),
-          context: {
-            slug: node.slug
-          },
-        });
-      });
-
-      // Create pages resource categories
-      const webinarEntries = result.data.allWebinars.edges.map(({ node }) => {
-        return {
-          title: node.title,
-          url: `/webinars/${node.slug}/`,
-          description: node.description ? node.description.description : '',
-          tags: ['Webinar', node.webinarType ? 'On Demand' : 'Upcoming'],
-        }
-      });
-      RESOURCE_CATEGORIES.forEach((category) => {
-        createPage({
-          path: `resources/${category.slug}`,
-          component: path.resolve(`./src/templates/resource-category.js`),
-          context: {
-            title: category.title,
-            slug: category.slug,
-            entries: category.slug === 'webinars' ?
-              webinarEntries :
-              resourceEntries.filter((entry) => entry.tags.includes(category.title))
-          },
-        });
-      });
-
-      // Webinar pages
-      result.data.allWebinars.edges.forEach(({ node }) => {
-        createPage({
-          path: `webinars/${node.slug}`,
-          component: path.resolve(`./src/templates/webinar.js`),
           context: {
             slug: node.slug
           },

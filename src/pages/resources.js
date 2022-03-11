@@ -6,16 +6,6 @@ import ResourceCards from '../components/resources/ResourceCards';
 import resources from '../data/resources.json';
 
 export default ({ data }) => {
-  // const webinars = data.posts.edges.map(webinar => {
-  //   const { node } = webinar;
-  //   return {
-  //     title: node.title,
-  //     url: `/webinars/${node.slug}/`,
-  //     description: node.description ? node.description.description : '',
-  //     tags: ['Webinar', node.webinarType ? 'On Demand' : 'Upcoming'],
-  //   };
-  // });
-
   return (
     <AptibleLayout>
       <Helmet>
@@ -30,20 +20,3 @@ export default ({ data }) => {
     </AptibleLayout>
   );
 };
-
-export const query = graphql`
-  query {
-    posts: allContentfulWebinar {
-      edges {
-        node {
-          slug
-          title
-          description {
-            description
-          }
-          webinarType
-        }
-      }
-    }
-  }
-`;

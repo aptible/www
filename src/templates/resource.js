@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql } from 'gatsby';
 import ContentLayout from '../components/layouts/ContentLayout';
 import Resource from '../components/resources/Resource';
 
@@ -19,18 +18,3 @@ export default ({ data }) => (
     <Resource resource={data.resource} />
   </ContentLayout>
 );
-
-export const query = graphql`
-  query($slug: String!) {
-    resource: contentfulResource(slug: { eq: $slug }) {
-      title
-      slug
-      date
-      webinarYoutubeLink
-      webinarSlidesLink
-      body {
-        json
-      }
-    }
-  }
-`;
