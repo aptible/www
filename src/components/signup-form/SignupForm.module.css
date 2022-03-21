@@ -6,7 +6,7 @@
   margin: 0;
   transition: opacity 300ms;
 }
-.signupFormContainer form {
+.signupFormContainer > div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -57,7 +57,7 @@
     border-radius: 8px
   }
 
-  .signupFormContainer form {
+  .signupFormContainer > div {
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;

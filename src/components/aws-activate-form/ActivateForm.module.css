@@ -6,7 +6,7 @@
   overflow-y: scroll;
 }
 
-.leadFormContainer form {
+.leadFormContainer > div {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -134,7 +134,7 @@
 }
 
 @media (--mobile) {
-  .leadFormContainer form {
+  .leadFormContainer > div {
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
