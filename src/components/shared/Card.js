@@ -19,14 +19,18 @@ import rightwayLogo from '../../images/customers/logos/rightway-logo.png';
 import aidinLogo from '../../images/customers/logos/aidin-logo.png';
 import glidianLogo from '../../images/customers/logos/glidian-logo.png';
 import projectBeaconLogo from '../../images/customers/logos/project-beacon-logo.png';
+import himsHersLogo from '../../images/customers/logos/hims-hers-logo.png';
+import careportLogo from '../../images/customers/logos/careport-logo.png';
 import medicalMemoryBranded from '../../images/solutions/medical-memory-branded-half-height.png';
 import rightwayBranded from '../../images/solutions/rightway-branded-panel-half-height.png';
 import glidianBranded from '../../images/solutions/gildian-branded-panel-half-height.png';
+import himsHersBranded from '../../images/solutions/hims-hers-half-height.png';
 
 const photos = {
   medicalMemory: medicalMemoryBranded,
   rightwayHealthcare: rightwayBranded,
-  glidianInc: glidianBranded
+  glidianInc: glidianBranded,
+  hims_hers: himsHersBranded,
 };
 
 const logos = {
@@ -43,6 +47,8 @@ const logos = {
   aidin: aidinLogo,
   glidianInc: glidianLogo,
   projectBeacon: projectBeaconLogo,
+  hims_hers: himsHersLogo,
+  careport: careportLogo,
 };
 
 

@@ -88,5 +88,23 @@
     "link": "/customers/project-beacon/",
     "text": "Project Beacon deploys rapidly to optimize COVID-19 testing strategies and improve public health in Massachusetts",
     "website": "https://app.beacontesting.com"
+  },
+  "hims_hers": {
+    "headline": "&ldquo;Not only does Aptible make passing HIPAA and SOC 2 audits a breeze, but it also just takes away the stress of managing our own infrastructure. With Aptible, managing deployments is easy, especially with the ability to restart with zero-downtime.&rdquo;",
+    "author": "Petr Hecko, Lead DevOps Engineer",
+    "tags": [
+      "health"
+    ],
+    "name": "hims & hers",
+    "website": "https://www.forhims.com/"
+  },
+  "careport": {
+    "headline": "&ldquo;We've been with Aptible for over 6 years and throughout that time they've been a fantastic partner, offering excellent service and support. By handling HIPAA compliance and providing secure infrastructure, Aptible has allowed us to focus on building great applications and helping patients to achieve better outcomes.&rdquo;",
+    "author": "Sean Santry, VP of Engineering",
+    "tags": [
+      "health"
+    ],
+    "name": "CarePort Health powered by WellSky",
+    "website": "https://careporthealth.com/"
   }
 }
