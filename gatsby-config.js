@@ -41,13 +41,6 @@ module.exports = {
         id: 'modal-portal',
       },
     },
-    {
-      resolve: 'gatsby-source-lever',
-      options: {
-        site: 'aptible',
-        verboseOutput: true,
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-favicon`,
