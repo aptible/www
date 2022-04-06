@@ -14,6 +14,7 @@ class CustomerCards extends React.Component {
       <div className={styles.container}>
         <Grid>
           <div className={styles.left}>
+            <Card customer="hims_hers" />
             <Card customer="ableHealth" />
             <Card customer="pathAI" />
             <Card customer="healthify" />
@@ -24,6 +25,7 @@ class CustomerCards extends React.Component {
 
           <div className={styles.right}>
             <Card customer="projectBeacon" />
+            <Card customer="careport" />
             <Card customer="mdsave" />
             <Card customer="healthCatalyst" />
             <Card customer="medicalMemory" />
