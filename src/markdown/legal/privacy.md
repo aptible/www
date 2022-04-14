@@ -267,17 +267,6 @@ California Civil Code Section 1798.83 permits Aptible customers who are Californ
 
 The core Aptible Deploy and Aptible Comply APIs are hosted in the United States. You may choose to run Deploy stacks in non-U.S. regions, such as the European Union or other regions of the world with laws governing data collection and use that may differ from U.S. law. Please note that when you use the core Deploy and Comply APIs, you are transferring your information outside of those regions to the United States for storage and processing. By providing your information, you consent to any transfer and processing in accordance with this Policy.
 
-## EU-U.S. Privacy Shield Onward Transfers
-
-For personal data transferred from the EU to the U.S. or other third country not determined to meet EU adequacy requirements, if we transfer your personal data to a third party, we will ensure that the third party is contractually obligated to process your data only for limited, specific purposes consistent with this policy. We will also ensure that the third party will apply the same level of protection to that data as the EU-U.S. Privacy Shield Principles and will notify us if it makes a determination that it can no longer meet this obligation. Aptible may be potentially liable if these requirements are not met.
-
-## Complaints, Questions, and Arbitration
-
-In compliance with the EU-U.S. and Swiss-U.S. Privacy Shield Principles, we strive to resolve all complaints about privacy and the collection or use of customer information. If you have questions about our participation in the Privacy Shield programs or have a complaint, please send an e-mail to [legal@aptible.com][1]. 
-
-Under the Privacy Shield programs, any unresolved privacy complaints can be referred to an independent dispute resolution mechanism. We use the International Centre for Dispute Resolution®/American Arbitration Association®. If you feel that we have not satisfactorily addressed your complaint, you can visit the ICRD/AAA website at [http://go.adr.org/privacyshield.html][6]
-
-for more information on how to file a complaint. In some cases, you may be able to invoke binding arbitration.
 
 # Changes to this Privacy Statement
 
