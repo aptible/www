@@ -31,13 +31,13 @@ This Privacy Statement does not apply to personal information arising from Aptib
 
 If you have any questions or concerns about this Privacy Statement or about our privacy or data security practices, please contact us at legal@aptible.com.
 
-# What We Mean by Personal Information
+### What We Mean by Personal Information
 
 For purposes of this Privacy Statement, "Personal Information" means information from or about you that identifies you directly and information that is associated with you and thus could potentially identify you, including when combined with other information from or about you. 
 
 "Sensitive Personal Information" includes data about racial or ethnic origin, political opinions, religious or philosophical beliefs, trade-union memberships, genetic and biometric data when used for identification purposes, and data about health, sex life, and sexual orientation.
 
-## Types of Personal Information that We Collect
+#### Types of Personal Information that We Collect
 
   * Names
 
@@ -57,9 +57,9 @@ For purposes of this Privacy Statement, "Personal Information" means information
 
   * Identifiers of devices used to access our Services 
 
-# Information that We Collect from and About You
+### Information that We Collect from and About You
 
-## Information that You Provide to Us Voluntarily
+#### Information that You Provide to Us Voluntarily
 
 **Account and Profile Information:** We collect information about you and your company when you register for an account, create or modify your profile, and make purchases through our Services. Information we collect includes your name, username, address, email address, phone number, and payment card details. You may provide this information directly through our Services or in some cases another user (such as an account administrator) creating an account on your behalf may provide it. If you provide information (including personal information) about someone else, you confirm that you have the authority to act for them and to consent to the collection and use of their personal information as described in this Privacy Policy.
 
@@ -67,27 +67,21 @@ For purposes of this Privacy Statement, "Personal Information" means information
 
 **Other submissions:** We collect other data that you may submit to our Services or to us directly, such as when you request customer support or communicate with us via email or social media sites.
 
-## Information that We Collect Automatically When You Use Our Services
+#### Information that We Collect Automatically When You Use Our Services
 
 **Web Logs and Analytics Information:** We record certain information and store it in log files when you interact with our Services. This information may include Internet protocol (IP) or other device addresses or ID numbers as well as browser type, Internet service provider, URLs of referring/exit pages, operating system, date/time stamp, information that you search for, your locale and language preferences, your mobile carrier, and system configuration information. We and our analytics providers (see our [Subprocessor Directory][9]), also collect and store analytics information when you use our Services to help us improve our Services.
 
 **Cookies and Other Tracking Technologies:** We use various technologies to collect information, including cookies that we save to your computer or mobile device. See our [Subprocessor Directory][9].  Cookies are small data files stored on your hard drive or in device memory. We use cookies to improve and customize our Services and your experience; to allow you to access and use the Services without re-entering your username or password; and to count visits and understand which areas and features of the Services are most popular. We may also associate the information we store in cookies with personal information you submit while on our Services. You can instruct your browser, by changing its options, to stop accepting cookies or to prompt you before accepting a cookie from websites you visit. If you do not accept cookies, however, you may not be able to use all aspects of our Services.
 
-# Information that We Collect from Other Sources
+### Information that We Collect from Other Sources
 
 **Information from third parties:** We may obtain information, including personal information, from our business partners and service providers. This information includes, but is not limited to, information that we receive from our direct marketing providers, product referrals, and other interactions. We also may combine information we receive from third parties with other information we collect from you through our Services as described in this Privacy Statement. If we use this information to provide you with opportunities that we think may be of interest to you, you will have the ability to inform us that you do not wish to receive such offers, and you may unsubscribe from our marketing and other email communications by clicking on the link in the email, sending an e-mail to [legal@aptible.com][1], or accessing your user account and changing your distribution preferences.
 
- 
-
 **Information provided by other individuals:** While using our Services, individuals may provide information about another individual, or an authorized user (such as an account administrator) creating an account on your behalf may provide information about You. When one individual provides us with information (including personal information) about another individual, we assume that the individual has permission and authority to do so and to consent on behalf of that individual to the collection and use of personal information as described in this Privacy Statement. Please contact us immediately at [legal@aptible.com][1] if you become aware of an individual providing us with personal information about another individual without being authorized to do so, and we will act consistently with this Privacy Statement.
 
- 
-
-## Information that We Receive About You From Our Customers
+#### Information that We Receive About You From Our Customers
 
 Our customers and their designated users use our Services, in particular Aptible Deploy, to develop, establish, implement, and maintain secure application and database deployment environments for processing sensitive data, including personal information and sensitive personal information. While using our Services, our customers may create, input, submit, post, upload, transmit, or store personal information that they have collected from individuals. During the course of our business relationship, we may need to access a customer’s account and the information it contains to provide support for our Services. 
-
- 
 
 Our customers and prospective customers are responsible for complying with all applicable federal, state, local, and international laws and regulations regarding notice, disclosure, consent, and transfer of personal information, prior to providing that personal information to Aptible. 
 
@@ -95,13 +89,11 @@ In addition, our customers and prospective customers are also responsible for id
 
 Unlike the other collections of information described in this section, our agreements with customers include specific protections and limitations regarding our access to and use of personal information collected by customers, and we do not access, use, copy, retain, or aggregate that customer data except as stated in those agreements.
 
-# Why We Collect Information from and About You
-
-**** 
+### Why We Collect Information from and About You
 
 We will not use your personal information for anything other than the following lawful purposes:
 
-## To establish and maintain contractual relationships with our customers:
+#### To establish and maintain contractual relationships with our customers:
 
   * To establish relationships with new customers
 
@@ -111,7 +103,7 @@ We will not use your personal information for anything other than the following 
 
   * To enable individuals to access and use our Services
 
-## To comply with our legal obligations:
+#### To comply with our legal obligations:
 
   * To comply with legal obligations, including but not limited to complying with tax and financial reporting requirements
 
@@ -121,7 +113,7 @@ We will not use your personal information for anything other than the following 
 
   * To comply with other applicable criminal and civil law and regulatory requirements under federal, state, and international law
 
-## To provide services and information that you request and consent to receive:
+#### To provide services and information that you request and consent to receive:
 
   * To provide customer service and support
 
@@ -131,9 +123,7 @@ We will not use your personal information for anything other than the following 
 
   * To provide direct marketing, email, and other distributed information distribution
 
- 
-
-## To fulfill our other legitimate interests to the extent that they are not overridden by individual interests, fundamental rights, or freedoms:
+#### To fulfill our other legitimate interests to the extent that they are not overridden by individual interests, fundamental rights, or freedoms:
 
   * To administer, operate, maintain, and secure our website and Services
 
@@ -157,7 +147,7 @@ We will not use your personal information for anything other than the following 
 
 When possible, we will use anonymized data for these purposes, but if we do not, or if we combine it with Personal Information we will treat it in accordance with this Privacy Statement.
 
-# When and Why We Share or Disclose Personal Information
+### When and Why We Share or Disclose Personal Information
 
 Except to the extent necessary to fulfill our business obligations, to accomplish one of the lawful purposes described in this Privacy Statement, or pursuant to your express instructions, we do not sell, transfer, or otherwise disclose personal information that we collect from or about you. 
 
@@ -175,9 +165,7 @@ We may share your information in the following ways:
 
   * Control how your Aptible account may be configured, accessed, or deleted.
 
- 
-
-**With our vendors and business partners, to accomplish our business purposes:** We may share your information with our service providers and other third parties who perform services on our behalf, listed in our [Subprocessor Directory][9]. We provide your payment information to our service providers for payment processing and verification. Service providers such as analytics providers may collect information about your online activities over time and across different online services [PM13] when you use our Services. We also work with third-party service providers to provide the cloud-based tools that our customers use to create their secure storage containers and securely store their sensitive information, including personal information.[PM14] 
+**With our vendors and business partners, to accomplish our business purposes:** We may share your information with our service providers and other third parties who perform services on our behalf, listed in our [Subprocessor Directory][9]. We provide your payment information to our service providers for payment processing and verification. Service providers such as analytics providers may collect information about your online activities over time and across different online services [PM13] when you use our Services. We also work with third-party service providers to provide the cloud-based tools that our customers use to create their secure storage containers and securely store their sensitive information, including personal information.[PM14]
 
 **When necessary to comply with laws and law enforcement requests, or otherwise to protect our rights or those of individuals:** We may disclose your information (including your personal information) to a third party if:
 
@@ -195,17 +183,11 @@ We may share your information in the following ways:
 
   * To investigate and defend ourselves against any third-party claims or allegations.
 
- 
-
 **As the result of a business transition:** We may share or transfer your information (including your personal information) in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company. We will take reasonable steps to assure that any other entity involved continues to comply with the terms of this Privacy Statement. We will notify you of such a change in ownership or transfer of assets by posting a notice on our website.
-
- 
 
 **Sharing aggregate, anonymized, deidentified, or otherwise non-personal data:** We may share aggregate, anonymized deidentified, or otherwise non-personal information that does not directly or indirectly identify you and that cannot, with reasonable effort, be used to reidentify you in order to improve the overall experience of our Services. Such aggregated, anonymized, deidentified, or otherwise not re-identifiable information is not personal information within the scope of this Privacy Statement.
 
- 
-
-# Your Control Over Your Personal Information
+### Your Control Over Your Personal Information
 
   * You may decline to share certain personal information with us, in which case we may not be able to provide to you some of the features and functionality of our Services or fulfill your requests. For example, we need your email address to authenticate you and perform account services such as password resets, or to provide you with customer support.
 
@@ -223,15 +205,9 @@ We may share your information in the following ways:
 
   * You may ask us for a copy of the information that we collected from you.
 
- 
-
 To exercise any of these options, or for additional information about our privacy and data security practices, contact us at [legal@aptible.com][1].
 
- 
-
-# Security
-
- 
+### Security
 
 Unfortunately, no data transmission over the Internet or data storage system can be guaranteed to be 100% secure. That said, we certainly try very hard, employing a variety of organizational, technical and administrative measures to provide a level of security appropriate to the risk associated with the personal information you trust us with. 
 
@@ -247,34 +223,29 @@ Aptible protects personal information under its control, and requires its servic
 
 If you have concerns about the security of your information with Aptible, please contact us immediately at [security@aptible.com][4] to report an issue.
 
-  
-
-# Data Retention
+### Data Retention
 
 We retain your personal information only as long as necessary to accomplish the business purpose for which it was collected or to comply with our legal and contractual obligations, plus 1 year, and then securely disposes of that information.
 
-# Children’s Privacy
+### Children’s Privacy
 
 Our Services are not directed to individuals under 16. We do not knowingly collect personal information from children under 16. If we become aware that a child under 16 has provided us with personal information, we will take steps to delete such information. If you become aware that a child has provided us with personal information, please contact us at [legal@aptible.com][1].
 
-# California Privacy Rights
+### California Privacy Rights
 
 California Civil Code Section 1798.83 permits Aptible customers who are California residents to request certain information regarding our disclosure of personal information to third parties for their direct marketing purposes. To make such a request, please contact us at [legal@aptible.com][1].
 
- 
-
-# Information for International Users
+### Information for International Users
 
 The core Aptible Deploy and Aptible Comply APIs are hosted in the United States. You may choose to run Deploy stacks in non-U.S. regions, such as the European Union or other regions of the world with laws governing data collection and use that may differ from U.S. law. Please note that when you use the core Deploy and Comply APIs, you are transferring your information outside of those regions to the United States for storage and processing. By providing your information, you consent to any transfer and processing in accordance with this Policy.
 
-
-# Changes to this Privacy Statement
+### Changes to this Privacy Statement
 
 We may change this Privacy Statement from time to time. If we make any changes, we will notify you by revising the version and date at the top of this Privacy Statement and, in some cases, where appropriate we may provide you with additional notice (such as adding a statement to the log-in screen or sending you an email notification). You can also follow the GitHub repository for this site here: [https://github.com/aptible/www][7]
 
 Your continued use of our Services after the revised Statement has become effective indicates that you have read, understood, and agreed to the current version of this Statement.
 
-# Contact Information
+### Contact Information
 
 Please contact us with any questions or comments about this Statement, your personal information, our use and disclosure practices, or your consent choices by email at [legal@aptible.com][1].
 
@@ -308,5 +279,5 @@ The fastest, most convenient way to contact VeraSafe is via this form: [https://
   [5]: https://www.privacyshield.gov/
   [6]: http://go.adr.org/privacyshield.html
   [7]: https://github.com/aptible/www
-  [8]: https://www.verasafe.com/privacy-services/contact-article-27-representative    
+  [8]: https://www.verasafe.com/privacy-services/contact-article-27-representative
   [9]: /legal/subprocessor-directory/
