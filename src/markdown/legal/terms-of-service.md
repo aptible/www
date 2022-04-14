@@ -93,7 +93,7 @@ You may terminate your account and this Agreement at any time in accordance with
 7. You will abide by the restrictions in our [Support Policy] and [Security Policy] on how the Services may be implemented.  
 8. You will remit payment timely for the Services, as specified in the [Billing Policy] and any purchase order you may execute.
 9. If you are using the Services to process HIPAA PHI, you must have a valid, signed Business Associate Agreement with Aptible and have applied the required security configurations and controls as specified in that agreement. 
-10. If you are using the Services to process GDPR personal data, you must have a valid, signed Privacy Shield Addendum with Aptible and have applied the required security configurations and controls as specified in that agreement.
+10. If you are using the Services to process GDPR personal data, you must have a valid, signed Data Processing Addendum with Aptible and have applied the required security configurations and controls as specified in that agreement.
 
 **B. Unauthorized uses.** You will not violate, and will not allow third parties under your control to violate, our [Acceptable Use Policy] or other policies.
 
