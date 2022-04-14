@@ -267,10 +267,6 @@ California Civil Code Section 1798.83 permits Aptible customers who are Californ
 
 The core Aptible Deploy and Aptible Comply APIs are hosted in the United States. You may choose to run Deploy stacks in non-U.S. regions, such as the European Union or other regions of the world with laws governing data collection and use that may differ from U.S. law. Please note that when you use the core Deploy and Comply APIs, you are transferring your information outside of those regions to the United States for storage and processing. By providing your information, you consent to any transfer and processing in accordance with this Policy.
 
-# Information for EU-Based Individuals: EU-U.S. Privacy Shield Compliance
-
-Aptible, Inc. is a participant in the U.S. Department of Commerce’s EU-U.S. Privacy Shield program, and has certified that we adhere to the EU-U.S. Privacy Shield Principles. Aptible is subject to the investigatory and enforcement powers of the Federal Trade Commission. For more information about the EU-U.S. and Swiss-U.S. Privacy Shield Framework, visit the [U.S. Department of Commerce’s Privacy Shield website][5].
-
 ## EU-U.S. Privacy Shield Onward Transfers
 
 For personal data transferred from the EU to the U.S. or other third country not determined to meet EU adequacy requirements, if we transfer your personal data to a third party, we will ensure that the third party is contractually obligated to process your data only for limited, specific purposes consistent with this policy. We will also ensure that the third party will apply the same level of protection to that data as the EU-U.S. Privacy Shield Principles and will notify us if it makes a determination that it can no longer meet this obligation. Aptible may be potentially liable if these requirements are not met.
@@ -298,8 +294,6 @@ Our Data Protection Officer is:
 Charles Ballew, CIPP/E
 
 [legal@aptible.com][1]
-
-If you’re reading this far: We’re looking for a new DPO, and VP of Compliance. Email us if you think you’re up for the job: [we're hiring](/company/).
 
 Aptible is not established in the EU, however we do maintain a designated EU representative under Article 27 of GDPR:
 
