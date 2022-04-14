@@ -9,7 +9,7 @@ slug: /legal/privacy/
 template: legal
 ---
 
-Version 3.3 – January 28, 2020
+Version 3.4 – April 14, 2022
 
 At Aptible, our core mission is to help teams protect data on the internet. As a result, our goal is to set a high standard for protecting the privacy of your information. We want to be clear about how we collect, use, protect, and share your information, including your personal information, and the rights and choices you have about the ways in which you can help us protect your privacy.
 
