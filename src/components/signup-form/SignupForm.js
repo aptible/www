@@ -1,68 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 import cn from 'classnames';
 import styles from './SignupForm.module.css';
 import buttonStyles from '../buttons/Button.module.css';
-import { submitHubspotForm, HUBSPOT_FORM_PRODUCT_SIGNUP } from '../../lib/hubspot.js';
+import { analytics } from '../../lib/aptible';
+import Button from '../buttons/Button';
 
 export const SignupForm = ({
-  id,
   btnText = 'Sign Up For Free',
-  inputPlaceholder = 'Enter your email',
-  allowPersonalEmails = true,
-  onSuccess = () => { },
+  theme = '',
+  size = '',
 }) => {
-  const [submitted, setSubmitted] = useState(false);
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
-
-  const onKeypress = (e) => {
-    if (e.key === 'Enter') {
-      onSubmit();
-    }
-  };
-
   const onSubmit = () => {
-    const result = submitHubspotForm(HUBSPOT_FORM_PRODUCT_SIGNUP, email, allowPersonalEmails);
-    if (!result.ok) {
-      setError(result.message);
-      return;
+    let url = 'https://dashboard.aptible.com/signup';
+    const utms = analytics.allUtmVars();
+
+    if (Object.keys(utms).length > 0) {
+      const params = [];
+      for (let param in utms) {
+        params.push(`${param}=${utms[param]}`);
+      }
+
+      url += `?${params.join('&')}`;
     }
 
-    setSubmitted(true);
-    setError('');
-    onSuccess();
-
-    // Give time for HubSpot & analytics to fire
-    setTimeout(() => {
-      window.location = `https://dashboard.aptible.com/signup?email=${encodeURIComponent(email)}`;
-    }, 250);
+    window.location = url;
   };
 
   return (
     <div>
-      <div
-        className={styles.signupFormContainer}
-        style={{ opacity: submitted ? 0 : 1 }}
+      <Button
+        className={cn(buttonStyles.button, styles.button)}
+        onClickFn={onSubmit}
+        theme={theme}
+        size={size}
       >
-        <div className={styles.signupForm} id={id}>
-          <input
-            required
-            className={styles.signupFormInput}
-            onKeyPress={onKeypress}
-            onChange={e => setEmail(e.target.value)}
-            type="email"
-            placeholder={inputPlaceholder}
-          />
-          <button
-            className={cn(buttonStyles.button, styles.button)}
-            type="submit"
-            onClick={onSubmit}
-          >
-            {btnText}
-          </button>
-        </div>
-        <div className={styles.error}>{error ? error : ''}</div>
-      </div>
+        {btnText}
+      </Button>
     </div>
   );
 };

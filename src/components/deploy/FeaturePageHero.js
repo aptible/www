@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '../grid/Grid';
 import styles from './FeaturePageHero.module.css';
-import { LeadForm } from '../lead-form/LeadForm';
+import { SignupForm } from '../signup-form/SignupForm';
 
 export default ({ h1, summary, leadFormId }) => (
   <div className={styles.container}>
@@ -11,7 +11,7 @@ export default ({ h1, summary, leadFormId }) => (
         {h1}
         {summary}
         <div className={styles.leadForm}>
-          <LeadForm id={leadFormId} />
+          <SignupForm id={leadFormId} />
         </div>
       </div>
     </Grid>

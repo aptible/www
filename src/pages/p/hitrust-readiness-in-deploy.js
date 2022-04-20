@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import Title from './components/Title';
 import Video from './components/Video';
 import Testimonial from './components/Testimonial';
-import LeadForm from '../../components/lead-form';
+import SignupForm from '../../components/signup-form';
 
 import styles from './VideoLandingPage.module.css';
 
@@ -33,7 +33,7 @@ export default () => {
           />
 
           <div className={styles.formWrapper}>
-            <LeadForm
+            <SignupForm
               id="HITRUST Readiness Video Campaign - 1"
               inputPlaceholder="Enter your work email"
             />

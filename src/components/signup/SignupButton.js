@@ -1,38 +1,14 @@
 import React from 'react';
-import Button from '../buttons/Button';
-import Signup from '../signup/Signup';
+import SignupForm from '../signup-form';
 
-class SignupButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: false,
-    };
-  }
+const SignupButton = ({
+  text = 'Sign Up For Free',
+  theme = '',
+  size = '',
+}) => {
+  return (
+    <SignupForm btnText={text} theme={theme} size={size} />
+  );
+};
 
-  openForm() {
-    this.setState({ open: true });
-  }
-
-  closeForm() {
-    this.setState({ open: false });
-  }
-
-  render() {
-    return (
-      <>
-        <Button
-          onClickFn={() => this.openForm()}
-          theme={this.props.theme}
-          size={this.props.size}
-        >
-          {this.props.text}
-        </Button>
-
-        {this.state.open && <Signup product="deploy" closeFn={() => this.closeForm()} />}
-      </>
-    );
-  }
-}
-
-export default SignupButton;
+export default SignupButton
