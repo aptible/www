@@ -3,7 +3,7 @@ import { navigate } from 'gatsby'
 import cn from 'classnames';
 import styles from './LeadForm.module.css';
 import buttonStyles from '../buttons/Button.module.css';
-import { submitHubspotForm, HUBSPOT_FORM_DEMO } from '../../lib/hubspot.js';
+import { submitHubspotForm, HUBSPOT_FORM_HIPAA_GUIDE } from '../../lib/hubspot.js';
 
 export const LeadForm = ({
   id,
@@ -26,7 +26,7 @@ export const LeadForm = ({
   };
 
   const onSubmit = () => {
-    const result = submitHubspotForm(HUBSPOT_FORM_DEMO, email, true);
+    const result = submitHubspotForm(HUBSPOT_FORM_HIPAA_GUIDE, email, true);
     if (!result.ok) {
       setError(result.message);
       return;
