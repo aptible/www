@@ -31,23 +31,7 @@ const generateField = (field, value) => {
 };
 
 const addUtmsToFields = (fields) => {
-  const utms = {};
-
-  // First grab them from the cookies
-  for (let param of analytics.utmVars) {
-    if (cookies.get(param)) {
-      utms[param] = cookies.get(param);
-    }
-  }
-
-  // Then take them from the URL (and overwrite cookie values if necessary)
-  const urlUtms = analytics.allUtmVars();
-  for (let param of analytics.utmVars) {
-    if (urlUtms[param]) {
-      utms[param] = urlUtms[param];
-    }
-  }
-
+  const utms = analytics.allUtmVars();
   for (let param in utms) {
     fields.push(generateField(param, utms[param]));
   }

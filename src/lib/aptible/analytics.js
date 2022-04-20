@@ -1,8 +1,12 @@
+import * as cookies from './cookies.js';
+
+
 export const utmVars = [
   'utm_source',
   'utm_medium',
   'utm_campaign',
   'utm_content',
+  'utm_term',
   'gclid',
 ];
 
@@ -40,10 +44,18 @@ export function getParam(key) {
 export function allUtmVars() {
   let utms = {};
 
-  const params = allParams();
-  for (let key in params) {
-    if (utmVars.indexOf(key) !== -1) {
-      utms[key] = params[key];
+  // First grab them from the cookies
+  for (let param of utmVars) {
+    if (cookies.get(param)) {
+      utms[param] = cookies.get(param);
+    }
+  }
+
+  // Then take them from the URL (and overwrite cookie values if necessary)
+  const urlParams = allParams();
+  for (let param of utmVars) {
+    if (urlParams[param]) {
+      utms[param] = urlParams[param];
     }
   }
 
