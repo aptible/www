@@ -8,11 +8,10 @@ import styles from './VideoLandingPage.module.css';
 import { event } from '../../lib/aptible/analytics';
 
 const availableCalendars = {
-  'frank-macreery': 1,
-  'skylar-anderson': 1
+  'frank-macreery': 1
 }
 
-const DEFAULT_CALENDAR = 'skylar-anderson';
+const DEFAULT_CALENDAR = 'frank-macreery';
 const LINKEDIN_CONVERSION_ID = '5063932';
 
 const getCalendarIdFromQueryParam = (calendar) => {
