@@ -17,7 +17,9 @@ class CustomerCards extends React.Component {
             <Card customer="hims_hers" />
             <Card customer="ableHealth" />
             <Card customer="pathAI" />
+            <Card customer="stellar" />
             <Card customer="healthify" />
+            <Card customer="dorsata" />
             <Card customer="glidianInc" />
             <Card customer="vidscrip" />
             <Card customer="aidin" />
@@ -26,10 +28,12 @@ class CustomerCards extends React.Component {
           <div className={styles.right}>
             <Card customer="projectBeacon" />
             <Card customer="careport" />
+            <Card customer="greenspace" />
             <Card customer="mdsave" />
             <Card customer="healthCatalyst" />
             <Card customer="medicalMemory" />
             <Card customer="rightwayHealthcare" />
+            <Card customer="inner_pearl" />
             <Card customer="pager" />
           </div>
         </Grid>
