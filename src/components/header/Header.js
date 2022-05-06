@@ -114,6 +114,11 @@ class Header extends React.Component {
                     openSectionName={openSectionName}
                   />
 
+                  <MainNavItem
+                    title="Docs"
+                    to="https://deploy-docs.aptible.com"
+                  />
+
                   <div className={styles.mobileNav}>
                     <MobileMenuItem
                       navOpen={this.state.navOpen}
