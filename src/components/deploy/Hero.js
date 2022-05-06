@@ -7,6 +7,8 @@ import hitrustBadge from '../../images/home/badges/hitrust-24x24.svg';
 import soc2Badge from '../../images/home/badges/soc-24x24.svg';
 import SignupForm from '../../components/signup-form';
 
+const DEMO_VIDEO_ID = 'vesrt04o10';
+
 export const CompliancePills = () => {
   return (
     <div className={styles.compliancePills}>
@@ -29,7 +31,7 @@ const CompliancePill = ({ title, svg }) => {
 const playDemo = () => {
   window._wq = window._wq || [];
   window._wq.push({
-    id: 'vesrt04o10', onReady: (video) => {
+    id: DEMO_VIDEO_ID, onReady: (video) => {
       video.play();
     }
   });
@@ -63,7 +65,7 @@ export default ({ allowPersonalEmails = true }) => (
           </div>
         </div>
 
-        <WistiaVideo videoId="vesrt04o10" />
+        <WistiaVideo videoId={DEMO_VIDEO_ID} />
       </div>
     </Grid>
   </div>
