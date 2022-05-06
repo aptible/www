@@ -10,8 +10,8 @@ import pagerLogo from '../../images/customers/logos/pager-logo.png';
 
 export default () => (
   <div className={styles.container}>
-    <p className={cn('L', styles.proofTitle)}>
-      Trusted by more innovators in HealthTech than any other PaaS
+    <p className={styles.proofTitle}>
+      Hundreds of digital health companies (including 20+ unicorns 🦄) build on Aptible:
     </p>
     <div className={styles.logoBar}>
       <img height="24" src={himsHersLogo} alt="hims & hers" />

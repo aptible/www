@@ -37,7 +37,7 @@ export default () => (
         ctaText="Sign up for free"
         product="deploy"
       />
-      <HowAptibleWorks />
+      <HowAptibleWorks includeVideo={false} />
       <CenteredDemoForm
         title="A Trusted Platform That Grows With You"
         body="Complete audits faster with well-documented controls, clear

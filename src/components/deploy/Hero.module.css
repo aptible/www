@@ -1,5 +1,5 @@
 .container {
-  padding: 64px 0 200px 0;
+  padding: 0px 0 100px 0;
 }
 
 .mobileHero {
@@ -8,7 +8,8 @@
 
 .content {
   grid-row: 1;
-  grid-column: 1 / span 4;
+  grid-column: 1 / span 7;
+  text-align: center;
 }
 
 .signUpYourself {
@@ -16,7 +17,15 @@
 }
 
 .heroItem {
-  margin-bottom: 48px
+  margin-bottom: 18px;
+  font-size: 54px;
+  line-height: 62px;
+}
+
+.subhead {
+  font-size: 22px;
+  padding: 0 140px;
+  margin-bottom: 40px;
 }
 
 .content h5 {
@@ -81,13 +90,33 @@
   left: -152px;
 }
 
-.leadFormWrapper {
-  width: 480px;
+.heroCTA {
+  margin-bottom: 40px;
+}
+
+.watchDemo {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.watchDemo span {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: var(--aptible-green);
+  cursor: pointer;
+}
+
+.watchDemo span:hover {
+  text-decoration: none;
 }
 
 @media (--mobile) {
   .leadFormWrapper {
     width: 100%;
+  }
+
+  .watchDemo {
+    display: none;
   }
 
   .container {
@@ -106,6 +135,10 @@
 
   .heroItem {
     margin-bottom: 24px
+  }
+
+  .subhead {
+    padding: 0;
   }
 
   .containerMeticsDashboard {

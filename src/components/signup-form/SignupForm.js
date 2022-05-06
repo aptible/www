@@ -27,7 +27,7 @@ export const SignupForm = ({
   };
 
   return (
-    <div>
+    <>
       <Button
         className={cn(buttonStyles.button, styles.button)}
         onClickFn={onSubmit}
@@ -36,6 +36,6 @@ export const SignupForm = ({
       >
         {btnText}
       </Button>
-    </div>
+    </>
   );
 };

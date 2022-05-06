@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { Grid } from '../grid/Grid';
 import styles from './Hero.module.css';
+import WistiaVideo from '../shared/WistiaVideo';
 import hipaaBadge from '../../images/home/badges/hipaa-24x24.svg';
 import hitrustBadge from '../../images/home/badges/hitrust-24x24.svg';
 import soc2Badge from '../../images/home/badges/soc-24x24.svg';
-import dashboardIlly from '../../images/home/illustrations/deploy-container-metrics-dashboard.svg';
-import deployConsoleIlly from '../../images/home/illustrations/deploy-console.svg';
-import mobileHero from '../../images/home/illustrations/mobile-hero-dashboard.svg';
 import SignupForm from '../../components/signup-form';
+
+const DEMO_VIDEO_ID = 'vesrt04o10';
 
 export const CompliancePills = () => {
   return (
@@ -29,58 +28,44 @@ const CompliancePill = ({ title, svg }) => {
   );
 };
 
+const playDemo = () => {
+  window._wq = window._wq || [];
+  window._wq.push({
+    id: DEMO_VIDEO_ID, onReady: (video) => {
+      video.play();
+    }
+  });
+}
+
 export default ({ allowPersonalEmails = true }) => (
   <div className={styles.container}>
     <Grid rows="2">
       <div className={styles.content}>
         <h1 className={styles.heroItem}>
-          Deploy a Secure, HIPAA-Compliant App From Day One
+          Secure infrastructure you <br className="desktopOnly" />
+          don't have to think about
         </h1>
 
-        <div className={styles.heroItem}>
-          <CompliancePills />
+        <div className={styles.subhead}>
+          Get code to production faster and comply with HIPAA, HITRUST, SOC 2,
+          and more. We focus on security and compliance, so you can focus on
+          your product.
         </div>
 
-        <div className={styles.heroItem}>
-          <p className="XL">
-            Don’t waste engineering time building compliance into your cloud
-            infrastructure. Use Aptible to get your product to market faster and
-            be HIPAA-compliant from day one.
-          </p>
-        </div>
-
-        <div className={styles.leadFormWrapper}>
+        <div className={styles.heroCTA}>
           <SignupForm
             id="Home Page Hero - Product Signup"
             inputPlaceholder="Enter your email"
             allowPersonalEmails={allowPersonalEmails}
+            btnText="Deploy Now"
           />
 
-          {allowPersonalEmails &&
-            <div className={styles.signUpYourself}>
-              <p className="M">
-                Still have questions? {' '}
-                <Link to="/p/schedule-a-demo/">
-                  Schedule a demo
-                </Link>
-              </p>
-            </div>
-          }
+          <div className={styles.watchDemo}>
+            or <span onClick={playDemo}>Watch Demo (9 mins)</span>
+          </div>
         </div>
-      </div>
 
-      <div className={styles.illustration}>
-        <img alt="Aptible Illustration" src={mobileHero} className={styles.mobileHero} />
-        <img
-          className={styles.containerMeticsDashboard}
-          alt="Container Metrics Dashboard."
-          src={dashboardIlly}
-        />
-        <img
-          className={styles.containerDeploymentConsole}
-          alt="Terminal deploying a docker app on Aptible."
-          src={deployConsoleIlly}
-        />
+        <WistiaVideo videoId={DEMO_VIDEO_ID} />
       </div>
     </Grid>
   </div>

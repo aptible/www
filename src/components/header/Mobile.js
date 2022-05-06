@@ -17,7 +17,7 @@ const Mobile = () => (
         <Grid>
           <div className={styles.mainItems}>
             <div className={styles.mainItem}>
-              <h4 className={cn(styles.heading, 'h4')}>Solutions</h4>
+              <h4 className={cn(styles.heading, 'h4')}>Product</h4>
 
               {SOLUTIONS_NAV.map(link => (
                 <div className={styles.subItem} key={link.url}>
@@ -28,14 +28,6 @@ const Mobile = () => (
               ))}
             </div>
 
-            <div className={styles.mainItem}>
-              <Link
-                className={cn(styles.heading, 'h4')}
-                to="/secured-by-aptible"
-              >
-                Secured by Aptible
-              </Link>
-            </div>
             <div className={styles.mainItem}>
               <Link
                 className={cn(styles.heading, 'h4')}
@@ -53,7 +45,7 @@ const Mobile = () => (
 
             <div className={styles.mainItem}>
               <Link className={cn(styles.heading, 'h4')} to="/resources/">
-                Resources
+                Developers
               </Link>
               {RESOURCES_NAV.map(link => {
                 if (link.external) {

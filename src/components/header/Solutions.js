@@ -19,6 +19,11 @@ export const SOLUTIONS_NAV = [
     url: '/solutions/reliable-devops',
     show: true,
   },
+  {
+    title: 'Security & Availability Controls',
+    url: '/secured-by-aptible',
+    show: true,
+  },
 ];
 
 const Company = () => (

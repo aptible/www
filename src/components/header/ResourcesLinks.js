@@ -5,11 +5,10 @@ import styles from './ResourcesLinks.module.css';
 export default () => (
   <div className={styles.container}>
     <div className={styles.column}>
-      <Link to="/resources/">Library</Link>
+      <a href="https://deploy-docs.aptible.com">Documentation</a>
       <Link to="/blog/">Blog</Link>
       <Link to="/blog/category/engineering">Engineering Blog</Link>
-
-      <a href="https://deploy-docs.aptible.com">Documentation</a>
+      <Link to="/resources/">Library</Link>
 
       <h6 className="small">Support</h6>
       <a
