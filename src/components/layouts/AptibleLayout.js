@@ -8,10 +8,10 @@ import Analytics from '../shared/Analytics';
 const AptibleLayout = ({ children }) => (
   <>
     <HelloBar
-      id="p-2021-year-in-review"
-      to="/p/2021-year-in-review"
-      callout="2021 Year in Review"
-      text="Watch Aptible CEO, Frank Macreery, review highlights from 2021 and preview what's coming in 2022."
+      id="blog-heroku-migration"
+      to="/blog/heroku-to-aptible-migration-guide/"
+      callout="Heroku Customers"
+      text="Migrating from Heroku? Check out our migration tool and quickstart guide."
     />
     <Header />
     <CookieConsent />
