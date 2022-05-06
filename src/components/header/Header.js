@@ -88,14 +88,10 @@ class Header extends React.Component {
                 </Link>
                 <div className={styles.navItems}>
                   <MainNavItem
-                    title="Why Aptible"
+                    title="Product"
                     onClickFn={this.toggleNavSection}
                     sectionName="solutions"
                     openSectionName={openSectionName}
-                  />
-                  <MainNavItem
-                    title="Secured by Aptible"
-                    to="/secured-by-aptible"
                   />
                   <MainNavItem title="Pricing" to="/pricing-plans" />
                   <MainNavItem
@@ -104,7 +100,7 @@ class Header extends React.Component {
                     gridColumn="6"
                   />
                   <MainNavItem
-                    title="Resources"
+                    title="Developers"
                     gridColumn="7"
                     onClickFn={this.toggleNavSection}
                     sectionName="resources"
@@ -116,11 +112,6 @@ class Header extends React.Component {
                     onClickFn={this.toggleNavSection}
                     sectionName="company"
                     openSectionName={openSectionName}
-                  />
-
-                  <MainNavItem
-                      title="Docs"
-                      to="https://deploy-docs.aptible.com"
                   />
 
                   <div className={styles.mobileNav}>

@@ -7,9 +7,10 @@ import styles from './Resources.module.css';
 
 export const RESOURCES_NAV = [
   {
-    title: 'Library',
-    url: '/resources/',
-    external: false,
+    title: 'Documentation',
+    url: 'https://deploy-docs.aptible.com',
+    external: true,
+    newDomain: false,
   },
   {
     title: 'Blog',
@@ -22,10 +23,9 @@ export const RESOURCES_NAV = [
     external: false,
   },
   {
-    title: 'Deploy Documentation',
-    url: 'https://deploy-docs.aptible.com',
-    external: true,
-    newDomain: false,
+    title: 'Library',
+    url: '/resources/',
+    external: false,
   },
   {
     title: 'Open a Support Ticket',
