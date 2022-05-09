@@ -46,6 +46,7 @@ export default ({ allowPersonalEmails = true }) => (
           don't have to think about
         </h1>
 
+        <CompliancePills />
         <div className={styles.subhead}>
           Get code to production faster and comply with HIPAA, HITRUST, SOC 2,
           and more. We focus on security and compliance, so you can focus on
