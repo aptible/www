@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Proof.module.css';
-import cn from 'classnames';
+import { Link } from 'gatsby';
 import himsHersLogo from '../../images/customers/logos/hims-hers-logo.png';
 import rightwayLogo from '../../images/customers/logos/rightway-logo.png';
 import aidinLogo from '../../images/customers/logos/aidin-logo.png';
@@ -11,7 +11,9 @@ import pagerLogo from '../../images/customers/logos/pager-logo.png';
 export default () => (
   <div className={styles.container}>
     <p className={styles.proofTitle}>
-      Hundreds of digital health companies (including 20+ unicorns 🦄) build on Aptible:
+      Hundreds of digital health companies 
+      &mdash; <Link to="/customers/">including 20+ unicorns 🦄</Link> &mdash; 
+      build on Aptible:
     </p>
     <div className={styles.logoBar}>
       <img height="24" src={himsHersLogo} alt="hims & hers" />

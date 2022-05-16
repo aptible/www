@@ -7,7 +7,6 @@ export default () => (
     <div className={styles.column}>
       <a href="https://deploy-docs.aptible.com">Documentation</a>
       <Link to="/blog/">Blog</Link>
-      <Link to="/blog/category/engineering">Engineering Blog</Link>
       <Link to="/resources/">Library</Link>
 
       <h6 className="small">Support</h6>
