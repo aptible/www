@@ -31,6 +31,10 @@
   grid-column: 2 / span 6;
 }
 
+.content h1 {
+  font-size: 52px;
+}
+
 .metaContainer {
   margin: 80px 0 45px 0;
 }
@@ -39,9 +43,11 @@
   padding: 40px 0;
 }
 
-.body h1 {
-  font-size: 40px;
+.body h1,
+.body h2 {
+  font-size: 32px;
   line-height: 46px;
+  margin: 60px 0 30px 0;
 }
 
 .body h2:not(:first-child),
@@ -55,6 +61,7 @@
 .body ul,
 .body ol {
   line-height: 1.6;
+  font-size: 18px;
 }
 
 .body li > p {
@@ -69,7 +76,7 @@
 }
 
 .body > *:not([data-module="codeblock"]):not(table) {
-  max-width: 640px;
+  max-width: 720px;
 }
 
 .body > hr {
@@ -89,8 +96,9 @@
 
 .body > table,
 .body > [data-module="codeblock"] {
-  width: var(--content-max-width);
-  margin-left: -160px;
+  font-size: 13px;
+  margin: 50px 0;
+  max-width: 720px;
 }
 
 /* override Prism theme */

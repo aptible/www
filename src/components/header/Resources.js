@@ -18,11 +18,6 @@ export const RESOURCES_NAV = [
     external: false,
   },
   {
-    title: 'Engineering Blog',
-    url: '/blog/category/engineering/',
-    external: false,
-  },
-  {
     title: 'Library',
     url: '/resources/',
     external: false,
