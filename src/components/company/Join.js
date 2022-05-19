@@ -9,7 +9,7 @@ export default () => (
       <Row>
         <h5>Join the Team</h5>
         <h2>
-          Want to build the future of privacy and security on the web?
+          Want to help build out the platform that makes it possible to use any cloud infrastructure securely?
           <br />
           Join us.
         </h2>

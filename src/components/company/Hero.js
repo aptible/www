@@ -10,9 +10,9 @@ export default ({ webcamPhotos }) => (
     <Grid rows="2">
       <div className={styles.headline}>
         <h1 className="hero">
-          We're building
-          <br />
-          trust on the internet.
+          We're making it possible to use
+          &nbsp;<br className="desktopOnly" /> 
+          any cloud infrastructure securely.
         </h1>
       </div>
 
