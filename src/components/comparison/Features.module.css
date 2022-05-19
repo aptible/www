@@ -1,0 +1,32 @@
+.container {
+  grid-column: 1 / span 7;
+  padding-bottom: 30px;
+}
+
+.container h2 {
+  margin-bottom: 30px;
+}
+
+.container .icon {
+  width: 12px;
+  height: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+.featureTable {
+  width: 800px;
+}
+
+.featureTable th {
+  text-align: center;
+}
+
+.featureTable td,
+.featureTable th {
+  padding: 12px;
+}
+
+.featureColumn {
+  width: 110px;
+}

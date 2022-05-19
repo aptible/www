@@ -8,10 +8,10 @@ import Analytics from '../shared/Analytics';
 const AptibleLayout = ({ children }) => (
   <>
     <HelloBar
-      id="blog-heroku-migration"
-      to="/blog/heroku-to-aptible-migration-guide/"
+      id="heroku-comparison"
+      to="/heroku-alternative/"
       callout="Heroku Customers"
-      text="Migrating from Heroku? Check out our migration tool and quickstart guide."
+      text="It's worth migrating to Aptible. Compare key features."
     />
     <Header />
     <CookieConsent />

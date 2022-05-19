@@ -1,0 +1,57 @@
+.container {
+  grid-column: 1 / span 7;
+  padding-bottom: 30px;
+}
+
+.intro {
+  grid-column: 1 / span 4;
+}
+
+.cta {
+  margin-top: 40px;
+}
+
+.cta span {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.screenshot {
+  grid-column: 5 / span 2;
+  padding: 30px 0 0 50px;
+}
+
+.proof {
+  margin-top: 100px;
+}
+
+.container h1 {
+  font-size: 66px;
+  line-height: 70px;
+  margin-bottom: 45px;
+}
+
+@media (--mobile) {
+  .container {
+    padding: 30px 0;
+  }
+
+  .intro {
+    grid-column: 1 / span 7;
+  }
+
+  .cta span {
+    display: block;
+    padding-top: 10px;
+    padding-left: 0;
+  }
+
+  .screenshot {
+    display: none;
+  }
+
+  .container h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
