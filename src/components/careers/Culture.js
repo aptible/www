@@ -9,7 +9,7 @@ export default () => (
     <Grid>
       <div className={styles.intro}>
         <p className="XL">
-          We are a team of infrastructure security experts and learners committed to making it easy to use any cloud infrastructure securely. We’ve already helped developers at hundreds of startups secure their infrastructure, and we’re on a mission to empower every software developer to do their best work, while staying secure.
+          We are a team of infrastructure security experts and platform engineers committed to making it easy to use any cloud infrastructure securely.
         </p>
 
         <ArrowButton to="/company/" text="Learn More About Aptible" />
