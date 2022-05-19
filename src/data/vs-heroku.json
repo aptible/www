@@ -1,0 +1,29 @@
+{
+  "Security and compliance": [
+    { "name": "HIPAA BAA", "free": false, "enterprise": true, "aptible": true },
+    { "name": "HITRUST inheritance", "free": false, "enterprise": false, "aptible": true },
+    { "name": "Compliance readiness monitoring", "link": "https://deploy-docs.aptible.com/docs/intro-compliance-dashboard", "free": false, "enterprise": false, "aptible": true },
+    { "name": "Audited SSH sessions", "free": false, "enterprise": true, "aptible": true },
+    { "name": "IPsec site-site VPNs", "free": false, "enterprise": true, "aptible": true },
+    { "name": "SSO integration", "free": false, "enterprise": true, "aptible": true },
+    { "name": "Host and network intrusion detection", "free": false, "enterprise": false, "aptible": true }
+  ],
+  "Support and reliability": [
+    { "name": "Engineering-led support", "free": false, "enterprise": false, "aptible": true },
+    { "name": "Available Slack support", "free": false, "enterprise": false, "aptible": true },
+    { "name": "Compliance and audit support", "free": false, "enterprise": false, "aptible": true },
+    { "name": "99.95% Uptime SLA", "link": "https://www.aptible.com/legal/service-level-agreement/", "free": false, "enterprise": false, "aptible": true }
+  ],
+  "Core functionality": [
+    { "name": "Works with any 12 Factor App", "link": "https://12factor.net/", "free": true, "enterprise": true, "aptible": true },
+    { "name": "CI/CD integration", "free": true, "enterprise": true, "aptible": true },
+    { "name": "CLI and Terraform interfaces", "free": true, "enterprise": true, "aptible": true },
+    { "name": "Deploy via Git or Docker", "free": true, "enterprise": true, "aptible": true },
+    { "name": "Log drains ", "free": true, "enterprise": true, "aptible": true },
+    { "name": "Metric drains", "free": false, "enterprise": false, "aptible": true },
+    { "name": "Automated certificate management", "free": true, "enterprise": true, "aptible": true },
+    { "name": "Add-on marketplace", "free": true, "enterprise": true, "aptible": false },
+    { "name": "PostgreSQL and Redis", "free": true, "enterprise": true, "aptible": true },
+    { "name": "Kafka", "free": true, "enterprise": true, "aptible": false }
+  ]
+}
