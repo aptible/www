@@ -19,7 +19,7 @@ template: legal
 [Support Policy]:/legal/support
 [Trademark Policy]:/legal/trademark
 
-Version 2.2 - July 2020
+Version 2.3 - May 2022
 
 Welcome, and thank you for your interest in Aptible! 
 
@@ -27,7 +27,7 @@ Welcome, and thank you for your interest in Aptible!
 
 These Terms of Service (the **"Terms"**) are an important contract between us and you:
 
-- If you are opening an Aptible account or including this Agreement by reference in a purchase order, this contract is between Aptible and your organization. You represent that you have the authority to bind your organization to this agreement.
+- If you are opening an Aptible account, utilizing our Free Trial, or including this Agreement by reference in a purchase order, this contract is between Aptible and your organization. You represent that you have the authority to bind your organization to this agreement.
 
 - If you are an individual Aptible user, this Agreement is between you and Aptible.
 
@@ -48,7 +48,7 @@ The general idea of this Agreement is that we grant you a license to use the Ser
 In this Agreement:
 
 - **"Aptible,"** **"we,"** and **"us"** means Aptible Inc. 
-- The **"Services"** means the Aptible services, including Aptible Deploy, Aptible Comply, and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, and other services we provide.
+- The **"Services"** means the Aptible services, including  the Free Trial, Aptible Deploy, Aptible Comply, and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, and other services we provide.
 - Section 22 contains more defined terms.
 
 #### Summary 
@@ -96,6 +96,16 @@ You may terminate your account and this Agreement at any time in accordance with
 10. If you are using the Services to process GDPR personal data, you must have a valid, signed Data Processing Addendum with Aptible and have applied the required security configurations and controls as specified in that agreement.
 
 **B. Unauthorized uses.** You will not violate, and will not allow third parties under your control to violate, our [Acceptable Use Policy] or other policies.
+
+**C.  Free Trial Terms.** If you sign up for our free trial period (the “Free Trial”), the following additional terms apply to your use of Aptible Services:
+1. The length of your Free Trial is 15 days from date of sign-up, unless otherwise indicated or offered by Aptible at our sole discretion.
+2. You must use a valid company email address to sign up for our Free Trial. Aptible reserves the right, in its absolute discretion, to validate your use of a company email address using third party resources, and determine your eligibility for a Free Trial, and, subject to applicable laws, to withdraw or to modify a Free Trial at any time without prior notice and with no liability, to the greatest extent permitted by law. The Aptible Free Trial is for evaluation by companies only, and is not available for security researchers or for any other personal use.
+3. Aptible may extend the term of your Free Trial at Aptible’s sole discretion.
+4. The Free Trial will make available to you a reasonable amount of computing resources to allow you to evaluate the Aptible Services for your company. Aptible reserves the right to determine the amount of resources available to you, and may at any time, in our sole discretion, without any notice or liability, limit, deprovision or otherwise deactivate resources in your use of the Services.
+5. Before your Free Trial expires, you will be required to provide a valid payment method, such as credit card or ACH, to Aptible through our dashboard. If you do not provide a valid payment method before your Free Trial expires, we reserve the right to disable your account, deprovision your resources, or take any other action that we see fit, without any notice or liability. Your provided payment method will be charged on first invoice date following the Free Trial unless you cancel, deprovision, and otherwise stop using all resources on our Services before the expiration of the Free Trial.
+6. If you are an existing user or customer of the Services, you are prohibited from using our Free Trial account unless otherwise offered to you by Aptible at our sole discretion. You may not sign up for multiple accounts in order to receive additional Free Trial benefits across multiple accounts. Should we discover that you are an existing user or customer of the Services, or creating multiple Free Trial accounts – we reserve to immediately terminate, suspend, and delete your accounts and all data within.
+7. Aptible reserves the right to terminate or suspend a Free Trial at any time, in our sole discretion, without any notice, and without any liability. We further reserve the right to adjust pricing relative to any of our Services offered through the Free Trial.
+8. For avoidance of doubt, your use of the Free Trial Services will be strictly governed by this Terms of Service and all other associated terms, policies, and agreements.
 
 ### 3. Privacy
 **A. Your privacy.** Please read our [Privacy Policy].
