@@ -69,8 +69,7 @@
       { "key": "international-data-transfers", "name": "International Data Transfers" },
       { "key": "enforcement", "name": "Enforcement" },
       { "key": "recent-enforcement-actions", "name": "Recent Enforcement Actions" },
-      { "key": "conclusion", "name": "Conclusion" },
-      { "key": "attestation", "name": "Attestation" }
+      { "key": "conclusion", "name": "Conclusion" }
     ]
   },
   "hipaa-workforce": {
@@ -95,11 +94,7 @@
       { "key": "sanctions", "name": "Sanctions" },
       { "key": "criminal-penalties", "name": "Criminal Penalties" },
       { "key": "bring-home", "name": "Bring it Home" },
-      { "key": "objectives-recap", "name": "Objectives Recap" },
-      { "key": "next-steps", "name": "Next Steps" },
-      { "key": "attestation", "name": "Attestation" },
-      { "key": "quiz", "name": "Quiz" },
-      { "key": "feedback", "name": "Feedback" }
+      { "key": "objectives-recap", "name": "Objectives Recap" }
     ]
   },
   "security-awareness": {
