@@ -23,7 +23,6 @@ import himsHersLogo from '../../images/customers/logos/hims-hers-logo.png';
 import careportLogo from '../../images/customers/logos/careport-logo.png';
 import dorsataLogo from '../../images/customers/logos/dorsata.png';
 import greenspaceLogo from '../../images/customers/logos/greenspace.png';
-import innerPearlLogo from '../../images/customers/logos/inner-pearl.png';
 import stellarLogo from '../../images/customers/logos/stellar-health.png';
 import medicalMemoryBranded from '../../images/solutions/medical-memory-branded-half-height.png';
 import rightwayBranded from '../../images/solutions/rightway-branded-panel-half-height.png';
@@ -55,7 +54,6 @@ const logos = {
   careport: careportLogo,
   dorsata: dorsataLogo,
   greenspace: greenspaceLogo,
-  inner_pearl: innerPearlLogo,
   stellar: stellarLogo,
 };
 
