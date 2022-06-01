@@ -87,5 +87,16 @@ module.exports = {
         remote: 'https://github.com/aptible/training.git'
       },
     },
+    {
+      resolve: 'gatsby-plugin-matomo',
+      options: {
+        siteId: '1',
+        matomoUrl: '//m.aptiblehq.com',
+        matomoPhpScript: 'matomo.php',
+        matomoJsScript: 'matomo.js',
+        siteUrl: 'https://www.aptible.com',
+        cookieDomain: '*.aptible.com',
+      }
+    },
   ],
 };
