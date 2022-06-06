@@ -33,7 +33,6 @@ class CustomerCards extends React.Component {
             <Card customer="healthCatalyst" />
             <Card customer="medicalMemory" />
             <Card customer="rightwayHealthcare" />
-            <Card customer="inner_pearl" />
             <Card customer="pager" />
           </div>
         </Grid>

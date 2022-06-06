@@ -116,15 +116,6 @@
     "name": "Dorsata",
     "website": "https://dorsata.com/"
   },
-  "inner_pearl": {
-    "headline": "&ldquo;In AWS, you can spend time in tutorials learning, but Aptible solves that for us. You go to Aptible, click your environment, click a button and launch a DB Instance. Performance is great, deployments are great, and everything is easy to use.&rdquo;",
-    "author": "Quentin Geddis, CTO",
-    "tags": [
-      "health"
-    ],
-    "name": "Inner Pearl",
-    "website": "https://www.innerpearl.com/"
-  },
   "stellar": {
     "headline": "&ldquo;Aptible is semi-magic—it would have taken me three months to build it myself... We were able to launch an alpha customer in three months with only three engineers. Two years later, we were able to pass HITRUST compliance. It wasn't that hard to pass largely due to Aptible.&rdquo;",
     "author": "Octavian Costache, CTO",
