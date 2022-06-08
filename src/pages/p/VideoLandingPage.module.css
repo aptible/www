@@ -37,6 +37,11 @@
   align-items: center;
 }
 
+.extraPadding {
+  padding: 100px 0 200px 0;
+  margin-bottom: -150px;
+}
+
 .layout {
   background: url(/assets/radar.svg) no-repeat center 70px;
 }

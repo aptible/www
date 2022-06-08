@@ -26,7 +26,6 @@ This page provides a list of vendors with whom we share personal information as 
 | [dbt](https://www.getdbt.com/)                                   | Analytics                                                            | United States |
 | [Discourse](https://www.discourse.org)                           | Analytics                                                            | United States |
 | [Fivetran](https://www.fivetran.com/)                            | Analytics                                                            | United States |
-| [Fullstory](https://www.fullstory.com/)                          | Analytics                                                            | United States |
 | [Google Inc](https://about.google/)                              | Cloud service provider & marketing analytics                         | United States |
 | [Gong](https://www.gong.io/)                                     | Webinar and meeting recording & analytics                            | United States |
 | [Hubspot](https://www.hubspot.com/)                              | Customer relationship management, onsite chat & marketing automation | United States |
@@ -42,6 +41,7 @@ This page provides a list of vendors with whom we share personal information as 
 | [Stripe](https://stripe.com)                                     | Payment processing                                                   | United States |
 | [Twilio](https://www.twilio.com)                                 | Communication                                                        | United States |
 | [Typeform](https://www.typeform.com/)                            | Survey                                                               | Spain         |
+| [Vitally](https://www.vitally.io/)                               | Customer success                                                     | United States |
 | [Wistia](https://wistia.com/)                                    | Videos and analytics                                                 | United States |
 | [Zapier](https://zapier.com/apps/integrations)                   | Workflow automation                                                  | United States |
 | [Zendesk](https://www.zendesk.com)                               | Support                                                              | United States |
