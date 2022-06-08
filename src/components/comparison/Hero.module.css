@@ -7,6 +7,10 @@
   grid-column: 1 / span 4;
 }
 
+.whiteText {
+  color: white;
+}
+
 .cta {
   margin-top: 40px;
 }
