@@ -34,5 +34,6 @@ module.exports = {
   },
   customMedia: {
     '--mobile': '(max-width: 1119px)',
+    '--lightResponsive': '(max-width: 1420px)',
   },
 };

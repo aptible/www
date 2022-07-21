@@ -8,6 +8,7 @@ const HUBSPOT_COOKIE = 'hubspotutk';
 export const HUBSPOT_FORM_PRODUCT_SIGNUP = '9ff54b8a-a71e-464c-95e5-a7fff6511cac';
 export const HUBSPOT_FORM_HIPAA_GUIDE = '87365f9e-d16c-4df4-92a1-8cae85d67bd7';
 export const HUBSPOT_FORM_AWS_ACTIVATE = '04eddc8b-cadb-416a-869f-8d5d1f518b40';
+export const HUBSPOT_FORM_DEMAND_GEN_Q3 = '905077a8-302b-440d-b82b-878063cceac3';
 
 const validateEmail = (email, allowPersonalEmails) => {
   if (!email) return { ok: false, message: 'email cannot be empty' };
@@ -15,6 +16,9 @@ const validateEmail = (email, allowPersonalEmails) => {
   if (!allowPersonalEmails) {
     const emailTokens = email.split('@');
     if (emailTokens.length > 1 && FREE_EMAIL_DOMAINS.indexOf(emailTokens[1]) !== -1) {
+      if (window.aptible) {
+        window.aptible.event('signup-denied-free-email', null);
+      }
       return { ok: false, message: 'Please use your work email address' };
     }
   }
@@ -37,7 +41,7 @@ const addUtmsToFields = (fields) => {
   }
 };
 
-export const submitHubspotForm = (formId, email, allowPersonalEmails) => {
+export const submitHubspotForm = (formId, email, allowPersonalEmails, persona) => {
   const result = validateEmail(email, allowPersonalEmails);
   if (!result.ok) {
     return result;
@@ -57,11 +61,11 @@ export const submitHubspotForm = (formId, email, allowPersonalEmails) => {
     payload.context.hutk = cookies.get(HUBSPOT_COOKIE)
   }
 
-  addUtmsToFields(payload.fields);
+  if (persona && persona !== '') {
+    payload.fields.push(generateField('hs_persona', persona));
+  }
 
-  analytics.identify(email);
-  analytics.event('Email Collected', { formId: formId });
-  analytics.trackOnLinkedIn();
+  addUtmsToFields(payload.fields);
 
   // Submit form through the Hubspot API
   const url = `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_ACCOUNT_ID}/${formId}`;
