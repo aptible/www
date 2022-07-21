@@ -1,0 +1,32 @@
+.complianceContent {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.complianceContent h6 {
+  color: var(--aptible-yellow);
+}
+
+.complianceCta {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--aptible-black) !important;
+  background-color: var(--aptible-yellow);
+  text-decoration: none;
+  margin-bottom: 3rem;
+}
+
+.complianceCta:hover {
+  background-color: #EEB73F;
+}
+
+.complianceScreenshot {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+}

@@ -1,0 +1,56 @@
+.heroForm {
+  padding: 1rem 0;
+}
+
+.heroForm input {
+  display: inline-block;
+  border: 1px solid var(--aptible-black-five);
+  padding: 1rem;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 3px;
+  box-shadow: none;
+  width: 280px;
+}
+
+.heroForm input:hover {
+  border-color: var(--aptible-green-thirty);
+}
+
+.heroForm input:focus {
+  border-color: var(--aptible-green-seventy);
+}
+
+.heroForm .cta {
+  padding: 1.2rem 3rem;
+  margin-left: 1rem;
+  font-size: 18px;
+  border-radius: 3px;
+  background-color: var(--aptible-yellow);
+  border: 1px solid var(--aptible-yellow);
+  cursor: pointer;
+}
+
+.heroForm .cta:hover {
+  border-color: var(--aptible-black);
+}
+
+.error {
+  color: var(--aptible-red);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.5rem 0 0 0.5rem;
+}
+
+@media (--mobile) {
+  .heroForm input {
+    display: block;
+    width: 90%;
+  }
+
+  .heroForm .cta {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
