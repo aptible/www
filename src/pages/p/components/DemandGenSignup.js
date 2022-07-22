@@ -69,3 +69,5 @@ export const DemandGenSignup = ({
     </div>
   );
 };
+
+export default DemandGenSignup;
