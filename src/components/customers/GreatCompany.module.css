@@ -6,6 +6,26 @@
   grid-column: 2 / span 4;
 }
 
+.logos {
+  grid-column: 1 / span 7;
+  padding: 60px 0;
+}
+
+.logoContainer {
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  vertical-align: middle;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.logoContainer img {
+  max-width: 100px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
 @media (--mobile) {
   .container {
     padding-top: 100px;
