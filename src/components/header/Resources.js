@@ -18,6 +18,12 @@ export const RESOURCES_NAV = [
     external: false,
   },
   {
+    title: 'Changelog',
+    url: 'https://deploy-docs.aptible.com/changelog',
+    external: true,
+    newDomain: true,
+  },
+  {
     title: 'Library',
     url: '/resources/',
     external: false,
