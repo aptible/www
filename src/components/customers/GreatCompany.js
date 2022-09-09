@@ -9,7 +9,6 @@ import mdsaveLogo from '../../images/customers/logos/mdsave.svg';
 import pathaiLogo from '../../images/customers/logos/pathai.png';
 import medicalMemoryLogo from '../../images/customers/logos/medical-memory-logo.png';
 import pagerLogo from '../../images/customers/logos/pager-logo.png';
-import vidscripLogo from '../../images/customers/logos/vidscip-logo.png';
 import rightwayLogo from '../../images/customers/logos/rightway-logo.png';
 import aidinLogo from '../../images/customers/logos/aidin-logo.png';
 import glidianLogo from '../../images/customers/logos/glidian-logo.png';
@@ -22,6 +21,9 @@ import stellarLogo from '../../images/customers/logos/stellar-health.png';
 import aliceLogoLogo from '../../images/customers/logos/alice-logo.png';
 import canvasLogo from '../../images/customers/logos/canvas-logo.png';
 import workItLogo from '../../images/customers/logos/workit-logo.png';
+import epionLogo from '../../images/customers/logos/epion-logo.png';
+import ginkoLogo from '../../images/customers/logos/ginko-logo.png';
+import healthieLogo from '../../images/customers/logos/healthie-logo.png';
 
 const CustomerLogo = ({logo}) => (
   <div className={styles.logoContainer}>
@@ -41,25 +43,30 @@ export default () => (
       </div>
 
       <div className={styles.logos}>
-        <CustomerLogo logo={canvasLogo} />
-        <CustomerLogo logo={aliceLogoLogo} />
-        <CustomerLogo logo={workItLogo} />
+        <CustomerLogo logo={ginkoLogo} />
         <CustomerLogo logo={himsHersLogo} />
-        <CustomerLogo logo={projectBeaconLogo} />
-        <CustomerLogo logo={stellarLogo} />
-        <CustomerLogo logo={greenspaceLogo} />
-        <CustomerLogo logo={dorsataLogo} />
         <CustomerLogo logo={careportLogo} />
-        <CustomerLogo logo={glidianLogo} />
-        <CustomerLogo logo={aidinLogo} />
         <CustomerLogo logo={rightwayLogo} />
-        <CustomerLogo logo={pagerLogo} />
-        <CustomerLogo logo={medicalMemoryLogo} />
-        <CustomerLogo logo={pathaiLogo} />
-        <CustomerLogo logo={mdsaveLogo} />
-        <CustomerLogo logo={healthifyLogo} />
-        <CustomerLogo logo={ableHealthLogo} />
         <CustomerLogo logo={healthCatalystLogo} />
+        <CustomerLogo logo={ableHealthLogo} />
+        <CustomerLogo logo={aidinLogo} />
+        <CustomerLogo logo={projectBeaconLogo} />
+        <CustomerLogo logo={pathaiLogo} />
+        <CustomerLogo logo={workItLogo} />
+        <CustomerLogo logo={canvasLogo} />
+        <CustomerLogo logo={stellarLogo} />
+        <CustomerLogo logo={healthifyLogo} />
+        <CustomerLogo logo={healthieLogo} />
+        <CustomerLogo logo={dorsataLogo} />
+        <CustomerLogo logo={mdsaveLogo} />
+        <CustomerLogo logo={pagerLogo} />
+        <CustomerLogo logo={glidianLogo} />
+        <CustomerLogo logo={aliceLogoLogo} />
+        <CustomerLogo logo={epionLogo} />
+        <CustomerLogo logo={medicalMemoryLogo} />
+
+        <CustomerLogo logo={greenspaceLogo} />
+
       </div>
     </Grid>
   </div>
