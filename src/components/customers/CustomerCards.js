@@ -21,7 +21,6 @@ class CustomerCards extends React.Component {
             <Card customer="healthify" />
             <Card customer="dorsata" />
             <Card customer="glidianInc" />
-            <Card customer="vidscrip" />
             <Card customer="aidin" />
           </div>
 
