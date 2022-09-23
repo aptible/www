@@ -118,6 +118,6 @@ export default () => (
         </div>
       </div>
     </Grid>
-    <ZeroTo />
+    <ZeroTo btnText="Redeem Credits Now" overrideParams={{ 'utm_campaign': 'ucsf_health_hub' }} />
   </AptibleLayout>
 );

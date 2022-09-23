@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './ZeroTo.module.css';
 import { Grid } from '../grid/Grid';
-import SignupButton from '../signup/SignupButton';
+import SignupForm from '../signup-form';
 
-const ZeroTo = () => {
+const ZeroTo = ({
+  btnText = "Sign up for free",
+  overrideParams = {}
+}) => {
   return (
     <div className={styles.zero}>
       <Grid rows="2">
@@ -19,7 +22,7 @@ const ZeroTo = () => {
           </h4>
         </div>
         <div className={styles.button}>
-          <SignupButton text="Sign up for free" theme="black" />
+          <SignupForm btnText={btnText} theme="black" overrideParams={overrideParams} />
         </div>
       </Grid>
     </div>
