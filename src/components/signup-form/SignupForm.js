@@ -9,10 +9,12 @@ export const SignupForm = ({
   btnText = 'Sign Up For Free',
   theme = '',
   size = '',
+  overrideParams = {},
 }) => {
   const onSubmit = () => {
     let url = 'https://dashboard.aptible.com/signup';
-    const utms = analytics.allUtmVars();
+    let utms = analytics.allUtmVars();
+    utms = Object.assign(utms, overrideParams);
 
     if (Object.keys(utms).length > 0) {
       const params = [];

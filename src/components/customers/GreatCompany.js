@@ -24,6 +24,7 @@ import workItLogo from '../../images/customers/logos/workit-logo.png';
 import epionLogo from '../../images/customers/logos/epion-logo.png';
 import ginkoLogo from '../../images/customers/logos/ginko-logo.png';
 import healthieLogo from '../../images/customers/logos/healthie-logo.png';
+import spectrumLogo from '../../images/customers/logos/spectrum-ai-logo.png';
 
 const CustomerLogo = ({logo}) => (
   <div className={styles.logoContainer}>
@@ -31,16 +32,18 @@ const CustomerLogo = ({logo}) => (
   </div>
 )
 
-export default () => (
+export default ({ showIntro = true }) => (
   <div className={styles.container}>
     <Grid>
-      <div className={styles.content}>
-        <h2>You're in Great Company</h2>
-        <p className="XL">
-          We help hundreds of the most innovative companies to protect sensitive
-          data when the stakes matters most.
-        </p>
-      </div>
+      {showIntro &&
+        <div className={styles.content}>
+          <h2>You're in Great Company</h2>
+          <p className="XL">
+            We help hundreds of the most innovative companies to protect sensitive
+            data when the stakes matters most.
+          </p>
+        </div>
+      }
 
       <div className={styles.logos}>
         <CustomerLogo logo={ginkoLogo} />
@@ -66,6 +69,7 @@ export default () => (
         <CustomerLogo logo={medicalMemoryLogo} />
 
         <CustomerLogo logo={greenspaceLogo} />
+        <CustomerLogo logo={spectrumLogo} />
 
       </div>
     </Grid>
