@@ -25,6 +25,7 @@ import epionLogo from '../../images/customers/logos/epion-logo.png';
 import ginkoLogo from '../../images/customers/logos/ginko-logo.png';
 import healthieLogo from '../../images/customers/logos/healthie-logo.png';
 import spectrumLogo from '../../images/customers/logos/spectrum-ai-logo.png';
+import klaraLogo from '../../images/customers/logos/klara-logo.png';
 
 const CustomerLogo = ({logo}) => (
   <div className={styles.logoContainer}>
@@ -67,9 +68,9 @@ export default ({ showIntro = true }) => (
         <CustomerLogo logo={aliceLogoLogo} />
         <CustomerLogo logo={epionLogo} />
         <CustomerLogo logo={medicalMemoryLogo} />
-
         <CustomerLogo logo={greenspaceLogo} />
         <CustomerLogo logo={spectrumLogo} />
+        <CustomerLogo logo={klaraLogo} />
 
       </div>
     </Grid>
