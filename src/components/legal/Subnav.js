@@ -28,5 +28,6 @@ export default () => (
       to="/legal/supplemental-terms-of-service-for-the-security-assessment-questionnaire-offering/"
       text="Supplemental Terms of Service for the Security Assessment Questionnaire Offering"
     />
+    <SidebarNavItem to="/legal/dpa/" text="Data Processing Addendum" />
   </SidebarNav>
 );
