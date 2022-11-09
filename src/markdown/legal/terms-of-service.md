@@ -19,7 +19,7 @@ template: legal
 [Support Policy]:/legal/support
 [Trademark Policy]:/legal/trademark
 
-Version 2.3 - May 2022
+Version 2.4 – October 2022
 
 Welcome, and thank you for your interest in Aptible! 
 
@@ -210,7 +210,7 @@ This procedure is exclusively for notifying Aptible that your copyrighted materi
 **C. Our trademarks.** Aptible hereby grants you a limited, non-exclusive, royalty-free, non-transferable license, with no right to sub-license, to display the Aptible trademarks for the sole purpose of promoting or advertising that you use the Aptible Services. This licenses shall be exercised only in accordance with the current version of our [Trademark Policy]. You agree that all goodwill generated through your use of the Aptible trademarks shall inure to the benefit of Aptible.
 
 ### 9. Our Licenses from You
-You hereby grant us a worldwide, non-sublicensable, non-transferable, non-exclusive, terminable, limited license to reproduce, adapt, modify, translate, publish, publicly perform, publicly display, host, store, transfer, modify for the purpose of formatting for display, and distribute any Application and/or data (including Your Content) for the sole purpose of enabling us to provide you with the Services.
+You hereby grant us a worldwide, non-sublicensable, non-transferable, non-exclusive, terminable, limited license to reproduce, adapt, modify, translate, publish, publicly perform, publicly display, host, store, transfer, modify for the purpose of formatting for display, and distribute any Content for the sole purpose of enabling us to provide you with the Services.
 
 ### 10. Modification of the Services
 You acknowledge and agree that the form and nature of the Services which Aptible provides may change from time to time without prior notice, subject to the terms in Section 5. Changes to the form and nature of the Services will be effective with respect to all versions of the Services; examples of changes to the form and nature of the Services include without limitation changes to the [Billing Policy], security patches, added functionality, and other enhancements.
@@ -294,7 +294,7 @@ The Notice must: (a) describe the nature and basis of the claim or dispute; and 
 ### 20. Notice to California Residents
 If you are a California resident, under California Civil Code Section 1789.3, you may contact the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs in writing at 1625 N. Market Blvd., Suite S-202, Sacramento, California 95834, or by telephone at (800) 952-5210 in order to resolve a complaint regarding the Service or to receive further information regarding use of the Service.
 
-### 21. General Terms
+### 21. Miscellaneous
 **A. Notices.** All notices to Aptible must be in writing and addressed to [legal@aptible.com](mailto:legal@aptible.com). Notice will be treated as given on receipt as verified by written automated receipt or by electronic log (as applicable).
 
 You agree that Aptible may provide you with notices, including those regarding changes to this Agreement, by email, regular mail, or postings on the Aptible Services. By providing Aptible your email address, you consent to our using the email address to send you any notices required by law in lieu of communication by postal mail.
@@ -316,15 +316,21 @@ You agree that Aptible may provide you with notices, including those regarding c
 **I. Amendments.** Any amendment must be in writing, signed by both parties, and expressly state that it is amending this Agreement.
 
 **J. Entire Agreement.**
-This Agreement supersedes all other agreements between the parties relating to its subject matter. In entering into this Agreement, neither party has relied on, and neither party will have any right remedy based on, any statement, representation or warranty (whether made negligently or innocently), except those expressly set out in this Agreement. The terms located at a URL referenced in this Agreement and the Documentation are hereby incorporated by this reference. After the Effective Date, Aptible may provide you with an updated URL in place of any URL in this Agreement.
+This Agreement, including applicable Order Form and Master Services Agreement, supersedes all other agreements between the parties relating to its subject matter. In entering into this Agreement, neither party has relied on, and neither party will have any right remedy based on, any statement, representation or warranty (whether made negligently or innocently), except those expressly set out in this Agreement. The terms located at a URL referenced in this Agreement and the Documentation are hereby incorporated by this reference. After the Effective Date, Aptible may provide you with an updated URL in place of any URL in this Agreement.
 
-**K. Interpretation of Conflicting Terms.**  If there is a conflict among the documents that make up this Agreement, the documents will control in the following order: this Agreement, and the terms located at any URL.
+**K. Interpretation of Conflicting Terms.**  If there is a conflict among the documents that make up this Agreement, the documents will control in the following order: the applicable Master Services Agreement and Order Form, these Terms, and the terms located at any URL.
+
+**L. Publicity.**  Aptible may  include Customer's name and other indicia in its lists of Aptible’s current or former customers of Aptible’s in promotional and marketing materials including Aptible’s website.
 
 ### 22. Definitions
 
 **"Acceptable Use Policy"** means the policy currently available at https://www.aptible.com/legal/acceptable-use, as it may be updated by us from time to time.
 
-**"Aptible Deploy"** means the Aptible Deploy container orchestration platform, formerly known as Enclave.
+**"Aptible Managed"** means any product offering of Aptible where a Customer is paying Aptible for hosting, either directly on our managed container orchestration platform, or through an Amazon Web Services or other cloud hosting provider account that Aptible controls and pays for on Customer’s behalf.
+
+**"Aptible SaaS Offering"** means the Aptible developer platform that integrates with your cloud accounts on Amazon Web Services, Google Cloud, Azure, or other cloud hosting providers, and provides easy environment management and developer self-service within your own cloud hosting provider account.
+
+**"Aptible CLI"** means the Aptible Command Line Interface available for you to download and utilize for the Services.
 
 **"Aptible Comply"** means the Aptible Comply compliance platform, formerly known as Gridiron.
 
@@ -336,7 +342,7 @@ This Agreement supersedes all other agreements between the parties relating to i
 
 **"Billing Policy"** means the policy currently available at https://www.aptible.com/legal/billing, as it may be updated by us from time to time.
 
-**"Content"** means software, data, text, audio, video, images or other content.
+**"Content"** means software, data, text, audio, video, images, applications, databases, customer data, or other content that you provide to Aptible for use of Services. This includes any Content you or any End User (a) runs on the Services, (b) causes to interface with the Services, or (c) uploads to the Services under your account or otherwise transfers, processes, uses, or stores in connection with your account.
 
 **"Dedicated Environment"** means an Aptible Deploy environment running on a dedicated stack, where the network and hosts are not shared with any other Aptible customer. 
 
@@ -356,6 +362,8 @@ Regulations, § 160.103.
 
 **"GDPR Personal Data"** means personally identifiable information as defined in Article 4 of the European Union's General Data Protection Regulation.
 
+**"Order Form"** means any applicable order form entered into between you and Aptible that contains information around the Services being used, length of your agreement, and any additional terms.
+
 **"Privacy Policy"** means the policy currently available at https://www.aptible.com/legal/privacy, as it may be updated by us from time to time.
 
 **"Remedial Action"** means our right under this Agreement to suspend your access or your End Users' access to the Services, and to suspend or remove an Application, in the event that this Agreement is breached.
@@ -367,5 +375,3 @@ Regulations, § 160.103.
 **"Support Policy"** means the policy currently available at https://www.aptible.com/legal/support, as it may be updated by us from time to time.
 
 **"Trademark Policy"** means the policy currently available at https://www.aptible.com/legal/trademark, as it may be updated by us from time to time.
-
-**"Your Content"** means Content you or any End User (a) runs on the Services, (b) causes to interface with the Services, or (c&#41; uploads to the Services under your account or otherwise transfers, processes, uses, or stores in connection with your account.
