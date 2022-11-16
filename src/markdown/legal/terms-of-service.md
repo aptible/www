@@ -19,7 +19,7 @@ template: legal
 [Support Policy]:/legal/support
 [Trademark Policy]:/legal/trademark
 
-Version 2.4 – October 2022
+Version 2.4 – November 2022
 
 Welcome, and thank you for your interest in Aptible! 
 
