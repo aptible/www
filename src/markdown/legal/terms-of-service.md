@@ -27,12 +27,12 @@ Welcome, and thank you for your interest in Aptible!
 
 These Terms of Service (the **"Terms"**) are an important contract between us and you:
 
-- If you are opening an Aptible account, utilizing our Free Trial, or including this Agreement by reference in a purchase order, this contract is between Aptible and your organization. You represent that you have the authority to bind your organization to this agreement.
+- If you are opening an Aptible account, utilizing our Free Trial, using Aptible product offerings, including this Agreement by reference in a Order Form or entering into a Master Services Agreement with us, this contract is between Aptible and your organization. You represent that you have the authority to bind your organization to this agreement.
 
 - If you are an individual Aptible user, this Agreement is between you and Aptible.
 
 
-Aptible has several policies (the "**Policies**") that form part of these Terms:
+Aptible has several policies (the "**Policies**") that form part of these Terms, and are hereby incorporated by reference:
 
 1. [Acceptable Use Policy]
 1. [Billing Policy]
@@ -43,24 +43,24 @@ Aptible has several policies (the "**Policies**") that form part of these Terms:
 
 The **"Agreement"** refers to these Terms and the Policies together. 
 
-The general idea of this Agreement is that we grant you a license to use the Services, and in return you pay us and agree to abide by our terms and policies. Your failure to abide by your obligations under these policies constitutes grounds for suspension or termination of your account and revocation of your access to the Services.
+The general idea of this Agreement is that we grant you an access right  to use the Services subject to, if entered into, an applicable Master Services Agreement and Order Form, and in return agree to abide by our Terms and Policies. Your failure to abide by your obligations under these policies constitutes grounds for suspension or termination of your account and revocation of your access to the Services.
 
 In this Agreement:
 
 - **"Aptible,"** **"we,"** and **"us"** means Aptible Inc. 
-- The **"Services"** means the Aptible services, including  the Free Trial, Aptible Deploy, Aptible Comply, and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, and other services we provide.
+- The **"Services"** means the Aptible services, including the Free Trial, Aptible Managed, Aptible SaaS Offering, Aptible Comply, and any other platforms, APIs, interfaces, related web sites, networks, embeddable widgets, downloadable software, the Aptible CLI, and other services we provide.
 - Section 22 contains more defined terms.
 
 #### Summary 
 You acknowledge and agree that, as provided in greater detail in this Agreement:  
 
-- The Services are licensed, not sold to you, and that you may use the Services only as set forth in this Agreement;  
+- You are provided an access right to the Services, and such Services are not sold to you, and that you may use the Services only as set forth in this Agreement;
 - The Services are provided "as is" without warranties of any kind, and Aptible's liability to you is limited;  
-- You are solely responsible for protecting the privacy and legal rights of your End Users, except as provided for in a Business Associate Agreement or Data Use Agreement between you and Aptible;  
-- You are solely responsible for exporting Your Content and Aptible Comply materials from the Services prior to closing your Aptible account; and  
+- You are solely responsible for protecting the privacy and legal rights of your End Users, except as provided for in a Business Associate Agreement,Data Use Agreement, or Data Processing Addendum between you and Aptible;
+- You are solely responsible for exporting Your Content from the Services prior to closing your Aptible account; and 
 - Disputes arising hereunder will be resolved by binding arbitration, and **BY ACCEPTING THIS AGREEMENT, YOU AND APTIBLE ARE EACH WAIVING THE RIGHT TO A TRIAL BY JURY OR TO PARTICIPATE IN A CLASS ACTION.** YOU AGREE TO GIVE UP YOUR RIGHT TO GO TO COURT to assert or defend your rights under this contract (except for matters that may be taken to small claims court). Your rights will be determined by a NEUTRAL ARBITRATOR and NOT a judge or jury and your claims cannot be brought as a class action. Please review the Arbitration Agreement in Section 19 below for the details regarding your agreement to arbitrate any disputes with Aptible.
 
-This Agreement takes effect when you click an "I Accept" button or checkbox presented with these terms, sign a contract that incorporates these terms by reference, or, if earlier, when you use any of the Services (the **"Effective Date"**).
+This Agreement takes effect when you sign up to use the Aptible Services by entering your information, or sign an Order Form or Master Services Agreement that incorporates these terms by reference, or, if earlier, when you use any of the Services (the **"Effective Date"**).
 
 We provide certain Aptible Deploy Services pursuant to a [Service Level Agreement].
 
@@ -91,9 +91,9 @@ You may terminate your account and this Agreement at any time in accordance with
 5. You will not attempt to disrupt the Services.  
 6. You will abide by the [Acceptable Use Policy].  
 7. You will abide by the restrictions in our [Support Policy] and [Security Policy] on how the Services may be implemented.  
-8. You will remit payment timely for the Services, as specified in the [Billing Policy] and any purchase order you may execute.
+8. You will remit payment timely for the Services, as specified in the [Billing Policy] and any Order Form you may execute.
 9. If you are using the Services to process HIPAA PHI, you must have a valid, signed Business Associate Agreement with Aptible and have applied the required security configurations and controls as specified in that agreement. 
-10. If you are using the Services to process GDPR personal data, you must have a valid, signed Data Processing Addendum with Aptible and have applied the required security configurations and controls as specified in that agreement.
+10. If you are using the Services to process GDPR personal data, you are subject to our Data Processing Addendum and have applied the required security configurations and controls as specified in that agreement.
 
 **B. Unauthorized uses.** You will not violate, and will not allow third parties under your control to violate, our [Acceptable Use Policy] or other policies.
 
@@ -106,6 +106,11 @@ You may terminate your account and this Agreement at any time in accordance with
 6. If you are an existing user or customer of the Services, you are prohibited from using our Free Trial account unless otherwise offered to you by Aptible at our sole discretion. You may not sign up for multiple accounts in order to receive additional Free Trial benefits across multiple accounts. Should we discover that you are an existing user or customer of the Services, or creating multiple Free Trial accounts – we reserve to immediately terminate, suspend, and delete your accounts and all data within.
 7. Aptible reserves the right to terminate or suspend a Free Trial at any time, in our sole discretion, without any notice, and without any liability. We further reserve the right to adjust pricing relative to any of our Services offered through the Free Trial.
 8. For avoidance of doubt, your use of the Free Trial Services will be strictly governed by this Terms of Service and all other associated terms, policies, and agreements.
+
+**D. Downloadable Software and Aptible CLI License.**
+1. License Grant. Subject to this Agreement, Aptible hereby grants you a non-exclusive, non-sublicensable, and non-transferable license during the term to: (i) use the downloadable software and Aptible CLI solely for your internal business purposes in connection with your use of the Software.
+2. Use Restrictions. You shall not use the downloadable software and Aptible CLI for any purposes beyond the scope of the license granted in this Agreement. Without limiting the foregoing and except as otherwise expressly set forth in this Agreement, you shall not at any time, directly or indirectly: (i) copy, modify, or create derivative works of the downloadable software and Aptible CLI, in whole or in part; (ii) rent, lease, lend, sell, sublicense, assign, distribute, publish, transfer, or otherwise make available the downloadable software and Aptible CLI; (iii) reverse engineer, disassemble, decompile, decode, adapt, or otherwise attempt to derive or gain access to the source code of the downloadable software and Aptible CLI, in whole or in part; (iv) remove any proprietary notices from the downloadable software and Aptible CLI; or (v) use the downloadable software and Aptible CLI in any manner or for any purpose that infringes, misappropriates, or otherwise violates any intellectual property right or other right of any person, or that violates any applicable law.
+
 
 ### 3. Privacy
 **A. Your privacy.** Please read our [Privacy Policy].
@@ -168,7 +173,7 @@ You represent and warrant to us that:
 
 Aptible responds to notices of alleged copyright infringement and terminates accounts of repeat infringers according to the process set out in the U.S. Digital Millennium Copyright Act. Please see Section 7 of this Agreement. We reserve the right to take Remedial Action upon receipt of a valid DMCA notice.
 
-**B. Proprietary rights.** In general, except as expressly set forth below in Sections 8 and 9, this Agreement does not grant either party any rights, implied or otherwise, to the other's Content or any of the other's intellectual property. As between the parties, you own all intellectual property rights in your Applications and customer data, and we own all intellectual property rights in the Services.
+**B. Proprietary rights.** The Services, the Aptible Site, and its entire contents, features and functionality (including but not limited to all information, software, text, displays, images, video and audio, and the design, selection and arrangement thereof), are owned by the Aptible, its licensors or other providers of such material and are protected by United States and international copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws. In general, except as expressly set forth below in Sections 8 and 9, this Agreement does not grant either party any rights, implied or otherwise, to any of the other's intellectual property. For avoidance of doubt, as between the parties, you own all intellectual property rights in your Content, and we own all intellectual property rights in the Services.
 
 Notwithstanding that general principle:
 
@@ -266,7 +271,7 @@ We will provide technical support to you pursuant to our [Support Policy]. Custo
 As with any cloud service, you have ongoing security responsibilities to protect Your Content and your Aptible Deploy Containerized Services. You hereby agree to the terms of our [Security Policy]. 
 
 ### 18. Governing Law  
-This Agreement is governed by the laws of the State of California without regard to conflict of law principles. If a lawsuit or court proceeding is permitted under this Agreement, then, unless another location is expressly specified in this Agreement, you and Aptible agree to submit to the personal and exclusive jurisdiction of the state courts and federal courts located within San Francisco, California for the purpose of litigating any dispute.
+This Agreement is governed by the laws of the State of Delaware without regard to conflict of law principles. If a lawsuit or court proceeding is permitted under this Agreement, then, unless another location is expressly specified in this Agreement, you and Aptible agree to submit to the personal and exclusive jurisdiction of the state courts and federal courts located within Delaware  for the purpose of litigating any dispute.
 
 ### 19. Dispute Resolution and Arbitration
 **A.  Generally.** In the interest of resolving disputes between you and Aptible in the most expedient and cost effective manner, you and Aptible agree that every dispute arising in connection with this Agreement will be resolved by binding arbitration. Arbitration is more informal than a lawsuit in court. Arbitration uses a neutral arbitrator instead of a judge or jury, may allow for more limited discovery than in court, and can be subject to very limited review by courts. Arbitrators can award the same damages and relief that a court can award. Our agreement to arbitrate disputes includes all claims arising out of or relating to any aspect of this Agreement, whether based in contract, tort, statute, fraud, misrepresentation, or any other legal theory, and regardless of whether a claim arises during or after the termination of this Agreement. YOU UNDERSTAND AND AGREE THAT, BY ENTERING INTO THIS AGREEMENT, YOU AND APTIBLE ARE EACH WAIVING THE RIGHT TO A TRIAL BY JURY OR TO PARTICIPATE IN A CLASS ACTION.
