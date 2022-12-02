@@ -6,10 +6,15 @@ import Hero from '../components/ucsf/Hero';
 import { Grid } from '../components/grid/Grid';
 import Feature from '../pages/solutions/components/Feature';
 import aptibleIcon from '../images/aptible-favicon-100.png';
-import HowAptibleWorks from '../components/deploy/HowAptibleWorks';
+import HowAptibleWorks from '../components/ucsf/HowAptibleWorks';
 import CustomerCards from '../components/ucsf/CustomerCards';
 import Faq from '../components/deploy/Faq';
 import ZeroTo from '../components/footer/ZeroTo';
+
+const UTM_CAMPAIGN = 'partner_ucsf';
+const SUBHEADLINE = <>
+  Built for teams who would rather focus on product innovation, Aptible’s platform as a service is not only great to start with but also great to scale on. As part of UCSF Health Hub, <strong>you can claim $5,000 in credits to get started&mdash;and scale&mdash;on Aptible.</strong>
+</>
 
 export default () => (
   <AptibleLayout>
@@ -17,7 +22,11 @@ export default () => (
       <title>Aptible | UCSF Health Hub</title>
       <meta name="description" content="Startups part of UCSF Health Hub get $5,000 in free credits to deploy and manage applications and databases on Aptible." />
     </Helmet>
-    <Hero />
+    <Hero
+      headline="Build your ideas, not your infrastructure"
+      subHeadline={SUBHEADLINE}
+      utmCampaign={UTM_CAMPAIGN}
+    />
     <GreatCompany showIntro={false} />
     <Grid>
       <div style={{ gridColumn: '1 / span 7', paddingTop: '50px', paddingBottom: '100px' }}>
@@ -118,6 +127,6 @@ export default () => (
         </div>
       </div>
     </Grid>
-    <ZeroTo btnText="Redeem Credits Now" overrideParams={{ 'utm_campaign': 'ucsf_health_hub' }} />
+    <ZeroTo headline={<>Focus on your code.<br />Not your infrastructure.</>} subHeadline="Get started in minutes not months." btnText="Redeem Credits Now" overrideParams={{ 'utm_campaign': UTM_CAMPAIGN }} />
   </AptibleLayout>
 );
