@@ -11,40 +11,47 @@ import CustomerCards from '../components/ucsf/CustomerCards';
 import Faq from '../components/deploy/Faq';
 import ZeroTo from '../components/footer/ZeroTo';
 
-const UTM_CAMPAIGN = 'partner_ucsf';
+const UTM_CAMPAIGN = 'partner_loot';
 const SUBHEADLINE = <>
-  Built for teams who would rather focus on product innovation, Aptible’s platform as a service is not only great to start with but also great to scale on. As part of UCSF Health Hub, <strong>you can claim $5,000 in credits to get started&mdash;and scale&mdash;on Aptible.</strong>
+  Built for teams who would rather focus on product innovation, Aptible’s platform as a service is not only great to start with but also great to scale on. With Loot, <strong>you can claim $5,000 in credits to get started&mdash;and scale&mdash;on Aptible.</strong>
 </>
 
 export default () => (
   <AptibleLayout>
     <Helmet>
-      <title>Aptible | UCSF Health Hub</title>
-      <meta name="description" content="Startups part of UCSF Health Hub get $5,000 in free credits to deploy and manage applications and databases on Aptible." />
+      <title>Aptible | Loot  </title>
+      <meta name="description" content="Companies going through Loot get $5,000 in free credits to deploy and manage applications and databases on Aptible." />
     </Helmet>
     <Hero
       headline="Build your ideas, not your infrastructure"
       subHeadline={SUBHEADLINE}
       utmCampaign={UTM_CAMPAIGN}
     />
+    <Grid>
+      <div style={{ gridColumn: '1 / span 7', paddingTop: '100px', marginBottom: '-150px', textAlign: 'center' }}>
+        <p className="L">Hundreds of the fastest growing companies have started and scaled on Aptible</p>
+      </div>
+    </Grid>
     <GreatCompany showIntro={false} />
     <Grid>
       <div style={{ gridColumn: '1 / span 7', paddingTop: '50px', paddingBottom: '100px' }}>
         <Feature
-          title="UCSF Health Hub + Aptible"
+          title="Loot + Aptible"
           description={
             <>
+              <p className="L">Bring your code, Aptible does the rest.</p>
               <p className="L">
-                Aptible saves you valuable engineering time by automating
-                and enforcing all the needed infrastructure security
-                controls required to satisfy a variety of regulations and
-                security frameworks such as HIPAA, HITRUST, and SOC 2. Using
-                Aptible means you'll be compliant and audit-ready from day
-                one.
+                Go from concept to cost-optimized, production-ready app. Aptible
+                implements and manages the operation of all your infrastructure,
+                security, and compliance. All the needed infrastructure security
+                controls required to satisfy a variety of regulations and security
+                frameworks&mdash;such as HIPAA, HITRUST, and SOC 2&mdash;are automated
+                and enforced. With Aptible, companies can focus on creating value
+                for customers, not managing low level infrastructure accounts.
               </p>
               <p className="L">
-                Startups part of UCSF Health Hub get $5,000 in free credits to
-                deploy and manage applications and databases on Aptible.
+                And for companies going through Loot, we'll provide $5,000 in credits
+                to get you started building your apps and databases on Aptible.
               </p>
             </>
           }
