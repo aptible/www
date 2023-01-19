@@ -88,7 +88,7 @@ const Mobile = () => (
           </div>
 
           <div className={styles.login}>
-            <Button href="https://account.aptible.com/login">Log In</Button>
+            <Button href="https://dashboard.aptible.com/login">Log In</Button>
           </div>
 
           <div className={styles.cta}>
