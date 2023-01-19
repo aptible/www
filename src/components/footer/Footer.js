@@ -157,7 +157,7 @@ const Footer = () => (
         <Link to="/">
           <h6 className="small">Aptible Home</h6>
         </Link>
-        <a href="https://account.aptible.com/login">
+        <a href="https://dashboard.aptible.com/login">
           <h6 className="small">Log In</h6>
         </a>
         <a href="mailto:support@aptible.com">
