@@ -8,7 +8,7 @@ import styles from './SupportPriceTable.module.css';
 const tiers = [
   { name: 'Standard', showPrice: true, price: 0, description: 'Recommended for production workloads' },
   { name: 'Premium', showPrice: true, price: 499, description: 'Recommended for production workloads, with same day Support for tickets submitted before 3PM during the work week.' },
-  { name: 'Enterprise', showPrice: true, price: 1499, description: 'Recommended for critcal production workloads that require 24/7 support' }
+  { name: 'Enterprise', showPrice: true, price: 1499, description: 'Recommended for critical production workloads that require 24/7 support' }
 ];
 
 const footnotes = [
