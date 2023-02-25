@@ -436,7 +436,7 @@ class DeployCalculator extends React.Component {
           />
 
           <Resource
-            title="Endpoints"
+            title="Endpoints (Load Balancers)"
             helpText={toolTips.endpoints}
             calculatedAmount={this.endpointsAmount()}
             lineItemAmount={
@@ -454,11 +454,11 @@ class DeployCalculator extends React.Component {
           />
 
           <Resource
-            title="VPN Connections"
+            title="VPN Integrations"
             calculatedAmount={this.vpnConnectionsAmount()}
             lineItemAmount={
               <>
-                <span>$99</span>/Connection/Month
+                <span>$99</span>/Integration/Month
               </>
             }
             pricingSlider={
