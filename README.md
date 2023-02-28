@@ -5,7 +5,7 @@ on [Netlify](https://www.netlify.com).
 
 ## Running locally
 
-First, create a `.env.development` file with the contentful preview credentials:
+First, create a `.env.development` file with the contentful preview credentials, found in the notes of the "Contentful" item in 1Password Vault "Team."
 
 ```
 CONTENTFUL_HOST=preview.contentful.com
@@ -19,6 +19,8 @@ Then install dependencies and start:
 yarn
 gatsby develop
 ```
+
+Visit the live development site at [localhost:8000](http://localhost:8000/).
 
 Sometimes changes you make in Contentful won't show up locally because Gatsby
 caches the data. To clear the cache, delete the `.cache` directory.
