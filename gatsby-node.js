@@ -230,7 +230,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
       // Training courses
       result.data.allTraining.edges.forEach(async ({ node }) => {
-        if (node.extension === 'md' && node.name !== 'README') {
+        if (node.extension === 'md' && node.name !== 'README' && node.name !== 'SECURITY') {
           let course = node.relativePath.split('/')[0];
           let markdown = fs.readFileSync(node.absolutePath).toString();
           let relativePath = `training/${course}/${node.name}/`;
